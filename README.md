@@ -42,7 +42,7 @@ Update with new and accurate copy that fits the website.
 **This component is super important, please check format always in SEO components, here slug should be / without domain name or prefixes**
 
 
-4. 
+4. Casino template
 
 Content record example:
 
@@ -73,8 +73,8 @@ Contentful Entry: [FAQ Page Entry](https://app.contentful.com/spaces/v2w24m9au9i
 
 ## 4. Our Methodology
 
-- Update content so it will focus on PayPal instead of Crypto.
-- Update the SEO component: only the title and description fields.
+- Update the content to focus on PayPal instead of Crypto.
+- Update the SEO component: modify only the title and description fields.
 
 ## 5. Country Guides Pages
 
