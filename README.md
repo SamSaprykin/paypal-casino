@@ -42,7 +42,7 @@ Update with new and accurate copy that fits the website.
 **This component is super important, please check format always in SEO components, here slug should be / without domain name or prefixes**
 
 
-## 2. Casino Pages
+4. 
 
 Content record example:
 
@@ -62,4 +62,28 @@ Fields we should update:
 - SEO Component: Update the title and description. The slug should remain as it is.
 
 *Current payment method refers to the new website. For example, we are currently working on the PayPal application.
+
+
+## 3. FAQ Page
+
+Contentful Entry: [FAQ Page Entry](https://app.contentful.com/spaces/v2w24m9au9in/entries/4WXhS9mMKvPnpdA6zjvH3u)
+
+- Update all FAQ items with new data that will be suitable for the new website.
+- Update the SEO component: only the title and description fields.
+
+## 4. Our Methodology
+
+- Update content so it will focus on PayPal instead of Crypto.
+- Update the SEO component: only the title and description fields.
+
+## 5. Country Guides Pages
+
+Entry example: [Country Guide Entry](https://app.contentful.com/spaces/v2w24m9au9in/entries/ItmnNeJvfssNiz1JAzJEv?focusedField=name)
+
+- Update the title.
+- Update all content components to ensure they relate to the new website topic. (I used the following prompt for ChatGPT: create a detailed article for Ireland about PayPal online casinos, write 1500 - 2000 words with legal information, bonus information, 1-2 interesting games, create a comparison table between PayPal and crypto/Revolut/bank payments - pick one, and provide a summary.)
+- FAQ component: please update all FAQ items with new content related to the new website category (e.g., payment/country, etc.).
+
+NOTE: Please maintain the same structure: 1st content component -> short intro -> then Casino List component -> Content component with almost all information except summary -> FAQ -> Summary content component
+
 
