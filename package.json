@@ -1,0 +1,41 @@
+{
+  "name": "astro-contentful-starter",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A modern starter template with Astro, Contentful CMS, and Tailwind CSS",
+  "keywords": [
+    "astro",
+    "contentful",
+    "tailwind",
+    "typescript",
+    "starter",
+    "template"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/ts-plugin": "^1.10.4",
+    "astro": "^4.15.9",
+    "contentful": "^11.7.15",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "@types/node": "^22.7.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Clock from '../components/Clock.astro';
+
+import { getBlogPosts } from '../lib/contentful';
+
+// Fetch recent blog posts
+const recentPosts = await getBlogPosts(3);
+
+const meta = {
+  title: 'Astro + Contentful + Tailwind Starter',
+  description: 'A modern, fast, and flexible starter template built with Astro, Contentful CMS, and Tailwind CSS. Perfect for building content-driven websites.',
+  type: 'website' as const,
+};
+
+
+
+console.log("userLocation", recentPosts);
+---
+
+<BaseLayout meta={meta}>
+  <Header />
+
+  <div class="flex flex-col items-center justify-center h-screen">
+    <h1 class="text-4xl font-bold">Hello World</h1>
+  </div>
+  
+  <Footer />
+</BaseLayout>

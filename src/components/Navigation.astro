@@ -1,0 +1,47 @@
+---
+export interface Props {
+  currentPath: string;
+  mobile?: boolean;
+}
+
+const { currentPath, mobile = false } = Astro.props;
+
+const navigationItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const isActive = (href: string) => {
+  if (href === '/') {
+    return currentPath === '/';
+  }
+  return currentPath.startsWith(href);
+};
+
+const baseClasses = mobile
+  ? 'block px-3 py-2 text-base font-medium rounded-md transition-colors'
+  : 'inline-flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors';
+
+const activeClasses = mobile
+  ? 'bg-primary-100 text-primary-900'
+  : 'bg-primary-100 text-primary-900';
+
+const inactiveClasses = mobile
+  ? 'text-secondary-600 hover:text-secondary-900 hover:bg-secondary-50'
+  : 'text-secondary-600 hover:text-secondary-900 hover:bg-secondary-50';
+---
+
+<nav class={mobile ? 'space-y-1' : 'flex items-center space-x-1'}>
+  {navigationItems.map((item) => (
+    <a
+      href={item.href}
+      class={`${baseClasses} ${isActive(item.href) ? activeClasses : inactiveClasses}`}
+      aria-current={isActive(item.href) ? 'page' : undefined}
+    >
+      {item.label}
+    </a>
+  ))}
+</nav>
+

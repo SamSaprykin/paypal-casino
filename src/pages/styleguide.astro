@@ -1,0 +1,328 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContentCard from '../components/ContentCard.astro';
+
+const meta = {
+  title: 'Style Guide - Astro Contentful Starter',
+  description: 'A comprehensive style guide showcasing the design system and components used in this Astro starter template.',
+  type: 'website' as const,
+};
+
+const colorPalette = [
+  { name: 'Primary 50', class: 'bg-primary-50', hex: '#eff6ff' },
+  { name: 'Primary 100', class: 'bg-primary-100', hex: '#dbeafe' },
+  { name: 'Primary 500', class: 'bg-primary-500', hex: '#3b82f6' },
+  { name: 'Primary 600', class: 'bg-primary-600', hex: '#2563eb' },
+  { name: 'Primary 900', class: 'bg-primary-900', hex: '#1e3a8a' },
+  { name: 'Secondary 50', class: 'bg-secondary-50', hex: '#f8fafc' },
+  { name: 'Secondary 100', class: 'bg-secondary-100', hex: '#f1f5f9' },
+  { name: 'Secondary 500', class: 'bg-secondary-500', hex: '#64748b' },
+  { name: 'Secondary 700', class: 'bg-secondary-700', hex: '#334155' },
+  { name: 'Secondary 900', class: 'bg-secondary-900', hex: '#0f172a' },
+];
+---
+
+<BaseLayout meta={meta}>
+  <Header />
+  
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 via-white to-secondary-50 section-padding">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-6">
+            Style Guide
+          </h1>
+          <p class="text-xl md:text-2xl text-secondary-600 mb-8">
+            A comprehensive overview of the design system, components, and styling used in this starter template.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography Section -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Typography</h2>
+        
+        <div class="space-y-8">
+          <!-- Headings -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Headings</h3>
+            <div class="space-y-4">
+              <h1 class="text-secondary-900">Heading 1 - The quick brown fox jumps over the lazy dog</h1>
+              <h2 class="text-secondary-900">Heading 2 - The quick brown fox jumps over the lazy dog</h2>
+              <h3 class="text-secondary-900">Heading 3 - The quick brown fox jumps over the lazy dog</h3>
+              <h4 class="text-secondary-900">Heading 4 - The quick brown fox jumps over the lazy dog</h4>
+              <h5 class="text-secondary-900">Heading 5 - The quick brown fox jumps over the lazy dog</h5>
+              <h6 class="text-secondary-900">Heading 6 - The quick brown fox jumps over the lazy dog</h6>
+            </div>
+          </div>
+
+          <!-- Body Text -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Body Text</h3>
+            <div class="space-y-4">
+              <p class="text-secondary-800">
+                Regular paragraph text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <p class="text-secondary-600">
+                Secondary text color. Duis aute irure dolor in reprehenderit in voluptate velit esse 
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              </p>
+              <p class="text-secondary-500">
+                Muted text color. Sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+
+          <!-- Text Styles -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Text Styles</h3>
+            <div class="space-y-2">
+              <p><strong class="font-semibold">Bold text</strong> - Used for emphasis</p>
+              <p><em class="italic">Italic text</em> - Used for emphasis or quotes</p>
+              <p><u class="underline">Underlined text</u> - Used sparingly</p>
+              <p><code class="px-2 py-1 bg-secondary-100 text-secondary-800 rounded text-sm font-mono">Inline code</code> - For code snippets</p>
+              <p><a href="#" class="text-primary-600 hover:text-primary-700 underline">Link text</a> - Interactive links</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="section-padding bg-secondary-50">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Color Palette</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {colorPalette.map((color) => (
+            <div class="text-center">
+              <div class={`w-full h-20 rounded-lg ${color.class} border border-secondary-200 mb-2`}></div>
+              <div class="text-sm font-medium text-secondary-900">{color.name}</div>
+              <div class="text-xs text-secondary-600 font-mono">{color.hex}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Buttons</h2>
+        
+        <div class="space-y-8">
+          <!-- Button Variants -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Button Variants</h3>
+            <div class="flex flex-wrap gap-4">
+              <button class="btn-primary">Primary Button</button>
+              <button class="btn-secondary">Secondary Button</button>
+              <button class="btn-outline">Outline Button</button>
+            </div>
+          </div>
+
+          <!-- Button Sizes -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Button Sizes</h3>
+            <div class="flex flex-wrap items-center gap-4">
+              <button class="btn-primary text-sm px-3 py-1.5">Small</button>
+              <button class="btn-primary">Medium (Default)</button>
+              <button class="btn-primary text-lg px-6 py-3">Large</button>
+            </div>
+          </div>
+
+          <!-- Button States -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Button States</h3>
+            <div class="flex flex-wrap gap-4">
+              <button class="btn-primary">Normal</button>
+              <button class="btn-primary opacity-75 cursor-not-allowed" disabled>Disabled</button>
+              <button class="btn-primary animate-pulse">Loading</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards -->
+    <section class="section-padding bg-secondary-50">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Cards</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ContentCard
+            title="Default Card"
+            description="This is a default card component with standard styling and hover effects."
+            href="#"
+
+          />
+          
+          <ContentCard
+            title="Featured Card"
+            description="This is a featured card that spans multiple columns and has enhanced styling."
+            href="#"
+            variant="featured"
+
+            date="2024-01-15"
+            author="John Doe"
+          />
+          
+          <ContentCard
+            title="Minimal Card"
+            description="This is a minimal card with reduced padding and subtle styling."
+            href="#"
+            variant="minimal"
+
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Forms -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Form Elements</h2>
+        
+        <div class="max-w-2xl space-y-6">
+          <!-- Text Input -->
+          <div>
+            <label for="text-input" class="block text-sm font-medium text-secondary-700 mb-2">
+              Text Input
+            </label>
+            <input
+              type="text"
+              id="text-input"
+              placeholder="Enter some text..."
+              class="w-full px-3 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
+            />
+          </div>
+
+          <!-- Textarea -->
+          <div>
+            <label for="textarea" class="block text-sm font-medium text-secondary-700 mb-2">
+              Textarea
+            </label>
+            <textarea
+              id="textarea"
+              rows="4"
+              placeholder="Enter a longer message..."
+              class="w-full px-3 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none resize-vertical"
+            ></textarea>
+          </div>
+
+          <!-- Select -->
+          <div>
+            <label for="select" class="block text-sm font-medium text-secondary-700 mb-2">
+              Select
+            </label>
+            <select
+              id="select"
+              class="w-full px-3 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
+            >
+              <option>Choose an option...</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="flex items-center">
+            <input
+              type="checkbox"
+              id="checkbox"
+              class="w-4 h-4 text-primary-600 border-secondary-300 rounded focus:ring-primary-500"
+            />
+            <label for="checkbox" class="ml-2 text-sm text-secondary-700">
+              I agree to the terms and conditions
+            </label>
+          </div>
+
+          <!-- Radio Buttons -->
+          <div>
+            <fieldset>
+              <legend class="text-sm font-medium text-secondary-700 mb-2">Choose an option:</legend>
+              <div class="space-y-2">
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="radio1"
+                    name="radio-group"
+                    class="w-4 h-4 text-primary-600 border-secondary-300 focus:ring-primary-500"
+                  />
+                  <label for="radio1" class="ml-2 text-sm text-secondary-700">Option 1</label>
+                </div>
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="radio2"
+                    name="radio-group"
+                    class="w-4 h-4 text-primary-600 border-secondary-300 focus:ring-primary-500"
+                  />
+                  <label for="radio2" class="ml-2 text-sm text-secondary-700">Option 2</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacing and Layout -->
+    <section class="section-padding bg-secondary-50">
+      <div class="container-custom">
+        <h2 class="text-3xl font-bold text-secondary-900 mb-8">Spacing & Layout</h2>
+        
+        <div class="space-y-8">
+          <!-- Container -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Container</h3>
+            <div class="bg-primary-100 border-2 border-dashed border-primary-300 p-4 rounded-lg">
+              <p class="text-primary-800">
+                This content is inside a <code class="bg-primary-200 px-1 rounded">container-custom</code> class, 
+                which provides consistent max-width and padding across different screen sizes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Section Padding -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Section Padding</h3>
+            <div class="bg-secondary-100 border-2 border-dashed border-secondary-300 rounded-lg">
+              <div class="section-padding">
+                <p class="text-secondary-800">
+                  This content uses <code class="bg-secondary-200 px-1 rounded">section-padding</code> class, 
+                  which provides consistent vertical spacing for sections.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Examples -->
+          <div>
+            <h3 class="text-xl font-semibold text-secondary-900 mb-4">Grid Layouts</h3>
+            <div class="space-y-4">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {[1, 2, 3, 4].map((i) => (
+                  <div class="bg-primary-100 p-4 rounded-lg text-center text-primary-800">
+                    Grid Item {i}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+

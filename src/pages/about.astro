@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const meta = {
+  title: 'About - Astro Contentful Starter',
+  description: 'Learn more about this modern starter template built with Astro, Contentful CMS, and Tailwind CSS.',
+  type: 'website' as const,
+};
+
+const features = [
+  {
+    title: 'Modern Stack',
+    description: 'Built with the latest web technologies for optimal performance and developer experience.',
+    icon: '🚀',
+  },
+  {
+    title: 'Content-First',
+    description: 'Designed around content management with Contentful CMS for easy editing and collaboration.',
+    icon: '📝',
+  },
+  {
+    title: 'Performance Optimized',
+    description: 'Achieves perfect Lighthouse scores with static site generation and optimized assets.',
+    icon: '⚡',
+  },
+  {
+    title: 'Developer Friendly',
+    description: 'Full TypeScript support, modern tooling, and excellent development experience.',
+    icon: '🛠️',
+  },
+];
+
+const technologies = [
+  {
+    name: 'Astro',
+    description: 'Modern static site generator with island architecture',
+    url: 'https://astro.build',
+    logo: '🚀',
+  },
+  {
+    name: 'Contentful',
+    description: 'Headless CMS for flexible content management',
+    url: 'https://contentful.com',
+    logo: '📝',
+  },
+  {
+    name: 'Tailwind CSS',
+    description: 'Utility-first CSS framework for rapid UI development',
+    url: 'https://tailwindcss.com',
+    logo: '🎨',
+  },
+  {
+    name: 'TypeScript',
+    description: 'Type-safe JavaScript for better development experience',
+    url: 'https://typescriptlang.org',
+    logo: '🔧',
+  },
+];
+---
+
+<BaseLayout meta={meta}>
+  <Header />
+  
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 via-white to-secondary-50 section-padding">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 mb-6">
+            About This Starter
+          </h1>
+          <p class="text-xl md:text-2xl text-secondary-600 mb-8 max-w-3xl mx-auto">
+            A modern, performant, and flexible starter template that combines the best of 
+            static site generation, headless CMS, and utility-first CSS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-secondary-900 mb-6">
+              Our Mission
+            </h2>
+            <p class="text-xl text-secondary-600 leading-relaxed">
+              To provide developers with a solid foundation for building modern, 
+              content-driven websites that are fast, maintainable, and scalable. 
+              This starter template eliminates the complexity of setting up a modern 
+              web development stack, allowing you to focus on what matters most: 
+              creating great content and user experiences.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 class="text-2xl font-semibold text-secondary-900 mb-4">
+                Why We Built This
+              </h3>
+              <p class="text-secondary-600 mb-6">
+                Setting up a modern web development stack can be time-consuming and complex. 
+                We wanted to create a starter that brings together the best tools in the 
+                ecosystem with sensible defaults and best practices built-in.
+              </p>
+              <ul class="space-y-3 text-secondary-600">
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  Zero-config setup with sensible defaults
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  Production-ready performance optimizations
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  Comprehensive documentation and examples
+                </li>
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                  Modern development practices and tooling
+                </li>
+              </ul>
+            </div>
+            <div class="bg-secondary-50 rounded-xl p-8">
+              <h4 class="text-lg font-semibold text-secondary-900 mb-4">
+                Perfect For
+              </h4>
+              <ul class="space-y-3 text-secondary-600">
+                <li>• Marketing websites</li>
+                <li>• Company blogs</li>
+                <li>• Portfolio sites</li>
+                <li>• Documentation sites</li>
+                <li>• Landing pages</li>
+                <li>• Content-driven applications</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding bg-secondary-50">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+            Key Features
+          </h2>
+          <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+            Everything you need to build modern, fast, and maintainable websites.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {features.map((feature) => (
+            <div class="bg-white rounded-xl p-8 shadow-sm border border-secondary-200">
+              <div class="text-4xl mb-4">{feature.icon}</div>
+              <h3 class="text-xl font-semibold text-secondary-900 mb-3">
+                {feature.title}
+              </h3>
+              <p class="text-secondary-600 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="section-padding bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+            Technology Stack
+          </h2>
+          <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+            Built with modern, battle-tested technologies that developers love.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {technologies.map((tech) => (
+            <a
+              href={tech.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group text-center p-6 rounded-xl border border-secondary-200 hover:border-primary-300 hover:shadow-lg transition-all duration-200"
+            >
+              <div class="text-4xl mb-4 group-hover:scale-110 transition-transform duration-200">
+                {tech.logo}
+              </div>
+              <h3 class="text-lg font-semibold text-secondary-900 mb-2 group-hover:text-primary-600 transition-colors">
+                {tech.name}
+              </h3>
+              <p class="text-sm text-secondary-600">
+                {tech.description}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting Started CTA -->
+    <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Get Started?
+          </h2>
+          <p class="text-xl text-primary-100 mb-8">
+            Clone this repository and start building your next project with 
+            this powerful, modern stack.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://github.com/yourusername/astro-contentful-starter" 
+              class="btn bg-white text-primary-600 hover:bg-primary-50 px-8 py-3 text-lg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on GitHub
+            </a>
+            <a href="/blog" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 text-lg">
+              Read the Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</BaseLayout>
+

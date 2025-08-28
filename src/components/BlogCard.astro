@@ -1,0 +1,97 @@
+---
+import { formatDate } from '../utils/date';
+import type { BlogPost } from '../types/contentful';
+
+export interface Props {
+  post: BlogPost;
+  featured?: boolean;
+}
+
+const { post, featured = false } = Astro.props;
+
+const imageUrl = post.featuredImage?.fields.file.url;
+const imageAlt = post.featuredImage?.fields.title || post.title;
+---
+
+<article class={`card-hover group ${featured ? 'md:col-span-2 lg:col-span-3' : ''}`}>
+  <!-- Featured Image -->
+  {imageUrl && (
+    <div class={`relative overflow-hidden ${featured ? 'aspect-[16/9]' : 'aspect-[4/3]'}`}>
+      <img
+        src={`${imageUrl}?w=${featured ? 800 : 400}&h=${featured ? 450 : 300}&fit=fill&f=face`}
+        alt={imageAlt}
+        class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        loading="lazy"
+      />
+      
+      <!-- Overlay gradient -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      
+
+    </div>
+  )}
+
+  <!-- Content -->
+  <div class={`p-6 ${featured ? 'lg:p-8' : ''}`}>
+    <!-- Meta information -->
+    <div class="flex items-center space-x-4 text-sm text-secondary-500 mb-3">
+      <time datetime={post.publishedDate}>
+        {formatDate(post.publishedDate)}
+      </time>
+      
+      {post.author && (
+        <>
+          <span>•</span>
+          <div class="flex items-center space-x-2">
+            {post.author.avatar && (
+              <img
+                src={`${post.author.avatar.fields.file.url}?w=24&h=24&fit=fill&f=face`}
+                alt={post.author.name}
+                class="w-6 h-6 rounded-full"
+                loading="lazy"
+              />
+            )}
+            <span>{post.author.name}</span>
+          </div>
+        </>
+      )}
+    </div>
+
+    <!-- Title -->
+    <h3 class={`font-semibold text-secondary-900 mb-3 group-hover:text-primary-600 transition-colors ${
+      featured ? 'text-2xl lg:text-3xl' : 'text-xl'
+    }`}>
+      <a href={`/blog/${post.slug}`} class="stretched-link">
+        {post.title}
+      </a>
+    </h3>
+
+    <!-- Excerpt -->
+    <p class={`text-secondary-600 leading-relaxed ${featured ? 'text-lg' : ''}`}>
+      {post.excerpt}
+    </p>
+
+    <!-- Read more link -->
+    <div class="mt-4">
+      <span class="inline-flex items-center text-sm font-medium text-primary-600 group-hover:text-primary-700">
+        Read more
+        <svg class="ml-1 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </span>
+    </div>
+  </div>
+</article>
+
+<style>
+  .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+  }
+</style>
+
