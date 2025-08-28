@@ -81,14 +81,21 @@ Contentful Entry: [FAQ Page Entry](https://app.contentful.com/spaces/v2w24m9au9i
 Entry example: [Country Guide Entry](https://app.contentful.com/spaces/v2w24m9au9in/entries/ItmnNeJvfssNiz1JAzJEv?focusedField=name)
 
 - Update the title.
-- Update all content components to ensure they relate to the new website topic. (I used the following prompt for ChatGPT: create a detailed article for Ireland about PayPal online casinos, write 1500 - 2000 words with legal information, bonus information, 1-2 interesting games, create a comparison table between PayPal and crypto/Revolut/bank payments - pick one, and provide a summary.)
+- Update all content components to ensure they relate to the new website topic. (I used the following prompt for ChatGPT: create a detailed article for Ireland about PayPal online casinos, writing 1500 - 2000 words with legal information, bonus information, 1-2 interesting games, create a comparison table between PayPal and crypto/Revolut/bank payments - pick one, and provide a summary.)
 - FAQ component: please update all FAQ items with new content related to the new website category (e.g., payment/country, etc.).
 - Update the SEO component: only the title and description fields.
 
 NOTE: Please maintain the same structure: 1st content component -> short intro -> then Casino List component -> Content component with almost all information except summary -> FAQ -> Summary content component
 
-
 ## 6. Blog Post
 
-- Please delete all blog posts and create 2-3 new before website will be Launched 
+- Please delete all blog posts and create 2-3 new ones before the website is launched.
+
+For SEO slug use format like this:
+
+/blog/tips-and-strategies/top-games-summer-2025-crypto
+
+For slug field use format like this:
+
+top-games-summer-2025-crypto -> no trailing slashes, only slug
 
