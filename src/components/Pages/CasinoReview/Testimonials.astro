@@ -1,0 +1,89 @@
+---
+import { Star, Quote, MapPin, Calendar } from "@lucide/astro";
+
+// Props
+const { reviews } = Astro.props;
+
+// Helpers
+const renderStars = (rating: number) =>
+  Array.from({ length: 5 }, (_, index) => (
+    <Star
+      class={`w-5 h-5 ${index < rating ? "fill-orange-400 text-orange-400" : "fill-gray-300 text-gray-300"}`}
+    />
+  ));
+
+const formatDate = (dateString: string) =>
+  new Date(dateString).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+---
+
+<section class="bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 py-20">
+  <div class="container mx-auto px-6 max-w-6xl">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        What Our Players Say
+      </h2>
+      <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+        Real experiences from Bitcoin casino enthusiasts around the world
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      {reviews.map((review) => (
+        <div class="relative bg-white rounded-3xl shadow-xl border border-orange-100 p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <!-- Gradient accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500"></div>
+
+          <!-- Quote + Stars -->
+          <div class="flex justify-between items-start mb-6">
+            <div class="p-3 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-sm">
+              <Quote class="w-8 h-8 text-orange-500" />
+            </div>
+            <div class="flex items-center gap-1">
+              {renderStars(review.fields.rating)}
+            </div>
+          </div>
+
+          <!-- Review Text -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+              {review.fields.name}
+            </h3>
+            <p class="text-gray-700 leading-relaxed text-base font-medium">
+              {review.fields.description}
+            </p>
+          </div>
+
+          <!-- Reviewer Info -->
+          <div class="flex items-center justify-between pt-6 border-t border-orange-100">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
+                <span class="text-white font-bold text-lg">
+                  {review.fields.personName.charAt(0).toUpperCase()}
+                </span>
+              </div>
+              <div>
+                <p class="font-bold text-gray-900 text-base">
+                  {review.fields.personName}
+                </p>
+                <div class="flex items-center gap-2 text-sm text-gray-600 mt-1">
+                  <MapPin class="w-4 h-4 text-orange-500" />
+                  <span class="font-medium">{review.fields.country}</span>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-gray-600 bg-orange-50 px-3 py-2 rounded-full">
+              <Calendar class="w-4 h-4 text-orange-500" />
+              <span class="font-medium">{formatDate(review.fields.date)}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

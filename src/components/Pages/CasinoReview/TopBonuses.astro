@@ -1,0 +1,39 @@
+---
+import HorizontalCasinoCard from "../Cards/HorizontalCasinoCard.astro";
+
+// Props
+const { bonuses, backgroundColor, casinoName, firstRate } = Astro.props;
+
+// Random color generator (moved outside render loop so it's cleaner)
+const generateRandomColor = () => {
+  const colors = [
+    "#D4AF37", "#CD3700", "#228B22", "#1C86EE", "#C71585",
+    "#6A5ACD", "#CD5C5C", "#5B7F9B", "#B8860B", "#5F9EA0",
+    "#DB7093", "#3CB3A9", "#8A79B1", "#FF8C00", "#7BAF2B",
+    "#B22222", "#20B2AA", "#6A0DAD", "#C71585", "#1E90FF",
+    "#8B0000", "#2E8B57", "#A52A2A", "#9ACD32", "#EED5B7",
+    "#8FBC8F", "#CD7054", "#40B5AD", "#993366", "#3CB371",
+    "#B0C4DE", "#A0522D", "#C71585", "#5B7F9B",
+  ];
+  return colors[Math.floor(Math.random() * colors.length)];
+};
+---
+
+<section class="mx-auto px-4 lg:px-0 py-12 max-w-5xl lg:pb-24 pb-12 flex flex-col gap-4">
+  <h2 class="text-4xl font-bold mb-4">
+    Check out the best bonuses at {casinoName}
+  </h2>
+
+  <div class="flex flex-col gap-4 w-full max-w-5xl mx-auto">
+    {bonuses.map((bonus) => {
+      const cardBackgroundColor = backgroundColor || generateRandomColor();
+      return (
+        <HorizontalCasinoCard
+          casino={bonus}
+          cardBackgroundColor={cardBackgroundColor}
+          firstRate={firstRate}
+        />
+      );
+    })}
+  </div>
+</section>

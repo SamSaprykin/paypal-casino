@@ -1,0 +1,194 @@
+---
+import { cn } from "../../lib/utils";
+import Logo from "./Logo.astro";
+import GamblingTherapyLogo from "../Svg/GamblingTherapyLogo.astro";
+
+const websiteFooter = {
+  navigationItems: [
+    {
+      itemName: "Casino Lists",
+      itemLinkRoute: "",
+      navigationItems: [
+        {
+          linkRoute: "/",
+          linkText: "Best Crypt Casinos",
+          linkType: "internal",
+        },
+      ],
+    },
+    {
+      itemName: "Country Guides",
+      itemLinkRoute: "",
+      navigationItems: [
+        {
+          linkRoute: "/ireland-guide/",
+          linkText: "Ireland Guide",
+          linkType: "internal",
+          flagIcon: "🇮🇪",
+        },
+        {
+          linkRoute: "/suomi-guide/",
+          linkText: "Suomi Guide",
+          linkType: "internal",
+          flagIcon: "🇫🇮",
+        },
+        {
+          linkRoute: "/norway-guide/",
+          linkText: "Norway Guide",
+          linkType: "internal",
+          flagIcon: "🇳🇴",
+        },
+        {
+          linkRoute: "/sweden-guide/",
+          linkText: "Sweden Guide",
+          linkType: "internal",
+          flagIcon: "🇸🇪",
+        },
+        {
+          linkRoute: "/denmark-guide/",
+          linkText: "Denmark Guide",
+          linkType: "internal",
+          flagIcon: "🇩🇰",
+        },
+      ],
+    },
+    {
+      itemName: "Support",
+      itemLinkRoute: "",
+      navigationItems: [
+        {
+          linkRoute: "/contact-us/",
+          linkText: "Contact Us",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/frequently-asked-questions/",
+          linkText: "Frequently Asked Questions",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/rating-guidelines/",
+          linkText: "Casino Rating Guide",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/sitemap/",
+          linkText: "Sitemap",
+          linkType: "internal",
+        },
+      ],
+    },
+  ],
+};
+---
+
+<footer class="bg-blue-800 text-gray-100">
+  <div class="mx-auto px-6 lg:px-10 py-12 max-w-5xl mx-auto">
+    <!-- Main Footer Content -->
+    <div class="flex flex-col gap-6 mb-8">
+      <!-- Brand Section -->
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center mb-4">
+          <Logo />
+          <span class="ml-2 text-2xl font-bold text-white">
+            Paypalcasinoguides
+          </span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mb-12 w-full">
+        {websiteFooter.navigationItems.map((item) => (
+          <div class="text-center md:text-left">
+            <h3 class="text-white font-semibold text-lg mb-6 pb-2 border-b border-orange-400/30">
+              {item.itemName}
+            </h3>
+            <nav aria-label={`${item.itemName} navigation`}>
+              <ul class="space-y-3">
+                {item.navigationItems.map((subItem) => (
+                  <li >
+                    <a
+                      href={subItem.linkRoute}
+                      class="text-gray-300 hover:text-orange-300 transition-colors duration-200 inline-flex items-center gap-2 text-base font-medium transform transition-transform duration-200"
+                    >
+                      {subItem.flagIcon && (
+                        <span class="text-lg">{subItem.flagIcon}</span>
+                      )}
+                      {subItem.linkText}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        ))}
+      </div>
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <!-- Logos Row -->
+        <div class="flex flex-wrap justify-center gap-8 lg:gap-12 items-center">
+          <!-- Gambling Therapy Logo -->
+          <div class="flex flex-col items-center group">
+            <GamblingTherapyLogo />
+            <span class="text-gray-300 text-sm mt-2 font-medium">
+              Gambling Therapy
+            </span>
+          </div>
+
+          <!-- 18+ Icon -->
+          <div class="flex flex-col items-center group">
+            <div class="w-12 h-12 rounded-full border-3 border-gray-500 bg-gray-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <span class="text-gray-100 font-bold text-xl">18+</span>
+            </div>
+            <span class="text-gray-100 text-sm mt-2 font-medium">
+              Adults Only
+            </span>
+          </div>
+        </div>
+
+        <!-- Responsible Gaming Message -->
+        <div class="flex flex-col items-center max-w-md text-center">
+          <span class="text-gray-100 font-semibold text-base leading-relaxed mb-2">
+            Please gamble responsibly. If you feel you may have a problem, seek
+            help from a trusted support organization.
+          </span>
+          <a
+            href="https://www.gamblingtherapy.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-base hover:text-orange-400 transition-colors font-medium"
+          >
+            Visit GamblingTherapy.org
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-700 pt-6 mt-6">
+      <div class="flex flex-col md:flex-row justify-between items-center text-base text-gray-300">
+        <p>
+          &copy; {new Date().getFullYear()} Bitcoincasinoonline.com All rights
+          reserved.
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a
+            href="/terms-and-conditions/"
+            class="hover:text-orange-400 transition-colors"
+          >
+            Terms
+          </a>
+          <a
+            href="/privacy-policy/"
+            class="hover:text-orange-400 transition-colors"
+          >
+            Privacy
+          </a>
+          <a
+            href="/contact-us/"
+            class="hover:text-orange-400 transition-colors"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

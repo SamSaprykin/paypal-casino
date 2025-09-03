@@ -1,0 +1,19 @@
+---
+import BlogCard from "../Cards/BlogCard.astro";
+
+const { posts } = Astro.props;
+---
+
+<div class="bg-white flex flex-col items-center justify-center py-10">
+  <div class="max-w-7xl mx-auto py-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">
+      Our Latest News & Promotions
+    </h2>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {posts.map((post, idx) => (
+        <BlogCard key={post.sys?.id || idx} post={post} idx={idx} />
+      ))}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+---
+const {
+  casinoName,
+  logoUrl,
+  ratings = [],
+  trustScore,
+  backgroundColor,
+  userRecommendationsRecommendedNumber,
+  userRecommendationsTotalNumber,
+  bonus,
+} = Astro.props;
+
+import { Image } from "astro:assets";
+
+import { addHttps } from "../../../lib/helpers";
+---
+
+<div class="px-4 lg:px-0 bg-orange-50/50 pt-40 lg:pt-52 lg:pb-24 pb-12 bg-gradient-to-br from-yellow-200 via-yellow-50 to-yellow-100 py-16 px-4 overflow-hidden w-full">
+  <div class="bg-white rounded-2xl shadow-xl container mx-auto border border-gray-200 w-full max-w-5xl">
+    <div class="flex flex-col gap-4 lg:gap-8 p-4 lg:p-8">
+      <!-- Casino Logo and Header -->
+      <div class="flex flex-col justify-center items-center gap-6 w-full">
+        <div
+          class="p-4 flex-shrink-0 lg:w-64 lg:h-64 w-48 h-48 rounded-xl shadow-lg hover:shadow-xl transition-shadow -mt-16 lg:-mt-20 flex items-center justify-center"
+          style={`background-color: ${backgroundColor}`}
+        >
+          <Image
+            src={addHttps(logoUrl)}
+            alt={`${casinoName} logo`}
+            width="256"
+            height="256"
+            class="object-contain"
+          />
+        </div>
+        <div class="flex items-start gap-3">
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            {casinoName} 2025 Detailed Review
+          </h1>
+          <div class="flex-shrink-0 mt-1 rounded-full bg-orange-400 border border-gray-100 shadow-sm p-1">
+            <!-- CheckCircle -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ratings -->
+      <div class="flex-1 space-y-4 max-w-full">
+        <div class="overflow-x-auto w-full">
+          <div class="grid grid-flow-col auto-cols-[minmax(160px,_1fr)] gap-2 lg:gap-4 min-w-[600px] py-2 items-end">
+            {ratings.map((rating, i) => (
+              <div class="text-center flex flex-col items-center justify-center bg-gray-50 rounded-lg border shadow-sm" class:list={[i === 0 ? "border-orange-400 h-40" : "h-32"]}>
+                <p class={`mb-2 capitalize ${i === 0 ? "font-bold text-gray-800 text-3xl" : "text-gray-600 text-xl font-medium"}`}>
+                  {rating.fields.ratingType}
+                </p>
+                <div class="flex items-center gap-1">
+                  <!-- Star -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-yellow-400 fill-yellow-400" viewBox="0 0 24 24">
+                    <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.782 1.402 8.178L12 18.896l-7.336 3.853 1.402-8.178L.132 9.21l8.2-1.192z"/>
+                  </svg>
+                  <span class="font-semibold text-gray-900 text-2xl">{rating.fields.ratingNumber}</span>
+                  <span class="text-gray-600 text-2xl">/5</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <p class="text-xs text-gray-600">
+          This unbiased rating score is given by our casino & gambling experts according to our
+          <a href="/rating-guidelines" class="text-gray-600 hover:text-orange-400">Rating Guidelines</a>
+          to provide honest reviews.
+        </p>
+      </div>
+
+      <!-- User Recommendations -->
+      <div class="bg-gray-50 rounded-lg border border-gray-200 shadow-sm w-full">
+        <div class="p-4 flex flex-col lg:flex-row justify-between items-center w-full gap-4">
+          <div>
+            <p class="font-semibold text-gray-900 text-lg">
+              Would you recommend {casinoName}?
+            </p>
+            <p class="text-sm text-gray-600">
+              <span class="font-semibold">{userRecommendationsRecommendedNumber}</span> Users
+              <span class="text-yellow-800 font-semibold"> Recommend it</span>
+            </p>
+          </div>
+          <div class="flex lg:flex-col gap-2 items-end">
+            <div class="flex gap-2">
+              <button id="likeBtn" class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-500">
+                👍
+              </button>
+              <button id="dislikeBtn" class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 hover:border-red-500 hover:text-red-500">
+                👎
+              </button>
+            </div>
+            <div id="feedbackModal" class="hidden fixed inset-0 bg-white/60 backdrop-blur-sm z-[100] flex items-start justify-center pt-20">
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-md">
+                <p class="font-medium text-blue-900 mb-2">Thank you for your feedback.</p>
+                <p class="text-sm text-blue-800">
+                  What did you like about {casinoName}? Tell us more about your player experience
+                  <a href="/contact-us" class="hover:text-orange-400"> here</a>.
+                </p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-2 hidden lg:block">
+              {userRecommendationsRecommendedNumber} of {userRecommendationsTotalNumber} users recommended this casino
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bonus -->
+      <div class="flex flex-col justify-center items-center gap-6 w-full">
+        <div class="bg-orange-200 rounded-lg border border-orange-400 shadow-sm w-full flex justify-between items-center">
+          <div class="p-4 w-full flex flex-col lg:flex-row justify-between items-center">
+            <div class="flex items-center gap-4">
+              <div
+                class="flex-shrink-0 w-16 h-16 rounded-lg shadow-md hidden p-2 lg:flex items-center justify-center"
+                style={`background-color: ${backgroundColor}`}
+              >
+                <img
+                  src={addHttps(bonus.fields.bonusLogo.fields.file.url)}
+                  alt={`${casinoName} bonus`}
+                  width="64"
+                  height="64"
+                />
+              </div>
+              <div>
+                <p class="text-lg lg:text-sm font-medium text-gray-600 mb-1">
+                  Code: {bonus.fields.name}
+                </p>
+                <p class="text-xl lg:text-2xl font-bold text-gray-900">
+                  {bonus.fields.description}
+                </p>
+              </div>
+            </div>
+            <a
+              href={bonus.fields.referralUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full lg:max-w-60 mt-4 lg:mt-0 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition"
+            >
+              Play Now →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Score -->
+      <div class="flex flex-col sm:flex-row items-center gap-2 text-sm">
+        <span class="text-gray-700"> {casinoName} has been granted </span>
+        <a href="/rating-guidelines" class="flex items-center gap-1 text-yellow-600 hover:text-yellow-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c.5-1.5 2-2.5 4-2.5s3.5 1 4 2.5c.5-1.5 2-2.5 4-2.5s3.5 1 4 2.5" />
+          </svg>
+          <span>Paypalcasinos Rating Guidelines</span>
+        </a>
+        <span class="text-gray-700"> with an overall score </span>
+        <span class="text-2xl lg:text-sm font-semibold text-gray-900">{trustScore}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback handling script -->
+<script>
+  const likeBtn = document.getElementById("likeBtn");
+  const dislikeBtn = document.getElementById("dislikeBtn");
+  const modal = document.getElementById("feedbackModal");
+
+  function showModal() {
+    modal.classList.remove("hidden");
+  }
+
+  likeBtn?.addEventListener("click", () => {
+    likeBtn.classList.add("bg-yellow-500", "border-yellow-500", "text-white");
+    dislikeBtn.classList.remove("bg-red-500", "border-red-500", "text-white");
+    showModal();
+  });
+
+  dislikeBtn?.addEventListener("click", () => {
+    dislikeBtn.classList.add("bg-red-500", "border-red-500", "text-white");
+    likeBtn.classList.remove("bg-yellow-500", "border-yellow-500", "text-white");
+    showModal();
+  });
+
+  modal?.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
+  });
+</script>

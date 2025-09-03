@@ -1,0 +1,28 @@
+---
+import CasinoCard from "./Cards/HeroCasinoCard.astro";
+
+const { title, description, casinos } = Astro.props;
+const currentMonth = new Date().toLocaleString("en-US", { month: "long" });
+const currentYear = new Date().getFullYear();
+---
+
+<section class="relative bg-gradient-to-br from-blue-100 to-blue-50 py-16 px-4 overflow-hidden">
+  <div class="max-w-7xl mx-auto relative z-10">
+    <!-- Hero Title -->
+    <div class="text-center mt-16 lg:mt-20 mb-8 lg:mb-12">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+        {title}
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 font-semibold">
+        {description} {currentMonth} {currentYear}
+      </p>
+    </div>
+
+    <!-- Casino Cards Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+      {casinos.map((casino) => (
+        <CasinoCard casino={casino} />
+      ))}
+    </div>
+  </div>
+</section>

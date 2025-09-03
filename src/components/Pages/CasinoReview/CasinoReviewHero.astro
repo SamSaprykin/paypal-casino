@@ -1,0 +1,210 @@
+---
+import { 
+  Star, 
+  ThumbsUp, 
+  ThumbsDown, 
+  Shield, 
+  ArrowRight, 
+  CheckCircle 
+} from "@lucide/astro";
+import CustomButton from "../../../components/Atoms/Button.astro";
+import { addHttps } from "../../../lib/helpers";
+
+interface CasinoReviewHeroProps {
+  casinoName: string;
+  logoUrl: string;
+  ratings: Array<{ fields: { ratingType: string; ratingNumber: number } }>;
+  trustScore: number;
+  backgroundColor?: string;
+  userRecommendationsRecommendedNumber: number;
+  userRecommendationsTotalNumber: number;
+  bonus: any;
+}
+
+const {
+  casinoName,
+  logoUrl,
+  ratings,
+  trustScore,
+  backgroundColor = "#fff",
+  userRecommendationsRecommendedNumber,
+  userRecommendationsTotalNumber,
+  bonus,
+} = Astro.props as CasinoReviewHeroProps;
+---
+
+<div class="px-4 lg:px-0 bg-orange-50/50 pt-40 lg:pt-52 lg:pb-24 pb-12 bg-gradient-to-br from-yellow-200 via-yellow-50 to-yellow-100 py-16 px-4 overflow-hidden w-full">
+  <div class="bg-white rounded-2xl shadow-xl container mx-auto border border-gray-200 w-full max-w-5xl mx-auto">
+    <div class="flex flex-col gap-4 lg:gap-8 p-4 lg:p-8">
+      <!-- Main Review -->
+      <div class="space-y-6 flex flex-col justify-center items-center">
+        <!-- Casino Logo -->
+        <div class="flex flex-col justify-center items-center gap-6 w-full">
+          <div
+            class="p-4 flex-shrink-0 lg:w-64 lg:h-64 w-48 h-48 rounded-xl shadow-lg hover:shadow-xl transition-shadow -mt-16 lg:-mt-20 flex items-center justify-center"
+            style={`background-color:${backgroundColor}`}
+          >
+            <img
+              src={addHttps(logoUrl)}
+              alt={`${casinoName} logo`}
+              width="500"
+              height="500"
+              class="object-contain"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex items-start gap-3">
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+              {casinoName} 2025 Detailed Review
+            </h1>
+            <div class="flex-shrink-0 mt-1 rounded-full bg-orange-400 border border-gray-100 shadow-sm p-1">
+              <CheckCircle class="w-8 h-8 text-white" />
+            </div>
+          </div>
+
+          <!-- Ratings -->
+          <div class="flex-1 space-y-4 max-w-full">
+            <div class="overflow-x-auto w-full">
+              <div class="grid grid-flow-col auto-cols-[minmax(160px,_1fr)] gap-2 lg:gap-4 min-w-[600px] py-2 items-end">
+                {ratings.map((rating, index) => (
+                  <div>
+                    <div class={`text-center flex flex-col items-center justify-center bg-gray-50 rounded-lg border shadow-sm ${index === 0 ? "border-orange-400 h-40" : "bg-gray-50 h-32"}`}>
+                      <p class={`${index === 0 ? "font-bold text-gray-800 text-3xl" : "text-gray-600 text-xl font-medium"} mb-2 capitalize`}>
+                        {rating.fields.ratingType}
+                      </p>
+                      <div class="flex items-center gap-1">
+                        <Star class="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <span class="font-semibold text-gray-900 text-2xl">
+                          {rating.fields.ratingNumber}
+                        </span>
+                        <span class="text-gray-600 text-2xl">/</span>
+                        <span class="text-gray-600 text-2xl">5</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p class="text-xs text-gray-600">
+              This unbiased rating score is given by our casino & gambling experts according to our 
+              <a href="/rating-guidelines" class="text-gray-600 hover:text-orange-400">Rating Guidelines</a>
+              to provide honest reviews
+            </p>
+          </div>
+        </div>
+
+        <!-- User Recommendations -->
+        <div class="bg-gray-50 rounded-lg border border-gray-200 shadow-sm w-full">
+          <div class="p-4 flex flex-col lg:flex-row justify-between items-center w-full gap-4">
+            <div class="flex flex-col gap-4">
+              <p class="font-semibold text-gray-900 text-lg">
+                Would you recommend {casinoName}?
+              </p>
+              <p class="text-sm text-gray-600">
+                <span class="font-semibold">{userRecommendationsRecommendedNumber}</span> Users 
+                <span class="text-yellow-800 font-semibold"> Recommend it</span>
+              </p>
+            </div>
+            <div class="flex lg:flex-col gap-2">
+              <div class="flex items-end justify-end gap-2">
+                <button 
+                  class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 transition-colors border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-500" 
+                  data-feedback="like"
+                >
+                  <ThumbsUp class="w-5 h-5" />
+                </button>
+                <button 
+                  class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 transition-colors border-gray-300 text-gray-600 hover:border-red-500 hover:text-red-500" 
+                  data-feedback="dislike"
+                >
+                  <ThumbsDown class="w-5 h-5" />
+                </button>
+              </div>
+              <p class="text-sm text-gray-600 mt-2 hidden lg:block">
+                {userRecommendationsRecommendedNumber} of {userRecommendationsTotalNumber} users recommended this casino
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bonus Section -->
+        <div class="flex flex-col justify-center items-center gap-6 w-full">
+          <div class="bg-orange-200 rounded-lg border border-orange-400 shadow-sm w-full flex justify-between items-center">
+            <div class="p-4 w-full flex flex-col lg:flex-row justify-between items-center">
+              <div class="flex items-center gap-4">
+                <div 
+                  class="flex-shrink-0 w-16 h-16 rounded-lg shadow-md hidden p-2 lg:flex items-center justify-center" 
+                  style={`background-color:${backgroundColor}`}
+                >
+                  <img
+                    src={addHttps(bonus.fields.bonusLogo.fields.file.url)}
+                    width="64"
+                    height="64"
+                    alt={`${casinoName} logo`}
+                    class="object-contain"
+                  />
+                </div>
+                <div>
+                  <p class="text-lg lg:text-sm font-medium text-gray-600 mb-1">
+                    Code: {bonus.fields.name}
+                  </p>
+                  <p class="text-xl lg:text-2xl font-bold text-gray-900">
+                    {bonus.fields.description}
+                  </p>
+                </div>
+              </div>
+              <CustomButton
+                variant="primary"
+                size="lg"
+                class="w-full group lg:max-w-60 mt-4 lg:mt-0"
+                buttonType="external-ref-link"
+                refLink={bonus.fields.referralUrl}
+              >
+                <span>Play Now</span>
+                <ArrowRight class="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-600 rounded-full group-hover:bg-yellow-100" />
+              </CustomButton>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Score -->
+        <div class="flex flex-col sm:flex-row items-center gap-2 text-sm">
+          <span class="text-gray-700 text-center sm:text-left">
+            {casinoName} has been granted
+          </span>
+          <a href="/rating-guidelines" class="flex items-center gap-1 text-yellow-600 hover:text-yellow-800">
+            <Shield class="w-4 h-4" />
+            <span>Bitcoincasinoonline Rating Guidelines</span>
+          </a>
+          <span class="text-gray-700 text-center sm:text-left">with an overall score</span>
+          <span class="text-2xl lg:text-sm font-semibold text-gray-900">{trustScore}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedback-modal" class="hidden fixed inset-0 bg-white/60 backdrop-blur-sm z-[100] flex items-start justify-center pt-20 w-screen h-screen">
+  <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+    <p class="font-medium text-blue-900 mb-2">Thank you for your feedback.</p>
+    <p class="text-sm text-blue-800">
+      What did you like about {casinoName}? Tell us more about your player experience 
+      <a href="/contact-us" class="hover:text-orange-400">here</a>.
+    </p>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.feedback-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = document.getElementById('feedback-modal');
+      modal.classList.remove('hidden');
+
+      // Close modal on click outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('hidden');
+      });
+    });
+  });
+</script>

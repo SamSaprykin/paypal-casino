@@ -1,0 +1,85 @@
+---
+import { Menu } from "@lucide/astro";
+import SubMenu from "./SubMenu.astro";
+import Logo from "./Logo.astro";
+
+const menuData = [
+  {
+    itemLinkRoute: "",
+    itemName: "Country Guides",
+    navigationItems: [
+      {
+        linkRoute: "/ireland-guide/",
+        linkText: "Ireland Guide",
+        linkType: "internal",
+        flagIcon: "🇮🇪",
+      },
+      {
+        linkRoute: "/suomi-guide/",
+        linkText: "Suomi Guide",
+        linkType: "internal",
+        flagIcon: "🇫🇮",
+      },
+      {
+        linkRoute: "/norway-guide/",
+        linkText: "Norway Guide",
+        linkType: "internal",
+        flagIcon: "🇳🇴",
+      },
+      {
+        linkRoute: "/sweden-guide/",
+        linkText: "Sweden Guide",
+        linkType: "internal",
+        flagIcon: "🇸🇪",
+      },
+      {
+        linkRoute: "/denmark-guide/",
+        linkText: "Denmark Guide",
+        linkType: "internal",
+        flagIcon: "🇩🇰",
+      },
+    ],
+  },
+  {
+    itemName: "Blog",
+    itemLinkRoute: "/blog/",
+  },
+];
+
+---
+
+<nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100vw-2rem)] lg:w-[calc(100vw-10rem)] max-w-[100rem] mx-auto bg-blue-800/95 backdrop-blur-xs text-white shadow-xl rounded-2xl z-50 transition-all duration-300">
+  <div class="mx-auto px-4 lg:px-8 w-full">
+    <div class="flex justify-end md:justify-center items-center py-2 lg:py-4 relative min-h-[60px]">
+      <a href="/" class="flex items-center group absolute left-2">
+        <Logo />
+      </a>
+      <div class="flex justify-between items-center gap-4">
+        <button
+          class="lg:hidden text-white focus:outline-none"
+          onclick="toggleMenu()"
+        >
+          <span id="menu-icon">
+            <Menu size={24} />
+          </span>
+        </button>
+
+        <div class="hidden lg:flex lg:items-center lg:space-x-6">
+          <ul class="flex items-center">
+            {menuData.map((item, idx) => (
+              <SubMenu key={idx} item={item} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="lg:hidden overflow-hidden transition-all duration-500 ease-in-out max-h-0">
+      <ul class="pb-4 mt-4 md:mt-0">
+        {menuData.map((item, idx) => (
+          <SubMenu key={idx} item={item} />
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>

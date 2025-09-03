@@ -1,0 +1,25 @@
+---
+import CasinoListingCardHorizontal from "../Pages/Cards/CasinoListingCard.astro";
+
+
+const { copyBefore, casinoList, anchorTitle } = Astro.props;
+---
+
+<div class="bg-blue-50/50 py-4 lg:py-4 px-4">
+  <div class="max-w-6xl mx-auto py-4 lg:py-10">
+    <h2
+      class="text-5xl font-bold pt-6 lg:pt-12 text-center text-gray-800"
+      id={anchorTitle ? anchorTitle : ""}
+    >
+      {copyBefore}
+    </h2>
+
+    <div class="grid flex flex-col gap-4 container mx-auto mt-10 mb-4">
+      {casinoList.map((casino) => (
+        <CasinoListingCardHorizontal casino={casino} />
+      ))}
+    </div>
+
+
+  </div>
+</div>

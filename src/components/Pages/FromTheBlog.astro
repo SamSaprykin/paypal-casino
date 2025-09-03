@@ -1,0 +1,18 @@
+---
+import BlogCard from "./Cards/BlogCard.astro";
+
+// Props
+const { title, relatedArticles } = Astro.props;
+---
+
+<section class="bg-orange-50/50 flex flex-col items-center justify-center py-10">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">{title}</h2>
+
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      {relatedArticles.map((post, idx) => (
+        <BlogCard post={post.fields} idx={idx} />
+      ))}
+    </div>
+  </div>
+</section>

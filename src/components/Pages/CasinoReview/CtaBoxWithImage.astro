@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+const { src, alt, className, firstBonus } = Astro.props;
+
+const addHttps = (url) => url?.startsWith("http") ? url : `https:${url}`;
+
+---
+
+<div class="flex flex-col gap-4 w-full sm:w-[90%] my-8 border-2 border-yellow-500 rounded-xl p-4 relative overflow-hidden mx-auto bg-gradient-to-br from-yellow-200 via-gray-100 to-orange-100">
+  <div class="flex flex-col lg:gap-4">
+    <div class="flex flex-col gap-2 w-full sm:w-1/3">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-2 text-yellow-700">
+        {firstBonus.fields.name}
+      </h3>
+      <p class="text-base sm:text-lg text-gray-600 lg:mb-4">
+        {firstBonus.fields.description}
+      </p>
+    </div>
+    <a
+      href={firstBonus.fields.referralUrl}
+      class="w-full lg:max-w-60 mt-4 lg:mt-0 bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-600 transition-colors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Get Bonus
+      <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </a>
+  </div>
+
+  <Image
+    src={addHttps(src)}
+    alt={alt ?? firstBonus.fields.name}
+    width="400"
+    height="300"
+    class={`border-4 border-yellow-200 object-cover rounded-xl mx-auto my-2 lg:ml-8 ${className} relative lg:absolute lg:top-2 lg:-right-4`}
+  />
+</div>

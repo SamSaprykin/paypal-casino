@@ -1,31 +1,65 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import Clock from '../components/Clock.astro';
+import Header from '../components/Layout/Header.astro';
+import Footer from '../components/Layout/Footer.astro';
 
-import { getBlogPosts } from '../lib/contentful';
 
-// Fetch recent blog posts
-const recentPosts = await getBlogPosts(3);
+import {getWebsitePageBySlug   } from '../lib/contentful';
 
+import Hero from "../components/Pages/Hero.astro";
+import TopCasinoByYear from "../components/Pages/TopCasinoByYear.astro";
+import FromTheBlog from "../components/Pages/FromTheBlog.astro";
+
+import GameOfTheMonthVertical from "../components/Pages/GameOfTheMonthVertical.astro";
+
+
+
+import HowToBegin from "../components/Pages/HowTo.astro";
+
+
+
+
+const homePage = await getWebsitePageBySlug('/');
 const meta = {
-  title: 'Astro + Contentful + Tailwind Starter',
-  description: 'A modern, fast, and flexible starter template built with Astro, Contentful CMS, and Tailwind CSS. Perfect for building content-driven websites.',
+  title: homePage.seoComponent.fields.seoTitle || "",
+  description: homePage.seoComponent.fields.seoDescription || "",
   type: 'website' as const,
 };
 
 
 
-console.log("userLocation", recentPosts);
+const components = homePage.components;
+
+
 ---
 
 <BaseLayout meta={meta}>
   <Header />
 
-  <div class="flex flex-col items-center justify-center h-screen">
-    <h1 class="text-4xl font-bold">Hello World</h1>
-  </div>
-  
+  {components.map((component) => {
+    const type = component.sys.contentType.sys.id;
+
+    switch (type) {
+      case "heroDefaultWithCasinoCards":
+        return <Hero title={component.fields.title} description={component.fields.description} casinos={component.fields.casinos} />;
+        case "casinoList":
+          return <TopCasinoByYear copyBefore={component.fields.copyBefore} casinoList={component.fields.casinoList} anchorTitle={component.fields.anchorTitle} key={component.sys.id} />;
+
+        case "gameOfTheMonth":
+            return <GameOfTheMonthVertical title={component.fields.title} gameDescription={component.fields.gameDescription} gameName={component.fields.gameName} casinoLinks={component.fields.casinoLinks} image={component.fields.image} link={component.fields.link} key={component.sys.id} />;
+
+        case "featuredArticles":
+          return <FromTheBlog title={component.fields.title} relatedArticles={component.fields.relatedArticles} key={component.sys.id} />;
+
+      
+
+        case "howTo":
+            return <HowToBegin title={component.fields.title} howToItems={component.fields.howToItems} key={component.sys.id} />;
+        default:
+        return null;
+    }
+  })}
   <Footer />
 </BaseLayout>
+
+

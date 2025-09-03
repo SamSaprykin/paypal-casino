@@ -1,0 +1,109 @@
+---
+import { ChevronDown } from "@lucide/astro";
+
+const { item, level = 0, dropdown = false } = Astro.props;
+
+const baseStyles =
+  "flex items-center px-4 py-2 w-full text-left transition-colors hover:cursor-pointer";
+const levelStyles =
+  [
+    "text-white text-sm font-medium hover:bg-darkblue",
+    "text-xs hover:bg-darkblue hover:text-gray-100",
+  ][level] || "text-white text-xs hover:bg-darkblue";
+---
+
+<li class="relative group submenu" data-level={level}>
+  {item.itemLinkRoute ? (
+    <a
+      href={item.itemLinkRoute}
+      class={`${baseStyles} ${levelStyles} flex items-center justify-start text-md lg:text-lg hover:bg-darkblue hover:cursor-pointer ${dropdown ? "text-white lg:text-gray-900" : "text-white"}`}
+      data-toggle={item.navigationItems?.length > 0 ? "true" : "false"}
+    >
+      {item.flagIcon && <span class="mr-2">{item.flagIcon}</span>}
+      {item.itemName}
+      {item.navigationItems?.length > 0 && (
+        <ChevronDown class="ml-2 w-4 h-4 transition-transform icon-chevron" />
+      )}
+    </a>
+  ) : (
+    <button
+      class={`${baseStyles} ${levelStyles} text-md lg:text-lg`}
+      data-toggle={item.navigationItems?.length > 0 ? "true" : "false"}
+    >
+      {item.itemName}
+      {item.navigationItems?.length > 0 && (
+        <ChevronDown class="ml-2 w-4 h-4 transition-transform icon-chevron" />
+      )}
+    </button>
+  )}
+
+  {item.navigationItems?.length > 0 && (
+    <ul
+      class={`submenu-list max-h-0 opacity-0
+        overflow-hidden transition-all duration-300 ease-in-out
+        ${item.navigationItems.length > 8 ? "lg:grid lg:grid-cols-2 lg:min-w-[360px]" : "lg:min-w-[240px]"}
+        shadow-xl rounded-b-md bg-gray-100 lg:absolute lg:top-full lg:left-0
+        text-gray-900 backdrop-blur-sm z-20
+      `}
+    >
+      {item.navigationItems.map((child, idx) => (
+        <li class="relative group submenu" data-level={level + 1}>
+          {child.linkRoute ? (
+            <a
+              href={child.linkRoute}
+              class={`${baseStyles} text-xs hover:text-gray-100 hover:cursor-pointer hover:bg-blue-800 flex items-center justify-start text-md lg:text-lg`}
+            >
+              {child.flagIcon && <span class="mr-2">{child.flagIcon}</span>}
+              {child.linkText}
+            </a>
+          ) : (
+            <button
+              class={`${baseStyles} text-xs hover:bg-darkblue hover:text-gray-100 text-md lg:text-lg`}
+            >
+              {child.linkText}
+            </button>
+          )}
+        </li>
+      ))}
+    </ul>
+  )}
+</li>
+
+
+<script is:inline>
+  document.querySelectorAll(".submenu").forEach((submenuEl) => {
+    const toggleBtn = submenuEl.querySelector("[data-toggle='true']");
+    const submenuList = submenuEl.querySelector(".submenu-list");
+    const chevron = submenuEl.querySelector(".icon-chevron");
+
+    const isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    let isOpen = false;
+
+    if (toggleBtn && submenuList) {
+      const toggleMenu = (e) => {
+        if (isMobile) {
+          e.preventDefault();
+          isOpen = !isOpen;
+          submenuList.style.maxHeight = isOpen ? submenuList.scrollHeight + "px" : "0";
+          submenuList.style.opacity = isOpen ? "1" : "0";
+          chevron?.classList.toggle("rotate-180", isOpen);
+        }
+      };
+
+      toggleBtn.addEventListener("click", toggleMenu);
+
+      if (!isMobile) {
+        submenuEl.addEventListener("mouseenter", () => {
+          submenuList.style.maxHeight = submenuList.scrollHeight + "px";
+          submenuList.style.opacity = "1";
+          chevron?.classList.add("rotate-180");
+        });
+        submenuEl.addEventListener("mouseleave", () => {
+          submenuList.style.maxHeight = "0";
+          submenuList.style.opacity = "0";
+          chevron?.classList.remove("rotate-180");
+        });
+      }
+    }
+  });
+</script>
