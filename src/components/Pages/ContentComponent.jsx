@@ -101,12 +101,6 @@ export const ContentComponent = ({
                     {...props}
                   />
                 ),
-                p: ({ node, ...props }) => (
-                  <p
-                    className="text-lg leading-relaxed my-4 text-foreground"
-                    {...props}
-                  />
-                ),
                 ul: ({ node, ...props }) => (
                   <ul
                     className="list-disc list-inside my-4 pl-8 text-foreground"

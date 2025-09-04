@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-"moduleResolution": "bundler",   // or "node16"
+    "moduleResolution": "bundler",   // or "node16"
     "module": "esnext",              // helps with modern ESM packages
     "types": ["astro/client"],       // make sure Astro types are loaded
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true ,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
-    ],
+      }
+    ]
   }
 }

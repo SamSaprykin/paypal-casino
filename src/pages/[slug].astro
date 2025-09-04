@@ -1,0 +1,118 @@
+---
+import Hero from "../components/Pages/Hero.astro";
+import TopCasinoByYear from "../components/Pages/TopCasinoByYear.astro";
+import FromTheBlog from "../components/Pages/FromTheBlog.astro";
+
+import { getWebsitePageBySlug, getWebsitePages } from "../lib/contentful/utils";
+
+import TopBonuses from "../components/Pages/CasinoReview/TopBonuses.astro";
+
+import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
+
+import { ContentComponent } from "../components/Pages/ContentComponent";
+import { FaqSection } from "../components/Pages/FAQComponent";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Layout/Header.astro";
+import Footer from "../components/Layout/Footer.astro";
+
+
+
+export async function getStaticPaths() {
+  // Fetch all slugs to prerender
+  const websitePages = await getWebsitePages();
+
+  const paths = websitePages
+    .filter((websitePage) => websitePage.fields.slug !== "/")
+    .map((websitePage) => {
+      
+      return {
+        params: { slug: websitePage.fields.slug },
+        props: {
+          slug: websitePage.fields.slug,
+        },
+      };
+    });
+
+  return paths;
+}
+
+const {  slug } = Astro.props;
+const websitePageData = await getWebsitePageBySlug(slug);
+
+
+if (!websitePageData) {
+  throw new Error(`Page not found for slug: ${slug}`);
+}
+
+const components = websitePageData.components;
+
+const webPageSchema = generateWebPageSchema(websitePageData);
+
+  // Find FAQ components and generate FAQ schema
+  const faqComponents = components.filter(
+    (component) => component.sys.contentType.sys.id === "faqComponent"
+  );
+  const faqSchemas = faqComponents
+    .map((faqComponent) => generateFAQSchema(faqComponent))
+    .filter(Boolean);
+
+
+
+  const meta = {
+    title: websitePageData.seoComponent.fields.seoTitle,
+    description: websitePageData.seoComponent.fields.seoDescription,
+    alternates: {
+      canonical: `https://casinos-btc.com/${slug}/`,
+    },
+  };
+
+
+
+
+---
+
+<BaseLayout >
+  <Header />
+  <script type="application/ld+json" set:html={webPageSchema}></script>
+  <script type="application/ld+json" set:html={faqSchemas}></script>
+    <div class="lg:pt-12">
+      {components.map((component) => {
+        switch (component.sys.contentType.sys.id) {
+          case "heroDefaultWithCasinoCards":
+            return <Hero key={component.sys.id} props={component.fields} />;
+          case "casinoList":
+            return (
+              <TopCasinoByYear
+              casinoList={component.fields.casinoList}
+              copyBefore={component.fields.copyBefore}
+              anchorTitle={component.fields.anchorTitle}
+              />
+            );
+          case "featuredArticles":
+            return (
+              <FromTheBlog props={component.fields} />
+            );
+          case "faqComponent":
+            return <FaqSection faq={component} />;
+          case "contentComponent":
+            return (
+              <ContentComponent
+                content={component.fields.body}
+                spaceTop={0}
+                spaceBottom={12}
+                firstBonus={null} 
+              />
+            );
+          case "bonusesList":
+            return (
+              <TopBonuses
+               
+                bonuses={component.fields.bonuses}
+                title={component.fields.title}
+              />
+            );
+          default:
+            return null;
+        }
+      })}
+  <Footer />
