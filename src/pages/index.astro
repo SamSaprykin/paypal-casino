@@ -12,8 +12,8 @@ import FromTheBlog from "../components/Pages/FromTheBlog.astro";
 
 import GameOfTheMonthVertical from "../components/Pages/GameOfTheMonthVertical.astro";
 
-
-
+import { ContentComponent } from "../components/Pages/ContentComponent";
+import { FaqSection } from "../components/Pages/FAQComponent";
 import HowToBegin from "../components/Pages/HowTo.astro";
 
 
@@ -51,10 +51,15 @@ const components = homePage.components;
         case "featuredArticles":
           return <FromTheBlog title={component.fields.title} relatedArticles={component.fields.relatedArticles} key={component.sys.id} />;
 
-      
+        case "contentComponent":
+          return <ContentComponent  content={component.fields.body} firstBonus={component.fields.firstBonus} spaceTop={12} spaceBottom={12}   />;
 
         case "howTo":
             return <HowToBegin title={component.fields.title} howToItems={component.fields.howToItems} key={component.sys.id} />;
+
+        case "faqComponent":
+          return <FaqSection faq={component} client:only="react"   />;
+
         default:
         return null;
     }
