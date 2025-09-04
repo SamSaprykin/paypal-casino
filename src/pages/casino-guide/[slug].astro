@@ -1,0 +1,105 @@
+---
+// src/pages/casino-guide/[slug].astro
+import { getCasinoBySlug, getCasinoSeoData, getAllCasinos } from "../../lib/contentful/utils";
+import CasinoReviewHero from "../../components/Pages/CasinoReview/CasinoReviewHero.astro";
+import CasinoProsAndCons from "../../components/Pages/CasinoReview/ProsConsCasino.astro";
+
+import CasinoDetails from "../../components/Pages/CasinoReview/DetailsCasino.astro";
+import TopBonuses from "../../components/Pages/CasinoReview/TopBonuses.astro";
+import { FaqSection } from "../../components/Pages/FAQComponent";
+import { ContentComponent } from "../../components/Pages/ContentComponent";
+import Testimonials from "../../components/Pages/CasinoReview/Testimonials.astro";
+
+import { generateCasinoReviewSchema, generateFAQSchema } from "../../lib/schema";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Layout/Header.astro";
+import Footer from "../../components/Layout/Footer.astro";
+// Astro prerender
+export async function getStaticPaths() {
+
+  const casinos = await getAllCasinos();
+
+  return casinos.map((casino) => ({
+    params: { slug: casino.fields.slug },
+    props: { slug: casino.fields.slug }, // pass slug as prop
+  }));
+}
+
+const { slug } = Astro.props;
+
+// Fetch casino data
+const casino = await getCasinoBySlug(slug);
+const seoData = await getCasinoSeoData(slug);
+
+// Handle 404 case
+if (!casino || !seoData?.seoComponent) {
+  throw new Error(`Casino not found for slug: ${slug}`);
+}
+
+const firstBonus = casino.bonusesCollection?.items?.[0];
+
+// Schema Markup
+const reviewSchema = generateCasinoReviewSchema(casino);
+const faqSchema = casino.faqComponent
+  ? generateFAQSchema(casino.faqComponent)
+  : null;
+
+
+
+---
+
+<BaseLayout >
+    <Header />
+    <script type="application/ld+json" set:html={reviewSchema}></script>
+    <script type="application/ld+json" set:html={faqSchema}></script>
+    <CasinoReviewHero
+      casinoName={casino.casinoName}
+      logoUrl={casino.logo.fields.file.url}
+      ratings={casino.casinoRatesCollection.items}
+      welcomeBonus={casino.welcomeBonus}
+      trustScore={casino.trustScore}
+      backgroundColor={casino.backgroundColor}
+      bonus={firstBonus}
+      userRecommendationsRecommendedNumber={
+        casino.userRecommendationsRecommendedNumber
+      }
+      userRecommendationsTotalNumber={casino.userRecommendationsTotalNumber}
+    />
+
+    <CasinoDetails
+
+      casinoName={casino.casinoName}
+      logoUrl={casino.logo.fields.file.url}
+      ratings={casino.casinoRatesCollection.items}
+      trustScore={casino.trustScore}
+      backgroundColor={casino.backgroundColor}
+      bonus={firstBonus}
+      userRecommendationsRecommendedNumber={casino.userRecommendationsRecommendedNumber}
+      userRecommendationsTotalNumber={casino.userRecommendationsTotalNumber}
+    />
+
+    {casino.overviewsCollection && (
+      <CasinoProsAndCons
+        customData={casino.overviewsCollection.items}
+        casinoName={casino.casinoName}
+      />
+    )}
+
+    <ContentComponent content={casino.content} firstBonus={firstBonus} spaceTop={0} spaceBottom={12} client:only="react" />
+
+    {casino.bonusesCollection && casino.bonusesCollection.items.length > 0 && (
+      <TopBonuses
+        bonuses={casino.bonusesCollection.items}
+        backgroundColor={casino.backgroundColor}
+        firstRate={casino.casinoRatesCollection.items[0]}
+        casinoName={casino.casinoName}
+      />
+    )}
+
+    {casino.reviewsCollection && (
+      <Testimonials reviews={casino.reviewsCollection.items} />
+    )}
+
+    {casino.faqComponent && <FaqSection faq={casino.faqComponent} client:only="react" />}
+    <Footer />
+</BaseLayout>

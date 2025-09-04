@@ -4,19 +4,27 @@ import { Check, X } from "@lucide/astro";
 interface CasinoProsAndConsProps {
   casinoName?: string;
   customData?: {
-    pros: string[];
-    cons: string[];
-  } | null;
+    fields: {
+      overviewType: string;
+      title: string;
+    };
+  }[] | null;
 }
 
-
 const {
-  casinoName = "BetLabel Casino",
-  customData = null,
+  casinoName,
+  customData,
 } = Astro.props as CasinoProsAndConsProps;
 
-const data = customData;
+const data = customData || [];
 const lastUpdated = new Date().toLocaleDateString();
+
+const pros = data.filter((item) => item.fields.overviewType === "Pros");
+const cons = data.filter((item) => item.fields.overviewType === "Cons");
+
+
+
+
 ---
 
 <div class="px-4 lg:px-0">
@@ -40,12 +48,12 @@ const lastUpdated = new Date().toLocaleDateString();
             </div>
 
             <ul class="space-y-4">
-              {data.pros.map((prosItem) => (
+              {pros.map((prosItem) => (
                 <li class="flex items-start gap-2">
                   <div class="w-5 h-5 bg-yellow-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <Check class="w-3 h-3 text-white" />
                   </div>
-                  <span class="text-gray-700 leading-relaxed">{prosItem}</span>
+                  <span class="text-gray-700 leading-relaxed">{prosItem.fields.title}</span>
                 </li>
               ))}
             </ul>
@@ -65,12 +73,12 @@ const lastUpdated = new Date().toLocaleDateString();
             </div>
 
             <ul class="space-y-4">
-              {data.cons.map((consItem) => (
+              {cons.map((consItem) => (
                 <li class="flex items-start gap-3 group">
                   <div class="w-5 h-5 bg-red-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
                     <X class="w-3 h-3 text-white" />
                   </div>
-                  <span class="text-gray-700 leading-relaxed">{consItem}</span>
+                  <span class="text-gray-700 leading-relaxed">{consItem.fields.title}</span>
                 </li>
               ))}
             </ul>
@@ -96,14 +104,14 @@ const lastUpdated = new Date().toLocaleDateString();
           <div class="flex items-center gap-4">
             <div class="text-center">
               <div class="text-2xl font-bold text-yellow-600">
-                {data.pros.length}
+                {pros.length}
               </div>
               <div class="text-xs text-gray-500">Pros</div>
             </div>
             <div class="w-px h-8 bg-gray-300"></div>
             <div class="text-center">
               <div class="text-2xl font-bold text-red-600">
-                {data.cons.length}
+                {cons.length}
               </div>
               <div class="text-xs text-gray-500">Cons</div>
             </div>
