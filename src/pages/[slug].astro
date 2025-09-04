@@ -75,7 +75,7 @@ const webPageSchema = generateWebPageSchema(websitePageData);
   <Header />
   <script type="application/ld+json" set:html={webPageSchema}></script>
   <script type="application/ld+json" set:html={faqSchemas}></script>
-    <div class="lg:pt-12">
+    <div class="pt-12 lg:pt-24">
       {components.map((component) => {
         switch (component.sys.contentType.sys.id) {
           case "heroDefaultWithCasinoCards":
@@ -93,7 +93,7 @@ const webPageSchema = generateWebPageSchema(websitePageData);
               <FromTheBlog props={component.fields} />
             );
           case "faqComponent":
-            return <FaqSection faq={component} />;
+            return <FaqSection faq={component}  client:only="react" />;
           case "contentComponent":
             return (
               <ContentComponent
@@ -101,6 +101,7 @@ const webPageSchema = generateWebPageSchema(websitePageData);
                 spaceTop={0}
                 spaceBottom={12}
                 firstBonus={null} 
+                client:only="react"
               />
             );
           case "bonusesList":
