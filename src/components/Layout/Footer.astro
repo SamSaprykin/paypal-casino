@@ -82,7 +82,7 @@ const websiteFooter = {
 };
 ---
 
-<footer class="bg-blue-800 text-gray-100">
+<footer class="bg-blue-950 text-white">
   <div class="mx-auto px-6 lg:px-10 py-12 max-w-5xl mx-auto">
     <!-- Main Footer Content -->
     <div class="flex flex-col gap-6 mb-8">
@@ -98,7 +98,7 @@ const websiteFooter = {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mb-12 w-full">
         {websiteFooter.navigationItems.map((item) => (
           <div class="text-center md:text-left">
-            <h3 class="text-white font-semibold text-lg mb-6 pb-2 border-b border-orange-400/30">
+            <h3 class="text-white font-semibold text-lg mb-6 pb-2 border-b border-white/30">
               {item.itemName}
             </h3>
             <nav aria-label={`${item.itemName} navigation`}>
@@ -107,7 +107,7 @@ const websiteFooter = {
                   <li >
                     <a
                       href={subItem.linkRoute}
-                      class="text-gray-300 hover:text-orange-300 transition-colors duration-200 inline-flex items-center gap-2 text-base font-medium transform transition-transform duration-200"
+                      class="text-gray-100 hover:text-white transition-colors duration-200 inline-flex items-center gap-2 text-base font-medium transform transition-transform duration-200"
                     >
                       {subItem.flagIcon && (
                         <span class="text-lg">{subItem.flagIcon}</span>
@@ -127,17 +127,17 @@ const websiteFooter = {
           <!-- Gambling Therapy Logo -->
           <div class="flex flex-col items-center group">
             <GamblingTherapyLogo />
-            <span class="text-gray-300 text-sm mt-2 font-medium">
+            <span class="text-gray-100 text-sm mt-2 font-medium">
               Gambling Therapy
             </span>
           </div>
 
           <!-- 18+ Icon -->
           <div class="flex flex-col items-center group">
-            <div class="w-12 h-12 rounded-full border-3 border-gray-500 bg-gray-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <span class="text-gray-100 font-bold text-xl">18+</span>
+            <div class="w-12 h-12 rounded-full border-3 border-white0 bg-gray-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
+              <span class="text-white font-bold text-xl">18+</span>
             </div>
-            <span class="text-gray-100 text-sm mt-2 font-medium">
+            <span class="text-white text-sm mt-2 font-medium">
               Adults Only
             </span>
           </div>
@@ -145,7 +145,7 @@ const websiteFooter = {
 
         <!-- Responsible Gaming Message -->
         <div class="flex flex-col items-center max-w-md text-center">
-          <span class="text-gray-100 font-semibold text-base leading-relaxed mb-2">
+          <span class="text-white font-semibold text-base leading-relaxed mb-2">
             Please gamble responsibly. If you feel you may have a problem, seek
             help from a trusted support organization.
           </span>
@@ -153,7 +153,7 @@ const websiteFooter = {
             href="https://www.gamblingtherapy.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="text-base hover:text-orange-400 transition-colors font-medium"
+            class="text-base hover:text-white transition-colors font-medium"
           >
             Visit GamblingTherapy.org
           </a>
@@ -163,7 +163,7 @@ const websiteFooter = {
 
     <!-- Bottom Footer -->
     <div class="border-t border-gray-700 pt-6 mt-6">
-      <div class="flex flex-col md:flex-row justify-between items-center text-base text-gray-300">
+      <div class="flex flex-col md:flex-row justify-between items-center text-base text-gray-100">
         <p>
           &copy; {new Date().getFullYear()} Bitcoincasinoonline.com All rights
           reserved.
@@ -171,19 +171,19 @@ const websiteFooter = {
         <div class="flex space-x-6 mt-4 md:mt-0">
           <a
             href="/terms-and-conditions/"
-            class="hover:text-orange-400 transition-colors"
+            class="hover:text-white transition-colors"
           >
             Terms
           </a>
           <a
             href="/privacy-policy/"
-            class="hover:text-orange-400 transition-colors"
+            class="hover:text-white transition-colors"
           >
             Privacy
           </a>
           <a
             href="/contact-us/"
-            class="hover:text-orange-400 transition-colors"
+            class="hover:text-white transition-colors"
           >
             Contact
           </a>

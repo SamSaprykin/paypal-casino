@@ -42,7 +42,7 @@ const recommendationPercentage = Math.round(
         </a>
         <a
           href={`/casino-guide/${casino.fields.slug}`}
-          class="text-md font-semibold text-center text-blue-900 hover:text-blue-700 transition-colors duration-300"
+          class="text-md font-semibold text-center text-gray-100 hover:text-gray-50 transition-colors duration-300"
         >
           {casino.fields.casinoName}
         </a>
@@ -58,7 +58,7 @@ const recommendationPercentage = Math.round(
     <!-- 2. Rating Column -->
     <div class="flex-col items-center justify-center lg:px-4 lg:min-w-[100px] hidden lg:flex">
       <div class="flex items-center bg-blue-100 rounded-full px-3 py-2 mb-1">
-        <Star class="w-4 h-4 fill-blue-500 text-blue-500 mr-1" />
+        <Star class="w-4 h-4 fill-yellow-500 text-yellow-500 mr-1" />
         <span class="text-sm font-bold">
           {casino.fields.casinoRates[0].fields.ratingNumber}/5
         </span>
@@ -72,7 +72,7 @@ const recommendationPercentage = Math.round(
         <p class="text-xs text-blue-700 font-bold mb-1 uppercase tracking-wide">
           {firstBonus?.fields?.code || "Welcome Bonus"}
         </p>
-        <p class="text-blue-900 font-bold text-sm">
+        <p class="text-blue-950 font-bold text-sm">
           {firstBonus?.fields?.description || "Up to €1000 + 100 Free Spins"}
         </p>
       </div>
