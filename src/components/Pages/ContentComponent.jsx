@@ -1,6 +1,5 @@
 "use client";
 
-
 import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 
@@ -8,22 +7,25 @@ import { ArrowRight, Crown } from "lucide-react";
 import { addHttps } from "../../lib/helpers";
 import remarkGfm from "remark-gfm";
 
+const baseStyles =
+  "h-12 inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer text-sm md:text-base bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white shadow-lg hover:shadow-xl focus:ring-blue-600";
+
 const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
   return (
-    <div className="flex flex-col gap-4 w-2/3 my-8 border-2 border-green-500 rounded-xl p-4 relative overflow-hidden mx-auto bg-gradient-to-br from-green-200 via-gray-100 to-orange-100">
+    <div className="flex flex-col gap-4 w-2/3 my-8 border-2 border-blue-500 rounded-xl p-4 relative overflow-hidden mx-auto bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2 w-1/3">
           <h3 className="text-3xl font-bold mb-2">{firstBonus.name}</h3>
           <p className="text-lg text-gray-500 mb-4">{firstBonus.description}</p>
         </div>
         <button
-          className="w-full group lg:max-w-60 mt-4 lg:mt-0"         
+          className={`w-full group lg:max-w-60 mt-4 lg:mt-0 ${baseStyles}`}         
           onClick={() => {
             window.open(firstBonus.referralUrl, "_blank");
           }}
         >
           <span>Get Bonus</span>
-          <ArrowRight className="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-600 rounded-full group-hover:bg-yellow-100" />
+          <ArrowRight className="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-600 rounded-full group-hover:bg-blue-100" />
         </button>
       </div>
       <img
@@ -32,7 +34,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
         width={400}
         height={300}
         sizes="(max-width: 768px) 100vw, 800px"
-        className={` border-4 border-green-200 object-contain rounded-xl mx-auto my-4 float-right ml-8 ${className} absolute top-2  -right-4`}
+        className={` border-4 border-blue-200 object-contain rounded-xl mx-auto my-4 float-right ml-8 ${className} absolute top-2  -right-4`}
       />
     </div>
   );
@@ -40,19 +42,19 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
 
 const HighlightBox = ({ firstBonus, ...props }) => {
   return (
-    <div className="my-6 border-2 border-green-500 bg-gradient-to-br from-green-200 via-gray-100 to-orange-100 px-12 py-4 rounded-lg flex gap-3 flex items-center gap-12 w-full">
-      <Crown className="w-20 h-20 text-yellow-500" />
-      <div className="text-green-900">{props.children}</div>
+    <div className="my-6 border-2 border-blue-500 bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100 px-12 py-4 rounded-lg flex gap-3 flex items-center justify-between gap-12 w-full">
+      <Crown className="w-20 h-20 text-blue-500" />
+      <div className="text-blue-900">{props.children}</div>
       <button
         variant="primary"
         size="lg"
-        className="w-full group lg:max-w-60 mt-4 lg:mt-0"
+        className={`w-full group lg:max-w-60 mt-4 lg:mt-0 ${baseStyles}`}
         onClick={() => {
           window.open(firstBonus.referralUrl, "_blank");
         }}
       >
         <span>Play Now</span>
-        <ArrowRight className="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-600 rounded-full group-hover:bg-yellow-100" />
+        <ArrowRight className="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-600 rounded-full group-hover:bg-blue-100" />
       </button>
     </div>
   );
@@ -124,7 +126,7 @@ export const ContentComponent = ({
                 ),
                 a: ({ node, ...props }) => (
                   <a
-                    className="text-yellow-600 hover:text-yellow-700 underline hover:text-secondary transition-colors duration-200"
+                    className="text-blue-600 hover:text-blue-700 underline hover:text-secondary transition-colors duration-200"
                     {...props}
                   />
                 ),

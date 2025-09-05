@@ -12,7 +12,7 @@ const formatDate = (dateString) =>
   });
 ---
 
-<section class="bg-gradient-to-br from-orange-50 via-amber-50 to-orange-100 py-20">
+<section class="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 py-20">
   <div class="container mx-auto px-6 max-w-6xl">
     <!-- Section Header -->
     <div class="text-center mb-16">
@@ -27,21 +27,21 @@ const formatDate = (dateString) =>
     <!-- Testimonials Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
       {reviews.map((review) => (
-        <div class="relative bg-white rounded-3xl shadow-xl border border-orange-100 p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+        <div class="relative bg-white rounded-3xl shadow-xl border border-blue-100 p-6 overflow-hidden hover:shadow-2xl transition-shadow duration-300">
           <!-- Gradient accent bar -->
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-amber-400 to-orange-500"></div>
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"></div>
 
           <!-- Quote + Stars -->
           <div class="flex justify-between items-start mb-6">
-            <div class="p-3 bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl shadow-sm">
-              <Quote class="w-8 h-8 text-orange-500" />
+            <div class="p-3 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl shadow-sm">
+              <Quote class="w-8 h-8 text-blue-500" />
             </div>
             <div class="flex items-center gap-1">
               {Array.from({ length: 5 }, (_, index) => (
                 <Star
                   class={`w-5 h-5 ${
                     index < review.fields.rating
-                      ? "fill-orange-400 text-orange-400"
+                      ? "fill-blue-400 text-blue-400"
                       : "fill-gray-300 text-gray-300"
                   }`}
                 />
@@ -60,9 +60,9 @@ const formatDate = (dateString) =>
           </div>
 
           <!-- Reviewer Info -->
-          <div class="flex items-center justify-between pt-6 border-t border-orange-100">
+          <div class="flex items-center justify-between pt-6 border-t border-blue-100">
             <div class="flex items-center gap-4">
-              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 via-amber-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
                 <span class="text-white font-bold text-lg">
                   {review.fields.personName.charAt(0).toUpperCase()}
                 </span>
@@ -72,13 +72,13 @@ const formatDate = (dateString) =>
                   {review.fields.personName}
                 </p>
                 <div class="flex items-center gap-2 text-sm text-gray-600 mt-1">
-                  <MapPin class="w-4 h-4 text-orange-500" />
+                  <MapPin class="w-4 h-4 text-blue-500" />
                   <span class="font-medium">{review.fields.country}</span>
                 </div>
               </div>
             </div>
-            <div class="flex items-center gap-2 text-sm text-gray-600 bg-orange-50 px-3 py-2 rounded-full">
-              <Calendar class="w-4 h-4 text-orange-500" />
+            <div class="flex items-center gap-2 text-sm text-gray-600 bg-blue-50 px-3 py-2 rounded-full">
+              <Calendar class="w-4 h-4 text-blue-500" />
               <span class="font-medium">{formatDate(review.fields.date)}</span>
             </div>
           </div>

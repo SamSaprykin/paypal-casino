@@ -15,7 +15,7 @@ import { Image } from "astro:assets";
 import { addHttps } from "../../../lib/helpers";
 ---
 
-<div class="px-4 lg:px-0 bg-orange-50/50 pt-40 lg:pt-52 lg:pb-24 pb-12 bg-gradient-to-br from-yellow-200 via-yellow-50 to-yellow-100 py-16 px-4 overflow-hidden w-full">
+<div class="px-4 lg:px-0 bg-blue-50/50 pt-40 lg:pt-52 lg:pb-24 pb-12 bg-gradient-to-br from-blue-200 via-blue-50 to-blue-100 py-16 px-4 overflow-hidden w-full">
   <div class="bg-white rounded-2xl shadow-xl container mx-auto border border-gray-200 w-full max-w-5xl">
     <div class="flex flex-col gap-4 lg:gap-8 p-4 lg:p-8">
       <!-- Casino Logo and Header -->
@@ -36,7 +36,7 @@ import { addHttps } from "../../../lib/helpers";
           <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
             {casinoName} 2025 Detailed Review
           </h1>
-          <div class="flex-shrink-0 mt-1 rounded-full bg-orange-400 border border-gray-100 shadow-sm p-1">
+          <div class="flex-shrink-0 mt-1 rounded-full bg-blue-400 border border-gray-100 shadow-sm p-1">
             <!-- CheckCircle -->
             <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
               <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +51,7 @@ import { addHttps } from "../../../lib/helpers";
         <div class="overflow-x-auto w-full">
           <div class="grid grid-flow-col auto-cols-[minmax(160px,_1fr)] gap-2 lg:gap-4 min-w-[600px] py-2 items-end">
             {ratings.map((rating, i) => (
-              <div class="text-center flex flex-col items-center justify-center bg-gray-50 rounded-lg border shadow-sm" class:list={[i === 0 ? "border-orange-400 h-40" : "h-32"]}>
+              <div class="text-center flex flex-col items-center justify-center bg-gray-50 rounded-lg border shadow-sm" class:list={[i === 0 ? "border-yellow-400 h-40" : "h-32"]}>
                 <p class={`mb-2 capitalize ${i === 0 ? "font-bold text-gray-800 text-3xl" : "text-gray-600 text-xl font-medium"}`}>
                   {rating.fields.ratingType}
                 </p>
@@ -69,7 +69,7 @@ import { addHttps } from "../../../lib/helpers";
         </div>
         <p class="text-xs text-gray-600">
           This unbiased rating score is given by our casino & gambling experts according to our
-          <a href="/rating-guidelines" class="text-gray-600 hover:text-orange-400">Rating Guidelines</a>
+          <a href="/rating-guidelines/" class="text-gray-600 hover:text-blue-400">Rating Guidelines</a>
           to provide honest reviews.
         </p>
       </div>
@@ -83,12 +83,12 @@ import { addHttps } from "../../../lib/helpers";
             </p>
             <p class="text-sm text-gray-600">
               <span class="font-semibold">{userRecommendationsRecommendedNumber}</span> Users
-              <span class="text-yellow-800 font-semibold"> Recommend it</span>
+              <span class="text-blue-800 font-semibold"> Recommend it</span>
             </p>
           </div>
           <div class="flex lg:flex-col gap-2 items-end">
             <div class="flex gap-2">
-              <button id="likeBtn" class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 hover:border-yellow-500 hover:text-yellow-500">
+              <button id="likeBtn" class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 hover:border-blue-500 hover:text-blue-500">
                 👍
               </button>
               <button id="dislikeBtn" class="feedback-btn flex items-center justify-center w-12 h-12 rounded-full border-2 border-gray-300 text-gray-600 hover:border-red-500 hover:text-red-500">
@@ -100,7 +100,7 @@ import { addHttps } from "../../../lib/helpers";
                 <p class="font-medium text-blue-900 mb-2">Thank you for your feedback.</p>
                 <p class="text-sm text-blue-800">
                   What did you like about {casinoName}? Tell us more about your player experience
-                  <a href="/contact-us" class="hover:text-orange-400"> here</a>.
+                  <a href="/contact-us" class="hover:text-blue-400"> here</a>.
                 </p>
               </div>
             </div>
@@ -113,7 +113,7 @@ import { addHttps } from "../../../lib/helpers";
 
       <!-- Bonus -->
       <div class="flex flex-col justify-center items-center gap-6 w-full">
-        <div class="bg-orange-200 rounded-lg border border-orange-400 shadow-sm w-full flex justify-between items-center">
+        <div class="bg-blue-200 rounded-lg border border-blue-400 shadow-sm w-full flex justify-between items-center">
           <div class="p-4 w-full flex flex-col lg:flex-row justify-between items-center">
             <div class="flex items-center gap-4">
               <div
@@ -140,7 +140,7 @@ import { addHttps } from "../../../lib/helpers";
               href={bonus.fields.referralUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full lg:max-w-60 mt-4 lg:mt-0 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-500 text-white font-semibold hover:bg-orange-600 transition"
+              class="w-full lg:max-w-60 mt-4 lg:mt-0 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-500 text-white font-semibold hover:bg-blue-600 transition"
             >
               Play Now →
             </a>
@@ -151,7 +151,7 @@ import { addHttps } from "../../../lib/helpers";
       <!-- Trust Score -->
       <div class="flex flex-col sm:flex-row items-center gap-2 text-sm">
         <span class="text-gray-700"> {casinoName} has been granted </span>
-        <a href="/rating-guidelines" class="flex items-center gap-1 text-yellow-600 hover:text-yellow-800">
+        <a href="/rating-guidelines/" class="flex items-center gap-1 text-blue-600 hover:text-blue-800">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c.5-1.5 2-2.5 4-2.5s3.5 1 4 2.5c.5-1.5 2-2.5 4-2.5s3.5 1 4 2.5" />
           </svg>
@@ -175,14 +175,14 @@ import { addHttps } from "../../../lib/helpers";
   }
 
   likeBtn?.addEventListener("click", () => {
-    likeBtn.classList.add("bg-yellow-500", "border-yellow-500", "text-white");
+    likeBtn.classList.add("bg-blue-500", "border-blue-500", "text-white");
     dislikeBtn.classList.remove("bg-red-500", "border-red-500", "text-white");
     showModal();
   });
 
   dislikeBtn?.addEventListener("click", () => {
     dislikeBtn.classList.add("bg-red-500", "border-red-500", "text-white");
-    likeBtn.classList.remove("bg-yellow-500", "border-yellow-500", "text-white");
+    likeBtn.classList.remove("bg-blue-500", "border-blue-500", "text-white");
     showModal();
   });
 

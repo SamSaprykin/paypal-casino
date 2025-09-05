@@ -14,7 +14,6 @@ const recommendationPercentage = Math.round(
     100
 );
 
-
 ---
 
 <div
@@ -93,7 +92,7 @@ const recommendationPercentage = Math.round(
       <div class="flex flex-col gap-2 p-4">
         <CustomButton
           variant="primary"
-          class="cta-btn w-full group min-h-[40px] font-semibold text-md"
+          className="cta-btn w-full group min-h-[40px] font-semibold text-md"
           buttonType="external-ref-link"
           refLink={casino.fields.referralUrl}
         >
@@ -202,7 +201,8 @@ const recommendationPercentage = Math.round(
     </div>
   </div>
 </div>
-<script type="module">
+
+<script>
   document.addEventListener("DOMContentLoaded", () => {
     // Select all casino cards
     const cards = document.querySelectorAll(".casino-card");

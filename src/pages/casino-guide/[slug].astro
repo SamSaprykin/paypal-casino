@@ -1,7 +1,6 @@
 ---
 // src/pages/casino-guide/[slug].astro
 import { getCasinoBySlug, getCasinoSeoData, getAllCasinos } from "../../lib/contentful/utils";
-import CasinoReviewHero from "../../components/Pages/CasinoReview/CasinoReviewHero.astro";
 import CasinoProsAndCons from "../../components/Pages/CasinoReview/ProsConsCasino.astro";
 
 import CasinoDetails from "../../components/Pages/CasinoReview/DetailsCasino.astro";
@@ -52,19 +51,7 @@ const faqSchema = casino.faqComponent
     <Header />
     <script type="application/ld+json" set:html={reviewSchema}></script>
     <script type="application/ld+json" set:html={faqSchema}></script>
-    <CasinoReviewHero
-      casinoName={casino.casinoName}
-      logoUrl={casino.logo.fields.file.url}
-      ratings={casino.casinoRatesCollection.items}
-      welcomeBonus={casino.welcomeBonus}
-      trustScore={casino.trustScore}
-      backgroundColor={casino.backgroundColor}
-      bonus={firstBonus}
-      userRecommendationsRecommendedNumber={
-        casino.userRecommendationsRecommendedNumber
-      }
-      userRecommendationsTotalNumber={casino.userRecommendationsTotalNumber}
-    />
+
 
     <CasinoDetails
 
