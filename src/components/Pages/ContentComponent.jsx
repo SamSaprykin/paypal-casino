@@ -42,7 +42,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
 
 const HighlightBox = ({ firstBonus, ...props }) => {
   return (
-    <div className="my-6 border-2 border-blue-500 bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100 px-12 py-4 rounded-lg flex gap-3 flex items-center justify-between gap-12 w-full">
+    <div className="my-6 border-2 border-blue-500 bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100 px-12 py-4 rounded-lg flex gap-3 flex items-center justify-between gap-12 w-full max-w-4xl mx-auto">
       <Crown className="w-20 h-20 text-blue-500" />
       <div className="text-blue-900">{props.children}</div>
       <button
