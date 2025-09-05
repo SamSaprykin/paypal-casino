@@ -216,23 +216,23 @@ const recommendationPercentage = Math.round(
       if (!btn || !extra || !mainRow) return;
 
       // Set initial collapsed height
-      const baseHeight = mainRow.offsetHeight;
-      card.style.maxHeight = baseHeight + "px";
+      const baseHeight = (mainRow as HTMLElement).offsetHeight;
+      (card as HTMLElement).style.maxHeight = baseHeight + "px";
 
       btn.addEventListener("click", () => {
         const isOpen = extra.classList.contains("open");
 
         if (isOpen) {
           extra.classList.remove("open");
-          extra.style.maxHeight = "0";
-          extra.style.opacity = "0";
-          card.style.maxHeight = baseHeight + "px";
+          (extra as HTMLElement).style.maxHeight = "0";
+          (extra as HTMLElement).style.opacity = "0";
+          (card as HTMLElement).style.maxHeight = baseHeight + "px";
           chevron && chevron.classList.remove("rotate-180");
         } else {
           extra.classList.add("open");
-          extra.style.maxHeight = extra.scrollHeight + "px";
-          extra.style.opacity = "1";
-          card.style.maxHeight = baseHeight + extra.scrollHeight + "px";
+          (extra as HTMLElement).style.maxHeight = extra.scrollHeight + "px";
+          (extra as HTMLElement).style.opacity = "1";
+          (card as HTMLElement).style.maxHeight = baseHeight + extra.scrollHeight + "px";
           chevron && chevron.classList.add("rotate-180");
         }
       });
