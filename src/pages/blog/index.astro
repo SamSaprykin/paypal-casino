@@ -1,0 +1,51 @@
+---
+import { getAllPosts, getBlogCategoriesWithCounts } from "../../lib/contentful/utils";
+import BlogHero from "../../components/Pages/BlogListing/BlogHero.astro";
+import BlogNav from "../../components/Pages/BlogListing/BlogNav.astro";
+import BlogListing from "../../components/Pages/BlogListing/CardsListing.astro";
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Layout/Header.astro";
+import Footer from "../../components/Layout/Footer.astro";
+import { generateCollectionPageSchema } from "../../lib/schema";
+
+
+const meta = {
+  title: "Blog | PayPal Casino Reviews",
+  description:
+    "Expert insights and guides for PayPal casino players",
+  alternates: {
+    canonical: "https://casinos-btc.com/blog/",
+  },
+};
+
+// Get all posts and categories with counts
+const [posts, categories] = await Promise.all([
+  getAllPosts(),
+  getBlogCategoriesWithCounts(),
+]);
+
+// Get the featured post (last/most recent post)
+const featuredPost = posts.length > 0 ? posts[0] : null;
+
+// Generate schema markup for blog collection page
+const blogItems = posts.map((post) => ({
+  title: post.title,
+  url: `/blog/${post.category?.toLowerCase().replace(/\s+/g, "-")}/${post.slug}`,
+}));
+
+const collectionSchema = generateCollectionPageSchema(
+  "Blog | PayPal Casino Reviews",
+  "Expert insights and guides for PayPal casino players",
+  "/blog",
+  blogItems
+);
+---
+<BaseLayout >
+    <Header />
+    <script type="application/ld+json" set:html={collectionSchema}></script>
+<BlogHero featuredPost={featuredPost} />
+<BlogNav categories={categories} activeCategory="All" />
+<BlogListing posts={posts} shouldRender={true} />
+<Footer />
+</BaseLayout>
