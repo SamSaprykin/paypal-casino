@@ -1,0 +1,75 @@
+---
+import { getAllPosts, getBlogCategoriesWithCounts, getPostsByCategory } from "../../../lib/contentful/utils";
+import BlogHero from "../../../components/Pages/BlogListing/BlogHero.astro";
+import BlogNav from "../../../components/Pages/BlogListing/BlogNav.astro";
+import BlogListing from "../../../components/Pages/BlogListing/CardsListing.astro";
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Layout/Header.astro";
+import Footer from "../../../components/Layout/Footer.astro";
+import { generateCollectionPageSchema } from "../../../lib/schema";
+import { slugify } from "../../../lib/helpers";
+
+export async function getStaticPaths() {
+  try {
+    const { getBlogCategories } = await import('../../../lib/contentful/utils');
+    const categories = await getBlogCategories();
+
+
+    return categories.map(category => ({
+      params: { category: slugify(category) }
+    }));
+  } catch (error) {
+    console.error('Error generating static paths:', error);
+    return [];
+  }
+}
+
+const { category } = Astro.params;
+
+// Convert slug to original format
+const originalCategory = category
+  .split('-')
+  .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+  .join(' ');
+
+// Fetch data
+const [categoryPosts, allPosts, categories] = await Promise.all([
+  getPostsByCategory(originalCategory),
+  getAllPosts(),
+  getBlogCategoriesWithCounts(),
+]);
+
+const featuredPost = allPosts.length > 0 ? allPosts[0] : null;
+
+// Determine if we should render blog listing
+const shouldRenderBlogListing = !(
+  categoryPosts.length === 1 &&
+  featuredPost &&
+  categoryPosts[0].sys.id === featuredPost.sys.id
+);
+
+// Generate schema markup
+const categoryItems = categoryPosts.map(post => ({
+  title: post.title,
+  url: `/blog/${category}/${post.slug}`,
+}));
+
+const collectionSchema = generateCollectionPageSchema(
+  `${originalCategory} | Crypto Casino Blog`,
+  `Top ${originalCategory} articles and guides from Casinos-BTC.com to help you make the most of your online crypto casino experience.`,
+  `/blog/${category}`,
+  categoryItems
+);
+
+
+---
+
+<BaseLayout >
+    <Header />
+    <script type="application/ld+json" set:html={collectionSchema}></script>
+    <BlogHero featuredPost={featuredPost} />
+    <BlogNav categories={categories} activeCategory={originalCategory} />
+    <BlogListing posts={categoryPosts} shouldRender={shouldRenderBlogListing} />
+    <Footer />
+</BaseLayout>

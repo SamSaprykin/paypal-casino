@@ -303,6 +303,7 @@ export async function getPostBySlug(slug) {
   }
 }
 
+
 // Helper function to get all unique categories from blog posts
 export async function getBlogCategories() {
   try {

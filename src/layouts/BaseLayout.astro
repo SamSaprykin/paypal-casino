@@ -17,12 +17,6 @@ const { class: className } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <body class={`min-h-screen flex flex-col ${className || ''}`}>
     <slot />
-    
-    <!-- Analytics and other scripts can be added here -->
-    <script>
-      // Add any global JavaScript here
-      console.log('🚀 Astro + Contentful + Tailwind Starter');
-    </script>
   </body>
 </html>
 

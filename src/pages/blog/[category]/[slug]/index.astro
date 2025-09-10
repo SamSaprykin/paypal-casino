@@ -1,0 +1,140 @@
+---
+import { getPostBySlug, getAllPosts } from "../../../../lib/contentful/utils";
+import { format } from "date-fns";
+import { addHttps } from "../../../../lib/helpers";
+import { generateArticleSchema } from "../../../../lib/schema";
+
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Layout/Header.astro";
+import Footer from "../../../../components/Layout/Footer.astro";
+import { Markdown } from "../../../../components/Pages/Cards/Markdown";
+
+// Lucide icons can be used as inline SVGs or via a library that works with Astro
+import { User, Calendar, Clock, BookOpen, Star, UserRound } from "@lucide/astro";
+
+import { ContentComponent } from "../../../../components/Pages/ContentComponent";
+import CasinoCard from "../../../../components/Pages/Cards/HeroCasinoCard.astro";
+import { slugify } from "../../../../lib/helpers";
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts();
+
+  return posts.map(post => ({
+    category: post.category?.toLowerCase().replace(/\s+/g, "-"),
+    params: { category: post.category?.toLowerCase().replace(/\s+/g, "-"), slug: post.slug },
+    props: { category: post.category?.toLowerCase().replace(/\s+/g, "-"), slug: post.slug }
+  }));
+}
+
+
+const { slug } = Astro.params;
+const slugWithoutBlogAndCategory = slug.replace("/blog/", "").replace("/", "");
+const article = await getPostBySlug(slugWithoutBlogAndCategory);
+
+const timeToRead = Math.ceil(article.body.length / 300);
+
+
+// Schema markup
+const articleSchema = generateArticleSchema(article, article.author);
+---
+
+<BaseLayout >
+    <Header />
+    <script type="application/ld+json" set:html={articleSchema}></script>
+
+<body class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+  <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 lg:pt-36 pb-12">
+    <!-- Article Header -->
+    <header class="mb-8">
+      <div class="mb-4">
+        <a href={`/blog/${slugify(article.category)}`} class="bg-blue-700 text-white text-sm px-4 py-2 rounded-md shadow-md font-semibold uppercase tracking-wide">
+          {article.category}
+        </a>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">{article.title}</h1>
+      <p class="text-xl text-gray-600 leading-relaxed mb-6">{article.cardDescription}</p>
+
+      <div class="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-6">
+        <div class="flex items-center gap-2">
+          <User class="w-4 h-4 text-blue-600"/>
+          <span class="font-medium text-blue-700">{article.author.fields.name}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Calendar class="w-4 h-4 text-blue-600"/>
+          <span>{format(new Date(article.created), "MMMM d, yyyy")}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <Clock class="w-4 h-4 text-blue-600"/>
+          <span>{timeToRead} min read</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    <div class="relative w-full h-64 sm:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl border-4 border-white mb-8">
+      <img src={addHttps(article.featuredImage.fields.file.url)} alt={article.title} class="object-cover w-full h-full"/>
+    </div>
+
+    <ContentComponent content={article.body} spaceTop={0} spaceBottom={12} firstBonus={null} />
+
+    {article.highlights && (
+      <div class="bg-gradient-to-r from-blue-50 to-white p-4 md:p-8 rounded-xl shadow-lg mb-8 border border-blue-200">
+        <div class="flex items-start gap-3">
+          <Star class="w-5 h-5 text-blue-600 mt-1 flex-shrink-0 min-w-5"/>
+
+          <Markdown content={article.highlights} />
+        </div>
+      </div>
+    )}
+
+    <!-- Author Section -->
+    <div class="bg-white border border-blue-200 rounded-xl p-6 shadow-md mb-8">
+      <h3 class="text-lg font-semibold text-blue-800 mb-4">About the Author</h3>
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full">
+          <UserRound class="w-6 h-6 text-blue-600"/>
+        </div>
+        <div class="flex-1">
+          <h4 class="font-semibold text-blue-800 mb-2">{article.author.fields.name}</h4>
+          <p class="text-gray-600 text-sm mb-3">{article.author.fields.bio}</p>
+          <div class="flex flex-wrap gap-2">
+            {article.author.fields.expertise.map(skill => (
+              <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">{skill}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {article.relatedCasinosTitle && article.relatedCasinosList && (
+      <div class="my-12 lg:my-32">
+        <h3 class="text-3xl md:text-5xl font-bold text-gray-800 mb-12 lg:mb-16">{article.relatedCasinosTitle}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {article.relatedCasinosList.map(casino => (
+            <CasinoCard casino={casino}/>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="prose prose-lg max-w-none">
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
+        <div class="flex items-start gap-3">
+          <BookOpen class="w-6 h-6 text-blue-600 mt-1 flex-shrink-0"/>
+          <p class="text-gray-700 leading-relaxed m-0">{article.description ?? article.cardDescription}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+      <h2 class="text-2xl font-bold text-blue-800 mb-4">⚠️ Responsible Gambling Reminder</h2>
+      <p class="text-gray-700">
+        While bonuses can boost your play, always gamble responsibly. Set limits, take breaks, and remember that bonuses aren't guaranteed wins. For support, visit 
+        <a href="https://www.gambleaware.org/" target="_blank" rel="noopener noreferrer" class="text-blue-700 underline">www.gambleaware.org</a>.
+      </p>
+    </div>
+  </article>
+</body>
+<Footer />
+</BaseLayout>
