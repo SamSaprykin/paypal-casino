@@ -35,6 +35,22 @@ if (!casino || !seoData?.seoComponent) {
   throw new Error(`Casino not found for slug: ${slug}`);
 }
 
+// SEO data from CMS with fallbacks
+const seoProps = {
+  title: seoData.seoComponent?.fields?.seoTitle || `${casino.casinoName} Review - PayPal Casino`,
+  description: seoData.seoComponent?.fields?.seoDescription || `Read our comprehensive review of ${casino.casinoName}. Expert analysis of bonuses, games, and PayPal payment options.`,
+  canonical: `/casino-guide/${slug}/`,
+  openGraph: {
+    title: seoData.seoComponent?.fields?.openGraphTitle || seoData.seoComponent?.fields?.seoTitle || `${casino.casinoName} Review`,
+    description: seoData.seoComponent?.fields?.openGraphDescription || seoData.seoComponent?.fields?.seoDescription || `Read our comprehensive review of ${casino.casinoName}`,
+    image: seoData.seoComponent?.fields?.openGraphImage?.fields?.file?.url || casino.logo?.fields?.file?.url,
+    type: "article"
+  },
+  noIndex: seoData.seoComponent?.fields?.noIndex || false,
+  noFollow: seoData.seoComponent?.fields?.noFollow || false,
+  keywords: seoData.seoComponent?.fields?.keywords || []
+};
+
 const firstBonus = casino.bonusesCollection?.items?.[0];
 
 // Schema Markup
@@ -47,7 +63,7 @@ const faqSchema = casino.faqComponent
 
 ---
 
-<BaseLayout >
+<BaseLayout seo={seoProps}>
     <Header />
     <script type="application/ld+json" set:html={reviewSchema}></script>
     <script type="application/ld+json" set:html={faqSchema}></script>

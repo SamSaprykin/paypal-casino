@@ -58,12 +58,20 @@ const webPageSchema = generateWebPageSchema(websitePageData);
 
 
 
-  const meta = {
-    title: websitePageData.seoComponent.fields.seoTitle,
-    description: websitePageData.seoComponent.fields.seoDescription,
-    alternates: {
-      canonical: `https://casinos-btc.com/${slug}/`,
+  // SEO data from CMS with fallbacks
+  const seoData = {
+    title: websitePageData.seoComponent?.fields?.seoTitle || `${websitePageData.name} - PayPal Casino Reviews`,
+    description: websitePageData.seoComponent?.fields?.seoDescription || `Learn more about ${websitePageData.name} at PayPal Casino Reviews`,
+    canonical: `/${slug}/`,
+    openGraph: {
+      title: websitePageData.seoComponent?.fields?.openGraphTitle || websitePageData.seoComponent?.fields?.seoTitle,
+      description: websitePageData.seoComponent?.fields?.openGraphDescription || websitePageData.seoComponent?.fields?.seoDescription,
+      image: websitePageData.seoComponent?.fields?.openGraphImage?.fields?.file?.url,
+      type: "website"
     },
+    noIndex: websitePageData.seoComponent?.fields?.noIndex || false,
+    noFollow: websitePageData.seoComponent?.fields?.noFollow || false,
+    keywords: websitePageData.seoComponent?.fields?.keywords || []
   };
 
 
@@ -71,7 +79,7 @@ const webPageSchema = generateWebPageSchema(websitePageData);
 
 ---
 
-<BaseLayout >
+<BaseLayout seo={seoData}>
   <Header />
   <script type="application/ld+json" set:html={webPageSchema}></script>
   <script type="application/ld+json" set:html={faqSchemas}></script>

@@ -33,12 +33,27 @@ const article = await getPostBySlug(slugWithoutBlogAndCategory);
 
 const timeToRead = Math.ceil(article.body.length / 300);
 
+// SEO data from CMS with fallbacks
+const seoData = {
+  title: article.seoComponent?.fields?.seoTitle || `${article.title} - PayPal Casino Blog`,
+  description: article.seoComponent?.fields?.seoDescription || article.cardDescription || `${article.title} - Expert insights and guides for PayPal casino players`,
+  canonical: article.seoComponent?.fields?.seoSlug || `/blog/${article.category?.toLowerCase().replace(/\s+/g, "-")}/${article.slug}/`,
+  openGraph: {
+    title: article.seoComponent?.fields?.openGraphTitle || article.seoComponent?.fields?.seoTitle || article.title,
+    description: article.seoComponent?.fields?.openGraphDescription || article.seoComponent?.fields?.seoDescription || article.cardDescription,
+    image: article.seoComponent?.fields?.openGraphImage?.fields?.file?.url || article.featuredImage?.fields?.file?.url,
+    type: "article"
+  },
+  noIndex: article.seoComponent?.fields?.noIndex || false,
+  noFollow: article.seoComponent?.fields?.noFollow || false,
+  keywords: article.seoComponent?.fields?.keywords || []
+};
 
 // Schema markup
 const articleSchema = generateArticleSchema(article, article.author);
 ---
 
-<BaseLayout >
+<BaseLayout seo={seoData}>
     <Header />
     <script type="application/ld+json" set:html={articleSchema}></script>
 
