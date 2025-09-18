@@ -6,20 +6,20 @@ import {
   cleanTextForSchema,
 } from "./types.js";
 
-// Organization schema for the Crypto Casino website
+// Organization schema for the PayPal Casino website
 export function generateOrganizationSchema() {
   return createBaseSchema(SCHEMA_TYPES.ORGANIZATION, {
-    name: "Casinos-BTC.com",
-    alternateName: "Casinos-BTC.com",
-    url: "https://casinos-btc.com",
+    name: "PayPal Casino Reviews",
+    alternateName: "PayPal-Casino.com",
+    url: "https://paypal-casino.com",
     description:
-      "Expert casino reviews and gambling guides for players. Find the best online casinos, bonuses, and gaming tips.",
+      "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
     foundingDate: "2025",
     knowsAbout: [
-      "Online Casino Reviews",
-      "Casino Bonuses",
-      "Gambling Guides",
-      "Bitcoin Casinos",
+      "PayPal Casino Reviews",
+      "Online Casino Bonuses",
+      "PayPal Gambling Guides",
+      "PayPal Casinos",
       "Responsible Gambling",
     ],
     areaServed: {
@@ -33,7 +33,7 @@ export function generateOrganizationSchema() {
 export function generateArticleSchema(
   post,
   author,
-  baseUrl = "https://casinos-btc.com",
+  baseUrl = "https://paypal-casino.com",
 ) {
   if (!post) return null;
 
@@ -208,7 +208,7 @@ export function generateFAQSchema(faqComponent) {
 // WebPage schema for static pages
 export function generateWebPageSchema(
   page,
-  baseUrl = "https://casinos-btc.com",
+  baseUrl = "https://paypal-casino.com",
 ) {
   if (!page) return null;
 
@@ -225,7 +225,7 @@ export function generateWebPageSchema(
     url: pageUrl,
     isPartOf: {
       "@type": "WebSite",
-      name: "Casinos-BTC.com",
+      name: "PayPal Casino Reviews",
       url: baseUrl,
     },
     about: {
@@ -241,7 +241,7 @@ export function generateWebPageSchema(
 // BreadcrumbList schema for navigation
 export function generateBreadcrumbSchema(
   breadcrumbs,
-  baseUrl = "https://casinos-btc.com",
+  baseUrl = "https://paypal-casino.com",
 ) {
   if (!breadcrumbs || !Array.isArray(breadcrumbs)) return null;
 

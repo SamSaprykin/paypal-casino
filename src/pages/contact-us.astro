@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Layout/Header.astro";
+import Footer from "../components/Layout/Footer.astro";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../lib/schema";
+
+// SEO metadata
+const seoData = {
+  title: "Reach Out to Us | PayPal Casino Reviews",
+  description: "Connect with PayPal Casino Reviews team. Get in touch for questions, feedback, or suggestions about PayPal casinos and gambling guides.",
+  canonical: "/contact-us/",
+  openGraph: {
+    title: "Contact Us | PayPal Casino Reviews",
+    description: "Connect with PayPal Casino Reviews team. Get in touch for questions, feedback, or suggestions about PayPal casinos and gambling guides.",
+    type: "website"
+  },
+  keywords: ["contact", "PayPal casino", "casino reviews", "gambling guides", "feedback"]
+};
+
+// Create schema markup
+const pageData = {
+  name: "Contact Us",
+  title: "Contact Us",
+  slug: "contact-us",
+  description: "Connect with PayPal Casino Reviews team for questions, feedback, or suggestions.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs("Contact Us"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  
+  <div class="container mx-auto p-8 bg-white rounded-lg shadow-md mt-48 mb-16 border border-gray-200">
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">Contact Us</h1>
+    <p class="text-gray-700 mb-6">Greetings,</p>
+    <p class="text-gray-700 mb-6">
+      We are keen to hear from you. Our main goal is to deliver up-to-date,
+      accurate, and relevant information about PayPal casinos to our audience, and we appreciate
+      your feedback and suggestions. Is there something you feel is absent
+      from our site? Do you want to know more about a particular PayPal casino
+      brand or payment method? Send us a message and let us know your thoughts.
+    </p>
+    <p class="text-gray-700 mb-6">
+      <a
+        href="mailto:info@paypal-casino.com"
+        class="text-orange-400 hover:text-orange-600 underline"
+      >
+        info@paypal-casino.com
+      </a>
+    </p>
+    <p class="text-gray-700">
+      Please be aware that we are not a gambling operator and do not offer
+      direct gambling services on our platform. We are an independent review site
+      focused on providing information about PayPal-friendly online casinos.
+    </p>
+  </div>
+  
+  <Footer />
+</BaseLayout>
