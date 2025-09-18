@@ -66,10 +66,13 @@ export interface CasinoEntry {
 export interface SeoEntry {
   sys: ContentfulSys;
   fields: {
-    title?: string;
-    description?: string;
+    seoTitle?: string;
+    seoDescription?: string;
+    seoSlug?: string;
     keywords?: string[];
-    ogImage?: ContentfulAsset;
+    openGraphTitle?: string;
+    openGraphDescription?: string;
+    openGraphImage?: ContentfulAsset;
     noIndex?: boolean;
     noFollow?: boolean;
   };

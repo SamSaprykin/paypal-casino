@@ -49,6 +49,18 @@ const shouldRenderBlogListing = !(
   categoryPosts[0].sys.id === featuredPost.sys.id
 );
 
+// SEO data for category page
+const seoData = {
+  title: `${originalCategory} | PayPal Casino Blog`,
+  description: `Top ${originalCategory} articles and guides to help you make the most of your PayPal casino experience. Expert insights and reviews.`,
+  canonical: `/blog/${category}/`,
+  openGraph: {
+    title: `${originalCategory} Articles - PayPal Casino Blog`,
+    description: `Top ${originalCategory} articles and guides from PayPal Casino Reviews`,
+    type: "website"
+  }
+};
+
 // Generate schema markup
 const categoryItems = categoryPosts.map(post => ({
   title: post.title,
@@ -56,8 +68,8 @@ const categoryItems = categoryPosts.map(post => ({
 }));
 
 const collectionSchema = generateCollectionPageSchema(
-  `${originalCategory} | Crypto Casino Blog`,
-  `Top ${originalCategory} articles and guides from Casinos-BTC.com to help you make the most of your online crypto casino experience.`,
+  `${originalCategory} | PayPal Casino Blog`,
+  `Top ${originalCategory} articles and guides to help you make the most of your PayPal casino experience.`,
   `/blog/${category}`,
   categoryItems
 );
@@ -65,7 +77,7 @@ const collectionSchema = generateCollectionPageSchema(
 
 ---
 
-<BaseLayout >
+<BaseLayout seo={seoData}>
     <Header />
     <script type="application/ld+json" set:html={collectionSchema}></script>
     <BlogHero featuredPost={featuredPost} />

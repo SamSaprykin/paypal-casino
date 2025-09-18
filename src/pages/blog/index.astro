@@ -10,13 +10,16 @@ import Footer from "../../components/Layout/Footer.astro";
 import { generateCollectionPageSchema } from "../../lib/schema";
 
 
-const meta = {
+// SEO data for blog index
+const seoData = {
   title: "Blog | PayPal Casino Reviews",
-  description:
-    "Expert insights and guides for PayPal casino players",
-  alternates: {
-    canonical: "https://casinos-btc.com/blog/",
-  },
+  description: "Expert insights and guides for PayPal casino players. Get the latest tips, strategies, and reviews for online casinos that accept PayPal.",
+  canonical: "/blog/",
+  openGraph: {
+    title: "PayPal Casino Blog - Expert Insights & Guides",
+    description: "Expert insights and guides for PayPal casino players",
+    type: "website"
+  }
 };
 
 // Get all posts and categories with counts
@@ -41,7 +44,7 @@ const collectionSchema = generateCollectionPageSchema(
   blogItems
 );
 ---
-<BaseLayout >
+<BaseLayout seo={seoData}>
     <Header />
     <script type="application/ld+json" set:html={collectionSchema}></script>
 <BlogHero featuredPost={featuredPost} />

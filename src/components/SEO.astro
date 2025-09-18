@@ -1,0 +1,78 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  openGraph?: {
+    title?: string;
+    description?: string;
+    image?: string;
+    type?: string;
+  };
+  noIndex?: boolean;
+  noFollow?: boolean;
+  keywords?: string[];
+}
+
+const {
+  title = "PayPal Casino Reviews - Best Online Casinos Accepting PayPal",
+  description = "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
+  canonical,
+  openGraph,
+  noIndex = false,
+  noFollow = false,
+  keywords = []
+} = Astro.props;
+
+// Construct full canonical URL
+const canonicalURL = canonical ? `https://paypal-casino.com${canonical}` : Astro.url.href;
+
+// OpenGraph defaults
+const ogTitle = openGraph?.title || title;
+const ogDescription = openGraph?.description || description;
+const ogImage = openGraph?.image || "https://paypal-casino.com/og-default.jpg";
+const ogType = openGraph?.type || "website";
+
+// Robots meta
+const robotsContent = [
+  noIndex ? "noindex" : "index",
+  noFollow ? "nofollow" : "follow"
+].join(", ");
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(", ")} />}
+<meta name="robots" content={robotsContent} />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={ogTitle} />
+<meta property="og:description" content={ogDescription} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:site_name" content="PayPal Casino Reviews" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={ogTitle} />
+<meta property="twitter:description" content={ogDescription} />
+<meta property="twitter:image" content={ogImage} />
+
+<!-- Additional Meta Tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8" />
+<meta name="author" content="PayPal Casino Reviews" />
+<meta name="theme-color" content="#1e40af" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
