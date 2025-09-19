@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Layout/Header.astro';
+import Footer from '../components/Layout/Footer.astro';
+import {
+  getAllPosts,
+  getWebsitePages,
+  getBlogCategoriesWithCounts,
+  getAllCasinos,
+} from '../lib/contentful/utils.js';
+import { slugify } from '../lib/helpers.js';
+
+// Fetch all data needed for the sitemap
+const [posts, casinos, websitePages, categories] = await Promise.all([
+  getAllPosts(),
+  getAllCasinos(),
+  getWebsitePages(),
+  getBlogCategoriesWithCounts(),
+]);
+
+// Define static pages
+const staticPages = [
+  { title: "Home", url: "/" },
+  { title: "Blog", url: "/blog/" },
+  { title: "Contact Us", url: "/contact-us/" },
+  { title: "Privacy Policy", url: "/privacy-policy/" },
+  { title: "Terms and Conditions", url: "/terms-and-conditions/" },
+];
+
+// SEO data for the sitemap page
+const seoData = {
+  title: "Sitemap | PayPal Casinos",
+  description: "Complete sitemap of all pages on PayPal Casinos website including blog posts, casino reviews, bonuses, and more.",
+  canonical: "/sitemap/",
+  openGraph: {
+    title: "Sitemap | PayPal Casinos",
+    description: "Complete sitemap of all pages on PayPal Casinos website including blog posts, casino reviews, bonuses, and more.",
+    type: "website"
+  },
+  noIndex: false,
+  noFollow: false,
+  keywords: ["sitemap", "paypal casinos", "casino reviews", "blog posts", "navigation"]
+};
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+  
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-gray-100 to-blue-50 pb-12 pt-32">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <!-- Header -->
+      <div class="mb-12 text-center">
+        <h1 class="text-5xl font-bold text-blue-900 mb-2">Sitemap</h1>
+        <p class="text-blue-700">
+          Navigate through all our pages and content
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-12">
+        <!-- Main Pages Section -->
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            Main Pages
+          </h2>
+          <ul class="space-y-2">
+            {staticPages.map((page) => (
+              <li>
+                <a
+                  href={page.url}
+                  class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                >
+                  {page.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Blog Categories Section -->
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            Blog Categories
+          </h2>
+          <ul class="space-y-2">
+            {categories.map((category) => (
+              <li>
+                <a
+                  href={
+                    category.name === "All"
+                      ? "/blog/"
+                      : `/blog/${slugify(category.name)}/`
+                  }
+                  class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 flex justify-between items-center py-1 font-semibold"
+                >
+                  <span>{category.name}</span>
+                  <span class="text-sm text-blue-600">
+                    ({category.count})
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Casino Guides Section -->
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            Our PayPal Casino Guides
+          </h2>
+          <ul class="space-y-2 grid lg:grid-cols-3 gap-4">
+            {websitePages.map((page) => {
+              if (page.fields.name === "Home Page") {
+                return null;
+              }
+              return (
+                <li>
+                  <a
+                    href={`/${page.fields.slug}/`}
+                    class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                  >
+                    {page.fields.name}
+                  </a>
+                </li>
+              );
+            })}
+            {casinos.map((casino) => {
+              return (
+                <li>
+                  <a
+                    href={`/casino-guide/${casino?.fields?.slug}/`}
+                    class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                  >
+                    {casino?.fields?.casinoName}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <!-- All Blog Posts Section -->
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            All Blog Posts
+          </h2>
+          <ul class="space-y-2">
+            {posts.map((post) => {
+              const categorySlug = post.category
+                .toLowerCase()
+                .replace(/ /g, "-");
+              return (
+                <li>
+                  <a
+                    href={`/blog/${categorySlug}/${post.slug}/`}
+                    class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                  >
+                    {post.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <Footer />
+</BaseLayout>
