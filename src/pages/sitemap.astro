@@ -64,7 +64,7 @@ const seoData = {
           </h2>
           <ul class="space-y-2">
             {staticPages.map((page) => (
-              <li key={page.url}>
+              <li>
                 <a
                   href={page.url}
                   class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
@@ -83,7 +83,7 @@ const seoData = {
           </h2>
           <ul class="space-y-2">
             {categories.map((category) => (
-              <li key={category.name}>
+              <li>
                 <a
                   href={
                     category.name === "All"
@@ -113,7 +113,7 @@ const seoData = {
                 return null;
               }
               return (
-                <li key={page.fields.slug}>
+                <li>
                   <a
                     href={`/${page.fields.slug}/`}
                     class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
@@ -125,7 +125,7 @@ const seoData = {
             })}
             {casinos.map((casino) => {
               return (
-                <li key={casino.sys.id}>
+                <li>
                   <a
                     href={`/casino-guide/${casino?.fields?.slug}/`}
                     class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
@@ -149,7 +149,7 @@ const seoData = {
                 .toLowerCase()
                 .replace(/ /g, "-");
               return (
-                <li key={post.sys.id}>
+                <li>
                   <a
                     href={`/blog/${categorySlug}/${post.slug}/`}
                     class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
