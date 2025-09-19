@@ -15,7 +15,7 @@ export interface Props {
 }
 
 const {
-  title = "PayPal Casino Reviews - Best Online Casinos Accepting PayPal",
+  title = "PayPal Casino Info - Best Online Casinos Accepting PayPal",
   description = "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
   canonical,
   openGraph,
@@ -25,12 +25,12 @@ const {
 } = Astro.props;
 
 // Construct full canonical URL
-const canonicalURL = canonical ? `https://paypal-casino.com${canonical}` : Astro.url.href;
+const canonicalURL = canonical ? `https://paypal-casino.info${canonical}` : Astro.url.href;
 
 // OpenGraph defaults
 const ogTitle = openGraph?.title || title;
 const ogDescription = openGraph?.description || description;
-const ogImage = openGraph?.image || "https://paypal-casino.com/og-default.jpg";
+const ogImage = openGraph?.image || "https://paypal-casino.info/og-default.jpg";
 const ogType = openGraph?.type || "website";
 
 // Robots meta
@@ -56,7 +56,7 @@ const robotsContent = [
 <meta property="og:title" content={ogTitle} />
 <meta property="og:description" content={ogDescription} />
 <meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="PayPal Casino Reviews" />
+<meta property="og:site_name" content="PayPal Casino Info" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
@@ -68,7 +68,7 @@ const robotsContent = [
 <!-- Additional Meta Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8" />
-<meta name="author" content="PayPal Casino Reviews" />
+<meta name="author" content="PayPal Casino Info" />
 <meta name="theme-color" content="#1e40af" />
 
 <!-- Favicon -->

@@ -11,7 +11,7 @@ export default defineConfig({
     }),
   ],
   output: 'static',
-  site: 'https://your-site.com', // Replace with your actual site URL
+  site: 'https://paypal-casino.info', // Replace with your actual site URL
   markdown: {
     shikiConfig: {
       theme: 'github-dark',

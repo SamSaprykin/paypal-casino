@@ -32,7 +32,7 @@ export function formatSchemaDate(date) {
 }
 
 // Helper function to ensure URLs have proper protocol
-export function ensureAbsoluteUrl(url, baseUrl = "https://casinos-btc.com") {
+export function ensureAbsoluteUrl(url, baseUrl = "https://paypal-casino.info") {
   if (!url) return null;
   if (url.startsWith("http://") || url.startsWith("https://")) {
     return url;
