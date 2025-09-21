@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 
-import paypal from "../../assets/svg/paypal.svg";
+import casinoGame from "../../assets/svg/casino-game.svg";
 
 export function FaqSection({ faq }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -28,7 +28,7 @@ export function FaqSection({ faq }) {
       <div className="container mx-auto md:py-12">
         <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10 flex items-center justify-center gap-4">
           <div className="flex items-center justify-center min-w-12 min-h-12 w-12 h-12 md:w-16 md:h-16 bg-white border-2 border-gray-200 rounded-full mb-4">
-            <img src={paypal.src} className="min-w-8 min-h-8 w-8 h-8 md:w-10 md:h-10 text-white inline-block" />
+            <img src={casinoGame.src} className="min-w-8 min-h-8 w-8 h-8 md:w-10 md:h-10 text-white inline-block" />
           </div>
 
           {faq?.fields?.title}
