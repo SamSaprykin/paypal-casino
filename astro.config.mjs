@@ -15,7 +15,7 @@ export default defineConfig({
     robotsTxt(),
   ],
   output: 'static',
-  site: 'https://paypal-casino.vercel.app/', // Replace with your actual site URL
+  site: 'https://ppcasinos.co/', // Replace with your actual site URL
   markdown: {
     shikiConfig: {
       theme: 'github-dark',

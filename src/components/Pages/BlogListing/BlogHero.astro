@@ -34,15 +34,14 @@ const readTime = Math.ceil(featuredPost.body.length / 200);
 
         <!-- Meta Information -->
         <div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
-          <a
-            href="/author/seamus-oconnor"
+          <div 
             class="flex items-center gap-2 group hover:cursor-pointer transition-all duration-300"
           >
             <User class="w-4 h-4 text-blue-600 group-hover:text-blue-800" />
             <span class="font-medium text-blue-700 group-hover:text-blue-800">
               {featuredPost.author?.fields?.name}
             </span>
-          </a>
+          </div>
           <div class="flex items-center gap-2">
             <Calendar class="w-4 h-4 text-blue-600" />
             <span>{format(new Date(featuredPost.created), "MMMM d, yyyy")}</span>
@@ -59,7 +58,7 @@ const readTime = Math.ceil(featuredPost.body.length / 200);
             size="lg"
             className="group"
             buttonType="internal-link"
-            href={`/blog/${slugify(featuredPost?.category)}/${featuredPost?.slug}`}
+            href={`/blog/${slugify(featuredPost?.category)}/${featuredPost?.slug}/`}
           
           
           >

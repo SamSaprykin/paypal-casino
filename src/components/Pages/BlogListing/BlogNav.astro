@@ -31,7 +31,7 @@ const displayCategories = categories.length > 0 ? categories : []
               variant={isActive ? "primary" : "outline"}
               size="sm"
               buttonType="internal-link"
-              href={category.name === "All" ? "/blog" : `/blog/${slugify(category.name)}`}
+              href={category.name === "All" ? "/blog/" : `/blog/${slugify(category.name)}/`}
               className="flex items-center gap-2 whitespace-nowrap hover:cursor-pointer px-6"
             >
               <span>{category.name}</span>
