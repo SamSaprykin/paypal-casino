@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Layout/Header.astro";
+import Footer from "../components/Layout/Footer.astro";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../lib/schema";
+
+// SEO metadata
+const seoData = {
+  title: "Privacy Policy | Casinos-BTC.com",
+  description:
+    "Privacy Policy for Casinos-BTC.com - Understand how we handle your personal information in compliance with GDPR.",
+  canonical: "/privacy-policy/",
+  openGraph: {
+    title: "Privacy Policy | Casinos-BTC.com",
+    description:
+      "Privacy Policy for Casinos-BTC.com - Understand how we handle your personal information in compliance with GDPR.",
+    type: "website",
+  },
+  keywords: ["privacy policy", "GDPR", "data protection", "Casinos-BTC"],
+};
+
+// Schema markup
+const pageData = {
+  name: "Privacy Policy",
+  title: "Privacy Policy",
+  slug: "privacy-policy",
+  description:
+    "Privacy Policy for Casinos-BTC.com - Understand how we handle your personal information in compliance with GDPR.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs("Privacy Policy"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <div class="bg-orange-50 h-full flex flex-col justify-center items-center min-h-screen pt-48 pb-12">
+    <div class="content container max-w-5xl px-4">
+      <div class="page-header mb-12">
+        <h1 class="text-5xl font-bold text-center">Privacy Policy</h1>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="mb-6 text-gray-700">
+          This Privacy Policy explains how Casinos-BTC.com, referred to as
+          &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;, complies with
+          the European Union's GDPR requirements for data processing,
+          ensuring adherence to data protection standards.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Purpose of Data Collection</h3>
+        <p class="mb-6 text-gray-700">
+          We collect users&apos; email addresses through a voluntary newsletter
+          subscription form, based on the consent of our visitors. This
+          information is primarily used for communication and marketing purposes,
+          specifically tailored to our audience.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Data We Collect</h3>
+        <p class="mb-6 text-gray-700">
+          We maintain a list of email addresses from users who have opted in
+          to receive our newsletter and communications. This data is not shared
+          with third parties and is managed in accordance with GDPR standards.
+          We only store email addresses and related usernames/account names.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Data Collection Methods</h3>
+        <p class="mb-6 text-gray-700">
+          Data is collected through our newsletter subscription form on our site
+          and potentially during other interactions when users voluntarily
+          provide their information.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Data Processing</h3>
+        <p class="mb-6 text-gray-700">
+          We do not share data with third parties. However, data may be transferred
+          outside the European Union by the data processor for processing purposes,
+          always ensuring compliance with GDPR and relevant data protection laws.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Data Security</h3>
+        <p class="mb-6 text-gray-700">
+          Casinos-BTC.com is committed to safeguarding your personal data with
+          the highest level of care, employing both physical and digital
+          security measures for our cloud-based storage. Your data is processed
+          confidentially and only by authorized personnel.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Accessing Your Personal Data</h3>
+        <p class="mb-6 text-gray-700">
+          Under GDPR, you have the right to request access to your personal data
+          collected by us. To review your details, contact our Data Protection
+          Officer (DPO). You can also request the removal or update of your
+          personal data in our database. All inquiries will be addressed
+          promptly, in line with GDPR timelines.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-2">Data Protection Officer (DPO)</h3>
+        <p class="mb-6 text-gray-700">
+          For any queries, please contact us at:{" "}
+          <a
+            href="mailto:info@ppcasinos.co"
+            class="text-orange-400 hover:text-orange-600"
+          >
+            info@ppcasinos.co
+
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</BaseLayout>

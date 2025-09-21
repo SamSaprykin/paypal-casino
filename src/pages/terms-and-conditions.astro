@@ -1,4 +1,5 @@
 ---
+
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
@@ -10,29 +11,29 @@ import {
 
 // SEO metadata
 const seoData = {
-  title: "Reach Out to Us | PayPal Casino Reviews",
-  description: "Connect with PayPal Casino Reviews team. Get in touch for questions, feedback, or suggestions about PayPal casinos and gambling guides.",
+  title: "Reach Out to Us | Casino Payment Reviews",
+  description: "Connect with the Casino Payment Reviews team. Get in touch for questions, feedback, or suggestions about online casinos, payment methods, and gambling guides.",
   canonical: "/contact-us/",
   openGraph: {
-    title: "Contact Us | PayPal Casino Reviews",
-    description: "Connect with PayPal Casino Reviews team. Get in touch for questions, feedback, or suggestions about PayPal casinos and gambling guides.",
+    title: "Contact Us | Casino Payment Reviews",
+    description: "Connect with the Casino Payment Reviews team. Get in touch for questions, feedback, or suggestions about online casinos, payment methods, and gambling guides.",
     type: "website"
   },
-  keywords: ["contact", "PayPal casino", "casino reviews", "gambling guides", "feedback"]
+  keywords: ["contact", "casino payment methods", "casino reviews", "gambling guides", "feedback"]
 };
 
 // Create schema markup
 const pageData = {
-    name: "Privacy Policy",
-    title: "Privacy Policy",
-    slug: "privacy-policy",
-    description:
-      "Privacy Policy for Casinos-BTC.com - Understand how we handle your personal information in compliance with GDPR.",
-    sys: {
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-  };
+  name: "Privacy Policy",
+  title: "Privacy Policy",
+  slug: "privacy-policy",
+  description:
+    "Privacy Policy for Casinos-BTC.com - Understand how we handle your personal information in compliance with GDPR.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
 
 const webPageSchema = generateWebPageSchema(pageData);
 const breadcrumbSchema = generateBreadcrumbSchema(
@@ -54,7 +55,7 @@ const breadcrumbSchema = generateBreadcrumbSchema(
       </div>
       <div class="bg-white p-6 rounded-lg shadow-md">
         <p class="mb-6 text-gray-700">
-          This Privacy Policy details how Casinos-BTC.com, referred to as
+          This Privacy Policy explains how Casinos-BTC.com, referred to as
           &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;, complies with
           the European Union's GDPR requirements for data processing,
           ensuring adherence to data protection standards.
@@ -126,5 +127,3 @@ const breadcrumbSchema = generateBreadcrumbSchema(
   
   <Footer />
 </BaseLayout>
-
-
