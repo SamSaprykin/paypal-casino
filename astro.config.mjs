@@ -1,6 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,9 +11,11 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    sitemap(),
+    robotsTxt(),
   ],
   output: 'static',
-  site: 'https://paypal-casino.info', // Replace with your actual site URL
+  site: 'https://paypal-casino.vercel.app/', // Replace with your actual site URL
   markdown: {
     shikiConfig: {
       theme: 'github-dark',
