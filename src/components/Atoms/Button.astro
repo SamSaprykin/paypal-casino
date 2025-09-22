@@ -55,14 +55,11 @@ const classes = cn(baseStyles, variants[variant], sizes[size], className);
 )}
 
 {buttonType === "external-ref-link" && (
-  <a
+  <button
     class={classes}
     data-ref-link={refLink}
-    href={refLink}
-    target="_blank"
-    rel="noopener noreferrer"
-
+    onclick={`window.open('${refLink}', '_blank')`}
   >
     <slot />
-  </a>
+  </button>
 )}

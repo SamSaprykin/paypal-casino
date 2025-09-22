@@ -136,14 +136,12 @@ import { addHttps } from "../../../lib/helpers";
                 </p>
               </div>
             </div>
-            <a
-              href={bonus.fields.referralUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onclick={`window.open('${bonus.fields.referralUrl}', '_blank')`}
               class="w-full lg:max-w-60 mt-4 lg:mt-0 inline-flex items-center justify-center px-6 py-3 rounded-xl bg-blue-500 text-white font-semibold hover:bg-blue-600 transition"
             >
               Play Now →
-            </a>
+            </button>
           </div>
         </div>
       </div>

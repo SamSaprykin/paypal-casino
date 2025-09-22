@@ -17,17 +17,15 @@ const addHttps = (url) => url?.startsWith("http") ? url : `https:${url}`;
         {firstBonus.fields.description}
       </p>
     </div>
-    <a
-      href={firstBonus.fields.referralUrl}
+    <button
+      onclick={`window.open('${firstBonus.fields.referralUrl}', '_blank')`}
       class="w-full lg:max-w-60 mt-4 lg:mt-0 bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-600 transition-colors"
-      target="_blank"
-      rel="noopener noreferrer"
     >
       Get Bonus
       <svg class="w-4 h-4 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
       </svg>
-    </a>
+    </button>
   </div>
 
   <Image

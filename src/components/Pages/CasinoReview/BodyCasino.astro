@@ -17,17 +17,15 @@ import HighlightBox from "./HighlightBox.astro";
       <slot name="highlight-content" />
     </div>
     <div class="mt-4 lg:mt-0">
-      <a
+      <button
         class="bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-600 transition-colors"
-        href={firstBonus.fields.referralUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+        onclick={`window.open('${firstBonus.fields.referralUrl}', '_blank')`}
       >
         Play Now
         <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
         </svg>
-      </a>
+      </button>
     </div>
   </div>
 </Fragment>
@@ -43,17 +41,15 @@ import HighlightBox from "./HighlightBox.astro";
         {firstBonus.fields.description}
       </p>
     </div>
-    <a
+    <button
       class="w-full lg:max-w-60 mt-4 lg:mt-0 bg-yellow-500 text-white font-semibold px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-yellow-600 transition-colors"
-      href={firstBonus.fields.referralUrl}
-      target="_blank"
-      rel="noopener noreferrer"
+      onclick={`window.open('${firstBonus.fields.referralUrl}', '_blank')`}
     >
       Get Bonus
       <svg class="w-4 h-4 ml-2 transform transition-all duration-300 group-hover:ml-4 group-hover:text-gray-700 rounded-full group-hover:bg-yellow-200" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
       </svg>
-    </a>
+    </button>
   </div>
   <img
     src={addHttps(firstBonus.fields.image?.url)}
