@@ -23,13 +23,12 @@ const homePage = await getWebsitePageBySlug('/');
 
 // SEO data from CMS
 const seoData = {
-  title: homePage?.seoComponent?.fields?.seoTitle || "PayPal Casino Reviews - Best Online Casinos Accepting PayPal",
+  title: homePage?.seoComponent?.fields?.seoTitle || "PP Casinos Info - Best Online Casinos Accepting PayPal",
   description: homePage?.seoComponent?.fields?.seoDescription || "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
   canonical: "/",
   openGraph: {
     title: homePage?.seoComponent?.fields?.openGraphTitle || homePage?.seoComponent?.fields?.seoTitle,
     description: homePage?.seoComponent?.fields?.openGraphDescription || homePage?.seoComponent?.fields?.seoDescription,
-    image: homePage?.seoComponent?.fields?.openGraphImage?.fields?.file?.url,
     type: "website"
   },
   noIndex: homePage?.seoComponent?.fields?.noIndex || false,

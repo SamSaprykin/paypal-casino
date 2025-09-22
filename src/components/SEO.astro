@@ -15,7 +15,7 @@ export interface Props {
 }
 
 const {
-  title = "PayPal Casino Info - Best Online Casinos Accepting PayPal",
+  title = "PP Casinos Info - Best Online Casinos Accepting PayPal",
   description = "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
   canonical,
   openGraph,
@@ -30,7 +30,6 @@ const canonicalURL = canonical ? `https://ppcasinos.co${canonical}` : Astro.url.
 // OpenGraph defaults
 const ogTitle = openGraph?.title || title;
 const ogDescription = openGraph?.description || description;
-const ogImage = openGraph?.image || "https://ppcasinos.co/og-default.jpg";
 const ogType = openGraph?.type || "website";
 
 // Robots meta
@@ -55,20 +54,18 @@ const robotsContent = [
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={ogTitle} />
 <meta property="og:description" content={ogDescription} />
-<meta property="og:image" content={ogImage} />
-<meta property="og:site_name" content="PayPal Casino Info" />
+<meta property="og:site_name" content="PP Casinos Info" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={ogTitle} />
 <meta property="twitter:description" content={ogDescription} />
-<meta property="twitter:image" content={ogImage} />
 
 <!-- Additional Meta Tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="utf-8" />
-<meta name="author" content="PayPal Casino Info" />
+<meta name="author" content="PP Casinos Info" />
 <meta name="theme-color" content="#1e40af" />
 
 <!-- Favicon -->
