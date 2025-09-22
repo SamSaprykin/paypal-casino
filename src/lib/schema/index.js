@@ -10,8 +10,8 @@ import {
 export function generateOrganizationSchema() {
   return createBaseSchema(SCHEMA_TYPES.ORGANIZATION, {
     name: "PayPal Casino Reviews",
-    alternateName: "PayPal-Casino.info",
-    url: "https://paypal-casino.info",
+    alternateName: "PP Casinos Info",
+    url: "https://ppcasinos.co",
     description:
       "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
     foundingDate: "2025",
@@ -33,7 +33,7 @@ export function generateOrganizationSchema() {
 export function generateArticleSchema(
   post,
   author,
-  baseUrl = "https://paypal-casino.info",
+  baseUrl = "https://ppcasinos.co",
 ) {
   if (!post) return null;
 
@@ -98,7 +98,7 @@ export function generateArticleSchema(
 // Review schema for casino reviews
 export function generateCasinoReviewSchema(
   casino,
-  baseUrl = "https://paypal-casino.info",
+  baseUrl = "https://ppcasinos.co",
 ) {
   if (!casino) return null;
 
@@ -208,7 +208,7 @@ export function generateFAQSchema(faqComponent) {
 // WebPage schema for static pages
 export function generateWebPageSchema(
   page,
-  baseUrl = "https://paypal-casino.info",
+  baseUrl = "https://ppcasinos.co",
 ) {
   if (!page) return null;
 
@@ -241,7 +241,7 @@ export function generateWebPageSchema(
 // BreadcrumbList schema for navigation
 export function generateBreadcrumbSchema(
   breadcrumbs,
-  baseUrl = "https://paypal-casino.info",
+  baseUrl = "https://ppcasinos.co",
 ) {
   if (!breadcrumbs || !Array.isArray(breadcrumbs)) return null;
 
@@ -263,7 +263,7 @@ export function generateCollectionPageSchema(
   description,
   url,
   items = [],
-  baseUrl = "https://paypal-casino.info",
+  baseUrl = "https://ppcasinos.co",
 ) {
   const schema = createBaseSchema(SCHEMA_TYPES.COLLECTION_PAGE, {
     name: title,
