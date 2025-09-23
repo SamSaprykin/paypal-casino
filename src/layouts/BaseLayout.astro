@@ -61,6 +61,13 @@ const favicon48x48 = await getImage({
   height: 48,
   format: 'png'
 })
+
+const favicon96x96 = await getImage({
+  src: faviconSrc,
+  width: 96,
+  height: 96,
+  format: 'png'
+})
 ---
 
 <!doctype html>
@@ -71,6 +78,7 @@ const favicon48x48 = await getImage({
     <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16.src} />
     <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32.src} />
     <link rel="icon" type="image/png" sizes="48x48" href={favicon48x48.src} />
+    <link rel="icon" type="image/png" sizes="96x96" href={favicon96x96.src} />
     <link rel="apple-touch-icon" href={appleTouchIcon.src} />
     <link rel="icon" href={androidTouchIcon.src} />
     <link
