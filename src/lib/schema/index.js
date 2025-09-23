@@ -124,7 +124,7 @@ export function generateCasinoReviewSchema(
       name: "Casinos-BTC Casino Reviews",
     },
     publisher: generateOrganizationSchema(),
-    url: ensureAbsoluteUrl(`/casino-guide/${casino.slug}`, baseUrl),
+    url: ensureAbsoluteUrl(`/casino-guide/${casino.slug}/`, baseUrl),
     datePublished: formatSchemaDate(casino.sys?.createdAt),
     dateModified: formatSchemaDate(casino.sys?.updatedAt),
   });
@@ -214,7 +214,7 @@ export function generateWebPageSchema(
 
   // Handle homepage URL correctly
   const pageUrl =
-    page.slug === "/" ? baseUrl : ensureAbsoluteUrl(`/${page.slug}`, baseUrl);
+    page.slug === "/" ? baseUrl : ensureAbsoluteUrl(`/${page.slug}/`, baseUrl);
 
   return createBaseSchema(SCHEMA_TYPES.WEB_PAGE, {
     name: page.name || page.title,
