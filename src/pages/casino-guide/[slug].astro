@@ -65,8 +65,8 @@ const faqSchema = casino.faqComponent
 
 <BaseLayout seo={seoProps}>
     <Header />
-    <script type="application/ld+json" set:html={reviewSchema}></script>
-    <script type="application/ld+json" set:html={faqSchema}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
 
 
     <CasinoDetails

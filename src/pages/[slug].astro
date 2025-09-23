@@ -81,8 +81,8 @@ const webPageSchema = generateWebPageSchema(websitePageData);
 
 <BaseLayout seo={seoData}>
   <Header />
-  <script type="application/ld+json" set:html={webPageSchema}></script>
-  <script type="application/ld+json" set:html={faqSchemas}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchemas)}></script>
     <div class="pt-12 lg:pt-24">
       {components.map((component) => {
         switch (component.sys.contentType.sys.id) {

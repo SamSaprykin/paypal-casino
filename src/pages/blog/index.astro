@@ -46,7 +46,7 @@ const collectionSchema = generateCollectionPageSchema(
 ---
 <BaseLayout seo={seoData}>
     <Header />
-    <script type="application/ld+json" set:html={collectionSchema}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(collectionSchema)}></script>
 <BlogHero featuredPost={featuredPost} />
 <BlogNav categories={categories} activeCategory="All" />
 <BlogListing posts={posts} shouldRender={true} />
