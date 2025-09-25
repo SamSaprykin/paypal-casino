@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ppcasinos.co/sitemap-index.xml
+
+# Allow favicon and manifest files
+Allow: /favicon.ico
+Allow: /site.webmanifest
+Allow: /*.png
+
