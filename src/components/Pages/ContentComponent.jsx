@@ -11,17 +11,18 @@ const baseStyles =
   "h-12 inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer text-sm md:text-base bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white shadow-lg hover:shadow-xl focus:ring-blue-600";
 
 const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
+  console.log(firstBonus);
   return (
     <div className="flex flex-col gap-4 w-2/3 my-8 border-2 border-blue-500 rounded-xl p-4 relative overflow-hidden mx-auto bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2 w-1/3">
-          <h3 className="text-3xl font-bold mb-2">{firstBonus.name}</h3>
-          <p className="text-lg text-gray-500 mb-4">{firstBonus.description}</p>
+          <h3 className="text-3xl font-bold mb-2">{firstBonus.fields.name}</h3>
+          <p className="text-lg text-gray-700 font-semibold">{firstBonus.fields.description}</p>
         </div>
         <button
           className={`w-full group lg:max-w-60 mt-4 lg:mt-0 ${baseStyles}`}         
           onClick={() => {
-            window.open(firstBonus.referralUrl, "_blank");
+            window.open(firstBonus.fields.referralUrl, "_blank");
           }}
         >
           <span>Get Bonus</span>
@@ -41,6 +42,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
 };
 
 const HighlightBox = ({ firstBonus, ...props }) => {
+  console.log(firstBonus);
   return (
     <div className="my-6 border-2 border-blue-500 bg-gradient-to-br from-blue-200 via-gray-100 to-blue-100 px-12 py-4 rounded-lg flex gap-3 flex items-center justify-between gap-12 w-full max-w-4xl mx-auto">
       <Crown className="w-20 h-20 text-blue-500" />
