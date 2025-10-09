@@ -7,12 +7,12 @@
       },
       {
         "source": "/goto/hugo.php",
-        "destination": "https://hugoredirect.com/d7dfa221b",
+        "destination": "https://hugoredirect.com/d7dfa221b", 
         "statusCode": 301
       },
       {
         "source": "/goto/vegas-hero.php",
-        "destination": "https://vgr.naralvin.com/?mid=247905_1763565",
+        "destination": "https://vgr.naralvin.com/?mid=247905_1837183",
         "statusCode": 301
       },
       {
@@ -42,17 +42,17 @@
       },
       {
         "source": "/goto/tsars.php",
-        "destination": "https://go.spinwise.partners/visit/?bta=982744&brand=tsars",
+        "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=tsars",
         "statusCode": 301
       },
       {
         "source": "/goto/trickz.php",
-        "destination": "https://go.spinwise.partners/visit/?bta=982744&brand=trickz",
+        "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=trickz",
         "statusCode": 301
       },
       {
         "source": "/goto/ritzo.php",
-        "destination": "https://balancer.ritzogo.com/mf3051c60",
+        "destination": "https://balancer.ritzogo.com/m7aded3e1",
         "statusCode": 301
       },
       {
@@ -72,7 +72,7 @@
       },
       {
         "source": "/goto/lunubet.php",
-        "destination": "https://lnb.xarvilo.com/?mid=301625_1775692",
+        "destination": "https://lnb.xarvilo.com/?mid=312245_1838536",
         "statusCode": 301
       },
       {
@@ -82,7 +82,7 @@
       },
       {
         "source": "/goto/skycrown.php",
-        "destination": "https://skycrownlink.com/o66dde9fd",
+        "destination": "https://skycrownlink.com/o29887eed",
         "statusCode": 301
       },
       {
@@ -112,12 +112,12 @@
       },
       {
         "source": "/goto/rockwin.php",
-        "destination": "https://rockwinlink.com/o23a054ab",
+        "destination": "https://rockwinlink.com/o3566456b",
         "statusCode": 301
       },
       {
         "source": "/goto/divaspin.php",
-        "destination": "https://dvspn.fynkelto.com/?mid=267805_1804134",
+        "destination": "https://dvspn.fynkelto.com/?mid=267805_1853823",
         "statusCode": 301
       },
       {
@@ -157,4 +157,3 @@
       }
     ]
   }
-  
