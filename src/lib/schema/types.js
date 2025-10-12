@@ -34,13 +34,13 @@ export function formatSchemaDate(date) {
 // Helper function to ensure URLs have proper protocol
 export function ensureAbsoluteUrl(url, baseUrl = "https://ppcasinos.co") {
   if (!url) return null;
-  if (url.startsWith("http://") || url.startsWith("https://")) {
+  if (url?.startsWith("http://") || url?.startsWith("https://")) {
     return url;
   }
-  if (url.startsWith("//")) {
+  if (url?.startsWith("//")) {
     return `https:${url}`;
   }
-  if (url.startsWith("/")) {
+  if (url?.startsWith("/")) {
     return `${baseUrl}${url}`;
   }
   return `${baseUrl}/${url}`;

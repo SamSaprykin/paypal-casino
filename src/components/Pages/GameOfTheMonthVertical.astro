@@ -31,7 +31,7 @@ const game = {
         </div>
 
         <div class="relative h-48 overflow-hidden group-hover:h-80 transition-all duration-300">
-          <img src={addHttps(image.fields.file.url)} alt={gameName} class="w-full h-full object-cover" />
+          <img src={addHttps(image?.fields?.file?.url)} alt={gameName} class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
         </div>
       </div>
@@ -47,11 +47,11 @@ const game = {
                 <div class="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
-                      class={`w-4 h-4 ${i < Math.floor(game.rating) ? "text-blue-400 fill-current" : "text-gray-300"}`}
+                      class={`w-4 h-4 ${i < Math.floor(game?.rating) ? "text-blue-400 fill-current" : "text-gray-300"}`}
                     />
                   ))}
                 </div>
-                <span class="text-sm font-semibold text-gray-700">{game.rating}</span>
+                <span class="text-sm font-semibold text-gray-700">{game?.rating}</span>
               </div>
             </div>
 
@@ -98,14 +98,14 @@ const game = {
                 Available at these casinos:
               </h3>
               <div class="space-y-2">
-                {casinoLinks.map((casino) => (
+                {casinoLinks?.map((casino) => (
                   <a
-                    href={`/casino-guide${casino.fields.url}`}
+                    href={`/casino-guide${casino?.fields?.url}`}
                     class="flex items-center justify-between p-3 bg-gray-50 hover:bg-blue-50 rounded-xl transition-colors duration-200 group border border-gray-100 hover:border-blue-200"
                   >
                     <div class="flex flex-col">
                       <span class="text-sm font-medium text-gray-900 group-hover:text-blue-700">
-                        {casino.fields.copy}
+                        {casino?.fields?.copy}
                       </span>
                     </div>
                     <ExternalLink class="w-4 h-4 text-gray-400 group-hover:text-blue-500 transition-colors" />

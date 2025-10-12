@@ -9,8 +9,8 @@ const { casino } = Astro.props;
 const firstBonus = casino.fields?.bonuses ? casino.fields?.bonuses[0] : null;
 
 const recommendationPercentage = Math.round(
-  (casino.fields.userRecommendationsRecommendedNumber /
-    casino.fields.userRecommendationsTotalNumber) *
+  (casino?.fields?.userRecommendationsRecommendedNumber /
+    casino?.fields?.userRecommendationsTotalNumber) *
     100
 );
 
@@ -25,15 +25,15 @@ const recommendationPercentage = Math.round(
     <div class="flex flex-col p-2 lg:p-0 w-1/2 lg:w-auto">
       <div
         class="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-md mx-4 my-2 min-w-[110px] lg:min-w-[160px]"
-        style={`background-color:${casino.fields.backgroundColor}`}
+        style={`background-color:${casino?.fields?.backgroundColor}`}
       >
         <a
-          href={`/casino-guide/${casino.fields.slug}/`}
+          href={`/casino-guide/${casino?.fields?.slug}/`}
           class="mb-2 h-[40px] w-[80px] flex items-center justify-center group hover:cursor-pointer"
         >
           <Image
-            src={addHttps(casino.fields.logo.fields.file.url) || "/placeholder.svg"}
-            alt={`${casino.fields.casinoName} logo`}
+            src={addHttps(casino?.fields?.logo?.fields?.file?.url) || "/placeholder.svg"}
+            alt={`${casino?.fields?.casinoName} logo`}
             width="90"
             height="50"
             format="webp"
@@ -42,16 +42,16 @@ const recommendationPercentage = Math.round(
           />
         </a>
         <a
-          href={`/casino-guide/${casino.fields.slug}`}
+          href={`/casino-guide/${casino?.fields?.slug}`}
           class="text-md font-semibold text-center text-gray-100 hover:text-gray-50 transition-colors duration-300"
         >
-          {casino.fields.casinoName}
+          {casino?.fields?.casinoName}
         </a>
       </div>
       <div class="flex items-center justify-center bg-blue-100 rounded-full px-3 py-2 mb-1 max-w-2/3 mx-auto lg:hidden">
         <Star class="w-4 h-4 fill-blue-500 text-blue-500 mr-1" />
         <span class="text-sm font-bold">
-          {casino.fields.casinoRates[0].fields.ratingNumber}/5
+          {casino?.fields?.casinoRates[0]?.fields?.ratingNumber}/5
         </span>
       </div>
     </div>
@@ -61,7 +61,7 @@ const recommendationPercentage = Math.round(
       <div class="flex items-center bg-blue-100 rounded-full px-3 py-2 mb-1">
         <Star class="w-4 h-4 fill-yellow-500 text-yellow-500 mr-1" />
         <span class="text-sm font-bold">
-          {casino.fields.casinoRates[0].fields.ratingNumber}/5
+          {casino?.fields?.casinoRates[0]?.fields?.ratingNumber}/5
         </span>
       </div>
       <span class="text-xs text-blue-700 font-semibold">Rating</span>
@@ -82,7 +82,7 @@ const recommendationPercentage = Math.round(
     <!-- 4. Casino Short Description Column -->
     <div class="px-4 max-w-[360px] hidden lg:block">
       <p class="text-sm text-blue-900 leading-relaxed">
-        {casino.fields.shortDescription ||
+        {casino?.fields?.shortDescription ||
           "Experience premium gaming with top-rated slots, live dealers, and instant payouts. Join thousands of satisfied players today."}
       </p>
     </div>
@@ -94,7 +94,7 @@ const recommendationPercentage = Math.round(
           variant="primary"
           className="cta-btn w-full group min-h-[40px] font-semibold text-md"
           buttonType="external-ref-link"
-          refLink={casino.fields.referralUrl}
+          refLink={casino?.fields?.referralUrl}
         >
           <span class="cta-text text-md">Play Now</span>
           <ArrowRight class="w-4 h-4 ml-1 transform transition-all duration-300 group-hover:translate-x-1 group-hover:text-gray-600 rounded-full group-hover:bg-blue-100" />
@@ -115,14 +115,14 @@ const recommendationPercentage = Math.round(
   <!-- Expandable Additional Information -->
   <div class="extra border-t border-gray-200 bg-blue-50 p-4 opacity-0 max-h-0 overflow-hidden transition-all duration-500">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-      {casino.fields.availableInCountries && (
+      {casino?.fields?.availableInCountries && (
         <div class="space-y-2">
           <div class="flex items-center gap-2">
             <Globe class="w-4 h-4 text-blue-600" />
             <div class="text-sm font-semibold text-blue-900">Available In:</div>
           </div>
           <div class="flex flex-wrap gap-1">
-            {casino.fields.availableInCountries.map((country) => (
+            {casino?.fields?.availableInCountries.map((country) => (
               <span class="text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
                 {country}
               </span>
@@ -147,17 +147,17 @@ const recommendationPercentage = Math.round(
           <CreditCard class="w-4 h-4 text-blue-900" />
           <div class="text-sm font-semibold text-blue-900">Payout Limits</div>
         </div>
-        <p class="text-xs text-blue-700">{casino.fields.payoutLimits}</p>
+        <p class="text-xs text-blue-700">{casino?.fields?.payoutLimits}</p>
       </div>
 
-      {casino.fields.payoutTimes && (
+      {casino?.fields?.payoutTimes && (
         <div class="space-y-2 flex flex-col items-start px-0">
           <div class="flex items-center gap-2">
             <Clock class="w-4 h-4 text-blue-900" />
             <div class="text-sm font-semibold text-blue-900">Payout Times</div>
           </div>
           <div class="space-y-1">
-            {casino.fields.payoutTimes.map((time) => (
+            {casino?.fields?.payoutTimes.map((time) => (
               <p class="text-xs text-blue-700">{time}</p>
             ))}
           </div>
@@ -166,7 +166,7 @@ const recommendationPercentage = Math.round(
 
       <div class="w-full max-w-[360px] block lg:hidden font-semibold">
         <h3 class="text-sm text-blue-900 leading-relaxed">
-          {casino.fields.shortDescription ||
+          {casino?.fields?.shortDescription ||
             "Experience premium gaming with top-rated slots, live dealers, and instant payouts. Join thousands of satisfied players today."}
         </h3>
       </div>
@@ -179,22 +179,22 @@ const recommendationPercentage = Math.round(
         <div class="space-y-1">
           <p class="text-xs text-blue-700">
             <span class="font-semibold text-blue-600">
-              {casino.fields.userRecommendationsRecommendedNumber}
+              {casino?.fields?.userRecommendationsRecommendedNumber || 0}
             </span>{" "}
             of{" "}
             <span class="font-semibold">
-              {casino.fields.userRecommendationsTotalNumber}
+              {casino?.fields?.userRecommendationsTotalNumber || 0}
             </span>{" "}
             recommend
           </p>
           <div class="w-full bg-blue-200 rounded-full h-2">
             <div
               class="bg-blue-500 h-2 rounded-full transition-all duration-300 max-w-[100%]"
-              style={`width:${recommendationPercentage}%`}
+              style={`width:${recommendationPercentage || 0}%`}
             ></div>
           </div>
           <p class="text-xs text-blue-600 font-semibold">
-            {recommendationPercentage}% positive reviews from our users
+            {recommendationPercentage || 0}% positive reviews from our users
           </p>
         </div>
       </div>
