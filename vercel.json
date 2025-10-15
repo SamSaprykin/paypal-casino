@@ -154,6 +154,11 @@
         "source": "/goto/vincispin.php",
         "destination": "https://track.betmenaffiliates.com/visit/?bta=42551&nci=5811&utm_campaign=&afp10=Seo&qlt=true",
         "statusCode": 301
+      },
+      {
+        "source": "/goto/bdmbet.php",
+        "destination": "https://track.intrklnkmain.com/visit/?bta=52228&nci=6048&afp10=Seo",
+        "statusCode": 301
       }
     ]
   }
