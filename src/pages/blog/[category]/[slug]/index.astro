@@ -33,11 +33,24 @@ const article = await getPostBySlug(slugWithoutBlogAndCategory);
 
 const timeToRead = Math.ceil(article.body.length / 300);
 
-// SEO data from CMS with fallbacks
+const ensureTrailingSlash = (url) => {
+  if (!url) return url;
+
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('//')) {
+
+    return url;
+  }
+
+  if (!url.endsWith('/')) {
+    return url + '/';
+  }
+  return url;
+};
+
 const seoData = {
   title: article.seoComponent?.fields?.seoTitle || `${article.title} - PayPal Casino Blog`,
   description: article.seoComponent?.fields?.seoDescription || article.cardDescription || `${article.title} - Expert insights and guides for PayPal casino players`,
-  canonical: article.seoComponent?.fields?.seoSlug || `/blog/${article.category?.toLowerCase().replace(/\s+/g, "-")}/${article.slug}/`,
+  canonical: ensureTrailingSlash(article.seoComponent?.fields?.seoSlug) || `/blog/${article.category?.toLowerCase().replace(/\s+/g, "-")}/${article.slug}/`,
   openGraph: {
     title: article.seoComponent?.fields?.openGraphTitle || article.seoComponent?.fields?.seoTitle || article.title,
     description: article.seoComponent?.fields?.openGraphDescription || article.seoComponent?.fields?.seoDescription || article.cardDescription,
@@ -48,6 +61,8 @@ const seoData = {
   noFollow: article.seoComponent?.fields?.noFollow || false,
   keywords: article.seoComponent?.fields?.keywords || []
 };
+
+
 
 // Schema markup
 const articleSchema = generateArticleSchema(article, article.author);
