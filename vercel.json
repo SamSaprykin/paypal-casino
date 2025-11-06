@@ -163,7 +163,6 @@
       {
         "source": "/casino-guide/:path((?!.*\\/$).+)",
         "destination": "/casino-guide/:path/",
-        "permanent": true,
         "statusCode": 301
       }
     ]
