@@ -14,6 +14,7 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
   ],
+  trailingSlash: 'always',
   output: 'static',
   site: 'https://ppcasinos.co/', // Replace with your actual site URL
   markdown: {
