@@ -1,0 +1,64 @@
+---
+/**
+ * Card block matching the Tetris /classic-games/tetris/ article grid (history, info, tips).
+ */
+type Variant = "default" | "info" | "accent";
+type Line = "cyan" | "purple" | "gold";
+
+interface Props {
+  title: string;
+  variant?: Variant;
+  colSpan?: "full" | "half";
+  icon?: string;
+  accentLine?: Line;
+}
+const {
+  title,
+  variant = "default",
+  colSpan = "half",
+  icon,
+  accentLine = "cyan",
+} = Astro.props;
+
+const lineClass = {
+  cyan: "after:bg-[#00cfcf]",
+  purple: "after:bg-[#854cff]",
+  gold: "after:bg-[#ffd600]",
+}[accentLine];
+
+const wrap = {
+  default:
+    "relative overflow-hidden bg-white border border-[#d5e6ec] rounded-[12px] p-8 sm:p-10 shadow-[0_2px_16px_0_rgba(131,179,255,0.1)] hover:shadow-[0_8px_40px_0_#aeeff844,0_1.5px_0_0_#e5faf9]",
+  info: "relative overflow-hidden bg-gradient-to-r from-[#f3fbf9] via-[#f3fbf9] to-[#e2fff7] border border-[#88e6eb] rounded-[12px] p-8 sm:p-10 shadow-[0_2px_16px_0_rgba(130,200,255,0.12)] hover:shadow-[0_8px_40px_0_#aeeff844,0_1.5px_0_0_#e5faf9]",
+  accent:
+    "relative overflow-hidden bg-gradient-to-r from-[#fffcf2] via-[#fffcf2] to-[#fffbe3] border border-[#ffe574] rounded-[12px] p-8 sm:p-10 shadow-[0_2px_16px_0_rgba(255,220,100,0.12)] hover:shadow-[0_8px_40px_0_#aeeff844,0_1.5px_0_0_#e5faf9]",
+}[variant];
+
+const span = colSpan === "full" ? "col-span-1 sm:col-span-2" : "";
+const gridCell = colSpan === "full" ? "" : "h-full min-h-0";
+---
+
+<div class:list={[wrap, span, gridCell]} data-editorial-card>
+  {icon && (
+    <div
+      class="text-[2.1rem] mb-2.5 text-[#ffd600] drop-shadow-sm"
+      aria-hidden="true"
+    >
+      {icon}
+    </div>
+  )}
+  <h2
+    class:list={[
+      "font-['Space_Mono','Courier_New',monospace] text-[1.45rem] font-bold text-[#1a2e44] mb-4 relative pb-2.5 tracking-[-0.01em]",
+      "after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[2.7rem] after:h-[2.2px] after:rounded-lg after:shadow-[0_1.5px_6px_#19f5dc3e]",
+      lineClass,
+    ]}
+  >
+    {title}
+  </h2>
+  <div
+    class="text-[#64758b] text-[1.05rem] sm:text-[1.09rem] font-normal leading-[1.75] [&_p]:mb-4 [&_p]:last:mb-0 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_li]:mb-1.5 [&_strong]:text-[#22334d] [&_strong]:font-semibold [&_h3]:!font-['Space_Mono','Courier_New',monospace]"
+  >
+    <slot />
+  </div>
+</div>

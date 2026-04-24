@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Layout/Header.astro";
+import Footer from "../../components/Layout/Footer.astro";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../../lib/schema";
+
+const seoData = {
+  title: "Classic Games | Browser Mini-Games (Tetris, Sudoku, Solitaire)",
+  description:
+    "Play Tetris, Sudoku, Solitaire, and more in your browser — free, no download, for fun only.",
+  canonical: "/classic-games/",
+  openGraph: {
+    title: "Classic Games | Paypalcasinoguides",
+    description:
+      "Free browser games: Tetris, Tetris 50, Sudoku, Klondike solitaire. Not real-money play.",
+    type: "website",
+  },
+  keywords: [
+    "classic games",
+    "tetris",
+    "sudoku",
+    "solitaire",
+    "browser games",
+    "free games",
+  ],
+};
+
+const pageData = {
+  name: "Classic games",
+  title: "Classic games",
+  slug: "classic-games",
+  description:
+    "Free browser mini-games: Tetris, Tetris 50, Sudoku, and Klondike solitaire. Entertainment only.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs("Classic games"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <main class="flex-1 w-full min-w-0">
+    <section
+      class="min-h-[70vh] bg-gradient-to-b from-slate-100 via-white to-slate-50/90 border-b border-slate-200/60"
+      aria-labelledby="hub-title"
+    >
+      <div class="container mx-auto max-w-4xl px-4 sm:px-6 pt-28 md:pt-36 pb-20 md:pb-24">
+        <nav class="mb-6 text-sm" aria-label="Breadcrumb">
+          <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500">
+            <li>
+              <a
+                href="/"
+                class="text-blue-800 hover:text-blue-950 font-medium transition-colors"
+                >Home</a
+              >
+            </li>
+            <li class="text-slate-300 select-none" aria-hidden="true">/</li>
+            <li class="text-slate-700 font-medium" aria-current="page">
+              Classic games
+            </li>
+          </ol>
+        </nav>
+
+        <header class="mb-10 text-center sm:text-left max-w-3xl">
+          <h1
+            id="hub-title"
+            class="!text-3xl sm:!text-4xl !leading-tight !font-bold !text-slate-900 !mb-0 !mt-0 tracking-tight"
+          >
+            Classic games
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            We host small, free games you can play right in the browser — no
+            account, no download. <strong>Not</strong> real-money gambling;
+            they are here for a quick break and fun only.
+          </p>
+        </header>
+
+        <h2
+          class="!text-xl sm:!text-2xl !font-bold !text-slate-900 !mb-4 !mt-0"
+        >
+          Pick a game
+        </h2>
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 mb-14 list-none p-0 m-0"
+        >
+          <li>
+            <a
+              href="/classic-games/tetris/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Tetris
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">Endless / high score</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                Keep clearing lines and climbing levels until the stack reaches
+                the top. Chasing a personal best score? Start here.
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Tetris →</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/classic-games/tetris-50/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Tetris 50
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">50-line sprint</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                Your goal is to clear <strong>50 lines in total</strong>, then
+                the round is won. You can still top out if you are not careful.
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Tetris 50 →</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/classic-games/sudoku/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Sudoku
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">9×9 number puzzle</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                Place digits 1–9 with no repeats in a row, column, or 3×3 box.
+                Givens are locked; conflicts show in red.
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Sudoku →</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/classic-games/solitaire/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Solitaire
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">Klondike</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                Use the stock and waste, build foundations A→K by suit, and run
+                columns down in alternating colors.
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Solitaire →</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/classic-games/yukon/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Yukon Solitaire
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">No stock pile</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                All cards are dealt face up in the tableau. Move stacked groups
+                when the lead card is legal, and play foundations A→K by suit
+                (with optional backtrack).
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Yukon →</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="/classic-games/russian/"
+              class="block h-full rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm ring-1 ring-slate-900/5 transition hover:border-blue-200 hover:shadow-md hover:ring-blue-900/5"
+            >
+              <h3
+                class="!text-lg !font-bold !text-slate-900 !m-0 !mb-1 !leading-snug"
+              >
+                Russian Solitaire
+              </h3>
+              <p class="text-sm text-slate-500 mb-3 m-0">Same-suit build</p>
+              <p class="text-slate-600 text-sm leading-relaxed m-0">
+                No stock; columns build down in the same suit; hidden cards
+                turn over as you free them — harder than Yukon, no foundation
+                take-backs in this build.
+              </p>
+              <span
+                class="mt-4 inline-block text-sm font-medium text-blue-800"
+                >Play Russian →</span
+              >
+            </a>
+          </li>
+        </ul>
+
+        <p
+          class="text-slate-600 text-base leading-relaxed max-w-3xl m-0"
+        >
+          Not sure which to try? The full
+          <strong> Tetris vs Tetris 50</strong> comparison (same table) is on
+          the <a href="/classic-games/tetris/" class="text-blue-800 font-medium underline decoration-blue-200 underline-offset-2 hover:text-blue-950">Tetris</a>
+          and
+          <a
+            href="/classic-games/tetris-50/"
+            class="text-blue-800 font-medium underline decoration-blue-200 underline-offset-2 hover:text-blue-950"
+            >Tetris 50</a
+          >
+          game pages, below the play area.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

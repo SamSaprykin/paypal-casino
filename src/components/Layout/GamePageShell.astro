@@ -1,0 +1,118 @@
+---
+interface Props {
+  title: string;
+  /** Tetris vs Tetris 50: cross-link between modes. */
+  mode?: "tetris" | "tetris-50";
+  /** Other classic game (e.g. Sudoku ↔ Solitaire) when not Tetris. */
+  companionLink?: { href: string; label: string; sub: string } | null;
+}
+
+const { title, mode, companionLink } = Astro.props;
+
+const other =
+  mode === "tetris"
+    ? { href: "/classic-games/tetris-50/", label: "Tetris 50", sub: "50-line sprint" }
+    : mode === "tetris-50"
+      ? { href: "/classic-games/tetris/", label: "Tetris", sub: "Endless high score" }
+      : companionLink ?? null;
+---
+
+<section
+  class="min-h-[70vh] bg-gradient-to-b from-slate-100 via-white to-slate-50/90 border-b border-slate-200/60"
+  aria-labelledby="game-page-title"
+>
+  <div class="container mx-auto max-w-4xl px-4 sm:px-6 pt-28 md:pt-36 pb-16 md:pb-20">
+    <nav
+      class="mb-6 text-sm"
+      aria-label="Breadcrumb"
+    >
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-slate-500">
+        <li>
+          <a
+            href="/"
+            class="text-blue-800 hover:text-blue-950 font-medium transition-colors"
+          >Home</a>
+        </li>
+        <li class="text-slate-300 select-none" aria-hidden="true">/</li>
+        <li>
+          <a
+            href="/classic-games/"
+            class="text-blue-800 hover:text-blue-950 font-medium transition-colors"
+          >Classic games</a>
+        </li>
+        <li class="text-slate-300 select-none" aria-hidden="true">/</li>
+        <li class="text-slate-700 font-medium" aria-current="page">{title}</li>
+      </ol>
+    </nav>
+
+    <header class="mb-8 text-center sm:text-left">
+      <p
+        class="text-xs font-semibold uppercase tracking-[0.2em] text-blue-900/80 mb-3"
+      >
+        Classic games
+      </p>
+      <h1
+        id="game-page-title"
+        class="!text-3xl sm:!text-4xl !leading-tight !font-bold !text-slate-900 !mb-0 !mt-0 tracking-tight"
+      >
+        {title}
+      </h1>
+      <div
+        class="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl mx-auto sm:mx-0 leading-relaxed"
+      >
+        <slot name="intro" />
+      </div>
+    </header>
+
+    <div
+      class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-3 sm:gap-4 mb-8"
+    >
+      <a
+        href="/classic-games/"
+        class="inline-flex items-center justify-center rounded-xl border border-slate-200/90 bg-slate-50/80 px-4 py-3 text-sm font-medium text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-100"
+      >
+        All classic games
+        <span class="ml-1 text-slate-500" aria-hidden="true">↗</span>
+      </a>
+      {other && (
+        <a
+          href={other.href}
+          class="group inline-flex items-center justify-center gap-2 rounded-xl border border-blue-200/80 bg-white px-4 py-3 text-sm font-medium text-blue-900 shadow-sm transition hover:border-blue-300 hover:bg-blue-50/80 hover:shadow"
+        >
+          <span class="text-left">
+            <span class="block text-blue-950">{other.label}</span>
+            <span class="block text-xs font-normal text-slate-500"
+            >{other.sub}</span
+            >
+          </span>
+          <span
+            class="text-blue-600 transition group-hover:translate-x-0.5"
+            aria-hidden="true"
+          >→</span
+          >
+        </a>
+      )}
+      <p class="text-sm text-slate-500 sm:ml-1 sm:flex-1 sm:min-w-[12rem]">
+        We host light browser games for fun — not real-money play.
+      </p>
+    </div>
+
+    <div
+      class="rounded-2xl border border-slate-200/90 bg-white shadow-[0_8px_30px_rgb(0,0,0,0.06),0_0_0_1px_rgba(15,23,42,0.04)] overflow-hidden ring-1 ring-slate-900/5"
+    >
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 px-4 sm:px-5 py-3 bg-gradient-to-r from-slate-50 to-blue-50/40 border-b border-slate-200/80"
+      >
+        <p class="text-sm font-medium text-slate-800">
+          Play in the browser
+        </p>
+        <p class="text-xs text-slate-500">
+          Keyboard · optional sound (toggle in game)
+        </p>
+      </div>
+      <div class="p-4 sm:p-6 md:p-8">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>

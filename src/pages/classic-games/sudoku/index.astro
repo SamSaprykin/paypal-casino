@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Layout/Header.astro";
+import Footer from "../../../components/Layout/Footer.astro";
+import GamePageShell from "../../../components/Layout/GamePageShell.astro";
+import ClassicGameTetrisEditorial from "../../../components/Layout/ClassicGameTetrisEditorial.astro";
+import TetrisStyleEditorialCard from "../../../components/Layout/TetrisStyleEditorialCard.astro";
+import Sudoku from "../../../components/Games/Sudoku.jsx";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateClassicGameBreadcrumbs,
+} from "../../../lib/schema";
+
+const seoData = {
+  title: "Sudoku Online | Free 9×9 Number Puzzle",
+  description:
+    "Play Sudoku in the browser. Fill the grid, avoid conflicts, and try a new shuffled copy anytime — sound optional.",
+  canonical: "/classic-games/sudoku/",
+  openGraph: {
+    title: "Sudoku Online | Paypalcasinoguides",
+    description:
+      "Free online Sudoku for fun. Not real-money gambling. Keyboard and on-screen number pad.",
+    type: "website",
+  },
+  keywords: ["sudoku", "online", "puzzle", "9x9", "free game"],
+};
+
+const pageData = {
+  name: "Sudoku",
+  title: "Sudoku",
+  slug: "classic-games/sudoku",
+  description:
+    "Browser Sudoku: classic 9×9 with conflict hints and new-game reshuffle.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateClassicGameBreadcrumbs("Sudoku"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <main class="flex-1 w-full min-w-0">
+    <GamePageShell
+      title="Sudoku"
+      companionLink={{
+        href: "/classic-games/solitaire/",
+        label: "Solitaire",
+        sub: "Klondike (cards)",
+      }}
+    >
+      <p class="!mb-0" slot="intro" id="play">
+        A classic 9×9 logic puzzle. Givens stay fixed. Conflicting numbers are
+        highlighted. This is for fun only — <strong>not</strong> gambling.
+      </p>
+      <Sudoku client:load />
+    </GamePageShell>
+    <ClassicGameTetrisEditorial
+      eyebrow="Classic · Logic · Free"
+      heroTitle="Play Sudoku"
+      heroEmphasis="in your browser"
+      heroSubtitle="The standard 9×9 grid, conflict hints, and a fresh deal whenever you want — with sound optional and no account required."
+      decor="blocks"
+    >
+      <ol class="!mb-0" slot="howToPlay">
+        <li>
+          <strong>Choose a cell</strong> that is not a “given” (locked) number. Givens
+          are greyed; you cannot overwrite them.
+        </li>
+        <li>
+          <strong>Enter 1–9</strong> using the on-screen number pad, or with keyboard keys
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >1</kbd
+          >–<kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >9</kbd
+          > when a free cell is selected. <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >0</kbd
+          >, Backspace, or Delete clears <em>your</em> entry in that cell.
+        </li>
+        <li>
+          <strong>Watch conflicts</strong>: if a digit already appears in the same row, column, or
+          3×3 box, that cell is marked so you can fix it. The puzzle must respect all three
+          constraints at once.
+        </li>
+        <li>
+          <strong>New game</strong> reshuffles a stored puzzle. Toggle <strong>Sound</strong> for
+          feedback. On desktop, <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >Cmd/Ctrl+N</kbd
+          > also starts a new game.
+        </li>
+        <li>
+          <strong>Win</strong> when every cell is filled and the grid is valid. There is
+          no score, stake, or payout — this is a logic pastime, not gambling.
+        </li>
+      </ol>
+
+      <TetrisStyleEditorialCard
+        title="Where Sudoku comes from (and where it is not from)"
+        colSpan="full"
+        accentLine="cyan"
+        icon="📰"
+        variant="default"
+      >
+        <p>
+          The puzzle that newspapers turned into a daily habit is only a few decades
+          old in its current 9×9 form: early versions appeared in the United States, then
+          Japan refined the rule set and the name, and the rest of the world followed.
+          That gentle spread was about newsprint and coffee, not odds or wagers. Each
+          board is a closed problem: the numbers either fit the rules or they do not.
+        </p>
+        <p class="!mb-0">
+          We host it here for the same reason we host other classic games: a break that
+          does not involve a bankroll. If you are on this site to read about PayPal
+          casinos, treat this page as the opposite of that — a few quiet minutes, one
+          digit at a time.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="Rules in one breath"
+        variant="default"
+        colSpan="half"
+        icon="9️⃣"
+        accentLine="cyan"
+      >
+        <p>
+          Every row, column, and 3×3 block must contain each digit
+          <strong>1</strong> through <strong>9</strong> exactly once. A well-made puzzle
+          has a single solution; guessing should not be required if you read the
+          constraints carefully.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="Getting better without speed-running"
+        variant="default"
+        colSpan="half"
+        icon="🧩"
+        accentLine="cyan"
+      >
+        <p class="!mb-0">
+          Look for <strong>sole candidates</strong> (only one digit can go in a cell) and
+          <strong>groups</strong> of cells that can only take two or three numbers — those
+          patterns unlock the rest. Short sessions are fine; Sudoku rewards calm focus
+          more than speed.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="Why we keep it on a casino-adjacent site"
+        variant="accent"
+        colSpan="full"
+        accentLine="gold"
+        icon="☕"
+      >
+        <p class="!mb-5">
+          There is no RTP, no bonus round, and no deposit. The grid is a small, honest
+          challenge you can close whenever you like — a useful contrast to anything that
+          involves a wallet. When you are done reading reviews, come back here to clear
+          your head one cell at a time.
+        </p>
+        <a
+          href="#play"
+          class="classic-game-editorial-cta-sm inline-block font-['Space_Mono','Courier_New',monospace] text-[.82rem] sm:text-[.87rem] tracking-[.08em] uppercase no-underline py-2.5 px-5 border-[1.5px] border-[#00cfcf] text-white bg-gradient-to-r from-[#00cfcf] via-[#00cfcf] to-[#10b8c8] rounded-md font-bold shadow-[0_2px_10px_0_#b6f1ec3f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+        >Open the board →</a
+        >
+      </TetrisStyleEditorialCard>
+    </ClassicGameTetrisEditorial>
+  </main>
+
+  <Footer />
+</BaseLayout>

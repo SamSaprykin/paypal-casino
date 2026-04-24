@@ -1,3 +1,8 @@
+Free games:
+
+https://www.microsoftcasualgames.com/
+
+tetris 50
 # PPCasinos.co — Content Plan 2026
 
 > **Site:** ppcasinos.co | **Niche:** PayPal casino affiliate | **Markets:** Ireland, Finland, Norway, Sweden, Denmark, Germany (new)

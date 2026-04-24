@@ -1,0 +1,167 @@
+---
+/**
+ * Tetris-style article band: hero + "How to play" + main slot (grid of TetrisStyleEditorialCard / custom blocks).
+ * Matches the visual language of /classic-games/tetris/.
+ */
+type Decor = "blocks" | "cards" | "sprint";
+
+interface Props {
+  eyebrow: string;
+  heroTitle: string;
+  /** Second line, accent color (e.g. "In Your Browser") */
+  heroEmphasis?: string;
+  heroSubtitle: string;
+  /** Floating hero decorations; default: falling block-style glyphs */
+  decor?: Decor;
+  /** Aria label for the article region */
+  articleLabelId?: string;
+}
+
+const {
+  eyebrow,
+  heroTitle,
+  heroEmphasis,
+  heroSubtitle,
+  decor = "blocks",
+  articleLabelId = "classic-game-article-hero",
+} = Astro.props;
+
+const floats =
+  decor === "cards"
+    ? [
+        { t: "♠", c: "text-[#1e3a4c]", l: "8%", dur: "6s", del: "0s" },
+        { t: "♥", c: "text-[#c41e3a]", l: "25%", dur: "8s", del: "-2s" },
+        { t: "♦", c: "text-[#c41e3a]", l: "55%", dur: "7s", del: "-4s" },
+        { t: "♣", c: "text-[#1e3a4c]", l: "75%", dur: "10s", del: "-1s" },
+        { t: "★", c: "text-[#00cfcf]", l: "90%", dur: "5.5s", del: "-3s" },
+      ]
+    : decor === "sprint"
+      ? [
+          { t: "50", c: "text-[#00cfcf]", l: "10%", dur: "6s", del: "0s" },
+          { t: "▬", c: "text-[#ffd600]", l: "30%", dur: "8s", del: "-2s" },
+          { t: "—", c: "text-[#854cff]", l: "55%", dur: "7s", del: "-4s" },
+          { t: "▬", c: "text-[#fa3463]", l: "75%", dur: "10s", del: "-1s" },
+          { t: "50", c: "text-[#00cfcf]", l: "88%", dur: "5.5s", del: "-3s" },
+        ]
+      : [
+          { t: "▬", c: "text-[#00cfcf]", l: "8%", dur: "6s", del: "0s" },
+          { t: "⌐", c: "text-[#ffd600]", l: "25%", dur: "8s", del: "-2s" },
+          { t: "⊤", c: "text-[#854cff]", l: "55%", dur: "7s", del: "-4s" },
+          { t: "≋", c: "text-[#fa3463]", l: "75%", dur: "10s", del: "-1s" },
+          { t: "▪", c: "text-[#00cfcf]", l: "90%", dur: "5.5s", del: "-3s" },
+        ];
+---
+
+<style is:global>
+  @keyframes classic-game-editorial-fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(110vh) rotate(12deg);
+      opacity: 0;
+    }
+  }
+  .classic-game-editorial-cta,
+  .classic-game-editorial-cta-sm {
+    text-shadow: 0 2px 12px #b6f1ec3f, 0 0.3px 0 #fff;
+    transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+  }
+  .classic-game-editorial-cta:hover,
+  .classic-game-editorial-cta-sm:hover {
+    background: #fff !important;
+    color: #00cfcf !important;
+    text-shadow: 0 1px 6px #00cfcf1a, 0 0.3px 0 #fff;
+  }
+</style>
+
+<section
+  class="bg-[#f3f8fd] text-[#22334d] font-['IBM_Plex_Sans',system-ui,sans-serif] leading-[1.7] shadow-[0_2px_0_0_rgba(230,244,255,0.1)]"
+  aria-labelledby={articleLabelId}
+>
+  <div
+    class="relative overflow-hidden flex items-center justify-center text-center min-h-[min(52vh,28rem)] px-4 sm:px-6 pt-20 pb-14 border-b-[3px] border-[#00cfcf] bg-gradient-to-br from-[#fafbfd] to-[#e4f2fd]"
+  >
+    <div
+      class="absolute inset-0 bg-[linear-gradient(#d5e6ec_1px,transparent_1px),linear-gradient(90deg,#d5e6ec_1px,transparent_1px)] bg-[length:36px_36px] opacity-10 z-0"
+      aria-hidden="true"
+    />
+    <div
+      class="absolute inset-0 pointer-events-none overflow-hidden z-[1]"
+      aria-hidden="true"
+    >
+      {
+        floats.map((f) => (
+          <span
+            class:list={[
+              "absolute text-[2.2rem] sm:text-[2.6rem] opacity-20 blur-[0.5px] top-[-50px] pointer-events-none",
+              f.c,
+            ]}
+            style={`left: ${f.l}; top: -50px; animation: classic-game-editorial-fall ${f.dur} linear infinite; animation-delay: ${f.del}`}
+            aria-hidden="true"
+          >
+            {f.t}
+          </span>
+        ))
+      }
+    </div>
+    <div
+      class="relative z-[2] max-w-[700px] bg-white/80 backdrop-blur-[2px] rounded-2xl border border-[#d5e6ec] mx-auto py-8 px-6 sm:py-10 sm:px-8 shadow-[0_4px_36px_0_rgba(131,179,255,0.12),0_1.5px_0_0_#e7f4ff]"
+    >
+      <p
+        class="font-['Space_Mono','Courier_New',monospace] text-[.8rem] sm:text-[.83rem] tracking-widest uppercase text-[#ffd600] mb-3"
+        id={articleLabelId}
+      >
+        {eyebrow}
+      </p>
+      <h1
+        class="font-['Space_Mono','Courier_New',monospace] text-[clamp(1.9rem,6vw,3.4rem)] font-extrabold text-[#21a6bf] mb-4 leading-[1.1] tracking-[-0.03em]"
+      >
+        {heroTitle}
+        {
+          heroEmphasis && (
+            <>
+              <br />
+              <em class="not-italic text-[#854cff] [text-shadow:0_2px_10px_#854cff44] text-[0.95em]">
+                {heroEmphasis}
+              </em>
+            </>
+          )
+        }
+      </h1>
+      <p
+        class="text-base sm:text-[1.13rem] text-[#64758b] max-w-[520px] mx-auto mb-7 font-medium tracking-[0.01em]"
+      >
+        {heroSubtitle}
+      </p>
+      <a
+        href="#play"
+        class="classic-game-editorial-cta inline-block font-['Space_Mono','Courier_New',monospace] text-[.85rem] sm:text-[.93rem] tracking-[.08em] uppercase no-underline py-3.5 px-7 sm:py-4 sm:px-9 border-2 border-[#00cfcf] text-white bg-gradient-to-r from-[#00cfcf] via-[#00cfcf] to-[#10b8c8] rounded-md font-bold shadow-[0_2px_12px_0_#b6f1ec3f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#00cfcf]"
+      >
+        Jump to the game
+      </a>
+    </div>
+  </div>
+
+  <div
+    class="max-w-[950px] mx-auto py-12 sm:py-16 px-4 sm:px-6 pb-20 grid gap-6 sm:gap-9 grid-cols-1 sm:grid-cols-2"
+  >
+    <div
+      class="relative overflow-hidden bg-gradient-to-r from-[#f0f7ff] via-[#f5fbff] to-[#e8f4ff] border border-[#7ec8f0] rounded-[12px] p-8 sm:p-10 shadow-[0_2px_20px_0_rgba(0,150,200,0.1)] col-span-1 sm:col-span-2"
+    >
+      <h2
+        class="font-['Space_Mono','Courier_New',monospace] text-[1.4rem] sm:text-[1.45rem] font-bold text-[#1a2e44] mb-4 relative pb-2.5 tracking-[-0.01em] after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-[2.7rem] after:h-[2.2px] after:bg-[#854cff] after:rounded-lg"
+      >
+        How to play
+      </h2>
+      <div
+        class="text-[#22334d] text-[1.02rem] sm:text-[1.06rem] leading-[1.75] [&_p]:mb-3 [&_p]:last:mb-0 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-0 [&_li]:mb-2 [&_strong]:font-semibold [&_a]:text-[#155e99] [&_a]:underline"
+      >
+        <slot name="howToPlay" />
+      </div>
+    </div>
+
+    <slot />
+  </div>
+</section>

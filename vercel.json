@@ -161,6 +161,26 @@
         "statusCode": 301
       },
       {
+        "source": "/tetris",
+        "destination": "/classic-games/tetris/",
+        "statusCode": 301
+      },
+      {
+        "source": "/tetris/",
+        "destination": "/classic-games/tetris/",
+        "statusCode": 301
+      },
+      {
+        "source": "/tetris-50",
+        "destination": "/classic-games/tetris-50/",
+        "statusCode": 301
+      },
+      {
+        "source": "/tetris-50/",
+        "destination": "/classic-games/tetris-50/",
+        "statusCode": 301
+      },
+      {
         "source": "/casino-guide/:path((?!.*\\/$).+)",
         "destination": "/casino-guide/:path/",
         "statusCode": 301

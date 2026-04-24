@@ -53,6 +53,47 @@ const websiteFooter = {
       ],
     },
     {
+      itemName: "Classic games",
+      itemLinkRoute: "/classic-games/",
+      navigationItems: [
+        {
+          linkRoute: "/classic-games/",
+          linkText: "All games (overview)",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/tetris/",
+          linkText: "Tetris",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/tetris-50/",
+          linkText: "Tetris 50",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/sudoku/",
+          linkText: "Sudoku",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/solitaire/",
+          linkText: "Solitaire",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/yukon/",
+          linkText: "Yukon Solitaire",
+          linkType: "internal",
+        },
+        {
+          linkRoute: "/classic-games/russian/",
+          linkText: "Russian Solitaire",
+          linkType: "internal",
+        },
+      ],
+    },
+    {
       itemName: "Support",
       itemLinkRoute: "",
       navigationItems: [
@@ -95,11 +136,20 @@ const websiteFooter = {
           </span>
         </a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16 mb-12 w-full">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 w-full">
         {websiteFooter.navigationItems.map((item) => (
           <div class="text-center md:text-left">
             <h3 class="text-white font-semibold text-lg mb-6 pb-2 border-b border-white/30">
-              {item.itemName}
+              {item.itemLinkRoute ? (
+                <a
+                  href={item.itemLinkRoute}
+                  class="text-white hover:text-white/90 focus:outline-none focus:underline"
+                >
+                  {item.itemName}
+                </a>
+              ) : (
+                item.itemName
+              )}
             </h3>
             <nav aria-label={`${item.itemName} navigation`}>
               <ul class="space-y-3">

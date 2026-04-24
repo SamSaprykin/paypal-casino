@@ -323,3 +323,12 @@ export function generateStaticPageBreadcrumbs(pageName) {
     { name: pageName, url: "#" }, // Current page
   ];
 }
+
+/** Breadcrumbs for games under /classic-games/:name/ */
+export function generateClassicGameBreadcrumbs(gamePageName) {
+  return [
+    { name: "Home", url: "/" },
+    { name: "Classic games", url: "/classic-games/" },
+    { name: gamePageName, url: "#" },
+  ];
+}

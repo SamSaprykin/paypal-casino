@@ -1,0 +1,275 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Layout/Header.astro";
+import Footer from "../../../components/Layout/Footer.astro";
+import GamePageShell from "../../../components/Layout/GamePageShell.astro";
+import ClassicGameTetrisEditorial from "../../../components/Layout/ClassicGameTetrisEditorial.astro";
+import TetrisStyleEditorialCard from "../../../components/Layout/TetrisStyleEditorialCard.astro";
+import Tetris from "../../../components/Games/Tetris.jsx";
+import TetrisComparison from "../../../components/Games/TetrisComparison.astro";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateClassicGameBreadcrumbs,
+} from "../../../lib/schema";
+
+const seoData = {
+  title: "Tetris Online | Free Classic Block Game",
+  description:
+    "Play Tetris in your browser: stack blocks, clear lines, and beat your high score. Keyboard controls and optional sound.",
+  canonical: "/classic-games/tetris/",
+  openGraph: {
+    title: "Tetris Online | Paypalcasinoguides",
+    description:
+      "Free browser Tetris with keyboard controls and sound. For entertainment only — not real-money gambling.",
+    type: "website",
+  },
+  keywords: ["tetris", "online game", "free game", "puzzle game"],
+};
+
+const pageData = {
+  name: "Tetris Online",
+  title: "Tetris Online",
+  slug: "classic-games/tetris",
+  description:
+    "Play classic Tetris in the browser with keyboard controls and optional sound effects.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateClassicGameBreadcrumbs("Tetris Online"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <main class="flex-1 w-full min-w-0">
+    <GamePageShell title="Tetris Online" mode="tetris">
+      <p class="!mb-0" slot="intro" id="play">
+        Stack blocks, clear lines, and push for a higher score. This is a free
+        mini-game for fun — it is <strong>not</strong> gambling or real-money
+        play.
+      </p>
+      <Tetris client:load />
+    </GamePageShell>
+    <TetrisComparison />
+
+    <ClassicGameTetrisEditorial
+      eyebrow="Classic · HTML5 · Free"
+      heroTitle="Play Tetris"
+      heroEmphasis="Free online"
+      heroSubtitle="The same falling pieces and line clears you remember — in the browser, with keyboard play and optional sound. Not real-money gambling."
+      decor="blocks"
+    >
+      <ol class="!mb-0" slot="howToPlay">
+        <li>
+          <strong>Start</strong> or <strong>restart</strong> after game over: press
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >Space</kbd
+          > or
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >Enter</kbd
+          >.
+        </li>
+        <li>
+          <strong>Move</strong>:
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >←</kbd
+          >
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >→</kbd
+          >
+          slide,
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >↑</kbd
+          >
+          <strong>rotates</strong>,
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >↓</kbd
+          >
+          <strong>soft drop</strong>,
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >Space</kbd
+          >
+          <strong>hard drop</strong>.
+          <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >P</kbd
+          >
+          <strong>pauses</strong>.
+        </li>
+        <li>
+          <strong>Clear</strong> full horizontal <strong>rows</strong> — more rows
+          at once scores higher. <strong>Level</strong> and drop speed increase as
+          you clear lines.
+        </li>
+        <li>
+          <strong>Game over</strong> when a new piece cannot spawn because the
+          stack reaches the <strong>top</strong>. Toggle <strong>Sound</strong> in
+          the game UI. No account or stake.
+        </li>
+        <li>
+          For a <strong>50-line sprint</strong> with the same controls, use{" "}
+          <a class="!text-[#155e99] font-semibold" href="/classic-games/tetris-50/"
+            >Tetris 50</a
+          >; the <strong>comparison</strong> block above shows both modes.
+        </li>
+      </ol>
+
+      <TetrisStyleEditorialCard
+        title="The history of the game"
+        colSpan="full"
+        icon="1985"
+        accentLine="cyan"
+        variant="default"
+      >
+        <p>
+          The Russian programmer <strong>Alexei Pajitnov</strong>, in
+          <strong>1985</strong>, turned the tabletop idea behind
+          <em>Pentominoes</em> into a computer puzzle on the
+          <strong>Electronica 60</strong> — no colour, no sound, yet it hooked an
+          office. A colour PC build spread from hand to hand until much of the
+          country was playing a simple, irresistible loop.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="How Tetris conquered the world"
+        colSpan="half"
+        icon="🌍"
+        accentLine="purple"
+        variant="default"
+      >
+        <p>
+          Through Hungary and <strong>Robert Stein</strong>, the game circled
+          the planet while early licensing was messy. <strong>Nintendo</strong> made
+          it a household name by bundling it with the <strong>Game Boy</strong>.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="Why it still feels sharp"
+        colSpan="half"
+        icon="🎮"
+        accentLine="cyan"
+        variant="default"
+      >
+        <p>
+          Few games reward the motto <em>“practice makes perfect”</em> the way
+          Tetris does. Playing online, there is no true ceiling: you can always
+          push for a better score, with no bet on the line.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="How Tetris works"
+        variant="info"
+        colSpan="full"
+        accentLine="purple"
+        icon="▬"
+      >
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-2"
+        >
+          <div
+            class="bg-[#fafdff] border border-[#f3f2fc] rounded-lg p-5 shadow-sm"
+          >
+            <span class="block text-[1.4rem] mb-2" aria-hidden="true">⬇️</span>
+            <h3
+              class="!font-['Space_Mono','Courier_New',monospace] !text-[.9rem] tracking-[.03em] uppercase text-[#00cfcf] mb-2 !font-bold"
+            >
+              Falling pieces
+            </h3>
+            <p class="!text-[#22334d] !mb-0 !text-base">
+              Seven <strong>tetrominoes</strong> (four squares each — Greek
+              <em>tetra</em>) fall faster as <strong>levels</strong> progress.
+            </p>
+          </div>
+          <div
+            class="bg-[#fafdff] border border-[#f3f2fc] rounded-lg p-5 shadow-sm"
+          >
+            <span class="block text-[1.4rem] mb-2" aria-hidden="true">↔️</span>
+            <h3
+              class="!font-['Space_Mono','Courier_New',monospace] !text-[.9rem] tracking-[.03em] uppercase text-[#00cfcf] mb-2 !font-bold"
+            >
+              Move and rotate
+            </h3>
+            <p class="!text-[#22334d] !mb-0 !text-base">
+              Fit pieces with side moves and <strong>rotation</strong> — placement
+              is everything.
+            </p>
+          </div>
+          <div
+            class="bg-[#fafdff] border border-[#f3f2fc] rounded-lg p-5 shadow-sm"
+          >
+            <span class="block text-[1.4rem] mb-2" aria-hidden="true">💥</span>
+            <h3
+              class="!font-['Space_Mono','Courier_New',monospace] !text-[.9rem] tracking-[.03em] uppercase text-[#00cfcf] mb-2 !font-bold"
+            >
+              Clear lines
+            </h3>
+            <p class="!text-[#22334d] !mb-0 !text-base">
+              Complete a <strong>row</strong> and it vanishes; rows above drop
+              down. Bigger clears at once score more.
+            </p>
+          </div>
+          <div
+            class="bg-[#fafdff] border border-[#f3f2fc] rounded-lg p-5 shadow-sm"
+          >
+            <span class="block text-[1.4rem] mb-2" aria-hidden="true">🏆</span>
+            <h3
+              class="!font-['Space_Mono','Courier_New',monospace] !text-[.9rem] tracking-[.03em] uppercase text-[#00cfcf] mb-2 !font-bold"
+            >
+              Score and levels
+            </h3>
+            <p class="!text-[#22334d] !mb-0 !text-base">
+              Chaining clears and climbing <strong>levels</strong> pushes your
+              <strong>score</strong> — until a piece blocks the top.
+            </p>
+          </div>
+        </div>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="Practice makes perfect"
+        variant="accent"
+        colSpan="full"
+        accentLine="gold"
+        icon="☕"
+      >
+        <p class="!mb-5">
+          Beat your own high score, or switch to
+          <a
+            class="!text-[#155e99] font-semibold"
+            href="/classic-games/tetris-50/">Tetris 50</a
+          >
+          for a 50-line finish line. Either way, it is <strong>entertainment
+          only</strong> on this page — not gambling.
+        </p>
+        <a
+          href="#play"
+          class="classic-game-editorial-cta-sm inline-block font-['Space_Mono','Courier_New',monospace] text-[.82rem] sm:text-[.87rem] tracking-[.08em] uppercase no-underline py-2.5 px-5 border-[1.5px] border-[#00cfcf] text-white bg-gradient-to-r from-[#00cfcf] via-[#00cfcf] to-[#10b8c8] rounded-md font-bold shadow-[0_2px_10px_0_#b6f1ec3f]"
+        >
+          Start playing →
+        </a>
+      </TetrisStyleEditorialCard>
+    </ClassicGameTetrisEditorial>
+  </main>
+
+  <Footer />
+</BaseLayout>

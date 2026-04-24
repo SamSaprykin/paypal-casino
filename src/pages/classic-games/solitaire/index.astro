@@ -1,0 +1,187 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Layout/Header.astro";
+import Footer from "../../../components/Layout/Footer.astro";
+import GamePageShell from "../../../components/Layout/GamePageShell.astro";
+import ClassicGameTetrisEditorial from "../../../components/Layout/ClassicGameTetrisEditorial.astro";
+import TetrisStyleEditorialCard from "../../../components/Layout/TetrisStyleEditorialCard.astro";
+import Solitaire from "../../../components/Games/Solitaire.jsx";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateClassicGameBreadcrumbs,
+} from "../../../lib/schema";
+
+const seoData = {
+  title: "Solitaire Online | Klondike (Free Browser Game)",
+  description:
+    "Play Klondike Solitaire in your browser: stock, waste, foundations, and seven columns. Sound optional — for fun only.",
+  canonical: "/classic-games/solitaire/",
+  openGraph: {
+    title: "Solitaire Online | Paypalcasinoguides",
+    description:
+      "Free Klondike solitaire in the browser. Not real-money play.",
+    type: "website",
+  },
+  keywords: ["solitaire", "klondike", "cards", "online game", "free game"],
+};
+
+const pageData = {
+  name: "Solitaire",
+  title: "Solitaire",
+  slug: "classic-games/solitaire",
+  description:
+    "Browser Klondike solitaire: build foundations, alternate colors on the tableau.",
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateClassicGameBreadcrumbs("Solitaire"),
+);
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)}></script>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+
+  <main class="flex-1 w-full min-w-0">
+    <GamePageShell
+      title="Solitaire (Klondike)"
+      companionLink={{
+        href: "/classic-games/yukon/",
+        label: "Yukon",
+        sub: "No stock pile",
+      }}
+    >
+      <p class="!mb-0" slot="intro" id="play">
+        A familiar patience game: build up on the four foundations, build down
+        on the table in alternating red and black. <strong>Not</strong> gambling
+        or real money.
+      </p>
+      <Solitaire client:load />
+    </GamePageShell>
+    <ClassicGameTetrisEditorial
+      eyebrow="Cards · Patience · Free"
+      heroTitle="Klondike solitaire"
+      heroEmphasis="in your browser"
+      heroSubtitle="Stock, waste, four foundations, and seven columns — with Turn 1 / Turn 3, hint, undo, and optional sound. No real-money play."
+      decor="cards"
+    >
+      <ol class="!mb-0" slot="howToPlay">
+        <li>
+          <strong>Draw</strong> from the <strong>stock</strong> to flip cards to the <strong>waste</strong>. When
+          the stock is empty, click it to recycle the waste back. <kbd
+            class="px-1.5 py-0.5 bg-white border border-[#c5d4e0] rounded text-sm font-mono"
+            >Space</kbd
+          > does the same. Use <strong>Turn 1</strong> or <strong>Turn 3</strong> to
+          set how many cards you flip at once (only the top waste card plays).
+        </li>
+        <li>
+          <strong>Move cards</strong>: tap a face-up card (or the waste) to <strong>select</strong>, then tap a
+          <strong>foundation</strong> or <strong>tableau</strong> column to move. Valid tableau builds
+          run <em>down</em>, one rank, <strong>alternating red and black</strong>. Foundations
+          build <em>up</em> A→K <strong>by suit</strong>.
+        </li>
+        <li>
+          <strong>Empty columns</strong> only take a <strong>King</strong> (or a valid stack with a
+          King on the contact). <strong>Double-click</strong> a column bottom or waste
+          top to try auto-sending to a foundation when the rules allow.
+        </li>
+        <li>
+          <strong>Hint</strong> shows a legal move; <strong>Undo</strong> steps back. Toggle <strong>Sound</strong>
+          and use <strong>New game</strong> anytime. <strong>Time</strong>, <strong>Moves</strong>, and
+          <strong>Restocks</strong> are for your own stats only — not gambling.
+        </li>
+        <li>
+          <strong>Win</strong> by placing all 52 cards on the foundations. There is
+          no stake, no payout, and no account.
+        </li>
+      </ol>
+
+      <TetrisStyleEditorialCard
+        title="What “solitaire” usually means on a computer"
+        colSpan="full"
+        icon="🃏"
+        accentLine="cyan"
+        variant="default"
+      >
+        <p>
+          When people say “solitaire” on a PC, they almost always mean <strong>Klondike</strong>:
+          seven columns, a stock and waste, and four piles you build in suit from
+          ace to king. The name is older than the mouse — it comes from
+          <em>patience</em> games played with a real deck — and it has always been
+          about ordering cards, not placing bets. Our build keeps it that way:
+          free, optional sound, and clear on-screen help.
+        </p>
+        <p class="!mb-0">
+          If you are here from our casino or PayPal content, this page is
+          deliberate contrast: the same break time, <em>no</em> line item on
+          a bank statement, and no RTP — only a shuffled deal and a clean board
+          if the sequence comes together.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="How a deal opens up"
+        variant="default"
+        colSpan="half"
+        icon="♠"
+        accentLine="cyan"
+      >
+        <p>
+          You only see part of the layout at first: covered cards flip as you
+          clear what is above them. Good players <strong>create empty columns</strong> for
+          kings, delay moving low cards to foundations if they still help on the
+          table, and choose <strong>Turn 1</strong> for easier odds or
+          <strong>Turn 3</strong> for a sterner run — your choice in this build.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="What is built in here"
+        variant="default"
+        colSpan="half"
+        icon="🎛️"
+        accentLine="cyan"
+      >
+        <p>
+          Alongside the green-felt look you get <strong>hint</strong> and
+          <strong>undo</strong>, a <strong>timer</strong> for fun, and
+          <strong>double-tap to foundation</strong> when you already know
+          the card belongs. Nothing here connects to a wallet: it is a
+          mini-game for a quiet break, not a product with a house edge.
+        </p>
+      </TetrisStyleEditorialCard>
+
+      <TetrisStyleEditorialCard
+        title="A habit worth keeping — without a stake"
+        variant="accent"
+        colSpan="full"
+        accentLine="gold"
+        icon="☕"
+      >
+        <p class="!mb-5">
+          Whether you have two minutes or twenty, the rhythm is the same: scan,
+          move, draw, repeat. There is no leaderboard prize pool, no
+          “buy coins” button, and no outcome tied to money — only a win screen
+          when the suits are stacked. For a different patience variant with no
+          stock at all, try our <a href="/classic-games/yukon/">Yukon</a> page
+          after this one.
+        </p>
+        <a
+          href="#play"
+          class="classic-game-editorial-cta-sm inline-block font-['Space_Mono','Courier_New',monospace] text-[.82rem] sm:text-[.87rem] tracking-[.08em] uppercase no-underline py-2.5 px-5 border-[1.5px] border-[#00cfcf] text-white bg-gradient-to-r from-[#00cfcf] via-[#00cfcf] to-[#10b8c8] rounded-md font-bold shadow-[0_2px_10px_0_#b6f1ec3f]"
+        >Deal me in →</a
+        >
+      </TetrisStyleEditorialCard>
+    </ClassicGameTetrisEditorial>
+  </main>
+
+  <Footer />
+</BaseLayout>

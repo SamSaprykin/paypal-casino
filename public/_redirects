@@ -1,0 +1,3 @@
+# Legacy Tetris URLs → nested under /classic-games/ (301)
+/tetris/   /classic-games/tetris/   301
+/tetris-50/   /classic-games/tetris-50/   301
