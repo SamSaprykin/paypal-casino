@@ -161,6 +161,31 @@
         "statusCode": 301
       },
       {
+        "source": "/goto/legzo.php",
+        "destination": "https://legzoway61.com/cc3b27a02",
+        "statusCode": 301
+      },
+      {
+        "source": "/goto/flagman.php",
+        "destination": "https://flagmanway64.com/ce54c7bd9",
+        "statusCode": 301
+      },
+      {
+        "source": "/goto/monro.php",
+        "destination": "https://mnr-blse21.com/cfd692458",
+        "statusCode": 301
+      },
+      {
+        "source": "/goto/1go.php",
+        "destination": "https://dripway61.com/c9cd7d7f0",
+        "statusCode": 301
+      },
+      {
+        "source": "/goto/starda.php",
+        "destination": "https://stardaway61.com/c7f64ef15",
+        "statusCode": 301
+      },
+      {
         "source": "/tetris",
         "destination": "/classic-games/tetris/",
         "statusCode": 301
