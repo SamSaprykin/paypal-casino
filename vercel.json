@@ -177,12 +177,17 @@
       },
       {
         "source": "/goto/1go.php",
-        "destination": "https://dripway61.com/c9cd7d7f0",
+        "destination": "https://onegoway62.com/c71746c70",
         "statusCode": 301
       },
       {
         "source": "/goto/starda.php",
         "destination": "https://stardaway61.com/c7f64ef15",
+        "statusCode": 301
+      },
+      {
+        "source": "/goto/drip.php",
+        "destination": "https://dripway61.com/c9cd7d7f0",
         "statusCode": 301
       },
       {
