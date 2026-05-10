@@ -14,7 +14,7 @@ const { copyBefore, casinoList, anchorTitle } = Astro.props;
       {copyBefore}
     </h2>
 
-    <div class="grid flex flex-col gap-4 container mx-auto mt-10 mb-4">
+    <div class="grid flex flex-col gap-12 md:gap-4 container mx-auto mt-20 md:mt-10 mb-4">
       {casinoList.map((casino) => (
         <CasinoListingCardHorizontal casino={casino} />
       ))}

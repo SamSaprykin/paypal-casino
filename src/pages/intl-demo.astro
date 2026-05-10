@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Layout/Header.astro";
+import Footer from "../components/Layout/Footer.astro";
+import CasinoListingCard from "../components/Pages/Cards/CasinoListingCard.astro";
+import {
+  LOCALE_IDS,
+  LOCALES,
+  CASINO_LISTING_CARD_COPY,
+  INTL_DEMO_PAGE_COPY,
+} from "../lib/i18n";
+
+const layoutCopy = INTL_DEMO_PAGE_COPY["en-IE"];
+
+/** Minimal casino object for listing card demo (not from CMS). */
+const mockCasino = {
+  fields: {
+    slug: "demo-casino",
+    casinoName: "Aurora Play",
+    backgroundColor: "#0f172a",
+    referralUrl: "https://example.com",
+    shortDescription: "",
+    logo: {
+      fields: {
+        file: {
+          url: "/placeholder.svg",
+        },
+      },
+    },
+    casinoRates: [
+      {
+        fields: { ratingNumber: 4.8 },
+      },
+    ],
+    bonuses: [],
+    availableInCountries: ["Ireland", "Sweden", "Germany"],
+    payoutLimits: "€5,000 / week · VIP limits on request",
+    payoutTimes: ["E-wallets: 0–24 h", "Cards: 1–3 bank days"],
+    userRecommendationsRecommendedNumber: 847,
+    userRecommendationsTotalNumber: 1000,
+  },
+};
+
+const seoData = {
+  title: `${layoutCopy.pageTitle} | PayPal Casino Reviews`,
+  description: layoutCopy.pageDescription,
+  canonical: "/intl-demo/",
+  noIndex: true,
+  openGraph: {
+    title: layoutCopy.pageTitle,
+    description: layoutCopy.pageDescription,
+    type: "website",
+  },
+};
+---
+
+<BaseLayout seo={seoData}>
+  <Header />
+  <main class="pt-12 lg:pt-24 pb-16 px-4 max-w-5xl mx-auto">
+    <header class="mb-12">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">{layoutCopy.pageTitle}</h1>
+      <p class="text-gray-600 max-w-2xl">{layoutCopy.pageDescription}</p>
+    </header>
+
+    <section aria-labelledby="demo-heading" class="space-y-16">
+      <h2 id="demo-heading" class="sr-only">{layoutCopy.sectionHeading}</h2>
+      {
+        LOCALE_IDS.map((localeId) => {
+          const meta = LOCALES[localeId];
+          const pageCopy = INTL_DEMO_PAGE_COPY[localeId];
+          const cardCopy = CASINO_LISTING_CARD_COPY[localeId];
+          return (
+            <div class="space-y-4" lang={meta.htmlLang}>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-900">{meta.label}</h3>
+                <p class="text-sm text-gray-500 mt-1">
+                  <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">{localeId}</code>
+                  {" · "}
+                  {pageCopy.sectionIntro}
+                </p>
+              </div>
+              <CasinoListingCard casino={mockCasino} copy={cardCopy} />
+            </div>
+          );
+        })
+      }
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>

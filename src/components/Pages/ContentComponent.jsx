@@ -50,7 +50,7 @@ function HastStepDescription({ hastChildren }) {
         return (
           <p
             key={i}
-            className="text-center text-sm text-green-900 leading-relaxed dark:text-green-100"
+            className="text-center text-[15px] text-green-900 leading-relaxed dark:text-green-100"
           >
             {kids}
           </p>
@@ -93,7 +93,7 @@ function HastStepDescription({ hastChildren }) {
   };
 
   return (
-    <div className="mt-auto space-y-2">
+    <div className="mt-auto space-y-2 text-center text-[15px] text-green-900 leading-relaxed dark:text-green-100">
       {hastChildren.map((c, i) => renderNode(c, i))}
     </div>
   );
@@ -120,9 +120,11 @@ function hastId(properties) {
   return id;
 }
 
+// Improve: Modern circular step number badge, lines, clear icons, bigger step, hover effect,
+// cleaner card, subtle interactivity, shadow/lift, visually distinct cards.
 const IconSwitch = ({ iconName }) => {
   const iconProps =
-    "w-10 h-10 text-green-800 mt-1 flex-shrink-0 dark:text-green-300";
+    "w-9 h-9 text-green-600 flex-shrink-0 dark:text-green-300";
   const icons = {
     ShieldCheck: <ShieldCheck className={iconProps} />,
     UserPlus: <UserPlus className={iconProps} />,
@@ -133,33 +135,70 @@ const IconSwitch = ({ iconName }) => {
     Trophy: <Trophy className={iconProps} />,
     DollarSign: <DollarSign className={iconProps} />,
   };
-  return icons[iconName] || null;
+  return icons[iconName] || (
+    <span className="inline-block w-9 h-9 bg-gray-200 dark:bg-zinc-800 rounded-full" />
+  );
 };
 
 const HowToComponent = ({ steps }) => {
+  // Restored "Step" label above number, visible step numbers and titles.
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
-      {steps.map((step, index) => (
-        <div
-          key={index}
-          className="flex flex-col p-4 border border-orange-200 bg-gradient-to-bl from-yellow-50 via-white to-green-100 rounded-2xl shadow-md transition-transform hover:scale-105 dark:bg-gradient-to-br dark:from-green-900 dark:via-zinc-800 dark:to-yellow-950 dark:border-orange-700"
-        >
-          <div className="flex flex-col items-center gap-4 mb-3">
-            <span className="font-heading text-sm font-semibold text-orange-800 dark:text-orange-300">
-              Step {index + 1}
-            </span>
-            <IconSwitch iconName={step.icon} />
-            <h3 className="font-heading text-xl font-semibold text-green-800 text-center leading-snug dark:text-green-300">
-              {step.title}
+    <div className="relative w-full my-12">
+      {/* Connecting horizontal line for desktop */}
+      <div className="hidden lg:block absolute top-1/2 left-0 right-0 z-0 pointer-events-none">
+        <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-green-200 via-orange-100 to-yellow-100 dark:from-green-950 dark:via-zinc-900 dark:to-yellow-900 opacity-70 shadow-lg" />
+      </div>
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 z-10 relative">
+        {steps.map((step, index) => (
+          <div
+            key={index}
+            className={cn(
+              "flex flex-col relative items-center text-center px-5 py-7 rounded-2xl bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md shadow-md border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 bg-slate-50",
+              "hover:border-green-500 hover:ring-2 hover:ring-green-300 hover:ring-offset-2 dark:hover:ring-offset-zinc-900"
+            )}
+            style={{
+              zIndex: 1,
+            }}
+          >
+            {/* "Step" word above step number, visible always */}
+            <div className="mb-1 text-sm font-bold text-green-700 tracking-wide uppercase dark:text-green-300">
+              Step
+            </div>
+            {/* Circular step number badge with animated shadow */}
+            <div className="mb-4 relative">
+              <div className={cn(
+                "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500/90 to-yellow-300 font-heading text-xl font-bold text-white shadow-lg ring-4 ring-white dark:ring-zinc-900 transition-transform transform-gpu",
+                "group-hover:scale-105 group-hover:ring-green-700"
+              )}>
+                {index + 1}
+              </div>
+              {/* Draw connecting lines for mobile below badge */}
+              {index !== steps.length - 1 && (
+                <div className="lg:hidden absolute left-1/2 top-full mt-1 w-0.5 h-8 bg-gradient-to-b from-green-300/60 via-gray-200 to-yellow-100 rounded-full -translate-x-1/2" />
+              )}
+            </div>
+            {/* Icon for the step */}
+            <div className="mb-2">
+              <IconSwitch iconName={step.icon} />
+            </div>
+            {/* Step Title */}
+            <h3 className="font-heading text-lg sm:text-xl font-semibold text-green-900 dark:text-green-200 mb-2 leading-tight">
+              {/* If the step title is empty, fallback to 'Step X' */}
+              {step.title?.trim()
+                ? step.title
+                : `Step ${index + 1}`}
             </h3>
+            {/* Description, aligns bottom if space */}
+            <div className="flex-1 flex flex-col w-full">
+              <HastStepDescription
+                hastChildren={
+                  step.descriptionChildren?.length ? step.descriptionChildren : null
+                }
+              />
+            </div>
           </div>
-          <HastStepDescription
-            hastChildren={
-              step.descriptionChildren?.length ? step.descriptionChildren : null
-            }
-          />
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
@@ -348,12 +387,12 @@ export const ContentComponent = ({
   return (
     <div
       className={cn(
-        "flex flex-col gap-0 relative container mx-auto px-6 md:px-0",
+        "flex flex-col gap-0 relative container mx-auto px-6 md:px-0 py-24 w-full max-w-6xl",
         pbClass,
         mtClass,
       )}
     >
-      <div className="h-auto">
+      <div className="h-auto w-full">
         <div className="pt-2 max-w-none">
           <article className="font-sans prose prose-lg sm:prose-xl prose-neutral max-w-none mx-auto bg-transparent px-0 rounded-lg tracking-normal dark:prose-invert prose-pre:bg-[#10194a]/80 prose-headings:!font-heading prose-headings:!font-semibold prose-h2:!font-bold [&_h1]:!font-heading [&_h2]:!font-heading [&_h3]:!font-heading [&_h4]:!font-heading [&_h5]:!font-heading [&_h6]:!font-heading [&_p]:leading-[1.75] [&_li]:leading-[1.65]">
             <ReactMarkdown
@@ -381,6 +420,7 @@ export const ContentComponent = ({
                     );
                   }
                   if (className.includes("how-to")) {
+                    // Defensive: ensure find always works even if children is missing
                     const steps = (node.children || [])
                       .filter(
                         (child) =>
@@ -388,19 +428,19 @@ export const ContentComponent = ({
                           hastClassIncludes(child.properties, "step-item"),
                       )
                       .map((stepNode) => {
-                        const titleNode = stepNode.children.find(
+                        const titleNode = (stepNode.children || []).find(
                           (n) =>
                             n.type === "element" &&
                             n.tagName === "h5" &&
                             hastClassIncludes(n.properties, "step-title"),
                         );
-                        const iconNode = stepNode.children.find(
+                        const iconNode = (stepNode.children || []).find(
                           (n) =>
                             n.type === "element" &&
                             n.tagName === "span" &&
                             hastClassIncludes(n.properties, "icon"),
                         );
-                        const descNode = stepNode.children.find(
+                        const descNode = (stepNode.children || []).find(
                           (n) =>
                             n.type === "element" &&
                             n.tagName === "p" &&
