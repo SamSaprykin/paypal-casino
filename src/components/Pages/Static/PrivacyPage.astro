@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../Layout/Header.astro";
+import Footer from "../../Layout/Footer.astro";
+import {
+  homeHrefForLocale,
+  localizedStaticPageHref,
+  type WebsiteLocaleKey,
+} from "../../../lib/sanity";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../../../lib/schema";
+import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
+import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
+
+interface Props {
+  locale: WebsiteLocaleKey;
+}
+
+const { locale } = Astro.props as Props;
+const id = localeIdForWebsiteLocale(locale);
+const copy = staticSitePagesCopyFor(locale).privacy;
+const htmlLang = LOCALES[id].htmlLang;
+
+const canonical = localizedStaticPageHref(locale, "privacy-policy");
+const homeHref = homeHrefForLocale(locale);
+const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
+
+const seoData = {
+  title: copy.metaTitle,
+  description: copy.metaDescription,
+  canonical,
+  openGraph: {
+    title: copy.ogTitle,
+    description: copy.ogDescription,
+    type: "website",
+  },
+  keywords: copy.keywords,
+};
+
+const pageData = {
+  name: copy.schemaName,
+  title: copy.h1,
+  slug: slugForSchema,
+  description: copy.schemaDescription,
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs(copy.h1, {
+    homeName: copy.breadcrumbHome,
+    homeUrl: homeHref,
+  }),
+);
+---
+
+<BaseLayout seo={seoData} lang={htmlLang}>
+  <Header locale={locale} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <div class="bg-orange-50 h-full flex flex-col justify-center items-center min-h-screen pt-48 pb-12">
+    <div class="content container max-w-5xl px-4">
+      <div class="page-header mb-12">
+        <h1 class="text-5xl font-bold text-center">{copy.h1}</h1>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <p class="mb-6 text-gray-700">{copy.intro}</p>
+        {copy.sections.map((section) => (
+          <>
+            <h3 class="text-2xl font-semibold mb-2">{section.title}</h3>
+            <p class="mb-6 text-gray-700">{section.body}</p>
+          </>
+        ))}
+        <h3 class="text-2xl font-semibold mb-2">{copy.dpoTitle}</h3>
+        <p class="mb-6 text-gray-700">
+          {copy.dpoBodyPrefix}{" "}
+          <a
+            href="mailto:info@ppcasinos.co"
+            class="text-orange-400 hover:text-orange-600"
+          >
+            info@ppcasinos.co
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <Footer locale={locale} />
+</BaseLayout>

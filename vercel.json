@@ -36,15 +36,11 @@
         "statusCode": 301
       },
       {
-        "source": "/goto/spinbetter.php",
-        "destination": "https://redirspinner.com/2v4b?p=%2Fregistration%2F",
-        "statusCode": 301
-      },
-      {
         "source": "/goto/tsars.php",
         "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=tsars",
         "statusCode": 301
       },
+
       {
         "source": "/goto/trickz.php",
         "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=trickz",
@@ -214,6 +210,12 @@
         "source": "/casino-guide/:path((?!.*\\/$).+)",
         "destination": "/casino-guide/:path/",
         "statusCode": 301
-      }
+      },
+
+      {
+        "source": "/goto/spinbetter.php",
+        "destination": "https://redirspinner.com/2Vxd?p=%2Fregistration%2F",
+        "statusCode": 301
+      },
     ]
   }

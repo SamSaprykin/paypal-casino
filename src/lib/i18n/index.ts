@@ -5,6 +5,26 @@ export {
   type LocaleMeta,
 } from "./locales";
 export {
+  WEBSITE_LOCALE_TO_LOCALE_ID,
+  localeIdForWebsiteLocale,
+} from "./websiteLocaleBridge";
+export {
+  FOOTER_COPY,
+  type FooterCopy,
+} from "./copies/footer";
+export {
+  STATIC_SITE_PAGES_COPY,
+  staticSitePagesCopyFor,
+} from "./copies/static-site-pages";
+export type {
+  StaticSitePagesCopy,
+  ContactPageCopy,
+  PrivacyPageCopy,
+  TermsPageCopy,
+  NotFoundCopy,
+  SitemapPageCopy,
+} from "./copies/static-site-types";
+export {
   CASINO_LISTING_CARD_COPY,
   formatRatingOutOfFive,
   getRatingGradationLabel,

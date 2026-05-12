@@ -1,0 +1,23 @@
+---
+import TermsPage from "../../components/Pages/Static/TermsPage.astro";
+import {
+  LOCALIZED_PAGE_LANG_CODES,
+  websiteLocaleFromPageLang,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity";
+
+export function getStaticPaths() {
+  return LOCALIZED_PAGE_LANG_CODES.map((lang) => {
+    const locale = websiteLocaleFromPageLang(lang)!;
+    return { params: { lang }, props: { locale } };
+  });
+}
+
+interface Props {
+  locale: WebsiteLocaleKey;
+}
+
+const { locale } = Astro.props as Props;
+---
+
+<TermsPage locale={locale} />

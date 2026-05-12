@@ -1,0 +1,41 @@
+---
+import CasinoListingCard from "../Cards/CasinoListingCard.astro";
+import { MarkdownSnippet } from "../MarkdownSnippet.jsx";
+import type { CasinoListSection } from "../../../lib/sanity";
+import type { WebsiteLocaleKey } from "../../../lib/sanity";
+
+interface Props {
+  section: CasinoListSection;
+  locale?: WebsiteLocaleKey;
+}
+
+const { section } = Astro.props;
+const { anchorTitle, copyBefore, copyAfter, casinos } = section;
+---
+
+<div class="bg-blue-50/50 py-3 lg:py-3 px-3 sm:px-4">
+  <div class="max-w-6xl mx-auto py-3 lg:py-4">
+    {copyBefore ? (
+      <h2
+        class="text-xl md:text-2xl font-bold pt-4 lg:pt-8 text-center text-gray-800"
+        id={anchorTitle ?? undefined}
+      >
+        {copyBefore}
+      </h2>
+    ) : null}
+
+    {casinos.length > 0 && (
+      <div class="grid flex flex-col gap-6 md:gap-3 container mx-auto mt-12 md:mt-8 mb-3">
+        {casinos.map((casino) => (
+          <CasinoListingCard casino={casino} />
+        ))}
+      </div>
+    )}
+
+    {copyAfter && copyAfter.trim() ? (
+      <div class="max-w-3xl mx-auto mt-8 px-2">
+        <MarkdownSnippet client:only="react" markdown={copyAfter} />
+      </div>
+    ) : null}
+  </div>
+</div>

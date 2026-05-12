@@ -1,0 +1,43 @@
+---
+import SitemapPage from "../../components/Pages/Static/SitemapPage.astro";
+import {
+  getAllBlogPostsSanity,
+  getBlogCategoriesWithCountsSanity,
+  getWebsitePages,
+  LOCALIZED_PAGE_LANG_CODES,
+  websiteLocaleFromPageLang,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity";
+
+export async function getStaticPaths() {
+  const [posts, websitePages, categories] = await Promise.all([
+    getAllBlogPostsSanity(),
+    getWebsitePages(),
+    getBlogCategoriesWithCountsSanity(),
+  ]);
+
+  return LOCALIZED_PAGE_LANG_CODES.map((lang) => {
+    const locale = websiteLocaleFromPageLang(lang)!;
+    return {
+      params: { lang },
+      props: { locale, posts, websitePages, categories },
+    };
+  });
+}
+
+interface Props {
+  locale: WebsiteLocaleKey;
+  posts: Array<{ title: string; slug: string; category?: string | null }>;
+  websitePages: Awaited<ReturnType<typeof getWebsitePages>>;
+  categories: Awaited<ReturnType<typeof getBlogCategoriesWithCountsSanity>>;
+}
+
+const { locale, posts, websitePages, categories } = Astro.props as Props;
+---
+
+<SitemapPage
+  locale={locale}
+  posts={posts}
+  websitePages={websitePages}
+  categories={categories}
+/>

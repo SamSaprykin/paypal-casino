@@ -33,6 +33,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        roboto: ['Roboto', 'Inter', 'system-ui', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },

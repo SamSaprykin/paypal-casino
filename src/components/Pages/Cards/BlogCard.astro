@@ -40,7 +40,9 @@ const { post } = Astro.props;
       {post.cardDescription}
     </p>
     <div class="text-xs text-gray-600 flex justify-between items-center">
-      <span>{format(new Date(post.created), "MMM d, yyyy")}</span>
+      {post.created ? (
+        <span>{format(new Date(post.created), "MMM d, yyyy")}</span>
+      ) : <span></span>}
       <span class="italic text-blue-700">
         {post.author?.fields?.name || "Anonymous"}
       </span>

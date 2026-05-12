@@ -1,0 +1,2842 @@
+schema {
+  query: RootQuery
+}
+
+"""Field references one or more document in another dataset"""
+directive @crossDatasetReference(
+  """Dataset name"""
+  dataset: String!
+  """Strings of the target types names enabled for this reference"""
+  typeNames: [String!]!
+) on FIELD_DEFINITION | OBJECT
+
+"""Field is a "raw" JSON alias for a different field"""
+directive @jsonAlias(
+  """Source field name"""
+  for: String!
+) on FIELD_DEFINITION
+
+"""Field references one or more documents"""
+directive @reference on FIELD_DEFINITION
+
+type Block {
+  _key: String
+  _type: String
+  children: [Span]
+  level: Float
+  listItem: String
+  style: String
+}
+
+union BlockOrFileOrImage = Block | File | Image
+
+type BlogAuthor implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  bio: String
+  expertise: [String]
+  name: String
+}
+
+input BlogAuthorFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  bio: StringFilter
+  name: StringFilter
+}
+
+input BlogAuthorSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  bio: SortOrder
+  name: SortOrder
+}
+
+type BlogPost implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  author: BlogAuthor
+  bodyRaw: JSON
+  cardDescription: String
+  category: String
+  created: DateTime
+  description: String
+  featuredImage: Image
+  highlightsRaw: JSON
+  relatedCasinosList: [Casino]
+  relatedCasinosTitle: String
+  seoComponent: SeoComponent
+  slug: String
+  title: String
+}
+
+input BlogPostFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  author: BlogAuthorFilter
+  cardDescription: StringFilter
+  category: StringFilter
+  created: DatetimeFilter
+  description: StringFilter
+  featuredImage: ImageFilter
+  relatedCasinosTitle: StringFilter
+  seoComponent: SeoComponentFilter
+  slug: StringFilter
+  title: StringFilter
+}
+
+input BlogPostSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  cardDescription: SortOrder
+  category: SortOrder
+  created: SortOrder
+  description: SortOrder
+  featuredImage: ImageSorting
+  relatedCasinosTitle: SortOrder
+  slug: SortOrder
+  title: SortOrder
+}
+
+type Bonus implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  bonusBackgroundColor: String
+  bonusLogo: Image
+  code: String
+  description: String
+  name: String
+  partnersTermsAndConditionalLink: String
+  referralUrl: String
+}
+
+input BonusFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  bonusBackgroundColor: StringFilter
+  bonusLogo: ImageFilter
+  code: StringFilter
+  description: StringFilter
+  name: StringFilter
+  partnersTermsAndConditionalLink: StringFilter
+  referralUrl: StringFilter
+}
+
+input BonusSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  bonusBackgroundColor: SortOrder
+  bonusLogo: ImageSorting
+  code: SortOrder
+  description: SortOrder
+  name: SortOrder
+  partnersTermsAndConditionalLink: SortOrder
+  referralUrl: SortOrder
+}
+
+type BonusesList implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  bonuses: [Bonus]
+  title: String
+}
+
+input BonusesListFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  title: StringFilter
+}
+
+type BonusesListIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  bonuses: [Bonus]
+  title: IntlText
+}
+
+input BonusesListIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  title: IntlTextFilter
+}
+
+union BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl = BonusesListIntl | CasinoListIntl | ContentComponentIntl | FaqComponentIntl | FeaturedArticlesIntl | GameOfTheMonthIntl | HeroDefaultWithCasinoCardsIntl | HeroTextIntl | HowToIntl | SeoComponentIntl
+
+input BonusesListIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  title: IntlTextSorting
+}
+
+input BonusesListSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  title: SortOrder
+}
+
+input BooleanFilter {
+  """Checks if the value is equal to the given input."""
+  eq: Boolean
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value is not equal to the given input."""
+  neq: Boolean
+}
+
+type Casino implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  availableInCountries: CasinoAvailableInCountries
+  backgroundColor: Color
+  bonuses: [Bonus]
+  casinoName: String
+  depositMethods: [String]
+  license: String
+  logo: Image
+  payoutLimits: String
+  payoutTimes: [String]
+  """Overall score from 0 to 5 in steps of 0.1"""
+  rating: Float
+  referralUrl: String
+  shortDescription: String
+  slug: String
+  software: [String]
+  userRecommendationsRecommendedNumber: Float
+  userRecommendationsTotalNumber: Float
+  withdrawalMethod: [String]
+}
+
+type CasinoAvailableInCountries {
+  _key: String
+  _type: String
+  denmark: Boolean
+  finland: Boolean
+  germany: Boolean
+  ireland: Boolean
+  norway: Boolean
+  sweden: Boolean
+}
+
+input CasinoAvailableInCountriesFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: BooleanFilter
+  finland: BooleanFilter
+  germany: BooleanFilter
+  ireland: BooleanFilter
+  norway: BooleanFilter
+  sweden: BooleanFilter
+}
+
+input CasinoAvailableInCountriesSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: SortOrder
+  finland: SortOrder
+  germany: SortOrder
+  ireland: SortOrder
+  norway: SortOrder
+  sweden: SortOrder
+}
+
+input CasinoFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  availableInCountries: CasinoAvailableInCountriesFilter
+  backgroundColor: ColorFilter
+  casinoName: StringFilter
+  license: StringFilter
+  logo: ImageFilter
+  payoutLimits: StringFilter
+  rating: FloatFilter
+  referralUrl: StringFilter
+  shortDescription: StringFilter
+  slug: StringFilter
+  userRecommendationsRecommendedNumber: FloatFilter
+  userRecommendationsTotalNumber: FloatFilter
+}
+
+type CasinoList implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  anchorTitle: String
+  casinoList: [Casino]
+  copyAfterRaw: JSON
+  copyBefore: String
+}
+
+input CasinoListFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  anchorTitle: StringFilter
+  copyBefore: StringFilter
+}
+
+type CasinoListIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  anchorTitle: IntlText
+  casinoList: [Casino]
+  copyAfter: IntlBlockContent
+  copyBefore: IntlText
+}
+
+input CasinoListIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  anchorTitle: IntlTextFilter
+  copyAfter: IntlBlockContentFilter
+  copyBefore: IntlTextFilter
+}
+
+input CasinoListIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  anchorTitle: IntlTextSorting
+  copyAfter: IntlBlockContentSorting
+  copyBefore: IntlTextSorting
+}
+
+input CasinoListSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  anchorTitle: SortOrder
+  copyBefore: SortOrder
+}
+
+type CasinoRating implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  """Document ID"""
+  _id: ID @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  _key: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  """Current document revision"""
+  _rev: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  """Document type"""
+  _type: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  """Date the document was last modified"""
+  _updatedAt: DateTime @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  ratingNumber: Float @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  ratingType: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+}
+
+input CasinoRatingFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  ratingNumber: FloatFilter
+  ratingType: StringFilter
+}
+
+input CasinoRatingSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  ratingNumber: SortOrder
+  ratingType: SortOrder
+}
+
+input CasinoSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  availableInCountries: CasinoAvailableInCountriesSorting
+  backgroundColor: ColorSorting
+  casinoName: SortOrder
+  license: SortOrder
+  logo: ImageSorting
+  payoutLimits: SortOrder
+  rating: SortOrder
+  referralUrl: SortOrder
+  shortDescription: SortOrder
+  slug: SortOrder
+  userRecommendationsRecommendedNumber: SortOrder
+  userRecommendationsTotalNumber: SortOrder
+}
+
+type Color {
+  _key: String
+  _type: String
+  alpha: Float
+  hex: String
+  hsl: HslaColor
+  hsv: HsvaColor
+  rgb: RgbaColor
+}
+
+input ColorFilter {
+  _key: StringFilter
+  _type: StringFilter
+  alpha: FloatFilter
+  hex: StringFilter
+  hsl: HslaColorFilter
+  hsv: HsvaColorFilter
+  rgb: RgbaColorFilter
+}
+
+input ColorSorting {
+  _key: SortOrder
+  _type: SortOrder
+  alpha: SortOrder
+  hex: SortOrder
+  hsl: HslaColorSorting
+  hsv: HsvaColorSorting
+  rgb: RgbaColorSorting
+}
+
+type ContentComponentIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  bodyMarkdown: IntlMarkdown
+  name: String
+}
+
+input ContentComponentIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  bodyMarkdown: IntlMarkdownFilter
+  name: StringFilter
+}
+
+input ContentComponentIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  bodyMarkdown: IntlMarkdownSorting
+  name: SortOrder
+}
+
+type CrossDatasetReference {
+  _dataset: String
+  _key: String
+  _projectId: String
+  _ref: String
+  _type: String
+  _weak: Boolean
+}
+
+input CrossDatasetReferenceFilter {
+  _dataset: StringFilter
+  _key: StringFilter
+  _projectId: StringFilter
+  _ref: StringFilter
+  _type: StringFilter
+  _weak: BooleanFilter
+}
+
+input CrossDatasetReferenceSorting {
+  _dataset: SortOrder
+  _key: SortOrder
+  _projectId: SortOrder
+  _ref: SortOrder
+  _type: SortOrder
+  _weak: SortOrder
+}
+
+type CtaButton implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  buttonType: String
+  copy: String
+  url: String
+}
+
+input CtaButtonFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  buttonType: StringFilter
+  copy: StringFilter
+  url: StringFilter
+}
+
+type CtaButtonIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  buttonType: String
+  copy: IntlText
+  url: String
+}
+
+input CtaButtonIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  buttonType: StringFilter
+  copy: IntlTextFilter
+  url: StringFilter
+}
+
+input CtaButtonIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  buttonType: SortOrder
+  copy: IntlTextSorting
+  url: SortOrder
+}
+
+input CtaButtonSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  buttonType: SortOrder
+  copy: SortOrder
+  url: SortOrder
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+input DateFilter {
+  """Checks if the value is equal to the given input."""
+  eq: Date
+  """Checks if the value is greater than the given input."""
+  gt: Date
+  """Checks if the value is greater than or equal to the given input."""
+  gte: Date
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value is lesser than the given input."""
+  lt: Date
+  """Checks if the value is lesser than or equal to the given input."""
+  lte: Date
+  """Checks if the value is not equal to the given input."""
+  neq: Date
+}
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+input DatetimeFilter {
+  """Checks if the value is equal to the given input."""
+  eq: DateTime
+  """Checks if the value is greater than the given input."""
+  gt: DateTime
+  """Checks if the value is greater than or equal to the given input."""
+  gte: DateTime
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value is lesser than the given input."""
+  lt: DateTime
+  """Checks if the value is lesser than or equal to the given input."""
+  lte: DateTime
+  """Checks if the value is not equal to the given input."""
+  neq: DateTime
+}
+
+"""A Sanity document"""
+interface Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+}
+
+input DocumentFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+}
+
+input DocumentSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+}
+
+type FaqComponent implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  faqItems: [FaqItem]
+  spaceTop: Float
+  title: String
+}
+
+input FaqComponentFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  spaceTop: FloatFilter
+  title: StringFilter
+}
+
+type FaqComponentIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  faqItems: [FaqItemIntl]
+  spaceTop: Float
+  title: IntlText
+}
+
+input FaqComponentIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  spaceTop: FloatFilter
+  title: IntlTextFilter
+}
+
+input FaqComponentIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  spaceTop: SortOrder
+  title: IntlTextSorting
+}
+
+input FaqComponentSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  spaceTop: SortOrder
+  title: SortOrder
+}
+
+type FaqItem implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  """Markdown-supported answer content."""
+  faqAnswer: String
+  faqQuestion: String
+}
+
+input FaqItemFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  faqAnswer: StringFilter
+  faqQuestion: StringFilter
+}
+
+type FaqItemIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  faqAnswer: IntlMarkdown
+  faqQuestion: IntlText
+}
+
+input FaqItemIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  faqAnswer: IntlMarkdownFilter
+  faqQuestion: IntlTextFilter
+}
+
+input FaqItemIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  faqAnswer: IntlMarkdownSorting
+  faqQuestion: IntlTextSorting
+}
+
+input FaqItemSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  faqAnswer: SortOrder
+  faqQuestion: SortOrder
+}
+
+type FeaturedArticles implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  descriptionRaw: JSON
+  relatedArticles: [BlogPost]
+  title: String
+}
+
+input FeaturedArticlesFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  title: StringFilter
+}
+
+type FeaturedArticlesIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  description: IntlMarkdown
+  relatedArticles: [BlogPost]
+  title: IntlText
+}
+
+input FeaturedArticlesIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  description: IntlMarkdownFilter
+  title: IntlTextFilter
+}
+
+input FeaturedArticlesIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  description: IntlMarkdownSorting
+  title: IntlTextSorting
+}
+
+input FeaturedArticlesSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  title: SortOrder
+}
+
+type File {
+  _key: String
+  _type: String
+  asset: SanityFileAsset
+  media: GlobalDocumentReference
+}
+
+input FileFilter {
+  _key: StringFilter
+  _type: StringFilter
+  asset: SanityFileAssetFilter
+  media: GlobalDocumentReferenceFilter
+}
+
+input FileSorting {
+  _key: SortOrder
+  _type: SortOrder
+  media: GlobalDocumentReferenceSorting
+}
+
+input FloatFilter {
+  """Checks if the value is equal to the given input."""
+  eq: Float
+  """Checks if the value is greater than the given input."""
+  gt: Float
+  """Checks if the value is greater than or equal to the given input."""
+  gte: Float
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value is lesser than the given input."""
+  lt: Float
+  """Checks if the value is lesser than or equal to the given input."""
+  lte: Float
+  """Checks if the value is not equal to the given input."""
+  neq: Float
+}
+
+type GameOfTheMonth implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  casinoLinks: [CtaButton]
+  gameDescriptionRaw: JSON
+  gameName: String
+  image: Image
+  link: String
+  subtitle: String
+  title: String
+}
+
+input GameOfTheMonthFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  gameName: StringFilter
+  image: ImageFilter
+  link: StringFilter
+  subtitle: StringFilter
+  title: StringFilter
+}
+
+type GameOfTheMonthIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  casinoLinks: [CtaButtonIntl]
+  gameDescription: IntlMarkdown
+  gameName: IntlText
+  image: Image
+  link: String
+  subtitle: IntlText
+  title: IntlText
+}
+
+input GameOfTheMonthIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  gameDescription: IntlMarkdownFilter
+  gameName: IntlTextFilter
+  image: ImageFilter
+  link: StringFilter
+  subtitle: IntlTextFilter
+  title: IntlTextFilter
+}
+
+input GameOfTheMonthIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  gameDescription: IntlMarkdownSorting
+  gameName: IntlTextSorting
+  image: ImageSorting
+  link: SortOrder
+  subtitle: IntlTextSorting
+  title: IntlTextSorting
+}
+
+input GameOfTheMonthSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  gameName: SortOrder
+  image: ImageSorting
+  link: SortOrder
+  subtitle: SortOrder
+  title: SortOrder
+}
+
+type Geopoint {
+  _key: String
+  _type: String
+  alt: Float
+  lat: Float
+  lng: Float
+}
+
+input GeopointFilter {
+  _key: StringFilter
+  _type: StringFilter
+  alt: FloatFilter
+  lat: FloatFilter
+  lng: FloatFilter
+}
+
+input GeopointSorting {
+  _key: SortOrder
+  _type: SortOrder
+  alt: SortOrder
+  lat: SortOrder
+  lng: SortOrder
+}
+
+type GlobalDocumentReference {
+  _key: String
+  _ref: String
+  _type: String
+  _weak: Boolean
+}
+
+input GlobalDocumentReferenceFilter {
+  _key: StringFilter
+  _ref: StringFilter
+  _type: StringFilter
+  _weak: BooleanFilter
+}
+
+input GlobalDocumentReferenceSorting {
+  _key: SortOrder
+  _ref: SortOrder
+  _type: SortOrder
+  _weak: SortOrder
+}
+
+type HeroDefaultWithCasinoCards implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  callToAction: CtaButton
+  casinos: [Casino]
+  ctaTitle: String
+  description: String
+  title: String
+}
+
+input HeroDefaultWithCasinoCardsFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  callToAction: CtaButtonFilter
+  ctaTitle: StringFilter
+  description: StringFilter
+  title: StringFilter
+}
+
+type HeroDefaultWithCasinoCardsIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  callToAction: CtaButtonIntl
+  casinos: [Casino]
+  ctaTitle: IntlText
+  description: IntlText
+  title: IntlText
+}
+
+input HeroDefaultWithCasinoCardsIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  callToAction: CtaButtonIntlFilter
+  ctaTitle: IntlTextFilter
+  description: IntlTextFilter
+  title: IntlTextFilter
+}
+
+input HeroDefaultWithCasinoCardsIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  ctaTitle: IntlTextSorting
+  description: IntlTextSorting
+  title: IntlTextSorting
+}
+
+input HeroDefaultWithCasinoCardsSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  ctaTitle: SortOrder
+  description: SortOrder
+  title: SortOrder
+}
+
+type HeroText implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  copyRaw: JSON
+}
+
+input HeroTextFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+}
+
+type HeroTextIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  copy: IntlMarkdown
+}
+
+input HeroTextIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  copy: IntlMarkdownFilter
+}
+
+input HeroTextIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  copy: IntlMarkdownSorting
+}
+
+input HeroTextSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+}
+
+type HowTo implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  howToItems: [HowToItem]
+  title: String
+}
+
+input HowToFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  title: StringFilter
+}
+
+type HowToIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  howToItems: [HowToItemIntl]
+  title: IntlText
+}
+
+input HowToIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  title: IntlTextFilter
+}
+
+input HowToIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  title: IntlTextSorting
+}
+
+type HowToItem implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  iconName: String
+  steps: [String]
+  title: String
+}
+
+input HowToItemFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  iconName: StringFilter
+  title: StringFilter
+}
+
+type HowToItemIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  iconName: String
+  steps: IntlStringArray
+  title: IntlText
+}
+
+input HowToItemIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  iconName: StringFilter
+  steps: IntlStringArrayFilter
+  title: IntlTextFilter
+}
+
+input HowToItemIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  iconName: SortOrder
+  steps: IntlStringArraySorting
+  title: IntlTextSorting
+}
+
+input HowToItemSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  iconName: SortOrder
+  title: SortOrder
+}
+
+input HowToSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  title: SortOrder
+}
+
+type HslaColor {
+  _key: String
+  _type: String
+  a: Float
+  h: Float
+  l: Float
+  s: Float
+}
+
+input HslaColorFilter {
+  _key: StringFilter
+  _type: StringFilter
+  a: FloatFilter
+  h: FloatFilter
+  l: FloatFilter
+  s: FloatFilter
+}
+
+input HslaColorSorting {
+  _key: SortOrder
+  _type: SortOrder
+  a: SortOrder
+  h: SortOrder
+  l: SortOrder
+  s: SortOrder
+}
+
+type HsvaColor {
+  _key: String
+  _type: String
+  a: Float
+  h: Float
+  s: Float
+  v: Float
+}
+
+input HsvaColorFilter {
+  _key: StringFilter
+  _type: StringFilter
+  a: FloatFilter
+  h: FloatFilter
+  s: FloatFilter
+  v: FloatFilter
+}
+
+input HsvaColorSorting {
+  _key: SortOrder
+  _type: SortOrder
+  a: SortOrder
+  h: SortOrder
+  s: SortOrder
+  v: SortOrder
+}
+
+input IDFilter {
+  """Checks if the value is equal to the given input."""
+  eq: ID
+  in: [ID!]
+  """Checks if the value matches the given word/words."""
+  matches: ID
+  """Checks if the value is not equal to the given input."""
+  neq: ID
+  nin: [ID!]
+}
+
+type Image {
+  _key: String
+  _type: String
+  asset: SanityImageAsset
+  crop: SanityImageCrop
+  hotspot: SanityImageHotspot
+  media: GlobalDocumentReference
+}
+
+input ImageFilter {
+  _key: StringFilter
+  _type: StringFilter
+  asset: SanityImageAssetFilter
+  crop: SanityImageCropFilter
+  hotspot: SanityImageHotspotFilter
+  media: GlobalDocumentReferenceFilter
+}
+
+input ImageSorting {
+  _key: SortOrder
+  _type: SortOrder
+  crop: SanityImageCropSorting
+  hotspot: SanityImageHotspotSorting
+  media: GlobalDocumentReferenceSorting
+}
+
+input IntFilter {
+  """Checks if the value is equal to the given input."""
+  eq: Int
+  """Checks if the value is greater than the given input."""
+  gt: Int
+  """Checks if the value is greater than or equal to the given input."""
+  gte: Int
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value is lesser than the given input."""
+  lt: Int
+  """Checks if the value is lesser than or equal to the given input."""
+  lte: Int
+  """Checks if the value is not equal to the given input."""
+  neq: Int
+}
+
+type IntlBlockContent {
+  _key: String
+  _type: String
+  """Markdown with preview and image upload."""
+  denmark: String
+  """Markdown with preview and image upload."""
+  finland: String
+  """Markdown with preview and image upload."""
+  germany: String
+  """Markdown with preview and image upload."""
+  ireland: String
+  """Markdown with preview and image upload."""
+  norway: String
+  """Markdown with preview and image upload."""
+  sweden: String
+}
+
+input IntlBlockContentFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: StringFilter
+  finland: StringFilter
+  germany: StringFilter
+  ireland: StringFilter
+  norway: StringFilter
+  sweden: StringFilter
+}
+
+input IntlBlockContentSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: SortOrder
+  finland: SortOrder
+  germany: SortOrder
+  ireland: SortOrder
+  norway: SortOrder
+  sweden: SortOrder
+}
+
+type IntlDescription {
+  _key: String
+  _type: String
+  denmark: String
+  finland: String
+  germany: String
+  ireland: String
+  norway: String
+  sweden: String
+}
+
+input IntlDescriptionFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: StringFilter
+  finland: StringFilter
+  germany: StringFilter
+  ireland: StringFilter
+  norway: StringFilter
+  sweden: StringFilter
+}
+
+input IntlDescriptionSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: SortOrder
+  finland: SortOrder
+  germany: SortOrder
+  ireland: SortOrder
+  norway: SortOrder
+  sweden: SortOrder
+}
+
+type IntlMarkdown {
+  _key: String
+  _type: String
+  """Markdown with preview and image upload."""
+  denmark: String
+  """Markdown with preview and image upload."""
+  finland: String
+  """Markdown with preview and image upload."""
+  germany: String
+  """Markdown with preview and image upload."""
+  ireland: String
+  """Markdown with preview and image upload."""
+  norway: String
+  """Markdown with preview and image upload."""
+  sweden: String
+}
+
+input IntlMarkdownFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: StringFilter
+  finland: StringFilter
+  germany: StringFilter
+  ireland: StringFilter
+  norway: StringFilter
+  sweden: StringFilter
+}
+
+input IntlMarkdownSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: SortOrder
+  finland: SortOrder
+  germany: SortOrder
+  ireland: SortOrder
+  norway: SortOrder
+  sweden: SortOrder
+}
+
+type IntlStringArray {
+  _key: String
+  _type: String
+  denmark: [String]
+  finland: [String]
+  germany: [String]
+  ireland: [String]
+  norway: [String]
+  sweden: [String]
+}
+
+input IntlStringArrayFilter {
+  _key: StringFilter
+  _type: StringFilter
+}
+
+input IntlStringArraySorting {
+  _key: SortOrder
+  _type: SortOrder
+}
+
+type IntlText {
+  _key: String
+  _type: String
+  denmark: String
+  finland: String
+  germany: String
+  ireland: String
+  norway: String
+  sweden: String
+}
+
+input IntlTextFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: StringFilter
+  finland: StringFilter
+  germany: StringFilter
+  ireland: StringFilter
+  norway: StringFilter
+  sweden: StringFilter
+}
+
+input IntlTextSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: SortOrder
+  finland: SortOrder
+  germany: SortOrder
+  ireland: SortOrder
+  norway: SortOrder
+  sweden: SortOrder
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+type MediaTag implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  name: Slug
+}
+
+input MediaTagFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  name: SlugFilter
+}
+
+input MediaTagSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  name: SlugSorting
+}
+
+type RgbaColor {
+  _key: String
+  _type: String
+  a: Float
+  b: Float
+  g: Float
+  r: Float
+}
+
+input RgbaColorFilter {
+  _key: StringFilter
+  _type: StringFilter
+  a: FloatFilter
+  b: FloatFilter
+  g: FloatFilter
+  r: FloatFilter
+}
+
+input RgbaColorSorting {
+  _key: SortOrder
+  _type: SortOrder
+  a: SortOrder
+  b: SortOrder
+  g: SortOrder
+  r: SortOrder
+}
+
+type RootQuery {
+  BlogAuthor(
+    """BlogAuthor document ID"""
+    id: ID!
+  ): BlogAuthor
+  BlogPost(
+    """BlogPost document ID"""
+    id: ID!
+  ): BlogPost
+  Bonus(
+    """Bonus document ID"""
+    id: ID!
+  ): Bonus
+  BonusesList(
+    """BonusesList document ID"""
+    id: ID!
+  ): BonusesList
+  BonusesListIntl(
+    """BonusesListIntl document ID"""
+    id: ID!
+  ): BonusesListIntl
+  Casino(
+    """Casino document ID"""
+    id: ID!
+  ): Casino
+  CasinoList(
+    """CasinoList document ID"""
+    id: ID!
+  ): CasinoList
+  CasinoListIntl(
+    """CasinoListIntl document ID"""
+    id: ID!
+  ): CasinoListIntl
+  CasinoRating(
+    """CasinoRating document ID"""
+    id: ID!
+  ): CasinoRating @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  ContentComponentIntl(
+    """ContentComponentIntl document ID"""
+    id: ID!
+  ): ContentComponentIntl
+  CtaButton(
+    """CtaButton document ID"""
+    id: ID!
+  ): CtaButton
+  CtaButtonIntl(
+    """CtaButtonIntl document ID"""
+    id: ID!
+  ): CtaButtonIntl
+  Document(
+    """Document document ID"""
+    id: ID!
+  ): Document
+  FaqComponent(
+    """FaqComponent document ID"""
+    id: ID!
+  ): FaqComponent
+  FaqComponentIntl(
+    """FaqComponentIntl document ID"""
+    id: ID!
+  ): FaqComponentIntl
+  FaqItem(
+    """FaqItem document ID"""
+    id: ID!
+  ): FaqItem
+  FaqItemIntl(
+    """FaqItemIntl document ID"""
+    id: ID!
+  ): FaqItemIntl
+  FeaturedArticles(
+    """FeaturedArticles document ID"""
+    id: ID!
+  ): FeaturedArticles
+  FeaturedArticlesIntl(
+    """FeaturedArticlesIntl document ID"""
+    id: ID!
+  ): FeaturedArticlesIntl
+  GameOfTheMonth(
+    """GameOfTheMonth document ID"""
+    id: ID!
+  ): GameOfTheMonth
+  GameOfTheMonthIntl(
+    """GameOfTheMonthIntl document ID"""
+    id: ID!
+  ): GameOfTheMonthIntl
+  HeroDefaultWithCasinoCards(
+    """HeroDefaultWithCasinoCards document ID"""
+    id: ID!
+  ): HeroDefaultWithCasinoCards
+  HeroDefaultWithCasinoCardsIntl(
+    """HeroDefaultWithCasinoCardsIntl document ID"""
+    id: ID!
+  ): HeroDefaultWithCasinoCardsIntl
+  HeroText(
+    """HeroText document ID"""
+    id: ID!
+  ): HeroText
+  HeroTextIntl(
+    """HeroTextIntl document ID"""
+    id: ID!
+  ): HeroTextIntl
+  HowTo(
+    """HowTo document ID"""
+    id: ID!
+  ): HowTo
+  HowToIntl(
+    """HowToIntl document ID"""
+    id: ID!
+  ): HowToIntl
+  HowToItem(
+    """HowToItem document ID"""
+    id: ID!
+  ): HowToItem
+  HowToItemIntl(
+    """HowToItemIntl document ID"""
+    id: ID!
+  ): HowToItemIntl
+  MediaTag(
+    """MediaTag document ID"""
+    id: ID!
+  ): MediaTag
+  SanityFileAsset(
+    """SanityFileAsset document ID"""
+    id: ID!
+  ): SanityFileAsset
+  SanityImageAsset(
+    """SanityImageAsset document ID"""
+    id: ID!
+  ): SanityImageAsset
+  SeoComponent(
+    """SeoComponent document ID"""
+    id: ID!
+  ): SeoComponent
+  SeoComponentIntl(
+    """SeoComponentIntl document ID"""
+    id: ID!
+  ): SeoComponentIntl
+  WebsitePageIntl(
+    """WebsitePageIntl document ID"""
+    id: ID!
+  ): WebsitePageIntl
+  allBlogAuthor(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [BlogAuthorSorting!]
+    where: BlogAuthorFilter
+  ): [BlogAuthor!]!
+  allBlogPost(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [BlogPostSorting!]
+    where: BlogPostFilter
+  ): [BlogPost!]!
+  allBonus(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [BonusSorting!]
+    where: BonusFilter
+  ): [Bonus!]!
+  allBonusesList(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [BonusesListSorting!]
+    where: BonusesListFilter
+  ): [BonusesList!]!
+  allBonusesListIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [BonusesListIntlSorting!]
+    where: BonusesListIntlFilter
+  ): [BonusesListIntl!]!
+  allCasino(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CasinoSorting!]
+    where: CasinoFilter
+  ): [Casino!]!
+  allCasinoList(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CasinoListSorting!]
+    where: CasinoListFilter
+  ): [CasinoList!]!
+  allCasinoListIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CasinoListIntlSorting!]
+    where: CasinoListIntlFilter
+  ): [CasinoListIntl!]!
+  allCasinoRating(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CasinoRatingSorting!]
+    where: CasinoRatingFilter
+  ): [CasinoRating!]! @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
+  allContentComponentIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [ContentComponentIntlSorting!]
+    where: ContentComponentIntlFilter
+  ): [ContentComponentIntl!]!
+  allCtaButton(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CtaButtonSorting!]
+    where: CtaButtonFilter
+  ): [CtaButton!]!
+  allCtaButtonIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [CtaButtonIntlSorting!]
+    where: CtaButtonIntlFilter
+  ): [CtaButtonIntl!]!
+  allDocument(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [DocumentSorting!]
+    where: DocumentFilter
+  ): [Document!]!
+  allFaqComponent(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FaqComponentSorting!]
+    where: FaqComponentFilter
+  ): [FaqComponent!]!
+  allFaqComponentIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FaqComponentIntlSorting!]
+    where: FaqComponentIntlFilter
+  ): [FaqComponentIntl!]!
+  allFaqItem(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FaqItemSorting!]
+    where: FaqItemFilter
+  ): [FaqItem!]!
+  allFaqItemIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FaqItemIntlSorting!]
+    where: FaqItemIntlFilter
+  ): [FaqItemIntl!]!
+  allFeaturedArticles(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FeaturedArticlesSorting!]
+    where: FeaturedArticlesFilter
+  ): [FeaturedArticles!]!
+  allFeaturedArticlesIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [FeaturedArticlesIntlSorting!]
+    where: FeaturedArticlesIntlFilter
+  ): [FeaturedArticlesIntl!]!
+  allGameOfTheMonth(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [GameOfTheMonthSorting!]
+    where: GameOfTheMonthFilter
+  ): [GameOfTheMonth!]!
+  allGameOfTheMonthIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [GameOfTheMonthIntlSorting!]
+    where: GameOfTheMonthIntlFilter
+  ): [GameOfTheMonthIntl!]!
+  allHeroDefaultWithCasinoCards(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HeroDefaultWithCasinoCardsSorting!]
+    where: HeroDefaultWithCasinoCardsFilter
+  ): [HeroDefaultWithCasinoCards!]!
+  allHeroDefaultWithCasinoCardsIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HeroDefaultWithCasinoCardsIntlSorting!]
+    where: HeroDefaultWithCasinoCardsIntlFilter
+  ): [HeroDefaultWithCasinoCardsIntl!]!
+  allHeroText(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HeroTextSorting!]
+    where: HeroTextFilter
+  ): [HeroText!]!
+  allHeroTextIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HeroTextIntlSorting!]
+    where: HeroTextIntlFilter
+  ): [HeroTextIntl!]!
+  allHowTo(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HowToSorting!]
+    where: HowToFilter
+  ): [HowTo!]!
+  allHowToIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HowToIntlSorting!]
+    where: HowToIntlFilter
+  ): [HowToIntl!]!
+  allHowToItem(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HowToItemSorting!]
+    where: HowToItemFilter
+  ): [HowToItem!]!
+  allHowToItemIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [HowToItemIntlSorting!]
+    where: HowToItemIntlFilter
+  ): [HowToItemIntl!]!
+  allMediaTag(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [MediaTagSorting!]
+    where: MediaTagFilter
+  ): [MediaTag!]!
+  allSanityFileAsset(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [SanityFileAssetSorting!]
+    where: SanityFileAssetFilter
+  ): [SanityFileAsset!]!
+  allSanityImageAsset(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [SanityImageAssetSorting!]
+    where: SanityImageAssetFilter
+  ): [SanityImageAsset!]!
+  allSeoComponent(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [SeoComponentSorting!]
+    where: SeoComponentFilter
+  ): [SeoComponent!]!
+  allSeoComponentIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [SeoComponentIntlSorting!]
+    where: SeoComponentIntlFilter
+  ): [SeoComponentIntl!]!
+  allWebsitePageIntl(
+    """Max documents to return"""
+    limit: Int
+    """Offset at which to start returning documents from"""
+    offset: Int
+    sort: [WebsitePageIntlSorting!]
+    where: WebsitePageIntlFilter
+  ): [WebsitePageIntl!]!
+}
+
+type SanityAssetSourceData {
+  _key: String
+  _type: String
+  """
+  The unique ID for the asset within the originating source so you can programatically find back to it
+  """
+  id: String
+  """A canonical name for the source this asset is originating from"""
+  name: String
+  """
+  A URL to find more information about this asset in the originating source
+  """
+  url: String
+}
+
+input SanityAssetSourceDataFilter {
+  _key: StringFilter
+  _type: StringFilter
+  id: StringFilter
+  name: StringFilter
+  url: StringFilter
+}
+
+input SanityAssetSourceDataSorting {
+  _key: SortOrder
+  _type: SortOrder
+  id: SortOrder
+  name: SortOrder
+  url: SortOrder
+}
+
+type SanityFileAsset implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  altText: String
+  assetId: String
+  description: String
+  extension: String
+  label: String
+  mimeType: String
+  originalFilename: String
+  path: String
+  sha1hash: String
+  size: Float
+  source: SanityAssetSourceData
+  title: String
+  uploadId: String
+  url: String
+}
+
+input SanityFileAssetFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  altText: StringFilter
+  assetId: StringFilter
+  description: StringFilter
+  extension: StringFilter
+  label: StringFilter
+  mimeType: StringFilter
+  originalFilename: StringFilter
+  path: StringFilter
+  sha1hash: StringFilter
+  size: FloatFilter
+  source: SanityAssetSourceDataFilter
+  title: StringFilter
+  uploadId: StringFilter
+  url: StringFilter
+}
+
+input SanityFileAssetSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  altText: SortOrder
+  assetId: SortOrder
+  description: SortOrder
+  extension: SortOrder
+  label: SortOrder
+  mimeType: SortOrder
+  originalFilename: SortOrder
+  path: SortOrder
+  sha1hash: SortOrder
+  size: SortOrder
+  source: SanityAssetSourceDataSorting
+  title: SortOrder
+  uploadId: SortOrder
+  url: SortOrder
+}
+
+type SanityImageAsset implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  altText: String
+  assetId: String
+  description: String
+  extension: String
+  label: String
+  metadata: SanityImageMetadata
+  mimeType: String
+  originalFilename: String
+  path: String
+  sha1hash: String
+  size: Float
+  source: SanityAssetSourceData
+  title: String
+  uploadId: String
+  url: String
+}
+
+input SanityImageAssetFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  altText: StringFilter
+  assetId: StringFilter
+  description: StringFilter
+  extension: StringFilter
+  label: StringFilter
+  metadata: SanityImageMetadataFilter
+  mimeType: StringFilter
+  originalFilename: StringFilter
+  path: StringFilter
+  sha1hash: StringFilter
+  size: FloatFilter
+  source: SanityAssetSourceDataFilter
+  title: StringFilter
+  uploadId: StringFilter
+  url: StringFilter
+}
+
+input SanityImageAssetSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  altText: SortOrder
+  assetId: SortOrder
+  description: SortOrder
+  extension: SortOrder
+  label: SortOrder
+  metadata: SanityImageMetadataSorting
+  mimeType: SortOrder
+  originalFilename: SortOrder
+  path: SortOrder
+  sha1hash: SortOrder
+  size: SortOrder
+  source: SanityAssetSourceDataSorting
+  title: SortOrder
+  uploadId: SortOrder
+  url: SortOrder
+}
+
+type SanityImageCrop {
+  _key: String
+  _type: String
+  bottom: Float
+  left: Float
+  right: Float
+  top: Float
+}
+
+input SanityImageCropFilter {
+  _key: StringFilter
+  _type: StringFilter
+  bottom: FloatFilter
+  left: FloatFilter
+  right: FloatFilter
+  top: FloatFilter
+}
+
+input SanityImageCropSorting {
+  _key: SortOrder
+  _type: SortOrder
+  bottom: SortOrder
+  left: SortOrder
+  right: SortOrder
+  top: SortOrder
+}
+
+type SanityImageDimensions {
+  _key: String
+  _type: String
+  aspectRatio: Float
+  height: Float
+  width: Float
+}
+
+input SanityImageDimensionsFilter {
+  _key: StringFilter
+  _type: StringFilter
+  aspectRatio: FloatFilter
+  height: FloatFilter
+  width: FloatFilter
+}
+
+input SanityImageDimensionsSorting {
+  _key: SortOrder
+  _type: SortOrder
+  aspectRatio: SortOrder
+  height: SortOrder
+  width: SortOrder
+}
+
+type SanityImageHotspot {
+  _key: String
+  _type: String
+  height: Float
+  width: Float
+  x: Float
+  y: Float
+}
+
+input SanityImageHotspotFilter {
+  _key: StringFilter
+  _type: StringFilter
+  height: FloatFilter
+  width: FloatFilter
+  x: FloatFilter
+  y: FloatFilter
+}
+
+input SanityImageHotspotSorting {
+  _key: SortOrder
+  _type: SortOrder
+  height: SortOrder
+  width: SortOrder
+  x: SortOrder
+  y: SortOrder
+}
+
+type SanityImageMetadata {
+  _key: String
+  _type: String
+  blurHash: String
+  dimensions: SanityImageDimensions
+  hasAlpha: Boolean
+  isOpaque: Boolean
+  location: Geopoint
+  lqip: String
+  palette: SanityImagePalette
+  thumbHash: String
+}
+
+input SanityImageMetadataFilter {
+  _key: StringFilter
+  _type: StringFilter
+  blurHash: StringFilter
+  dimensions: SanityImageDimensionsFilter
+  hasAlpha: BooleanFilter
+  isOpaque: BooleanFilter
+  location: GeopointFilter
+  lqip: StringFilter
+  palette: SanityImagePaletteFilter
+  thumbHash: StringFilter
+}
+
+input SanityImageMetadataSorting {
+  _key: SortOrder
+  _type: SortOrder
+  blurHash: SortOrder
+  dimensions: SanityImageDimensionsSorting
+  hasAlpha: SortOrder
+  isOpaque: SortOrder
+  location: GeopointSorting
+  lqip: SortOrder
+  palette: SanityImagePaletteSorting
+  thumbHash: SortOrder
+}
+
+type SanityImagePalette {
+  _key: String
+  _type: String
+  darkMuted: SanityImagePaletteSwatch
+  darkVibrant: SanityImagePaletteSwatch
+  dominant: SanityImagePaletteSwatch
+  lightMuted: SanityImagePaletteSwatch
+  lightVibrant: SanityImagePaletteSwatch
+  muted: SanityImagePaletteSwatch
+  vibrant: SanityImagePaletteSwatch
+}
+
+input SanityImagePaletteFilter {
+  _key: StringFilter
+  _type: StringFilter
+  darkMuted: SanityImagePaletteSwatchFilter
+  darkVibrant: SanityImagePaletteSwatchFilter
+  dominant: SanityImagePaletteSwatchFilter
+  lightMuted: SanityImagePaletteSwatchFilter
+  lightVibrant: SanityImagePaletteSwatchFilter
+  muted: SanityImagePaletteSwatchFilter
+  vibrant: SanityImagePaletteSwatchFilter
+}
+
+input SanityImagePaletteSorting {
+  _key: SortOrder
+  _type: SortOrder
+  darkMuted: SanityImagePaletteSwatchSorting
+  darkVibrant: SanityImagePaletteSwatchSorting
+  dominant: SanityImagePaletteSwatchSorting
+  lightMuted: SanityImagePaletteSwatchSorting
+  lightVibrant: SanityImagePaletteSwatchSorting
+  muted: SanityImagePaletteSwatchSorting
+  vibrant: SanityImagePaletteSwatchSorting
+}
+
+type SanityImagePaletteSwatch {
+  _key: String
+  _type: String
+  background: String
+  foreground: String
+  population: Float
+  title: String
+}
+
+input SanityImagePaletteSwatchFilter {
+  _key: StringFilter
+  _type: StringFilter
+  background: StringFilter
+  foreground: StringFilter
+  population: FloatFilter
+  title: StringFilter
+}
+
+input SanityImagePaletteSwatchSorting {
+  _key: SortOrder
+  _type: SortOrder
+  background: SortOrder
+  foreground: SortOrder
+  population: SortOrder
+  title: SortOrder
+}
+
+input Sanity_DocumentFilter {
+  """All documents that are drafts."""
+  is_draft: Boolean
+  """All documents referencing the given document ID."""
+  references: ID
+}
+
+type SeoComponent implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  seoDescription: String
+  seoSlug: String
+  seoTitle: String
+}
+
+input SeoComponentFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  seoDescription: StringFilter
+  seoSlug: StringFilter
+  seoTitle: StringFilter
+}
+
+type SeoComponentIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  seoDescription: IntlDescription
+  seoSlug: IntlText
+  seoTitle: IntlText
+}
+
+input SeoComponentIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  seoDescription: IntlDescriptionFilter
+  seoSlug: IntlTextFilter
+  seoTitle: IntlTextFilter
+}
+
+input SeoComponentIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  seoDescription: IntlDescriptionSorting
+  seoSlug: IntlTextSorting
+  seoTitle: IntlTextSorting
+}
+
+input SeoComponentSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  seoDescription: SortOrder
+  seoSlug: SortOrder
+  seoTitle: SortOrder
+}
+
+type Slug {
+  _key: String
+  _type: String
+  current: String
+  source: String
+}
+
+input SlugFilter {
+  _key: StringFilter
+  _type: StringFilter
+  current: StringFilter
+  source: StringFilter
+}
+
+input SlugSorting {
+  _key: SortOrder
+  _type: SortOrder
+  current: SortOrder
+  source: SortOrder
+}
+
+enum SortOrder {
+  """Sorts on the value in ascending order."""
+  ASC
+  """Sorts on the value in descending order."""
+  DESC
+}
+
+type Span {
+  _key: String
+  _type: String
+  marks: [String]
+  text: String
+}
+
+input StringFilter {
+  """Checks if the value is equal to the given input."""
+  eq: String
+  in: [String!]
+  """Checks if the value is defined."""
+  is_defined: Boolean
+  """Checks if the value matches the given word/words."""
+  matches: String
+  """Checks if the value is not equal to the given input."""
+  neq: String
+  nin: [String!]
+}
+
+type WebsitePageIntl implements Document {
+  """Date the document was created"""
+  _createdAt: DateTime
+  """Document ID"""
+  _id: ID
+  _key: String
+  """Current document revision"""
+  _rev: String
+  """Document type"""
+  _type: String
+  """Date the document was last modified"""
+  _updatedAt: DateTime
+  components: [BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl]
+  """Internal label for editors (not shown on the site)."""
+  name: String
+  seoComponent: SeoComponentIntl
+  slug: IntlText
+}
+
+input WebsitePageIntlFilter {
+  """Apply filters on document level"""
+  _: Sanity_DocumentFilter
+  _createdAt: DatetimeFilter
+  _id: IDFilter
+  _key: StringFilter
+  _rev: StringFilter
+  _type: StringFilter
+  _updatedAt: DatetimeFilter
+  name: StringFilter
+  seoComponent: SeoComponentIntlFilter
+  slug: IntlTextFilter
+}
+
+input WebsitePageIntlSorting {
+  _createdAt: SortOrder
+  _id: SortOrder
+  _key: SortOrder
+  _rev: SortOrder
+  _type: SortOrder
+  _updatedAt: SortOrder
+  name: SortOrder
+  slug: IntlTextSorting
+}

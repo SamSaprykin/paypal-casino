@@ -1,3 +1,5 @@
+import { portableTextToPlainText } from "../sanity/portableTextPlain.ts";
+
 // Schema type constants and validation helpers
 export const SCHEMA_TYPES = {
   ORGANIZATION: "Organization",
@@ -46,12 +48,45 @@ export function ensureAbsoluteUrl(url, baseUrl = "https://ppcasinos.co") {
   return `${baseUrl}/${url}`;
 }
 
+/**
+ * FAQ/SEO fields from CMS may be strings, Portable Text arrays, or intl remnants
+ * like `{ norway: "..." }` after GraphQL — normalize before string ops.
+ */
+function coerceSchemaText(text) {
+  if (text == null || text === "") return null;
+  if (typeof text === "string") {
+    const t = text.trim();
+    return t === "" ? null : t;
+  }
+  if (Array.isArray(text)) {
+    const p = portableTextToPlainText(text);
+    return p && p.trim() !== "" ? p : null;
+  }
+  if (typeof text === "object") {
+    for (const v of Object.values(text)) {
+      if (typeof v === "string" && v.trim()) return v;
+      if (Array.isArray(v)) {
+        const p = portableTextToPlainText(v);
+        if (p && p.trim() !== "") return p;
+      }
+      if (v != null && typeof v === "object") {
+        const nested = coerceSchemaText(v);
+        if (nested) return nested;
+      }
+    }
+    return null;
+  }
+  const s = String(text).trim();
+  return s === "" ? null : s;
+}
+
 // Helper function to clean and truncate text for schema
 export function cleanTextForSchema(text, maxLength = null) {
-  if (!text) return null;
+  const base = coerceSchemaText(text);
+  if (!base) return null;
 
   // Remove HTML tags and markdown formatting, then clean whitespace
-  const cleaned = text
+  const cleaned = base
     // Remove HTML tags
     .replace(/<[^>]*>/g, "")
     // Remove markdown bold/italic (**text**, __text__, *text*, _text_)

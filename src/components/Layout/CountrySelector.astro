@@ -1,0 +1,139 @@
+---
+import { Check, ChevronDown, Globe } from "@lucide/astro";
+import {
+  WEBSITE_LOCALE_KEYS,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity/locales";
+import {
+  ROOT_WEBSITE_LOCALE,
+  WEBSITE_LOCALE_LABELS,
+  homeHrefForLocale,
+  localizedHref,
+  normalizeCmsSlug,
+} from "../../lib/sanity/routing";
+
+interface Props {
+  /**
+   * Map of CMS slugs per locale for the current page. When provided, only locales
+   * with a non-empty slug are rendered, and each option links to that locale's slug.
+   * When omitted, all locales are shown and each links to its locale home.
+   */
+  localizedSlugs?: Partial<Record<WebsiteLocaleKey, string>>;
+  /** Locale rendered by the current page; used to mark the active option and the trigger. */
+  currentLocale?: WebsiteLocaleKey;
+}
+
+const { localizedSlugs, currentLocale = ROOT_WEBSITE_LOCALE } =
+  Astro.props as Props;
+
+const FLAGS = {
+  ireland: "🇮🇪",
+  denmark: "🇩🇰",
+  finland: "🇫🇮",
+  germany: "🇩🇪",
+  norway: "🇳🇴",
+  sweden: "🇸🇪",
+} as const;
+
+const locales = WEBSITE_LOCALE_KEYS.flatMap((locale) => {
+  let href: string;
+  if (localizedSlugs) {
+    const raw = localizedSlugs[locale];
+    if (raw == null || String(raw).trim() === "") return [];
+    href = localizedHref(locale, normalizeCmsSlug(String(raw)));
+  } else {
+    href = homeHrefForLocale(locale);
+  }
+  return [
+    {
+      locale,
+      label: WEBSITE_LOCALE_LABELS[locale],
+      flag: FLAGS[locale],
+      href,
+    },
+  ];
+});
+
+const activeMeta =
+  locales.find((l) => l.locale === currentLocale) ?? locales[0];
+---
+
+<div class="country-selector relative shrink-0" data-country-selector>
+  <button
+    type="button"
+    class="country-selector-trigger inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/10 px-3 py-1.5 text-sm font-medium text-white shadow-sm transition-colors hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/60"
+    aria-haspopup="listbox"
+    aria-expanded="false"
+    aria-label="Select country or region"
+  >
+    <Globe class="h-4 w-4 text-white/80" aria-hidden="true" />
+    <span class="country-selector-flag text-base leading-none" data-flag>{activeMeta?.flag}</span>
+    <span class="country-selector-label hidden sm:inline" data-label>{activeMeta?.label}</span>
+    <ChevronDown class="country-selector-chevron h-4 w-4 text-white/80 transition-transform duration-200" aria-hidden="true" />
+  </button>
+
+  <ul
+    class="country-selector-menu absolute right-0 z-50 mt-2 hidden min-w-[12rem] overflow-hidden rounded-lg border border-white/10 bg-white text-gray-800 shadow-xl ring-1 ring-black/5"
+    role="listbox"
+    aria-label="Country or region"
+  >
+    {locales.map(({ locale, label, flag, href }) => {
+      const isActive = locale === currentLocale;
+      return (
+        <li role="none">
+          <a
+            href={href}
+            role="option"
+            aria-selected={isActive ? "true" : "false"}
+            data-locale={locale}
+            class={`country-selector-option group flex items-center justify-between gap-3 px-3 py-2 text-sm transition-colors hover:bg-blue-50 focus:bg-blue-50 focus:outline-none ${isActive ? "bg-blue-50" : ""}`}
+          >
+            <span class="flex items-center gap-2">
+              <span class="text-base leading-none">{flag}</span>
+              <span class="font-medium">{label}</span>
+            </span>
+            <Check
+              class={`country-selector-check h-4 w-4 text-blue-600 transition-opacity ${isActive ? "opacity-100" : "opacity-0"}`}
+              aria-hidden="true"
+            />
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+<script is:inline>
+  function initCountrySelector(root) {
+    if (!root || root.dataset.initialized === "1") return;
+    root.dataset.initialized = "1";
+
+    const trigger = root.querySelector(".country-selector-trigger");
+    const menu = root.querySelector(".country-selector-menu");
+    const chevron = root.querySelector(".country-selector-chevron");
+    if (!trigger || !menu) return;
+
+    const setOpen = (open) => {
+      menu.classList.toggle("hidden", !open);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      if (chevron) chevron.classList.toggle("rotate-180", open);
+    };
+
+    trigger.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(menu.classList.contains("hidden"));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!root.contains(event.target)) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+  }
+
+  document
+    .querySelectorAll("[data-country-selector]")
+    .forEach((root) => initCountrySelector(root));
+</script>

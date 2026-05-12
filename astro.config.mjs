@@ -23,10 +23,5 @@ export default defineConfig({
       wrap: true,
     },
   },
-  vite: {
-    optimizeDeps: {
-      include: ['contentful'],
-    },
-  },
 });
 

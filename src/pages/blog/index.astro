@@ -1,5 +1,8 @@
 ---
-import { getAllPosts, getBlogCategoriesWithCounts } from "../../lib/contentful/utils";
+import {
+  getAllBlogPostsSanity,
+  getBlogCategoriesWithCountsSanity,
+} from "../../lib/sanity/blogPosts";
 import BlogHero from "../../components/Pages/BlogListing/BlogHero.astro";
 import BlogNav from "../../components/Pages/BlogListing/BlogNav.astro";
 import BlogListing from "../../components/Pages/BlogListing/CardsListing.astro";
@@ -24,8 +27,8 @@ const seoData = {
 
 // Get all posts and categories with counts
 const [posts, categories] = await Promise.all([
-  getAllPosts(),
-  getBlogCategoriesWithCounts(),
+  getAllBlogPostsSanity(),
+  getBlogCategoriesWithCountsSanity(),
 ]);
 
 // Get the featured post (last/most recent post)

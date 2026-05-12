@@ -1,78 +1,47 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Layout/Header.astro';
-import Footer from '../components/Layout/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Layout/Header.astro";
+import Footer from "../components/Layout/Footer.astro";
+import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
 
+import {
+  getWebsitePageBySlug,
+  HOME_CMS_SLUG,
+  ROOT_WEBSITE_LOCALE,
+} from "../lib/sanity";
+import { LOCALES } from "../lib/i18n";
+import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
 
-import {getWebsitePageBySlug   } from '../lib/contentful';
+const homePage = await getWebsitePageBySlug(
+  HOME_CMS_SLUG[ROOT_WEBSITE_LOCALE],
+  ROOT_WEBSITE_LOCALE,
+);
+if (!homePage) {
+  throw new Error(
+    `Sanity: home page not found for ${ROOT_WEBSITE_LOCALE} slug "${HOME_CMS_SLUG[ROOT_WEBSITE_LOCALE]}" — check Website Page (intl).`,
+  );
+}
 
-import Hero from "../components/Pages/Hero.astro";
-import TopCasinoByYear from "../components/Pages/TopCasinoByYear.astro";
-import FromTheBlog from "../components/Pages/FromTheBlog.astro";
+const htmlLang = LOCALES[localeIdForWebsiteLocale(ROOT_WEBSITE_LOCALE)].htmlLang;
 
-import GameOfTheMonthVertical from "../components/Pages/GameOfTheMonthVertical.astro";
-
-import { ContentComponent } from "../components/Pages/ContentComponent";
-import { FaqSection } from "../components/Pages/FAQComponent";
-import HowToBegin from "../components/Pages/HowTo.astro";
-
-
-
-
-const homePage = await getWebsitePageBySlug('/');
-
-// SEO data from CMS
 const seoData = {
-  title: homePage?.seoComponent?.fields?.seoTitle || "PP Casinos Info - Best Online Casinos Accepting PayPal",
-  description: homePage?.seoComponent?.fields?.seoDescription || "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
+  title:
+    homePage.seo?.seoTitle ||
+    "PP Casinos Info - Best Online Casinos Accepting PayPal",
+  description:
+    homePage.seo?.seoDescription ||
+    "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
   canonical: "/",
   openGraph: {
-    title: homePage?.seoComponent?.fields?.openGraphTitle || homePage?.seoComponent?.fields?.seoTitle,
-    description: homePage?.seoComponent?.fields?.openGraphDescription || homePage?.seoComponent?.fields?.seoDescription,
-    type: "website"
+    title: homePage.seo?.seoTitle,
+    description: homePage.seo?.seoDescription,
+    type: "website",
   },
-  noIndex: homePage?.seoComponent?.fields?.noIndex || false,
-  noFollow: homePage?.seoComponent?.fields?.noFollow || false,
-  keywords: homePage?.seoComponent?.fields?.keywords || []
 };
-
-
-
-const components = homePage.components;
-
-
 ---
 
-<BaseLayout seo={seoData}>
-  <Header />
-
-  {components.map((component) => {
-    const type = component.sys.contentType.sys.id;
-
-    switch (type) {
-      case "heroDefaultWithCasinoCards":
-        return <Hero title={component.fields.title} description={component.fields.description} casinos={component.fields.casinos} />;
-        case "casinoList":
-          return <TopCasinoByYear copyBefore={component.fields.copyBefore} casinoList={component.fields.casinoList} anchorTitle={component.fields.anchorTitle} key={component.sys.id} />;
-
-        case "gameOfTheMonth":
-            return <GameOfTheMonthVertical title={component.fields.title} gameDescription={component.fields.gameDescription} gameName={component.fields.gameName} casinoLinks={component.fields.casinoLinks} image={component.fields.image} link={component.fields.link} key={component.sys.id} />;
-
-        case "featuredArticles":
-          return <FromTheBlog title={component.fields.title} relatedArticles={component.fields.relatedArticles} key={component.sys.id} />;
-
-        case "contentComponent":
-          return <ContentComponent  content={component.fields.body} firstBonus={component.fields.firstBonus} spaceTop={12} spaceBottom={12}   />;
-
-        case "howTo":
-            return <HowToBegin title={component.fields.title} howToItems={component.fields.howToItems} key={component.sys.id} />;
-
-        case "faqComponent":
-          return <FaqSection faq={component} client:only="react"   />;
-
-        default:
-        return null;
-    }
-  })}
-  <Footer />
+<BaseLayout seo={seoData} lang={htmlLang}>
+  <Header locale={ROOT_WEBSITE_LOCALE} localizedSlugs={homePage.localizedSlugs} />
+  <WebsitePageSections sections={homePage.sections} locale={ROOT_WEBSITE_LOCALE} />
+  <Footer locale={ROOT_WEBSITE_LOCALE} />
 </BaseLayout>

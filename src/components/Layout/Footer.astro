@@ -1,120 +1,91 @@
 ---
-import { cn } from "../../lib/utils";
 import Logo from "./Logo.astro";
 import GamblingTherapyLogo from "../SVG/GamblingTherapyLogo.astro";
+import {
+  ROOT_WEBSITE_LOCALE,
+  homeHrefForLocale,
+  localizedStaticPageHref,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity";
+import { FOOTER_COPY } from "../../lib/i18n/copies/footer";
+import { localeIdForWebsiteLocale } from "../../lib/i18n/websiteLocaleBridge";
 
-const websiteFooter = {
+interface Props {
+  locale?: WebsiteLocaleKey;
+}
+
+const { locale = ROOT_WEBSITE_LOCALE } = Astro.props as Props;
+const t = FOOTER_COPY[localeIdForWebsiteLocale(locale)];
+const home = homeHrefForLocale(locale);
+
+const faqHref = localizedStaticPageHref(locale, "frequently-asked-questions");
+const ratingHref = localizedStaticPageHref(locale, "rating-guidelines");
+
+const footerNav = {
   navigationItems: [
     {
-      itemName: "Casino Lists",
-      itemLinkRoute: "",
+      itemName: t.classicGames,
+      itemLinkRoute: localizedStaticPageHref(locale, "classic-games"),
       navigationItems: [
         {
-          linkRoute: "/paypal-casinos/",
-          linkText: "Best Paypal Casinos",
-          linkType: "internal",
-        },
-      ],
-    },
-    {
-      itemName: "Country Guides",
-      itemLinkRoute: "",
-      navigationItems: [
-        {
-          linkRoute: "/ireland-guide/",
-          linkText: "Ireland Guide",
-          linkType: "internal",
-          flagIcon: "🇮🇪",
-        },
-        {
-          linkRoute: "/suomi-guide/",
-          linkText: "Suomi Guide",
-          linkType: "internal",
-          flagIcon: "🇫🇮",
-        },
-        {
-          linkRoute: "/norway-guide/",
-          linkText: "Norway Guide",
-          linkType: "internal",
-          flagIcon: "🇳🇴",
-        },
-        {
-          linkRoute: "/sweden-guide/",
-          linkText: "Sweden Guide",
-          linkType: "internal",
-          flagIcon: "🇸🇪",
-        },
-        {
-          linkRoute: "/denmark-guide/",
-          linkText: "Denmark Guide",
-          linkType: "internal",
-          flagIcon: "🇩🇰",
-        },
-      ],
-    },
-    {
-      itemName: "Classic games",
-      itemLinkRoute: "/classic-games/",
-      navigationItems: [
-        {
-          linkRoute: "/classic-games/",
-          linkText: "All games (overview)",
+          linkRoute: localizedStaticPageHref(locale, "classic-games"),
+          linkText: t.allGamesOverview,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/tetris/",
-          linkText: "Tetris",
+          linkText: t.tetris,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/tetris-50/",
-          linkText: "Tetris 50",
+          linkText: t.tetris50,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/sudoku/",
-          linkText: "Sudoku",
+          linkText: t.sudoku,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/solitaire/",
-          linkText: "Solitaire",
+          linkText: t.solitaire,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/yukon/",
-          linkText: "Yukon Solitaire",
+          linkText: t.yukonSolitaire,
           linkType: "internal",
         },
         {
           linkRoute: "/classic-games/russian/",
-          linkText: "Russian Solitaire",
+          linkText: t.russianSolitaire,
           linkType: "internal",
         },
       ],
     },
     {
-      itemName: "Support",
+      itemName: t.support,
       itemLinkRoute: "",
       navigationItems: [
         {
-          linkRoute: "/contact-us/",
-          linkText: "Contact Us",
+          linkRoute: localizedStaticPageHref(locale, "contact-us"),
+          linkText: t.contactUs,
           linkType: "internal",
         },
         {
-          linkRoute: "/frequently-asked-questions/",
-          linkText: "Frequently Asked Questions",
+          linkRoute: faqHref,
+          linkText: t.frequentlyAskedQuestions,
           linkType: "internal",
         },
         {
-          linkRoute: "/rating-guidelines/",
-          linkText: "Casino Rating Guide",
+          linkRoute: ratingHref,
+          linkText: t.casinoRatingGuide,
           linkType: "internal",
         },
         {
-          linkRoute: "/sitemap/",
-          linkText: "Sitemap",
+          linkRoute: localizedStaticPageHref(locale, "sitemap"),
+          linkText: t.sitemap,
           linkType: "internal",
         },
       ],
@@ -125,19 +96,17 @@ const websiteFooter = {
 
 <footer class="bg-blue-950 text-white">
   <div class="mx-auto px-6 lg:px-10 py-12 max-w-5xl mx-auto">
-    <!-- Main Footer Content -->
     <div class="flex flex-col gap-6 mb-8">
-      <!-- Brand Section -->
       <div class="lg:col-span-1">
-        <a href="/" class="flex items-center mb-4">
+        <a href={home} class="flex items-center mb-4">
           <Logo />
           <span class="ml-2 text-2xl font-bold text-white">
-            Paypalcasinoguides
+            {t.brandName}
           </span>
         </a>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12 w-full">
-        {websiteFooter.navigationItems.map((item) => (
+        {footerNav.navigationItems.map((item) => (
           <div class="text-center md:text-left">
             <h3 class="text-white font-semibold text-lg mb-6 pb-2 border-b border-white/30">
               {item.itemLinkRoute ? (
@@ -159,9 +128,6 @@ const websiteFooter = {
                       href={subItem.linkRoute}
                       class="text-gray-100 hover:text-white transition-colors duration-200 inline-flex items-center gap-2 text-base font-medium transform transition-transform duration-200"
                     >
-                      {subItem.flagIcon && (
-                        <span class="text-lg">{subItem.flagIcon}</span>
-                      )}
                       {subItem.linkText}
                     </a>
                   </li>
@@ -172,62 +138,56 @@ const websiteFooter = {
         ))}
       </div>
       <div class="flex flex-col items-center justify-center space-y-4">
-        <!-- Logos Row -->
         <div class="flex flex-wrap justify-center gap-8 lg:gap-12 items-center">
-          <!-- Gambling Therapy Logo -->
           <div class="flex flex-col items-center group">
             <a
               href="https://www.gamblingtherapy.org/"
               target="_blank"
               rel="noopener noreferrer"
               class="flex flex-col items-center"
-              aria-label="Gambling Therapy (opens in a new tab)"
+              aria-label={t.gamblingTherapyAria}
             >
               <GamblingTherapyLogo />
               <span class="text-gray-100 text-sm mt-2 font-medium">
-                Gambling Therapy
+                {t.gamblingTherapyLabel}
               </span>
             </a>
           </div>
 
-          <!-- GambleAware Logo -->
           <div class="flex flex-col items-center group">
             <a
               href="https://www.begambleaware.org/"
               target="_blank"
               rel="noopener noreferrer"
               class="flex flex-col items-center"
-              aria-label="BeGambleAware (opens in a new tab)"
+              aria-label={t.begambleawareAria}
             >
               <img
                 src="/assets/gamble-aware.webp"
-                alt="BeGambleAware"
+                alt={t.begambleawareLabel}
                 loading="lazy"
                 decoding="async"
                 class="h-12 w-auto"
               />
               <span class="text-gray-100 text-sm mt-2 font-medium">
-                BeGambleAware
+                {t.begambleawareLabel}
               </span>
             </a>
           </div>
 
-          <!-- 18+ Icon -->
           <div class="flex flex-col items-center group">
             <div class="w-12 h-12 rounded-full border-3 border-white0 bg-gray-700 flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300">
               <span class="text-white font-bold text-xl">18+</span>
             </div>
             <span class="text-white text-sm mt-2 font-medium">
-              Adults Only
+              {t.adultsOnly}
             </span>
           </div>
         </div>
 
-        <!-- Responsible Gaming Message -->
         <div class="flex flex-col items-center max-w-md text-center">
           <span class="text-white font-semibold text-base leading-relaxed mb-2">
-            Please gamble responsibly. If you feel you may have a problem, seek
-            help from a trusted support organization.
+            {t.responsibleGamble}
           </span>
           <a
             href="https://www.gamblingtherapy.org/"
@@ -235,37 +195,35 @@ const websiteFooter = {
             rel="noopener noreferrer"
             class="text-base hover:text-white transition-colors font-medium"
           >
-            Visit GamblingTherapy.org
+            {t.visitGamblingTherapy}
           </a>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Footer -->
     <div class="border-t border-gray-700 pt-6 mt-6">
       <div class="flex flex-col md:flex-row justify-between items-center text-base text-gray-100">
         <p>
-          &copy; {new Date().getFullYear()} PpCasinos.co All rights
-          reserved.
+          &copy; {new Date().getFullYear()} {t.copyrightRest}
         </p>
         <div class="flex space-x-6 mt-4 md:mt-0">
           <a
-            href="/terms-and-conditions/"
+            href={localizedStaticPageHref(locale, "terms-and-conditions")}
             class="hover:text-white transition-colors"
           >
-            Terms
+            {t.terms}
           </a>
           <a
-            href="/privacy-policy/"
+            href={localizedStaticPageHref(locale, "privacy-policy")}
             class="hover:text-white transition-colors"
           >
-            Privacy
+            {t.privacy}
           </a>
           <a
-            href="/contact-us/"
+            href={localizedStaticPageHref(locale, "contact-us")}
             class="hover:text-white transition-colors"
           >
-            Contact
+            {t.contact}
           </a>
         </div>
       </div>

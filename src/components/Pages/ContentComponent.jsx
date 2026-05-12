@@ -19,6 +19,17 @@ import {
 import { addHttps } from "../../lib/helpers";
 import { cn, slugify as slugifyHeading } from "../../lib/utils";
 import remarkGfm from "remark-gfm";
+import {
+  ArticleMarkdownArticleWrapper,
+  ArticleMarkdownCriteriaGrid,
+  ArticleMarkdownEditorNote,
+  ArticleMarkdownHowToStepCards,
+  ArticleMarkdownProsCons,
+  parseCriteriaGridFromHast,
+  parseEditorNoteParagraphs,
+  parseHowToStepCardsFromHast,
+  parseProsConsFromHast,
+} from "./Content/articleMarkdownBlocks.jsx";
 
 const linkClassMd =
   "text-green-700 underline hover:text-green-900 transition-colors duration-200 font-medium dark:text-green-400 dark:hover:text-green-200";
@@ -148,7 +159,7 @@ const HowToComponent = ({ steps }) => {
       <div className="hidden lg:block absolute top-1/2 left-0 right-0 z-0 pointer-events-none">
         <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-green-200 via-orange-100 to-yellow-100 dark:from-green-950 dark:via-zinc-900 dark:to-yellow-900 opacity-70 shadow-lg" />
       </div>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 z-10 relative">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 z-10 relative">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -167,7 +178,7 @@ const HowToComponent = ({ steps }) => {
             {/* Circular step number badge with animated shadow */}
             <div className="mb-4 relative">
               <div className={cn(
-                "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500/90 to-yellow-300 font-heading text-xl font-bold text-white shadow-lg ring-4 ring-white dark:ring-zinc-900 transition-transform transform-gpu",
+                "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500/90 to-yellow-300 font-roboto text-xl font-bold text-white shadow-lg ring-4 ring-white dark:ring-zinc-900 transition-transform transform-gpu",
                 "group-hover:scale-105 group-hover:ring-green-700"
               )}>
                 {index + 1}
@@ -182,14 +193,14 @@ const HowToComponent = ({ steps }) => {
               <IconSwitch iconName={step.icon} />
             </div>
             {/* Step Title */}
-            <h3 className="font-heading text-lg sm:text-xl font-semibold text-green-900 dark:text-green-200 mb-2 leading-tight">
+            <h3 className="font-roboto text-lg font-semibold text-green-900 sm:text-xl dark:text-green-200 mb-2 leading-tight h-[56px]">
               {/* If the step title is empty, fallback to 'Step X' */}
               {step.title?.trim()
                 ? step.title
                 : `Step ${index + 1}`}
             </h3>
             {/* Description, aligns bottom if space */}
-            <div className="flex-1 flex flex-col w-full">
+            <div className="flex flex-col w-full">
               <HastStepDescription
                 hastChildren={
                   step.descriptionChildren?.length ? step.descriptionChildren : null
@@ -233,7 +244,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
   return (
     <div className="flex flex-col lg:flex-row items-center gap-8 w-full max-w-4xl my-12 border-2 border-green-500 rounded-2xl p-6 overflow-hidden mx-auto bg-gradient-to-tr from-green-200 via-gray-50 to-orange-100 shadow-md relative dark:bg-gradient-to-tr dark:from-green-900 dark:via-zinc-800 dark:to-yellow-950 dark:border-green-700">
       <div className="flex flex-col flex-1 gap-4">
-        <h3 className="font-heading text-2xl font-bold mb-2 text-green-900 leading-snug dark:text-green-200">
+        <h3 className="font-roboto text-2xl font-bold mb-2 text-green-900 leading-snug dark:text-green-200">
           {b?.name}
         </h3>
         <p className="text-base text-gray-600 mb-4 dark:text-gray-300">
@@ -371,36 +382,86 @@ const marginTopMap = {
 export const ContentComponent = ({
   content,
   firstBonus,
-  spaceTop,
-  spaceBottom,
+  spaceBottom = 0,
+  spaceTop = 0,
 }) => {
-  const pbClass =
-    spaceBottom !== undefined && spaceBottom !== null
-      ? paddingBottomMap[spaceBottom] ?? "pb-12"
-      : "lg:pb-12 pb-6";
-
-  const mtClass =
-    spaceTop !== undefined && spaceTop !== null
-      ? marginTopMap[spaceTop] ?? "mt-6"
-      : "mt-6 lg:mt-12";
-
+  const pbClass = paddingBottomMap[spaceBottom] ?? paddingBottomMap[0];
+  const mtClass = marginTopMap[spaceTop] ?? marginTopMap[0];
+  if (typeof content !== "string" || !content.trim()) return null;
   return (
     <div
       className={cn(
-        "flex flex-col gap-0 relative container mx-auto px-6 md:px-0 py-24 w-full max-w-6xl",
+        "content-component font-roboto relative flex w-full flex-col gap-0",
         pbClass,
         mtClass,
       )}
     >
       <div className="h-auto w-full">
-        <div className="pt-2 max-w-none">
-          <article className="font-sans prose prose-lg sm:prose-xl prose-neutral max-w-none mx-auto bg-transparent px-0 rounded-lg tracking-normal dark:prose-invert prose-pre:bg-[#10194a]/80 prose-headings:!font-heading prose-headings:!font-semibold prose-h2:!font-bold [&_h1]:!font-heading [&_h2]:!font-heading [&_h3]:!font-heading [&_h4]:!font-heading [&_h5]:!font-heading [&_h6]:!font-heading [&_p]:leading-[1.75] [&_li]:leading-[1.65]">
+        <div className="max-w-none pt-1 sm:pt-2">
+          <article
+            className={cn(
+              "max-w-none bg-transparent",
+              "selection:bg-emerald-200/40 dark:selection:bg-emerald-900/40",
+            )}
+          >
             <ReactMarkdown
               rehypePlugins={[rehypeRaw]}
               remarkPlugins={[remarkGfm]}
               components={{
                 div: ({ node, ...props }) => {
                   const className = props.className || "";
+                  const classes = String(className).split(/\s+/).filter(Boolean);
+
+                  if (className.includes("criteria-grid")) {
+                    const items = parseCriteriaGridFromHast(node);
+                    if (items.length > 0) {
+                      return <ArticleMarkdownCriteriaGrid items={items} />;
+                    }
+                  }
+
+                  if (className.includes("editor-note")) {
+                    const paragraphs = parseEditorNoteParagraphs(node);
+                    if (paragraphs.length > 0) {
+                      return (
+                        <ArticleMarkdownEditorNote>
+                          {paragraphs.map((text, i) => (
+                            <p
+                              key={i}
+                              className="mb-2 last:mb-0 not-italic leading-relaxed"
+                            >
+                              {text}
+                            </p>
+                          ))}
+                        </ArticleMarkdownEditorNote>
+                      );
+                    }
+                  }
+
+                  if (className.includes("pros-cons")) {
+                    const pc = parseProsConsFromHast(node);
+                    if (pc.pros.length || pc.cons.length) {
+                      return (
+                        <ArticleMarkdownProsCons
+                          prosTitle={pc.prosTitle}
+                          consTitle={pc.consTitle}
+                          pros={pc.pros}
+                          cons={pc.cons}
+                        />
+                      );
+                    }
+                  }
+
+                  if (
+                    classes.includes("article") &&
+                    !className.includes("article-markdown")
+                  ) {
+                    return (
+                      <ArticleMarkdownArticleWrapper>
+                        {props.children}
+                      </ArticleMarkdownArticleWrapper>
+                    );
+                  }
+
                   if (className.includes("highlight-box")) {
                     return (
                       <HighlightBox firstBonus={firstBonus}>
@@ -420,6 +481,19 @@ export const ContentComponent = ({
                     );
                   }
                   if (className.includes("how-to")) {
+                    const hasStepCard = (node.children || []).some(
+                      (child) =>
+                        child.type === "element" &&
+                        hastClassIncludes(child.properties, "step-card"),
+                    );
+                    if (hasStepCard) {
+                      const cardSteps = parseHowToStepCardsFromHast(node);
+                      if (cardSteps.length > 0) {
+                        return (
+                          <ArticleMarkdownHowToStepCards steps={cardSteps} />
+                        );
+                      }
+                    }
                     // Defensive: ensure find always works even if children is missing
                     const steps = (node.children || [])
                       .filter(
@@ -507,7 +581,7 @@ export const ContentComponent = ({
                   return (
                     <h1
                       className={cn(
-                        "font-heading text-4xl md:text-5xl font-bold mb-8 text-gray-900 leading-[1.12] md:leading-[1.1] tracking-tight dark:text-gray-100",
+                        "scroll-mt-28 text-center text-balance text-[2.35rem] font-bold leading-[1.2] tracking-[-0.02em] text-[#1a1a1a] first:mt-0 mt-5 mb-3 dark:text-neutral-100 md:mt-6 md:mb-3.5 md:text-[2.5rem]",
                         className,
                       )}
                       id={id}
@@ -521,7 +595,7 @@ export const ContentComponent = ({
                   return (
                     <h2
                       className={cn(
-                        "font-heading text-2xl md:text-3xl font-bold mt-10 mb-6 text-gray-800 leading-snug tracking-tight anchor dark:text-gray-200",
+                        "anchor scroll-mt-28 text-center text-balance text-[1.875rem] font-bold leading-snug tracking-[-0.018em] text-[#222] mt-5 mb-2.5 dark:text-neutral-100",
                         className,
                       )}
                       id={id}
@@ -532,7 +606,7 @@ export const ContentComponent = ({
                 h3: ({ node, className, ...props }) => (
                   <h3
                     className={cn(
-                      "font-heading text-xl md:text-2xl font-semibold mt-8 mb-5 text-gray-700 leading-snug tracking-tight dark:text-gray-300",
+                      "scroll-mt-28 text-center text-balance text-2xl font-semibold leading-snug tracking-[-0.016em] text-[#262626] mt-4 mb-2 dark:text-neutral-100",
                       className,
                     )}
                     {...props}
@@ -541,7 +615,7 @@ export const ContentComponent = ({
                 h4: ({ node, className, ...props }) => (
                   <h4
                     className={cn(
-                      "font-heading text-lg md:text-xl font-semibold mt-6 mb-3 text-gray-700 leading-snug tracking-tight dark:text-gray-300",
+                      "scroll-mt-28 text-xl font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-7 mb-3 dark:text-neutral-200",
                       className,
                     )}
                     {...props}
@@ -550,7 +624,7 @@ export const ContentComponent = ({
                 h5: ({ node, className, ...props }) => (
                   <h5
                     className={cn(
-                      "font-heading text-base md:text-lg font-semibold mt-5 mb-2 text-gray-700 leading-snug tracking-tight dark:text-gray-300",
+                      "scroll-mt-28 text-lg font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-6 mb-2 dark:text-neutral-200",
                       className,
                     )}
                     {...props}
@@ -559,7 +633,7 @@ export const ContentComponent = ({
                 h6: ({ node, className, ...props }) => (
                   <h6
                     className={cn(
-                      "font-heading text-base font-semibold mt-4 mb-2 text-gray-600 leading-snug tracking-tight dark:text-gray-400",
+                      "scroll-mt-28 text-[17px] font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-5 mb-2 dark:text-neutral-300",
                       className,
                     )}
                     {...props}
@@ -567,31 +641,31 @@ export const ContentComponent = ({
                 ),
                 p: ({ node, ...props }) => (
                   <p
-                    className="text-lg leading-[1.75] mb-4 text-gray-950 dark:text-neutral-100"
+                    className="mb-4 mt-5 text-[16px] leading-[1.476] tracking-[-0.015em] text-[#333333] first:mt-0 dark:text-neutral-200"
                     {...props}
                   />
                 ),
                 strong: ({ node, ...props }) => (
                   <strong
-                    className="leading-relaxed mb-4 text-slate-700 font-bold dark:text-slate-100"
+                    className="font-bold text-[#333333] dark:text-neutral-100"
                     {...props}
                   />
                 ),
                 ul: ({ node, ...props }) => (
                   <ul
-                    className="list-disc list-inside my-5 pl-0 text-slate-900 marker:text-slate-500 dark:text-slate-100 dark:marker:text-slate-300"
+                    className="my-5 list-inside list-disc space-y-1 pl-0 text-[16px] leading-[1.476] tracking-[-0.015em] text-[#333333] marker:text-slate-400 dark:text-neutral-200 dark:marker:text-slate-500"
                     {...props}
                   />
                 ),
                 ol: ({ node, ...props }) => (
                   <ol
-                    className="list-decimal list-inside my-5 pl-0 text-slate-900 marker:text-slate-500 dark:text-slate-100 dark:marker:text-slate-300"
+                    className="my-5 list-inside list-decimal space-y-1 pl-0 text-[16px] leading-[1.476] tracking-[-0.015em] text-[#333333] marker:text-slate-500 dark:text-neutral-200 dark:marker:text-slate-400"
                     {...props}
                   />
                 ),
                 li: ({ node, ...props }) => (
                   <li
-                    className="mb-2 text-base leading-[1.65] text-slate-700 dark:text-slate-200"
+                    className="mb-1.5 text-[16px] leading-[1.476] tracking-[-0.015em] text-[#333333] dark:text-neutral-200"
                     {...props}
                   />
                 ),
@@ -601,8 +675,12 @@ export const ContentComponent = ({
                     {...props}
                   />
                 ),
+     
                 a: ({ node, ...props }) => (
                   <a className={linkClassMd} {...props} />
+                ),
+                hr: () => (
+                  <hr className="my-10 border-0 border-t border-slate-200 dark:border-zinc-600" />
                 ),
                 table: ({ node, ...props }) => (
                   <div className="overflow-x-auto my-8 px-2 md:px-0">
