@@ -1,5 +1,7 @@
 import { slugify } from "../helpers.js";
 import { adaptCasinoForCard, type CasinoCardData } from "./cards";
+import { getCasinoReviewBodyMap } from "./casinos";
+import { ROOT_WEBSITE_LOCALE } from "./routing";
 import { sanityGraphqlFetch } from "./client";
 import { portableTextToPlainText } from "./portableTextPlain";
 import {
@@ -110,12 +112,17 @@ function normalizeSeo(seo: unknown): SanityBlogArticle["seoComponent"] {
   };
 }
 
-export function normalizeBlogPost(raw: Record<string, unknown>): SanityBlogArticle {
+export function normalizeBlogPost(
+  raw: Record<string, unknown>,
+  reviewBodyMap?: Map<string, boolean>,
+): SanityBlogArticle {
   const url = featuredAssetUrl(raw);
   const relatedRaw = raw.relatedCasinosList;
   const relatedCasinosList = (
     Array.isArray(relatedRaw)
-      ? relatedRaw.map(adaptCasinoForCard).filter(Boolean)
+      ? relatedRaw
+          .map((c) => adaptCasinoForCard(c, ROOT_WEBSITE_LOCALE, reviewBodyMap))
+          .filter(Boolean)
       : []
   ) as CasinoCardData[];
 
@@ -150,11 +157,12 @@ export async function getAllBlogPostsSanity(): Promise<SanityBlogArticle[]> {
 }
 
 export async function getBlogPostBySlugSanity(slug: string): Promise<SanityBlogArticle | null> {
-  const data = await sanityGraphqlFetch<AllBlogPostsResult>(BLOG_POST_BY_SLUG_QUERY, {
-    slug,
-  });
+  const [data, reviewBodyMap] = await Promise.all([
+    sanityGraphqlFetch<AllBlogPostsResult>(BLOG_POST_BY_SLUG_QUERY, { slug }),
+    getCasinoReviewBodyMap(),
+  ]);
   const raw = data.allBlogPost[0];
-  return raw ? normalizeBlogPost(raw) : null;
+  return raw ? normalizeBlogPost(raw, reviewBodyMap) : null;
 }
 
 export async function getPostsByCategorySlugSanity(

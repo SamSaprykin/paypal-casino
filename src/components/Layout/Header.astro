@@ -18,9 +18,11 @@ interface Props {
    * switching locales lands on the equivalent page (not just the home).
    */
   localizedSlugs?: Partial<Record<WebsiteLocaleKey, string>>;
+  localeHrefs?: Partial<Record<WebsiteLocaleKey, string>>;
 }
 
-const { locale = ROOT_WEBSITE_LOCALE, localizedSlugs } = Astro.props as Props;
+const { locale = ROOT_WEBSITE_LOCALE, localizedSlugs, localeHrefs } =
+  Astro.props as Props;
 
 const labels = NAV_LABELS[locale];
 const homeHref = homeHrefForLocale(locale);
@@ -52,6 +54,7 @@ const menuData = [
       <div class="flex items-center gap-2 lg:gap-3 shrink-0">
         <CountrySelector
           localizedSlugs={localizedSlugs}
+          localeHrefs={localeHrefs}
           currentLocale={locale}
         />
         <button

@@ -1,0 +1,34 @@
+---
+import CasinoDetailPage from "../../components/Pages/CasinoDetailPage.astro";
+import {
+  casinoUrlSegmentForLocale,
+  getCasinoBySlugSanity,
+  getRootCasinoDetailStaticPaths,
+  ROOT_WEBSITE_LOCALE,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity";
+
+export async function getStaticPaths() {
+  return getRootCasinoDetailStaticPaths();
+}
+
+interface Props {
+  locale: WebsiteLocaleKey;
+  slug: string;
+}
+
+const { locale, slug } = Astro.props as Props;
+const { casinoSegment } = Astro.params;
+
+if (casinoSegment !== casinoUrlSegmentForLocale(ROOT_WEBSITE_LOCALE)) {
+  return Astro.redirect("/404/");
+}
+
+const casino = await getCasinoBySlugSanity(slug, locale);
+
+if (!casino) {
+  return Astro.redirect("/404/");
+}
+---
+
+<CasinoDetailPage casino={casino} locale={locale} />

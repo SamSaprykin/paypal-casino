@@ -35,6 +35,14 @@ export {
   type CasinoHeroCardCopy,
 } from "./copies/casino-hero-card";
 export {
+  CASINO_DETAIL_PAGE_COPY,
+  type CasinoDetailPageCopy,
+} from "./copies/casino-detail-page";
+export {
+  WEBSITE_PAGE_COPY,
+  type WebsitePageCopy,
+} from "./copies/website-page";
+export {
   INTL_DEMO_PAGE_COPY,
   type IntlDemoPageCopy,
 } from "./copies/page-intl-demo";

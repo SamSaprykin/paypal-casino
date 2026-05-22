@@ -13,6 +13,7 @@ import {
   ROOT_WEBSITE_LOCALE,
 } from "./routing";
 import { adaptWebsitePage, type WebsitePage } from "./sections";
+import { getCasinoReviewBodyMap } from "./casinos";
 
 type WebsitePageIntlRow = Record<string, unknown>;
 type WebsitePageSlugQueryResult = { allWebsitePageIntl: WebsitePageIntlRow[] };
@@ -51,8 +52,9 @@ export async function getWebsitePageBySlug(
   if (!raw) return null;
 
   const localizedSlugs = extractLocalizedSlugs(raw.slug);
+  const reviewBodyMap = await getCasinoReviewBodyMap();
   const picked = deepPickIntl(raw, locale) as Record<string, unknown>;
-  const page = adaptWebsitePage(picked);
+  const page = adaptWebsitePage(picked, locale, reviewBodyMap);
   page.localizedSlugs = localizedSlugs;
   return page;
 }

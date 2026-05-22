@@ -9,8 +9,9 @@
 import type { CasinoCardData } from "./cards";
 import { adaptCasinoForCard } from "./cards";
 import type { WebsiteLocaleKey } from "./locales";
+import { pickIntlCasinoList } from "./intl";
+import { pickIntlMarkdown } from "./intlMarkdown";
 
-/** Discriminated union of every section type a website page can render. */
 export type PageSection =
   | CasinoListSection
   | FaqSection
@@ -114,7 +115,11 @@ function adaptBonus(raw: unknown): BonusItem | null {
   };
 }
 
-function adaptSection(raw: unknown): PageSection | null {
+function adaptSection(
+  raw: unknown,
+  locale: WebsiteLocaleKey,
+  reviewBodyMap?: Map<string, boolean>,
+): PageSection | null {
   if (!raw || typeof raw !== "object") return null;
   const b = raw as Record<string, unknown>;
   const typename = asString(b.__typename);
@@ -122,27 +127,34 @@ function adaptSection(raw: unknown): PageSection | null {
   const id = String(b._id ?? "");
 
   switch (typename) {
-    case "CasinoListIntl":
+    case "CasinoListIntl": {
+      const casinoRawList = pickIntlCasinoList(
+        b.casinoListsByCountry ?? b.casinoList,
+        locale,
+      );
       return {
         kind: "casinoList",
         id,
         anchorTitle: asString(b.anchorTitle),
         copyBefore: asString(b.copyBefore),
         copyAfter: asString(b.copyAfter),
-        casinos: pickArray(b.casinoList).map(adaptCasinoForCard).filter(Boolean) as CasinoCardData[],
+        casinos: casinoRawList
+          .map((c) => adaptCasinoForCard(c, locale, reviewBodyMap))
+          .filter(Boolean) as CasinoCardData[],
       };
+    }
 
     case "FaqComponentIntl": {
       const items = pickArray<Record<string, unknown>>(b.faqItems).flatMap((item) => {
-        const question = asString(item.faqQuestion);
-        const answer = asString(item.faqAnswer);
-        if (!question || !answer) return [];
+        const question = pickIntlMarkdown(item.faqQuestion, locale);
+        const answer = pickIntlMarkdown(item.faqAnswer, locale);
+        if (!question.trim() || !answer.trim()) return [];
         return [{ question, answer }];
       });
       return {
         kind: "faqComponent",
         id,
-        title: asString(b.title),
+        title: pickIntlMarkdown(b.title, locale) || undefined,
         spaceTop: asNumber(b.spaceTop),
         items,
       };
@@ -153,7 +165,7 @@ function adaptSection(raw: unknown): PageSection | null {
         kind: "contentComponent",
         id,
         name: asString(b.name),
-        bodyMarkdown: asString(b.bodyMarkdown) ?? "",
+        bodyMarkdown: pickIntlMarkdown(b.bodyMarkdown, locale),
       };
 
     case "HowToIntl": {
@@ -188,7 +200,11 @@ function adaptSection(raw: unknown): PageSection | null {
 }
 
 /** Transforms a locale-picked WebsitePageIntl into the typed page model. */
-export function adaptWebsitePage(raw: Record<string, unknown>): WebsitePage {
+export function adaptWebsitePage(
+  raw: Record<string, unknown>,
+  locale: WebsiteLocaleKey,
+  reviewBodyMap?: Map<string, boolean>,
+): WebsitePage {
   const seoRaw = raw.seoComponent as Record<string, unknown> | undefined;
   const seo: PageSeo | undefined = seoRaw
     ? {
@@ -198,7 +214,9 @@ export function adaptWebsitePage(raw: Record<string, unknown>): WebsitePage {
       }
     : undefined;
 
-  const sections = pickArray(raw.components).map(adaptSection).filter(Boolean) as PageSection[];
+  const sections = pickArray(raw.components)
+    .map((section) => adaptSection(section, locale, reviewBodyMap))
+    .filter(Boolean) as PageSection[];
 
   return {
     id: String(raw._id ?? ""),

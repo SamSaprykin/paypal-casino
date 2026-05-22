@@ -32,7 +32,7 @@ import {
 } from "./Content/articleMarkdownBlocks.jsx";
 
 const linkClassMd =
-  "text-green-700 underline hover:text-green-900 transition-colors duration-200 font-medium dark:text-green-400 dark:hover:text-green-200";
+  "text-blue-700 underline hover:text-blue-900 transition-colors duration-200 font-medium dark:text-blue-400 dark:hover:text-blue-200";
 
 function getBonusFields(firstBonus) {
   if (!firstBonus) return null;
@@ -40,35 +40,91 @@ function getBonusFields(firstBonus) {
 }
 
 const ctaLinkClass =
-  "inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-green-600 to-green-800 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-green-700 hover:to-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900";
+  "inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-blue-800 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:from-blue-700 hover:to-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-900";
 
 /** How-to step descriptions come from HAST (rehype), not mdast. */
-function HastStepDescription({ hastChildren }) {
+function HastStepDescription({ hastChildren, children }) {
+
+  // Reusable markdown renderer component to avoid duplicate code
+  const MarkdownRenderer = ({ text }) => (
+    <ReactMarkdown
+      children={text}
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      components={{
+        p: ({ node, ...props }) => (
+          <p
+            {...props}
+            className="text-center text-[15px] text-neutral-700 leading-relaxed dark:text-neutral-200"
+          />
+        ),
+        strong: ({ node, ...props }) => (
+          <strong
+            {...props}
+            className="font-bold text-neutral-900 dark:text-white"
+          />
+        ),
+        em: ({ node, ...props }) => <em {...props} />,
+        a: ({ node, ...props }) => (
+          <a
+            {...props}
+            className={linkClassMd}
+          />
+        ),
+        code: ({ node, ...props }) => (
+          <code
+            {...props}
+            className="rounded bg-neutral-900/10 px-1 py-0.5 text-sm dark:bg-neutral-100/10"
+          />
+        ),
+        br: ({ node, ...props }) => <br {...props} />,
+      }}
+    />
+  );
+
+  // 1. Support rendering markdown string directly if given as children
+  if (children && typeof children === "string") {
+    return (
+      <div className="mt-auto space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed dark:text-neutral-200">
+        <MarkdownRenderer text={children} />
+      </div>
+    );
+  }
+
   if (!hastChildren?.length) return null;
 
   const renderNode = (node, i) => {
     if (!node) return null;
+
     if (node.type === "text") {
+      // FIX: Check if the text node actually contains unrendered markdown syntax
+      const hasMarkdown = /[\*\_\~\[\]]/.test(node.value);
+      if (hasMarkdown) {
+        return <MarkdownRenderer key={i} text={node.value} />;
+      }
       return node.value;
     }
+
     if (node.type !== "element" || !node.tagName) {
       return null;
     }
+
     const tag = node.tagName;
     const kids = node.children?.map((c, j) => renderNode(c, j));
+
     switch (tag) {
       case "p":
         return (
           <p
             key={i}
-            className="text-center text-[15px] text-green-900 leading-relaxed dark:text-green-100"
+            className="text-center text-[15px] text-neutral-700 leading-relaxed dark:text-neutral-200"
           >
             {kids}
           </p>
         );
       case "strong":
         return (
-          <strong key={i} className="font-bold text-green-950 dark:text-white">
+          <strong key={i} className="font-bold text-neutral-900 dark:text-white">
             {kids}
           </strong>
         );
@@ -91,7 +147,7 @@ function HastStepDescription({ hastChildren }) {
         return (
           <code
             key={i}
-            className="rounded bg-green-900/10 px-1 py-0.5 text-sm dark:bg-green-100/10"
+            className="rounded bg-neutral-900/10 px-1 py-0.5 text-sm dark:bg-neutral-100/10"
           >
             {kids}
           </code>
@@ -104,10 +160,11 @@ function HastStepDescription({ hastChildren }) {
   };
 
   return (
-    <div className="mt-auto space-y-2 text-center text-[15px] text-green-900 leading-relaxed dark:text-green-100">
+    <div className="mt-auto space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed dark:text-neutral-200">
       {hastChildren.map((c, i) => renderNode(c, i))}
     </div>
   );
+
 }
 
 function textFromHastTree(node) {
@@ -135,7 +192,7 @@ function hastId(properties) {
 // cleaner card, subtle interactivity, shadow/lift, visually distinct cards.
 const IconSwitch = ({ iconName }) => {
   const iconProps =
-    "w-9 h-9 text-green-600 flex-shrink-0 dark:text-green-300";
+    "w-9 h-9 text-blue-600 flex-shrink-0 dark:text-blue-300";
   const icons = {
     ShieldCheck: <ShieldCheck className={iconProps} />,
     UserPlus: <UserPlus className={iconProps} />,
@@ -147,7 +204,7 @@ const IconSwitch = ({ iconName }) => {
     DollarSign: <DollarSign className={iconProps} />,
   };
   return icons[iconName] || (
-    <span className="inline-block w-9 h-9 bg-gray-200 dark:bg-zinc-800 rounded-full" />
+    <span className="inline-block w-9 h-9 bg-gray-200 dark:bg-zinc-800 rounded-full text-blue-600 flex items-center justify-center" > {iconName}</span>
   );
 };
 
@@ -157,7 +214,7 @@ const HowToComponent = ({ steps }) => {
     <div className="relative w-full my-12">
       {/* Connecting horizontal line for desktop */}
       <div className="hidden lg:block absolute top-1/2 left-0 right-0 z-0 pointer-events-none">
-        <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-green-200 via-orange-100 to-yellow-100 dark:from-green-950 dark:via-zinc-900 dark:to-yellow-900 opacity-70 shadow-lg" />
+        <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-slate-200 via-slate-100 to-blue-100 dark:from-zinc-800 dark:via-zinc-900 dark:to-blue-950 opacity-70 shadow-lg" />
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 z-10 relative">
         {steps.map((step, index) => (
@@ -165,27 +222,27 @@ const HowToComponent = ({ steps }) => {
             key={index}
             className={cn(
               "flex flex-col relative items-center text-center px-5 py-7 rounded-2xl bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md shadow-md border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 bg-slate-50",
-              "hover:border-green-500 hover:ring-2 hover:ring-green-300 hover:ring-offset-2 dark:hover:ring-offset-zinc-900"
+              "hover:border-blue-500 hover:ring-2 hover:ring-blue-300 hover:ring-offset-2 dark:hover:ring-offset-zinc-900"
             )}
             style={{
               zIndex: 1,
             }}
           >
             {/* "Step" word above step number, visible always */}
-            <div className="mb-1 text-sm font-bold text-green-700 tracking-wide uppercase dark:text-green-300">
+            <div className="mb-1 text-sm font-bold text-blue-700 tracking-wide uppercase dark:text-blue-300">
               Step
             </div>
             {/* Circular step number badge with animated shadow */}
             <div className="mb-4 relative">
               <div className={cn(
-                "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500/90 to-yellow-300 font-roboto text-xl font-bold text-white shadow-lg ring-4 ring-white dark:ring-zinc-900 transition-transform transform-gpu",
-                "group-hover:scale-105 group-hover:ring-green-700"
+                "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-500/90 to-blue-300 font-roboto text-xl font-bold text-white shadow-lg ring-4 ring-white dark:ring-zinc-900 transition-transform transform-gpu",
+                "group-hover:scale-105 group-hover:ring-blue-700"
               )}>
                 {index + 1}
               </div>
               {/* Draw connecting lines for mobile below badge */}
               {index !== steps.length - 1 && (
-                <div className="lg:hidden absolute left-1/2 top-full mt-1 w-0.5 h-8 bg-gradient-to-b from-green-300/60 via-gray-200 to-yellow-100 rounded-full -translate-x-1/2" />
+                <div className="lg:hidden absolute left-1/2 top-full mt-1 w-0.5 h-8 bg-gradient-to-b from-blue-300/60 via-gray-200 to-slate-100 rounded-full -translate-x-1/2" />
               )}
             </div>
             {/* Icon for the step */}
@@ -193,7 +250,7 @@ const HowToComponent = ({ steps }) => {
               <IconSwitch iconName={step.icon} />
             </div>
             {/* Step Title */}
-            <h3 className="font-roboto text-lg font-semibold text-green-900 sm:text-xl dark:text-green-200 mb-2 leading-tight h-[56px]">
+            <h3 className="font-roboto text-lg font-semibold text-neutral-900 sm:text-xl dark:text-neutral-100 mb-2 leading-tight h-[56px]">
               {/* If the step title is empty, fallback to 'Step X' */}
               {step.title?.trim()
                 ? step.title
@@ -242,9 +299,9 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
   const b = getBonusFields(firstBonus);
   const href = b?.referralUrl;
   return (
-    <div className="flex flex-col lg:flex-row items-center gap-8 w-full max-w-4xl my-12 border-2 border-green-500 rounded-2xl p-6 overflow-hidden mx-auto bg-gradient-to-tr from-green-200 via-gray-50 to-orange-100 shadow-md relative dark:bg-gradient-to-tr dark:from-green-900 dark:via-zinc-800 dark:to-yellow-950 dark:border-green-700">
+    <div className="flex flex-col lg:flex-row items-center gap-8 w-full max-w-4xl my-12 border-2 border-blue-500 rounded-2xl p-6 overflow-hidden mx-auto bg-gradient-to-tr from-blue-50 via-gray-50 to-slate-100 shadow-md relative dark:bg-gradient-to-tr dark:from-blue-950 dark:via-zinc-800 dark:to-zinc-900 dark:border-blue-700">
       <div className="flex flex-col flex-1 gap-4">
-        <h3 className="font-roboto text-2xl font-bold mb-2 text-green-900 leading-snug dark:text-green-200">
+        <h3 className="font-roboto text-2xl font-bold mb-2 text-neutral-900 leading-snug dark:text-neutral-100">
           {b?.name}
         </h3>
         <p className="text-base text-gray-600 mb-4 dark:text-gray-300">
@@ -276,7 +333,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
           width={350}
           height={240}
           sizes="(max-width: 768px) 100vw, 350px"
-          className={`border-4 border-green-200 object-contain rounded-xl shadow-lg mx-auto dark:border-green-800 ${className || ""}`}
+          className={`border-4 border-blue-200 object-contain rounded-xl shadow-lg mx-auto dark:border-blue-800 ${className || ""}`}
         />
       </div>
     </div>
@@ -287,9 +344,9 @@ const HighlightBox = ({ firstBonus, children }) => {
   const b = getBonusFields(firstBonus);
   const href = b?.referralUrl;
   return (
-    <div className="my-10 border-2 border-green-500 bg-gradient-to-br from-green-200 via-white to-orange-100 px-10 py-6 rounded-2xl flex flex-col md:flex-row items-center gap-8 w-full shadow-md dark:border-green-700 dark:bg-gradient-to-br dark:from-green-900 dark:via-zinc-800 dark:to-yellow-950">
+    <div className="my-10 border-2 border-blue-500 bg-gradient-to-br from-blue-50 via-white to-slate-100 px-10 py-6 rounded-2xl flex flex-col md:flex-row items-center gap-8 w-full shadow-md dark:border-blue-700 dark:bg-gradient-to-br dark:from-blue-950 dark:via-zinc-800 dark:to-zinc-900">
       <Crown className="w-16 h-16 text-yellow-500 mb-2 md:mb-0 dark:text-yellow-300" />
-      <div className="text-green-900 flex-1 text-lg dark:text-green-200">
+      <div className="text-neutral-900 flex-1 text-lg dark:text-neutral-100">
         {children}
       </div>
       <div className="flex flex-col gap-3 w-full max-w-xs mt-4 md:mt-0">
@@ -306,7 +363,7 @@ const HighlightBox = ({ firstBonus, children }) => {
         ) : null}
         <a
           href="/terms-and-conditions/"
-          className="text-center text-xs text-green-800 dark:text-green-300 underline font-medium hover:no-underline"
+          className="text-center text-xs text-blue-800 dark:text-blue-300 underline font-medium hover:no-underline"
         >
           Terms &amp; Conditions
         </a>
@@ -387,7 +444,10 @@ export const ContentComponent = ({
 }) => {
   const pbClass = paddingBottomMap[spaceBottom] ?? paddingBottomMap[0];
   const mtClass = marginTopMap[spaceTop] ?? marginTopMap[0];
+
   if (typeof content !== "string" || !content.trim()) return null;
+
+
   return (
     <div
       className={cn(
@@ -401,7 +461,7 @@ export const ContentComponent = ({
           <article
             className={cn(
               "max-w-none bg-transparent",
-              "selection:bg-emerald-200/40 dark:selection:bg-emerald-900/40",
+              "selection:bg-blue-200/40 dark:selection:bg-blue-900/40",
             )}
           >
             <ReactMarkdown
@@ -667,7 +727,9 @@ export const ContentComponent = ({
                   <li
                     className="mb-1.5 text-[16px] leading-[1.476] tracking-[-0.015em] text-[#333333] dark:text-neutral-200"
                     {...props}
-                  />
+                  >
+                    {props.children}
+                  </li>
                 ),
                 blockquote: ({ node, ...props }) => (
                   <blockquote

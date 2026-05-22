@@ -111,7 +111,7 @@ export function ArticleMarkdownCriteriaGrid({ items }) {
             key={i}
             className="criteria-item flex gap-3 rounded-xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-700 dark:bg-zinc-900/80"
           >
-            <Icon className="mt-0.5 h-6 w-6 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
+            <Icon className="mt-0.5 h-6 w-6 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden />
             <div className="min-w-0">
               <div className="criteria-title font-heading text-sm font-semibold text-neutral-900 dark:text-neutral-100">
                 {item.title}
@@ -166,15 +166,15 @@ export function ArticleMarkdownEditorNote({ children }) {
 export function ArticleMarkdownProsCons({ prosTitle = "Fordele", consTitle = "Ulemper", pros, cons }) {
   return (
     <div className="pros-cons my-8 grid gap-6 lg:grid-cols-2">
-      <div className="pros rounded-xl border border-green-200 bg-green-50/60 p-5 dark:border-green-900 dark:bg-green-950/30">
-        <div className="pros-label mb-4 flex items-center gap-2 font-heading text-lg font-bold text-green-900 dark:text-green-100">
-          <ThumbsUp className="h-5 w-5 text-green-600 dark:text-green-400" aria-hidden />
+      <div className="pros rounded-xl border border-blue-200 bg-blue-50/60 p-5 dark:border-blue-900 dark:bg-blue-950/30">
+        <div className="pros-label mb-4 flex items-center gap-2 font-heading text-lg font-bold text-neutral-900 dark:text-neutral-100">
+          <ThumbsUp className="h-5 w-5 text-blue-600 dark:text-blue-400" aria-hidden />
           {prosTitle}
         </div>
         <div className="space-y-3">
           {pros.map((line, i) => (
-            <div key={i} className="pro-item flex gap-2 text-sm leading-relaxed text-green-900 dark:text-green-100">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
+            <div key={i} className="pro-item flex gap-2 text-sm leading-relaxed text-neutral-800 dark:text-neutral-200">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden />
               <span>{line}</span>
             </div>
           ))}
@@ -269,7 +269,7 @@ export function ArticleMarkdownHowToStepCards({ steps }) {
             key={index}
             className="step-card flex flex-col rounded-xl border border-neutral-200 bg-white p-5 text-center shadow-sm dark:border-neutral-700 dark:bg-zinc-900/80"
           >
-            <div className="step-icon mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">
+            <div className="step-icon mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
               <Icon className="h-6 w-6" aria-hidden />
             </div>
             <div className="step-num text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">

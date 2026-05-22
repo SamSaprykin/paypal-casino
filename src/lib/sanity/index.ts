@@ -6,7 +6,7 @@ export {
 } from "./client";
 
 // Intl helpers
-export { deepPickIntl, resolveWebsiteLocale } from "./intl";
+export { deepPickIntl, pickIntlCasinoList, resolveWebsiteLocale } from "./intl";
 export { WEBSITE_LOCALE_KEYS, isWebsiteLocaleKey } from "./locales";
 export type { WebsiteLocaleKey } from "./locales";
 
@@ -22,6 +22,10 @@ export {
   homeHrefForLocale,
   localizedHref,
   localizedStaticPageHref,
+  localizedCasinoDetailHref,
+  localizedCasinoListingHref,
+  casinoUrlSegmentForLocale,
+  CASINO_URL_SEGMENT,
   websiteLocaleFromPageLang,
 } from "./routing";
 export type { LocalizedPageLangCode } from "./routing";
@@ -33,6 +37,8 @@ export {
   BLOG_POSTS_BY_CATEGORY_QUERY,
   BLOG_POST_BY_SLUG_QUERY,
   buildWebsitePageBySlugQuery,
+  buildCasinoBySlugQuery,
+  ALL_CASINOS_QUERY,
 } from "./queries";
 
 // Page model + adapter
@@ -50,6 +56,7 @@ export type {
 } from "./sections";
 
 // Card adapters (only consumed by legacy card components)
+export { hasCasinoReviewBody } from "./intlMarkdown";
 export { adaptCasinoForCard } from "./cards";
 export type { CasinoCardData } from "./cards";
 
@@ -75,6 +82,27 @@ export {
   resolveBlogCategoryLabel,
 } from "./blogPosts";
 export type { SanityBlogArticle } from "./blogPosts";
+
+// Casino detail pages
+export {
+  adaptCasinoPage,
+  getAllCasinosSanity,
+  getCasinoBySlugSanity,
+  getCasinoDetailEntries,
+  getCasinoReviewBodyMap,
+  getLocalizedCasinoDetailStaticPaths,
+  getRootCasinoDetailStaticPaths,
+  isCasinoAvailableInLocale,
+  getCasinoCountrySelectorHrefs,
+} from "./casinos";
+export type {
+  CasinoFaq,
+  CasinoListEntry,
+  CasinoPage,
+  CasinoPlayerReview,
+  LocalizedCasinoDetailPath,
+  RootCasinoDetailPath,
+} from "./casinos";
 
 // Misc
 export { portableTextApproxMinutes, portableTextToPlainText } from "./portableTextPlain";

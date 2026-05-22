@@ -18,6 +18,7 @@ interface Props {
 
 const { casino, copy: copyProp } = Astro.props as Props;
 const copy = copyProp ?? CASINO_LISTING_CARD_COPY["en-IE"];
+const reviewHref = casino?.fields?.reviewHref;
 
 const firstBonus = casino.fields?.bonuses ? casino.fields?.bonuses[0] : null;
 const ratingValue = casino?.fields?.casinoRates?.[0]?.fields?.ratingNumber;
@@ -58,20 +59,32 @@ const starsAriaLabel =
         class="flex flex-col items-center justify-center p-2.5 border border-gray-200 rounded-md mx-3 my-1 min-w-[100px] lg:min-w-[136px] -mt-7 md:mt-0"
         style={`background-color:${casino?.fields?.backgroundColor}`}
       >
-        <div class="mb-1 flex h-[34px] w-[72px] items-center justify-center">
+        <div class="mb-1 flex h-[34px] w-[72px] items-center justify-center overflow-hidden">
           <Image
-            src={addHttps(casino?.fields?.logo?.fields?.file?.url) || "/placeholder.svg"}
+            src={addHttps(casino?.fields?.logo?.fields?.file?.url)}
             alt={`${casino?.fields?.casinoName} logo`}
-            width="90"
-            height="50"
+            width={72}
+            height={34}
             format="webp"
-            class="rounded-md object-contain"
+            class="rounded-md object-contain w-full h-full"
             loading="lazy"
+            style="object-fit: contain; width: 100%; height: 100%;"
           />
         </div>
-        <span class="text-sm text-center font-semibold text-gray-100 leading-tight">
-          {casino?.fields?.casinoName}
-        </span>
+
+        {reviewHref ? (
+          <a
+            href={reviewHref}
+            class="text-sm text-center font-semibold text-gray-100 leading-tight underline decoration-gray-200/80 underline-offset-2 transition-colors duration-200 hover:decoration-white hover:text-white"
+            aria-label={`${copy.readReview}: ${casino?.fields?.casinoName}`}
+          >
+            {casino?.fields?.casinoName}
+          </a>
+        ) : (
+          <span class="text-sm text-center font-semibold text-gray-100 leading-tight">
+            {casino?.fields?.casinoName}
+          </span>
+        )}
       </div>
       <div class="mb-0.5 mx-auto flex max-w-[90%] flex-col items-center gap-0.5 rounded-xl md:rounded-full bg-blue-50 px-2 py-1.5 lg:hidden">
         <span class="text-center text-xs font-bold tabular-nums tracking-tight text-blue-950">
@@ -94,7 +107,7 @@ const starsAriaLabel =
     </div>
 
     <!-- 3. Bonus Info + Description Column -->
-    <div class="flex-1 px-3 hidden lg:block">
+    <div class="flex-1 px-3 hidden lg:block min-w-[200px]">
       <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-2 border border-blue-200">
         <p class="text-[11px] text-blue-700 font-bold mb-0.5 uppercase tracking-wide">
           {firstBonus?.fields?.code || copy.welcomeBonusFallback}

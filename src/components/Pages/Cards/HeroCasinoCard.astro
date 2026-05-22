@@ -24,6 +24,7 @@ const { casino, listingCopy: listingCopyProp, locale = "en-IE" } = Astro.props;
 
 const listingCopy = listingCopyProp ?? CASINO_LISTING_CARD_COPY[locale];
 const heroButtonCopy = CASINO_HERO_CARD_COPY[locale];
+const reviewHref = casino?.fields?.reviewHref;
 
 const ratingValue = casino?.fields?.casinoRates?.[0]?.fields?.ratingNumber;
 const ratingOutOfFive = formatRatingOutOfFive(ratingValue);
@@ -51,7 +52,17 @@ const starsAriaLabel =
       />
     </div>
     <h2 class="mb-2 text-center text-2xl font-semibold text-gray-900">
-      {casino?.fields?.casinoName}
+      {reviewHref ? (
+        <a
+          href={reviewHref}
+          class="underline decoration-blue-300 underline-offset-2 transition-colors duration-200 hover:text-blue-700 hover:decoration-blue-600"
+          aria-label={`${heroButtonCopy.readReview}: ${casino?.fields?.casinoName}`}
+        >
+          {casino?.fields?.casinoName}
+        </a>
+      ) : (
+        casino?.fields?.casinoName
+      )}
     </h2>
     <div class="mb-1 flex flex-col items-center gap-1 rounded-full bg-gray-200/90 px-4 py-2">
       <span class="text-center text-base font-bold tabular-nums tracking-tight text-gray-900">

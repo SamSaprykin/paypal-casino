@@ -28,114 +28,6 @@ type Block {
   style: String
 }
 
-union BlockOrFileOrImage = Block | File | Image
-
-type BlogAuthor implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  bio: String
-  expertise: [String]
-  name: String
-}
-
-input BlogAuthorFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  bio: StringFilter
-  name: StringFilter
-}
-
-input BlogAuthorSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  bio: SortOrder
-  name: SortOrder
-}
-
-type BlogPost implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  author: BlogAuthor
-  bodyRaw: JSON
-  cardDescription: String
-  category: String
-  created: DateTime
-  description: String
-  featuredImage: Image
-  highlightsRaw: JSON
-  relatedCasinosList: [Casino]
-  relatedCasinosTitle: String
-  seoComponent: SeoComponent
-  slug: String
-  title: String
-}
-
-input BlogPostFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  author: BlogAuthorFilter
-  cardDescription: StringFilter
-  category: StringFilter
-  created: DatetimeFilter
-  description: StringFilter
-  featuredImage: ImageFilter
-  relatedCasinosTitle: StringFilter
-  seoComponent: SeoComponentFilter
-  slug: StringFilter
-  title: StringFilter
-}
-
-input BlogPostSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  cardDescription: SortOrder
-  category: SortOrder
-  created: SortOrder
-  description: SortOrder
-  featuredImage: ImageSorting
-  relatedCasinosTitle: SortOrder
-  slug: SortOrder
-  title: SortOrder
-}
-
 type Bonus implements Document {
   """Date the document was created"""
   _createdAt: DateTime
@@ -191,34 +83,6 @@ input BonusSorting {
   referralUrl: SortOrder
 }
 
-type BonusesList implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  bonuses: [Bonus]
-  title: String
-}
-
-input BonusesListFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  title: StringFilter
-}
-
 type BonusesListIntl implements Document {
   """Date the document was created"""
   _createdAt: DateTime
@@ -247,7 +111,7 @@ input BonusesListIntlFilter {
   title: IntlTextFilter
 }
 
-union BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl = BonusesListIntl | CasinoListIntl | ContentComponentIntl | FaqComponentIntl | FeaturedArticlesIntl | GameOfTheMonthIntl | HeroDefaultWithCasinoCardsIntl | HeroTextIntl | HowToIntl | SeoComponentIntl
+union BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrSeoComponentIntl = BonusesListIntl | CasinoListIntl | ContentComponentIntl | FaqComponentIntl | SeoComponentIntl
 
 input BonusesListIntlSorting {
   _createdAt: SortOrder
@@ -257,16 +121,6 @@ input BonusesListIntlSorting {
   _type: SortOrder
   _updatedAt: SortOrder
   title: IntlTextSorting
-}
-
-input BonusesListSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  title: SortOrder
 }
 
 input BooleanFilter {
@@ -292,16 +146,22 @@ type Casino implements Document {
   _updatedAt: DateTime
   availableInCountries: CasinoAvailableInCountries
   backgroundColor: Color
+  body: IntlMarkdown
   bonuses: [Bonus]
   casinoName: String
+  consIntl: IntlStringArray
   depositMethods: [String]
+  """FAQ block with localized questions and answers."""
+  faq: FaqComponentIntl
   license: String
   logo: Image
   payoutLimits: String
   payoutTimes: [String]
+  prosIntl: IntlStringArray
   """Overall score from 0 to 5 in steps of 0.1"""
   rating: Float
   referralUrl: String
+  reviewsIntl: IntlPlayerReviews
   shortDescription: String
   slug: String
   software: [String]
@@ -354,47 +214,21 @@ input CasinoFilter {
   _updatedAt: DatetimeFilter
   availableInCountries: CasinoAvailableInCountriesFilter
   backgroundColor: ColorFilter
+  body: IntlMarkdownFilter
   casinoName: StringFilter
+  consIntl: IntlStringArrayFilter
+  faq: FaqComponentIntlFilter
   license: StringFilter
   logo: ImageFilter
   payoutLimits: StringFilter
+  prosIntl: IntlStringArrayFilter
   rating: FloatFilter
   referralUrl: StringFilter
+  reviewsIntl: IntlPlayerReviewsFilter
   shortDescription: StringFilter
   slug: StringFilter
   userRecommendationsRecommendedNumber: FloatFilter
   userRecommendationsTotalNumber: FloatFilter
-}
-
-type CasinoList implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  anchorTitle: String
-  casinoList: [Casino]
-  copyAfterRaw: JSON
-  copyBefore: String
-}
-
-input CasinoListFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  anchorTitle: StringFilter
-  copyBefore: StringFilter
 }
 
 type CasinoListIntl implements Document {
@@ -410,7 +244,7 @@ type CasinoListIntl implements Document {
   """Date the document was last modified"""
   _updatedAt: DateTime
   anchorTitle: IntlText
-  casinoList: [Casino]
+  casinoListsByCountry: IntlCasinoRefList
   copyAfter: IntlBlockContent
   copyBefore: IntlText
 }
@@ -425,6 +259,7 @@ input CasinoListIntlFilter {
   _type: StringFilter
   _updatedAt: DatetimeFilter
   anchorTitle: IntlTextFilter
+  casinoListsByCountry: IntlCasinoRefListFilter
   copyAfter: IntlBlockContentFilter
   copyBefore: IntlTextFilter
 }
@@ -437,59 +272,9 @@ input CasinoListIntlSorting {
   _type: SortOrder
   _updatedAt: SortOrder
   anchorTitle: IntlTextSorting
+  casinoListsByCountry: IntlCasinoRefListSorting
   copyAfter: IntlBlockContentSorting
   copyBefore: IntlTextSorting
-}
-
-input CasinoListSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  anchorTitle: SortOrder
-  copyBefore: SortOrder
-}
-
-type CasinoRating implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  """Document ID"""
-  _id: ID @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  _key: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  """Current document revision"""
-  _rev: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  """Document type"""
-  _type: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  """Date the document was last modified"""
-  _updatedAt: DateTime @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  ratingNumber: Float @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-  ratingType: String @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
-}
-
-input CasinoRatingFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  ratingNumber: FloatFilter
-  ratingType: StringFilter
-}
-
-input CasinoRatingSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  ratingNumber: SortOrder
-  ratingType: SortOrder
 }
 
 input CasinoSorting {
@@ -501,12 +286,16 @@ input CasinoSorting {
   _updatedAt: SortOrder
   availableInCountries: CasinoAvailableInCountriesSorting
   backgroundColor: ColorSorting
+  body: IntlMarkdownSorting
   casinoName: SortOrder
+  consIntl: IntlStringArraySorting
   license: SortOrder
   logo: ImageSorting
   payoutLimits: SortOrder
+  prosIntl: IntlStringArraySorting
   rating: SortOrder
   referralUrl: SortOrder
+  reviewsIntl: IntlPlayerReviewsSorting
   shortDescription: SortOrder
   slug: SortOrder
   userRecommendationsRecommendedNumber: SortOrder
@@ -610,92 +399,6 @@ input CrossDatasetReferenceSorting {
   _weak: SortOrder
 }
 
-type CtaButton implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  buttonType: String
-  copy: String
-  url: String
-}
-
-input CtaButtonFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  buttonType: StringFilter
-  copy: StringFilter
-  url: StringFilter
-}
-
-type CtaButtonIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  buttonType: String
-  copy: IntlText
-  url: String
-}
-
-input CtaButtonIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  buttonType: StringFilter
-  copy: IntlTextFilter
-  url: StringFilter
-}
-
-input CtaButtonIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  buttonType: SortOrder
-  copy: IntlTextSorting
-  url: SortOrder
-}
-
-input CtaButtonSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  buttonType: SortOrder
-  copy: SortOrder
-  url: SortOrder
-}
-
 """
 A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
 """
@@ -772,36 +475,6 @@ input DocumentSorting {
   _updatedAt: SortOrder
 }
 
-type FaqComponent implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  faqItems: [FaqItem]
-  spaceTop: Float
-  title: String
-}
-
-input FaqComponentFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  spaceTop: FloatFilter
-  title: StringFilter
-}
-
 type FaqComponentIntl implements Document {
   """Date the document was created"""
   _createdAt: DateTime
@@ -841,47 +514,6 @@ input FaqComponentIntlSorting {
   _updatedAt: SortOrder
   spaceTop: SortOrder
   title: IntlTextSorting
-}
-
-input FaqComponentSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  spaceTop: SortOrder
-  title: SortOrder
-}
-
-type FaqItem implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  """Markdown-supported answer content."""
-  faqAnswer: String
-  faqQuestion: String
-}
-
-input FaqItemFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  faqAnswer: StringFilter
-  faqQuestion: StringFilter
 }
 
 type FaqItemIntl implements Document {
@@ -924,97 +556,6 @@ input FaqItemIntlSorting {
   faqQuestion: IntlTextSorting
 }
 
-input FaqItemSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  faqAnswer: SortOrder
-  faqQuestion: SortOrder
-}
-
-type FeaturedArticles implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  descriptionRaw: JSON
-  relatedArticles: [BlogPost]
-  title: String
-}
-
-input FeaturedArticlesFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  title: StringFilter
-}
-
-type FeaturedArticlesIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  description: IntlMarkdown
-  relatedArticles: [BlogPost]
-  title: IntlText
-}
-
-input FeaturedArticlesIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  description: IntlMarkdownFilter
-  title: IntlTextFilter
-}
-
-input FeaturedArticlesIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  description: IntlMarkdownSorting
-  title: IntlTextSorting
-}
-
-input FeaturedArticlesSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  title: SortOrder
-}
-
 type File {
   _key: String
   _type: String
@@ -1050,110 +591,6 @@ input FloatFilter {
   lte: Float
   """Checks if the value is not equal to the given input."""
   neq: Float
-}
-
-type GameOfTheMonth implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  casinoLinks: [CtaButton]
-  gameDescriptionRaw: JSON
-  gameName: String
-  image: Image
-  link: String
-  subtitle: String
-  title: String
-}
-
-input GameOfTheMonthFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  gameName: StringFilter
-  image: ImageFilter
-  link: StringFilter
-  subtitle: StringFilter
-  title: StringFilter
-}
-
-type GameOfTheMonthIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  casinoLinks: [CtaButtonIntl]
-  gameDescription: IntlMarkdown
-  gameName: IntlText
-  image: Image
-  link: String
-  subtitle: IntlText
-  title: IntlText
-}
-
-input GameOfTheMonthIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  gameDescription: IntlMarkdownFilter
-  gameName: IntlTextFilter
-  image: ImageFilter
-  link: StringFilter
-  subtitle: IntlTextFilter
-  title: IntlTextFilter
-}
-
-input GameOfTheMonthIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  gameDescription: IntlMarkdownSorting
-  gameName: IntlTextSorting
-  image: ImageSorting
-  link: SortOrder
-  subtitle: IntlTextSorting
-  title: IntlTextSorting
-}
-
-input GameOfTheMonthSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  gameName: SortOrder
-  image: ImageSorting
-  link: SortOrder
-  subtitle: SortOrder
-  title: SortOrder
 }
 
 type Geopoint {
@@ -1199,330 +636,6 @@ input GlobalDocumentReferenceSorting {
   _ref: SortOrder
   _type: SortOrder
   _weak: SortOrder
-}
-
-type HeroDefaultWithCasinoCards implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  callToAction: CtaButton
-  casinos: [Casino]
-  ctaTitle: String
-  description: String
-  title: String
-}
-
-input HeroDefaultWithCasinoCardsFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  callToAction: CtaButtonFilter
-  ctaTitle: StringFilter
-  description: StringFilter
-  title: StringFilter
-}
-
-type HeroDefaultWithCasinoCardsIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  callToAction: CtaButtonIntl
-  casinos: [Casino]
-  ctaTitle: IntlText
-  description: IntlText
-  title: IntlText
-}
-
-input HeroDefaultWithCasinoCardsIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  callToAction: CtaButtonIntlFilter
-  ctaTitle: IntlTextFilter
-  description: IntlTextFilter
-  title: IntlTextFilter
-}
-
-input HeroDefaultWithCasinoCardsIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  ctaTitle: IntlTextSorting
-  description: IntlTextSorting
-  title: IntlTextSorting
-}
-
-input HeroDefaultWithCasinoCardsSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  ctaTitle: SortOrder
-  description: SortOrder
-  title: SortOrder
-}
-
-type HeroText implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  copyRaw: JSON
-}
-
-input HeroTextFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-}
-
-type HeroTextIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  copy: IntlMarkdown
-}
-
-input HeroTextIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  copy: IntlMarkdownFilter
-}
-
-input HeroTextIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  copy: IntlMarkdownSorting
-}
-
-input HeroTextSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-}
-
-type HowTo implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  howToItems: [HowToItem]
-  title: String
-}
-
-input HowToFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  title: StringFilter
-}
-
-type HowToIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  howToItems: [HowToItemIntl]
-  title: IntlText
-}
-
-input HowToIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  title: IntlTextFilter
-}
-
-input HowToIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  title: IntlTextSorting
-}
-
-type HowToItem implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  iconName: String
-  steps: [String]
-  title: String
-}
-
-input HowToItemFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  iconName: StringFilter
-  title: StringFilter
-}
-
-type HowToItemIntl implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  iconName: String
-  steps: IntlStringArray
-  title: IntlText
-}
-
-input HowToItemIntlFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  iconName: StringFilter
-  steps: IntlStringArrayFilter
-  title: IntlTextFilter
-}
-
-input HowToItemIntlSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  iconName: SortOrder
-  steps: IntlStringArraySorting
-  title: IntlTextSorting
-}
-
-input HowToItemSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  iconName: SortOrder
-  title: SortOrder
-}
-
-input HowToSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  title: SortOrder
 }
 
 type HslaColor {
@@ -1672,6 +785,27 @@ input IntlBlockContentSorting {
   sweden: SortOrder
 }
 
+type IntlCasinoRefList {
+  _key: String
+  _type: String
+  denmark: [Casino]
+  finland: [Casino]
+  germany: [Casino]
+  ireland: [Casino]
+  norway: [Casino]
+  sweden: [Casino]
+}
+
+input IntlCasinoRefListFilter {
+  _key: StringFilter
+  _type: StringFilter
+}
+
+input IntlCasinoRefListSorting {
+  _key: SortOrder
+  _type: SortOrder
+}
+
 type IntlDescription {
   _key: String
   _type: String
@@ -1744,6 +878,39 @@ input IntlMarkdownSorting {
   sweden: SortOrder
 }
 
+type IntlPlayerReviews {
+  _key: String
+  _type: String
+  denmark: PlayerReviewSlot
+  finland: PlayerReviewSlot
+  germany: PlayerReviewSlot
+  ireland: PlayerReviewSlot
+  norway: PlayerReviewSlot
+  sweden: PlayerReviewSlot
+}
+
+input IntlPlayerReviewsFilter {
+  _key: StringFilter
+  _type: StringFilter
+  denmark: PlayerReviewSlotFilter
+  finland: PlayerReviewSlotFilter
+  germany: PlayerReviewSlotFilter
+  ireland: PlayerReviewSlotFilter
+  norway: PlayerReviewSlotFilter
+  sweden: PlayerReviewSlotFilter
+}
+
+input IntlPlayerReviewsSorting {
+  _key: SortOrder
+  _type: SortOrder
+  denmark: PlayerReviewSlotSorting
+  finland: PlayerReviewSlotSorting
+  germany: PlayerReviewSlotSorting
+  ireland: PlayerReviewSlotSorting
+  norway: PlayerReviewSlotSorting
+  sweden: PlayerReviewSlotSorting
+}
+
 type IntlStringArray {
   _key: String
   _type: String
@@ -1798,11 +965,6 @@ input IntlTextSorting {
   sweden: SortOrder
 }
 
-"""
-The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
-"""
-scalar JSON
-
 type MediaTag implements Document {
   """Date the document was created"""
   _createdAt: DateTime
@@ -1840,6 +1002,38 @@ input MediaTagSorting {
   name: SlugSorting
 }
 
+type PlayerReviewSlot {
+  _key: String
+  _type: String
+  """Shown as-written for this locale (e.g. Stockholm, Sweden)"""
+  country: String
+  date: DateTime
+  description: String
+  personName: String
+  """1–10 player score"""
+  rating: Float
+}
+
+input PlayerReviewSlotFilter {
+  _key: StringFilter
+  _type: StringFilter
+  country: StringFilter
+  date: DatetimeFilter
+  description: StringFilter
+  personName: StringFilter
+  rating: FloatFilter
+}
+
+input PlayerReviewSlotSorting {
+  _key: SortOrder
+  _type: SortOrder
+  country: SortOrder
+  date: SortOrder
+  description: SortOrder
+  personName: SortOrder
+  rating: SortOrder
+}
+
 type RgbaColor {
   _key: String
   _type: String
@@ -1868,22 +1062,10 @@ input RgbaColorSorting {
 }
 
 type RootQuery {
-  BlogAuthor(
-    """BlogAuthor document ID"""
-    id: ID!
-  ): BlogAuthor
-  BlogPost(
-    """BlogPost document ID"""
-    id: ID!
-  ): BlogPost
   Bonus(
     """Bonus document ID"""
     id: ID!
   ): Bonus
-  BonusesList(
-    """BonusesList document ID"""
-    id: ID!
-  ): BonusesList
   BonusesListIntl(
     """BonusesListIntl document ID"""
     id: ID!
@@ -1892,98 +1074,26 @@ type RootQuery {
     """Casino document ID"""
     id: ID!
   ): Casino
-  CasinoList(
-    """CasinoList document ID"""
-    id: ID!
-  ): CasinoList
   CasinoListIntl(
     """CasinoListIntl document ID"""
     id: ID!
   ): CasinoListIntl
-  CasinoRating(
-    """CasinoRating document ID"""
-    id: ID!
-  ): CasinoRating @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
   ContentComponentIntl(
     """ContentComponentIntl document ID"""
     id: ID!
   ): ContentComponentIntl
-  CtaButton(
-    """CtaButton document ID"""
-    id: ID!
-  ): CtaButton
-  CtaButtonIntl(
-    """CtaButtonIntl document ID"""
-    id: ID!
-  ): CtaButtonIntl
   Document(
     """Document document ID"""
     id: ID!
   ): Document
-  FaqComponent(
-    """FaqComponent document ID"""
-    id: ID!
-  ): FaqComponent
   FaqComponentIntl(
     """FaqComponentIntl document ID"""
     id: ID!
   ): FaqComponentIntl
-  FaqItem(
-    """FaqItem document ID"""
-    id: ID!
-  ): FaqItem
   FaqItemIntl(
     """FaqItemIntl document ID"""
     id: ID!
   ): FaqItemIntl
-  FeaturedArticles(
-    """FeaturedArticles document ID"""
-    id: ID!
-  ): FeaturedArticles
-  FeaturedArticlesIntl(
-    """FeaturedArticlesIntl document ID"""
-    id: ID!
-  ): FeaturedArticlesIntl
-  GameOfTheMonth(
-    """GameOfTheMonth document ID"""
-    id: ID!
-  ): GameOfTheMonth
-  GameOfTheMonthIntl(
-    """GameOfTheMonthIntl document ID"""
-    id: ID!
-  ): GameOfTheMonthIntl
-  HeroDefaultWithCasinoCards(
-    """HeroDefaultWithCasinoCards document ID"""
-    id: ID!
-  ): HeroDefaultWithCasinoCards
-  HeroDefaultWithCasinoCardsIntl(
-    """HeroDefaultWithCasinoCardsIntl document ID"""
-    id: ID!
-  ): HeroDefaultWithCasinoCardsIntl
-  HeroText(
-    """HeroText document ID"""
-    id: ID!
-  ): HeroText
-  HeroTextIntl(
-    """HeroTextIntl document ID"""
-    id: ID!
-  ): HeroTextIntl
-  HowTo(
-    """HowTo document ID"""
-    id: ID!
-  ): HowTo
-  HowToIntl(
-    """HowToIntl document ID"""
-    id: ID!
-  ): HowToIntl
-  HowToItem(
-    """HowToItem document ID"""
-    id: ID!
-  ): HowToItem
-  HowToItemIntl(
-    """HowToItemIntl document ID"""
-    id: ID!
-  ): HowToItemIntl
   MediaTag(
     """MediaTag document ID"""
     id: ID!
@@ -1996,10 +1106,6 @@ type RootQuery {
     """SanityImageAsset document ID"""
     id: ID!
   ): SanityImageAsset
-  SeoComponent(
-    """SeoComponent document ID"""
-    id: ID!
-  ): SeoComponent
   SeoComponentIntl(
     """SeoComponentIntl document ID"""
     id: ID!
@@ -2008,22 +1114,6 @@ type RootQuery {
     """WebsitePageIntl document ID"""
     id: ID!
   ): WebsitePageIntl
-  allBlogAuthor(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [BlogAuthorSorting!]
-    where: BlogAuthorFilter
-  ): [BlogAuthor!]!
-  allBlogPost(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [BlogPostSorting!]
-    where: BlogPostFilter
-  ): [BlogPost!]!
   allBonus(
     """Max documents to return"""
     limit: Int
@@ -2032,14 +1122,6 @@ type RootQuery {
     sort: [BonusSorting!]
     where: BonusFilter
   ): [Bonus!]!
-  allBonusesList(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [BonusesListSorting!]
-    where: BonusesListFilter
-  ): [BonusesList!]!
   allBonusesListIntl(
     """Max documents to return"""
     limit: Int
@@ -2056,14 +1138,6 @@ type RootQuery {
     sort: [CasinoSorting!]
     where: CasinoFilter
   ): [Casino!]!
-  allCasinoList(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [CasinoListSorting!]
-    where: CasinoListFilter
-  ): [CasinoList!]!
   allCasinoListIntl(
     """Max documents to return"""
     limit: Int
@@ -2072,14 +1146,6 @@ type RootQuery {
     sort: [CasinoListIntlSorting!]
     where: CasinoListIntlFilter
   ): [CasinoListIntl!]!
-  allCasinoRating(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [CasinoRatingSorting!]
-    where: CasinoRatingFilter
-  ): [CasinoRating!]! @deprecated(reason: "Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.")
   allContentComponentIntl(
     """Max documents to return"""
     limit: Int
@@ -2088,22 +1154,6 @@ type RootQuery {
     sort: [ContentComponentIntlSorting!]
     where: ContentComponentIntlFilter
   ): [ContentComponentIntl!]!
-  allCtaButton(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [CtaButtonSorting!]
-    where: CtaButtonFilter
-  ): [CtaButton!]!
-  allCtaButtonIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [CtaButtonIntlSorting!]
-    where: CtaButtonIntlFilter
-  ): [CtaButtonIntl!]!
   allDocument(
     """Max documents to return"""
     limit: Int
@@ -2112,14 +1162,6 @@ type RootQuery {
     sort: [DocumentSorting!]
     where: DocumentFilter
   ): [Document!]!
-  allFaqComponent(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [FaqComponentSorting!]
-    where: FaqComponentFilter
-  ): [FaqComponent!]!
   allFaqComponentIntl(
     """Max documents to return"""
     limit: Int
@@ -2128,14 +1170,6 @@ type RootQuery {
     sort: [FaqComponentIntlSorting!]
     where: FaqComponentIntlFilter
   ): [FaqComponentIntl!]!
-  allFaqItem(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [FaqItemSorting!]
-    where: FaqItemFilter
-  ): [FaqItem!]!
   allFaqItemIntl(
     """Max documents to return"""
     limit: Int
@@ -2144,102 +1178,6 @@ type RootQuery {
     sort: [FaqItemIntlSorting!]
     where: FaqItemIntlFilter
   ): [FaqItemIntl!]!
-  allFeaturedArticles(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [FeaturedArticlesSorting!]
-    where: FeaturedArticlesFilter
-  ): [FeaturedArticles!]!
-  allFeaturedArticlesIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [FeaturedArticlesIntlSorting!]
-    where: FeaturedArticlesIntlFilter
-  ): [FeaturedArticlesIntl!]!
-  allGameOfTheMonth(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [GameOfTheMonthSorting!]
-    where: GameOfTheMonthFilter
-  ): [GameOfTheMonth!]!
-  allGameOfTheMonthIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [GameOfTheMonthIntlSorting!]
-    where: GameOfTheMonthIntlFilter
-  ): [GameOfTheMonthIntl!]!
-  allHeroDefaultWithCasinoCards(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HeroDefaultWithCasinoCardsSorting!]
-    where: HeroDefaultWithCasinoCardsFilter
-  ): [HeroDefaultWithCasinoCards!]!
-  allHeroDefaultWithCasinoCardsIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HeroDefaultWithCasinoCardsIntlSorting!]
-    where: HeroDefaultWithCasinoCardsIntlFilter
-  ): [HeroDefaultWithCasinoCardsIntl!]!
-  allHeroText(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HeroTextSorting!]
-    where: HeroTextFilter
-  ): [HeroText!]!
-  allHeroTextIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HeroTextIntlSorting!]
-    where: HeroTextIntlFilter
-  ): [HeroTextIntl!]!
-  allHowTo(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HowToSorting!]
-    where: HowToFilter
-  ): [HowTo!]!
-  allHowToIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HowToIntlSorting!]
-    where: HowToIntlFilter
-  ): [HowToIntl!]!
-  allHowToItem(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HowToItemSorting!]
-    where: HowToItemFilter
-  ): [HowToItem!]!
-  allHowToItemIntl(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [HowToItemIntlSorting!]
-    where: HowToItemIntlFilter
-  ): [HowToItemIntl!]!
   allMediaTag(
     """Max documents to return"""
     limit: Int
@@ -2264,14 +1202,6 @@ type RootQuery {
     sort: [SanityImageAssetSorting!]
     where: SanityImageAssetFilter
   ): [SanityImageAsset!]!
-  allSeoComponent(
-    """Max documents to return"""
-    limit: Int
-    """Offset at which to start returning documents from"""
-    offset: Int
-    sort: [SeoComponentSorting!]
-    where: SeoComponentFilter
-  ): [SeoComponent!]!
   allSeoComponentIntl(
     """Max documents to return"""
     limit: Int
@@ -2663,37 +1593,6 @@ input Sanity_DocumentFilter {
   references: ID
 }
 
-type SeoComponent implements Document {
-  """Date the document was created"""
-  _createdAt: DateTime
-  """Document ID"""
-  _id: ID
-  _key: String
-  """Current document revision"""
-  _rev: String
-  """Document type"""
-  _type: String
-  """Date the document was last modified"""
-  _updatedAt: DateTime
-  seoDescription: String
-  seoSlug: String
-  seoTitle: String
-}
-
-input SeoComponentFilter {
-  """Apply filters on document level"""
-  _: Sanity_DocumentFilter
-  _createdAt: DatetimeFilter
-  _id: IDFilter
-  _key: StringFilter
-  _rev: StringFilter
-  _type: StringFilter
-  _updatedAt: DatetimeFilter
-  seoDescription: StringFilter
-  seoSlug: StringFilter
-  seoTitle: StringFilter
-}
-
 type SeoComponentIntl implements Document {
   """Date the document was created"""
   _createdAt: DateTime
@@ -2735,18 +1634,6 @@ input SeoComponentIntlSorting {
   seoDescription: IntlDescriptionSorting
   seoSlug: IntlTextSorting
   seoTitle: IntlTextSorting
-}
-
-input SeoComponentSorting {
-  _createdAt: SortOrder
-  _id: SortOrder
-  _key: SortOrder
-  _rev: SortOrder
-  _type: SortOrder
-  _updatedAt: SortOrder
-  seoDescription: SortOrder
-  seoSlug: SortOrder
-  seoTitle: SortOrder
 }
 
 type Slug {
@@ -2809,7 +1696,7 @@ type WebsitePageIntl implements Document {
   _type: String
   """Date the document was last modified"""
   _updatedAt: DateTime
-  components: [BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl]
+  components: [BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrSeoComponentIntl]
   """Internal label for editors (not shown on the site)."""
   name: String
   seoComponent: SeoComponentIntl

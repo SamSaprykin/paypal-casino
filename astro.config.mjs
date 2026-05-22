@@ -11,7 +11,10 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) =>
+        !page.includes("/intl-demo") && !page.includes("/404"),
+    }),
     robotsTxt(),
   ],
   trailingSlash: 'always',

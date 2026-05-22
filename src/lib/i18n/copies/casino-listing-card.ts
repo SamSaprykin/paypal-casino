@@ -24,6 +24,7 @@ export interface CasinoListingCardCopy {
   ratingModest: string;
   ratingNotRated: string;
   playNow: string;
+  readReview: string;
   showMore: string;
   availableIn: string;
   payoutLimits: string;
@@ -79,6 +80,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Modest",
     ratingNotRated: "Not rated",
     playNow: "Play Now",
+    readReview: "Read Review",
     showMore: "Show More",
     availableIn: "Available in:",
     payoutLimits: "Payout limits",
@@ -101,6 +103,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Blygsam",
     ratingNotRated: "Ej betygsatt",
     playNow: "Spela nu",
+    readReview: "Läs recension",
     showMore: "Visa mer",
     availableIn: "Tillgänglig i:",
     payoutLimits: "Uttagsgränser",
@@ -123,6 +126,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Beskeden",
     ratingNotRated: "Ikke vurderet",
     playNow: "Spil nu",
+    readReview: "Læs anmeldelse",
     showMore: "Vis mere",
     availableIn: "Tilgængelig i:",
     payoutLimits: "Udbetalingsgrænser",
@@ -145,6 +149,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Vaatimaton",
     ratingNotRated: "Ei arvosteltu",
     playNow: "Pelaa nyt",
+    readReview: "Lue arvostelu",
     showMore: "Näytä lisää",
     availableIn: "Saatavilla:",
     payoutLimits: "Nostorajat",
@@ -167,6 +172,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Bescheiden",
     ratingNotRated: "Nicht bewertet",
     playNow: "Jetzt spielen",
+    readReview: "Testbericht lesen",
     showMore: "Mehr anzeigen",
     availableIn: "Verfügbar in:",
     payoutLimits: "Auszahlungslimits",
@@ -189,6 +195,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     ratingModest: "Beskjeden",
     ratingNotRated: "Ikke vurdert",
     playNow: "Spill nå",
+    readReview: "Les omtale",
     showMore: "Vis mer",
     availableIn: "Tilgjengelig i:",
     payoutLimits: "Utbetalingsgrenser",

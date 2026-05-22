@@ -145,6 +145,39 @@ export function localizedStaticPageHref(
   return trimmed ? `/${prefix}/${trimmed}/` : `/${prefix}/`;
 }
 
+/**
+ * Localized URL path segment for casino routes (listing + detail).
+ * e.g. ireland → `casino`, denmark → `kasino`.
+ * Keep aligned with public URLs and future `/casino/` listing pages.
+ */
+export const CASINO_URL_SEGMENT: Record<WebsiteLocaleKey, string> = {
+  ireland: "casino",
+  denmark: "kasino",
+  finland: "kasino",
+  germany: "casino",
+  norway: "kasino",
+  sweden: "casino",
+};
+
+export function casinoUrlSegmentForLocale(locale: WebsiteLocaleKey): string {
+  return CASINO_URL_SEGMENT[locale];
+}
+
+/** Public URL for a casino detail page, e.g. `/casino/bet365/` or `/dk/kasino/bet365/`. */
+export function localizedCasinoDetailHref(
+  locale: WebsiteLocaleKey,
+  casinoSlug: string,
+): string {
+  const slug = casinoSlug.replace(/^\/+|\/+$/g, "");
+  const segment = casinoUrlSegmentForLocale(locale);
+  return localizedStaticPageHref(locale, `${segment}/${slug}`);
+}
+
+/** Public URL for the casino listing hub (future page), e.g. `/casino/` or `/dk/kasino/`. */
+export function localizedCasinoListingHref(locale: WebsiteLocaleKey): string {
+  return localizedStaticPageHref(locale, casinoUrlSegmentForLocale(locale));
+}
+
 export function isRootLocaleSlug(locale: WebsiteLocaleKey, cmsSlug: string): boolean {
   return locale === ROOT_WEBSITE_LOCALE && normalizeCmsSlug(cmsSlug) === "/";
 }

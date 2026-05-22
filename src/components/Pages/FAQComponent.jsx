@@ -32,7 +32,7 @@ export function FaqAccordion({ title, items = [], spaceTop }) {
     spaceTop !== undefined && spaceTop !== null
       ? paddingTopMap[spaceTop] ?? "pt-8 md:pt-16"
       : "pt-8 md:pt-16";
-
+  console.log("items", items);
   if (!items.length) return null;
 
   return (

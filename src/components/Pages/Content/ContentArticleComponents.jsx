@@ -85,7 +85,7 @@ export function CriteriaItem({ icon = "Shield", title, description }) {
   const Icon = CRITERIA_ICONS[icon] ?? Shield;
   return (
     <div className="criteria-item flex gap-3 rounded-xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-700 dark:bg-zinc-900/80">
-      <Icon className="mt-0.5 h-6 w-6 shrink-0 text-green-600 dark:text-green-400" aria-hidden />
+      <Icon className="mt-0.5 h-6 w-6 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden />
       <div className="min-w-0">
         <div className="criteria-title font-heading text-sm font-semibold text-neutral-900 dark:text-neutral-100">
           {title}
@@ -127,7 +127,7 @@ export function StepCard({ icon = "UserPlus", stepNum, title, description }) {
   const Icon = STEP_ICONS[icon] ?? UserPlus;
   return (
     <div className="step-card flex flex-col rounded-xl border border-neutral-200 bg-white p-5 text-center shadow-sm dark:border-neutral-700 dark:bg-zinc-900/80">
-      <div className="step-icon mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">
+      <div className="step-icon mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300">
         <Icon className="h-6 w-6" aria-hidden />
       </div>
       <div className="step-num text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">

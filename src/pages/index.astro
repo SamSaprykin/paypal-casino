@@ -9,6 +9,7 @@ import {
   HOME_CMS_SLUG,
   ROOT_WEBSITE_LOCALE,
 } from "../lib/sanity";
+import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
 
@@ -23,6 +24,13 @@ if (!homePage) {
 }
 
 const htmlLang = LOCALES[localeIdForWebsiteLocale(ROOT_WEBSITE_LOCALE)].htmlLang;
+
+const webPageSchema = generateWebPageSchema(homePage);
+
+const faqSchemas = homePage.sections
+  .filter((section) => section.kind === "faqComponent")
+  .map((section) => generateFAQSchema(section))
+  .filter(Boolean);
 
 const seoData = {
   title:
@@ -42,6 +50,10 @@ const seoData = {
 
 <BaseLayout seo={seoData} lang={htmlLang}>
   <Header locale={ROOT_WEBSITE_LOCALE} localizedSlugs={homePage.localizedSlugs} />
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  {faqSchemas.length > 0 && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchemas)} />
+  )}
   <WebsitePageSections sections={homePage.sections} locale={ROOT_WEBSITE_LOCALE} />
   <Footer locale={ROOT_WEBSITE_LOCALE} />
 </BaseLayout>

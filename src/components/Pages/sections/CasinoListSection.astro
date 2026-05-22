@@ -1,16 +1,18 @@
 ---
 import CasinoListingCard from "../Cards/CasinoListingCard.astro";
 import { MarkdownSnippet } from "../MarkdownSnippet.jsx";
-import type { CasinoListSection } from "../../../lib/sanity";
-import type { WebsiteLocaleKey } from "../../../lib/sanity";
+import type { CasinoListSection, WebsiteLocaleKey } from "../../../lib/sanity";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/sanity";
+import { CASINO_LISTING_CARD_COPY, localeIdForWebsiteLocale } from "../../../lib/i18n";
 
 interface Props {
   section: CasinoListSection;
   locale?: WebsiteLocaleKey;
 }
 
-const { section } = Astro.props;
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const { anchorTitle, copyBefore, copyAfter, casinos } = section;
+const cardCopy = CASINO_LISTING_CARD_COPY[localeIdForWebsiteLocale(locale)];
 ---
 
 <div class="bg-blue-50/50 py-3 lg:py-3 px-3 sm:px-4">
@@ -27,7 +29,7 @@ const { anchorTitle, copyBefore, copyAfter, casinos } = section;
     {casinos.length > 0 && (
       <div class="grid flex flex-col gap-6 md:gap-3 container mx-auto mt-12 md:mt-8 mb-3">
         {casinos.map((casino) => (
-          <CasinoListingCard casino={casino} />
+          <CasinoListingCard casino={casino} copy={cardCopy} />
         ))}
       </div>
     )}

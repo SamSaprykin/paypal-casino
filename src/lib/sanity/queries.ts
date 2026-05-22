@@ -46,7 +46,18 @@ const CASINO_FIELDS = `
   }
 `;
 
-const PAGE_COMPONENTS = `
+const CASINO_LISTS_BY_COUNTRY = `
+  casinoListsByCountry {
+    denmark { ${CASINO_FIELDS} }
+    finland { ${CASINO_FIELDS} }
+    germany { ${CASINO_FIELDS} }
+    ireland { ${CASINO_FIELDS} }
+    norway { ${CASINO_FIELDS} }
+    sweden { ${CASINO_FIELDS} }
+  }
+`;
+
+const PAGE_COMPONENTS = (locale: WebsiteLocaleKey) => `
   components {
     __typename
     ... on CasinoListIntl {
@@ -54,7 +65,7 @@ const PAGE_COMPONENTS = `
       anchorTitle { ${INTL} }
       copyBefore { ${INTL} }
       copyAfter { ${INTL} }
-      casinoList { ${CASINO_FIELDS} }
+      ${CASINO_LISTS_BY_COUNTRY}
     }
     ... on FaqComponentIntl {
       _id
@@ -63,7 +74,7 @@ const PAGE_COMPONENTS = `
       faqItems {
         _id
         faqQuestion { ${INTL} }
-        faqAnswer { ${INTL} }
+        faqAnswer { ${locale} }
       }
     }
     ... on BonusesListIntl {
@@ -116,7 +127,7 @@ query GetPageBySlug($slug: String!) {
       seoDescription { ${INTL} }
       seoSlug { ${INTL} }
     }
-    ${PAGE_COMPONENTS}
+    ${PAGE_COMPONENTS(locale)}
   }
 }
 `;
@@ -206,3 +217,87 @@ query GetBlogPostsByCategory($category: String!) {
   }
 }
 `;
+
+// ---------- Casino detail pages ----------
+
+const CASINO_DETAIL_FIELDS = `
+  _id
+  _createdAt
+  _updatedAt
+  casinoName
+  slug
+  rating
+  shortDescription
+  referralUrl
+  payoutLimits
+  payoutTimes
+  software
+  depositMethods
+  withdrawalMethod
+  license
+  userRecommendationsRecommendedNumber
+  userRecommendationsTotalNumber
+  availableInCountries { denmark finland germany ireland norway sweden }
+  backgroundColor { hex }
+  logo { asset { url altText } }
+  prosIntl { ${INTL_STRING_ARRAY} }
+  consIntl { ${INTL_STRING_ARRAY} }
+  reviewsIntl {
+    denmark { description personName country rating date }
+    finland { description personName country rating date }
+    germany { description personName country rating date }
+    ireland { description personName country rating date }
+    norway { description personName country rating date }
+    sweden { description personName country rating date }
+  }
+  bonuses {
+    _id
+    name
+    code
+    description
+    referralUrl
+    bonusBackgroundColor
+    bonusLogo { asset { url altText } }
+  }
+`;
+
+function casinoDetailFields(locale: WebsiteLocaleKey): string {
+  return `
+  ${CASINO_DETAIL_FIELDS}
+  body { ${locale} }
+  faq {
+    _id
+    spaceTop
+    title { ${INTL} }
+    faqItems {
+      _id
+      faqQuestion { ${INTL} }
+      faqAnswer { ${locale} }
+    }
+  }
+`;
+}
+
+export const ALL_CASINOS_QUERY = `
+query AllCasinos {
+  allCasino {
+    _id
+    slug
+    casinoName
+    body { ${INTL} }
+    availableInCountries { denmark finland germany ireland norway sweden }
+  }
+}
+`;
+
+/** Casino detail lookup — body and FAQ answers are scoped to the active locale column only. */
+export function buildCasinoBySlugQuery(locale: WebsiteLocaleKey): string {
+  assertLocale(locale);
+  return `
+query CasinoBySlug($slug: String!) {
+  allCasino(where: { slug: { eq: $slug } }, limit: 1) {
+    ${casinoDetailFields(locale)}
+  }
+}
+`;
+}

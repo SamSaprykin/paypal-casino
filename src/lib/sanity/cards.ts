@@ -6,7 +6,8 @@
  * Sanity payloads into that shape here. Section consumers and pages stay clean.
  */
 
-// ---------- Casino card adapter ----------
+import type { WebsiteLocaleKey } from "./locales";
+import { localizedCasinoDetailHref } from "./routing";
 
 export interface CasinoBonusCardData {
   fields: {
@@ -32,11 +33,18 @@ export interface CasinoCardData {
     logo?: { fields: { file: { url?: string } } };
     casinoRates: Array<{ fields: { ratingNumber?: number } }>;
     bonuses: CasinoBonusCardData[];
+    /** Set when any locale has review body markdown — links to the casino detail page. */
+    reviewHref?: string;
   };
 }
 
+const asString = (v: unknown): string | undefined =>
+  typeof v === "string" && v.trim() !== "" ? v : undefined;
+
 export function adaptCasinoForCard(
   raw: unknown,
+  locale?: WebsiteLocaleKey,
+  reviewBodyMap?: Map<string, boolean>,
 ): CasinoCardData | null {
   if (!raw || typeof raw !== "object") return null;
   const c = raw as Record<string, unknown>;
@@ -65,11 +73,17 @@ export function adaptCasinoForCard(
       }))
     : [];
 
+  const id = String(c._id ?? c.slug ?? "");
+  const slug = asString(c.slug);
+  const hasReview = Boolean(id && reviewBodyMap?.get(id));
+  const reviewHref =
+    hasReview && slug && locale ? localizedCasinoDetailHref(locale, slug) : undefined;
+
   return {
-    sys: { id: String(c._id ?? c.slug ?? "") },
+    sys: { id },
     fields: {
       casinoName: typeof c.casinoName === "string" ? c.casinoName : undefined,
-      slug: typeof c.slug === "string" ? c.slug : undefined,
+      slug,
       backgroundColor,
       shortDescription:
         typeof c.shortDescription === "string" ? c.shortDescription : undefined,
@@ -92,7 +106,7 @@ export function adaptCasinoForCard(
           ? [{ fields: { ratingNumber } }]
           : [{ fields: {} }],
       bonuses,
+      reviewHref,
     },
   };
 }
-

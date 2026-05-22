@@ -20,8 +20,13 @@ export function deepPickIntl<T>(value: T, locale: WebsiteLocaleKey): T {
   const obj = value as Record<string, unknown>;
 
   if (hasAllLocaleKeys(obj)) {
-    const picked = obj[locale] ?? obj.denmark;
-    return picked as T;
+    const picked = obj[locale];
+    /** Intl ref lists (e.g. `casinoListsByCountry`) — never fall back to another market. */
+    const isIntlRefList = WEBSITE_LOCALE_KEYS.some((k) => Array.isArray(obj[k]));
+    if (isIntlRefList) {
+      return (Array.isArray(picked) ? picked : []) as T;
+    }
+    return (picked ?? obj.denmark) as T;
   }
 
   const out: Record<string, unknown> = {};
@@ -49,4 +54,23 @@ export function resolveWebsiteLocale(): WebsiteLocaleKey {
     return raw;
   }
   return "denmark";
+}
+
+/**
+ * Picks the casino array for one market from `IntlCasinoRefList` (`casinoListsByCountry`).
+ * Accepts the raw intl object or an array already collapsed by `deepPickIntl`.
+ */
+export function pickIntlCasinoList(
+  lists: unknown,
+  locale: WebsiteLocaleKey,
+): unknown[] {
+  if (Array.isArray(lists)) {
+    return lists.filter((item) => item != null);
+  }
+  if (!lists || typeof lists !== "object") return [];
+  const obj = lists as Record<string, unknown>;
+  const forLocale = obj[locale];
+  return Array.isArray(forLocale)
+    ? forLocale.filter((item) => item != null)
+    : [];
 }

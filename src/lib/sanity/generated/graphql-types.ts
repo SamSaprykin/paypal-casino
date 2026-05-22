@@ -14,7 +14,6 @@ export type Scalars = {
   Float: { input: number; output: number; }
   Date: { input: any; output: any; }
   DateTime: { input: any; output: any; }
-  JSON: { input: any; output: any; }
 };
 
 export type Block = {
@@ -25,116 +24,6 @@ export type Block = {
   level?: Maybe<Scalars['Float']['output']>;
   listItem?: Maybe<Scalars['String']['output']>;
   style?: Maybe<Scalars['String']['output']>;
-};
-
-export type BlockOrFileOrImage = Block | File | Image;
-
-export type BlogAuthor = Document & {
-  __typename?: 'BlogAuthor';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  bio?: Maybe<Scalars['String']['output']>;
-  expertise?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  name?: Maybe<Scalars['String']['output']>;
-};
-
-export type BlogAuthorFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  bio?: InputMaybe<StringFilter>;
-  name?: InputMaybe<StringFilter>;
-};
-
-export type BlogAuthorSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  bio?: InputMaybe<SortOrder>;
-  name?: InputMaybe<SortOrder>;
-};
-
-export type BlogPost = Document & {
-  __typename?: 'BlogPost';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  author?: Maybe<BlogAuthor>;
-  bodyRaw?: Maybe<Scalars['JSON']['output']>;
-  cardDescription?: Maybe<Scalars['String']['output']>;
-  category?: Maybe<Scalars['String']['output']>;
-  created?: Maybe<Scalars['DateTime']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  featuredImage?: Maybe<Image>;
-  highlightsRaw?: Maybe<Scalars['JSON']['output']>;
-  relatedCasinosList?: Maybe<Array<Maybe<Casino>>>;
-  relatedCasinosTitle?: Maybe<Scalars['String']['output']>;
-  seoComponent?: Maybe<SeoComponent>;
-  slug?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type BlogPostFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  author?: InputMaybe<BlogAuthorFilter>;
-  cardDescription?: InputMaybe<StringFilter>;
-  category?: InputMaybe<StringFilter>;
-  created?: InputMaybe<DatetimeFilter>;
-  description?: InputMaybe<StringFilter>;
-  featuredImage?: InputMaybe<ImageFilter>;
-  relatedCasinosTitle?: InputMaybe<StringFilter>;
-  seoComponent?: InputMaybe<SeoComponentFilter>;
-  slug?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type BlogPostSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  cardDescription?: InputMaybe<SortOrder>;
-  category?: InputMaybe<SortOrder>;
-  created?: InputMaybe<SortOrder>;
-  description?: InputMaybe<SortOrder>;
-  featuredImage?: InputMaybe<ImageSorting>;
-  relatedCasinosTitle?: InputMaybe<SortOrder>;
-  slug?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
 };
 
 export type Bonus = Document & {
@@ -193,35 +82,6 @@ export type BonusSorting = {
   referralUrl?: InputMaybe<SortOrder>;
 };
 
-export type BonusesList = Document & {
-  __typename?: 'BonusesList';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  bonuses?: Maybe<Array<Maybe<Bonus>>>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type BonusesListFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
 export type BonusesListIntl = Document & {
   __typename?: 'BonusesListIntl';
   /** Date the document was created */
@@ -251,7 +111,7 @@ export type BonusesListIntlFilter = {
   title?: InputMaybe<IntlTextFilter>;
 };
 
-export type BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl = BonusesListIntl | CasinoListIntl | ContentComponentIntl | FaqComponentIntl | FeaturedArticlesIntl | GameOfTheMonthIntl | HeroDefaultWithCasinoCardsIntl | HeroTextIntl | HowToIntl | SeoComponentIntl;
+export type BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrSeoComponentIntl = BonusesListIntl | CasinoListIntl | ContentComponentIntl | FaqComponentIntl | SeoComponentIntl;
 
 export type BonusesListIntlSorting = {
   _createdAt?: InputMaybe<SortOrder>;
@@ -261,16 +121,6 @@ export type BonusesListIntlSorting = {
   _type?: InputMaybe<SortOrder>;
   _updatedAt?: InputMaybe<SortOrder>;
   title?: InputMaybe<IntlTextSorting>;
-};
-
-export type BonusesListSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
 };
 
 export type BooleanFilter = {
@@ -297,16 +147,22 @@ export type Casino = Document & {
   _updatedAt?: Maybe<Scalars['DateTime']['output']>;
   availableInCountries?: Maybe<CasinoAvailableInCountries>;
   backgroundColor?: Maybe<Color>;
+  body?: Maybe<IntlMarkdown>;
   bonuses?: Maybe<Array<Maybe<Bonus>>>;
   casinoName?: Maybe<Scalars['String']['output']>;
+  consIntl?: Maybe<IntlStringArray>;
   depositMethods?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  /** FAQ block with localized questions and answers. */
+  faq?: Maybe<FaqComponentIntl>;
   license?: Maybe<Scalars['String']['output']>;
   logo?: Maybe<Image>;
   payoutLimits?: Maybe<Scalars['String']['output']>;
   payoutTimes?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
+  prosIntl?: Maybe<IntlStringArray>;
   /** Overall score from 0 to 5 in steps of 0.1 */
   rating?: Maybe<Scalars['Float']['output']>;
   referralUrl?: Maybe<Scalars['String']['output']>;
+  reviewsIntl?: Maybe<IntlPlayerReviews>;
   shortDescription?: Maybe<Scalars['String']['output']>;
   slug?: Maybe<Scalars['String']['output']>;
   software?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
@@ -360,48 +216,21 @@ export type CasinoFilter = {
   _updatedAt?: InputMaybe<DatetimeFilter>;
   availableInCountries?: InputMaybe<CasinoAvailableInCountriesFilter>;
   backgroundColor?: InputMaybe<ColorFilter>;
+  body?: InputMaybe<IntlMarkdownFilter>;
   casinoName?: InputMaybe<StringFilter>;
+  consIntl?: InputMaybe<IntlStringArrayFilter>;
+  faq?: InputMaybe<FaqComponentIntlFilter>;
   license?: InputMaybe<StringFilter>;
   logo?: InputMaybe<ImageFilter>;
   payoutLimits?: InputMaybe<StringFilter>;
+  prosIntl?: InputMaybe<IntlStringArrayFilter>;
   rating?: InputMaybe<FloatFilter>;
   referralUrl?: InputMaybe<StringFilter>;
+  reviewsIntl?: InputMaybe<IntlPlayerReviewsFilter>;
   shortDescription?: InputMaybe<StringFilter>;
   slug?: InputMaybe<StringFilter>;
   userRecommendationsRecommendedNumber?: InputMaybe<FloatFilter>;
   userRecommendationsTotalNumber?: InputMaybe<FloatFilter>;
-};
-
-export type CasinoList = Document & {
-  __typename?: 'CasinoList';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  anchorTitle?: Maybe<Scalars['String']['output']>;
-  casinoList?: Maybe<Array<Maybe<Casino>>>;
-  copyAfterRaw?: Maybe<Scalars['JSON']['output']>;
-  copyBefore?: Maybe<Scalars['String']['output']>;
-};
-
-export type CasinoListFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  anchorTitle?: InputMaybe<StringFilter>;
-  copyBefore?: InputMaybe<StringFilter>;
 };
 
 export type CasinoListIntl = Document & {
@@ -418,7 +247,7 @@ export type CasinoListIntl = Document & {
   /** Date the document was last modified */
   _updatedAt?: Maybe<Scalars['DateTime']['output']>;
   anchorTitle?: Maybe<IntlText>;
-  casinoList?: Maybe<Array<Maybe<Casino>>>;
+  casinoListsByCountry?: Maybe<IntlCasinoRefList>;
   copyAfter?: Maybe<IntlBlockContent>;
   copyBefore?: Maybe<IntlText>;
 };
@@ -433,6 +262,7 @@ export type CasinoListIntlFilter = {
   _type?: InputMaybe<StringFilter>;
   _updatedAt?: InputMaybe<DatetimeFilter>;
   anchorTitle?: InputMaybe<IntlTextFilter>;
+  casinoListsByCountry?: InputMaybe<IntlCasinoRefListFilter>;
   copyAfter?: InputMaybe<IntlBlockContentFilter>;
   copyBefore?: InputMaybe<IntlTextFilter>;
 };
@@ -445,78 +275,9 @@ export type CasinoListIntlSorting = {
   _type?: InputMaybe<SortOrder>;
   _updatedAt?: InputMaybe<SortOrder>;
   anchorTitle?: InputMaybe<IntlTextSorting>;
+  casinoListsByCountry?: InputMaybe<IntlCasinoRefListSorting>;
   copyAfter?: InputMaybe<IntlBlockContentSorting>;
   copyBefore?: InputMaybe<IntlTextSorting>;
-};
-
-export type CasinoListSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  anchorTitle?: InputMaybe<SortOrder>;
-  copyBefore?: InputMaybe<SortOrder>;
-};
-
-export type CasinoRating = Document & {
-  __typename?: 'CasinoRating';
-  /**
-   * Date the document was created
-   * @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.
-   */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /**
-   * Document ID
-   * @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.
-   */
-  _id?: Maybe<Scalars['ID']['output']>;
-  /** @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up. */
-  _key?: Maybe<Scalars['String']['output']>;
-  /**
-   * Current document revision
-   * @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.
-   */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /**
-   * Document type
-   * @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.
-   */
-  _type?: Maybe<Scalars['String']['output']>;
-  /**
-   * Date the document was last modified
-   * @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up.
-   */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up. */
-  ratingNumber?: Maybe<Scalars['Float']['output']>;
-  /** @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up. */
-  ratingType?: Maybe<Scalars['String']['output']>;
-};
-
-export type CasinoRatingFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  ratingNumber?: InputMaybe<FloatFilter>;
-  ratingType?: InputMaybe<StringFilter>;
-};
-
-export type CasinoRatingSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  ratingNumber?: InputMaybe<SortOrder>;
-  ratingType?: InputMaybe<SortOrder>;
 };
 
 export type CasinoSorting = {
@@ -528,12 +289,16 @@ export type CasinoSorting = {
   _updatedAt?: InputMaybe<SortOrder>;
   availableInCountries?: InputMaybe<CasinoAvailableInCountriesSorting>;
   backgroundColor?: InputMaybe<ColorSorting>;
+  body?: InputMaybe<IntlMarkdownSorting>;
   casinoName?: InputMaybe<SortOrder>;
+  consIntl?: InputMaybe<IntlStringArraySorting>;
   license?: InputMaybe<SortOrder>;
   logo?: InputMaybe<ImageSorting>;
   payoutLimits?: InputMaybe<SortOrder>;
+  prosIntl?: InputMaybe<IntlStringArraySorting>;
   rating?: InputMaybe<SortOrder>;
   referralUrl?: InputMaybe<SortOrder>;
+  reviewsIntl?: InputMaybe<IntlPlayerReviewsSorting>;
   shortDescription?: InputMaybe<SortOrder>;
   slug?: InputMaybe<SortOrder>;
   userRecommendationsRecommendedNumber?: InputMaybe<SortOrder>;
@@ -640,94 +405,6 @@ export type CrossDatasetReferenceSorting = {
   _weak?: InputMaybe<SortOrder>;
 };
 
-export type CtaButton = Document & {
-  __typename?: 'CtaButton';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  buttonType?: Maybe<Scalars['String']['output']>;
-  copy?: Maybe<Scalars['String']['output']>;
-  url?: Maybe<Scalars['String']['output']>;
-};
-
-export type CtaButtonFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  buttonType?: InputMaybe<StringFilter>;
-  copy?: InputMaybe<StringFilter>;
-  url?: InputMaybe<StringFilter>;
-};
-
-export type CtaButtonIntl = Document & {
-  __typename?: 'CtaButtonIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  buttonType?: Maybe<Scalars['String']['output']>;
-  copy?: Maybe<IntlText>;
-  url?: Maybe<Scalars['String']['output']>;
-};
-
-export type CtaButtonIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  buttonType?: InputMaybe<StringFilter>;
-  copy?: InputMaybe<IntlTextFilter>;
-  url?: InputMaybe<StringFilter>;
-};
-
-export type CtaButtonIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  buttonType?: InputMaybe<SortOrder>;
-  copy?: InputMaybe<IntlTextSorting>;
-  url?: InputMaybe<SortOrder>;
-};
-
-export type CtaButtonSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  buttonType?: InputMaybe<SortOrder>;
-  copy?: InputMaybe<SortOrder>;
-  url?: InputMaybe<SortOrder>;
-};
-
 export type DateFilter = {
   /** Checks if the value is equal to the given input. */
   eq?: InputMaybe<Scalars['Date']['input']>;
@@ -794,37 +471,6 @@ export type DocumentSorting = {
   _updatedAt?: InputMaybe<SortOrder>;
 };
 
-export type FaqComponent = Document & {
-  __typename?: 'FaqComponent';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  faqItems?: Maybe<Array<Maybe<FaqItem>>>;
-  spaceTop?: Maybe<Scalars['Float']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type FaqComponentFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  spaceTop?: InputMaybe<FloatFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
 export type FaqComponentIntl = Document & {
   __typename?: 'FaqComponentIntl';
   /** Date the document was created */
@@ -865,48 +511,6 @@ export type FaqComponentIntlSorting = {
   _updatedAt?: InputMaybe<SortOrder>;
   spaceTop?: InputMaybe<SortOrder>;
   title?: InputMaybe<IntlTextSorting>;
-};
-
-export type FaqComponentSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  spaceTop?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
-export type FaqItem = Document & {
-  __typename?: 'FaqItem';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Markdown-supported answer content. */
-  faqAnswer?: Maybe<Scalars['String']['output']>;
-  faqQuestion?: Maybe<Scalars['String']['output']>;
-};
-
-export type FaqItemFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  faqAnswer?: InputMaybe<StringFilter>;
-  faqQuestion?: InputMaybe<StringFilter>;
 };
 
 export type FaqItemIntl = Document & {
@@ -950,99 +554,6 @@ export type FaqItemIntlSorting = {
   faqQuestion?: InputMaybe<IntlTextSorting>;
 };
 
-export type FaqItemSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  faqAnswer?: InputMaybe<SortOrder>;
-  faqQuestion?: InputMaybe<SortOrder>;
-};
-
-export type FeaturedArticles = Document & {
-  __typename?: 'FeaturedArticles';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  descriptionRaw?: Maybe<Scalars['JSON']['output']>;
-  relatedArticles?: Maybe<Array<Maybe<BlogPost>>>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type FeaturedArticlesFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type FeaturedArticlesIntl = Document & {
-  __typename?: 'FeaturedArticlesIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  description?: Maybe<IntlMarkdown>;
-  relatedArticles?: Maybe<Array<Maybe<BlogPost>>>;
-  title?: Maybe<IntlText>;
-};
-
-export type FeaturedArticlesIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  description?: InputMaybe<IntlMarkdownFilter>;
-  title?: InputMaybe<IntlTextFilter>;
-};
-
-export type FeaturedArticlesIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  description?: InputMaybe<IntlMarkdownSorting>;
-  title?: InputMaybe<IntlTextSorting>;
-};
-
-export type FeaturedArticlesSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
 export type File = {
   __typename?: 'File';
   _key?: Maybe<Scalars['String']['output']>;
@@ -1079,112 +590,6 @@ export type FloatFilter = {
   lte?: InputMaybe<Scalars['Float']['input']>;
   /** Checks if the value is not equal to the given input. */
   neq?: InputMaybe<Scalars['Float']['input']>;
-};
-
-export type GameOfTheMonth = Document & {
-  __typename?: 'GameOfTheMonth';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  casinoLinks?: Maybe<Array<Maybe<CtaButton>>>;
-  gameDescriptionRaw?: Maybe<Scalars['JSON']['output']>;
-  gameName?: Maybe<Scalars['String']['output']>;
-  image?: Maybe<Image>;
-  link?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type GameOfTheMonthFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  gameName?: InputMaybe<StringFilter>;
-  image?: InputMaybe<ImageFilter>;
-  link?: InputMaybe<StringFilter>;
-  subtitle?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type GameOfTheMonthIntl = Document & {
-  __typename?: 'GameOfTheMonthIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  casinoLinks?: Maybe<Array<Maybe<CtaButtonIntl>>>;
-  gameDescription?: Maybe<IntlMarkdown>;
-  gameName?: Maybe<IntlText>;
-  image?: Maybe<Image>;
-  link?: Maybe<Scalars['String']['output']>;
-  subtitle?: Maybe<IntlText>;
-  title?: Maybe<IntlText>;
-};
-
-export type GameOfTheMonthIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  gameDescription?: InputMaybe<IntlMarkdownFilter>;
-  gameName?: InputMaybe<IntlTextFilter>;
-  image?: InputMaybe<ImageFilter>;
-  link?: InputMaybe<StringFilter>;
-  subtitle?: InputMaybe<IntlTextFilter>;
-  title?: InputMaybe<IntlTextFilter>;
-};
-
-export type GameOfTheMonthIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  gameDescription?: InputMaybe<IntlMarkdownSorting>;
-  gameName?: InputMaybe<IntlTextSorting>;
-  image?: InputMaybe<ImageSorting>;
-  link?: InputMaybe<SortOrder>;
-  subtitle?: InputMaybe<IntlTextSorting>;
-  title?: InputMaybe<IntlTextSorting>;
-};
-
-export type GameOfTheMonthSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  gameName?: InputMaybe<SortOrder>;
-  image?: InputMaybe<ImageSorting>;
-  link?: InputMaybe<SortOrder>;
-  subtitle?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
 };
 
 export type Geopoint = {
@@ -1232,338 +637,6 @@ export type GlobalDocumentReferenceSorting = {
   _ref?: InputMaybe<SortOrder>;
   _type?: InputMaybe<SortOrder>;
   _weak?: InputMaybe<SortOrder>;
-};
-
-export type HeroDefaultWithCasinoCards = Document & {
-  __typename?: 'HeroDefaultWithCasinoCards';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  callToAction?: Maybe<CtaButton>;
-  casinos?: Maybe<Array<Maybe<Casino>>>;
-  ctaTitle?: Maybe<Scalars['String']['output']>;
-  description?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type HeroDefaultWithCasinoCardsFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  callToAction?: InputMaybe<CtaButtonFilter>;
-  ctaTitle?: InputMaybe<StringFilter>;
-  description?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type HeroDefaultWithCasinoCardsIntl = Document & {
-  __typename?: 'HeroDefaultWithCasinoCardsIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  callToAction?: Maybe<CtaButtonIntl>;
-  casinos?: Maybe<Array<Maybe<Casino>>>;
-  ctaTitle?: Maybe<IntlText>;
-  description?: Maybe<IntlText>;
-  title?: Maybe<IntlText>;
-};
-
-export type HeroDefaultWithCasinoCardsIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  callToAction?: InputMaybe<CtaButtonIntlFilter>;
-  ctaTitle?: InputMaybe<IntlTextFilter>;
-  description?: InputMaybe<IntlTextFilter>;
-  title?: InputMaybe<IntlTextFilter>;
-};
-
-export type HeroDefaultWithCasinoCardsIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  ctaTitle?: InputMaybe<IntlTextSorting>;
-  description?: InputMaybe<IntlTextSorting>;
-  title?: InputMaybe<IntlTextSorting>;
-};
-
-export type HeroDefaultWithCasinoCardsSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  ctaTitle?: InputMaybe<SortOrder>;
-  description?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
-export type HeroText = Document & {
-  __typename?: 'HeroText';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  copyRaw?: Maybe<Scalars['JSON']['output']>;
-};
-
-export type HeroTextFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-};
-
-export type HeroTextIntl = Document & {
-  __typename?: 'HeroTextIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  copy?: Maybe<IntlMarkdown>;
-};
-
-export type HeroTextIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  copy?: InputMaybe<IntlMarkdownFilter>;
-};
-
-export type HeroTextIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  copy?: InputMaybe<IntlMarkdownSorting>;
-};
-
-export type HeroTextSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-};
-
-export type HowTo = Document & {
-  __typename?: 'HowTo';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  howToItems?: Maybe<Array<Maybe<HowToItem>>>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type HowToFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type HowToIntl = Document & {
-  __typename?: 'HowToIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  howToItems?: Maybe<Array<Maybe<HowToItemIntl>>>;
-  title?: Maybe<IntlText>;
-};
-
-export type HowToIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  title?: InputMaybe<IntlTextFilter>;
-};
-
-export type HowToIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  title?: InputMaybe<IntlTextSorting>;
-};
-
-export type HowToItem = Document & {
-  __typename?: 'HowToItem';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  iconName?: Maybe<Scalars['String']['output']>;
-  steps?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
-  title?: Maybe<Scalars['String']['output']>;
-};
-
-export type HowToItemFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  iconName?: InputMaybe<StringFilter>;
-  title?: InputMaybe<StringFilter>;
-};
-
-export type HowToItemIntl = Document & {
-  __typename?: 'HowToItemIntl';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  iconName?: Maybe<Scalars['String']['output']>;
-  steps?: Maybe<IntlStringArray>;
-  title?: Maybe<IntlText>;
-};
-
-export type HowToItemIntlFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  iconName?: InputMaybe<StringFilter>;
-  steps?: InputMaybe<IntlStringArrayFilter>;
-  title?: InputMaybe<IntlTextFilter>;
-};
-
-export type HowToItemIntlSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  iconName?: InputMaybe<SortOrder>;
-  steps?: InputMaybe<IntlStringArraySorting>;
-  title?: InputMaybe<IntlTextSorting>;
-};
-
-export type HowToItemSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  iconName?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
-};
-
-export type HowToSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  title?: InputMaybe<SortOrder>;
 };
 
 export type HslaColor = {
@@ -1717,6 +790,28 @@ export type IntlBlockContentSorting = {
   sweden?: InputMaybe<SortOrder>;
 };
 
+export type IntlCasinoRefList = {
+  __typename?: 'IntlCasinoRefList';
+  _key?: Maybe<Scalars['String']['output']>;
+  _type?: Maybe<Scalars['String']['output']>;
+  denmark?: Maybe<Array<Maybe<Casino>>>;
+  finland?: Maybe<Array<Maybe<Casino>>>;
+  germany?: Maybe<Array<Maybe<Casino>>>;
+  ireland?: Maybe<Array<Maybe<Casino>>>;
+  norway?: Maybe<Array<Maybe<Casino>>>;
+  sweden?: Maybe<Array<Maybe<Casino>>>;
+};
+
+export type IntlCasinoRefListFilter = {
+  _key?: InputMaybe<StringFilter>;
+  _type?: InputMaybe<StringFilter>;
+};
+
+export type IntlCasinoRefListSorting = {
+  _key?: InputMaybe<SortOrder>;
+  _type?: InputMaybe<SortOrder>;
+};
+
 export type IntlDescription = {
   __typename?: 'IntlDescription';
   _key?: Maybe<Scalars['String']['output']>;
@@ -1789,6 +884,40 @@ export type IntlMarkdownSorting = {
   ireland?: InputMaybe<SortOrder>;
   norway?: InputMaybe<SortOrder>;
   sweden?: InputMaybe<SortOrder>;
+};
+
+export type IntlPlayerReviews = {
+  __typename?: 'IntlPlayerReviews';
+  _key?: Maybe<Scalars['String']['output']>;
+  _type?: Maybe<Scalars['String']['output']>;
+  denmark?: Maybe<PlayerReviewSlot>;
+  finland?: Maybe<PlayerReviewSlot>;
+  germany?: Maybe<PlayerReviewSlot>;
+  ireland?: Maybe<PlayerReviewSlot>;
+  norway?: Maybe<PlayerReviewSlot>;
+  sweden?: Maybe<PlayerReviewSlot>;
+};
+
+export type IntlPlayerReviewsFilter = {
+  _key?: InputMaybe<StringFilter>;
+  _type?: InputMaybe<StringFilter>;
+  denmark?: InputMaybe<PlayerReviewSlotFilter>;
+  finland?: InputMaybe<PlayerReviewSlotFilter>;
+  germany?: InputMaybe<PlayerReviewSlotFilter>;
+  ireland?: InputMaybe<PlayerReviewSlotFilter>;
+  norway?: InputMaybe<PlayerReviewSlotFilter>;
+  sweden?: InputMaybe<PlayerReviewSlotFilter>;
+};
+
+export type IntlPlayerReviewsSorting = {
+  _key?: InputMaybe<SortOrder>;
+  _type?: InputMaybe<SortOrder>;
+  denmark?: InputMaybe<PlayerReviewSlotSorting>;
+  finland?: InputMaybe<PlayerReviewSlotSorting>;
+  germany?: InputMaybe<PlayerReviewSlotSorting>;
+  ireland?: InputMaybe<PlayerReviewSlotSorting>;
+  norway?: InputMaybe<PlayerReviewSlotSorting>;
+  sweden?: InputMaybe<PlayerReviewSlotSorting>;
 };
 
 export type IntlStringArray = {
@@ -1885,6 +1014,39 @@ export type MediaTagSorting = {
   name?: InputMaybe<SlugSorting>;
 };
 
+export type PlayerReviewSlot = {
+  __typename?: 'PlayerReviewSlot';
+  _key?: Maybe<Scalars['String']['output']>;
+  _type?: Maybe<Scalars['String']['output']>;
+  /** Shown as-written for this locale (e.g. Stockholm, Sweden) */
+  country?: Maybe<Scalars['String']['output']>;
+  date?: Maybe<Scalars['DateTime']['output']>;
+  description?: Maybe<Scalars['String']['output']>;
+  personName?: Maybe<Scalars['String']['output']>;
+  /** 1–10 player score */
+  rating?: Maybe<Scalars['Float']['output']>;
+};
+
+export type PlayerReviewSlotFilter = {
+  _key?: InputMaybe<StringFilter>;
+  _type?: InputMaybe<StringFilter>;
+  country?: InputMaybe<StringFilter>;
+  date?: InputMaybe<DatetimeFilter>;
+  description?: InputMaybe<StringFilter>;
+  personName?: InputMaybe<StringFilter>;
+  rating?: InputMaybe<FloatFilter>;
+};
+
+export type PlayerReviewSlotSorting = {
+  _key?: InputMaybe<SortOrder>;
+  _type?: InputMaybe<SortOrder>;
+  country?: InputMaybe<SortOrder>;
+  date?: InputMaybe<SortOrder>;
+  description?: InputMaybe<SortOrder>;
+  personName?: InputMaybe<SortOrder>;
+  rating?: InputMaybe<SortOrder>;
+};
+
 export type RgbaColor = {
   __typename?: 'RgbaColor';
   _key?: Maybe<Scalars['String']['output']>;
@@ -1915,97 +1077,36 @@ export type RgbaColorSorting = {
 
 export type RootQuery = {
   __typename?: 'RootQuery';
-  BlogAuthor?: Maybe<BlogAuthor>;
-  BlogPost?: Maybe<BlogPost>;
   Bonus?: Maybe<Bonus>;
-  BonusesList?: Maybe<BonusesList>;
   BonusesListIntl?: Maybe<BonusesListIntl>;
   Casino?: Maybe<Casino>;
-  CasinoList?: Maybe<CasinoList>;
   CasinoListIntl?: Maybe<CasinoListIntl>;
-  /** @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up. */
-  CasinoRating?: Maybe<CasinoRating>;
   ContentComponentIntl?: Maybe<ContentComponentIntl>;
-  CtaButton?: Maybe<CtaButton>;
-  CtaButtonIntl?: Maybe<CtaButtonIntl>;
   Document?: Maybe<Document>;
-  FaqComponent?: Maybe<FaqComponent>;
   FaqComponentIntl?: Maybe<FaqComponentIntl>;
-  FaqItem?: Maybe<FaqItem>;
   FaqItemIntl?: Maybe<FaqItemIntl>;
-  FeaturedArticles?: Maybe<FeaturedArticles>;
-  FeaturedArticlesIntl?: Maybe<FeaturedArticlesIntl>;
-  GameOfTheMonth?: Maybe<GameOfTheMonth>;
-  GameOfTheMonthIntl?: Maybe<GameOfTheMonthIntl>;
-  HeroDefaultWithCasinoCards?: Maybe<HeroDefaultWithCasinoCards>;
-  HeroDefaultWithCasinoCardsIntl?: Maybe<HeroDefaultWithCasinoCardsIntl>;
-  HeroText?: Maybe<HeroText>;
-  HeroTextIntl?: Maybe<HeroTextIntl>;
-  HowTo?: Maybe<HowTo>;
-  HowToIntl?: Maybe<HowToIntl>;
-  HowToItem?: Maybe<HowToItem>;
-  HowToItemIntl?: Maybe<HowToItemIntl>;
   MediaTag?: Maybe<MediaTag>;
   SanityFileAsset?: Maybe<SanityFileAsset>;
   SanityImageAsset?: Maybe<SanityImageAsset>;
-  SeoComponent?: Maybe<SeoComponent>;
   SeoComponentIntl?: Maybe<SeoComponentIntl>;
   WebsitePageIntl?: Maybe<WebsitePageIntl>;
-  allBlogAuthor: Array<BlogAuthor>;
-  allBlogPost: Array<BlogPost>;
   allBonus: Array<Bonus>;
-  allBonusesList: Array<BonusesList>;
   allBonusesListIntl: Array<BonusesListIntl>;
   allCasino: Array<Casino>;
-  allCasinoList: Array<CasinoList>;
   allCasinoListIntl: Array<CasinoListIntl>;
-  /** @deprecated Overall scores now live on the casino document as `rating`. Delete these documents after the dataset is cleaned up. */
-  allCasinoRating: Array<CasinoRating>;
   allContentComponentIntl: Array<ContentComponentIntl>;
-  allCtaButton: Array<CtaButton>;
-  allCtaButtonIntl: Array<CtaButtonIntl>;
   allDocument: Array<Document>;
-  allFaqComponent: Array<FaqComponent>;
   allFaqComponentIntl: Array<FaqComponentIntl>;
-  allFaqItem: Array<FaqItem>;
   allFaqItemIntl: Array<FaqItemIntl>;
-  allFeaturedArticles: Array<FeaturedArticles>;
-  allFeaturedArticlesIntl: Array<FeaturedArticlesIntl>;
-  allGameOfTheMonth: Array<GameOfTheMonth>;
-  allGameOfTheMonthIntl: Array<GameOfTheMonthIntl>;
-  allHeroDefaultWithCasinoCards: Array<HeroDefaultWithCasinoCards>;
-  allHeroDefaultWithCasinoCardsIntl: Array<HeroDefaultWithCasinoCardsIntl>;
-  allHeroText: Array<HeroText>;
-  allHeroTextIntl: Array<HeroTextIntl>;
-  allHowTo: Array<HowTo>;
-  allHowToIntl: Array<HowToIntl>;
-  allHowToItem: Array<HowToItem>;
-  allHowToItemIntl: Array<HowToItemIntl>;
   allMediaTag: Array<MediaTag>;
   allSanityFileAsset: Array<SanityFileAsset>;
   allSanityImageAsset: Array<SanityImageAsset>;
-  allSeoComponent: Array<SeoComponent>;
   allSeoComponentIntl: Array<SeoComponentIntl>;
   allWebsitePageIntl: Array<WebsitePageIntl>;
 };
 
 
-export type RootQueryBlogAuthorArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryBlogPostArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type RootQueryBonusArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryBonusesListArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -2020,17 +1121,7 @@ export type RootQueryCasinoArgs = {
 };
 
 
-export type RootQueryCasinoListArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type RootQueryCasinoListIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryCasinoRatingArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -2040,22 +1131,7 @@ export type RootQueryContentComponentIntlArgs = {
 };
 
 
-export type RootQueryCtaButtonArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryCtaButtonIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type RootQueryDocumentArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryFaqComponentArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -2065,72 +1141,7 @@ export type RootQueryFaqComponentIntlArgs = {
 };
 
 
-export type RootQueryFaqItemArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type RootQueryFaqItemIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryFeaturedArticlesArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryFeaturedArticlesIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryGameOfTheMonthArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryGameOfTheMonthIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHeroDefaultWithCasinoCardsArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHeroDefaultWithCasinoCardsIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHeroTextArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHeroTextIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHowToArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHowToIntlArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHowToItemArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
-export type RootQueryHowToItemIntlArgs = {
   id: Scalars['ID']['input'];
 };
 
@@ -2150,11 +1161,6 @@ export type RootQuerySanityImageAssetArgs = {
 };
 
 
-export type RootQuerySeoComponentArgs = {
-  id: Scalars['ID']['input'];
-};
-
-
 export type RootQuerySeoComponentIntlArgs = {
   id: Scalars['ID']['input'];
 };
@@ -2165,35 +1171,11 @@ export type RootQueryWebsitePageIntlArgs = {
 };
 
 
-export type RootQueryAllBlogAuthorArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<BlogAuthorSorting>>;
-  where?: InputMaybe<BlogAuthorFilter>;
-};
-
-
-export type RootQueryAllBlogPostArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<BlogPostSorting>>;
-  where?: InputMaybe<BlogPostFilter>;
-};
-
-
 export type RootQueryAllBonusArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
   sort?: InputMaybe<Array<BonusSorting>>;
   where?: InputMaybe<BonusFilter>;
-};
-
-
-export type RootQueryAllBonusesListArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<BonusesListSorting>>;
-  where?: InputMaybe<BonusesListFilter>;
 };
 
 
@@ -2213,27 +1195,11 @@ export type RootQueryAllCasinoArgs = {
 };
 
 
-export type RootQueryAllCasinoListArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<CasinoListSorting>>;
-  where?: InputMaybe<CasinoListFilter>;
-};
-
-
 export type RootQueryAllCasinoListIntlArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
   sort?: InputMaybe<Array<CasinoListIntlSorting>>;
   where?: InputMaybe<CasinoListIntlFilter>;
-};
-
-
-export type RootQueryAllCasinoRatingArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<CasinoRatingSorting>>;
-  where?: InputMaybe<CasinoRatingFilter>;
 };
 
 
@@ -2245,35 +1211,11 @@ export type RootQueryAllContentComponentIntlArgs = {
 };
 
 
-export type RootQueryAllCtaButtonArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<CtaButtonSorting>>;
-  where?: InputMaybe<CtaButtonFilter>;
-};
-
-
-export type RootQueryAllCtaButtonIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<CtaButtonIntlSorting>>;
-  where?: InputMaybe<CtaButtonIntlFilter>;
-};
-
-
 export type RootQueryAllDocumentArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
   sort?: InputMaybe<Array<DocumentSorting>>;
   where?: InputMaybe<DocumentFilter>;
-};
-
-
-export type RootQueryAllFaqComponentArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<FaqComponentSorting>>;
-  where?: InputMaybe<FaqComponentFilter>;
 };
 
 
@@ -2285,115 +1227,11 @@ export type RootQueryAllFaqComponentIntlArgs = {
 };
 
 
-export type RootQueryAllFaqItemArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<FaqItemSorting>>;
-  where?: InputMaybe<FaqItemFilter>;
-};
-
-
 export type RootQueryAllFaqItemIntlArgs = {
   limit?: InputMaybe<Scalars['Int']['input']>;
   offset?: InputMaybe<Scalars['Int']['input']>;
   sort?: InputMaybe<Array<FaqItemIntlSorting>>;
   where?: InputMaybe<FaqItemIntlFilter>;
-};
-
-
-export type RootQueryAllFeaturedArticlesArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<FeaturedArticlesSorting>>;
-  where?: InputMaybe<FeaturedArticlesFilter>;
-};
-
-
-export type RootQueryAllFeaturedArticlesIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<FeaturedArticlesIntlSorting>>;
-  where?: InputMaybe<FeaturedArticlesIntlFilter>;
-};
-
-
-export type RootQueryAllGameOfTheMonthArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<GameOfTheMonthSorting>>;
-  where?: InputMaybe<GameOfTheMonthFilter>;
-};
-
-
-export type RootQueryAllGameOfTheMonthIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<GameOfTheMonthIntlSorting>>;
-  where?: InputMaybe<GameOfTheMonthIntlFilter>;
-};
-
-
-export type RootQueryAllHeroDefaultWithCasinoCardsArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HeroDefaultWithCasinoCardsSorting>>;
-  where?: InputMaybe<HeroDefaultWithCasinoCardsFilter>;
-};
-
-
-export type RootQueryAllHeroDefaultWithCasinoCardsIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HeroDefaultWithCasinoCardsIntlSorting>>;
-  where?: InputMaybe<HeroDefaultWithCasinoCardsIntlFilter>;
-};
-
-
-export type RootQueryAllHeroTextArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HeroTextSorting>>;
-  where?: InputMaybe<HeroTextFilter>;
-};
-
-
-export type RootQueryAllHeroTextIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HeroTextIntlSorting>>;
-  where?: InputMaybe<HeroTextIntlFilter>;
-};
-
-
-export type RootQueryAllHowToArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HowToSorting>>;
-  where?: InputMaybe<HowToFilter>;
-};
-
-
-export type RootQueryAllHowToIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HowToIntlSorting>>;
-  where?: InputMaybe<HowToIntlFilter>;
-};
-
-
-export type RootQueryAllHowToItemArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HowToItemSorting>>;
-  where?: InputMaybe<HowToItemFilter>;
-};
-
-
-export type RootQueryAllHowToItemIntlArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<HowToItemIntlSorting>>;
-  where?: InputMaybe<HowToItemIntlFilter>;
 };
 
 
@@ -2418,14 +1256,6 @@ export type RootQueryAllSanityImageAssetArgs = {
   offset?: InputMaybe<Scalars['Int']['input']>;
   sort?: InputMaybe<Array<SanityImageAssetSorting>>;
   where?: InputMaybe<SanityImageAssetFilter>;
-};
-
-
-export type RootQueryAllSeoComponentArgs = {
-  limit?: InputMaybe<Scalars['Int']['input']>;
-  offset?: InputMaybe<Scalars['Int']['input']>;
-  sort?: InputMaybe<Array<SeoComponentSorting>>;
-  where?: InputMaybe<SeoComponentFilter>;
 };
 
 
@@ -2822,38 +1652,6 @@ export type Sanity_DocumentFilter = {
   references?: InputMaybe<Scalars['ID']['input']>;
 };
 
-export type SeoComponent = Document & {
-  __typename?: 'SeoComponent';
-  /** Date the document was created */
-  _createdAt?: Maybe<Scalars['DateTime']['output']>;
-  /** Document ID */
-  _id?: Maybe<Scalars['ID']['output']>;
-  _key?: Maybe<Scalars['String']['output']>;
-  /** Current document revision */
-  _rev?: Maybe<Scalars['String']['output']>;
-  /** Document type */
-  _type?: Maybe<Scalars['String']['output']>;
-  /** Date the document was last modified */
-  _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  seoDescription?: Maybe<Scalars['String']['output']>;
-  seoSlug?: Maybe<Scalars['String']['output']>;
-  seoTitle?: Maybe<Scalars['String']['output']>;
-};
-
-export type SeoComponentFilter = {
-  /** Apply filters on document level */
-  _?: InputMaybe<Sanity_DocumentFilter>;
-  _createdAt?: InputMaybe<DatetimeFilter>;
-  _id?: InputMaybe<IdFilter>;
-  _key?: InputMaybe<StringFilter>;
-  _rev?: InputMaybe<StringFilter>;
-  _type?: InputMaybe<StringFilter>;
-  _updatedAt?: InputMaybe<DatetimeFilter>;
-  seoDescription?: InputMaybe<StringFilter>;
-  seoSlug?: InputMaybe<StringFilter>;
-  seoTitle?: InputMaybe<StringFilter>;
-};
-
 export type SeoComponentIntl = Document & {
   __typename?: 'SeoComponentIntl';
   /** Date the document was created */
@@ -2896,18 +1694,6 @@ export type SeoComponentIntlSorting = {
   seoDescription?: InputMaybe<IntlDescriptionSorting>;
   seoSlug?: InputMaybe<IntlTextSorting>;
   seoTitle?: InputMaybe<IntlTextSorting>;
-};
-
-export type SeoComponentSorting = {
-  _createdAt?: InputMaybe<SortOrder>;
-  _id?: InputMaybe<SortOrder>;
-  _key?: InputMaybe<SortOrder>;
-  _rev?: InputMaybe<SortOrder>;
-  _type?: InputMaybe<SortOrder>;
-  _updatedAt?: InputMaybe<SortOrder>;
-  seoDescription?: InputMaybe<SortOrder>;
-  seoSlug?: InputMaybe<SortOrder>;
-  seoTitle?: InputMaybe<SortOrder>;
 };
 
 export type Slug = {
@@ -2972,7 +1758,7 @@ export type WebsitePageIntl = Document & {
   _type?: Maybe<Scalars['String']['output']>;
   /** Date the document was last modified */
   _updatedAt?: Maybe<Scalars['DateTime']['output']>;
-  components?: Maybe<Array<Maybe<BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrFeaturedArticlesIntlOrGameOfTheMonthIntlOrHeroDefaultWithCasinoCardsIntlOrHeroTextIntlOrHowToIntlOrSeoComponentIntl>>>;
+  components?: Maybe<Array<Maybe<BonusesListIntlOrCasinoListIntlOrContentComponentIntlOrFaqComponentIntlOrSeoComponentIntl>>>;
   /** Internal label for editors (not shown on the site). */
   name?: Maybe<Scalars['String']['output']>;
   seoComponent?: Maybe<SeoComponentIntl>;

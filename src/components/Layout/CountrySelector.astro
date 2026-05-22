@@ -19,11 +19,16 @@ interface Props {
    * When omitted, all locales are shown and each links to its locale home.
    */
   localizedSlugs?: Partial<Record<WebsiteLocaleKey, string>>;
+  /**
+   * Pre-built public URLs per locale (e.g. casino detail pages). When provided,
+   * takes precedence over `localizedSlugs` and only locales with a non-empty href are shown.
+   */
+  localeHrefs?: Partial<Record<WebsiteLocaleKey, string>>;
   /** Locale rendered by the current page; used to mark the active option and the trigger. */
   currentLocale?: WebsiteLocaleKey;
 }
 
-const { localizedSlugs, currentLocale = ROOT_WEBSITE_LOCALE } =
+const { localizedSlugs, localeHrefs, currentLocale = ROOT_WEBSITE_LOCALE } =
   Astro.props as Props;
 
 const FLAGS = {
@@ -37,7 +42,11 @@ const FLAGS = {
 
 const locales = WEBSITE_LOCALE_KEYS.flatMap((locale) => {
   let href: string;
-  if (localizedSlugs) {
+  if (localeHrefs) {
+    const direct = localeHrefs[locale];
+    if (direct == null || String(direct).trim() === "") return [];
+    href = direct;
+  } else if (localizedSlugs) {
     const raw = localizedSlugs[locale];
     if (raw == null || String(raw).trim() === "") return [];
     href = localizedHref(locale, normalizeCmsSlug(String(raw)));
