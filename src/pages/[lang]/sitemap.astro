@@ -1,0 +1,33 @@
+---
+import SitemapPage from "../../components/Pages/Static/SitemapPage.astro";
+import {
+  getWebsitePages,
+  LOCALIZED_PAGE_LANG_CODES,
+  websiteLocaleFromPageLang,
+  type WebsiteLocaleKey,
+} from "../../lib/sanity";
+
+export async function getStaticPaths() {
+  const websitePages = await getWebsitePages();
+
+  return LOCALIZED_PAGE_LANG_CODES.map((lang) => {
+    const locale = websiteLocaleFromPageLang(lang)!;
+    return {
+      params: { lang },
+      props: { locale, websitePages },
+    };
+  });
+}
+
+interface Props {
+  locale: WebsiteLocaleKey;
+  websitePages: Awaited<ReturnType<typeof getWebsitePages>>;
+}
+
+const { locale, websitePages } = Astro.props as Props;
+---
+
+<SitemapPage
+  locale={locale}
+  websitePages={websitePages}
+/>

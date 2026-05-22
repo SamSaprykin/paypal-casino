@@ -1,18 +1,18 @@
 {
-  "name": "astro-contentful-starter",
+  "name": "paypal-casino",
   "type": "module",
   "version": "1.0.0",
-  "description": "A modern starter template with Astro, Contentful CMS, and Tailwind CSS",
+  "description": "PayPal Casinos marketing site (Astro + Sanity CMS)",
   "keywords": [
     "astro",
-    "contentful",
+    "sanity",
     "tailwind",
     "typescript",
-    "starter",
-    "template"
+    "paypal casinos"
   ],
   "author": "Your Name",
   "license": "MIT",
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -20,7 +20,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "sanity:graphql:codegen": "graphql-codegen --config codegen.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -34,7 +35,7 @@
     "astro": "^4.16.19",
     "astro-robots-txt": "^1.0.0",
     "clsx": "^2.1.1",
-    "contentful": "^11.7.15",
+    "@sanity/image-url": "^1.1.0",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.542.0",
     "react": "^19.1.1",
@@ -47,8 +48,13 @@
     "typescript": "^5.6.2"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.7",
+    "@graphql-codegen/schema-ast": "^4.1.0",
+    "@graphql-codegen/typescript": "^4.1.6",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^22.7.4"
+    "@types/node": "^22.7.4",
+    "dotenv": "^16.6.1",
+    "graphql": "^16.11.0"
   },
   "engines": {
     "node": ">=18.0.0"

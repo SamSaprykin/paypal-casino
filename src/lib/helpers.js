@@ -1,5 +1,8 @@
 export const addHttps = (url) => {
-  return url?.startsWith("//images.ctfassets.net") ? `https:${url}` : url;
+  if (!url) return url;
+  if (url.startsWith("//cdn.sanity.io")) return `https:${url}`;
+  if (url.startsWith("//images.ctfassets.net")) return `https:${url}`;
+  return url;
 };
 
 export const slugify = (text) => {

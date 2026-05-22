@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import { ArrowRight } from "@lucide/astro";
+import CustomButton from "../../Atoms/Button.astro";
+import { addHttps } from "../../../lib/helpers";
+import type { BonusesListSection } from "../../../lib/sanity";
+
+interface Props {
+  section: BonusesListSection;
+}
+
+const { section } = Astro.props;
+---
+
+{section.bonuses.length > 0 && (
+  <section class="mx-auto px-4 lg:px-0 py-12 max-w-5xl lg:pb-24 pb-12 flex flex-col gap-4">
+    {section.title ? (
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">{section.title}</h2>
+    ) : null}
+
+    <div class="flex flex-col gap-4 w-full max-w-5xl mx-auto">
+      {section.bonuses.map((bonus) => (
+        <article
+          class="relative bg-white rounded-lg shadow-md border border-gray-200 flex flex-col md:flex-row items-stretch overflow-hidden transition-all duration-300 hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 md:w-48 md:min-w-48 flex items-center justify-center p-6 md:p-4"
+            style={bonus.bonusBackgroundColor
+              ? `background-color:${bonus.bonusBackgroundColor}`
+              : "background-color:#1e3a8a"}
+          >
+            {bonus.bonusLogo?.url ? (
+              <Image
+                src={addHttps(bonus.bonusLogo.url) || "/placeholder.svg"}
+                alt={bonus.bonusLogo.altText || bonus.name || "Bonus"}
+                width={140}
+                height={70}
+                class="rounded-md object-contain max-h-16 mx-auto"
+                loading="lazy"
+              />
+            ) : (
+              <span class="text-white font-semibold">{bonus.name}</span>
+            )}
+          </div>
+
+          <div class="flex-1 p-4 flex flex-col justify-center min-w-0">
+            <h3 class="text-xl font-semibold text-gray-900 mb-1">{bonus.name}</h3>
+            {bonus.code ? (
+              <p class="text-xs text-blue-700 font-bold mb-2 uppercase tracking-wide">
+                Code: {bonus.code}
+              </p>
+            ) : null}
+            {bonus.description ? (
+              <p class="text-sm text-gray-700">{bonus.description}</p>
+            ) : null}
+          </div>
+
+          {bonus.referralUrl ? (
+            <div class="flex-shrink-0 md:w-48 md:min-w-48 flex flex-col justify-center p-4 border-t md:border-t-0 md:border-l border-gray-100">
+              <CustomButton
+                variant="primary"
+                size="lg"
+                className="w-full group text-sm"
+                buttonType="external-ref-link"
+                refLink={bonus.referralUrl}
+              >
+                <span class="cta-text text-md">Claim Bonus</span>
+                <ArrowRight class="w-4 h-4 ml-1 transform transition-all duration-300 group-hover:translate-x-1" />
+              </CustomButton>
+            </div>
+          ) : null}
+        </article>
+      ))}
+    </div>
+  </section>
+)}

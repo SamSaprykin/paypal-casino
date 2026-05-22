@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../Layout/Header.astro";
+import Footer from "../../Layout/Footer.astro";
+import {
+  homeHrefForLocale,
+  localizedStaticPageHref,
+  type WebsiteLocaleKey,
+} from "../../../lib/sanity";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../../../lib/schema";
+import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
+import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
+
+interface Props {
+  locale: WebsiteLocaleKey;
+}
+
+const { locale } = Astro.props as Props;
+const id = localeIdForWebsiteLocale(locale);
+const copy = staticSitePagesCopyFor(locale).contact;
+const htmlLang = LOCALES[id].htmlLang;
+
+const canonical = localizedStaticPageHref(locale, "contact-us");
+const homeHref = homeHrefForLocale(locale);
+const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
+
+const seoData = {
+  title: copy.metaTitle,
+  description: copy.metaDescription,
+  canonical,
+  openGraph: {
+    title: copy.ogTitle,
+    description: copy.ogDescription,
+    type: "website",
+  },
+  keywords: copy.keywords,
+};
+
+const pageData = {
+  name: copy.schemaName,
+  title: copy.h1,
+  slug: slugForSchema,
+  description: copy.schemaDescription,
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs(copy.h1, {
+    homeName: copy.breadcrumbHome,
+    homeUrl: homeHref,
+  }),
+);
+---
+
+<BaseLayout seo={seoData} lang={htmlLang}>
+  <Header locale={locale} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <div class="container mx-auto p-8 bg-white rounded-lg shadow-md mt-48 mb-16 border border-gray-200">
+    <h1 class="text-3xl font-bold text-gray-900 mb-4">{copy.h1}</h1>
+    <p class="text-gray-700 mb-6">{copy.greeting}</p>
+    <p class="text-gray-700 mb-6">
+      {copy.body}{" "}
+      <a
+        href="mailto:info@ppcasinos.co"
+        class="text-blue-600 hover:text-blue-700 underline"
+      >
+        info@ppcasinos.co
+      </a>
+    </p>
+    <p class="text-gray-700">{copy.disclaimer}</p>
+  </div>
+
+  <Footer locale={locale} />
+</BaseLayout>

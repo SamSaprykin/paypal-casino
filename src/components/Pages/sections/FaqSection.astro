@@ -1,0 +1,21 @@
+---
+import { FaqAccordion } from "../FAQComponent.jsx";
+import type { FaqSection } from "../../../lib/sanity";
+
+interface Props {
+  section: FaqSection;
+}
+
+const { section } = Astro.props;
+
+
+---
+
+{section.items.length > 0 ? (
+  <FaqAccordion
+    client:only="react"
+    title={section.title}
+    items={section.items}
+    spaceTop={section.spaceTop}
+  />
+) : null}

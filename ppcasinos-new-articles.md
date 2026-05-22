@@ -1,344 +1,401 @@
-# Rules
+# Rules (Home Page Deposit & Withdrawal Guide — 2026 Update)
 
-- Save article in markdown file
-- Important: language or article is Germand(we have intl pages)
-- use 2026 if need year
-- Create a detailed article (4000 - 5000 words), using these keywords:
-- add Seo Title + Seo Description
-- add 3-4 faq
-- add 3-5 internal links(sitemap attached)
-
-
-## THEME: what is rtp in slots
-
-Structure:
-
-/casinos-mit-paypal/
-Casinos mit paypal
-Keyword
-
-PayPal Casino Deutschland
-
-Structure
-h1 PayPal Casino Deutschland
-h2.PayPal Casinos Vergleich 2026
-h2. Die besten PayPal Online Casinos 2026
-h2. PayPal Casino – Legale Online Slots
-h2. Die besten PayPal Online Casinos für Deutschland
+- Save the article as a markdown (.md) file.
+- Language: English (targeted at the Irish market).
+- All references and details should use the year 2026 throughout headings, SEO, and body copy.
+- The article should be comprehensive (4000–5000 words), weaving in the specified keywords organically.
+- Add an SEO Title and SEO Description specific to this comparison guide.
+- Provide 3–4 FAQs about top online casino payment methods in Ireland and their answers.
+- Insert 3–5 internal links using actual URLs from the site map appendix.
+- Use the structure and guidance below, applying consistent terminology and format for all methods.
 
 ---
 
-## Suggested Keywords
+## THEME: Comparing Top Casino Payment Options (PayPal, Crypto, Neteller, Bank Cards) — Ireland 2026
 
-### Primary Keywords
+**Article Structure:**
 
-**Primary Keywords**
+- URL: `/casino-payment-methods/`
+- Main Heading: Best Casino Deposit & Withdrawal Methods Ireland 2026
 
-- Die besten PayPal Online Casinos für Deutschland
-- online casino paypal einzahlung
-- online casino paypal 5 euro einzahlung
-- casino mit paypal einzahlung
-- casino paypal einzahlung
-- online casino mit paypal einzahlung
-- online casino mit paypal 1 euro einzahlung
-- paypal casino einzahlung 1 euro
-- spiele mit paypal auszahlung
-- Legal online spielen
+**Primary Keywords (2026):**
+- best casino payment methods
+- online casino paypal
+- online casino crypto
+- neteller casino ireland
+- casino bank card deposit
+- casino withdrawal ireland
+- fast casino payouts
+- secure casino deposits
+- irish online casinos payment
+- casino payment options ireland
+- paypal vs crypto casino
+- neteller vs paypal casino
+- bank card casino deposit
+- withdrawal speed casino ireland
 
 ---
 
-## Use internal links (ensure it has full link like https://ppcasinos.co/blog/bonuses/autumn-2025-paypal-casino-bonuses/ etc):
+## Example Article Structure: Casino Payment Comparison Ireland 2026
 
-- [Home](https://ppcasinos.co/)
-- [Blog](https://ppcasinos.co/blog/)
-- [Bonuses](https://ppcasinos.co/blog/bonuses/)
-- [Autumn 2025 PayPal Casino Bonuses](https://ppcasinos.co/blog/bonuses/autumn-2025-paypal-casino-bonuses/)
-- [Best PayPal Casino Welcome Bonuses in 2025](https://ppcasinos.co/blog/bonuses/best-paypal-casino-welcome-bonuses-in-2025/)
-- [Free Spins for PayPal Users](https://ppcasinos.co/blog/bonuses/free-spins-for-paypal-users/)
-- [Game Guides](https://ppcasinos.co/blog/game-guides/)
-- [Fresh Guide to Playing Live Roulette at PayPal Casinos in Ireland](https://ppcasinos.co/blog/game-guides/a-fresh-guide-to-playing-live-roulette-at-paypal-casinos-in-ireland/)
-- [Best Slot Games to Play at PayPal](https://ppcasinos.co/blog/game-guides/best-slot-games-to-play-at-paypal/)
-- [Wheel of Fortune Megaways](https://ppcasinos.co/blog/game-guides/wheel-of-fortune-megaways/)
-- [Payment Methods](https://ppcasinos.co/blog/payment-methods/)
-- [PayPal vs Apple Pay Casinos 2025](https://ppcasinos.co/blog/payment-methods/paypal-vs-apple-pay-casinos-2025/)
-- [Why PayPal is the Most Secure Method](https://ppcasinos.co/blog/payment-methods/why-paypal-the-most-secure-method/)
-- [Tips and Strategies](https://ppcasinos.co/blog/tips-and-strategies/)
-- [How to Turn Small PayPal Deposits into Big Casino Wins](https://ppcasinos.co/blog/tips-and-strategies/how-to-turn-small-paypal-deposits-into-big-casino-wins/)
-- [When to Use PayPal – Smart Guide 2025](https://ppcasinos.co/blog/tips-and-strategies/when-to-use-paypal-smart-guide-2025/)
+### SEO Title
+Best Casino Payment Methods 2026 – Compare PayPal, Crypto, Neteller & Bank Card in Ireland
 
-### Casino Guides
-- [1go](https://ppcasinos.co/casino-guide/1go/)
-- [1win](https://ppcasinos.co/casino-guide/1win/)
-- [Aquawin](https://ppcasinos.co/casino-guide/aquawin/)
-- [Bdmbet](https://ppcasinos.co/casino-guide/bdmbet/)
-- [Caspero](https://ppcasinos.co/casino-guide/caspero/)
-- [Cleobetra](https://ppcasinos.co/casino-guide/cleobetra/)
-- [Cosmicslot](https://ppcasinos.co/casino-guide/cosmicslot/)
-- [Crownplay](https://ppcasinos.co/casino-guide/crownplay/)
-- [Crownslots](https://ppcasinos.co/casino-guide/crownslots/)
-- [Divaspin](https://ppcasinos.co/casino-guide/divaspin/)
-- [Drip](https://ppcasinos.co/casino-guide/drip/)
-- [Evospin](https://ppcasinos.co/casino-guide/evospin/)
-- [Fambet](https://ppcasinos.co/casino-guide/fambet/)
-- [Flagman](https://ppcasinos.co/casino-guide/flagman/)
-- [Glitchspin](https://ppcasinos.co/casino-guide/glitchspin/)
-- [Hugo Casino](https://ppcasinos.co/casino-guide/hugo-casino/)
-- [Kinbet](https://ppcasinos.co/casino-guide/kinbet/)
-- [Legzo](https://ppcasinos.co/casino-guide/legzo/)
-- [Lucky Start](https://ppcasinos.co/casino-guide/lucky-start/)
-- [Lunubet](https://ppcasinos.co/casino-guide/lunubet/)
-- [Monro](https://ppcasinos.co/casino-guide/monro/)
-- [Onluck](https://ppcasinos.co/casino-guide/onluck/)
-- [Ritzo](https://ppcasinos.co/casino-guide/ritzo/)
-- [Rockwin](https://ppcasinos.co/casino-guide/rockwin/)
-- [Rollingslots](https://ppcasinos.co/casino-guide/rollingslots/)
-- [RX Casino](https://ppcasinos.co/casino-guide/rx-casino/)
-- [Skycrown](https://ppcasinos.co/casino-guide/skycrown/)
-- [Spinbetter](https://ppcasinos.co/casino-guide/spinbetter/)
-- [Spinsbro](https://ppcasinos.co/casino-guide/spinsbro/)
-- [Starda](https://ppcasinos.co/casino-guide/starda/)
-- [Tonybet](https://ppcasinos.co/casino-guide/tonybet/)
-- [Trickz](https://ppcasinos.co/casino-guide/trickz/)
-- [Tsars](https://ppcasinos.co/casino-guide/tsars/)
-- [Vegas Hero](https://ppcasinos.co/casino-guide/vegas-hero/)
-- [Vincispin](https://ppcasinos.co/casino-guide/vincispin/)
-- [Winshark](https://ppcasinos.co/casino-guide/winshark/)
-- [Wonderluck](https://ppcasinos.co/casino-guide/wonderluck/)
+### SEO Description
+Compare the best online casino payment methods in Ireland for 2026! In-depth guide to PayPal, Crypto, Neteller, and Bank Card for deposits, withdrawals, speed, and safety — all tested by Irish experts.
 
-### Other Pages
+---
 
-- [Contact Us](https://ppcasinos.co/contact-us/)
-- [Denmark Guide](https://ppcasinos.co/denmark-guide/)
-- [Frequently Asked Questions](https://ppcasinos.co/frequently-asked-questions/)
-- [Ireland Guide](https://ppcasinos.co/ireland-guide/)
-- [Norway Guide](https://ppcasinos.co/norway-guide/)
-- [PayPal Casinos](https://ppcasinos.co/paypal-casinos/)
-- [Privacy Policy](https://ppcasinos.co/privacy-policy/)
-- [Rating Guidelines](https://ppcasinos.co/rating-guidelines/)
-- [Sitemap](https://ppcasinos.co/sitemap/)
-- [Suomi Guide](https://ppcasinos.co/suomi-guide/)
-- [Sweden Guide](https://ppcasinos.co/sweden-guide/)
-- [Terms and Conditions](https://ppcasinos.co/terms-and-conditions/)
+## Content Outline
 
-## Custom Components (for dev):
+### H1: Best Casino Deposit & Withdrawal Methods in Ireland 2026 – Full Comparison Guide
 
-- `info-card`: `<InfoCard {...props} />`
-- `tip-box`: `<TipBox {...props} />`
-- `grid-two-columns`: `<GridTwoColumns {...props} />`
-- `how-to`: Custom stepper/list. Provided extraction logic.
+#### H2: Comparing the Top Casino Payment Methods in Ireland 2026
+Intro to the importance of fast, secure, and reliable ways to move funds for Irish casino players.
 
-_Components and logic omitted for brevity; see code for implementation details._
+#### H2: At-a-Glance Comparison Table — PayPal, Crypto, Neteller & Bank Card (Visa/Mastercard)
 
-Custom components:
+- **Insert a super-detailed, easy-to-scan comparison table** covering:  
+  - Supported at major Irish casinos  
+  - Deposit and withdrawal speed  
+  - Minimum/maximum limits  
+  - Fees  
+  - Security and privacy  
+  - Mobile compatibility  
+  - Bonus eligibility  
+  - Customer support  
+  - Any unique perks  
+- Use HTML table or Markdown table as appropriate for clarity.
+
+#### H2: Method Summaries & In-Depth Guides
+
+##### H3: PayPal in Irish Casinos 2026
+- Overview and how it works; relevance for Irish players
+- Advantages, limitations, special considerations for casino players
+
+##### H3: Crypto Payments (Bitcoin, Ethereum, etc.) in Irish Casinos
+- How crypto works for deposits/withdrawals
+- Pros, risks, unique opportunities for gamers
+
+##### H3: Neteller for Online Casinos in Ireland
+- How Neteller is used, who prefers it, fees, payout speed
+
+##### H3: Bank Cards (Visa & Mastercard) for Irish Casinos
+- Deposit and withdrawal details; extra steps; universal acceptance
+
+#### H2: Pros and Cons – Detailed Comparison by Payment Method
+
+- Use separate “pros-cons” blocks for:  
+  - PayPal  
+  - Crypto  
+  - Neteller  
+  - Bank Cards  
+- Every block should use the site’s HTML or semantic structure (`.pros-cons` etc.) so the parser recognizes them for rendering.
+- **Each "pros-cons" must include** label lines inside `<span>` tags (see block requirements), be specific (not generic), and mention Irish context where relevant.
+
+#### H2: Which Casino Payment Method is Best for You? (2026 Verdict)
+- Expert analysis, considering security, speed, fees, game bonuses, and user experience in Ireland.
+- Recommend circumstances where each method is ideal; note anything new for 2026.
+
+#### H2: FAQ – Casino Payment Methods in Ireland 2026
+- Answer the most useful 3–4 practical questions for Irish players choosing payment methods.
+
+---
+
+## Main Article Keywords (integrate naturally in main body — **never list out**)
+
+- best casino payment methods
+- fastest withdrawal online casino
+- secure casino payment options
+- irish online casinos payment
+- casino payouts 2026
+- casino deposit bonus payment method
+- paypal casino ireland
+- crypto casino ireland
+- neteller casino payment
+- bank card casino deposit
+
+# LLM authoring guide — PayPal Casino articles (`ContentComponent`)
+
+You generate **long-form articles** that render inside **`ContentComponent`** (React + `react-markdown` + `rehype-raw` + GitHub-flavored Markdown). Output must be valid **Markdown mixed with raw HTML** unless the product owner asks for **`.mdx`** (then use React components — see section D).
+
+---
+
+## A. Your job
+
+1. Write normal **Markdown** for headings (`#`, `##`, …), paragraphs, lists, links.
+2. Insert **HTML blocks** only where a **custom visual component** is required (callouts, grids, how-to, pros/cons, etc.).
+3. Never invent unsupported class hooks or removed blocks (see **Forbidden**).
+4. Icons are **Lucide (React)** only:
+   - **CMS HTML:** empty placeholder `<span data-lucide="IconName"></span>` using an allowed name (see **C**).
+   - **Legacy how-to:** plain text inside `<span class="icon">…</span>` using **IconSwitch** keys (see **B2**).
+
+Tone, language, and SEO fields outside the body are out of scope unless specified.
+
+---
+
+## B. How `ContentComponent` maps HTML → React (reference pseudocode)
+
+This mirrors the real `div` handler in `ContentComponent.jsx`. Use it so your HTML lines up with what the parser expects.
+
+Assume helpers `hastClassIncludes(properties, needle)` and `textFromTree(node)` match production (`ContentComponent.jsx` / `articleMarkdownBlocks.jsx`).
+
+```tsx
+const className = props.className || "";
+
+if (className.includes("criteria-grid")) {
+  const items = parseCriteriaGridFromHast(node);
+  return <ArticleMarkdownCriteriaGrid items={items} />;
+}
+
+if (className.includes("editor-note")) {
+  const paragraphs = parseEditorNoteParagraphs(node); // all <p> inside the block
+  return <ArticleMarkdownEditorNote>{paragraphs as <p>…}</ArticleMarkdownEditorNote>;
+}
+
+if (className.includes("pros-cons")) {
+  const pc = parseProsConsFromHast(node);
+  return (
+    <ArticleMarkdownProsCons
+      prosTitle={pc.prosTitle}
+      consTitle={pc.consTitle}
+      pros={pc.pros}
+      cons={pc.cons}
+    />
+  );
+}
+
+if (
+    String(className).split(/\s+/).filter(Boolean).includes("article") &&
+    !className.includes("article-markdown")
+  ) {
+  return <ArticleMarkdownArticleWrapper>{children}</ArticleMarkdownArticleWrapper>;
+}
+
+if (className.includes("highlight-box")) {
+  return <HighlightBox firstBonus={firstBonus}>{children}</HighlightBox>;
+}
 
 if (className.includes("info-card")) {
-
-return <InfoCard {...props} />;
-
+  return <InfoCard>{children}</InfoCard>;
 }
 
 if (className.includes("tip-box")) {
-
-return <TipBox {...props} />;
-
+  return <TipBox>{children}</TipBox>;
 }
 
 if (className.includes("grid-two-columns")) {
-
-return <GridTwoColumns {...props} />;
-
+  return <GridTwoColumns>{children}</GridTwoColumns>;
 }
 
 if (className.includes("how-to")) {
+  const hasStepCard = node.children.some(
+    (child) =>
+      child.type === "element" &&
+      hastClassIncludes(child.properties, "step-card"),
+  );
 
-const steps = node.children
+  if (hasStepCard) {
+    const steps = parseHowToStepCardsFromHast(node);
+    return <ArticleMarkdownHowToStepCards steps={steps} />;
+  }
 
-.filter((child) =>
+  const steps = node.children
+    .filter(
+      (child) =>
+        child.type === "element" &&
+        hastClassIncludes(child.properties, "step-item"),
+    )
+    .map((stepNode) => {
+      const titleNode = stepNode.children.find(
+        (n) =>
+          n.tagName === "h5" &&
+          hastClassIncludes(n.properties, "step-title"),
+      );
+      const iconNode = stepNode.children.find(
+        (n) =>
+          n.tagName === "span" &&
+          hastClassIncludes(n.properties, "icon"),
+      );
+      const descNode = stepNode.children.find(
+        (n) =>
+          n.tagName === "p" &&
+          hastClassIncludes(n.properties, "step-description"),
+      );
 
-child.properties?.className?.includes("step-item"),
+      return {
+        title: textFromTree(titleNode),
+        icon: iconNode ? textFromTree(iconNode).trim() : "", // IconSwitch key
+        descriptionChildren: descNode?.children ?? null,
+      };
+    });
 
-)
-
-.map((stepNode) => {
-
-const titleNode = stepNode.children.find(
-
-(n) =>
-
-n.tagName === "h5" &&
-
-n.properties?.className?.includes("step-title"),
-
-);
-
-const iconNode = stepNode.children.find(
-
-(n) =>
-
-n.tagName === "span" &&
-
-n.properties?.className?.includes("icon"),
-
-);
-
-const descNode = stepNode.children.find(
-
-(n) =>
-
-n.tagName === "p" &&
-
-n.properties?.className?.includes(
-
-"step-description",
-
-),
-
-);
-
-return {
-
-title: titleNode
-
-? titleNode.children
-
-.map((c) => c.value || "")
-
-.join("")
-
-: "",
-
-icon: iconNode?.children?.[0]?.value || "",
-
-description: descNode
-
-? descNode.children
-
-.map((c) => c.value || "")
-
-.join("")
-
-: "",
-
-};
-
-});
-
-return <HowToComponent steps={steps} />;
-
+  return <HowToComponent steps={steps} />;
 }
 
 return <div {...props} />;
+```
 
-},
+### B1. HTML templates you should emit (CMS)
 
-const HowToComponent = ({ steps }) => {
+**Article wrapper (optional)**
 
-return (
-
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
-
-{steps.map((step, index) => (
-
-<div
-
-key={index}
-
-className="flex flex-col p-4 border border-orange-200 bg-gradient-to-bl from-yellow-50 via-white to-green-100 rounded-2xl shadow-md transition-transform hover:scale-105"
-
->
-
-<div className="flex flex-col items-center gap-4 mb-3">
-
-<IconSwitch iconName={step.icon} />
-
-<h3 className="text-xl font-semibold text-green-800 text-center">
-
-{step.title}
-
-</h3>
-
+```html
+<div class="article">
+  …markdown + blocks…
 </div>
+```
 
-<p className="text-gray-700 whitespace-pre-line text-center">
+**Info card** (`InfoCard` — built-in Lucide `Info`)
 
-{step.description}
-
-</p>
-
+```html
+<div class="info-card">
+  <div>
+    <strong>Title line</strong>
+    <p>Body copy.</p>
+  </div>
 </div>
+```
 
-))}
+**Tip box** (`TipBox` — Lucide `Lightbulb`)
 
+```html
+<div class="tip-box">
+  <p><strong>Tip:</strong> …</p>
 </div>
+```
 
-);
+**Criteria grid** — each row is `.criteria-item`; icon = first element with `data-lucide`:
 
-};
-
-const InfoCard = ({ title, children }) => {
-
-return (
-
-<div className="my-8 border-l-4 border-blue-400 bg-blue-50/60 px-4 lg:px-8 py-2 lg:py-6 rounded-xl shadow info-card">
-
-<div className="flex flex-col md:flex-row items-start gap-4">
-
-<Info className="w-7 h-7 text-blue-500 mt-1 flex-shrink-0" />
-
-<div>
-
-{title && (
-
-<h4 className="text-xl font-semibold mb-1 text-blue-700">
-
-{title}
-
-</h4>
-
-)}
-
-<p className="text-blue-900 leading-relaxed text-base">{children}</p>
-
+```html
+<div class="criteria-grid">
+  <div class="criteria-item">
+    <span data-lucide="Shield" aria-hidden="true"></span>
+    <div>
+      <div class="criteria-title">…</div>
+      <div class="criteria-desc">…</div>
+    </div>
+  </div>
 </div>
+```
 
+**Editor note** — one or more `<p>` only (icons are added by React):
+
+```html
+<div class="editor-note">
+  <p>Quoted or editorial text.</p>
 </div>
+```
 
+**Pros / cons**
+
+```html
+<div class="pros-cons">
+  <div class="pros">
+    <div class="pros-label">Fordele</div>
+    <div class="pro-item"><span>Line of text</span></div>
+  </div>
+  <div class="cons">
+    <div class="cons-label">Ulemper</div>
+    <div class="con-item"><span>Line of text</span></div>
+  </div>
 </div>
+```
 
-);
+### B2. How-to — choose exactly one shape inside `.how-to`
 
-};
+**Option 1 — Legacy `step-item` (4-column card UI, `IconSwitch`)**
 
-const TipBox = ({ children }) => {
+Inside each `step-item`:
 
-return (
+- `h5.step-title` — title  
+- `span.icon` — **plain text** Lucide key for `IconSwitch`  
+- `p.step-description` — body (HTML allowed inside per `HastStepDescription`)
 
-<div className="my-6 border-l-4 border-yellow-400 bg-yellow-50/80 px-4 py-4 sm:px-8 sm:py-6 rounded-xl shadow flex flex-col sm:flex-row items-start gap-3 sm:gap-4">
+Allowed **`IconSwitch`** icon strings (exact, case-sensitive):
 
-<Lightbulb className="w-7 h-7 text-yellow-500 mt-1 flex-shrink-0 mb-2 sm:mb-0" />
+`ShieldCheck`, `UserPlus`, `CreditCard`, `Gift`, `PlayCircle`, `Coin`, `Trophy`, `DollarSign`
 
-<p className="text-yellow-900 leading-relaxed text-base sm:text-base text-sm">
+Example:
 
-{children}
-
-</p>
-
+```html
+<div class="how-to">
+  <div class="step-item">
+    <span class="icon">UserPlus</span>
+    <h5 class="step-title">Opret konto</h5>
+    <p class="step-description">Brødtekst …</p>
+  </div>
 </div>
+```
 
-);
+**Option 2 — `step-card` grid (icons via `data-lucide`)**
 
-};
-
-const GridTwoColumns = ({ ...props }) => {
-
-return (
-
-<div className="text-gray-900 grid grid-cols-1 md:grid-cols-2 gap-8 my-6">
-
-{props.children}
-
+```html
+<div class="how-to">
+  <div class="step-card">
+    <div class="step-icon">
+      <span data-lucide="UserPlus" aria-hidden="true"></span>
+    </div>
+    <div class="step-num">Trin 1</div>
+    <div class="step-title">…</div>
+    <div class="step-desc">…</div>
+  </div>
 </div>
+```
 
-);
+If **both** `step-card` and `step-item` appear under the same `.how-to`, **`step-card` wins** (legacy parser is skipped).
 
-};
+---
+
+## C. `data-lucide` names allowed in CMS HTML
+
+Parsed in `articleMarkdownBlocks.jsx` (`LUCIDE_ICONS`). Names must match **`lucide-react` exports** exactly.
+
+Typical sets:
+
+- Criteria-style: `Shield`, `CreditCard`, `Eye`, `Smartphone`, `Headphones`, `LayoutDashboard`
+- Steps (step-card): `UserPlus`, `Landmark`, `ClipboardList`, `CreditCard`, `Gamepad2`, `Banknote`
+- Also registered for reuse: `Quote`, `ThumbsUp`, `ThumbsDown`, `Check`, `X`, `Lightbulb`, `Info`
+
+If you need a new glyph, add it to **`LUCIDE_ICONS`** and `import` it there — do not emit random names.
+
+---
+
+## D. Optional: `.mdx` with React building blocks
+
+React equivalents live in **`ContentArticleComponents.jsx`** (same visuals as the old `.astro` wrappers).
+
+```tsx
+import {
+  ArticleShell,
+  InfoArticle,
+  TipArticle,
+  CriteriaGrid,
+  CriteriaItem,
+  EditorNote,
+  ProsConsArticle,
+  HowToArticle,
+  StepCard,
+} from "../../components/Pages/Content/ContentArticleComponents.jsx";
+```
+
+- **`CriteriaItem` `icon` prop:** `Shield` | `CreditCard` | `Eye` | `Smartphone` | `Headphones` | `LayoutDashboard`
+- **`StepCard` `icon` prop:** `UserPlus` | `Landmark` | `ClipboardList` | `CreditCard` | `Gamepad2` | `Banknote`
+- **`ProsConsArticle`:** same props as `ArticleMarkdownProsCons` — `prosTitle`, `consTitle`, `pros[]`, `cons[]`
+
+---
+
+## E. Forbidden (parser no longer supports these)
+
+Do **not** emit: `seo-meta`, `divider`, `badge`, `faq` / `faq-item`, Tabler `ti ti-*` icon fonts, or raw SVG icon fonts for these blocks.
+
+---
+
+## F. Human QA checklist
+
+- [ ] All custom blocks use class names exactly as in **B1 / B2**
+- [ ] `data-lucide` values exist in **`LUCIDE_ICONS`**
+- [ ] Legacy how-to icons are exactly **`IconSwitch`** keys
+- [ ] `pros-cons` rows use inner `<span>` for line text
+- [ ] Full reference article: repo root **`example.md`**
+

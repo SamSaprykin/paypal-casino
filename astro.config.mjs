@@ -11,7 +11,10 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
-    sitemap(),
+    sitemap({
+      filter: (page) =>
+        !page.includes("/intl-demo") && !page.includes("/404"),
+    }),
     robotsTxt(),
   ],
   trailingSlash: 'always',
@@ -21,11 +24,6 @@ export default defineConfig({
     shikiConfig: {
       theme: 'github-dark',
       wrap: true,
-    },
-  },
-  vite: {
-    optimizeDeps: {
-      include: ['contentful'],
     },
   },
 });

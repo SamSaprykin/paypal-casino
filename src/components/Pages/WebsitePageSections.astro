@@ -1,0 +1,40 @@
+---
+import type { PageSection } from "../../lib/sanity";
+import type { WebsiteLocaleKey } from "../../lib/sanity";
+
+import ContentSection from "./sections/ContentSection.astro";
+import CasinoListSection from "./sections/CasinoListSection.astro";
+import FaqSection from "./sections/FaqSection.astro";
+import HowToSection from "./sections/HowToSection.astro";
+import BonusesListSection from "./sections/BonusesListSection.astro";
+
+interface Props {
+  sections: PageSection[];
+  locale?: WebsiteLocaleKey;
+}
+
+const { sections, locale } = Astro.props;
+
+
+---
+
+<div class="website-page-sections flex flex-col bg-transparent py-4">
+  {
+    sections.map((section) => {
+      switch (section.kind) {
+        case "casinoList":
+          return <CasinoListSection section={section} locale={locale} />;
+        case "faqComponent":
+          return <FaqSection section={section} />;
+        case "contentComponent":
+          return <ContentSection section={section} />;
+        case "howTo":
+          return <HowToSection section={section} />;
+        case "bonusesList":
+          return <BonusesListSection section={section} />;
+        default:
+          return null;
+      }
+    })
+  }
+</div>

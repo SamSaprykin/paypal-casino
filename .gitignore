@@ -13,6 +13,7 @@
 .env
 # Ignore logs
 npm-debug.log*
+pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
@@ -36,8 +37,7 @@ Thumbs.db
 *.pid.lock
 *.sublime-*
 
-# Ignore lock files
+# Ignore other package managers’ lockfiles (this repo uses pnpm)
 package-lock.json
 yarn.lock
-pnpm-lock.yaml
 

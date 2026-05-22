@@ -5,6 +5,7 @@ import {
   ensureAbsoluteUrl,
   cleanTextForSchema,
 } from "./types.js";
+import { portableTextToPlainText } from "../sanity/portableTextPlain.ts";
 
 // Organization schema for the PayPal Casino website
 export function generateOrganizationSchema() {
@@ -87,122 +88,55 @@ export function generateArticleSchema(
     };
   }
 
-  // Add keywords if available
+  // Add keywords if available (Portable Text highlights from Sanity)
   if (post.highlights && Array.isArray(post.highlights)) {
-    schema.keywords = post.highlights.join(", ");
+    const kw = portableTextToPlainText(post.highlights);
+    if (kw) schema.keywords = kw.slice(0, 280);
   }
 
   return schema;
 }
 
-// Review schema for casino reviews
-export function generateCasinoReviewSchema(
-  casino,
-  baseUrl = "https://ppcasinos.co",
-) {
-  if (!casino) return null;
-
-  const schema = createBaseSchema(SCHEMA_TYPES.REVIEW, {
-    itemReviewed: {
-      "@type": SCHEMA_TYPES.CASINO,
-      name: casino.casinoName,
-      url: casino.website,
-      description: cleanTextForSchema(casino.shortDescription),
-      image: casino.logo?.fields?.file?.url
-        ? ensureAbsoluteUrl(casino.logo.fields.file.url)
-        : null,
-    },
-    reviewRating: {
-      "@type": SCHEMA_TYPES.RATING,
-      ratingValue:
-        casino.casinoRatesCollection.items[0].fields.ratingNumber ?? 4.6,
-      bestRating: 5,
-      worstRating: 1,
-    },
-    author: {
-      "@type": SCHEMA_TYPES.ORGANIZATION,
-      name: "Casinos-BTC Casino Reviews",
-    },
-    publisher: generateOrganizationSchema(),
-    url: ensureAbsoluteUrl(`/casino-guide/${casino.slug}/`, baseUrl),
-    datePublished: formatSchemaDate(casino.sys?.createdAt),
-    dateModified: formatSchemaDate(casino.sys?.updatedAt),
-  });
-
-  // Add aggregate rating if user recommendations are available
-  if (
-    casino.userRecommendationsTotalNumber &&
-    casino.userRecommendationsRecommendedNumber
-  ) {
-    schema.itemReviewed.aggregateRating = {
-      "@type": SCHEMA_TYPES.AGGREGATE_RATING,
-      ratingValue:
-        casino.casinoRatesCollection.items[0].fields.ratingNumber ?? 4.6,
-      reviewCount: casino.userRecommendationsTotalNumber,
-      bestRating: 5,
-      worstRating: 1,
-    };
-  }
-
-  // Add review body from content
-  if (casino.content) {
-    schema.reviewBody = cleanTextForSchema(casino.content, 500);
-  }
-
-  // Add pros and cons if available
-  if (casino.overviewsCollection?.items) {
-    const prosAndCons = casino.overviewsCollection.items;
-    const pros = prosAndCons
-      .filter((item) => item.type === "pro")
-      .map((item) => item.text);
-    const cons = prosAndCons
-      .filter((item) => item.type === "con")
-      .map((item) => item.text);
-
-    if (pros.length > 0 || cons.length > 0) {
-      schema.positiveNotes = pros;
-      schema.negativeNotes = cons;
-    }
-  }
-
-  return schema;
-}
-
-// FAQ schema for FAQ sections
+// FAQ schema for FAQ sections.
+// Accepts the typed `FaqSection` shape ({ items: [{ question, answer }] }) and
+// also tolerates legacy/Contentful shapes for embedded review FAQs.
 export function generateFAQSchema(faqComponent) {
   if (!faqComponent) return null;
 
+  const sources = [
+    faqComponent.items,
+    faqComponent.faqItemsCollection?.items,
+    faqComponent.fields?.faqItems,
+  ];
+
   let faqItems = [];
-
-  // Handle casino review format: faqComponent.faqItemsCollection.items
-  if (faqComponent.faqItemsCollection?.items) {
-    faqItems = faqComponent.faqItemsCollection.items.map((item) => ({
-      "@type": "Question",
-      name: cleanTextForSchema(item.question),
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: cleanTextForSchema(item.answer),
-      },
-    }));
+  for (const list of sources) {
+    if (!Array.isArray(list) || list.length === 0) continue;
+    faqItems = list
+      .map((item) => {
+        const question =
+          item.question ??
+          item.fields?.faqQuestion ??
+          item.faqQuestion;
+        const answer =
+          item.answer ??
+          item.fields?.faqAnswer ??
+          item.faqAnswer;
+        const name = cleanTextForSchema(question);
+        const text = cleanTextForSchema(answer);
+        if (!name || !text) return null;
+        return {
+          "@type": "Question",
+          name,
+          acceptedAnswer: { "@type": "Answer", text },
+        };
+      })
+      .filter(Boolean);
+    if (faqItems.length) break;
   }
-  // Handle regular page format: faqComponent.fields.faqItems
-  else if (faqComponent.fields?.faqItems) {
-    faqItems = faqComponent.fields.faqItems.map((item) => ({
-      "@type": "Question",
-      name: cleanTextForSchema(item.fields.faqQuestion),
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: cleanTextForSchema(item.fields.faqAnswer),
-      },
-    }));
-  }
 
-  // Return null if no FAQ items found
   if (faqItems.length === 0) return null;
-
-  return createBaseSchema(SCHEMA_TYPES.FAQ_PAGE, {
-    mainEntity: faqItems,
-  });
+  return createBaseSchema(SCHEMA_TYPES.FAQ_PAGE, { mainEntity: faqItems });
 }
 
 // WebPage schema for static pages
@@ -212,14 +146,20 @@ export function generateWebPageSchema(
 ) {
   if (!page) return null;
 
-  // Handle homepage URL correctly
+  const slugPath =
+    !page.slug || page.slug === "/"
+      ? "/"
+      : `/${String(page.slug).replace(/^\/+|\/+$/g, "").split("/").filter(Boolean).join("/")}/`;
+
   const pageUrl =
-    page.slug === "/" ? baseUrl : ensureAbsoluteUrl(`/${page.slug}/`, baseUrl);
+    slugPath === "/" ? baseUrl : ensureAbsoluteUrl(slugPath, baseUrl);
+
+  const seoFields = page.seo ?? page.seoComponent?.fields ?? page.seoComponent;
 
   return createBaseSchema(SCHEMA_TYPES.WEB_PAGE, {
     name: page.name || page.title,
     description: cleanTextForSchema(
-      page.seoComponent?.seoDescription || page.description,
+      seoFields?.seoDescription ?? page.description,
       160,
     ),
     url: pageUrl,
@@ -233,8 +173,12 @@ export function generateWebPageSchema(
       name: page.name || page.title,
     },
     publisher: generateOrganizationSchema(),
-    datePublished: formatSchemaDate(page.sys?.createdAt),
-    dateModified: formatSchemaDate(page.sys?.updatedAt),
+    datePublished: formatSchemaDate(
+      page.createdAt ?? page.sys?.createdAt,
+    ),
+    dateModified: formatSchemaDate(
+      page.updatedAt ?? page.sys?.updatedAt ?? page.createdAt ?? page.sys?.createdAt,
+    ),
   });
 }
 
@@ -307,28 +251,31 @@ export function generateBlogPostBreadcrumbs(category, postTitle) {
   ];
 }
 
-// Helper function to generate breadcrumbs for casino reviews
-export function generateCasinoReviewBreadcrumbs(casinoName) {
-  return [
-    { name: "Home", url: "/" },
-    { name: "Casino Reviews", url: "/casino-guide" },
-    { name: `${casinoName} Review`, url: "#" }, // Current page
-  ];
-}
-
 // Helper function to generate breadcrumbs for static pages
-export function generateStaticPageBreadcrumbs(pageName) {
+export function generateStaticPageBreadcrumbs(
+  pageName,
+  options,
+) {
+  const homeName = options?.homeName ?? "Home";
+  const homeUrl = options?.homeUrl ?? "/";
   return [
-    { name: "Home", url: "/" },
+    { name: homeName, url: homeUrl },
     { name: pageName, url: "#" }, // Current page
   ];
 }
 
 /** Breadcrumbs for games under /classic-games/:name/ */
-export function generateClassicGameBreadcrumbs(gamePageName) {
+export function generateClassicGameBreadcrumbs(
+  gamePageName,
+  options,
+) {
+  const homeName = options?.homeName ?? "Home";
+  const homeUrl = options?.homeUrl ?? "/";
+  const hubName = options?.classicGamesName ?? "Classic games";
+  const hubUrl = options?.classicGamesUrl ?? "/classic-games/";
   return [
-    { name: "Home", url: "/" },
-    { name: "Classic games", url: "/classic-games/" },
+    { name: homeName, url: homeUrl },
+    { name: hubName, url: hubUrl },
     { name: gamePageName, url: "#" },
   ];
 }

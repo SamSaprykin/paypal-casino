@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../Layout/Header.astro";
+import Footer from "../../Layout/Footer.astro";
+import {
+  homeHrefForLocale,
+  localizedStaticPageHref,
+  type WebsiteLocaleKey,
+} from "../../../lib/sanity";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../../../lib/schema";
+import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
+import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
+import { slugify } from "../../../lib/helpers.js";
+import type { WebsitePageListEntry } from "../../../lib/sanity";
+
+interface Props {
+  locale: WebsiteLocaleKey;
+  websitePages: WebsitePageListEntry[];
+}
+
+const { locale, websitePages } = Astro.props as Props;
+
+const id = localeIdForWebsiteLocale(locale);
+const site = staticSitePagesCopyFor(locale);
+const copy = site.sitemap;
+const hub = site.classicGamesHub;
+const htmlLang = LOCALES[id].htmlLang;
+
+const canonical = localizedStaticPageHref(locale, "sitemap");
+const homeHref = homeHrefForLocale(locale);
+const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
+
+const staticPages: Array<{ title: string; href: string }> = [
+  { title: copy.labels.home, href: homeHref },
+  { title: copy.labels.blog, href: "/blog/" },
+  { title: copy.labels.contact, href: localizedStaticPageHref(locale, "contact-us") },
+  { title: copy.labels.privacy, href: localizedStaticPageHref(locale, "privacy-policy") },
+  { title: copy.labels.terms, href: localizedStaticPageHref(locale, "terms-and-conditions") },
+  { title: copy.labels.classicGames, href: localizedStaticPageHref(locale, "classic-games") },
+  { title: copy.labels.tetris, href: "/classic-games/tetris/" },
+  { title: copy.labels.tetris50, href: "/classic-games/tetris-50/" },
+  { title: copy.labels.sudoku, href: "/classic-games/sudoku/" },
+  { title: copy.labels.solitaire, href: "/classic-games/solitaire/" },
+  { title: copy.labels.yukon, href: "/classic-games/yukon/" },
+  { title: copy.labels.russian, href: "/classic-games/russian/" },
+];
+
+const seoData = {
+  title: copy.metaTitle,
+  description: copy.metaDescription,
+  canonical,
+  openGraph: {
+    title: copy.ogTitle,
+    description: copy.ogDescription,
+    type: "website",
+  },
+  keywords: copy.keywords,
+};
+
+const pageData = {
+  name: copy.h1,
+  title: copy.h1,
+  slug: slugForSchema,
+  description: copy.metaDescription,
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs(copy.h1, {
+    homeName: hub.breadcrumbHome,
+    homeUrl: homeHref,
+  }),
+);
+---
+
+<BaseLayout seo={seoData} lang={htmlLang}>
+  <Header locale={locale} />
+
+  <div class="min-h-screen bg-gradient-to-br from-blue-50 via-gray-100 to-blue-50 pb-12 pt-32">
+    <div class="container mx-auto px-6 max-w-5xl">
+      <div class="mb-12 text-center">
+        <h1 class="text-5xl font-bold text-blue-900 mb-2">{copy.h1}</h1>
+        <p class="text-blue-700">{copy.intro}</p>
+      </div>
+
+      <div class="flex flex-col gap-12">
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            {copy.sectionMainPages}
+          </h2>
+          <ul class="space-y-2">
+            {staticPages.map((page) => (
+              <li>
+                <a
+                  href={page.href}
+                  class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                >
+                  {page.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+
+        <div>
+          <h2 class="text-2xl font-semibold text-blue-900 mb-6 border-b-2 border-blue-900 pb-2">
+            {copy.sectionWebsitePages}
+          </h2>
+          <ul class="space-y-2 grid lg:grid-cols-3 gap-4">
+            {websitePages.map((page) => {
+              if (page.fields.name === "Home Page") {
+                return null;
+              }
+              return (
+                <li>
+                  <a
+                    href={page.fields.href}
+                    class="text-blue-800 hover:text-blue-900 hover:underline transition-colors duration-200 block py-1 font-semibold"
+                  >
+                    {page.fields.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <Footer locale={locale} />
+</BaseLayout>
