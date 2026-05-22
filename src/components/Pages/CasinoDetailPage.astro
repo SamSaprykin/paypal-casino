@@ -2,17 +2,17 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Layout/Header.astro";
 import Footer from "../../components/Layout/Footer.astro";
-import HeroCasinoCard from "../../components/Pages/Cards/HeroCasinoCard.astro";
+import CasinoReviewHero from "../../components/Pages/CasinoReviewHero.astro";
 import { ContentComponent } from "../../components/Pages/ContentComponent.jsx";
 import { FaqAccordion } from "../../components/Pages/FAQComponent.jsx";
 
 import {
   CASINO_DETAIL_PAGE_COPY,
-  CASINO_LISTING_CARD_COPY,
   localeIdForWebsiteLocale,
   LOCALES,
 } from "../../lib/i18n";
 import {
+  homeHrefForLocale,
   localizedCasinoDetailHref,
   type WebsiteLocaleKey,
 } from "../../lib/sanity";
@@ -28,8 +28,8 @@ const { casino, locale } = Astro.props as Props;
 
 const localeId = localeIdForWebsiteLocale(locale);
 const copy = CASINO_DETAIL_PAGE_COPY[localeId];
-const listingCopy = CASINO_LISTING_CARD_COPY[localeId];
 const htmlLang = LOCALES[localeId].htmlLang;
+const homeHref = homeHrefForLocale(locale);
 
 const canonicalPath = localizedCasinoDetailHref(locale, casino.slug);
 
@@ -49,16 +49,6 @@ const seoData = {
 
 const firstBonus = casino.bonuses[0] ?? null;
 
-const recPercent =
-  casino.userRecommendationsTotalNumber &&
-  casino.userRecommendationsRecommendedNumber != null
-    ? Math.round(
-        (casino.userRecommendationsRecommendedNumber /
-          casino.userRecommendationsTotalNumber) *
-          100,
-      )
-    : null;
-
 function formatReviewDate(iso: string) {
   try {
     return format(new Date(iso), "MMMM d, yyyy");
@@ -73,26 +63,30 @@ const tagListClass =
 
 <BaseLayout seo={seoData} lang={htmlLang}>
   <Header locale={locale} localeHrefs={casino.countrySelectorHrefs} />
-  <main class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 pt-24 lg:pt-32 pb-16">
-    <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-      <header class="mb-10 text-center">
-        <h1 class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
-          {casino.casinoName}
-        </h1>
-        {casino.shortDescription ? (
-          <p class="mx-auto max-w-3xl text-lg text-gray-600">{casino.shortDescription}</p>
-        ) : null}
-      </header>
-
-      <div class="mb-12 flex justify-center">
-        <div class="w-full max-w-sm">
-          <HeroCasinoCard
-            casino={casino.card}
-            listingCopy={listingCopy}
-            locale={localeId}
-          />
-        </div>
+  <main class="min-h-screen pb-16">
+    <div
+      class="relative overflow-hidden bg-gradient-to-br from-primary-800 via-primary-900 to-primary-950 pt-24 lg:pt-32"
+    >
+      <div
+        class="pointer-events-none absolute -left-16 top-8 h-48 w-48 rounded-full bg-primary-400/10 blur-3xl"
+        aria-hidden="true"
+      >
       </div>
+      <div
+        class="pointer-events-none absolute -right-12 bottom-0 h-56 w-56 rounded-full bg-primary-300/10 blur-3xl"
+        aria-hidden="true"
+      >
+      </div>
+      <div class="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <CasinoReviewHero
+          casino={casino}
+          localeId={localeId}
+          homeHref={homeHref}
+        />
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-5xl bg-gradient-to-b from-primary-50/40 to-white px-4 pb-4 pt-10 sm:px-6 lg:px-8">
 
       {
         casino.bodyMarkdown?.trim() ? (
@@ -105,6 +99,92 @@ const tagListClass =
           </section>
         ) : null
       }
+
+{
+  casino.payoutLimits ||
+  casino.payoutTimes?.length ||
+  casino.software?.length ||
+  casino.depositMethods?.length ||
+  casino.withdrawalMethods?.length ||
+  casino.license ? (
+    <section class="mb-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <dl class="grid gap-6 sm:grid-cols-2">
+        {casino.payoutLimits ? (
+          <div>
+            <dt class="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.payoutLimits}
+            </dt>
+            <dd class="text-gray-800">{casino.payoutLimits}</dd>
+          </div>
+        ) : null}
+        {casino.license ? (
+          <div>
+            <dt class="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.license}
+            </dt>
+            <dd class="text-gray-800">{casino.license}</dd>
+          </div>
+        ) : null}
+        {casino.payoutTimes?.length ? (
+          <div class="sm:col-span-2">
+            <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.payoutTimes}
+            </dt>
+            <dd>
+              <ul class={tagListClass}>
+                {casino.payoutTimes.map((time) => (
+                  <li>{time}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ) : null}
+        {casino.software?.length ? (
+          <div class="sm:col-span-2">
+            <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.software}
+            </dt>
+            <dd>
+              <ul class={tagListClass}>
+                {casino.software.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ) : null}
+        {casino.depositMethods?.length ? (
+          <div class="sm:col-span-2">
+            <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.depositMethods}
+            </dt>
+            <dd>
+              <ul class={tagListClass}>
+                {casino.depositMethods.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ) : null}
+        {casino.withdrawalMethods?.length ? (
+          <div class="sm:col-span-2">
+            <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              {copy.withdrawalMethods}
+            </dt>
+            <dd>
+              <ul class={tagListClass}>
+                {casino.withdrawalMethods.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ) : null}
+      </dl>
+    </section>
+  ) : null
+}
 
       {
         casino.pros?.length || casino.cons?.length ? (
@@ -150,100 +230,7 @@ const tagListClass =
         ) : null
       }
 
-      {
-        casino.payoutLimits ||
-        casino.payoutTimes?.length ||
-        casino.software?.length ||
-        casino.depositMethods?.length ||
-        casino.withdrawalMethods?.length ||
-        casino.license ||
-        recPercent != null ? (
-          <section class="mb-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-            <dl class="grid gap-6 sm:grid-cols-2">
-              {casino.payoutLimits ? (
-                <div>
-                  <dt class="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.payoutLimits}
-                  </dt>
-                  <dd class="text-gray-800">{casino.payoutLimits}</dd>
-                </div>
-              ) : null}
-              {recPercent != null ? (
-                <div>
-                  <dt class="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.userRecommendations}
-                  </dt>
-                  <dd class="text-gray-800">{recPercent}%</dd>
-                </div>
-              ) : null}
-              {casino.license ? (
-                <div>
-                  <dt class="mb-1 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.license}
-                  </dt>
-                  <dd class="text-gray-800">{casino.license}</dd>
-                </div>
-              ) : null}
-              {casino.payoutTimes?.length ? (
-                <div class="sm:col-span-2">
-                  <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.payoutTimes}
-                  </dt>
-                  <dd>
-                    <ul class={tagListClass}>
-                      {casino.payoutTimes.map((time) => (
-                        <li>{time}</li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              ) : null}
-              {casino.software?.length ? (
-                <div class="sm:col-span-2">
-                  <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.software}
-                  </dt>
-                  <dd>
-                    <ul class={tagListClass}>
-                      {casino.software.map((item) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              ) : null}
-              {casino.depositMethods?.length ? (
-                <div class="sm:col-span-2">
-                  <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.depositMethods}
-                  </dt>
-                  <dd>
-                    <ul class={tagListClass}>
-                      {casino.depositMethods.map((item) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              ) : null}
-              {casino.withdrawalMethods?.length ? (
-                <div class="sm:col-span-2">
-                  <dt class="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {copy.withdrawalMethods}
-                  </dt>
-                  <dd>
-                    <ul class={tagListClass}>
-                      {casino.withdrawalMethods.map((item) => (
-                        <li>{item}</li>
-                      ))}
-                    </ul>
-                  </dd>
-                </div>
-              ) : null}
-            </dl>
-          </section>
-        ) : null
-      }
+
 
       {
         casino.faq?.items.length ? (

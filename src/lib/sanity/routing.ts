@@ -2,14 +2,14 @@ import type { WebsiteLocaleKey } from "./locales";
 import { WEBSITE_LOCALE_KEYS } from "./locales";
 
 /**
- * Locale used by the legacy `/` route (still rendered by `src/pages/index.astro`).
- * All locales — including this one — are also served under their `/${langCode}/` path.
+ * Locale used by the legacy `/` route (rendered by `src/pages/index.astro`).
+ * Ireland pages live at unprefixed paths (`/`, `/paypal-casino-ireland/`, etc.).
  */
 export const ROOT_WEBSITE_LOCALE: WebsiteLocaleKey = "ireland";
 
 /**
- * Canonical URL path prefix per locale. Every public URL is `/${LOCALE_PATH_PREFIX[locale]}/...`.
- * Keep aligned with what the CMS already uses for non-root locales.
+ * URL path prefix for non-root locales (`/dk/`, `/fi/`, …).
+ * Ireland uses unprefixed paths at the site root (no `/ie/` segment).
  */
 export const LOCALE_PATH_PREFIX: Record<WebsiteLocaleKey, string> = {
   ireland: "ie",
@@ -83,9 +83,10 @@ export function hrefFromCmsSlug(cmsSlug: string): string {
 }
 
 /**
- * Astro `[...slug]` param including the locale path prefix.
+ * Astro `[...slug]` param including locale path prefix when needed.
  * Strips any leading `/${langCode}/` already in the CMS slug so we never double-prefix
  * (CMS data is inconsistent: home slugs like `/no/` already include it, sub-page slugs don't).
+ * Ireland (root locale) omits the `/ie/` prefix — home maps to `""`, pages to `paypal-casino-ireland`, etc.
  */
 export function cmsSlugToLocalizedRestParam(
   locale: WebsiteLocaleKey,
@@ -98,12 +99,14 @@ export function cmsSlugToLocalizedRestParam(
   if (body === prefix) body = "/";
   else if (body.startsWith(prefix)) body = `/${body.slice(prefix.length)}`;
   const rest = body.replace(/^\/+|\/+$/g, "");
+  if (locale === ROOT_WEBSITE_LOCALE) return rest;
   return rest ? `${langCode}/${rest}` : langCode;
 }
 
-/** Public URL with locale prefix, e.g. `/no/paypal-kasinoer-norge/` or `/ie/`. */
+/** Public URL with locale prefix when needed, e.g. `/no/paypal-kasinoer-norge/` or `/paypal-casino-ireland/`. */
 export function localizedHref(locale: WebsiteLocaleKey, cmsSlug: string): string {
-  return `/${cmsSlugToLocalizedRestParam(locale, cmsSlug)}/`;
+  const rest = cmsSlugToLocalizedRestParam(locale, cmsSlug);
+  return rest ? `/${rest}/` : "/";
 }
 
 export function homeHrefForLocale(locale: WebsiteLocaleKey): string {
@@ -193,6 +196,7 @@ export function flattenWebsitePagesLocalePaths(
       const raw = doc.slug[locale];
       if (raw == null || String(raw).trim() === "") continue;
       const cmsSlug = normalizeCmsSlug(String(raw));
+      if (isRootLocaleSlug(locale, cmsSlug)) continue;
       const restPath = cmsSlugToLocalizedRestParam(locale, cmsSlug);
       paths.push({ restPath, locale, cmsSlug });
     }

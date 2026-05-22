@@ -1,0 +1,322 @@
+---
+import { ArrowRight, BadgeCheck, Star, ThumbsDown, ThumbsUp } from "@lucide/astro";
+import CustomButton from "../Atoms/Button.astro";
+import RatingStars from "./Cards/RatingStars.astro";
+import { addHttps } from "../../lib/helpers";
+import { Image } from "astro:assets";
+import {
+  CASINO_DETAIL_PAGE_COPY,
+  CASINO_LISTING_CARD_COPY,
+  formatRatingOutOfFive,
+  getRatingGradationLabel,
+  type LocaleId,
+} from "../../lib/i18n";
+import type { CasinoPage } from "../../lib/sanity/casinos";
+
+interface Props {
+  casino: CasinoPage;
+  localeId: LocaleId;
+  homeHref: string;
+}
+
+interface StatBox {
+  label: string;
+  value: string;
+  highlight?: boolean;
+  showStar?: boolean;
+}
+
+const { casino, localeId, homeHref } = Astro.props;
+
+const copy = CASINO_DETAIL_PAGE_COPY[localeId];
+const listingCopy = CASINO_LISTING_CARD_COPY[localeId];
+const year = new Date().getFullYear();
+
+const ratingValue = casino.rating;
+const ratingOutOfFive = formatRatingOutOfFive(ratingValue);
+const gradationLabel = getRatingGradationLabel(ratingValue, listingCopy);
+const starsAriaLabel =
+  ratingValue != null && Number.isFinite(Number(ratingValue))
+    ? `${gradationLabel}. ${Number(ratingValue)} out of 5 stars.`
+    : listingCopy.ratingNotRated;
+
+const firstBonus = casino.bonuses[0] ?? null;
+
+const recNum = casino.userRecommendationsRecommendedNumber ?? 0;
+const totNum = casino.userRecommendationsTotalNumber ?? 0;
+const recPercent =
+  totNum > 0 && casino.userRecommendationsRecommendedNumber != null
+    ? Math.round((casino.userRecommendationsRecommendedNumber / totNum) * 100)
+    : null;
+
+const reviewTitle = copy.reviewTitleTemplate
+  .replace("{{name}}", casino.casinoName)
+  .replace("{{year}}", String(year));
+
+const usersRecommendText = copy.usersRecommendTemplate
+  .replace("{{rec}}", String(recNum))
+  .replace("{{tot}}", String(totNum))
+  .replace("{{name}}", casino.casinoName);
+
+const usersRecommendShort = copy.usersRecommendShort.replace(
+  "{{pct}}",
+  String(recPercent ?? 0),
+);
+
+const wouldYouRecommend = copy.wouldYouRecommend.replace("{{name}}", casino.casinoName);
+
+const licensedBanner =
+  casino.license &&
+  copy.licensedBanner
+    .replace("{{name}}", casino.casinoName)
+    .replace("{{license}}", casino.license)
+    .replace("{{rating}}", ratingOutOfFive.replace("/5", ""));
+
+function truncate(text: string, max = 22): string {
+  if (text.length <= max) return text;
+  return `${text.slice(0, max - 1).trim()}…`;
+}
+
+function hasPayPal(methods?: string[]): boolean {
+  if (!methods?.length) return false;
+  return methods.some((m) => /paypal/i.test(m));
+}
+
+const statBoxes: StatBox[] = [];
+
+if (ratingValue != null && Number.isFinite(Number(ratingValue))) {
+  statBoxes.push({
+    label: copy.ratingOverall,
+    value: ratingOutOfFive,
+    highlight: true,
+    showStar: true,
+  });
+}
+
+if (recPercent != null) {
+  statBoxes.push({
+    label: copy.userRecommendations,
+    value: `${recPercent}%`,
+  });
+}
+
+if (casino.payoutTimes?.length) {
+  statBoxes.push({
+    label: copy.payoutTimes,
+    value: truncate(casino.payoutTimes[0]),
+  });
+} else if (casino.payoutLimits) {
+  statBoxes.push({
+    label: copy.payoutLimits,
+    value: truncate(casino.payoutLimits),
+  });
+}
+
+if (casino.software?.length) {
+  statBoxes.push({
+    label: copy.software,
+    value: copy.providersCount.replace("{{count}}", String(casino.software.length)),
+  });
+}
+
+if (casino.depositMethods?.length) {
+  statBoxes.push({
+    label: copy.depositMethods,
+    value: hasPayPal(casino.depositMethods)
+      ? copy.paypalAccepted
+      : copy.paymentMethodsCount.replace(
+          "{{count}}",
+          String(casino.depositMethods.length),
+        ),
+  });
+}
+
+const logoBg = casino.backgroundColor || "#1e3a8a";
+---
+
+<section class="relative mb-12" aria-labelledby="casino-review-title">
+  <nav class="mb-6 text-sm" aria-label="Breadcrumb">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-primary-100/80 mb-16">
+      <li>
+        <a
+          href={homeHref}
+          class="font-medium text-white/90 transition-colors hover:text-white"
+        >
+          {copy.breadcrumbHome}
+        </a>
+      </li>
+      <li class="select-none text-white/40" aria-hidden="true">›</li>
+      <li class="font-medium text-white" aria-current="page">{casino.casinoName}</li>
+    </ol>
+  </nav>
+
+  <div class="relative">
+    <div
+      class="absolute -top-5 left-4 z-20 sm:left-6 sm:-top-6 md:left-8"
+    >
+      <div
+        class="flex h-[88px] w-[88px] items-center justify-center rounded-2xl border-4 border-white p-2 shadow-lg sm:h-[104px] sm:w-[104px]"
+        style={`background-color: ${logoBg}`}
+      >
+        <Image
+          src={addHttps(casino.logoUrl) || "/placeholder.svg"}
+          alt={casino.logoAlt ?? `${casino.casinoName} logo`}
+          width={88}
+          height={88}
+          class="h-full w-full rounded-lg object-contain"
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <article
+      class="overflow-hidden rounded-2xl border border-primary-200/60 bg-white shadow-xl shadow-primary-950/10"
+    >
+      <div class="px-5 pb-0 pt-14 sm:px-8 sm:pt-24">
+        <div class="mb-5 flex flex-wrap items-start gap-2 sm:gap-3">
+          <h1
+            id="casino-review-title"
+            class="text-xl font-bold leading-tight text-secondary-900 sm:text-2xl lg:text-3xl"
+          >
+            {reviewTitle}
+          </h1>
+          <span
+            class="inline-flex shrink-0 items-center gap-1 rounded-full bg-primary-50 px-2.5 py-1 text-xs font-semibold text-primary-700 ring-1 ring-primary-200"
+            title={copy.editorialReview}
+          >
+            <BadgeCheck class="h-4 w-4 text-primary-600" aria-hidden="true" />
+            {copy.editorialReview}
+          </span>
+        </div>
+
+        {
+          statBoxes.length ? (
+            <div class="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5 lg:gap-3">
+              {statBoxes.map((box) => (
+                <div
+                  class:list={[
+                    "flex min-h-[72px] flex-col items-center justify-center rounded-xl px-2 py-3 text-center",
+                    box.highlight
+                      ? "border-2 border-amber-400 bg-amber-50/80 ring-1 ring-amber-200/60"
+                      : "border border-slate-200 bg-slate-50/80",
+                  ]}
+                >
+                  <span class="mb-1 text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+                    {box.label}
+                  </span>
+                  <span class="flex items-center gap-1 text-sm font-bold tabular-nums text-secondary-900 sm:text-base">
+                    {box.showStar ? (
+                      <Star
+                        class="h-4 w-4 fill-amber-400 text-amber-500"
+                        aria-hidden="true"
+                      />
+                    ) : null}
+                    {box.value}
+                  </span>
+                </div>
+              ))}
+            </div>
+          ) : null
+        }
+
+        {
+          ratingValue != null ? (
+            <p class="mb-5 text-xs leading-relaxed text-slate-500">
+              {copy.ratingDisclaimer.replace("{{rating}}", ratingOutOfFive)}
+            </p>
+          ) : null
+        }
+
+        {
+          casino.shortDescription ? (
+            <p class="mb-5 max-w-3xl text-base leading-relaxed text-slate-600">
+              {casino.shortDescription}
+            </p>
+          ) : null
+        }
+
+        {
+          totNum > 0 ? (
+            <div class="mb-5 flex flex-col gap-4 rounded-xl border border-slate-200 bg-slate-50/70 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+              <div>
+                <p class="text-sm font-semibold text-secondary-900 sm:text-base">
+                  {wouldYouRecommend}
+                </p>
+                <p class="mt-1 text-sm font-medium text-emerald-700">{usersRecommendText}</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-sm font-bold text-secondary-800">{usersRecommendShort}</span>
+                <div class="flex items-center gap-2" aria-hidden="true">
+                  <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <ThumbsUp class="h-5 w-5" />
+                  </span>
+                  <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-rose-100 text-rose-400">
+                    <ThumbsDown class="h-5 w-5" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          ) : null
+        }
+
+        {
+          licensedBanner ? (
+            <div class="mb-5 flex items-start gap-2 rounded-xl bg-slate-100/90 px-4 py-3 text-sm text-slate-700 sm:items-center">
+              <BadgeCheck class="mt-0.5 h-5 w-5 shrink-0 text-primary-600 sm:mt-0" />
+              <p set:html={licensedBanner} />
+            </div>
+          ) : null
+        }
+
+        {
+          ratingValue != null ? (
+            <div class="mb-5 flex items-center gap-3 lg:hidden">
+              <RatingStars rating={ratingValue} size="md" ariaLabel={starsAriaLabel} />
+              <span class="text-sm font-semibold text-secondary-700">{gradationLabel}</span>
+            </div>
+          ) : null
+        }
+      </div>
+
+      <div
+        class="flex flex-col gap-4 bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-8"
+      >
+        <div class="flex min-w-0 flex-1 items-center gap-4">
+          <div
+            class="hidden h-12 w-12 shrink-0 items-center justify-center rounded-lg border-2 border-white/30 bg-white/10 p-1.5 sm:flex"
+            style={`background-color: ${logoBg}`}
+          >
+            <Image
+              src={addHttps(casino.logoUrl) || "/placeholder.svg"}
+              alt=""
+              width={40}
+              height={40}
+              class="h-full w-full rounded object-contain"
+              loading="lazy"
+            />
+          </div>
+          <div class="min-w-0">
+            <p class="text-xs font-bold uppercase tracking-wider text-primary-950/70">
+              {firstBonus?.code || listingCopy.welcomeBonusFallback}
+            </p>
+            <p class="text-base font-bold leading-snug text-white sm:text-lg">
+              {firstBonus?.description || listingCopy.defaultBonusDescription}
+            </p>
+          </div>
+        </div>
+        <CustomButton
+          variant="secondary"
+          size="lg"
+          className="w-full shrink-0 bg-secondary-900 px-8 py-3 text-white shadow-lg hover:bg-secondary-800 sm:w-auto group"
+          buttonType="external-ref-link"
+          refLink={casino.referralUrl}
+        >
+          <span>{copy.visitCasino}</span>
+          <ArrowRight
+            class="ml-2 h-4 w-4 transform transition-all duration-300 group-hover:translate-x-1"
+          />
+        </CustomButton>
+      </div>
+    </article>
+  </div>
+</section>

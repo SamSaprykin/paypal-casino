@@ -15,6 +15,9 @@ import {
   Lightbulb,
   Trophy,
   DollarSign,
+  Sparkles,
+  Shield,
+  User,
 } from "lucide-react";
 import { addHttps } from "../../lib/helpers";
 import { cn, slugify as slugifyHeading } from "../../lib/utils";
@@ -200,8 +203,12 @@ const IconSwitch = ({ iconName }) => {
     Gift: <Gift className={iconProps} />,
     PlayCircle: <Joystick className={iconProps} />,
     Coin: <Coins className={iconProps} />,
-    Trophy: <Trophy className={iconProps} />,
+    trophy: <Trophy className={iconProps} />,
     DollarSign: <DollarSign className={iconProps} />,
+    Sparkles: <Sparkles className={iconProps} />,
+    sparkles: <Sparkles className={iconProps} />,
+    user: <User className={iconProps} />,
+    gift: <Gift className={iconProps} />,
   };
   return icons[iconName] || (
     <span className="inline-block w-9 h-9 bg-gray-200 dark:bg-zinc-800 rounded-full text-blue-600 flex items-center justify-center" > {iconName}</span>
@@ -284,12 +291,164 @@ const InfoCard = ({ children }) => {
   );
 };
 
-const TipBox = ({ children }) => {
+const tipBoxTextClass =
+  "text-yellow-900 leading-relaxed text-sm sm:text-base dark:text-yellow-100";
+const tipBoxLinkClass =
+  "text-yellow-800 underline font-medium hover:text-yellow-950 transition-colors duration-200 dark:text-yellow-200 dark:hover:text-yellow-50";
+
+/** Tip box body from HAST (rehype) — supports HTML and unparsed markdown in text nodes. */
+function HastTipContent({ hastChildren, children }) {
+  const MarkdownRenderer = ({ text }) => (
+    <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
+      rehypePlugins={[rehypeRaw]}
+      components={{
+        p: ({ node, ...props }) => (
+          <p {...props} className={cn(tipBoxTextClass, "mb-2 last:mb-0 first:mt-0")} />
+        ),
+        strong: ({ node, ...props }) => (
+          <strong
+            {...props}
+            className="font-bold text-yellow-950 dark:text-yellow-50"
+          />
+        ),
+        em: ({ node, ...props }) => <em {...props} />,
+        a: ({ node, ...props }) => <a {...props} className={tipBoxLinkClass} />,
+        ul: ({ node, ...props }) => (
+          <ul
+            {...props}
+            className={cn(tipBoxTextClass, "my-2 list-inside list-disc space-y-1 pl-0")}
+          />
+        ),
+        ol: ({ node, ...props }) => (
+          <ol
+            {...props}
+            className={cn(tipBoxTextClass, "my-2 list-inside list-decimal space-y-1 pl-0")}
+          />
+        ),
+        li: ({ node, ...props }) => (
+          <li {...props} className={cn(tipBoxTextClass, "mb-1")} />
+        ),
+        code: ({ node, ...props }) => (
+          <code
+            {...props}
+            className="rounded bg-yellow-900/10 px-1 py-0.5 text-sm dark:bg-yellow-100/10"
+          />
+        ),
+        br: ({ node, ...props }) => <br {...props} />,
+      }}
+    >
+      {text}
+    </ReactMarkdown>
+  );
+
+  if (children && typeof children === "string") {
+    return <MarkdownRenderer text={children} />;
+  }
+
+  if (!hastChildren?.length) {
+    return children ?? null;
+  }
+
+  const renderNode = (node, i) => {
+    if (!node) return null;
+
+    if (node.type === "text") {
+      const hasMarkdown = /[\*\_\~\[\]]/.test(node.value);
+      if (hasMarkdown) {
+        return <MarkdownRenderer key={i} text={node.value} />;
+      }
+      return node.value;
+    }
+
+    if (node.type !== "element" || !node.tagName) {
+      return null;
+    }
+
+    const tag = node.tagName;
+    const kids = node.children?.map((c, j) => renderNode(c, j));
+
+    switch (tag) {
+      case "p":
+        return (
+          <p key={i} className={cn(tipBoxTextClass, "mb-2 last:mb-0 first:mt-0")}>
+            {kids}
+          </p>
+        );
+      case "strong":
+        return (
+          <strong key={i} className="font-bold text-yellow-950 dark:text-yellow-50">
+            {kids}
+          </strong>
+        );
+      case "em":
+        return <em key={i}>{kids}</em>;
+      case "a":
+        return (
+          <a
+            key={i}
+            href={node.properties?.href}
+            className={tipBoxLinkClass}
+            {...(node.properties?.title
+              ? { title: String(node.properties.title) }
+              : {})}
+          >
+            {kids}
+          </a>
+        );
+      case "ul":
+        return (
+          <ul
+            key={i}
+            className={cn(tipBoxTextClass, "my-2 list-inside list-disc space-y-1 pl-0")}
+          >
+            {kids}
+          </ul>
+        );
+      case "ol":
+        return (
+          <ol
+            key={i}
+            className={cn(tipBoxTextClass, "my-2 list-inside list-decimal space-y-1 pl-0")}
+          >
+            {kids}
+          </ol>
+        );
+      case "li":
+        return (
+          <li key={i} className={cn(tipBoxTextClass, "mb-1")}>
+            {kids}
+          </li>
+        );
+      case "code":
+        return (
+          <code
+            key={i}
+            className="rounded bg-yellow-900/10 px-1 py-0.5 text-sm dark:bg-yellow-100/10"
+          >
+            {kids}
+          </code>
+        );
+      case "br":
+        return <br key={i} />;
+      default:
+        return <span key={i}>{kids}</span>;
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      {hastChildren.map((c, i) => renderNode(c, i))}
+    </div>
+  );
+}
+
+const TipBox = ({ hastChildren, children }) => {
   return (
     <div className="my-6 border-l-4 border-yellow-400 bg-yellow-50/80 px-4 py-4 sm:px-8 sm:py-6 rounded-xl shadow flex flex-col sm:flex-row items-start gap-3 sm:gap-4 dark:bg-yellow-900/40 dark:border-yellow-700">
       <Lightbulb className="w-7 h-7 text-yellow-500 mt-1 flex-shrink-0 mb-2 sm:mb-0 dark:text-yellow-300" />
-      <div className="min-w-0 flex-1 text-yellow-900 leading-relaxed text-sm sm:text-base dark:text-yellow-100">
-        {children}
+      <div className="min-w-0 flex-1">
+        <HastTipContent hastChildren={hastChildren}>{children}</HastTipContent>
       </div>
     </div>
   );
@@ -533,7 +692,11 @@ export const ContentComponent = ({
                     return <InfoCard>{props.children}</InfoCard>;
                   }
                   if (className.includes("tip-box")) {
-                    return <TipBox>{props.children}</TipBox>;
+                    return (
+                      <TipBox hastChildren={node.children ?? []}>
+                        {props.children}
+                      </TipBox>
+                    );
                   }
                   if (className.includes("grid-two-columns")) {
                     return (

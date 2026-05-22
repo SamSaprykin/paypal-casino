@@ -10,7 +10,7 @@ import {
   ROOT_WEBSITE_LOCALE,
 } from "../lib/sanity";
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
-import { LOCALES } from "../lib/i18n";
+import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
 
 const homePage = await getWebsitePageBySlug(
@@ -23,7 +23,24 @@ if (!homePage) {
   );
 }
 
-const htmlLang = LOCALES[localeIdForWebsiteLocale(ROOT_WEBSITE_LOCALE)].htmlLang;
+const localeId = localeIdForWebsiteLocale(ROOT_WEBSITE_LOCALE);
+const htmlLang = LOCALES[localeId].htmlLang;
+const pageCopy = WEBSITE_PAGE_COPY[localeId];
+
+function formatDisplayDate(iso: string | undefined) {
+  if (!iso) return null;
+  try {
+    return new Intl.DateTimeFormat(htmlLang || "en", {
+      dateStyle: "medium",
+    }).format(new Date(iso));
+  } catch {
+    return iso;
+  }
+}
+
+const createdDisplay = formatDisplayDate(homePage.createdAt);
+const updatedDisplay = formatDisplayDate(homePage.updatedAt);
+const showPageDates = Boolean(homePage.createdAt || homePage.updatedAt);
 
 const webPageSchema = generateWebPageSchema(homePage);
 
@@ -54,6 +71,38 @@ const seoData = {
   {faqSchemas.length > 0 && (
     <script type="application/ld+json" set:html={JSON.stringify(faqSchemas)} />
   )}
-  <WebsitePageSections sections={homePage.sections} locale={ROOT_WEBSITE_LOCALE} />
+  <main id="main-content" class="flex-1 pt-12 my-32">
+    <div class="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div
+        class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/55"
+      >
+        {showPageDates ? (
+          <div
+            class="flex justify-end border-b border-slate-200/70 bg-white/60 px-4 py-2.5 font-roboto text-xs leading-snug text-slate-600 dark:border-zinc-700/70 dark:bg-zinc-900/50 dark:text-slate-400"
+          >
+            <div class="text-right">
+              {homePage.createdAt ? (
+                <div>
+                  <span class="font-medium text-slate-500 dark:text-slate-500"
+                    >{pageCopy.created}</span
+                  >{" "}
+                  <time datetime={homePage.createdAt}>{createdDisplay}</time>
+                </div>
+              ) : null}
+              {homePage.updatedAt ? (
+                <div class:list={{ "mt-1": Boolean(homePage.createdAt) }}>
+                  <span class="font-medium text-slate-500 dark:text-slate-500"
+                    >{pageCopy.updated}</span
+                  >{" "}
+                  <time datetime={homePage.updatedAt}>{updatedDisplay}</time>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
+        <WebsitePageSections sections={homePage.sections} locale={ROOT_WEBSITE_LOCALE} />
+      </div>
+    </div>
+  </main>
   <Footer locale={ROOT_WEBSITE_LOCALE} />
 </BaseLayout>
