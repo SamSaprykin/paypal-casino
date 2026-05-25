@@ -17,6 +17,8 @@ interface Props {
   casino: CasinoPage;
   localeId: LocaleId;
   homeHref: string;
+  /** CMS meta/hero title from `seoComponent.seoTitle`; falls back to the locale template. */
+  pageTitle?: string;
 }
 
 interface StatBox {
@@ -26,7 +28,7 @@ interface StatBox {
   showStar?: boolean;
 }
 
-const { casino, localeId, homeHref } = Astro.props;
+const { casino, localeId, homeHref, pageTitle } = Astro.props;
 
 const copy = CASINO_DETAIL_PAGE_COPY[localeId];
 const listingCopy = CASINO_LISTING_CARD_COPY[localeId];
@@ -49,9 +51,11 @@ const recPercent =
     ? Math.round((casino.userRecommendationsRecommendedNumber / totNum) * 100)
     : null;
 
-const reviewTitle = copy.reviewTitleTemplate
-  .replace("{{name}}", casino.casinoName)
-  .replace("{{year}}", String(year));
+const reviewTitle =
+  pageTitle?.trim() ||
+  copy.reviewTitleTemplate
+    .replace("{{name}}", casino.casinoName)
+    .replace("{{year}}", String(year));
 
 const usersRecommendText = copy.usersRecommendTemplate
   .replace("{{rec}}", String(recNum))

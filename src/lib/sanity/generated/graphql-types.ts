@@ -163,6 +163,8 @@ export type Casino = Document & {
   rating?: Maybe<Scalars['Float']['output']>;
   referralUrl?: Maybe<Scalars['String']['output']>;
   reviewsIntl?: Maybe<IntlPlayerReviews>;
+  /** Localized meta title and meta description for casino pages. */
+  seoComponent?: Maybe<SeoComponentIntl>;
   shortDescription?: Maybe<Scalars['String']['output']>;
   slug?: Maybe<Scalars['String']['output']>;
   software?: Maybe<Array<Maybe<Scalars['String']['output']>>>;
@@ -227,6 +229,7 @@ export type CasinoFilter = {
   rating?: InputMaybe<FloatFilter>;
   referralUrl?: InputMaybe<StringFilter>;
   reviewsIntl?: InputMaybe<IntlPlayerReviewsFilter>;
+  seoComponent?: InputMaybe<SeoComponentIntlFilter>;
   shortDescription?: InputMaybe<StringFilter>;
   slug?: InputMaybe<StringFilter>;
   userRecommendationsRecommendedNumber?: InputMaybe<FloatFilter>;

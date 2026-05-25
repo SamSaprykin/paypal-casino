@@ -353,7 +353,7 @@
         "statusCode": 301
       },
       {
-        "source": "/goto/50-crowns.php",
+        "source": "/goto/50crowns.php",
         "destination": "https://crownsclub.bet/jmoadnlev",
         "statusCode": 301
       },
@@ -363,17 +363,17 @@
         "statusCode": 301
       },
       {
-        "source": "/goto/lets-lucky.php",
+        "source": "/goto/letslucky.php",
         "destination": "https://letslucky.info/k8dk6bpbg",
         "statusCode": 301
       },
       {
-        "source": "/goto/lucky-ones.php",
+        "source": "/goto/luckyones.php",
         "destination": "https://luckyones.site/kpjee8jzv",
         "statusCode": 301
       },
       {
-        "source": "/goto/just-casino.php",
+        "source": "/goto/justcasino.php",
         "destination": "https://justcasino.info/kjd1x4twx",
         "statusCode": 301
       },
@@ -410,6 +410,16 @@
       {
         "source": "/goto/stake.php",
         "destination": "https://stake.com/?c=gf6EDLyS",
+        "statusCode": 301
+      },   
+      {
+        "source": "/blog/:slug*",
+        "destination": "/",
+        "statusCode": 301
+      },
+      {
+        "source": "/blog/",
+        "destination": "/",
         "statusCode": 301
       }
     ]

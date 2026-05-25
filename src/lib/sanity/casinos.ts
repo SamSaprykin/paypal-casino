@@ -14,7 +14,7 @@ import {
   ROOT_WEBSITE_LOCALE,
   localizedCasinoDetailHref,
 } from "./routing";
-import type { BonusItem } from "./sections";
+import type { BonusItem, PageSeo } from "./sections";
 
 export interface CasinoPlayerReview {
   description: string;
@@ -56,6 +56,8 @@ export interface CasinoPage {
   userRecommendationsTotalNumber?: number;
   createdAt?: string;
   updatedAt?: string;
+  /** Locale-picked meta title, description, and slug from `seoComponent`. */
+  seo?: PageSeo;
   /** Legacy card shape for existing hero/listing components. */
   card: CasinoCardData;
   /** Per-locale detail URLs for the country selector (only locales where the casino is available). */
@@ -161,6 +163,15 @@ export function adaptCasinoPage(
 
   const bodyMarkdown = pickIntlMarkdown(raw.body, locale);
 
+  const seoRaw = raw.seoComponent as Record<string, unknown> | undefined;
+  const seo: PageSeo | undefined = seoRaw
+    ? {
+        seoTitle: asString(seoRaw.seoTitle),
+        seoDescription: asString(seoRaw.seoDescription),
+        seoSlug: asString(seoRaw.seoSlug),
+      }
+    : undefined;
+
   return {
     id: String(raw._id ?? slug),
     casinoName,
@@ -191,6 +202,7 @@ export function adaptCasinoPage(
     userRecommendationsTotalNumber: asNumber(raw.userRecommendationsTotalNumber),
     createdAt: asString(raw._createdAt),
     updatedAt: asString(raw._updatedAt),
+    seo,
     card,
   };
 }

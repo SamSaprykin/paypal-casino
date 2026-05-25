@@ -264,6 +264,11 @@ const CASINO_DETAIL_FIELDS = `
 function casinoDetailFields(locale: WebsiteLocaleKey): string {
   return `
   ${CASINO_DETAIL_FIELDS}
+  seoComponent {
+    seoTitle { ${INTL} }
+    seoDescription { ${INTL} }
+    seoSlug { ${INTL} }
+  }
   body { ${locale} }
   faq {
     _id

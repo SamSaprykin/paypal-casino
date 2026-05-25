@@ -162,6 +162,8 @@ type Casino implements Document {
   rating: Float
   referralUrl: String
   reviewsIntl: IntlPlayerReviews
+  """Localized meta title and meta description for casino pages."""
+  seoComponent: SeoComponentIntl
   shortDescription: String
   slug: String
   software: [String]
@@ -225,6 +227,7 @@ input CasinoFilter {
   rating: FloatFilter
   referralUrl: StringFilter
   reviewsIntl: IntlPlayerReviewsFilter
+  seoComponent: SeoComponentIntlFilter
   shortDescription: StringFilter
   slug: StringFilter
   userRecommendationsRecommendedNumber: FloatFilter

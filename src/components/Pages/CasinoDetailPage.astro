@@ -34,14 +34,17 @@ const homeHref = homeHrefForLocale(locale);
 const canonicalPath = localizedCasinoDetailHref(locale, casino.slug);
 
 const seoData = {
-  title: `${casino.casinoName} Review - PayPal Casino Reviews`,
+  title:
+    casino.seo?.seoTitle ||
+    `${casino.casinoName} Review - PayPal Casino Reviews`,
   description:
+    casino.seo?.seoDescription ||
     casino.shortDescription ||
     `Read our ${casino.casinoName} review — bonuses, payments, pros and cons.`,
   canonical: canonicalPath,
   openGraph: {
-    title: `${casino.casinoName} Review`,
-    description: casino.shortDescription,
+    title: casino.seo?.seoTitle || `${casino.casinoName} Review`,
+    description: casino.seo?.seoDescription || casino.shortDescription,
     type: "website",
     image: casino.logoUrl,
   },
@@ -82,6 +85,7 @@ const tagListClass =
           casino={casino}
           localeId={localeId}
           homeHref={homeHref}
+          pageTitle={casino.seo?.seoTitle}
         />
       </div>
     </div>
