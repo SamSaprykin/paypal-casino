@@ -5,52 +5,52 @@ import Footer from "../components/Layout/Footer.astro";
 import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
 
 import {
-  getWebsitePageBySlug,
-  getWebsitePageStaticPaths,
-  localizedHref,
-  type WebsiteLocaleKey,
+ getWebsitePageBySlug,
+ getWebsitePageStaticPaths,
+ localizedHref,
+ type WebsiteLocaleKey,
 } from "../lib/sanity";
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
 
 export async function getStaticPaths() {
-  return getWebsitePageStaticPaths();
+ return getWebsitePageStaticPaths();
 }
 
 const { locale, cmsSlug } = Astro.props as {
-  locale: WebsiteLocaleKey;
-  cmsSlug: string;
+ locale: WebsiteLocaleKey;
+ cmsSlug: string;
 };
 
 const page = await getWebsitePageBySlug(cmsSlug, locale);
 
 if (!page) {
-  throw new Error(`Page not found for slug ${cmsSlug} (locale ${locale})`);
+ throw new Error(`Page not found for slug ${cmsSlug} (locale ${locale})`);
 }
 
 const webPageSchema = generateWebPageSchema(page);
 
 const faqSchemas = page.sections
-  .filter((section) => section.kind === "faqComponent")
-  .map((section) => generateFAQSchema(section))
-  .filter(Boolean);
+ .filter((section) => section.kind === "faqComponent")
+ .map((section) => generateFAQSchema(section))
+ .filter(Boolean);
 
 const canonicalPath = localizedHref(locale, cmsSlug);
 
 const seoData = {
-  title:
-    page.seo?.seoTitle ||
-    `${page.name ?? "PayPal Casinos"} - PayPal Casino Reviews`,
-  description:
-    page.seo?.seoDescription ||
-    `Learn more about ${page.name ?? "PayPal casinos"} at PayPal Casino Reviews`,
-  canonical: canonicalPath,
-  openGraph: {
-    title: page.seo?.seoTitle,
-    description: page.seo?.seoDescription,
-    type: "website",
-  },
+ title:
+ page.seo?.seoTitle ||
+ `${page.name ?? "PayPal Casinos"} - PayPal Casino Reviews`,
+ description:
+ page.seo?.seoDescription ||
+ `Learn more about ${page.name ?? "PayPal casinos"} at PayPal Casino Reviews`,
+ canonical: canonicalPath,
+ openGraph: {
+ title: page.seo?.seoTitle,
+ description: page.seo?.seoDescription,
+ type: "website",
+ },
 };
 
 const localeId = localeIdForWebsiteLocale(locale);
@@ -58,14 +58,14 @@ const htmlLang = LOCALES[localeId].htmlLang;
 const pageCopy = WEBSITE_PAGE_COPY[localeId];
 
 function formatDisplayDate(iso: string | undefined) {
-  if (!iso) return null;
-  try {
-    return new Intl.DateTimeFormat(htmlLang || "en", {
-      dateStyle: "medium",
-    }).format(new Date(iso));
-  } catch {
-    return iso;
-  }
+ if (!iso) return null;
+ try {
+ return new Intl.DateTimeFormat(htmlLang || "en", {
+ dateStyle: "medium",
+ }).format(new Date(iso));
+ } catch {
+ return iso;
+ }
 }
 
 const createdDisplay = formatDisplayDate(page.createdAt);
@@ -74,43 +74,43 @@ const showPageDates = Boolean(page.createdAt || page.updatedAt);
 ---
 
 <BaseLayout seo={seoData} lang={htmlLang}>
-  <Header locale={locale} localizedSlugs={page.localizedSlugs} />
-  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
-  {faqSchemas.length > 0 && (
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchemas)} />
-  )}
-  <main id="main-content" class="flex-1 pt-12 my-32">
-    <div class="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-      <div
-        class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm dark:border-zinc-700 dark:bg-zinc-900/55"
-      >
-        {showPageDates ? (
-          <div
-            class="flex justify-end border-b border-slate-200/70 bg-white/60 px-4 py-2.5 font-roboto text-xs leading-snug text-slate-600 dark:border-zinc-700/70 dark:bg-zinc-900/50 dark:text-slate-400"
-          >
-            <div class="text-right">
-              {page.createdAt ? (
-                <div>
-                  <span class="font-medium text-slate-500 dark:text-slate-500"
-                    >{pageCopy.created}</span
-                  >{" "}
-                  <time datetime={page.createdAt}>{createdDisplay}</time>
-                </div>
-              ) : null}
-              {page.updatedAt ? (
-                <div class:list={{ "mt-1": Boolean(page.createdAt) }}>
-                  <span class="font-medium text-slate-500 dark:text-slate-500"
-                    >{pageCopy.updated}</span
-                  >{" "}
-                  <time datetime={page.updatedAt}>{updatedDisplay}</time>
-                </div>
-              ) : null}
-            </div>
-          </div>
-        ) : null}
-        <WebsitePageSections sections={page.sections} locale={locale} />
-      </div>
-    </div>
-  </main>
-  <Footer locale={locale} />
+ <Header locale={locale} localizedSlugs={page.localizedSlugs} />
+ <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+ {faqSchemas.length > 0 && (
+ <script type="application/ld+json" set:html={JSON.stringify(faqSchemas)} />
+ )}
+ <main id="main-content" class="flex-1 pt-12 my-32">
+ <div class="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
+ <div
+ class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm"
+ >
+ {showPageDates ? (
+ <div
+ class="flex justify-end border-b border-slate-200/70 bg-white/60 px-4 py-2.5 font-roboto text-xs leading-snug text-slate-600"
+ >
+ <div class="text-right">
+ {page.createdAt ? (
+ <div>
+ <span class="font-medium text-slate-500"
+ >{pageCopy.created}</span
+ >{" "}
+ <time datetime={page.createdAt}>{createdDisplay}</time>
+ </div>
+ ) : null}
+ {page.updatedAt ? (
+ <div class:list={{ "mt-1": Boolean(page.createdAt) }}>
+ <span class="font-medium text-slate-500"
+ >{pageCopy.updated}</span
+ >{" "}
+ <time datetime={page.updatedAt}>{updatedDisplay}</time>
+ </div>
+ ) : null}
+ </div>
+ </div>
+ ) : null}
+ <WebsitePageSections sections={page.sections} locale={locale} />
+ </div>
+ </div>
+ </main>
+ <Footer locale={locale} />
 </BaseLayout>

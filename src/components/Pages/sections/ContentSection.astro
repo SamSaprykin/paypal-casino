@@ -3,7 +3,7 @@ import { ContentComponent } from "../ContentComponent.jsx";
 import type { ContentSection } from "../../../lib/sanity";
 
 interface Props {
-  section: ContentSection;
+ section: ContentSection;
 }
 
 const { section } = Astro.props;
@@ -12,18 +12,18 @@ const sectionDomId = `content-section-${section.id.replace(/[^a-zA-Z0-9_-]/g, "-
 ---
 
 {markdown.trim() ? (
-  <section
-    id={sectionDomId}
-    class="scroll-mt-24 border-b border-slate-200/60 last:border-b-0 dark:border-zinc-700/60"
-  >
-    <div class="p-6 sm:p-8">
-      <ContentComponent
-        client:only="react"
-        content={markdown}
-        firstBonus={null}
-        spaceTop={0}
-        spaceBottom={0}
-      />
-    </div>
-  </section>
+ <section
+ id={sectionDomId}
+ class="scroll-mt-24 border-b border-slate-200/60 last:border-b-0"
+ >
+ <div class="p-6 sm:p-8">
+ <ContentComponent
+ client:only="react"
+ content={markdown}
+ firstBonus={null}
+ spaceTop={0}
+ spaceBottom={0}
+ />
+ </div>
+ </section>
 ) : null}
