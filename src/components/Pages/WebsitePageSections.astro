@@ -34,7 +34,7 @@ const { sections, locale } = Astro.props;
         case "bonusesList":
           return <BonusesListSection section={section} locale={locale} />;
         case "image":
-          return <ImageSection section={section} />;
+          return <ImageSection section={section} locale={locale} />;
         default:
           return null;
       }

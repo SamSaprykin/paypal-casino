@@ -1,12 +1,14 @@
 ---
 import CustomImage from "../../CustomImage.astro";
-import type { ImageSection } from "../../../lib/content";
+import type { ImageSection, WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
 
 interface Props {
   section: ImageSection;
+  locale?: WebsiteLocaleKey;
 }
 
-const { section } = Astro.props;
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const hasSrc = Boolean(section.src && section.src.trim());
 ---
 
@@ -19,6 +21,7 @@ const hasSrc = Boolean(section.src && section.src.trim());
         caption={section.caption}
         width={section.width}
         height={section.height}
+        locale={locale}
       />
     </section>
   ) : null

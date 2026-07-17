@@ -3,16 +3,20 @@
  * CustomImage — optimized local image via `astro:assets`.
  *
  * Resolves an image by filename from `src/images/content/` at build time.
- * If the referenced file does not exist yet, the component renders nothing,
- * so pages that reference not-yet-added artwork still build cleanly.
+ * Locale-aware lookup (when `locale` is passed):
+ *   1. `{name}.{localeSuffix}.ext`  e.g. `new-casinos-hero.de.webp`
+ *   2. `{name}.ext`                 e.g. `new-casinos-hero.webp` (shared fallback)
  *
- * Usage (in a page section or component):
- *   <CustomImage src="new-casinos-hero.webp" alt="New casinos 2026" caption="..." />
+ * If neither file exists yet, the component renders nothing so pages still build.
+ *
+ * Usage:
+ *   <CustomImage src="new-casinos-hero.webp" alt="..." locale="germany" />
  */
 import { Image } from "astro:assets";
+import type { WebsiteLocaleKey } from "../lib/cms/locales";
 
 interface Props {
-  /** File name (or path suffix) inside src/images/content/, e.g. "bonuses-hero.webp". */
+  /** File name inside src/images/content/, e.g. "bonuses-hero.webp". */
   src: string;
   /** Alt text — required for accessibility/SEO. */
   alt: string;
@@ -28,7 +32,22 @@ interface Props {
   loading?: "lazy" | "eager";
   /** Max render width in px (defaults to 960). */
   maxWidth?: number;
+  /**
+   * When set, prefers a locale-specific file before the shared fallback.
+   * Suffixes: ireland→ie, germany→de, denmark→dk, finland→fi, norway→no, sweden→se.
+   */
+  locale?: WebsiteLocaleKey;
 }
+
+/** Short file-name suffix per CMS locale key. */
+const LOCALE_IMAGE_SUFFIX: Record<WebsiteLocaleKey, string> = {
+  ireland: "ie",
+  germany: "de",
+  denmark: "dk",
+  finland: "fi",
+  norway: "no",
+  sweden: "se",
+};
 
 const {
   src,
@@ -39,19 +58,45 @@ const {
   class: className = "",
   loading = "lazy",
   maxWidth = 960,
+  locale,
 } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../images/content/**/*.{jpeg,jpg,png,webp,avif,gif}",
 );
 
-const normalized = src.replace(/^\/+/, "");
-const matchKey = Object.keys(images).find(
-  (p) => p.endsWith(`/${normalized}`) || p.endsWith(normalized),
-);
-const loader = matchKey ? images[matchKey] : undefined;
-const mod = loader ? await loader() : null;
-const image = mod?.default ?? null;
+function findImageKey(fileName: string): string | undefined {
+  const normalized = fileName.replace(/^\/+/, "");
+  return Object.keys(images).find(
+    (p) => p.endsWith(`/${normalized}`) || p.endsWith(normalized),
+  );
+}
+
+/** Build `name.de.webp` from `name.webp` + suffix `de`. */
+function withLocaleSuffix(fileName: string, suffix: string): string {
+  const normalized = fileName.replace(/^\/+/, "");
+  const dot = normalized.lastIndexOf(".");
+  if (dot <= 0) return `${normalized}.${suffix}`;
+  return `${normalized.slice(0, dot)}.${suffix}${normalized.slice(dot)}`;
+}
+
+const candidates: string[] = [];
+if (locale) {
+  candidates.push(withLocaleSuffix(src, LOCALE_IMAGE_SUFFIX[locale]));
+}
+candidates.push(src.replace(/^\/+/, ""));
+
+let image: ImageMetadata | null = null;
+for (const candidate of candidates) {
+  const matchKey = findImageKey(candidate);
+  const loader = matchKey ? images[matchKey] : undefined;
+  if (!loader) continue;
+  const mod = await loader();
+  if (mod?.default) {
+    image = mod.default;
+    break;
+  }
+}
 ---
 
 {
