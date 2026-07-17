@@ -105,5 +105,69 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true
+  "blocked": true,
+  "alternativesByCountry": {
+    "ireland": [
+      "coolzino",
+      "spinbetter",
+      "zodiac-casino"
+    ],
+    "germany": [
+      "bitstarz",
+      "zodiac-casino",
+      "yukon-gold"
+    ],
+    "denmark": [
+      "coolzino",
+      "cosmicslot",
+      "lucky-ones"
+    ],
+    "finland": [
+      "1go",
+      "fambet",
+      "starda"
+    ],
+    "norway": [
+      "luckydreams",
+      "50-crowns",
+      "flagman"
+    ],
+    "sweden": [
+      "luckydreams",
+      "just-casino",
+      "pop-casino"
+    ]
+  },
+  "alternativesPaypalByCountry": {
+    "ireland": [
+      "flagman",
+      "lucky-start",
+      "rx-casino"
+    ],
+    "germany": [
+      "stake",
+      "bitstarz",
+      "zodiac-casino"
+    ],
+    "denmark": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ],
+    "finland": [
+      "spinbetter",
+      "1go",
+      "fambet"
+    ],
+    "norway": [
+      "spinbetter",
+      "1go",
+      "fambet"
+    ],
+    "sweden": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ]
+  }
 }

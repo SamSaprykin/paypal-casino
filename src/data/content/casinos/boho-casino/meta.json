@@ -15,10 +15,26 @@
   },
   "referralUrl": "/goto/bohocasino.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 242,
   "userRecommendationsTotalNumber": 290,
@@ -42,19 +58,67 @@
   "bonuses": null,
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["ritzo", "hugo-casino", "rollingslots"],
-    "finland": ["rx-casino", "starda", "aquawin"],
-    "germany": ["lollybet", "yukon-gold", "hugo-casino"],
-    "ireland": ["cleobetra", "skycrown", "50-crowns"],
-    "norway": ["lets-lucky", "cosmicslot", "rx-casino"],
-    "sweden": ["luckydreams", "glitchspin", "pop-casino"]
+    "ireland": [
+      "slotbox",
+      "coolzino",
+      "spinbetter"
+    ],
+    "germany": [
+      "lollybet",
+      "villento",
+      "50-crowns"
+    ],
+    "denmark": [
+      "rx-casino",
+      "coolzino",
+      "cosmicslot"
+    ],
+    "finland": [
+      "yukon-gold",
+      "luckydreams",
+      "flagman"
+    ],
+    "norway": [
+      "slotbox",
+      "coolzino",
+      "cosmicslot"
+    ],
+    "sweden": [
+      "spinbetter",
+      "lets-lucky",
+      "klirr-casino"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["trickz", "rollingslots", "winshark"],
-    "finland": ["rx-casino", "flagman", "legzo"],
-    "germany": ["rollingslots", "hugo-casino"],
-    "ireland": ["tsars", "cleobetra", "crownslots"],
-    "norway": ["tonybet", "cleobetra", "caspero"],
-    "sweden": ["rx-casino", "spinbetter", "tonybet"]
+    "ireland": [
+      "spinbetter",
+      "crownplay",
+      "flagman"
+    ],
+    "germany": [
+      "kukimuki",
+      "lollybet",
+      "villento"
+    ],
+    "denmark": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ],
+    "finland": [
+      "rx-casino",
+      "monro",
+      "spinbetter"
+    ],
+    "norway": [
+      "cosmicslot",
+      "monro",
+      "spinbetter"
+    ],
+    "sweden": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ]
   }
 }

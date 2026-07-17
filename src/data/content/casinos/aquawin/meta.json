@@ -89,5 +89,69 @@
       }
     }
   ],
-  "blocked": true
+  "blocked": true,
+  "alternativesByCountry": {
+    "ireland": [
+      "crownplay",
+      "yukon-gold",
+      "villento"
+    ],
+    "germany": [
+      "bitstarz",
+      "zodiac-casino",
+      "yukon-gold"
+    ],
+    "denmark": [
+      "spinbetter",
+      "lets-lucky",
+      "kukimuki"
+    ],
+    "finland": [
+      "lucky-ones",
+      "monro",
+      "spinbetter"
+    ],
+    "norway": [
+      "luckydreams",
+      "50-crowns",
+      "flagman"
+    ],
+    "sweden": [
+      "luckydreams",
+      "just-casino",
+      "pop-casino"
+    ]
+  },
+  "alternativesPaypalByCountry": {
+    "ireland": [
+      "flagman",
+      "lucky-start",
+      "rx-casino"
+    ],
+    "germany": [
+      "stake",
+      "bitstarz",
+      "zodiac-casino"
+    ],
+    "denmark": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ],
+    "finland": [
+      "spinbetter",
+      "1go",
+      "fambet"
+    ],
+    "norway": [
+      "spinbetter",
+      "1go",
+      "fambet"
+    ],
+    "sweden": [
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
+    ]
+  }
 }

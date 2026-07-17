@@ -101,66 +101,67 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
+    "ireland": [
+      "yukon-gold",
+      "villento",
+      "50-crowns"
+    ],
+    "germany": [
+      "yukon-gold",
+      "kukimuki",
+      "lollybet"
+    ],
     "denmark": [
-      "ritzo",
       "lets-lucky",
+      "kukimuki",
       "luckydreams"
     ],
     "finland": [
-      "lets-lucky",
-      "lucky-ones",
-      "lunubet"
-    ],
-    "germany": [
-      "zodiac-casino",
-      "bitstarz",
-      "rollingslots"
-    ],
-    "ireland": [
-      "crownslots",
-      "skycrown",
-      "cleobetra"
+      "1go",
+      "fambet",
+      "starda"
     ],
     "norway": [
-      "rx-casino",
-      "hugo-casino",
-      "kukimuki"
+      "starda",
+      "drip",
+      "lets-lucky"
     ],
     "sweden": [
-      "ritzo",
-      "rollingslots",
-      "klirr-casino"
+      "lucky-ones",
+      "spinbetter",
+      "lets-lucky"
     ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": [
-      "winshark",
-      "lucky-start",
-      "trickz"
-    ],
-    "finland": [
-      "legzo",
-      "lucky-start",
-      "vincispin"
+    "ireland": [
+      "rx-casino",
+      "spinbetter",
+      "crownplay"
     ],
     "germany": [
-      "rollingslots",
-      "hugo-casino"
+      "zodiac-casino",
+      "yukon-gold",
+      "kukimuki"
     ],
-    "ireland": [
-      "crownslots",
-      "tonybet",
-      "ritzo"
+    "denmark": [
+      "spinbetter",
+      "lucky-start",
+      "rx-casino"
+    ],
+    "finland": [
+      "fambet",
+      "starda",
+      "drip"
     ],
     "norway": [
-      "cleobetra",
-      "legzo",
-      "tonybet"
+      "fambet",
+      "starda",
+      "drip"
     ],
     "sweden": [
-      "winshark",
-      "rollingslots",
-      "tonybet"
+      "spinbetter",
+      "rx-casino",
+      "cosmicslot"
     ]
   }
 }

@@ -92,66 +92,67 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": [
-      "rollingslots",
-      "corgibet",
-      "ritzo"
-    ],
-    "finland": [
-      "hugo-casino",
-      "bitstarz",
-      "caspero"
+    "ireland": [
+      "spinbetter",
+      "zodiac-casino",
+      "crownplay"
     ],
     "germany": [
-      "hugo-casino",
-      "50-crowns",
-      "villento"
+      "bitstarz",
+      "zodiac-casino",
+      "yukon-gold"
     ],
-    "ireland": [
-      "rockwin",
-      "villento",
-      "tonybet"
+    "denmark": [
+      "cosmicslot",
+      "lucky-ones",
+      "spinbetter"
+    ],
+    "finland": [
+      "starda",
+      "drip",
+      "lets-lucky"
     ],
     "norway": [
-      "lets-lucky",
-      "slotbox",
-      "drip"
+      "legzo",
+      "rx-casino",
+      "slotbox"
     ],
     "sweden": [
-      "ritzo",
-      "glitchspin",
-      "klirr-casino"
+      "cosmicslot",
+      "lucky-ones",
+      "spinbetter"
     ]
   },
   "alternativesPaypalByCountry": {
+    "ireland": [
+      "spinbetter",
+      "crownplay",
+      "flagman"
+    ],
+    "germany": [
+      "stake",
+      "bitstarz",
+      "zodiac-casino"
+    ],
     "denmark": [
-      "ritzo",
-      "hugo-casino",
-      "trickz"
+      "rx-casino",
+      "cosmicslot",
+      "spinbetter"
     ],
     "finland": [
       "rx-casino",
-      "cleobetra",
-      "starda"
-    ],
-    "germany": [
-      "rollingslots",
-      "hugo-casino"
-    ],
-    "ireland": [
-      "cleobetra",
-      "skycrown",
-      "crownplay"
+      "monro",
+      "spinbetter"
     ],
     "norway": [
-      "aquawin",
+      "cosmicslot",
       "monro",
-      "cleobetra"
+      "spinbetter"
     ],
     "sweden": [
-      "tonybet",
-      "hugo-casino",
-      "ritzo"
+      "cosmicslot",
+      "spinbetter",
+      "rx-casino"
     ]
   }
 }
