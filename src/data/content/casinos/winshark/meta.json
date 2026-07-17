@@ -1,0 +1,86 @@
+{
+  "_id": "3S6cSLHZQYs3RpzeYYPONC",
+  "_createdAt": "2025-08-27T07:58:29Z",
+  "_updatedAt": "2026-05-25T08:17:14Z",
+  "casinoName": "Winshark",
+  "slug": "winshark",
+  "rating": 4.4,
+  "shortDescription": "Winshark is a dynamic, crypto-friendly casino launched around 2024. It features over 3,000 games, a high-roller friendly welcome bonus up to €2,500, and a unique \"Shark Shop\" for loyalty rewards.",
+  "shortDescriptionIntl": {
+    "germany": "Winshark ist ein dynamisches, kryptofreundliches Casino, das um 2024 gestartet ist. Es bietet über 3.000 Spiele, einen High-Roller-freundlichen Willkommensbonus bis zu 2.500 € und einen einzigartigen „Shark Shop“ für Treueprämien.",
+    "denmark": "Winshark er et dynamisk, kryptovenligt casino lanceret omkring 2024. Det byder på over 3.000 spil, en high roller-venlig velkomstbonus op til 2.500 € og en unik „Shark Shop“ til loyalitetsbelønninger.",
+    "finland": "Winshark on dynaaminen, kryptoystävällinen kasino, joka avattiin noin vuonna 2024. Se tarjoaa yli 3 000 peliä, suurpelaajille sopivan tervetuliaisbonuksen jopa 2 500 euroon asti sekä ainutlaatuisen „Shark Shop“ -uskollisuuskaupan.",
+    "norway": "Winshark er et dynamisk, kryptovennlig casino lansert rundt 2024. Det byr på over 3 000 spill, en high roller-vennlig velkomstbonus opptil 2 500 € og en unik «Shark Shop» for lojalitetsbelønninger.",
+    "sweden": "Winshark är ett dynamiskt, kryptovänligt casino som lanserades omkring 2024. Det erbjuder över 3 000 spel, en high roller-vänlig välkomstbonus upp till 2 500 € och en unik ”Shark Shop” för lojalitetsbelöningar."
+  },
+  "referralUrl": "/goto/winshark.php",
+  "payoutLimits": "Up to €10,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Pragmatic",
+    "PlayNGo",
+    "Playtech",
+    "Evolution",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 61,
+  "userRecommendationsTotalNumber": 70,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#192c76"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/2f22456d059a214fe2b5d8f155c63e345294ce04-512x512.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "16ke4C453O2IVUlEffrVem",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €2,500 + 300 Free Spins ",
+      "descriptionIntl": {
+        "germany": "Bis zu 2.500 € + 300 Freispiele",
+        "denmark": "Op til 2.500 € + 300 gratis spins",
+        "finland": "Jopa 2 500 € + 300 ilmaiskierrosta",
+        "norway": "Opptil 2 500 € + 300 gratisspinn",
+        "sweden": "Upp till 2 500 € + 300 gratissnurr"
+      },
+      "referralUrl": "/goto/winshark.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

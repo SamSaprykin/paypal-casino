@@ -1,8 +1,8 @@
 ---
 import CasinoListingCard from "../Cards/CasinoListingCard.astro";
 import { MarkdownSnippet } from "../MarkdownSnippet.jsx";
-import type { CasinoListSection, WebsiteLocaleKey } from "../../../lib/sanity";
-import { ROOT_WEBSITE_LOCALE } from "../../../lib/sanity";
+import type { CasinoListSection, WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
 import { CASINO_LISTING_CARD_COPY, localeIdForWebsiteLocale } from "../../../lib/i18n";
 
 interface Props {
@@ -36,7 +36,7 @@ const cardCopy = CASINO_LISTING_CARD_COPY[localeIdForWebsiteLocale(locale)];
 
     {copyAfter && copyAfter.trim() ? (
       <div class="max-w-3xl mx-auto mt-8 px-2">
-        <MarkdownSnippet client:only="react" markdown={copyAfter} />
+        <MarkdownSnippet markdown={copyAfter} />
       </div>
     ) : null}
   </div>

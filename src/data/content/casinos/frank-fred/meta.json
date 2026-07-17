@@ -1,0 +1,60 @@
+{
+  "_id": "terAQHgze15RtLO7XGnLtN",
+  "_createdAt": "2026-05-13T19:37:49Z",
+  "_updatedAt": "2026-05-15T13:58:27Z",
+  "casinoName": "Frank Fred",
+  "slug": "frank-fred",
+  "rating": 4.6,
+  "shortDescription": "Frank Fred is a sleek, Scandinavian-style casino known for its transparency and user-friendly design. It offers a premium loyalty program, \"The Frank Fred Ticket,\" and a wide array of top-tier slots.",
+  "shortDescriptionIntl": {
+    "germany": "Frank Fred ist ein elegantes Casino im skandinavischen Stil, bekannt für Transparenz und benutzerfreundliches Design. Es bietet ein erstklassiges Treueprogramm, „The Frank Fred Ticket“, und eine große Auswahl erstklassiger Slots.",
+    "denmark": "Frank Fred er et elegant casino i skandinavisk stil, kendt for sin gennemsigtighed og brugervenlige design. Det tilbyder et førsteklasses loyalitetsprogram, „The Frank Fred Ticket“, og et bredt udvalg af topspilleautomater.",
+    "finland": "Frank Fred on tyylikäs, skandinaavistyylinen kasino, joka tunnetaan läpinäkyvyydestään ja käyttäjäystävällisestä muotoilustaan. Se tarjoaa ensiluokkaisen uskollisuusohjelman „The Frank Fred Ticket“ sekä laajan valikoiman huippukolikkopelejä.",
+    "norway": "Frank Fred er et elegant casino i skandinavisk stil, kjent for åpenhet og brukervennlig design. Det tilbyr et førsteklasses lojalitetsprogram, «The Frank Fred Ticket», og et bredt utvalg av toppspilleautomater.",
+    "sweden": "Frank Fred är ett elegant casino i skandinavisk stil, känt för sin transparens och användarvänliga design. Det erbjuder ett förstklassigt lojalitetsprogram, ”The Frank Fred Ticket”, och ett brett utbud av förstklassiga spelautomater."
+  },
+  "referralUrl": "/goto/frankfred.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Spelinspektionen (Swedish Gaming Authority)",
+  "userRecommendationsRecommendedNumber": 280,
+  "userRecommendationsTotalNumber": 341,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a2e"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/adeef2aaa798e90ad2f47b06f7e3c1ee1d8b70a3-1200x630.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "cosmicslot", "corgibet"],
+    "finland": ["vincispin", "bitstarz", "rx-casino"],
+    "germany": ["lollybet", "rollingslots", "zodiac-casino"],
+    "ireland": ["yukon-gold", "vincispin", "evospin"],
+    "norway": ["cosmicslot", "hugo-casino", "luckydreams"],
+    "sweden": ["winshark", "just-casino", "pop-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["lucky-start", "hugo-casino", "trickz"],
+    "finland": ["rx-casino", "cleobetra", "legzo"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["ritzo", "lucky-start", "evospin"],
+    "norway": ["fambet", "vegas-hero", "flagman"],
+    "sweden": ["hugo-casino", "rollingslots", "tonybet"]
+  }
+}

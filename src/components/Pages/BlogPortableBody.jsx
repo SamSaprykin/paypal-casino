@@ -1,7 +1,11 @@
 "use client";
 
 import { Fragment } from "react";
-import { urlForSanityImage } from "../../lib/sanity/imageUrl";
+
+function imageUrlFromBlock(block) {
+  if (block?.asset?.url) return String(block.asset.url);
+  return undefined;
+}
 
 function MarkedText({ child, markDefs }) {
   let node = child.text ?? "";
@@ -17,7 +21,10 @@ function MarkedText({ child, markDefs }) {
       const def = markDefs?.find((d) => d._key === mark);
       if (def?._type === "link" && def.href) {
         node = (
-          <a href={def.href} className="text-blue-700 underline hover:text-blue-900">
+          <a
+            href={def.href}
+            className="text-blue-700 underline hover:text-blue-900"
+          >
             {node}
           </a>
         );
@@ -32,14 +39,18 @@ function BlockText({ block }) {
   return (
     <>
       {block.children?.map((child, i) => (
-        <MarkedText key={child._key || `span-${i}`} child={child} markDefs={markDefs} />
+        <MarkedText
+          key={child._key || `span-${i}`}
+          child={child}
+          markDefs={markDefs}
+        />
       ))}
     </>
   );
 }
 
 /**
- * Renders Sanity Portable Text JSON for blog bodies / highlights.
+ * Renders portable-text-shaped JSON for blog bodies / highlights.
  * @param {{ value?: unknown[] | null; wrapperClassName?: string }} props
  */
 export default function BlogPortableBody({ value, wrapperClassName }) {
@@ -74,11 +85,16 @@ export default function BlogPortableBody({ value, wrapperClassName }) {
 
     if (b._type === "image") {
       flushList();
-      const src = urlForSanityImage(b);
+      const src = imageUrlFromBlock(b);
       if (src) {
         nodes.push(
           <figure key={b._key || nodes.length} className="my-8">
-            <img src={src} alt="" className="w-full rounded-lg shadow-md" loading="lazy" />
+            <img
+              src={src}
+              alt=""
+              className="w-full rounded-lg shadow-md"
+              loading="lazy"
+            />
           </figure>,
         );
       }
@@ -100,19 +116,28 @@ export default function BlogPortableBody({ value, wrapperClassName }) {
 
     if (style === "h1") {
       nodes.push(
-        <h1 key={key} className="mb-4 mt-10 scroll-mt-24 text-4xl font-bold text-gray-900">
+        <h1
+          key={key}
+          className="mb-4 mt-10 scroll-mt-24 text-4xl font-bold text-gray-900"
+        >
           {inner}
         </h1>,
       );
     } else if (style === "h2") {
       nodes.push(
-        <h2 key={key} className="mb-3 mt-10 scroll-mt-24 text-3xl font-bold text-gray-900">
+        <h2
+          key={key}
+          className="mb-3 mt-10 scroll-mt-24 text-3xl font-bold text-gray-900"
+        >
           {inner}
         </h2>,
       );
     } else if (style === "h3") {
       nodes.push(
-        <h3 key={key} className="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold text-gray-900">
+        <h3
+          key={key}
+          className="mb-3 mt-8 scroll-mt-24 text-2xl font-semibold text-gray-900"
+        >
           {inner}
         </h3>,
       );

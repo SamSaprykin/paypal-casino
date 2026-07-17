@@ -1,0 +1,44 @@
+{
+  "_id": "GFP1SwMIoaDIp6PbKJkz1k",
+  "_createdAt": "2026-05-13T19:44:08Z",
+  "_updatedAt": "2026-05-15T14:12:04Z",
+  "casinoName": "Stake",
+  "slug": "stake",
+  "rating": 4.7,
+  "shortDescription": "Stake is a world-leading crypto casino and sportsbook known for its provably fair games and high-profile partnerships. It offers instant withdrawals, a massive active community, and exclusive VIP perks.",
+  "shortDescriptionIntl": {
+    "germany": "Stake ist ein weltweit führendes Krypto-Casino und Sportwettenanbieter, bekannt für seine nachweislich fairen Spiele und hochkarätigen Partnerschaften. Es bietet sofortige Auszahlungen, eine riesige aktive Community und exklusive VIP-Vorteile.",
+    "denmark": "Stake er et af verdens førende kryptocasinoer og sportsbooks, kendt for sine beviseligt fair spil og højprofilerede partnerskaber. Det tilbyder øjeblikkelige udbetalinger, et enormt aktivt fællesskab og eksklusive VIP-fordele.",
+    "finland": "Stake on maailman johtavia kryptokasinoita ja vedonlyöntisivustoja, joka tunnetaan todistettavasti reiluista peleistään ja näkyvistä kumppanuuksistaan. Se tarjoaa välittömät kotiutukset, valtavan aktiivisen yhteisön sekä eksklusiiviset VIP-edut.",
+    "norway": "Stake er et verdensledende kryptocasino og sportsbook, kjent for sine beviselig rettferdige spill og høyprofilerte partnerskap. Det tilbyr umiddelbare utbetalinger, et enormt aktivt fellesskap og eksklusive VIP-fordeler.",
+    "sweden": "Stake är ett världsledande kryptocasino och sportbok, känt för sina bevisbart rättvisa spel och högprofilerade partnerskap. Det erbjuder omedelbara utbetalningar, en enorm aktiv community och exklusiva VIP-förmåner."
+  },
+  "referralUrl": "/goto/stake.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 243,
+  "userRecommendationsTotalNumber": 296,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/23222916bc27d41bd39ccd1d94d26077903c80c2-48x48.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

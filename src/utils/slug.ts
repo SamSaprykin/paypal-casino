@@ -2,17 +2,19 @@
  * Generate a URL-friendly slug from a string
  */
 export function generateSlug(text: string): string {
-  return text
-    .toLowerCase()
-    .trim()
-    // Replace spaces and underscores with hyphens
-    .replace(/[\s_]+/g, '-')
-    // Remove special characters except hyphens
-    .replace(/[^\w\-]+/g, '')
-    // Replace multiple consecutive hyphens with single hyphen
-    .replace(/\-\-+/g, '-')
-    // Remove leading and trailing hyphens
-    .replace(/^-+|-+$/g, '');
+  return (
+    text
+      .toLowerCase()
+      .trim()
+      // Replace spaces and underscores with hyphens
+      .replace(/[\s_]+/g, "-")
+      // Remove special characters except hyphens
+      .replace(/[^\w\-]+/g, "")
+      // Replace multiple consecutive hyphens with single hyphen
+      .replace(/\-\-+/g, "-")
+      // Remove leading and trailing hyphens
+      .replace(/^-+|-+$/g, "")
+  );
 }
 
 /**
@@ -26,16 +28,19 @@ export function isValidSlug(slug: string): boolean {
 /**
  * Generate a unique slug by appending a number if needed
  */
-export function generateUniqueSlug(text: string, existingSlugs: string[]): string {
+export function generateUniqueSlug(
+  text: string,
+  existingSlugs: string[],
+): string {
   let baseSlug = generateSlug(text);
   let uniqueSlug = baseSlug;
   let counter = 1;
-  
+
   while (existingSlugs.includes(uniqueSlug)) {
     uniqueSlug = `${baseSlug}-${counter}`;
     counter++;
   }
-  
+
   return uniqueSlug;
 }
 
@@ -44,33 +49,36 @@ export function generateUniqueSlug(text: string, existingSlugs: string[]): strin
  */
 export function slugToTitle(slug: string): string {
   return slug
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 /**
  * Extract slug from a URL path
  */
 export function extractSlugFromPath(path: string): string {
-  const segments = path.split('/').filter(Boolean);
-  return segments[segments.length - 1] || '';
+  const segments = path.split("/").filter(Boolean);
+  return segments[segments.length - 1] || "";
 }
 
 /**
  * Generate a slug with a maximum length
  */
-export function generateSlugWithLimit(text: string, maxLength: number = 50): string {
+export function generateSlugWithLimit(
+  text: string,
+  maxLength: number = 50,
+): string {
   const slug = generateSlug(text);
-  
+
   if (slug.length <= maxLength) {
     return slug;
   }
-  
+
   // Truncate at word boundary
   const truncated = slug.substring(0, maxLength);
-  const lastHyphen = truncated.lastIndexOf('-');
-  
+  const lastHyphen = truncated.lastIndexOf("-");
+
   return lastHyphen > 0 ? truncated.substring(0, lastHyphen) : truncated;
 }
 
@@ -80,8 +88,8 @@ export function generateSlugWithLimit(text: string, maxLength: number = 50): str
 export function generateSlugFromParts(...parts: string[]): string {
   return parts
     .filter(Boolean)
-    .map(part => generateSlug(part))
-    .join('-');
+    .map((part) => generateSlug(part))
+    .join("-");
 }
 
 /**
@@ -90,4 +98,3 @@ export function generateSlugFromParts(...parts: string[]): string {
 export function normalizeSlug(slug: string): string {
   return generateSlug(slug);
 }
-

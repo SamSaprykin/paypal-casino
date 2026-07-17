@@ -1,0 +1,89 @@
+{
+  "_id": "30GgSmnbZuaMDYepluhIQA",
+  "_createdAt": "2025-08-27T07:58:52Z",
+  "_updatedAt": "2026-05-15T13:58:53Z",
+  "casinoName": "Glitchspin ",
+  "slug": "glitchspin",
+  "rating": 4.5,
+  "shortDescription": "Glitchspin is a neon-infused, futuristic casino featuring over 5,000 games and a built-in sportsbook. It offers a 100% welcome bonus, daily missions, and ultra-fast cryptocurrency withdrawals.",
+  "shortDescriptionIntl": {
+    "germany": "Glitchspin ist ein neon-durchflutetes, futuristisches Casino mit über 5.000 Spielen und einem integrierten Sportwettenbereich. Es bietet einen 100-%-Willkommensbonus, tägliche Missionen und extrem schnelle Krypto-Auszahlungen.",
+    "denmark": "Glitchspin er et neonfyldt, futuristisk casino med over 5.000 spil og en indbygget sportsbook. Det tilbyder en 100 % velkomstbonus, daglige missioner og lynhurtige kryptoudbetalinger.",
+    "finland": "Glitchspin on neonhehkuinen, futuristinen kasino, jossa on yli 5 000 peliä ja sisäänrakennettu vedonlyöntiosio. Se tarjoaa 100 %:n tervetuliaisbonuksen, päivittäisiä tehtäviä sekä erittäin nopeat kryptokotiutukset.",
+    "norway": "Glitchspin er et neonfylt, futuristisk casino med over 5 000 spill og en innebygd sportsbook. Det tilbyr en 100 % velkomstbonus, daglige oppdrag og lynraske kryptoutbetalinger.",
+    "sweden": "Glitchspin är ett neonfyllt, futuristiskt casino med över 5 000 spel och en inbyggd sportbok. Det erbjuder en 100 % välkomstbonus, dagliga uppdrag och blixtsnabba kryptoutbetalningar."
+  },
+  "referralUrl": "/goto/glitchspin.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal Withdrawals: Minutes to 24 hours"
+  ],
+  "software": [
+    "Pragmatic",
+    "PlayNGo",
+    "Evolution",
+    "Yggdrasil Gaming",
+    "Betsoft"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 43,
+  "userRecommendationsTotalNumber": 58,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/0c56daa87faf1ad4b04f43b874f65baef2ebe799-1058x338.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5vybrLGlXEHgObtVqarqzf",
+      "name": "Mega Welcome Package",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €1,000 +  Free Spins ",
+      "descriptionIntl": {
+        "germany": "Bis zu 1.000 € + Freispiele",
+        "denmark": "Op til 1.000 € + gratis spins",
+        "finland": "Jopa 1 000 € + ilmaiskierroksia",
+        "norway": "Opptil 1 000 € + gratisspinn",
+        "sweden": "Upp till 1 000 € + gratissnurr"
+      },
+      "referralUrl": "/goto/glitchspin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/0c56daa87faf1ad4b04f43b874f65baef2ebe799-1058x338.webp",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

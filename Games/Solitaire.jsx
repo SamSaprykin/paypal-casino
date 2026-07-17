@@ -128,9 +128,7 @@ function attemptMove(state, from, toType, toIndex) {
       return {
         ...state,
         waste: state.waste.slice(0, -1),
-        tableau: state.tableau.map((t, j) =>
-          j === toIndex ? [...t, c] : t,
-        ),
+        tableau: state.tableau.map((t, j) => (j === toIndex ? [...t, c] : t)),
       };
     }
   }
@@ -301,7 +299,14 @@ export default function Solitaire() {
     const onKey = (e) => {
       if (e.key !== " " && e.key !== "Spacebar") return;
       const t = e.target;
-      if (t && (t.tagName === "INPUT" || t.tagName === "SELECT" || t.tagName === "TEXTAREA" || t.isContentEditable)) return;
+      if (
+        t &&
+        (t.tagName === "INPUT" ||
+          t.tagName === "SELECT" ||
+          t.tagName === "TEXTAREA" ||
+          t.isContentEditable)
+      )
+        return;
       e.preventDefault();
       clickStockRef.current();
     };
@@ -321,7 +326,9 @@ export default function Solitaire() {
       });
       if (state.stock.length > 0) {
         const n = Math.min(drawCount, state.stock.length);
-        const taken = state.stock.slice(0, n).map((c) => ({ ...c, faceUp: true }));
+        const taken = state.stock
+          .slice(0, n)
+          .map((c) => ({ ...c, faceUp: true }));
         play(320);
         setMoves((m) => m + 1);
         return {
@@ -440,7 +447,10 @@ export default function Solitaire() {
       return;
     }
     if (sel) {
-      if (sel.type === "tableau" && (sel.col !== col || sel.fromIndex !== idx)) {
+      if (
+        sel.type === "tableau" &&
+        (sel.col !== col || sel.fromIndex !== idx)
+      ) {
         setG((state) => {
           if (isWin(state)) return state;
           const n = attemptMove(state, sel, "tableau", col);
@@ -480,7 +490,11 @@ export default function Solitaire() {
         return state;
       }
       if (isWin(state)) return state;
-      const n = tryMoveToFirstFoundation(state, { type: "tableau", col, fromIndex: idx });
+      const n = tryMoveToFirstFoundation(state, {
+        type: "tableau",
+        col,
+        fromIndex: idx,
+      });
       if (!n) {
         playErr();
         return state;
@@ -541,8 +555,10 @@ export default function Solitaire() {
     return idx >= (hint.from.fromIndex ?? 0);
   };
 
-  const isHintToFoundation = (i) => hint?.toType === "foundation" && hint.toIndex === i;
-  const isHintToTableau = (ci) => hint?.toType === "tableau" && hint.toIndex === ci;
+  const isHintToFoundation = (i) =>
+    hint?.toType === "foundation" && hint.toIndex === i;
+  const isHintToTableau = (ci) =>
+    hint?.toType === "tableau" && hint.toIndex === ci;
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 select-none text-slate-100">
@@ -655,7 +671,9 @@ export default function Solitaire() {
               {g.waste.length > 0 && (
                 <span
                   className={
-                    isRed(g.waste[g.waste.length - 1]) ? "text-rose-600" : "font-bold text-slate-900"
+                    isRed(g.waste[g.waste.length - 1])
+                      ? "text-rose-600"
+                      : "font-bold text-slate-900"
                   }
                 >
                   {RANKL[g.waste[g.waste.length - 1].rank]}
@@ -676,13 +694,19 @@ export default function Solitaire() {
               type="button"
               onClick={() => onFoundationClick(i)}
               className={`w-20 h-24 rounded-md border border-amber-900/30 bg-amber-950/20 flex flex-col items-center justify-center text-lg shadow-md transition ${
-                isHintToFoundation(i) ? "ring-4 ring-amber-300 ring-offset-2 ring-offset-emerald-950" : ""
+                isHintToFoundation(i)
+                  ? "ring-4 ring-amber-300 ring-offset-2 ring-offset-emerald-950"
+                  : ""
               }`}
               aria-label={`Foundation, suit pile ${i + 1}`}
             >
               {pile.length > 0 ? (
                 <span
-                  className={isRed(pile[pile.length - 1]) ? "text-rose-500" : "text-slate-100"}
+                  className={
+                    isRed(pile[pile.length - 1])
+                      ? "text-rose-500"
+                      : "text-slate-100"
+                  }
                 >
                   {RANKL[pile[pile.length - 1].rank]}
                   {SUITC[pile[pile.length - 1].suit]}
@@ -701,7 +725,9 @@ export default function Solitaire() {
             <div
               key={ci}
               className={`flex flex-col items-center w-full min-w-0 ${
-                isHintToTableau(ci) && col.length === 0 ? "ring-2 ring-amber-300/80 rounded-md p-0.5" : ""
+                isHintToTableau(ci) && col.length === 0
+                  ? "ring-2 ring-amber-300/80 rounded-md p-0.5"
+                  : ""
               }`}
             >
               {col.length === 0 && (
@@ -737,7 +763,9 @@ export default function Solitaire() {
                     {c.faceUp ? (
                       <span
                         className={
-                          isRed(c) ? "text-rose-600 font-bold" : "text-slate-900 font-bold"
+                          isRed(c)
+                            ? "text-rose-600 font-bold"
+                            : "text-slate-900 font-bold"
                         }
                       >
                         {RANKL[c.rank]}
@@ -745,7 +773,10 @@ export default function Solitaire() {
                         {SUITC[c.suit]}
                       </span>
                     ) : (
-                      <span className="text-[10px] text-emerald-200/20 select-none" aria-hidden>
+                      <span
+                        className="text-[10px] text-emerald-200/20 select-none"
+                        aria-hidden
+                      >
                         ·
                       </span>
                     )}
@@ -775,11 +806,11 @@ export default function Solitaire() {
       )}
 
       <p className="text-xs sm:text-sm text-slate-500 text-center max-w-2xl mx-auto leading-relaxed">
-        <strong className="text-slate-400">Klondike:</strong> build down in columns
-        (alternating colors), up on foundations by suit. Space flips the stock.{" "}
-        <span className="whitespace-nowrap">Turn 3</span> draws three cards; only the
-        top waste card plays. Double-click a playable card to send it to a
-        foundation. Hint and Undo work like on{" "}
+        <strong className="text-slate-400">Klondike:</strong> build down in
+        columns (alternating colors), up on foundations by suit. Space flips the
+        stock. <span className="whitespace-nowrap">Turn 3</span> draws three
+        cards; only the top waste card plays. Double-click a playable card to
+        send it to a foundation. Hint and Undo work like on{" "}
         <a
           href="https://solitaired.com/"
           className="text-blue-400 hover:underline"

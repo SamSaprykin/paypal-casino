@@ -355,9 +355,9 @@ export default function Tetris({ lineGoal = null }) {
 
   useEffect(() => {
     const onKey = (e) => {
-      if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(
-        e.key,
-      )) {
+      if (
+        ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", " "].includes(e.key)
+      ) {
         e.preventDefault();
       }
       if (!gRef.current.started) {
@@ -526,7 +526,9 @@ export default function Tetris({ lineGoal = null }) {
             {lineGoal ? `${d.lines} / ${lineGoal}` : d.lines}
           </p>
           {lineGoal && !d.won && !d.gameOver && d.started && (
-            <p className="text-slate-600 text-sm">Clear {lineGoal} lines to win</p>
+            <p className="text-slate-600 text-sm">
+              Clear {lineGoal} lines to win
+            </p>
           )}
           <p className="text-slate-800">
             <span className="font-semibold">Level</span> {d.level}

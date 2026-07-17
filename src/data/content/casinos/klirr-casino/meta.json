@@ -1,0 +1,44 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCofud",
+  "_createdAt": "2026-05-13T19:24:14Z",
+  "_updatedAt": "2026-05-30T10:56:29Z",
+  "casinoName": "Klirr Casino",
+  "slug": "klirr-casino",
+  "rating": 4.8,
+  "shortDescription": "Klirr Casino is an online gambling platform offering slots, table games, and live dealer options with various payment me",
+  "shortDescriptionIntl": {
+    "germany": "Klirr Casino ist eine Online-Glücksspielplattform mit Spielautomaten, Tischspielen und Live-Dealer-Optionen sowie verschiedenen Zahlungsmethoden.",
+    "denmark": "Klirr Casino er en online spilplatform med spilleautomater, bordspil og live dealer-muligheder samt forskellige betalingsmetoder.",
+    "finland": "Klirr Casino on nettipelialusta, joka tarjoaa kolikkopelejä, pöytäpelejä ja live-jakajapelejä sekä useita maksutapoja.",
+    "norway": "Klirr Casino er en nettbasert spillplattform med spilleautomater, bordspill og live dealer-alternativer samt ulike betalingsmetoder.",
+    "sweden": "Klirr Casino är en onlinespelplattform med spelautomater, bordsspel och live dealer-alternativ samt olika betalningsmetoder."
+  },
+  "referralUrl": "/goto/klirr-casino.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["Swish: instant", "Trustly: instant"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Spelinspektionen (Swedish)",
+  "userRecommendationsRecommendedNumber": 217,
+  "userRecommendationsTotalNumber": 264,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/a6266c26564fe1c319fb8014a18a7197f8d79ea3-180x180.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

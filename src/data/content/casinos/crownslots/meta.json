@@ -1,0 +1,109 @@
+{
+  "_id": "1qaqwcVgBhRr1Y4GjQRw9T",
+  "_createdAt": "2025-08-27T07:58:40Z",
+  "_updatedAt": "2026-05-15T13:56:03Z",
+  "casinoName": "CrownSlots",
+  "slug": "crownslots",
+  "rating": 4.7,
+  "shortDescription": "CrownSlots is a dynamic online casino featuring over 3,000 games and a sleek, modern interface. It offers a generous multi-tier welcome bonus, weekly reload perks, and supports fast crypto transactions.",
+  "shortDescriptionIntl": {
+    "germany": "CrownSlots ist ein dynamisches Online-Casino mit über 3.000 Spielen und einer schlanken, modernen Oberfläche. Es bietet einen großzügigen mehrstufigen Willkommensbonus, wöchentliche Reload-Vorteile und unterstützt schnelle Krypto-Transaktionen.",
+    "denmark": "CrownSlots er et dynamisk onlinecasino med over 3.000 spil og en enkel, moderne brugerflade. Det tilbyder en generøs velkomstbonus i flere niveauer, ugentlige reload-fordele og understøtter hurtige kryptotransaktioner.",
+    "finland": "CrownSlots on dynaaminen nettikasino, jossa on yli 3 000 peliä ja tyylikäs, moderni käyttöliittymä. Se tarjoaa anteliaan monitasoisen tervetuliaisbonuksen, viikoittaiset reload-edut sekä tukee nopeita kryptotapahtumia.",
+    "norway": "CrownSlots er et dynamisk nettcasino med over 3 000 spill og et enkelt, moderne grensesnitt. Det tilbyr en sjenerøs velkomstbonus i flere nivåer, ukentlige reload-fordeler og støtter raske kryptotransaksjoner.",
+    "sweden": "CrownSlots är ett dynamiskt onlinecasino med över 3 000 spel och ett stilrent, modernt gränssnitt. Det erbjuder en generös flernivå-välkomstbonus, veckovisa reload-förmåner och stöder snabba kryptotransaktioner."
+  },
+  "referralUrl": "/goto/crownslots.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Evolution",
+    "Yggdrasil Gaming",
+    "NetEnt",
+    "Microgaming",
+    "Quickspin",
+    "PlayNGo"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 55,
+  "userRecommendationsTotalNumber": 79,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#543964"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/56692178cd4f6a08d14642123fd52651f0e8a53e-48x48.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "CXZIGhIiIzU9yg0eiQwVU",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €100 + 50 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 100 € + 50 Freispiele",
+        "denmark": "Op til 100 € + 50 gratis spins",
+        "finland": "Jopa 100 € + 50 ilmaiskierrosta",
+        "norway": "Opptil 100 € + 50 gratisspinn",
+        "sweden": "Upp till 100 € + 50 gratissnurr"
+      },
+      "referralUrl": "/goto/crownslots.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/f1ea15fae30fff0eb70d6aaa3520a8b4fbeb6669-194x59.webp",
+          "altText": null
+        }
+      }
+    },
+    {
+      "_id": "bonus-extra-crownslots",
+      "name": "Thursday Cashback",
+      "code": "CASHTHU",
+      "description": "20% Cashback on Every Deposit",
+      "descriptionIntl": {
+        "germany": "20 % Cashback auf jede Einzahlung",
+        "denmark": "20 % cashback på hver indbetaling",
+        "finland": "20 % cashback jokaisesta talletuksesta",
+        "norway": "20 % cashback på hvert innskudd",
+        "sweden": "20 % cashback på varje insättning"
+      },
+      "referralUrl": "/goto/crownslots.php",
+      "bonusBackgroundColor": "#1a1a2e",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

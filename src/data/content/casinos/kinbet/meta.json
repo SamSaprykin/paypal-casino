@@ -1,0 +1,86 @@
+{
+  "_id": "6bYMfkGhAY0T49itakJIT9",
+  "_createdAt": "2025-08-27T07:58:38Z",
+  "_updatedAt": "2026-05-15T14:00:39Z",
+  "casinoName": "Kinbet",
+  "slug": "kinbet",
+  "rating": 4.6,
+  "shortDescription": "Kinbet is a sleek, sports-focused casino and bookmaker offering over 4,000 games. It features a unique \"Bonus Crab\" reward system, 24/7 live chat, and a versatile range of crypto and fiat payment options.",
+  "shortDescriptionIntl": {
+    "germany": "Kinbet ist ein elegantes, sportorientiertes Casino und Buchmacher mit über 4.000 Spielen. Es bietet ein einzigartiges „Bonus Crab“-Prämiensystem, 24/7-Live-Chat und eine vielseitige Auswahl an Krypto- und Fiat-Zahlungsmethoden.",
+    "denmark": "Kinbet er et elegant, sportsfokuseret casino og bookmaker med over 4.000 spil. Det byder på et unikt „Bonus Crab“-belønningssystem, 24/7 live chat og et alsidigt udvalg af krypto- og fiatbetalingsmetoder.",
+    "finland": "Kinbet on tyylikäs, urheiluun keskittyvä kasino ja vedonvälittäjä, jossa on yli 4 000 peliä. Se tarjoaa ainutlaatuisen „Bonus Crab“ -palkintojärjestelmän, 24/7-live-chatin sekä monipuolisen valikoiman krypto- ja fiat-maksutapoja.",
+    "norway": "Kinbet er et elegant, sportsfokusert casino og bookmaker med over 4 000 spill. Det byr på et unikt «Bonus Crab»-belønningssystem, 24/7 live chat og et allsidig utvalg av krypto- og fiatbetalingsmetoder.",
+    "sweden": "Kinbet är ett elegant, sportinriktat casino och spelbolag med över 4 000 spel. Det erbjuder ett unikt ”Bonus Crab”-belöningssystem, 24/7 live chatt och ett mångsidigt utbud av krypto- och fiatbetalningsmetoder."
+  },
+  "referralUrl": "/goto/kinbet.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Microgaming",
+    "NetEnt",
+    "PlayNGo",
+    "Evolution",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 52,
+  "userRecommendationsTotalNumber": 75,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1e1e1e"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/584d9efb0d7be25392459c74a8ab8c207346de01-180x180.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5jITG4A3L3YBluKVCJLZs8",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/kinbet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,93 @@
+{
+  "_id": "5nN21012EUGNCLNXdEWx4J",
+  "_createdAt": "2025-10-13T16:21:37Z",
+  "_updatedAt": "2026-05-15T13:58:07Z",
+  "casinoName": "Flagman",
+  "slug": "flagman",
+  "rating": 4.7,
+  "shortDescription": "Flagman is a modern, maritime-themed casino and sportsbook. It features a vast game library, competitive betting odds, and a tiered loyalty program, all while supporting fast crypto and fiat payouts.",
+  "shortDescriptionIntl": {
+    "germany": "Flagman ist ein modernes Casino und Sportwettenanbieter mit maritimem Thema. Es bietet eine umfangreiche Spielbibliothek, wettbewerbsfähige Wettquoten und ein gestaffeltes Treueprogramm bei gleichzeitiger Unterstützung schneller Krypto- und Fiat-Auszahlungen.",
+    "denmark": "Flagman er et moderne casino og en sportsbook med maritimt tema. Det byder på et stort spilbibliotek, konkurrencedygtige odds og et trinvist loyalitetsprogram, samtidig med at det understøtter hurtige krypto- og fiatudbetalinger.",
+    "finland": "Flagman on moderni, meriteemainen kasino ja vedonlyöntisivusto. Se tarjoaa laajan pelivalikoiman, kilpailukykyiset vedonlyöntikertoimet ja porrastetun uskollisuusohjelman sekä tukee nopeita krypto- ja fiat-kotiutuksia.",
+    "norway": "Flagman er et moderne casino og en sportsbook med maritimt tema. Det byr på et stort spillbibliotek, konkurransedyktige odds og et trinnvis lojalitetsprogram, samtidig som det støtter raske krypto- og fiatutbetalinger.",
+    "sweden": "Flagman är ett modernt casino och sportbok med maritimt tema. Det erbjuder ett stort spelbibliotek, konkurrenskraftiga odds och ett nivåbaserat lojalitetsprogram, samtidigt som det stöder snabba krypto- och fiatutbetalningar."
+  },
+  "referralUrl": "/goto/flagman.php",
+  "payoutLimits": " Up to €80,000–€100,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Microgaming",
+    "Betsoft",
+    "Evolution",
+    "Pragmatic",
+    "Yggdrasil Gaming",
+    "Quickspin",
+    "NetEnt"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 41,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#dd92b0"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/995b85127763f438329896880b3620fd5d75128b-293x90.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "6QB8WXeCPQqkseeK94iuqN",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "150% up to 600 EUR + up to 500 FS",
+      "descriptionIntl": {
+        "germany": "150 % bis zu 600 EUR + bis zu 500 Freispiele",
+        "denmark": "150 % op til 600 EUR + op til 500 gratis spins",
+        "finland": "150 % jopa 600 EUR + jopa 500 ilmaiskierrosta",
+        "norway": "150 % opptil 600 EUR + opptil 500 gratisspinn",
+        "sweden": "150 % upp till 600 EUR + upp till 500 gratissnurr"
+      },
+      "referralUrl": "/goto/flagman.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/995b85127763f438329896880b3620fd5d75128b-293x90.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

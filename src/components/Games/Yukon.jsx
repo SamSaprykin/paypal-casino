@@ -152,7 +152,8 @@ function attemptMove(state, from, toType, toIndex) {
       };
     }
     if (toType === "tableau") {
-      if (!canGoOnTableauYukon(run[0], state.tableau[toIndex] ?? [])) return null;
+      if (!canGoOnTableauYukon(run[0], state.tableau[toIndex] ?? []))
+        return null;
       const nCol = maybeFlipExposed(col.slice(0, fromI));
       const tcol = [...(state.tableau[toIndex] ?? []), ...run];
       return {
@@ -330,7 +331,10 @@ export default function Yukon() {
       return;
     }
     if (sel) {
-      if (sel.type === "tableau" && (sel.col !== col || sel.fromIndex !== idx)) {
+      if (
+        sel.type === "tableau" &&
+        (sel.col !== col || sel.fromIndex !== idx)
+      ) {
         setG((state) => {
           if (isWin(state)) return state;
           const n = attemptMove(state, sel, "tableau", col);
@@ -366,7 +370,11 @@ export default function Yukon() {
         return state;
       }
       if (isWin(state)) return state;
-      const n = tryMoveToFirstFoundation(state, { type: "tableau", col, fromIndex: idx });
+      const n = tryMoveToFirstFoundation(state, {
+        type: "tableau",
+        col,
+        fromIndex: idx,
+      });
       if (!n) {
         playErr();
         return state;
@@ -420,8 +428,10 @@ export default function Yukon() {
   const isHintFromFoundation = (fi) =>
     hint?.from?.type === "foundation" && hint.from.index === fi;
 
-  const isHintToFoundation = (i) => hint?.toType === "foundation" && hint.toIndex === i;
-  const isHintToTableau = (ci) => hint?.toType === "tableau" && hint.toIndex === ci;
+  const isHintToFoundation = (i) =>
+    hint?.toType === "foundation" && hint.toIndex === i;
+  const isHintToTableau = (ci) =>
+    hint?.toType === "tableau" && hint.toIndex === ci;
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 select-none text-slate-100">
@@ -502,7 +512,11 @@ export default function Yukon() {
             >
               {pile.length > 0 ? (
                 <span
-                  className={isRed(pile[pile.length - 1]) ? "text-rose-500" : "text-slate-100"}
+                  className={
+                    isRed(pile[pile.length - 1])
+                      ? "text-rose-500"
+                      : "text-slate-100"
+                  }
                 >
                   {RANKL[pile[pile.length - 1].rank]}
                   {SUITC[pile[pile.length - 1].suit]}
@@ -559,7 +573,9 @@ export default function Yukon() {
                     {c.faceUp ? (
                       <span
                         className={
-                          isRed(c) ? "text-rose-600 font-bold" : "text-slate-900 font-bold"
+                          isRed(c)
+                            ? "text-rose-600 font-bold"
+                            : "text-slate-900 font-bold"
                         }
                       >
                         {RANKL[c.rank]}
@@ -567,7 +583,10 @@ export default function Yukon() {
                         {SUITC[c.suit]}
                       </span>
                     ) : (
-                      <span className="text-[10px] text-emerald-200/20 select-none" aria-hidden>
+                      <span
+                        className="text-[10px] text-emerald-200/20 select-none"
+                        aria-hidden
+                      >
                         ·
                       </span>
                     )}
@@ -597,14 +616,15 @@ export default function Yukon() {
       )}
 
       <p className="text-xs sm:text-sm text-slate-500 text-center max-w-2xl mx-auto leading-relaxed">
-        <strong className="text-slate-400">Yukon solitaire</strong>: no stock. Build down{" "}
-        <strong>alternating red and black</strong> on the tableau. You can move a face-up
-        <em> group</em> when only the <em>lead</em> card fits; cards above it can be
-        out of order. <strong>Foundations</strong> build A→K by suit, and the top
-        card can move back to the table when a rule set allows. Empty columns:{" "}
-        <strong>King</strong> (or a stack with a King on the contact) only. Double-click
-        a column bottom to try auto-foundation. Rules follow common online descriptions
-        (e.g.{" "}
+        <strong className="text-slate-400">Yukon solitaire</strong>: no stock.
+        Build down <strong>alternating red and black</strong> on the tableau.
+        You can move a face-up
+        <em> group</em> when only the <em>lead</em> card fits; cards above it
+        can be out of order. <strong>Foundations</strong> build A→K by suit, and
+        the top card can move back to the table when a rule set allows. Empty
+        columns: <strong>King</strong> (or a stack with a King on the contact)
+        only. Double-click a column bottom to try auto-foundation. Rules follow
+        common online descriptions (e.g.{" "}
         <a
           href="https://solitaired.com/yukon-solitaire"
           className="text-blue-400 hover:underline"

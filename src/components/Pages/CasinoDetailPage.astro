@@ -4,7 +4,7 @@ import Header from "../../components/Layout/Header.astro";
 import Footer from "../../components/Layout/Footer.astro";
 import CasinoReviewHero from "../../components/Pages/CasinoReviewHero.astro";
 import { ContentComponent } from "../../components/Pages/ContentComponent.jsx";
-import { FaqAccordion } from "../../components/Pages/FAQComponent.jsx";
+import FaqList from "../../components/Pages/FaqList.astro";
 
 import {
  CASINO_DETAIL_PAGE_COPY,
@@ -15,8 +15,8 @@ import {
  homeHrefForLocale,
  localizedCasinoDetailHref,
  type WebsiteLocaleKey,
-} from "../../lib/sanity";
-import type { CasinoPage } from "../../lib/sanity/casinos";
+} from "../../lib/content";
+import type { CasinoPage } from "../../lib/content";
 import { format } from "date-fns";
 
 interface Props {
@@ -64,7 +64,7 @@ const tagListClass =
  "flex flex-wrap gap-2 list-none p-0 m-0 [&>li]:rounded-full [&>li]:bg-slate-100 [&>li]:px-3 [&>li]:py-1 [&>li]:text-sm [&>li]:text-slate-700";
 ---
 
-<BaseLayout seo={seoData} lang={htmlLang}>
+<BaseLayout seo={seoData} lang={htmlLang} localeId={localeId}>
  <Header locale={locale} localeHrefs={casino.countrySelectorHrefs} />
  <main class="min-h-screen pb-16">
  <div
@@ -96,7 +96,6 @@ const tagListClass =
  casino.bodyMarkdown?.trim() ? (
  <section class="mb-12 rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm sm:p-8">
  <ContentComponent
- client:only="react"
  content={casino.bodyMarkdown}
  firstBonus={firstBonus}
  />
@@ -238,8 +237,7 @@ const tagListClass =
 
  {
  casino.faq?.items.length ? (
- <FaqAccordion
- client:only="react"
+ <FaqList
  title={casino.faq.title}
  items={casino.faq.items}
  spaceTop={casino.faq.spaceTop ?? 0}

@@ -1,0 +1,25 @@
+---
+import CustomImage from "../../CustomImage.astro";
+import type { ImageSection } from "../../../lib/content";
+
+interface Props {
+  section: ImageSection;
+}
+
+const { section } = Astro.props;
+const hasSrc = Boolean(section.src && section.src.trim());
+---
+
+{
+  hasSrc ? (
+    <section class="px-6 sm:px-8">
+      <CustomImage
+        src={section.src!}
+        alt={section.alt ?? ""}
+        caption={section.caption}
+        width={section.width}
+        height={section.height}
+      />
+    </section>
+  ) : null
+}

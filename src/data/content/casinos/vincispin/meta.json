@@ -1,0 +1,88 @@
+{
+  "_id": "4bXrE1LELmWfXyRcdJLWSg",
+  "_createdAt": "2025-08-27T07:58:54Z",
+  "_updatedAt": "2026-05-25T08:17:08Z",
+  "casinoName": "VinciSpin",
+  "slug": "vincispin",
+  "rating": 4.6,
+  "shortDescription": "VinciSpin is a Renaissance-themed platform inspired by Leonardo da Vinci, offering both sports betting and casino games. Registered in Costa Rica, it features a multi-deposit welcome bonus and 24/7 support.",
+  "shortDescriptionIntl": {
+    "germany": "VinciSpin ist eine von Leonardo da Vinci inspirierte Plattform im Renaissance-Stil, die sowohl Sportwetten als auch Casinospiele anbietet. In Costa Rica registriert, bietet sie einen Willkommensbonus über mehrere Einzahlungen und 24/7-Support.",
+    "denmark": "VinciSpin er en renæssance-tematiseret platform inspireret af Leonardo da Vinci, der tilbyder både sportsbetting og casinospil. Registreret i Costa Rica byder den på en velkomstbonus over flere indbetalinger og 24/7-support.",
+    "finland": "VinciSpin on Leonardo da Vincin inspiroima renessanssiteemainen alusta, joka tarjoaa sekä urheiluvedonlyöntiä että kasinopelejä. Costa Ricassa rekisteröitynä se tarjoaa usean talletuksen tervetuliaisbonuksen ja 24/7-tuen.",
+    "norway": "VinciSpin er en renessanse-tematisert plattform inspirert av Leonardo da Vinci, som tilbyr både sportsbetting og casinospill. Registrert i Costa Rica byr den på en velkomstbonus over flere innskudd og 24/7-support.",
+    "sweden": "VinciSpin är en renässansstematiserad plattform inspirerad av Leonardo da Vinci som erbjuder både sportspel och casinospel. Registrerat i Costa Rica erbjuder det en välkomstbonus över flera insättningar och 24/7-support."
+  },
+  "referralUrl": "/goto/vincispin.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/Skrill/Neteller: min to 24 hours "
+  ],
+  "software": [
+    "Playtech",
+    "PlayNGo",
+    "Evolution",
+    "NetEnt",
+    "Pragmatic",
+    "Microgaming",
+    "Betsoft",
+    "Quickspin",
+    "Thunderkick"
+  ],
+  "depositMethods": [
+    "Neteller",
+    "Skrill",
+    "PayPal"
+  ],
+  "withdrawalMethod": [
+    "Neteller",
+    "Skrill",
+    "PayPal"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 45,
+  "userRecommendationsTotalNumber": 65,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#59351f"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/fcb2e4c93c2031787c94345f59a7263f334a21d7-192x192.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "6ORCwRKFKKbjVXizBHfU8",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 100 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 100 Freispiele",
+        "denmark": "Op til 500 € + 100 gratis spins",
+        "finland": "Jopa 500 € + 100 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 100 gratisspinn",
+        "sweden": "Upp till 500 € + 100 gratissnurr"
+      },
+      "referralUrl": "/goto/vincispin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

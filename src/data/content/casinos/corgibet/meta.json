@@ -1,0 +1,44 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCpeV1",
+  "_createdAt": "2026-05-13T19:38:20Z",
+  "_updatedAt": "2026-05-15T13:54:53Z",
+  "casinoName": "Corgibet",
+  "slug": "corgibet",
+  "rating": 4.7,
+  "shortDescription": "Corgibet is a playful, dog-themed casino featuring over 5,000 games and a robust sportsbook. It offers a tiered welcome bonus, weekly reloads, and fast payouts for both fiat and crypto users.",
+  "shortDescriptionIntl": {
+    "germany": "Corgibet ist ein verspieltes Casino mit Hunde-Thema, das über 5.000 Spiele und einen robusten Sportwettenbereich bietet. Es gibt einen gestaffelten Willkommensbonus, wöchentliche Reloads und schnelle Auszahlungen für Fiat- und Krypto-Nutzer.",
+    "denmark": "Corgibet er et legesygt casino med hundetema, der byder på over 5.000 spil og en solid sportsbook. Det tilbyder en trinvis velkomstbonus, ugentlige reloads og hurtige udbetalinger til fiat- og kryptobrugere.",
+    "finland": "Corgibet on leikkisä, koirateemainen kasino, joka tarjoaa yli 5 000 peliä ja vankan vedonlyöntiosion. Se tarjoaa porrastetun tervetuliaisbonuksen, viikoittaiset reload-bonukset sekä nopeat kotiutukset fiat- ja kryptokäyttäjille.",
+    "norway": "Corgibet er et lekent casino med hundetema som byr på over 5 000 spill og en solid sportsbook. Det tilbyr en trinnvis velkomstbonus, ukentlige reloads og raske utbetalinger for fiat- og kryptobrukere.",
+    "sweden": "Corgibet är ett lekfullt casino med hundtema som erbjuder över 5 000 spel och en robust sportbok. Det erbjuder en nivåbaserad välkomstbonus, veckovisa reloads och snabba utbetalningar för fiat- och kryptoanvändare."
+  },
+  "referralUrl": "/goto/corgibet.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 243,
+  "userRecommendationsTotalNumber": 293,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/35f228f0f83bd53d2e57adf16dae4ffa8bb0e578-180x180.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

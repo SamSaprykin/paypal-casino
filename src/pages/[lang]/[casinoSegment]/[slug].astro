@@ -2,10 +2,10 @@
 import CasinoDetailPage from "../../../components/Pages/CasinoDetailPage.astro";
 import {
   casinoUrlSegmentForLocale,
-  getCasinoBySlugSanity,
+  getCasinoBySlug,
   getLocalizedCasinoDetailStaticPaths,
   type WebsiteLocaleKey,
-} from "../../../lib/sanity";
+} from "../../../lib/content";
 
 export async function getStaticPaths() {
   return getLocalizedCasinoDetailStaticPaths();
@@ -23,7 +23,7 @@ if (casinoSegment !== casinoUrlSegmentForLocale(locale)) {
   return Astro.redirect("/404/");
 }
 
-const casino = await getCasinoBySlugSanity(slug, locale);
+const casino = await getCasinoBySlug(slug, locale);
 
 if (!casino) {
   return Astro.redirect("/404/");

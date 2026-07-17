@@ -1,0 +1,88 @@
+{
+  "_id": "29wjRxGe3uCEkjHTd6nF4l",
+  "_createdAt": "2025-08-27T07:58:53Z",
+  "_updatedAt": "2026-05-15T14:11:13Z",
+  "casinoName": "SpinBetter",
+  "slug": "spinbetter",
+  "rating": 4.6,
+  "shortDescription": "SpinBetter is a versatile international platform offering over 7,000 games and a deep sportsbook. It’s known for its massive multi-currency support, 60+ languages, and a generous four-tier welcome package.",
+  "shortDescriptionIntl": {
+    "germany": "SpinBetter ist eine vielseitige internationale Plattform mit über 7.000 Spielen und einem umfangreichen Sportwettenbereich. Sie ist bekannt für ihre umfassende Multi-Währungs-Unterstützung, mehr als 60 Sprachen und ein großzügiges vierstufiges Willkommenspaket.",
+    "denmark": "SpinBetter er en alsidig international platform med over 7.000 spil og en dyb sportsbook. Den er kendt for sin omfattende understøttelse af flere valutaer, mere end 60 sprog og en generøs velkomstpakke i fire niveauer.",
+    "finland": "SpinBetter on monipuolinen kansainvälinen alusta, jossa on yli 7 000 peliä ja laaja vedonlyöntiosio. Se tunnetaan kattavasta monivaluuttatuestaan, yli 60 kielestä sekä anteliaasta nelitasoisesta tervetuliaispaketista.",
+    "norway": "SpinBetter er en allsidig internasjonal plattform med over 7 000 spill og en omfattende sportsbook. Den er kjent for sin omfattende støtte for flere valutaer, mer enn 60 språk og en sjenerøs velkomstpakke i fire nivåer.",
+    "sweden": "SpinBetter är en mångsidig internationell plattform med över 7 000 spel och en omfattande sportbok. Den är känd för sitt omfattande stöd för flera valutor, mer än 60 språk och ett generöst välkomstpaket i fyra nivåer."
+  },
+  "referralUrl": "/goto/spinbetter.php",
+  "payoutLimits": "Up to €45,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes to 24 hours "
+  ],
+  "software": [
+    "Pragmatic",
+    "Evolution",
+    "Microgaming",
+    "PlayNGo",
+    "Betsoft",
+    "Yggdrasil Gaming",
+    "Playson",
+    "NetEnt",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 46,
+  "userRecommendationsTotalNumber": 67,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#2c5545"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/0ba08b8561ee7511c86e225efc2b21255389f1f6-100x100.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "22AGrkVuHc830K1vlRmn8F",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €5000 + 50 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 5.000 € + 50 Freispiele",
+        "denmark": "Op til 5.000 € + 50 gratis spins",
+        "finland": "Jopa 5 000 € + 50 ilmaiskierrosta",
+        "norway": "Opptil 5 000 € + 50 gratisspinn",
+        "sweden": "Upp till 5 000 € + 50 gratissnurr"
+      },
+      "referralUrl": "/goto/spinbetter.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,44 @@
+{
+  "_id": "terAQHgze15RtLO7XGpo27",
+  "_createdAt": "2026-05-13T19:41:11Z",
+  "_updatedAt": "2026-05-15T14:00:22Z",
+  "casinoName": "Just Casino",
+  "slug": "just-casino",
+  "rating": 4.7,
+  "shortDescription": "Just Casino is a sleek, space-themed platform boasting over 9,500 games. It features a massive $4,000 welcome package, dedicated VIP \"Spaceman\" rewards, and lightning-fast cryptocurrency transactions.",
+  "shortDescriptionIntl": {
+    "germany": "Just Casino ist eine elegante Plattform mit Weltraum-Thema und über 9.500 Spielen. Es bietet ein riesiges Willkommenspaket von 4.000 $, dedizierte VIP-„Spaceman“-Prämien und blitzschnelle Krypto-Transaktionen.",
+    "denmark": "Just Casino er en elegant platform med rumtema og over 9.500 spil. Det byder på en enorm velkomstpakke på 4.000 $, dedikerede VIP-„Spaceman“-belønninger og lynhurtige kryptotransaktioner.",
+    "finland": "Just Casino on tyylikäs, avaruusteemainen alusta, jossa on yli 9 500 peliä. Se tarjoaa valtavan 4 000 dollarin tervetuliaispaketin, oman VIP-„Spaceman“-palkintojärjestelmän sekä salamannopeat kryptotapahtumat.",
+    "norway": "Just Casino er en elegant plattform med romtema og over 9 500 spill. Det byr på en enorm velkomstpakke på 4 000 $, dedikerte VIP-«Spaceman»-belønninger og lynraske kryptotransaksjoner.",
+    "sweden": "Just Casino är en elegant plattform med rymdtema och över 9 500 spel. Det erbjuder ett enormt välkomstpaket på 4 000 $, dedikerade VIP-”Spaceman”-belöningar och blixtsnabba kryptotransaktioner."
+  },
+  "referralUrl": "/goto/justcasino.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 208,
+  "userRecommendationsTotalNumber": 266,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/6e0fb2cfdc9bc27480f76de47cd3445cd7543ccd-192x192.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

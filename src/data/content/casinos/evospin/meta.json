@@ -1,0 +1,86 @@
+{
+  "_id": "79NDg8fOXu2NiYTCBkBqdu",
+  "_createdAt": "2025-08-27T07:58:50Z",
+  "_updatedAt": "2026-05-15T13:57:04Z",
+  "casinoName": "Evospin",
+  "slug": "evospin",
+  "rating": 4.7,
+  "shortDescription": "Evospin is a futuristic, space-themed casino featuring 6,000+ games and daily tournaments. It offers a 100% welcome bonus, a 40-tier VIP program, and hyper-fast payouts via MGA-regulated providers.",
+  "shortDescriptionIntl": {
+    "germany": "Evospin ist ein futuristisches Casino mit Weltraum-Thema, das über 6.000 Spiele und tägliche Turniere bietet. Es gibt einen 100-%-Willkommensbonus, ein 40-stufiges VIP-Programm und extrem schnelle Auszahlungen über MGA-regulierte Anbieter.",
+    "denmark": "Evospin er et futuristisk casino med rumtema, der byder på over 6.000 spil og daglige turneringer. Det tilbyder en 100 % velkomstbonus, et VIP-program i 40 niveauer og lynhurtige udbetalinger via MGA-regulerede udbydere.",
+    "finland": "Evospin on futuristinen, avaruusteemainen kasino, joka tarjoaa yli 6 000 peliä ja päivittäisiä turnauksia. Se tarjoaa 100 %:n tervetuliaisbonuksen, 40-tasoisen VIP-ohjelman sekä erittäin nopeat kotiutukset MGA-säänneltyjen tarjoajien kautta.",
+    "norway": "Evospin er et futuristisk casino med romtema som byr på over 6 000 spill og daglige turneringer. Det tilbyr en 100 % velkomstbonus, et VIP-program i 40 nivåer og lynraske utbetalinger via MGA-regulerte leverandører.",
+    "sweden": "Evospin är ett futuristiskt casino med rymdtema som erbjuder över 6 000 spel och dagliga turneringar. Det erbjuder en 100 % välkomstbonus, ett VIP-program i 40 nivåer och blixtsnabba utbetalningar via MGA-reglerade leverantörer."
+  },
+  "referralUrl": "/goto/evospin.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal / E-wallets: Minutes – 24h  "
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "NetEnt",
+    "Playson",
+    "Evolution",
+    "Yggdrasil Gaming",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 43,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#082567"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/726bc9ef7d15f9bf3c3d406b9aee173de9d912cf-256x256.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "3qU9svR7Scnr4XoewQ8Y4t",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €300 + 100 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 300 € + 100 Freispiele",
+        "denmark": "Op til 300 € + 100 gratis spins",
+        "finland": "Jopa 300 € + 100 ilmaiskierrosta",
+        "norway": "Opptil 300 € + 100 gratisspinn",
+        "sweden": "Upp till 300 € + 100 gratissnurr"
+      },
+      "referralUrl": "/goto/evospin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -124,9 +124,7 @@ return <div {...props} />;
 **Article wrapper (optional)**
 
 ```html
-<div class="article">
-  …markdown + blocks…
-</div>
+<div class="article">…markdown + blocks…</div>
 ```
 
 **Info card** (`InfoCard` — built-in Lucide `Info`)
@@ -191,8 +189,8 @@ return <div {...props} />;
 
 Inside each `step-item`:
 
-- `h5.step-title` — title  
-- `span.icon` — **plain text** Lucide key for `IconSwitch`  
+- `h5.step-title` — title
+- `span.icon` — **plain text** Lucide key for `IconSwitch`
 - `p.step-description` — body (HTML allowed inside per `HastStepDescription`)
 
 Allowed **`IconSwitch`** icon strings (exact, case-sensitive):

@@ -1,6 +1,9 @@
 import type { LocaleId } from "../locales";
-import type { WebsiteLocaleKey } from "../../sanity/locales";
-import type { ClassicGamesHubCopy, StaticSitePagesCopy } from "./static-site-types";
+import type { WebsiteLocaleKey } from "../../cms/locales";
+import type {
+  ClassicGamesHubCopy,
+  StaticSitePagesCopy,
+} from "./static-site-types";
 import { localeIdForWebsiteLocale } from "../websiteLocaleBridge";
 import {
   privacySectionsEn,
@@ -88,7 +91,8 @@ const classicGamesEn: ClassicGamesHubCopy = {
     tetrisLabel: "Tetris",
     between: "vs",
     tetris50Label: "Tetris 50",
-    after: "comparison (same table) is on the Tetris and Tetris 50 game pages, below the play area.",
+    after:
+      "comparison (same table) is on the Tetris and Tetris 50 game pages, below the play area.",
   },
 };
 

@@ -6,23 +6,23 @@ Redirects are implemented in `vercel.json` (301).
 
 ## Country & home
 
-| Old URL | New URL | Notes |
-|--------|---------|--------|
-| `/` | `/` | Ireland home (Sanity slug `/`) — **no redirect** |
-| `/ireland-guide/` | `/` | Ireland hub becomes root |
-| `/paypal-casinos/` | `/paypal-casino-ireland/` | Ireland PayPal listing (CMS) |
-| `/denmark-guide/` | `/dk/` | Denmark home |
-| `/suomi-guide/` | `/fi/` | Finland home |
-| `/norway-guide/` | `/no/` | Norway home |
-| `/sweden-guide/` | `/se/` | Sweden home |
-| `/ie/…` | `/…` | Ireland has no `/ie/` prefix |
+| Old URL            | New URL                   | Notes                                            |
+| ------------------ | ------------------------- | ------------------------------------------------ |
+| `/`                | `/`                       | Ireland home (Sanity slug `/`) — **no redirect** |
+| `/ireland-guide/`  | `/`                       | Ireland hub becomes root                         |
+| `/paypal-casinos/` | `/paypal-casino-ireland/` | Ireland PayPal listing (CMS)                     |
+| `/denmark-guide/`  | `/dk/`                    | Denmark home                                     |
+| `/suomi-guide/`    | `/fi/`                    | Finland home                                     |
+| `/norway-guide/`   | `/no/`                    | Norway home                                      |
+| `/sweden-guide/`   | `/se/`                    | Sweden home                                      |
+| `/ie/…`            | `/…`                      | Ireland has no `/ie/` prefix                     |
 
 ## Casino reviews
 
-| Old URL | New URL |
-|--------|---------|
-| `/casino-guide/{slug}/` | `/casino/{slug}/` |
-| `/casino-guide/` | `/paypal-casino-ireland/` | No `/casino/` hub page yet |
+| Old URL                 | New URL                   |
+| ----------------------- | ------------------------- |
+| `/casino-guide/{slug}/` | `/casino/{slug}/`         |
+| `/casino-guide/`        | `/paypal-casino-ireland/` | No `/casino/` hub page yet |
 
 All 33 casino slugs from the old sitemap exist in Sanity with the same slug.
 

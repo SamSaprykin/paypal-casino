@@ -1,0 +1,93 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCpzMh",
+  "_createdAt": "2026-05-13T19:42:01Z",
+  "_updatedAt": "2026-05-15T13:52:29Z",
+  "casinoName": "BitStarz",
+  "slug": "bitstarz",
+  "rating": 4.6,
+  "shortDescription": "BitStarz is an award-winning hybrid casino famed for its seamless integration of fiat and crypto. It offers over 7,000 games, 10-minute average payouts, and a massive 5 BTC welcome package plus 180 free spins.",
+  "shortDescriptionIntl": {
+    "germany": "BitStarz ist ein preisgekröntes Hybrid-Casino, bekannt für die nahtlose Integration von Fiat und Krypto. Es bietet über 7.000 Spiele, durchschnittliche Auszahlungen in 10 Minuten und ein riesiges Willkommenspaket von 5 BTC plus 180 Freispiele.",
+    "denmark": "BitStarz er et prisvindende hybridcasino, kendt for sin sømløse integration af fiat og krypto. Det byder på over 7.000 spil, udbetalinger på gennemsnitligt 10 minutter og en enorm velkomstpakke på 5 BTC plus 180 gratis spins.",
+    "finland": "BitStarz on palkittu hybridikasino, joka tunnetaan saumattomasta fiat- ja kryptovaluuttojen yhdistämisestä. Se tarjoaa yli 7 000 peliä, keskimäärin 10 minuutin kotiutukset sekä valtavan 5 BTC:n tervetuliaispaketin ja 180 ilmaiskierrosta.",
+    "norway": "BitStarz er et prisbelønt hybridcasino, kjent for sin sømløse integrasjon av fiat og krypto. Det byr på over 7 000 spill, utbetalinger på i gjennomsnitt 10 minutter og en enorm velkomstpakke på 5 BTC pluss 180 gratisspinn.",
+    "sweden": "BitStarz är ett prisbelönt hybridcasino, känt för sin sömlösa integration av fiat och krypto. Det erbjuder över 7 000 spel, utbetalningar på i genomsnitt 10 minuter och ett enormt välkomstpaket på 5 BTC plus 180 gratissnurr."
+  },
+  "referralUrl": "/goto/bitstarz.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 354,
+  "userRecommendationsTotalNumber": 447,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a2e"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/ba13f7c6afcc0b0a79717a128008bc63570419e4-180x180.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "erBhhDYSfCig8tH7sCr4LT",
+      "name": "Welcome Bonus",
+      "code": null,
+      "description": "100% up to €100 + 25 Free Spins on first deposit",
+      "descriptionIntl": {
+        "germany": "100 % bis zu 100 € + 25 Freispiele auf die erste Einzahlung",
+        "denmark": "100 % op til 100 € + 25 gratis spins på første indbetaling",
+        "finland": "100 % jopa 100 € + 25 ilmaiskierrosta ensimmäisestä talletuksesta",
+        "norway": "100 % opptil 100 € + 25 gratisspinn på første innskudd",
+        "sweden": "100 % upp till 100 € + 25 gratissnurr på första insättningen"
+      },
+      "referralUrl": "/goto/bitstarz.php",
+      "bonusBackgroundColor": "#1a1a2e",
+      "bonusLogo": null
+    },
+    {
+      "_id": "bonus-extra-bitstarz",
+      "name": "Level Up Rewards",
+      "code": null,
+      "description": "Level Up Rewards program with Tournaments, Mystery Prizes, and VIP Club",
+      "descriptionIntl": {
+        "germany": "Level-Up-Prämienprogramm mit Turnieren, Mystery-Preisen und VIP-Club",
+        "denmark": "Level Up-belønningsprogram med turneringer, mystiske præmier og VIP-klub",
+        "finland": "Level Up -palkinto-ohjelma turnauksineen, mysteeripalkintoineen ja VIP-kerhoineen",
+        "norway": "Level Up-belønningsprogram med turneringer, mystiske premier og VIP-klubb",
+        "sweden": "Level Up-belöningsprogram med turneringar, mystiska priser och VIP-klubb"
+      },
+      "referralUrl": "/goto/bitstarz.php",
+      "bonusBackgroundColor": "#0a0e27",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

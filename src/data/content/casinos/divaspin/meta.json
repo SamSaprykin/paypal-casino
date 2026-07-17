@@ -1,0 +1,89 @@
+{
+  "_id": "3fdLC5fIgqJMpr7zbgrckm",
+  "_createdAt": "2025-08-27T07:58:51Z",
+  "_updatedAt": "2026-05-15T13:56:48Z",
+  "casinoName": "Divaspin ",
+  "slug": "divaspin",
+  "rating": 4.6,
+  "shortDescription": "Divaspin is a stylish, female-oriented casino with over 4,000 slots and live games. It features a generous 100% welcome bonus, a dedicated VIP program, and fast withdrawals for fiat and crypto users.",
+  "shortDescriptionIntl": {
+    "germany": "Divaspin ist ein stilvolles, auf Frauen ausgerichtetes Casino mit über 4.000 Slots und Live-Spielen. Es bietet einen großzügigen 100-%-Willkommensbonus, ein eigenes VIP-Programm und schnelle Auszahlungen für Fiat- und Krypto-Nutzer.",
+    "denmark": "Divaspin er et stilfuldt, kvindeorienteret casino med over 4.000 spilleautomater og live spil. Det byder på en generøs 100 % velkomstbonus, et dedikeret VIP-program og hurtige udbetalinger til fiat- og kryptobrugere.",
+    "finland": "Divaspin on tyylikäs, naisille suunnattu kasino, jossa on yli 4 000 kolikkopeliä ja live-peliä. Se tarjoaa anteliaan 100 %:n tervetuliaisbonuksen, oman VIP-ohjelman sekä nopeat kotiutukset fiat- ja kryptokäyttäjille.",
+    "norway": "Divaspin er et stilfullt, kvinneorientert casino med over 4 000 spilleautomater og live-spill. Det byr på en sjenerøs 100 % velkomstbonus, et dedikert VIP-program og raske utbetalinger for fiat- og kryptobrukere.",
+    "sweden": "Divaspin är ett stilfullt, kvinnoinriktat casino med över 4 000 spelautomater och livespel. Det erbjuder en generös 100 % välkomstbonus, ett dedikerat VIP-program och snabba utbetalningar för fiat- och kryptoanvändare."
+  },
+  "referralUrl": "/goto/divaspin.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal Withdrawals: Minutes to 24 hours"
+  ],
+  "software": [
+    "NetEnt",
+    "Evolution",
+    "Pragmatic",
+    "Betsoft",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 50,
+  "userRecommendationsTotalNumber": 65,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#483d8b"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/3206cb0054068715d0565dac5a8ba5252bca9869-300x132.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "1pmM4Wm994HmUwNc13F6eg",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + Free Spins  ",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + Freispiele",
+        "denmark": "Op til 500 € + gratis spins",
+        "finland": "Jopa 500 € + ilmaiskierroksia",
+        "norway": "Opptil 500 € + gratisspinn",
+        "sweden": "Upp till 500 € + gratissnurr"
+      },
+      "referralUrl": "/goto/divaspin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/3206cb0054068715d0565dac5a8ba5252bca9869-300x132.webp",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

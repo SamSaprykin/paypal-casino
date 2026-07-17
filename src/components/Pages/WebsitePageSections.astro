@@ -1,12 +1,13 @@
 ---
-import type { PageSection } from "../../lib/sanity";
-import type { WebsiteLocaleKey } from "../../lib/sanity";
+import type { PageSection } from "../../lib/content";
+import type { WebsiteLocaleKey } from "../../lib/content";
 
 import ContentSection from "./sections/ContentSection.astro";
 import CasinoListSection from "./sections/CasinoListSection.astro";
 import FaqSection from "./sections/FaqSection.astro";
 import HowToSection from "./sections/HowToSection.astro";
 import BonusesListSection from "./sections/BonusesListSection.astro";
+import ImageSection from "./sections/ImageSection.astro";
 
 interface Props {
   sections: PageSection[];
@@ -31,7 +32,9 @@ const { sections, locale } = Astro.props;
         case "howTo":
           return <HowToSection section={section} />;
         case "bonusesList":
-          return <BonusesListSection section={section} />;
+          return <BonusesListSection section={section} locale={locale} />;
+        case "image":
+          return <ImageSection section={section} />;
         default:
           return null;
       }

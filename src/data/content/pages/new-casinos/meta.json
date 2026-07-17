@@ -1,0 +1,114 @@
+{
+  "_id": "c7d9e1a2-3b4c-4d5e-8f60-1a2b3c4d5e6f",
+  "_createdAt": "2026-07-17T09:00:00Z",
+  "_updatedAt": "2026-07-17T09:00:00Z",
+  "name": "New Casinos",
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "nc-intro",
+      "name": "New Casinos Intro"
+    },
+    {
+      "kind": "image",
+      "id": "nc-img-hero",
+      "src": "new-casinos-hero.webp"
+    },
+    {
+      "kind": "casinoList",
+      "id": "nc-list",
+      "casinoListsByCountry": {
+        "ireland": [
+          "slotbox",
+          "yukon-gold",
+          "onluck",
+          "kinbet",
+          "flagman"
+        ],
+        "germany": [
+          "stake",
+          "villento",
+          "yukon-gold",
+          "50-crowns",
+          "lollybet"
+        ],
+        "denmark": [
+          "spinbetter",
+          "winshark",
+          "just-casino",
+          "ritzo",
+          "kukimuki"
+        ],
+        "finland": [
+          "lunubet",
+          "drip",
+          "hugo-casino",
+          "spinbetter",
+          "aquawin"
+        ],
+        "norway": [
+          "legzo",
+          "rollingslots",
+          "wonderluck",
+          "cosmicslot",
+          "coolzino"
+        ],
+        "sweden": [
+          "just-casino",
+          "glitchspin",
+          "klirr-casino",
+          "lucky-ones",
+          "spinsbro"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "nc-review",
+      "name": "How We Review"
+    },
+    {
+      "kind": "image",
+      "id": "nc-img-review",
+      "src": "new-casinos-how-we-review.webp"
+    },
+    {
+      "kind": "howTo",
+      "id": "nc-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "nc-safety",
+      "name": "Safety And Licensing"
+    },
+    {
+      "kind": "image",
+      "id": "nc-img-safety",
+      "src": "new-casinos-safety-checklist.webp"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "nc-bonuses",
+      "name": "New Casino Bonuses"
+    },
+    {
+      "kind": "image",
+      "id": "nc-img-bonus",
+      "src": "new-casinos-welcome-bonus.webp"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "nc-mobile",
+      "name": "Mobile And Verdict"
+    },
+    {
+      "kind": "image",
+      "id": "nc-img-mobile",
+      "src": "new-casinos-mobile-play.webp"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "nc-faq"
+    }
+  ]
+}

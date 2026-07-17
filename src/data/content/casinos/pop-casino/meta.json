@@ -1,0 +1,44 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCofUJ",
+  "_createdAt": "2026-05-13T19:24:08Z",
+  "_updatedAt": "2026-05-30T11:00:36Z",
+  "casinoName": "Pop Casino",
+  "slug": "pop-casino",
+  "rating": 4.7,
+  "shortDescription": "Pop Casino is a sleek, Swedish-licensed \"Pay N Play\" platform designed for mobile-first gaming. It offers instant deposits and withdrawals via Zimpler, a focused library of popular slots, and a clean, ad-free UI.",
+  "shortDescriptionIntl": {
+    "germany": "Pop Casino ist eine elegante, in Schweden lizenzierte „Pay N Play“-Plattform für mobiles Spielen. Sie bietet sofortige Ein- und Auszahlungen über Zimpler, eine fokussierte Bibliothek beliebter Slots und eine klare, werbefreie Oberfläche.",
+    "denmark": "Pop Casino er en elegant, svensk-licenseret „Pay N Play“-platform designet til mobil-først spil. Den tilbyder øjeblikkelige ind- og udbetalinger via Zimpler, et fokuseret bibliotek af populære spilleautomater og en ren, reklamefri brugerflade.",
+    "finland": "Pop Casino on tyylikäs, Ruotsissa lisensoitu „Pay N Play“ -alusta, joka on suunniteltu ensisijaisesti mobiilipelaamiseen. Se tarjoaa välittömät talletukset ja kotiutukset Zimplerin kautta, tiiviin valikoiman suosittuja kolikkopelejä sekä selkeän, mainoksettoman käyttöliittymän.",
+    "norway": "Pop Casino er en elegant, svensk-lisensiert «Pay N Play»-plattform designet for mobil-først spilling. Den tilbyr umiddelbare innskudd og uttak via Zimpler, et fokusert bibliotek av populære spilleautomater og et rent, reklamefritt grensesnitt.",
+    "sweden": "Pop Casino är en elegant, svensklicensierad ”Pay N Play”-plattform designad för mobilt spelande. Den erbjuder omedelbara insättningar och uttag via Zimpler, ett fokuserat bibliotek av populära spelautomater och ett rent, reklamfritt gränssnitt."
+  },
+  "referralUrl": "/goto/pop-casino.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["Fast withdrawals guaranteed"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Swedish Gambling Authority (SPELINSPEKTIONEN)",
+  "userRecommendationsRecommendedNumber": 388,
+  "userRecommendationsTotalNumber": 497,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#ff6b9d"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/5977e86ea4fa227d687e193200c7ad2301134140-1200x630.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

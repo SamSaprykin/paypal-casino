@@ -2,10 +2,10 @@
   "name": "paypal-casino",
   "type": "module",
   "version": "1.0.0",
-  "description": "PayPal Casinos marketing site (Astro + Sanity CMS)",
+  "description": "PayPal Casinos marketing site (Astro + MDX content)",
   "keywords": [
     "astro",
-    "sanity",
+    "mdx",
     "tailwind",
     "typescript",
     "paypal casinos"
@@ -21,10 +21,15 @@
     "astro": "astro",
     "check": "astro check",
     "type-check": "tsc --noEmit",
-    "sanity:graphql:codegen": "graphql-codegen --config codegen.ts"
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "content:restructure": "node scripts/restructure-content.mjs",
+    "content:migrate-mdx": "node scripts/migrate-to-mdx.mjs",
+    "content:sync-blocked": "node scripts/sync-blocked-casinos.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "3.6.0",
     "@astrojs/tailwind": "^5.1.1",
@@ -35,9 +40,9 @@
     "astro": "^4.16.19",
     "astro-robots-txt": "^1.0.0",
     "clsx": "^2.1.1",
-    "@sanity/image-url": "^1.1.0",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.542.0",
+    "prettier": "^3.9.5",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-markdown": "^10.1.0",
@@ -45,16 +50,12 @@
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.2",
+    "yaml": "^2.8.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.7",
-    "@graphql-codegen/schema-ast": "^4.1.0",
-    "@graphql-codegen/typescript": "^4.1.6",
     "@tailwindcss/typography": "^0.5.15",
-    "@types/node": "^22.7.4",
-    "dotenv": "^16.6.1",
-    "graphql": "^16.11.0"
+    "@types/node": "^22.7.4"
   },
   "engines": {
     "node": ">=18.0.0"

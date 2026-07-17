@@ -1,0 +1,19 @@
+---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
+interface Props {
+  Content: AstroComponentFactory;
+  class?: string;
+}
+
+const { Content, class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "article-markdown prose prose-lg max-w-none prose-headings:scroll-mt-24 prose-a:text-blue-700",
+    className,
+  ]}
+>
+  <Content />
+</div>

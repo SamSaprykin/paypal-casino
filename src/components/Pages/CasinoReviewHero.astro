@@ -11,7 +11,7 @@ import {
   getRatingGradationLabel,
   type LocaleId,
 } from "../../lib/i18n";
-import type { CasinoPage } from "../../lib/sanity/casinos";
+import type { CasinoPage } from "../../lib/content";
 
 interface Props {
   casino: CasinoPage;
@@ -68,6 +68,9 @@ const usersRecommendShort = copy.usersRecommendShort.replace(
 );
 
 const wouldYouRecommend = copy.wouldYouRecommend.replace("{{name}}", casino.casinoName);
+
+const isBlocked = Boolean(casino.card?.fields?.blocked);
+const alternativesJson = JSON.stringify(casino.card?.fields?.blockedAlternatives ?? []);
 
 const licensedBanner =
   casino.license &&
@@ -312,8 +315,10 @@ const logoBg = casino.backgroundColor || "#1e3a8a";
           variant="secondary"
           size="lg"
           className="w-full shrink-0 bg-secondary-900 px-8 py-3 text-white shadow-lg hover:bg-secondary-800 sm:w-auto group"
-          buttonType="external-ref-link"
+          buttonType={isBlocked ? "blocked-ref-link" : "external-ref-link"}
           refLink={casino.referralUrl}
+          casinoName={casino.casinoName}
+          alternativesJson={alternativesJson}
         >
           <span>{copy.visitCasino}</span>
           <ArrowRight

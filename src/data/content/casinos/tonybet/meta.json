@@ -1,0 +1,85 @@
+{
+  "_id": "15QuuUwZ2G1FMfKdjzNCy7",
+  "_createdAt": "2025-08-27T07:58:46Z",
+  "_updatedAt": "2026-05-15T14:13:08Z",
+  "casinoName": "Tonybet",
+  "slug": "tonybet",
+  "rating": 4.7,
+  "shortDescription": "TonyBet is a major international gambling site with a deep focus on sports betting and live casino. Licensed in Estonia and the UK, it offers thousands of markets, fast payouts, and a top-tier mobile app.",
+  "shortDescriptionIntl": {
+    "germany": "TonyBet ist ein großer internationaler Glücksspielanbieter mit starkem Fokus auf Sportwetten und Live-Casino. Lizenziert in Estland und Großbritannien, bietet es Tausende von Wettmärkten, schnelle Auszahlungen und eine erstklassige mobile App.",
+    "denmark": "TonyBet er en stor international spiludbyder med et stærkt fokus på sportsbetting og live casino. Licenseret i Estland og Storbritannien tilbyder det tusindvis af markeder, hurtige udbetalinger og en førsteklasses mobilapp.",
+    "finland": "TonyBet on suuri kansainvälinen peliyhtiö, joka keskittyy vahvasti urheiluvedonlyöntiin ja live-kasinoon. Virossa ja Isossa-Britanniassa lisensoituna se tarjoaa tuhansia vedonlyöntikohteita, nopeat kotiutukset sekä huippuluokan mobiilisovelluksen.",
+    "norway": "TonyBet er en stor internasjonal spilleaktør med et sterkt fokus på sportsbetting og live casino. Lisensiert i Estland og Storbritannia tilbyr det tusenvis av markeder, raske utbetalinger og en førsteklasses mobilapp.",
+    "sweden": "TonyBet är en stor internationell spelaktör med starkt fokus på sportspel och live casino. Licensierat i Estland och Storbritannien erbjuder det tusentals marknader, snabba utbetalningar och en förstklassig mobilapp."
+  },
+  "referralUrl": "/goto/tonybet.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "PlayNGo",
+    "Big Time Gaming",
+    "Push Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 38,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#2f2c30"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/d5d7f70cfb7f9a78f449f7c694d89a48ff246d51-256x256.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "7JyAELjo4WVkRupTadVKMS",
+      "name": "Welcome Bonus",
+      "code": "NO CODE NEEDED",
+      "codeIntl": {
+        "germany": "KEIN CODE NÖTIG",
+        "denmark": "INGEN KODE NØDVENDIG",
+        "finland": "EI KOODIA TARVITA",
+        "norway": "INGEN KODE NØDVENDIG",
+        "sweden": "INGEN KOD BEHÖVS"
+      },
+      "description": "Up to €750 + 100 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 750 € + 100 Freispiele",
+        "denmark": "Op til 750 € + 100 gratis spins",
+        "finland": "Jopa 750 € + 100 ilmaiskierrosta",
+        "norway": "Opptil 750 € + 100 gratisspinn",
+        "sweden": "Upp till 750 € + 100 gratissnurr"
+      },
+      "referralUrl": "/goto/tonybet.php",
+      "bonusBackgroundColor": "#4B0082",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

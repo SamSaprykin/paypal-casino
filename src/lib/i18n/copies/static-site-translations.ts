@@ -1,8 +1,5 @@
 import type { LocaleId } from "../locales";
-import type {
-  PrivacySection,
-  StaticSitePagesCopy,
-} from "./static-site-types";
+import type { PrivacySection, StaticSitePagesCopy } from "./static-site-types";
 import {
   privacySectionsDa,
   privacySectionsDe,
@@ -175,7 +172,8 @@ export const STATIC_SITE_TRANSLATIONS: Record<
     },
     terms: {
       metaTitle: "Användarvillkor | PpCasinos.co",
-      metaDescription: "Villkor för användning av PpCasinos.co och våra informationsmaterial.",
+      metaDescription:
+        "Villkor för användning av PpCasinos.co och våra informationsmaterial.",
       ogTitle: "Användarvillkor | PpCasinos.co",
       ogDescription: "Läs villkor, åldersgräns och ansvarsfriskrivning.",
       keywords: ["villkor", "PpCasinos", "affiliate"],
@@ -262,7 +260,8 @@ export const STATIC_SITE_TRANSLATIONS: Record<
     },
     terms: {
       metaTitle: "Vilkår | PpCasinos.co",
-      metaDescription: "Vilkår for brug af PpCasinos.co og vores informationsindhold.",
+      metaDescription:
+        "Vilkår for brug af PpCasinos.co og vores informationsindhold.",
       ogTitle: "Vilkår | PpCasinos.co",
       ogDescription: "Læs vilkår, alderskrav og ansvarsfraskrivelser.",
       keywords: ["vilkår", "PpCasinos"],

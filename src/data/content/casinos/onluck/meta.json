@@ -1,0 +1,108 @@
+{
+  "_id": "52mgS97w9USXzdlIef4yil",
+  "_createdAt": "2025-08-27T07:58:44Z",
+  "_updatedAt": "2026-05-15T14:06:30Z",
+  "casinoName": "Onluck",
+  "slug": "onluck",
+  "rating": 4.7,
+  "shortDescription": "OnLuck Casino is a vibrant, modern platform launched in 2023 by Bets Entertainment N.V. Licensed in Curacao, it boasts over 10,000 games and offers a massive welcome bonus up to A$10,000 plus 100 free spins.",
+  "shortDescriptionIntl": {
+    "germany": "OnLuck Casino ist eine lebendige, moderne Plattform, die 2023 von Bets Entertainment N.V. gestartet wurde. In Curaçao lizenziert, bietet es über 10.000 Spiele und einen riesigen Willkommensbonus bis zu 10.000 A$ plus 100 Freispiele.",
+    "denmark": "OnLuck Casino er en livlig, moderne platform lanceret i 2023 af Bets Entertainment N.V. Licenseret i Curaçao byder det på over 10.000 spil og en enorm velkomstbonus op til 10.000 A$ plus 100 gratis spins.",
+    "finland": "OnLuck Casino on eloisa, moderni alusta, jonka Bets Entertainment N.V. avasi vuonna 2023. Curaçaossa lisensoitu kasino tarjoaa yli 10 000 peliä ja valtavan tervetuliaisbonuksen jopa 10 000 A$ sekä 100 ilmaiskierrosta.",
+    "norway": "OnLuck Casino er en livlig, moderne plattform lansert i 2023 av Bets Entertainment N.V. Lisensiert i Curaçao byr det på over 10 000 spill og en enorm velkomstbonus opptil 10 000 A$ pluss 100 gratisspinn.",
+    "sweden": "OnLuck Casino är en livfull, modern plattform som lanserades 2023 av Bets Entertainment N.V. Licensierat i Curaçao erbjuder det över 10 000 spel och en enorm välkomstbonus upp till 10 000 A$ plus 100 gratissnurr."
+  },
+  "referralUrl": "/goto/onluck.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "Betsoft",
+    "NetEnt",
+    "Quickspin",
+    "Yggdrasil Gaming",
+    "PlayNGo",
+    "Nolimit City"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Curacao Gaming Commission",
+  "userRecommendationsRecommendedNumber": 41,
+  "userRecommendationsTotalNumber": 59,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a162a"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/22738a3e78477332c9b10be061112d67ba629b27-248x67.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5LJjnNeE4oXQQFkyI9w2Jq",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to ~€/$500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu ~€/$500 + 200 Freispiele",
+        "denmark": "Op til ~€/$500 + 200 gratis spins",
+        "finland": "Jopa ~€/$500 + 200 ilmaiskierrosta",
+        "norway": "Opptil ~€/$500 + 200 gratisspinn",
+        "sweden": "Upp till ~€/$500 + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/onluck.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/22738a3e78477332c9b10be061112d67ba629b27-248x67.webp",
+          "altText": null
+        }
+      }
+    },
+    {
+      "_id": "bonus-extra-onluck",
+      "name": "Weekly Reload Bonus",
+      "code": null,
+      "description": "66% deposit bonus up to €1,000 every Saturday or Sunday",
+      "descriptionIntl": {
+        "germany": "66 % Einzahlungsbonus bis zu 1.000 € jeden Samstag oder Sonntag",
+        "denmark": "66 % indbetalingsbonus op til 1.000 € hver lørdag eller søndag",
+        "finland": "66 %:n talletusbonus jopa 1 000 € joka lauantai tai sunnuntai",
+        "norway": "66 % innskuddsbonus opptil 1 000 € hver lørdag eller søndag",
+        "sweden": "66 % insättningsbonus upp till 1 000 € varje lördag eller söndag"
+      },
+      "referralUrl": "/goto/onluck.php",
+      "bonusBackgroundColor": "#1a1a2e",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

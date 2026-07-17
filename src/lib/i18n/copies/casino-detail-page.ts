@@ -38,7 +38,7 @@ export const CASINO_DETAIL_PAGE_COPY: Record<LocaleId, CasinoDetailPageCopy> = {
     usersRecommendTemplate: "{{rec}} of {{tot}} users recommend {{name}}.",
     usersRecommendShort: "{{pct}}% recommend it",
     licensedBanner:
-      '<strong>{{name}}</strong> operates under the <strong>{{license}}</strong> licence with an editorial score of <strong>{{rating}}</strong>.',
+      "<strong>{{name}}</strong> operates under the <strong>{{license}}</strong> licence with an editorial score of <strong>{{rating}}</strong>.",
     visitCasino: "Visit",
     providersCount: "{{count}} providers",
     paymentMethodsCount: "{{count}} methods",
@@ -62,7 +62,8 @@ export const CASINO_DETAIL_PAGE_COPY: Record<LocaleId, CasinoDetailPageCopy> = {
     ratingDisclaimer:
       "Vår redaktionella poäng är {{rating}}, baserad på bonusar, betalningar, spelutbud och användarfeedback.",
     wouldYouRecommend: "Skulle du rekommendera {{name}}?",
-    usersRecommendTemplate: "{{rec}} av {{tot}} användare rekommenderar {{name}}.",
+    usersRecommendTemplate:
+      "{{rec}} av {{tot}} användare rekommenderar {{name}}.",
     usersRecommendShort: "{{pct}}% rekommenderar",
     licensedBanner:
       "<strong>{{name}}</strong> verkar under <strong>{{license}}</strong>-licensen med en redaktionell poäng på <strong>{{rating}}</strong>.",

@@ -50,8 +50,7 @@ function initialRussianDeal() {
   for (let c = 0; c < 7; c++) {
     const n = RUSSIAN_COL_COUNTS[c];
     for (let r = 0; r < n; r++) {
-      const faceUp =
-        c === 0 ? true : r >= n - 5;
+      const faceUp = c === 0 ? true : r >= n - 5;
       tableau[c].push({ ...deck[i++], faceUp });
     }
   }
@@ -137,7 +136,8 @@ function attemptMove(state, from, toType, toIndex) {
       };
     }
     if (toType === "tableau") {
-      if (!canGoOnTableauRussian(run[0], state.tableau[toIndex] ?? [])) return null;
+      if (!canGoOnTableauRussian(run[0], state.tableau[toIndex] ?? []))
+        return null;
       const nCol = maybeFlipExposed(col.slice(0, fromI));
       const tcol = [...(state.tableau[toIndex] ?? []), ...run];
       return {
@@ -294,7 +294,10 @@ export default function RussianSolitaire() {
       return;
     }
     if (sel) {
-      if (sel.type === "tableau" && (sel.col !== col || sel.fromIndex !== idx)) {
+      if (
+        sel.type === "tableau" &&
+        (sel.col !== col || sel.fromIndex !== idx)
+      ) {
         setG((state) => {
           if (isWin(state)) return state;
           const n = attemptMove(state, sel, "tableau", col);
@@ -305,7 +308,11 @@ export default function RussianSolitaire() {
             );
             return state;
           }
-          pushUndo({ g: cloneState(state), moves: movesRef.current, passthrus: 0 });
+          pushUndo({
+            g: cloneState(state),
+            moves: movesRef.current,
+            passthrus: 0,
+          });
           setMoves((m) => m + 1);
           queueMicrotask(() => setSel(null));
           if (isWin(n)) playWin();
@@ -330,7 +337,11 @@ export default function RussianSolitaire() {
         return state;
       }
       if (isWin(state)) return state;
-      const n = tryMoveToFirstFoundation(state, { type: "tableau", col, fromIndex: idx });
+      const n = tryMoveToFirstFoundation(state, {
+        type: "tableau",
+        col,
+        fromIndex: idx,
+      });
       if (!n) {
         playErr();
         return state;
@@ -381,8 +392,10 @@ export default function RussianSolitaire() {
     return idx >= (hint.from.fromIndex ?? 0);
   };
 
-  const isHintToFoundation = (i) => hint?.toType === "foundation" && hint.toIndex === i;
-  const isHintToTableau = (ci) => hint?.toType === "tableau" && hint.toIndex === ci;
+  const isHintToFoundation = (i) =>
+    hint?.toType === "foundation" && hint.toIndex === i;
+  const isHintToTableau = (ci) =>
+    hint?.toType === "tableau" && hint.toIndex === ci;
 
   return (
     <div className="w-full max-w-4xl mx-auto flex flex-col gap-4 select-none text-slate-100">
@@ -455,7 +468,11 @@ export default function RussianSolitaire() {
             >
               {pile.length > 0 ? (
                 <span
-                  className={isRed(pile[pile.length - 1]) ? "text-rose-500" : "text-slate-100"}
+                  className={
+                    isRed(pile[pile.length - 1])
+                      ? "text-rose-500"
+                      : "text-slate-100"
+                  }
                 >
                   {RANKL[pile[pile.length - 1].rank]}
                   {SUITC[pile[pile.length - 1].suit]}
@@ -512,7 +529,9 @@ export default function RussianSolitaire() {
                     {c.faceUp ? (
                       <span
                         className={
-                          isRed(c) ? "text-rose-600 font-bold" : "text-slate-900 font-bold"
+                          isRed(c)
+                            ? "text-rose-600 font-bold"
+                            : "text-slate-900 font-bold"
                         }
                       >
                         {RANKL[c.rank]}
@@ -520,7 +539,10 @@ export default function RussianSolitaire() {
                         {SUITC[c.suit]}
                       </span>
                     ) : (
-                      <span className="text-[10px] text-emerald-200/20 select-none" aria-hidden>
+                      <span
+                        className="text-[10px] text-emerald-200/20 select-none"
+                        aria-hidden
+                      >
                         ·
                       </span>
                     )}
@@ -550,13 +572,14 @@ export default function RussianSolitaire() {
       )}
 
       <p className="text-xs sm:text-sm text-slate-500 text-center max-w-2xl mx-auto leading-relaxed">
-        <strong className="text-slate-400">Russian solitaire</strong> (Yukon family): no
-        stock. Tableau builds <strong>down in the same suit</strong> (e.g. 5♣ on 6♣). You
-        can move a face-up <em>group</em> if the lead card fits in rank and suit; cards
-        under it in the run need not be ordered. There are <strong>face-down</strong>{" "}
-        cards until uncovered. Only a <strong>King</strong> (or a stack with a King on
-        the contact) can fill a gap. Foundations are A→K by suit; once on a
-        foundation, a card is not taken back. Rules follow common descriptions such as on{" "}
+        <strong className="text-slate-400">Russian solitaire</strong> (Yukon
+        family): no stock. Tableau builds <strong>down in the same suit</strong>{" "}
+        (e.g. 5♣ on 6♣). You can move a face-up <em>group</em> if the lead card
+        fits in rank and suit; cards under it in the run need not be ordered.
+        There are <strong>face-down</strong> cards until uncovered. Only a{" "}
+        <strong>King</strong> (or a stack with a King on the contact) can fill a
+        gap. Foundations are A→K by suit; once on a foundation, a card is not
+        taken back. Rules follow common descriptions such as on{" "}
         <a
           href="https://solitaired.com/russian-solitaire"
           className="text-blue-400 hover:underline"

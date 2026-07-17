@@ -1,0 +1,92 @@
+{
+  "_id": "6IoQlatEmEwux29gRcKjJO",
+  "_createdAt": "2025-10-14T11:47:53Z",
+  "_updatedAt": "2026-05-15T14:12:36Z",
+  "casinoName": "Starda",
+  "slug": "starda",
+  "rating": 4.5,
+  "shortDescription": "Starda is a futuristic, crypto-ready casino and sportsbook launched in 2022. It features a massive 5,000+ game library, a multi-level VIP club, and a unique bonus system tailored for both fiat and crypto users.",
+  "shortDescriptionIntl": {
+    "germany": "Starda ist ein futuristisches, kryptobereites Casino und Sportwettenanbieter, das 2022 gestartet ist. Es bietet eine riesige Bibliothek von über 5.000 Spielen, einen mehrstufigen VIP-Club und ein einzigartiges Bonussystem, das sowohl für Fiat- als auch für Krypto-Nutzer zugeschnitten ist.",
+    "denmark": "Starda er et futuristisk, kryptoklart casino og en sportsbook lanceret i 2022. Det byder på et enormt bibliotek med over 5.000 spil, en VIP-klub i flere niveauer og et unikt bonussystem skræddersyet til både fiat- og kryptobrugere.",
+    "finland": "Starda on futuristinen, kryptovalmis kasino ja vedonlyöntisivusto, joka avattiin vuonna 2022. Se tarjoaa valtavan yli 5 000 pelin valikoiman, monitasoisen VIP-kerhon sekä ainutlaatuisen bonusjärjestelmän, joka on räätälöity sekä fiat- että kryptokäyttäjille.",
+    "norway": "Starda er et futuristisk, kryptoklart casino og en sportsbook lansert i 2022. Det byr på et enormt bibliotek med over 5 000 spill, en VIP-klubb i flere nivåer og et unikt bonussystem skreddersydd for både fiat- og kryptobrukere.",
+    "sweden": "Starda är ett futuristiskt, kryptoberett casino och sportbok som lanserades 2022. Det erbjuder ett enormt bibliotek med över 5 000 spel, en flernivå-VIP-klubb och ett unikt bonussystem skräddarsytt för både fiat- och kryptoanvändare."
+  },
+  "referralUrl": "/goto/starda.php",
+  "payoutLimits": "€20,000/week",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Microgaming",
+    "Betsoft",
+    "Endorphina",
+    "Pragmatic",
+    "Evolution",
+    "NetEnt"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 43,
+  "userRecommendationsTotalNumber": 58,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#636962"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/887f23d5b39a503d99c6582206832e05d1b426a1-1000x1000.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "7jLKDYznrVVNg4Ndpp44MI",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €1,000 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 1.000 € + 200 Freispiele",
+        "denmark": "Op til 1.000 € + 200 gratis spins",
+        "finland": "Jopa 1 000 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 1 000 € + 200 gratisspinn",
+        "sweden": "Upp till 1 000 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/starda.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/887f23d5b39a503d99c6582206832e05d1b426a1-1000x1000.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

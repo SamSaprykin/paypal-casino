@@ -1,0 +1,87 @@
+{
+  "_id": "2sbsiKnfxd5QuIZAQCq2Nc",
+  "_createdAt": "2025-10-14T15:12:22Z",
+  "_updatedAt": "2026-05-15T13:40:11Z",
+  "casinoName": "1GO",
+  "slug": "1go",
+  "rating": 4.5,
+  "shortDescription": "1GO Casino is a modern, all-in-one gambling platform launched in 2024. It features a massive library of slots, a comprehensive sportsbook, and unique perks like birthday bonuses and tiered loyalty rewards.",
+  "shortDescriptionIntl": {
+    "germany": "1GO Casino ist eine moderne All-in-One-Glücksspielplattform, die 2024 gestartet ist. Sie bietet eine riesige Slot-Bibliothek, einen umfassenden Sportwettenbereich sowie besondere Extras wie Geburtstagsboni und gestaffelte Treueprämien.",
+    "denmark": "1GO Casino er en moderne alt-i-én spilplatform lanceret i 2024. Den byder på et enormt udvalg af spilleautomater, en omfattende sportsbook og unikke fordele som fødselsdagsbonusser og trinvise loyalitetsbelønninger.",
+    "finland": "1GO Casino on moderni kaiken kattava pelialusta, joka avattiin vuonna 2024. Se tarjoaa valtavan valikoiman kolikkopelejä, kattavan vedonlyöntiosion sekä ainutlaatuisia etuja, kuten syntymäpäiväbonuksia ja porrastettuja uskollisuuspalkintoja.",
+    "norway": "1GO Casino er en moderne alt-i-ett-spillplattform lansert i 2024. Den byr på et enormt utvalg av spilleautomater, en omfattende sportsbook og unike fordeler som bursdagsbonuser og trinnvise lojalitetsbelønninger.",
+    "sweden": "1GO Casino är en modern allt-i-ett-spelplattform som lanserades 2024. Den erbjuder ett enormt utbud av spelautomater, en omfattande sportbok och unika förmåner som födelsedagsbonusar och nivåbaserade lojalitetsbelöningar."
+  },
+  "referralUrl": "/goto/1go.php",
+  "payoutLimits": "€30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Microgaming",
+    "Endorphina"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 43,
+  "userRecommendationsTotalNumber": 57,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#211b15"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/051a93bf5775107f21851de972ea4fdde776b2ff-1000x1000.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "2oglO1Y6H5FrY9xVg3OFvJ",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "100% match bonus up to €500 on first deposit",
+      "descriptionIntl": {
+        "germany": "100 % Einzahlungsbonus bis zu 500 € auf die erste Einzahlung",
+        "denmark": "100 % matchbonus op til 500 € på første indbetaling",
+        "finland": "100 %:n talletusbonus jopa 500 € ensimmäisestä talletuksesta",
+        "norway": "100 % innskuddsbonus opptil 500 € på første innskudd",
+        "sweden": "100 % insättningsbonus upp till 500 € på första insättningen"
+      },
+      "referralUrl": "/goto/1go.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/051a93bf5775107f21851de972ea4fdde776b2ff-1000x1000.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

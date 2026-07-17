@@ -8,7 +8,7 @@ import {
  getWebsitePageBySlug,
  HOME_CMS_SLUG,
  ROOT_WEBSITE_LOCALE,
-} from "../lib/sanity";
+} from "../lib/content";
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
@@ -19,7 +19,7 @@ const homePage = await getWebsitePageBySlug(
 );
 if (!homePage) {
  throw new Error(
- `Sanity: home page not found for ${ROOT_WEBSITE_LOCALE} slug "${HOME_CMS_SLUG[ROOT_WEBSITE_LOCALE]}" — check Website Page (intl).`,
+ `Home page not found for ${ROOT_WEBSITE_LOCALE} slug "${HOME_CMS_SLUG[ROOT_WEBSITE_LOCALE]}" — check src/data/content/pages/.`,
  );
 }
 
@@ -65,7 +65,7 @@ const seoData = {
 };
 ---
 
-<BaseLayout seo={seoData} lang={htmlLang}>
+<BaseLayout seo={seoData} lang={htmlLang} localeId={localeId}>
  <Header locale={ROOT_WEBSITE_LOCALE} localizedSlugs={homePage.localizedSlugs} />
  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
  {faqSchemas.length > 0 && (

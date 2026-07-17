@@ -1,0 +1,77 @@
+---
+/**
+ * CustomImage — optimized local image via `astro:assets`.
+ *
+ * Resolves an image by filename from `src/images/content/` at build time.
+ * If the referenced file does not exist yet, the component renders nothing,
+ * so pages that reference not-yet-added artwork still build cleanly.
+ *
+ * Usage (in a page section or component):
+ *   <CustomImage src="new-casinos-hero.webp" alt="New casinos 2026" caption="..." />
+ */
+import { Image } from "astro:assets";
+
+interface Props {
+  /** File name (or path suffix) inside src/images/content/, e.g. "bonuses-hero.webp". */
+  src: string;
+  /** Alt text — required for accessibility/SEO. */
+  alt: string;
+  /** Optional caption rendered below the image. */
+  caption?: string;
+  /** Optional intrinsic width hint for layout. */
+  width?: number;
+  /** Optional intrinsic height hint for layout. */
+  height?: number;
+  /** Extra classes for the <img>. */
+  class?: string;
+  /** Loading strategy (defaults to lazy). */
+  loading?: "lazy" | "eager";
+  /** Max render width in px (defaults to 960). */
+  maxWidth?: number;
+}
+
+const {
+  src,
+  alt,
+  caption,
+  width,
+  height,
+  class: className = "",
+  loading = "lazy",
+  maxWidth = 960,
+} = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "../images/content/**/*.{jpeg,jpg,png,webp,avif,gif}",
+);
+
+const normalized = src.replace(/^\/+/, "");
+const matchKey = Object.keys(images).find(
+  (p) => p.endsWith(`/${normalized}`) || p.endsWith(normalized),
+);
+const loader = matchKey ? images[matchKey] : undefined;
+const mod = loader ? await loader() : null;
+const image = mod?.default ?? null;
+---
+
+{
+  image ? (
+    <figure class="my-8 flex flex-col items-center">
+      <Image
+        src={image}
+        alt={alt}
+        widths={[480, 768, maxWidth]}
+        sizes={`(max-width: 768px) 100vw, ${maxWidth}px`}
+        width={width}
+        height={height}
+        loading={loading}
+        class={`w-full max-w-3xl rounded-xl object-cover shadow-sm ring-1 ring-slate-200 ${className}`}
+      />
+      {caption ? (
+        <figcaption class="mt-3 text-center text-sm italic text-slate-500">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  ) : null
+}

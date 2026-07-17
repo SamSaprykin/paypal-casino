@@ -1,0 +1,44 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCptHf",
+  "_createdAt": "2026-05-13T19:40:32Z",
+  "_updatedAt": "2026-05-15T14:02:43Z",
+  "casinoName": "Let's Lucky",
+  "slug": "lets-lucky",
+  "rating": 4.9,
+  "shortDescription": "Let's Lucky is an online casino offering slot games, table games, and live dealer options with various payment methods a",
+  "shortDescriptionIntl": {
+    "germany": "Let's Lucky ist ein Online-Casino mit Spielautomaten, Tischspielen und Live-Dealer-Optionen sowie verschiedenen Zahlungsmethoden.",
+    "denmark": "Let's Lucky er et onlinecasino med spilleautomater, bordspil og live dealer-muligheder samt forskellige betalingsmetoder.",
+    "finland": "Let's Lucky on nettikasino, joka tarjoaa kolikkopelejä, pöytäpelejä ja live-jakajapelejä sekä useita maksutapoja.",
+    "norway": "Let's Lucky er et nettcasino med spilleautomater, bordspill og live dealer-alternativer samt ulike betalingsmetoder.",
+    "sweden": "Let's Lucky är ett onlinecasino med spelautomater, bordsspel och live dealer-alternativ samt olika betalningsmetoder."
+  },
+  "referralUrl": "/goto/letslucky.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 391,
+  "userRecommendationsTotalNumber": 467,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/19490d3e473085c20c7c700e78c3fc7d0a8abbf2-192x192.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

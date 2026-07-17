@@ -26,6 +26,8 @@ const {
   buttonType = "button",
   href = "",
   refLink,
+  casinoName,
+  alternativesJson = "[]",
 } = Astro.props;
 
 const classes = cn(baseStyles, variants[variant], sizes[size], className);
@@ -59,6 +61,18 @@ const classes = cn(baseStyles, variants[variant], sizes[size], className);
     class={classes}
     data-ref-link={refLink}
     onclick={`window.open('${refLink}', '_blank')`}
+  >
+    <slot />
+  </button>
+)}
+
+{buttonType === "blocked-ref-link" && (
+  <button
+    type="button"
+    class={classes}
+    data-blocked-casino
+    data-casino-name={casinoName}
+    data-alternatives={alternativesJson}
   >
     <slot />
   </button>

@@ -1,0 +1,44 @@
+{
+  "_id": "GFP1SwMIoaDIp6PbKJigmi",
+  "_createdAt": "2026-05-13T19:38:31Z",
+  "_updatedAt": "2026-05-15T14:10:03Z",
+  "casinoName": "Slotbox",
+  "slug": "slotbox",
+  "rating": 4.7,
+  "shortDescription": "Slotbox is a modern, vibrant casino launched by the team behind Dublin’s Vantage Club. It features 2,000+ games, a rewards-heavy SlotClub, and seamless integration between online play and live casino perks.",
+  "shortDescriptionIntl": {
+    "germany": "Slotbox ist ein modernes, lebendiges Casino, das vom Team hinter Dublins Vantage Club gestartet wurde. Es bietet über 2.000 Spiele, einen prämienstarken SlotClub und eine nahtlose Verbindung zwischen Online-Spiel und Live-Casino-Vorteilen.",
+    "denmark": "Slotbox er et moderne, livligt casino lanceret af holdet bag Dublins Vantage Club. Det byder på over 2.000 spil, en belønningsrig SlotClub og problemfri integration mellem onlinespil og live casino-fordele.",
+    "finland": "Slotbox on moderni, eloisa kasino, jonka on perustanut Dublinin Vantage Clubin takana oleva tiimi. Se tarjoaa yli 2 000 peliä, palkintorikkaan SlotClubin sekä saumattoman yhteyden verkkopelaamisen ja live-kasinoetujen välillä.",
+    "norway": "Slotbox er et moderne, livlig casino lansert av teamet bak Dublins Vantage Club. Det byr på over 2 000 spill, en belønningsrik SlotClub og sømløs integrasjon mellom nettspill og live casino-fordeler.",
+    "sweden": "Slotbox är ett modernt, livfullt casino som lanserats av teamet bakom Dublins Vantage Club. Det erbjuder över 2 000 spel, en belöningsrik SlotClub och sömlös integration mellan onlinespel och live casino-förmåner."
+  },
+  "referralUrl": "/goto/slotbox.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 304,
+  "userRecommendationsTotalNumber": 379,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/54a3fab740da0dbef42cfe0816110ecd95f1d3f2-180x180.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

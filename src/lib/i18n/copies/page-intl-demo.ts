@@ -19,19 +19,22 @@ export const INTL_DEMO_PAGE_COPY: Record<LocaleId, IntlDemoPageCopy> = {
   },
   "sv-SE": {
     pageTitle: "Demo internationalisering",
-    pageDescription: "Förhandsvisning av listkort med översatt gränssnitt för varje marknad.",
+    pageDescription:
+      "Förhandsvisning av listkort med översatt gränssnitt för varje marknad.",
     sectionHeading: "Casino-listkort per språk",
     sectionIntro: "Samma demo-casino; texter hämtas från språkfiler.",
   },
   "da-DK": {
     pageTitle: "Demo internationalisering",
-    pageDescription: "Forhåndsvisning af listekort med oversat brugergrænseflade for hvert marked.",
+    pageDescription:
+      "Forhåndsvisning af listekort med oversat brugergrænseflade for hvert marked.",
     sectionHeading: "Casino-listekort pr. sprog",
     sectionIntro: "Samme demo-casino; tekster kommer fra sprogfiler.",
   },
   "fi-FI": {
     pageTitle: "Kieliversioiden demo",
-    pageDescription: "Listakortin esikatselu käännettyillä käyttöliittymäteksteillä jokaiselle markkinalle.",
+    pageDescription:
+      "Listakortin esikatselu käännettyillä käyttöliittymäteksteillä jokaiselle markkinalle.",
     sectionHeading: "Casino-listakortti kielittäin",
     sectionIntro: "Sama demo-kasino; tekstit tulevat kielitiedostoista.",
   },
@@ -44,7 +47,8 @@ export const INTL_DEMO_PAGE_COPY: Record<LocaleId, IntlDemoPageCopy> = {
   },
   "nb-NO": {
     pageTitle: "Demo internationalisering",
-    pageDescription: "Forhåndsvisning av listekort med oversatt grensesnitt for hvert marked.",
+    pageDescription:
+      "Forhåndsvisning av listekort med oversatt grensesnitt for hvert marked.",
     sectionHeading: "Casino-listekort per språk",
     sectionIntro: "Samme demo-casino; tekster hentes fra språkfiler.",
   },

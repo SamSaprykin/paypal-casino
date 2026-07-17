@@ -1,0 +1,92 @@
+{
+  "_id": "Bi0t22UZr2kNWjFiRCnuU",
+  "_createdAt": "2025-08-27T07:58:48Z",
+  "_updatedAt": "2026-05-15T13:54:01Z",
+  "casinoName": "Cleobetra",
+  "slug": "cleobetra",
+  "rating": 4.7,
+  "shortDescription": "Cleobetra is an ancient Egypt-themed casino and sportsbook. It offers over 4,000 games, a generous welcome package, and a 5-tier VIP program with dedicated 24/7 support and rapid payouts.",
+  "shortDescriptionIntl": {
+    "germany": "Cleobetra ist ein Casino und Sportwettenanbieter im Stil des alten Ägypten. Es bietet über 4.000 Spiele, ein großzügiges Willkommenspaket und ein 5-stufiges VIP-Programm mit dediziertem 24/7-Support und schnellen Auszahlungen.",
+    "denmark": "Cleobetra er et casino og en sportsbook med tema fra det gamle Egypten. Det byder på over 4.000 spil, en generøs velkomstpakke og et VIP-program i 5 niveauer med dedikeret 24/7-support og hurtige udbetalinger.",
+    "finland": "Cleobetra on muinaisen Egyptin teemaan rakennettu kasino ja vedonlyöntisivusto. Se tarjoaa yli 4 000 peliä, anteliaan tervetuliaispaketin sekä viisitasoisen VIP-ohjelman, johon kuuluu oma 24/7-tuki ja nopeat kotiutukset.",
+    "norway": "Cleobetra er et casino og en sportsbook med tema fra det gamle Egypt. Det byr på over 4 000 spill, en sjenerøs velkomstpakke og et VIP-program i 5 nivåer med dedikert 24/7-support og raske utbetalinger.",
+    "sweden": "Cleobetra är ett casino och en sportbok med tema från det gamla Egypten. Det erbjuder över 4 000 spel, ett generöst välkomstpaket och ett VIP-program i 5 nivåer med dedikerad 24/7-support och snabba utbetalningar."
+  },
+  "referralUrl": "/goto/cleobetra.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal / e-wallets: Minutes – 24h  "
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Evolution",
+    "Playson",
+    "Push Gaming",
+    "Elk Studios",
+    "Big Time Gaming",
+    "Nolimit City"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 45,
+  "userRecommendationsTotalNumber": 65,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#b85d43"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/57fe76097813835f0dcbce77cc34ed24d6dd5b62-338x74.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5tLOOMHyi6MORYzTUBpYIr",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/cleobetra.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/57fe76097813835f0dcbce77cc34ed24d6dd5b62-338x74.webp",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "1UP3TNtMmiscK0ItchGrk8",
+  "_createdAt": "2025-10-14T14:07:14Z",
+  "_updatedAt": "2026-05-15T14:06:06Z",
+  "casinoName": "Monro",
+  "slug": "monro",
+  "rating": 4.6,
+  "shortDescription": "Monro Casino is a stylish, modern platform launched in 2023. It features over 5,000 games, a deep sportsbook, and a multi-level loyalty system. It’s highly rated for its fast withdrawals and crypto-friendly options.",
+  "shortDescriptionIntl": {
+    "germany": "Monro Casino ist eine stilvolle, moderne Plattform, die 2023 gestartet ist. Es bietet über 5.000 Spiele, einen umfangreichen Sportwettenbereich und ein mehrstufiges Treuesystem. Es wird für seine schnellen Auszahlungen und kryptofreundlichen Optionen sehr geschätzt.",
+    "denmark": "Monro Casino er en stilfuld, moderne platform lanceret i 2023. Det byder på over 5.000 spil, en dyb sportsbook og et loyalitetssystem i flere niveauer. Det er højt vurderet for sine hurtige udbetalinger og kryptovenlige muligheder.",
+    "finland": "Monro Casino on tyylikäs, moderni alusta, joka avattiin vuonna 2023. Se tarjoaa yli 5 000 peliä, laajan vedonlyöntiosion ja monitasoisen uskollisuusjärjestelmän. Sitä arvostetaan erityisesti nopeista kotiutuksista ja kryptoystävällisistä vaihtoehdoista.",
+    "norway": "Monro Casino er en stilfull, moderne plattform lansert i 2023. Det byr på over 5 000 spill, en omfattende sportsbook og et lojalitetssystem i flere nivåer. Det er høyt vurdert for sine raske utbetalinger og kryptovennlige alternativer.",
+    "sweden": "Monro Casino är en stilfull, modern plattform som lanserades 2023. Det erbjuder över 5 000 spel, en omfattande sportbok och ett flernivå-lojalitetssystem. Det är högt betygsatt för sina snabba utbetalningar och kryptovänliga alternativ."
+  },
+  "referralUrl": "/goto/monro.php",
+  "payoutLimits": "€30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Microgaming",
+    "Betsoft",
+    "Endorphina",
+    "Big Time Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 41,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#45322e"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/282e9e50e5276280f60d21ceda5b79c962a82341-1000x1000.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "7zyLV7rGl5ZwKnK8K2LR1",
+      "name": "Monro Bonuses",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "50% for your 1st deposit",
+      "descriptionIntl": {
+        "germany": "50 % auf deine erste Einzahlung",
+        "denmark": "50 % på din første indbetaling",
+        "finland": "50 % ensimmäisestä talletuksestasi",
+        "norway": "50 % på ditt første innskudd",
+        "sweden": "50 % på din första insättning"
+      },
+      "referralUrl": "/goto/monro.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/282e9e50e5276280f60d21ceda5b79c962a82341-1000x1000.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

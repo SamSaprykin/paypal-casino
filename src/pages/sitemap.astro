@@ -1,11 +1,6 @@
 ---
 import SitemapPage from "../components/Pages/Static/SitemapPage.astro";
-import {
-  getAllBlogPostsSanity,
-  getBlogCategoriesWithCountsSanity,
-  getWebsitePages,
-  ROOT_WEBSITE_LOCALE,
-} from "../lib/sanity";
+import { getWebsitePages, ROOT_WEBSITE_LOCALE } from "../lib/content";
 
 const websitePages = await getWebsitePages();
 ---

@@ -1,426 +1,426 @@
 {
-    "redirects": [
-      {
-        "source": "/ireland-guide",
-        "destination": "/",
-        "statusCode": 301
-      },
-      {
-        "source": "/ireland-guide/",
-        "destination": "/",
-        "statusCode": 301
-      },
-      {
-        "source": "/paypal-casinos",
-        "destination": "/paypal-casino-ireland/",
-        "statusCode": 301
-      },
-      {
-        "source": "/paypal-casinos/",
-        "destination": "/paypal-casino-ireland/",
-        "statusCode": 301
-      },
-      {
-        "source": "/denmark-guide",
-        "destination": "/dk/",
-        "statusCode": 301
-      },
-      {
-        "source": "/denmark-guide/",
-        "destination": "/dk/",
-        "statusCode": 301
-      },
-      {
-        "source": "/suomi-guide",
-        "destination": "/fi/",
-        "statusCode": 301
-      },
-      {
-        "source": "/suomi-guide/",
-        "destination": "/fi/",
-        "statusCode": 301
-      },
-      {
-        "source": "/norway-guide",
-        "destination": "/no/",
-        "statusCode": 301
-      },
-      {
-        "source": "/norway-guide/",
-        "destination": "/no/",
-        "statusCode": 301
-      },
-      {
-        "source": "/sweden-guide",
-        "destination": "/se/",
-        "statusCode": 301
-      },
-      {
-        "source": "/sweden-guide/",
-        "destination": "/se/",
-        "statusCode": 301
-      },
-      {
-        "source": "/ie",
-        "destination": "/",
-        "statusCode": 301
-      },
-      {
-        "source": "/ie/",
-        "destination": "/",
-        "statusCode": 301
-      },
-      {
-        "source": "/ie/:path*",
-        "destination": "/:path*",
-        "statusCode": 301
-      },
-      {
-        "source": "/casino-guide/:slug",
-        "destination": "/casino/:slug/",
-        "statusCode": 301
-      },
-      {
-        "source": "/casino-guide/:slug/",
-        "destination": "/casino/:slug/",
-        "statusCode": 301
-      },
-      {
-        "source": "/casino-guide",
-        "destination": "/paypal-casino-ireland/",
-        "statusCode": 301
-      },
-      {
-        "source": "/casino-guide/",
-        "destination": "/paypal-casino-ireland/",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/caspero.php",
-        "destination": "https://cspo.fynkelto.com/?mid=282132_1763557",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/hugo.php",
-        "destination": "https://hugoredirect.com/d7dfa221b", 
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/vegas-hero.php",
-        "destination": "https://vgr.naralvin.com/?mid=247905_1837183",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/dazardbet.php",
-        "destination": "https://dzrdbt.fynkelto.com/?mid=268628_1763586",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/glitchspin.php",
-        "destination": "https://okakot.com/t93578b46",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/rollingslots.php",
-        "destination": "https://gorollingslots.com/del90nfwq",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/cleobetra.php",
-        "destination": "https://clb.kngpulse.com/?mid=95965_1837437",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/tsars.php",
-        "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=tsars",
-        "statusCode": 301
-      },
+  "redirects": [
+    {
+      "source": "/ireland-guide",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ireland-guide/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/paypal-casinos",
+      "destination": "/paypal-casino-ireland/",
+      "statusCode": 301
+    },
+    {
+      "source": "/paypal-casinos/",
+      "destination": "/paypal-casino-ireland/",
+      "statusCode": 301
+    },
+    {
+      "source": "/denmark-guide",
+      "destination": "/dk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/denmark-guide/",
+      "destination": "/dk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/suomi-guide",
+      "destination": "/fi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/suomi-guide/",
+      "destination": "/fi/",
+      "statusCode": 301
+    },
+    {
+      "source": "/norway-guide",
+      "destination": "/no/",
+      "statusCode": 301
+    },
+    {
+      "source": "/norway-guide/",
+      "destination": "/no/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sweden-guide",
+      "destination": "/se/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sweden-guide/",
+      "destination": "/se/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ie",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ie/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ie/:path*",
+      "destination": "/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/casino-guide/:slug",
+      "destination": "/casino/:slug/",
+      "statusCode": 301
+    },
+    {
+      "source": "/casino-guide/:slug/",
+      "destination": "/casino/:slug/",
+      "statusCode": 301
+    },
+    {
+      "source": "/casino-guide",
+      "destination": "/paypal-casino-ireland/",
+      "statusCode": 301
+    },
+    {
+      "source": "/casino-guide/",
+      "destination": "/paypal-casino-ireland/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/caspero.php",
+      "destination": "https://cspo.fynkelto.com/?mid=282132_1763557",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/hugo.php",
+      "destination": "https://hugoredirect.com/d7dfa221b",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/vegas-hero.php",
+      "destination": "https://vgr.naralvin.com/?mid=247905_1837183",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/dazardbet.php",
+      "destination": "https://dzrdbt.fynkelto.com/?mid=268628_1763586",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/glitchspin.php",
+      "destination": "https://okakot.com/t93578b46",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/rollingslots.php",
+      "destination": "https://gorollingslots.com/del90nfwq",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/cleobetra.php",
+      "destination": "https://clb.kngpulse.com/?mid=95965_1837437",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/tsars.php",
+      "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=tsars",
+      "statusCode": 301
+    },
 
-      {
-        "source": "/goto/trickz.php",
-        "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=trickz",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/ritzo.php",
-        "destination": "https://balancer.ritzogo.com/m7aded3e1",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/tonybet.php",
-        "destination": "https://dro.netavix.com/redirect.aspx?pid=175850&lpid=1393&bid=2001",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/rx-casino.php",
-        "destination": "https://go.rx.partners/visit/?bta=35444&brand=rx",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/1win.php",
-        "destination": "https://uff.scaletrk.com/click?o=234&a=45514",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/lunubet.php",
-        "destination": "https://lnb.xarvilo.com/?mid=312245_1838536",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/evospin.php",
-        "destination": "https://evospinlink.com/he1ae69fd",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/skycrown.php",
-        "destination": "https://skycrownlink.com/o29887eed",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/crownplay.php",
-        "destination": "https://crp.xarvilo.com/?mid=301761_1804198",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/casino-king.php",
-        "destination": "https://ck.kngpulse.com/?mid=95965_1763590",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/onluck.php",
-        "destination": "https://onlucklink.com/hd55239c3",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/kinbet.php",
-        "destination": "https://kin.xarvilo.com/?mid=301761_1804216",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/crownslots.php",
-        "destination": "https://crownslotslink.com/hfbf41f12",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/rockwin.php",
-        "destination": "https://rockwinlink.com/o3566456b",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/divaspin.php",
-        "destination": "https://dvspn.fynkelto.com/?mid=267805_1853823",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/winshark.php",
-        "destination": "https://winshark.link/d4779cd7d",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/cosmicslot.php",
-        "destination": "https://m.peaky.partners/redirect.aspx?mid=145&sid=7518&cid=&pid=&affid=1828",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/aquawin.php",
-        "destination": "https://aqwn.fynkelto.com/?mid=285119_1834279",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/casino-king.php",
-        "destination": "https://spinsbroplay.com/dddc91ad9",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/fambet.php",
-        "destination": "https://fmbt.fynkelto.com/?mid=216165_1837218",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/lucky-start.php",
-        "destination": "https://commissiondriveads.com/j9eed537a",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/vincispin.php",
-        "destination": "https://track.betmenaffiliates.com/visit/?bta=42551&nci=5811&utm_campaign=&afp10=Seo&qlt=true",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/bdmbet.php",
-        "destination": "https://track.intrklnkmain.com/visit/?bta=52228&nci=6048&afp10=Seo",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/legzo.php",
-        "destination": "https://legzoway61.com/cc3b27a02",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/flagman.php",
-        "destination": "https://flagmanway64.com/ce54c7bd9",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/monro.php",
-        "destination": "https://mnr-blse21.com/cfd692458",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/1go.php",
-        "destination": "https://onegoway62.com/c71746c70",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/starda.php",
-        "destination": "https://stardaway61.com/c7f64ef15",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/drip.php",
-        "destination": "https://dripway61.com/c9cd7d7f0",
-        "statusCode": 301
-      },
-      {
-        "source": "/tetris",
-        "destination": "/classic-games/tetris/",
-        "statusCode": 301
-      },
-      {
-        "source": "/tetris/",
-        "destination": "/classic-games/tetris/",
-        "statusCode": 301
-      },
-      {
-        "source": "/tetris-50",
-        "destination": "/classic-games/tetris-50/",
-        "statusCode": 301
-      },
-      {
-        "source": "/tetris-50/",
-        "destination": "/classic-games/tetris-50/",
-        "statusCode": 301
-      },
-      {
-        "source": "/casino-guide/:path((?!.*\\/$).+)",
-        "destination": "/casino-guide/:path/",
-        "statusCode": 301
-      },
+    {
+      "source": "/goto/trickz.php",
+      "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=trickz",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/ritzo.php",
+      "destination": "https://balancer.ritzogo.com/m7aded3e1",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/tonybet.php",
+      "destination": "https://dro.netavix.com/redirect.aspx?pid=175850&lpid=1393&bid=2001",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/rx-casino.php",
+      "destination": "https://go.rx.partners/visit/?bta=35444&brand=rx",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/1win.php",
+      "destination": "https://uff.scaletrk.com/click?o=234&a=45514",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lunubet.php",
+      "destination": "https://lnb.xarvilo.com/?mid=312245_1838536",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/evospin.php",
+      "destination": "https://evospinlink.com/he1ae69fd",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/skycrown.php",
+      "destination": "https://skycrownlink.com/o29887eed",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/crownplay.php",
+      "destination": "https://crp.xarvilo.com/?mid=301761_1804198",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/casino-king.php",
+      "destination": "https://ck.kngpulse.com/?mid=95965_1763590",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/onluck.php",
+      "destination": "https://onlucklink.com/hd55239c3",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/kinbet.php",
+      "destination": "https://kin.xarvilo.com/?mid=301761_1804216",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/crownslots.php",
+      "destination": "https://crownslotslink.com/hfbf41f12",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/rockwin.php",
+      "destination": "https://rockwinlink.com/o3566456b",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/divaspin.php",
+      "destination": "https://dvspn.fynkelto.com/?mid=267805_1853823",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/winshark.php",
+      "destination": "https://winshark.link/d4779cd7d",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/cosmicslot.php",
+      "destination": "https://m.peaky.partners/redirect.aspx?mid=145&sid=7518&cid=&pid=&affid=1828",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/aquawin.php",
+      "destination": "https://aqwn.fynkelto.com/?mid=285119_1834279",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/casino-king.php",
+      "destination": "https://spinsbroplay.com/dddc91ad9",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/fambet.php",
+      "destination": "https://fmbt.fynkelto.com/?mid=216165_1837218",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lucky-start.php",
+      "destination": "https://commissiondriveads.com/j9eed537a",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/vincispin.php",
+      "destination": "https://track.betmenaffiliates.com/visit/?bta=42551&nci=5811&utm_campaign=&afp10=Seo&qlt=true",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/bdmbet.php",
+      "destination": "https://track.intrklnkmain.com/visit/?bta=52228&nci=6048&afp10=Seo",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/legzo.php",
+      "destination": "https://legzoway61.com/cc3b27a02",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/flagman.php",
+      "destination": "https://flagmanway64.com/ce54c7bd9",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/monro.php",
+      "destination": "https://mnr-blse21.com/cfd692458",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/1go.php",
+      "destination": "https://onegoway62.com/c71746c70",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/starda.php",
+      "destination": "https://stardaway61.com/c7f64ef15",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/drip.php",
+      "destination": "https://dripway61.com/c9cd7d7f0",
+      "statusCode": 301
+    },
+    {
+      "source": "/tetris",
+      "destination": "/classic-games/tetris/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tetris/",
+      "destination": "/classic-games/tetris/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tetris-50",
+      "destination": "/classic-games/tetris-50/",
+      "statusCode": 301
+    },
+    {
+      "source": "/tetris-50/",
+      "destination": "/classic-games/tetris-50/",
+      "statusCode": 301
+    },
+    {
+      "source": "/casino-guide/:path((?!.*\\/$).+)",
+      "destination": "/casino-guide/:path/",
+      "statusCode": 301
+    },
 
-      {
-        "source": "/goto/spinbetter.php",
-        "destination": "https://redirspinner.com/2Vxd?p=%2Fregistration%2F",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/pop-casino.php",
-        "destination": "https://record.epic.partners/_4En9KC65KNXulQmTAVK722Nd7ZgqdRLk/1/",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/klirr-casino.php",
-        "destination": "https://record.epic.partners/_4En9KC65KNUVbxXQ5NRGNWNd7ZgqdRLk/1/",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/frank-fred.php",
-        "destination": "https://record.epic.partners/_4En9KC65KNWhvo5nC3tZQ2Nd7ZgqdRLk/1/",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/coolzino.php",
-        "destination": "https://track.coolaffs.com/visit/?bta=36671&brand=coolzino",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/corgibet.php",
-        "destination": "https://track.coolaffs.com/visit/?bta=36671&brand=corgibet",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/slotbox.php",
-        "destination": "https://record.coastlineaffiliates.com/_ZaUKKOEIKYDCP9GC20JVYmNd7ZgqdRLk/1/",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/slots-gallery.php",
-        "destination": "https://slotsaff.com/azewruram",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/boho-casino.php",
-        "destination": "https://bohoaff.com/atb00gecq",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/50crowns.php",
-        "destination": "https://crownsclub.bet/jmoadnlev",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/luckydreams.php",
-        "destination": "https://Luckydreams.info/ksexitjzw",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/letslucky.php",
-        "destination": "https://letslucky.info/k8dk6bpbg",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/luckyones.php",
-        "destination": "https://luckyones.site/kpjee8jzv",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/justcasino.php",
-        "destination": "https://justcasino.info/kjd1x4twx",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/kukimuki.php",
-        "destination": "https://go.partners.club/afs/come.php?id=61&cid=1098&atype=1&ctgid=100",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/bitstarz.php",
-        "destination": "https://bzstarz1.com/bup6vagqe",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/lollybet.php",
-        "destination": "https://www.lolly-bet888.com?faff=453",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/gold-yukon.php",
-        "destination": "https://iredirect.net/referral/?site=yg&lang=en&aff_id=aff117050",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/zodiac.php",
-        "destination": "https://iredirect.net/referral/?site=zc&lang=en&aff_id=aff117050",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/villento.php",
-        "destination": "https://iredirect.net/referral/?site=vlv&lang=en&aff_id=aff117050",
-        "statusCode": 301
-      },
-      {
-        "source": "/goto/stake.php",
-        "destination": "https://stake.com/?c=gf6EDLyS",
-        "statusCode": 301
-      },   
-      {
-        "source": "/blog/:slug*",
-        "destination": "/",
-        "statusCode": 301
-      },
-      {
-        "source": "/blog/",
-        "destination": "/",
-        "statusCode": 301
-      }
-    ]
-  }
+    {
+      "source": "/goto/spinbetter.php",
+      "destination": "https://redirspinner.com/2Vxd?p=%2Fregistration%2F",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/pop-casino.php",
+      "destination": "https://record.epic.partners/_4En9KC65KNXulQmTAVK722Nd7ZgqdRLk/1/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/klirr-casino.php",
+      "destination": "https://record.epic.partners/_4En9KC65KNUVbxXQ5NRGNWNd7ZgqdRLk/1/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/frank-fred.php",
+      "destination": "https://record.epic.partners/_4En9KC65KNWhvo5nC3tZQ2Nd7ZgqdRLk/1/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/coolzino.php",
+      "destination": "https://track.coolaffs.com/visit/?bta=36671&brand=coolzino",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/corgibet.php",
+      "destination": "https://track.coolaffs.com/visit/?bta=36671&brand=corgibet",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/slotbox.php",
+      "destination": "https://record.coastlineaffiliates.com/_ZaUKKOEIKYDCP9GC20JVYmNd7ZgqdRLk/1/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/slots-gallery.php",
+      "destination": "https://slotsaff.com/azewruram",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/boho-casino.php",
+      "destination": "https://bohoaff.com/atb00gecq",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/50crowns.php",
+      "destination": "https://crownsclub.bet/jmoadnlev",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/luckydreams.php",
+      "destination": "https://Luckydreams.info/ksexitjzw",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/letslucky.php",
+      "destination": "https://letslucky.info/k8dk6bpbg",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/luckyones.php",
+      "destination": "https://luckyones.site/kpjee8jzv",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/justcasino.php",
+      "destination": "https://justcasino.info/kjd1x4twx",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/kukimuki.php",
+      "destination": "https://go.partners.club/afs/come.php?id=61&cid=1098&atype=1&ctgid=100",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/bitstarz.php",
+      "destination": "https://bzstarz1.com/bup6vagqe",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lollybet.php",
+      "destination": "https://www.lolly-bet888.com?faff=453",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/gold-yukon.php",
+      "destination": "https://iredirect.net/referral/?site=yg&lang=en&aff_id=aff117050",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/zodiac.php",
+      "destination": "https://iredirect.net/referral/?site=zc&lang=en&aff_id=aff117050",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/villento.php",
+      "destination": "https://iredirect.net/referral/?site=vlv&lang=en&aff_id=aff117050",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/stake.php",
+      "destination": "https://stake.com/?c=gf6EDLyS",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:slug*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ]
+}

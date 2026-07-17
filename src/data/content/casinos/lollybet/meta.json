@@ -1,0 +1,82 @@
+{
+  "_id": "GFP1SwMIoaDIp6PbKJk5dE",
+  "_createdAt": "2026-05-13T19:42:16Z",
+  "_updatedAt": "2026-05-15T14:03:00Z",
+  "casinoName": "LollyBet",
+  "slug": "lollybet",
+  "rating": 4.8,
+  "shortDescription": "LollyBet is a colorful, high-energy casino and sportsbook launched in 2023. It offers over 5,000 games, a generous 100% welcome bonus up to €500, and a sweet-themed loyalty program with diverse rewards.",
+  "shortDescriptionIntl": {
+    "germany": "LollyBet ist ein farbenfrohes, energiegeladenes Casino und Sportwettenanbieter, das 2023 gestartet ist. Es bietet über 5.000 Spiele, einen großzügigen 100-%-Willkommensbonus bis zu 500 € und ein süßes Treueprogramm mit vielfältigen Prämien.",
+    "denmark": "LollyBet er et farverigt, energisk casino og en sportsbook lanceret i 2023. Det byder på over 5.000 spil, en generøs 100 % velkomstbonus op til 500 € og et slik-tematiseret loyalitetsprogram med varierede belønninger.",
+    "finland": "LollyBet on värikäs, energinen kasino ja vedonlyöntisivusto, joka avattiin vuonna 2023. Se tarjoaa yli 5 000 peliä, anteliaan 100 %:n tervetuliaisbonuksen jopa 500 euroon asti sekä makeisteemaisen uskollisuusohjelman monipuolisine palkintoineen.",
+    "norway": "LollyBet er et fargerikt, energisk casino og en sportsbook lansert i 2023. Det byr på over 5 000 spill, en sjenerøs 100 % velkomstbonus opptil 500 € og et godteri-tematisert lojalitetsprogram med varierte belønninger.",
+    "sweden": "LollyBet är ett färgstarkt, energiskt casino och sportbok som lanserades 2023. Det erbjuder över 5 000 spel, en generös 100 % välkomstbonus upp till 500 € och ett godisstematiserat lojalitetsprogram med varierade belöningar."
+  },
+  "referralUrl": "/goto/lollybet.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 172,
+  "userRecommendationsTotalNumber": 214,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#3ebc6a"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/ee9ea5bbf1aca278fb799c5215a53b335e2d460a-2025x2025.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "f17a718d-316d-4906-b5de-291f8c0d8fa4",
+      "name": "Welcome Bonus",
+      "code": null,
+      "description": "Welcome Bonus 200% up to €5,000",
+      "descriptionIntl": {
+        "germany": "Willkommensbonus 200 % bis zu 5.000 €",
+        "denmark": "Velkomstbonus 200 % op til 5.000 €",
+        "finland": "Tervetuliaisbonus 200 % jopa 5 000 €",
+        "norway": "Velkomstbonus 200 % opptil 5 000 €",
+        "sweden": "Välkomstbonus 200 % upp till 5 000 €"
+      },
+      "referralUrl": null,
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/ee9ea5bbf1aca278fb799c5215a53b335e2d460a-2025x2025.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

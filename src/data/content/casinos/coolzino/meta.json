@@ -1,0 +1,44 @@
+{
+  "_id": "erBhhDYSfCig8tH7sCpbeV",
+  "_createdAt": "2026-05-13T19:38:02Z",
+  "_updatedAt": "2026-05-15T13:54:33Z",
+  "casinoName": "Coolzino",
+  "slug": "coolzino",
+  "rating": 4.6,
+  "shortDescription": "Coolzino is a modern, crypto-friendly hub with 6,000+ games and a full sportsbook. It features 10% weekly cashback, a unique \"Bonus Crab\" game, and rapid payouts for digital currency users.",
+  "shortDescriptionIntl": {
+    "germany": "Coolzino ist ein moderner, kryptofreundlicher Hub mit über 6.000 Spielen und einem vollwertigen Sportwettenbereich. Er bietet 10 % wöchentliches Cashback, ein einzigartiges „Bonus Crab“-Spiel und schnelle Auszahlungen für Nutzer digitaler Währungen.",
+    "denmark": "Coolzino er et moderne, kryptovenligt univers med over 6.000 spil og en fuld sportsbook. Det byder på 10 % ugentligt cashback, det unikke „Bonus Crab“-spil og hurtige udbetalinger til brugere af digitale valutaer.",
+    "finland": "Coolzino on moderni, kryptoystävällinen keskus, jossa on yli 6 000 peliä ja täysimittainen vedonlyöntiosio. Se tarjoaa 10 % viikoittaisen cashbackin, ainutlaatuisen „Bonus Crab“ -pelin sekä nopeat kotiutukset kryptovaluutan käyttäjille.",
+    "norway": "Coolzino er et moderne, kryptovennlig univers med over 6 000 spill og en fullverdig sportsbook. Det byr på 10 % ukentlig cashback, det unike «Bonus Crab»-spillet og raske utbetalinger for brukere av digitale valutaer.",
+    "sweden": "Coolzino är ett modernt, kryptovänligt nav med över 6 000 spel och en fullständig sportbok. Det erbjuder 10 % veckovis cashback, det unika ”Bonus Crab”-spelet och snabba utbetalningar för användare av digitala valutor."
+  },
+  "referralUrl": "/goto/coolzino.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 244,
+  "userRecommendationsTotalNumber": 304,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/2c3051d0a6305434b74e4d52e3a387e743f23692-180x180.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

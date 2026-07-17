@@ -1,0 +1,92 @@
+{
+  "_id": "6snZX6A3U06jl2BGVBiMuq",
+  "_createdAt": "2025-08-27T07:58:36Z",
+  "_updatedAt": "2026-05-15T13:59:40Z",
+  "casinoName": "Hugo Casino",
+  "slug": "hugo-casino",
+  "rating": 4.7,
+  "shortDescription": "Hugo Casino is a playful, bird-themed platform featuring over 5,000 games and a unique \"Bonus Bird\" shop. It offers a tiered welcome package, 15% weekly cashback, and supports rapid crypto payouts.",
+  "shortDescriptionIntl": {
+    "germany": "Hugo Casino ist eine verspielte Plattform mit Vogel-Thema, die über 5.000 Spiele und einen einzigartigen „Bonus Bird“-Shop bietet. Es gibt ein gestaffeltes Willkommenspaket, 15 % wöchentliches Cashback und schnelle Krypto-Auszahlungen.",
+    "denmark": "Hugo Casino er en legesyg platform med fugletema, der byder på over 5.000 spil og en unik „Bonus Bird“-shop. Det tilbyder en trinvis velkomstpakke, 15 % ugentligt cashback og hurtige kryptoudbetalinger.",
+    "finland": "Hugo Casino on leikkisä, lintuteemainen alusta, joka tarjoaa yli 5 000 peliä ja ainutlaatuisen „Bonus Bird“ -kaupan. Se tarjoaa porrastetun tervetuliaispaketin, 15 % viikoittaisen cashbackin sekä nopeat kryptokotiutukset.",
+    "norway": "Hugo Casino er en lekende plattform med fugletema som byr på over 5 000 spill og en unik «Bonus Bird»-butikk. Det tilbyr en trinnvis velkomstpakke, 15 % ukentlig cashback og raske kryptoutbetalinger.",
+    "sweden": "Hugo Casino är en lekfull plattform med fågeltema som erbjuder över 5 000 spel och en unik ”Bonus Bird”-butik. Det erbjuder ett nivåbaserat välkomstpaket, 15 % veckovis cashback och snabba kryptoutbetalningar."
+  },
+  "referralUrl": "/goto/hugo.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/ E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Blueprint Gaming",
+    "Elk Studios",
+    "Red Rake Gaming",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 41,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#59534c"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/e4ade032c2dbaa708f67683b551b42372df7740d-200x91.heif",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "2nc6mYSobDpCq66BgIZlAh",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/hugo.php",
+      "bonusBackgroundColor": "#59534c",
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/e4ade032c2dbaa708f67683b551b42372df7740d-200x91.heif",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

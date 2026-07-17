@@ -1,0 +1,92 @@
+{
+  "_id": "3rpBRfwKuSZ2puUhemL2e",
+  "_createdAt": "2025-08-27T07:58:31Z",
+  "_updatedAt": "2026-05-15T13:57:34Z",
+  "casinoName": "FamBet",
+  "slug": "fambet",
+  "rating": 4.5,
+  "shortDescription": "FamBet is a streamlined, crypto-centric casino and sportsbook. It features a diverse range of slots, live dealer tables, and competitive sports odds, backed by 24/7 support and fast digital payouts.",
+  "shortDescriptionIntl": {
+    "germany": "FamBet ist ein schlankes, kryptozentriertes Casino mit Sportwettenbereich. Es bietet eine vielfältige Auswahl an Slots, Live-Dealer-Tischen und wettbewerbsfähigen Sportquoten, unterstützt durch 24/7-Support und schnelle digitale Auszahlungen.",
+    "denmark": "FamBet er et strømlinet, kryptocentreret casino og sportsbook. Det byder på et varieret udvalg af spilleautomater, live dealer-borde og konkurrencedygtige sportsodds, understøttet af 24/7-support og hurtige digitale udbetalinger.",
+    "finland": "FamBet on virtaviivainen, kryptokeskeinen kasino ja vedonlyöntisivusto. Se tarjoaa monipuolisen valikoiman kolikkopelejä, live-jakajapöytiä ja kilpailukykyisiä urheilukertoimia, ja sitä tukevat 24/7-asiakaspalvelu ja nopeat digitaaliset kotiutukset.",
+    "norway": "FamBet er et strømlinjeformet, kryptosentrert casino og sportsbook. Det byr på et variert utvalg av spilleautomater, live dealer-bord og konkurransedyktige sportsodds, støttet av 24/7-support og raske digitale utbetalinger.",
+    "sweden": "FamBet är ett strömlinjeformat, kryptocentrerat casino och sportbok. Det erbjuder ett varierat utbud av spelautomater, live dealer-bord och konkurrenskraftiga sportodds, med stöd av 24/7-support och snabba digitala utbetalningar."
+  },
+  "referralUrl": "/goto/fambet.php",
+  "payoutLimits": "€30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Pragmatic",
+    "PlayNGo",
+    "Playtech",
+    "Betsoft",
+    "Yggdrasil Gaming",
+    "Blueprint Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 42,
+  "userRecommendationsTotalNumber": 56,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#395778"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/12a7254f308309aa4c0d49f2259aba3755a050e9-256x86.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5x5feb0qcWhNGz2e9B7rN",
+      "name": "Welcome Bonus ",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 and 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € und 200 Freispiele",
+        "denmark": "Op til 500 € og 200 gratis spins",
+        "finland": "Jopa 500 € ja 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € og 200 gratisspinn",
+        "sweden": "Upp till 500 € och 200 gratissnurr"
+      },
+      "referralUrl": "/goto/fambet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/12a7254f308309aa4c0d49f2259aba3755a050e9-256x86.webp",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

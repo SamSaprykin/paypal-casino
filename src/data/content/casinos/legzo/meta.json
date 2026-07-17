@@ -1,0 +1,95 @@
+{
+  "_id": "6yjWdaUj3IVXQdtDG6IKYQ",
+  "_createdAt": "2025-10-13T15:24:59Z",
+  "_updatedAt": "2026-05-15T14:01:58Z",
+  "casinoName": "Legzo",
+  "slug": "legzo",
+  "rating": 4.7,
+  "shortDescription": "Explore Legzo Casino’s PayPal facilities: the easiest way to make your deposits and withdrawals securely and quickly, great licenses, 9,000+ games and the possibility of receiving a bonus — perfect for players from Ireland.",
+  "shortDescriptionIntl": {
+    "germany": "Entdecke die PayPal-Möglichkeiten von Legzo Casino: der einfachste Weg, sichere und schnelle Ein- und Auszahlungen vorzunehmen, mit erstklassigen Lizenzen, über 9.000 Spielen und der Chance auf einen Bonus – perfekt für Spieler aus Irland.",
+    "denmark": "Oplev Legzo Casinos PayPal-muligheder: den nemmeste måde at foretage sikre og hurtige ind- og udbetalinger på, med gode licenser, over 9.000 spil og mulighed for en bonus — perfekt for spillere fra Irland.",
+    "finland": "Tutustu Legzo Casinon PayPal-mahdollisuuksiin: helpoin tapa tehdä turvallisia ja nopeita talletuksia ja kotiutuksia, hyvät lisenssit, yli 9 000 peliä ja mahdollisuus bonukseen — täydellinen valinta irlantilaisille pelaajille.",
+    "norway": "Utforsk Legzo Casinos PayPal-muligheter: den enkleste måten å gjøre sikre og raske innskudd og uttak på, med gode lisenser, over 9 000 spill og muligheten for en bonus — perfekt for spillere fra Irland.",
+    "sweden": "Utforska Legzo Casinos PayPal-möjligheter: det enklaste sättet att göra säkra och snabba insättningar och uttag, med bra licenser, över 9 000 spel och möjlighet till en bonus — perfekt för spelare från Irland."
+  },
+  "referralUrl": "/goto/legzo.php",
+  "payoutLimits": "€80,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "PlayNGo",
+    "Betsoft",
+    "PlayNGo"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz",
+    "Jeton",
+    "MiFinity"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Jeton",
+    "MiFinity",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 41,
+  "userRecommendationsTotalNumber": 55,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#000080"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/7f87755a977b58706832ddd1ac4e302bee884d4e-1000x1000.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "7er9Yh1lEhEJNQwVbMGPmO",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to 100% + Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 100 % + Freispiele",
+        "denmark": "Op til 100 % + gratis spins",
+        "finland": "Jopa 100 % + ilmaiskierroksia",
+        "norway": "Opptil 100 % + gratisspinn",
+        "sweden": "Upp till 100 % + gratissnurr"
+      },
+      "referralUrl": "/goto/legzo.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/7f87755a977b58706832ddd1ac4e302bee884d4e-1000x1000.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

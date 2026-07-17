@@ -1,0 +1,99 @@
+{
+  "_id": "5JRydH4nGKTtKM2vZ5eGD1",
+  "_createdAt": "2025-08-27T07:58:42Z",
+  "_updatedAt": "2026-05-15T14:09:33Z",
+  "casinoName": "SkyCrown",
+  "slug": "skycrown",
+  "rating": 4.7,
+  "shortDescription": "SkyCrown is a sleek, crypto-friendly casino launched in 2022. It boasts over 6,000 games, weekly 10% crypto cashback, and a 10-level VIP program. It's popular for instant payouts and its massive multi-currency support.",
+  "shortDescriptionIntl": {
+    "germany": "SkyCrown ist ein elegantes, kryptofreundliches Casino, das 2022 gestartet ist. Es bietet über 6.000 Spiele, wöchentlich 10 % Krypto-Cashback und ein 10-stufiges VIP-Programm. Es ist beliebt für sofortige Auszahlungen und die umfangreiche Multi-Währungs-Unterstützung.",
+    "denmark": "SkyCrown er et elegant, kryptovenligt casino lanceret i 2022. Det byder på over 6.000 spil, 10 % ugentligt kryptocashback og et VIP-program i 10 niveauer. Det er populært for sine øjeblikkelige udbetalinger og omfattende understøttelse af flere valutaer.",
+    "finland": "SkyCrown on tyylikäs, kryptoystävällinen kasino, joka avattiin vuonna 2022. Se tarjoaa yli 6 000 peliä, 10 % viikoittaisen kryptocashbackin ja 10-tasoisen VIP-ohjelman. Se on suosittu välittömistä kotiutuksistaan ja laajasta monivaluuttatuestaan.",
+    "norway": "SkyCrown er et elegant, kryptovennlig casino lansert i 2022. Det byr på over 6 000 spill, 10 % ukentlig kryptocashback og et VIP-program i 10 nivåer. Det er populært for sine umiddelbare utbetalinger og omfattende støtte for flere valutaer.",
+    "sweden": "SkyCrown är ett elegant, kryptovänligt casino som lanserades 2022. Det erbjuder över 6 000 spel, 10 % veckovis kryptocashback och ett VIP-program i 10 nivåer. Det är populärt för sina omedelbara utbetalningar och omfattande stöd för flera valutor."
+  },
+  "referralUrl": "/goto/skycrown.php",
+  "payoutLimits": "Up to €30,000/month ",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes to 24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Evolution",
+    "PlayNGo",
+    "Playson",
+    "Playtech",
+    "Endorphina",
+    "Wazdan",
+    "Push Gaming",
+    "Relax Gaming",
+    "Microgaming",
+    "NetEnt",
+    "Nolimit City"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 44,
+  "userRecommendationsTotalNumber": 63,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#3b5998"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/deeee3f948a7b02cc2d32be28cfd04af9bfad5d8-250x250.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "1PN0rvtqCm1uj44uUfFFo0",
+      "name": "Welcome Bonuses",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €5000 + 400 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 5.000 € + 400 Freispiele",
+        "denmark": "Op til 5.000 € + 400 gratis spins",
+        "finland": "Jopa 5 000 € + 400 ilmaiskierrosta",
+        "norway": "Opptil 5 000 € + 400 gratisspinn",
+        "sweden": "Upp till 5 000 € + 400 gratissnurr"
+      },
+      "referralUrl": "/goto/skycrown.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/deeee3f948a7b02cc2d32be28cfd04af9bfad5d8-250x250.webp",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

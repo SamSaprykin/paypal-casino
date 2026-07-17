@@ -1,0 +1,88 @@
+{
+  "_id": "2OeiT7Bfys0WD58PwGaIRu",
+  "_createdAt": "2025-08-27T07:58:53Z",
+  "_updatedAt": "2026-05-15T14:07:33Z",
+  "casinoName": "RX Casino",
+  "slug": "rx-casino",
+  "rating": 4.7,
+  "shortDescription": "RX Casino is a modern, crypto-centric platform focused on high-speed gaming and privacy. It features a diverse selection of slots and live tables, offering instant withdrawals and a streamlined, no-KYC registration.",
+  "shortDescriptionIntl": {
+    "germany": "RX Casino ist eine moderne, kryptozentrierte Plattform mit Fokus auf schnelles Spielen und Privatsphäre. Es bietet eine vielfältige Auswahl an Slots und Live-Tischen, sofortige Auszahlungen und eine schlanke Registrierung ohne KYC.",
+    "denmark": "RX Casino er en moderne, kryptocentreret platform med fokus på hurtigt spil og privatliv. Det byder på et varieret udvalg af spilleautomater og live-borde, øjeblikkelige udbetalinger og en strømlinet registrering uden KYC.",
+    "finland": "RX Casino on moderni, kryptokeskeinen alusta, joka keskittyy nopeaan pelaamiseen ja yksityisyyteen. Se tarjoaa monipuolisen valikoiman kolikkopelejä ja live-pöytiä, välittömät kotiutukset sekä virtaviivaisen rekisteröitymisen ilman KYC:tä.",
+    "norway": "RX Casino er en moderne, kryptosentrert plattform med fokus på rask spilling og personvern. Det byr på et variert utvalg av spilleautomater og live-bord, umiddelbare utbetalinger og en strømlinjeformet registrering uten KYC.",
+    "sweden": "RX Casino är en modern, kryptocentrerad plattform med fokus på snabbt spelande och integritet. Det erbjuder ett varierat utbud av spelautomater och livebord, omedelbara utbetalningar och en strömlinjeformad registrering utan KYC."
+  },
+  "referralUrl": "/goto/rx-casino.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes – 24 hours"
+  ],
+  "software": [
+    "Betsoft",
+    "Big Time Gaming",
+    "Endorphina",
+    "Fugaso",
+    "Playson",
+    "Pragmatic",
+    "Quickspin",
+    "Thunderkick",
+    "Wazdan"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 42,
+  "userRecommendationsTotalNumber": 60,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#5e5555"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/a12e61aee8c24c878697b9c42236f23795239cf1-512x512.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "320VEAGx76zXTjnlUO8QuV",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to 150% + 50 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 150 % + 50 Freispiele",
+        "denmark": "Op til 150 % + 50 gratis spins",
+        "finland": "Jopa 150 % + 50 ilmaiskierrosta",
+        "norway": "Opptil 150 % + 50 gratisspinn",
+        "sweden": "Upp till 150 % + 50 gratissnurr"
+      },
+      "referralUrl": "/goto/rx-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

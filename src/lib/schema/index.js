@@ -5,7 +5,7 @@ import {
   ensureAbsoluteUrl,
   cleanTextForSchema,
 } from "./types.js";
-import { portableTextToPlainText } from "../sanity/portableTextPlain.ts";
+import { portableTextToPlainText } from "../cms/portableTextPlain.ts";
 
 // Organization schema for the PayPal Casino website
 export function generateOrganizationSchema() {
@@ -115,13 +115,8 @@ export function generateFAQSchema(faqComponent) {
     faqItems = list
       .map((item) => {
         const question =
-          item.question ??
-          item.fields?.faqQuestion ??
-          item.faqQuestion;
-        const answer =
-          item.answer ??
-          item.fields?.faqAnswer ??
-          item.faqAnswer;
+          item.question ?? item.fields?.faqQuestion ?? item.faqQuestion;
+        const answer = item.answer ?? item.fields?.faqAnswer ?? item.faqAnswer;
         const name = cleanTextForSchema(question);
         const text = cleanTextForSchema(answer);
         if (!name || !text) return null;
@@ -140,16 +135,17 @@ export function generateFAQSchema(faqComponent) {
 }
 
 // WebPage schema for static pages
-export function generateWebPageSchema(
-  page,
-  baseUrl = "https://ppcasinos.co",
-) {
+export function generateWebPageSchema(page, baseUrl = "https://ppcasinos.co") {
   if (!page) return null;
 
   const slugPath =
     !page.slug || page.slug === "/"
       ? "/"
-      : `/${String(page.slug).replace(/^\/+|\/+$/g, "").split("/").filter(Boolean).join("/")}/`;
+      : `/${String(page.slug)
+          .replace(/^\/+|\/+$/g, "")
+          .split("/")
+          .filter(Boolean)
+          .join("/")}/`;
 
   const pageUrl =
     slugPath === "/" ? baseUrl : ensureAbsoluteUrl(slugPath, baseUrl);
@@ -173,11 +169,12 @@ export function generateWebPageSchema(
       name: page.name || page.title,
     },
     publisher: generateOrganizationSchema(),
-    datePublished: formatSchemaDate(
-      page.createdAt ?? page.sys?.createdAt,
-    ),
+    datePublished: formatSchemaDate(page.createdAt ?? page.sys?.createdAt),
     dateModified: formatSchemaDate(
-      page.updatedAt ?? page.sys?.updatedAt ?? page.createdAt ?? page.sys?.createdAt,
+      page.updatedAt ??
+        page.sys?.updatedAt ??
+        page.createdAt ??
+        page.sys?.createdAt,
     ),
   });
 }
@@ -252,10 +249,7 @@ export function generateBlogPostBreadcrumbs(category, postTitle) {
 }
 
 // Helper function to generate breadcrumbs for static pages
-export function generateStaticPageBreadcrumbs(
-  pageName,
-  options,
-) {
+export function generateStaticPageBreadcrumbs(pageName, options) {
   const homeName = options?.homeName ?? "Home";
   const homeUrl = options?.homeUrl ?? "/";
   return [
@@ -265,10 +259,7 @@ export function generateStaticPageBreadcrumbs(
 }
 
 /** Breadcrumbs for games under /classic-games/:name/ */
-export function generateClassicGameBreadcrumbs(
-  gamePageName,
-  options,
-) {
+export function generateClassicGameBreadcrumbs(gamePageName, options) {
   const homeName = options?.homeName ?? "Home";
   const homeUrl = options?.homeUrl ?? "/";
   const hubName = options?.classicGamesName ?? "Classic games";

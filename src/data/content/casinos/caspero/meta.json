@@ -1,0 +1,110 @@
+{
+  "_id": "3jiqBULd70DGKscMMAIWBu",
+  "_createdAt": "2025-08-27T07:58:34Z",
+  "_updatedAt": "2026-05-15T13:53:31Z",
+  "casinoName": "Caspero",
+  "slug": "caspero",
+  "rating": 4.6,
+  "shortDescription": "Caspero is a versatile, crypto-friendly gambling hub that blends an extensive casino library with a robust sportsbook. Known for its gamified experience, it features a unique \"Bonus Crab\" claw machine game and a 5-tier VIP program.",
+  "shortDescriptionIntl": {
+    "germany": "Caspero ist ein vielseitiger, kryptofreundlicher Glücksspiel-Hub, der eine umfangreiche Casino-Bibliothek mit einem robusten Sportwettenbereich verbindet. Bekannt für sein spielerisches Erlebnis, bietet es ein einzigartiges „Bonus Crab“-Greifautomatenspiel und ein 5-stufiges VIP-Programm.",
+    "denmark": "Caspero er et alsidigt, kryptovenligt spiluniverst, der kombinerer et omfattende casinobibliotek med en solid sportsbook. Kendt for sin gamificerede oplevelse byder det på det unikke „Bonus Crab“-gribespil og et VIP-program i 5 niveauer.",
+    "finland": "Caspero on monipuolinen, kryptoystävällinen pelikeskus, joka yhdistää laajan kasinovalikoiman vankkaan vedonlyöntiosioon. Se tunnetaan pelillistetystä kokemuksestaan ja tarjoaa ainutlaatuisen „Bonus Crab“ -tarttujapelin sekä viisitasoisen VIP-ohjelman.",
+    "norway": "Caspero er et allsidig, kryptovennlig spillunivers som kombinerer et omfattende casinobibliotek med en solid sportsbook. Kjent for sin gamifiserte opplevelse byr det på det unike «Bonus Crab»-gripespillet og et VIP-program i 5 nivåer.",
+    "sweden": "Caspero är ett mångsidigt, kryptovänligt spelnav som kombinerar ett omfattande casinobibliotek med en robust sportbok. Känt för sin spelifierade upplevelse erbjuder det det unika ”Bonus Crab”-gripspelet och ett VIP-program i 5 nivåer."
+  },
+  "referralUrl": "/goto/caspero.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "PlayNGo",
+    "Microgaming",
+    "Betsoft",
+    "Playtech",
+    "Yggdrasil Gaming",
+    "Big Time Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 49,
+  "userRecommendationsTotalNumber": 70,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1b5583"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/143f50cc9ff493bb4eac59b12ca744dadaef9c3b-320x96.heif",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "3ykbKWHO7DgxrOMcFs6nmj",
+      "name": "Welcome Bonus",
+      "code": "NO CODE NEEDED",
+      "codeIntl": {
+        "germany": "KEIN CODE NÖTIG",
+        "denmark": "INGEN KODE NØDVENDIG",
+        "finland": "EI KOODIA TARVITA",
+        "norway": "INGEN KODE NØDVENDIG",
+        "sweden": "INGEN KOD BEHÖVS"
+      },
+      "description": "up to €500 + 200 Free Spins  ",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/caspero.php",
+      "bonusBackgroundColor": "#1B5583",
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/143f50cc9ff493bb4eac59b12ca744dadaef9c3b-320x96.heif",
+          "altText": null
+        }
+      }
+    },
+    {
+      "_id": "bonus-extra-caspero",
+      "name": "Midweek Reload",
+      "code": "MIDWEEK300",
+      "description": "50% up to €300 on Wednesdays",
+      "descriptionIntl": {
+        "germany": "50 % bis zu 300 € mittwochs",
+        "denmark": "50 % op til 300 € om onsdagen",
+        "finland": "50 % jopa 300 € keskiviikkoisin",
+        "norway": "50 % opptil 300 € på onsdager",
+        "sweden": "50 % upp till 300 € på onsdagar"
+      },
+      "referralUrl": "/goto/caspero.php",
+      "bonusBackgroundColor": "#1a1a2e",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -3,6 +3,7 @@ Free games:
 https://www.microsoftcasualgames.com/
 
 tetris 50
+
 # PPCasinos.co — Content Plan 2026
 
 > **Site:** ppcasinos.co | **Niche:** PayPal casino affiliate | **Markets:** Ireland, Finland, Norway, Sweden, Denmark, Germany (new)
@@ -23,14 +24,15 @@ tetris 50
 
 ### What You Have ✓
 
-| Asset | Count |
-|---|---|
-| Casino listings | 30+ |
-| Country guides | 5 (IE, FI, NO, SE, DK) |
-| Blog posts | 10 |
-| Blog categories | 4 |
+| Asset           | Count                  |
+| --------------- | ---------------------- |
+| Casino listings | 30+                    |
+| Country guides  | 5 (IE, FI, NO, SE, DK) |
+| Blog posts      | 10                     |
+| Blog categories | 4                      |
 
 **Strengths:**
+
 - Strong main casino list with 30+ reviewed casinos, ratings, welcome bonuses, payout limits and user reviews
 - Five country guides: Ireland, Finland (Suomi), Norway, Sweden, Denmark
 - Blog with 4 categories — Game Guides, Bonuses, Payment Methods, Tips & Strategies
@@ -73,14 +75,14 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 ### January — Focus: 🇮🇪 Ireland
 
-**Major page:** New PayPal Casinos 2026 *(update existing)*
+**Major page:** New PayPal Casinos 2026 _(update existing)_
 
-| # | Blog Post | Category |
-|---|---|---|
-| 1 | PayPal vs Skrill — Which Is Better for Casino Players? | Comparisons |
-| 2 | No-KYC Casinos That Accept PayPal | Tips & Strategies |
-| 3 | Fastest PayPal Withdrawal Casinos in 2026 | Payment Methods |
-| 4 | PayPal Casino Deposit & Withdrawal Limits Explained | Payment Methods |
+| #   | Blog Post                                              | Category          |
+| --- | ------------------------------------------------------ | ----------------- |
+| 1   | PayPal vs Skrill — Which Is Better for Casino Players? | Comparisons       |
+| 2   | No-KYC Casinos That Accept PayPal                      | Tips & Strategies |
+| 3   | Fastest PayPal Withdrawal Casinos in 2026              | Payment Methods   |
+| 4   | PayPal Casino Deposit & Withdrawal Limits Explained    | Payment Methods   |
 
 ---
 
@@ -88,12 +90,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Best PayPal Casino Bonuses — All Countries (hub page)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 5 | PayPal vs Neteller at Online Casinos | Comparisons |
-| 6 | Low Deposit Casinos Accepting PayPal (from €5) | Bonuses |
-| 7 | Best Live Dealer Casinos With PayPal | Game Guides |
-| 8 | Top PayPal Casino Mobile Apps in 2026 | Tips & Strategies |
+| #   | Blog Post                                      | Category          |
+| --- | ---------------------------------------------- | ----------------- |
+| 5   | PayPal vs Neteller at Online Casinos           | Comparisons       |
+| 6   | Low Deposit Casinos Accepting PayPal (from €5) | Bonuses           |
+| 7   | Best Live Dealer Casinos With PayPal           | Game Guides       |
+| 8   | Top PayPal Casino Mobile Apps in 2026          | Tips & Strategies |
 
 ---
 
@@ -101,25 +103,25 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** PayPal Casino Withdrawal Guide (hub page)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 9 | How Long Does a PayPal Casino Withdrawal Take? | Payment Methods |
-| 10 | PayPal vs Apple Pay at Online Casinos | Comparisons |
-| 11 | Gates of Olympus — Full Slot Guide | Game Guides |
-| 12 | Best Blackjack Casinos That Accept PayPal | Game Guides |
+| #   | Blog Post                                      | Category        |
+| --- | ---------------------------------------------- | --------------- |
+| 9   | How Long Does a PayPal Casino Withdrawal Take? | Payment Methods |
+| 10  | PayPal vs Apple Pay at Online Casinos          | Comparisons     |
+| 11  | Gates of Olympus — Full Slot Guide             | Game Guides     |
+| 12  | Best Blackjack Casinos That Accept PayPal      | Game Guides     |
 
 ---
 
 ### April — Focus: 🇩🇪 Germany
 
-**Major page:** German PayPal Casinos *(new market)*
+**Major page:** German PayPal Casinos _(new market)_
 
-| # | Blog Post | Category |
-|---|---|---|
-| 13 | PayPal Casinos in Germany 2026 — What Players Need to Know | Tips & Strategies |
-| 14 | GGL-Licensed Casinos That Accept PayPal | Tips & Strategies |
-| 15 | PayPal Casino Deposit From €10 — Best Options | Bonuses |
-| 16 | Best Megaways Slots at PayPal Casinos | Game Guides |
+| #   | Blog Post                                                  | Category          |
+| --- | ---------------------------------------------------------- | ----------------- |
+| 13  | PayPal Casinos in Germany 2026 — What Players Need to Know | Tips & Strategies |
+| 14  | GGL-Licensed Casinos That Accept PayPal                    | Tips & Strategies |
+| 15  | PayPal Casino Deposit From €10 — Best Options              | Bonuses           |
+| 16  | Best Megaways Slots at PayPal Casinos                      | Game Guides       |
 
 ---
 
@@ -127,12 +129,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Sweden PayPal Casinos Sub-Hub (regulations + Spelinspektionen guide)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 17 | Spelinspektionen Licensed PayPal Casinos Explained | Tips & Strategies |
-| 18 | PayPal vs Trustly at Swedish Casinos | Comparisons |
-| 19 | Summer Casino Promotions 2026 — PayPal Offers | Bonuses |
-| 20 | Responsible Gambling Tools at PayPal Casinos | Tips & Strategies |
+| #   | Blog Post                                          | Category          |
+| --- | -------------------------------------------------- | ----------------- |
+| 17  | Spelinspektionen Licensed PayPal Casinos Explained | Tips & Strategies |
+| 18  | PayPal vs Trustly at Swedish Casinos               | Comparisons       |
+| 19  | Summer Casino Promotions 2026 — PayPal Offers      | Bonuses           |
+| 20  | Responsible Gambling Tools at PayPal Casinos       | Tips & Strategies |
 
 ---
 
@@ -140,12 +142,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Denmark PayPal Casinos Sub-Hub
 
-| # | Blog Post | Category |
-|---|---|---|
-| 21 | Danish Gambling Authority — What It Means for Players | Tips & Strategies |
-| 22 | Best PayPal Casino Bonuses in Denmark 2026 | Bonuses |
-| 23 | Sweet Bonanza — Full Slot Review | Game Guides |
-| 24 | Free Spins No Wagering at PayPal Casinos | Bonuses |
+| #   | Blog Post                                             | Category          |
+| --- | ----------------------------------------------------- | ----------------- |
+| 21  | Danish Gambling Authority — What It Means for Players | Tips & Strategies |
+| 22  | Best PayPal Casino Bonuses in Denmark 2026            | Bonuses           |
+| 23  | Sweet Bonanza — Full Slot Review                      | Game Guides       |
+| 24  | Free Spins No Wagering at PayPal Casinos              | Bonuses           |
 
 ---
 
@@ -153,12 +155,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Ireland PayPal Casinos Sub-Hub (regulations deep-dive)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 25 | Best Jackpot Slots at PayPal Casinos | Game Guides |
-| 26 | PayPal Casino Cashback Offers — How They Work | Bonuses |
-| 27 | PayPal vs Visa at Irish Online Casinos | Comparisons |
-| 28 | Big Bass Bonanza — Full Slot Guide | Game Guides |
+| #   | Blog Post                                     | Category    |
+| --- | --------------------------------------------- | ----------- |
+| 25  | Best Jackpot Slots at PayPal Casinos          | Game Guides |
+| 26  | PayPal Casino Cashback Offers — How They Work | Bonuses     |
+| 27  | PayPal vs Visa at Irish Online Casinos        | Comparisons |
+| 28  | Big Bass Bonanza — Full Slot Guide            | Game Guides |
 
 ---
 
@@ -166,12 +168,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Finland PayPal Casinos Sub-Hub (Veikkaus + licensed sites)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 29 | PayPal Casinos in Finland — Legal Guide 2026 | Tips & Strategies |
-| 30 | Best PayPal Casinos in Finnish (Suomi-opas preview) | Tips & Strategies |
-| 31 | VIP Programs at PayPal Casinos — Worth It? | Bonuses |
-| 32 | PayPal vs MuchBetter at Online Casinos | Comparisons |
+| #   | Blog Post                                           | Category          |
+| --- | --------------------------------------------------- | ----------------- |
+| 29  | PayPal Casinos in Finland — Legal Guide 2026        | Tips & Strategies |
+| 30  | Best PayPal Casinos in Finnish (Suomi-opas preview) | Tips & Strategies |
+| 31  | VIP Programs at PayPal Casinos — Worth It?          | Bonuses           |
+| 32  | PayPal vs MuchBetter at Online Casinos              | Comparisons       |
 
 ---
 
@@ -179,12 +181,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** PayPal Casino Comparison Hub (vs all payment alternatives)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 33 | PayPal vs Crypto Casinos — Pros and Cons | Comparisons |
-| 34 | PayPal vs Bank Transfer at Online Casinos | Comparisons |
-| 35 | Autumn Bonus Round-Up 2026 — Best PayPal Offers | Bonuses |
-| 36 | PayPal Casino Loyalty Points — How to Maximize Them | Tips & Strategies |
+| #   | Blog Post                                           | Category          |
+| --- | --------------------------------------------------- | ----------------- |
+| 33  | PayPal vs Crypto Casinos — Pros and Cons            | Comparisons       |
+| 34  | PayPal vs Bank Transfer at Online Casinos           | Comparisons       |
+| 35  | Autumn Bonus Round-Up 2026 — Best PayPal Offers     | Bonuses           |
+| 36  | PayPal Casino Loyalty Points — How to Maximize Them | Tips & Strategies |
 
 ---
 
@@ -192,12 +194,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Norway PayPal Casinos Sub-Hub
 
-| # | Blog Post | Category |
-|---|---|---|
-| 37 | Norway Gambling Laws — What Players Must Know | Tips & Strategies |
-| 38 | Halloween Casino Promotions 2026 — PayPal Casinos | Bonuses |
-| 39 | Best Roulette Casinos That Accept PayPal | Game Guides |
-| 40 | PayPal Casino Loyalty Points — Norway Edition | Tips & Strategies |
+| #   | Blog Post                                         | Category          |
+| --- | ------------------------------------------------- | ----------------- |
+| 37  | Norway Gambling Laws — What Players Must Know     | Tips & Strategies |
+| 38  | Halloween Casino Promotions 2026 — PayPal Casinos | Bonuses           |
+| 39  | Best Roulette Casinos That Accept PayPal          | Game Guides       |
+| 40  | PayPal Casino Loyalty Points — Norway Edition     | Tips & Strategies |
 
 ---
 
@@ -205,12 +207,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Germany PayPal Casinos Sub-Hub (20-page expansion begins)
 
-| # | Blog Post | Category |
-|---|---|---|
-| 41 | New PayPal Casinos — November 2026 | Game Guides |
-| 42 | PayPal Casino Responsible Gambling Guide — Germany | Tips & Strategies |
-| 43 | Best Video Poker at PayPal Casinos | Game Guides |
-| 44 | PayPal Casino Bonus Abuse — What to Avoid | Tips & Strategies |
+| #   | Blog Post                                          | Category          |
+| --- | -------------------------------------------------- | ----------------- |
+| 41  | New PayPal Casinos — November 2026                 | Game Guides       |
+| 42  | PayPal Casino Responsible Gambling Guide — Germany | Tips & Strategies |
+| 43  | Best Video Poker at PayPal Casinos                 | Game Guides       |
+| 44  | PayPal Casino Bonus Abuse — What to Avoid          | Tips & Strategies |
 
 ---
 
@@ -218,12 +220,12 @@ Organised around your existing 4 blog categories plus a new **Comparisons** cate
 
 **Major page:** Year in Review — Top PayPal Casinos 2026
 
-| # | Blog Post | Category |
-|---|---|---|
-| 45 | Christmas Casino Bonuses 2026 — Best PayPal Offers | Bonuses |
-| 46 | PayPal Limit Increases in 2026 — What Changed | Payment Methods |
-| 47 | New Year Casino Offers — January 2027 Preview | Bonuses |
-| 48 | Safest PayPal Casinos Heading Into 2027 | Tips & Strategies |
+| #   | Blog Post                                          | Category          |
+| --- | -------------------------------------------------- | ----------------- |
+| 45  | Christmas Casino Bonuses 2026 — Best PayPal Offers | Bonuses           |
+| 46  | PayPal Limit Increases in 2026 — What Changed      | Payment Methods   |
+| 47  | New Year Casino Offers — January 2027 Preview      | Bonuses           |
+| 48  | Safest PayPal Casinos Heading Into 2027            | Tips & Strategies |
 
 ---
 
@@ -235,70 +237,70 @@ Apply this structure to all existing countries and Germany. Each country guide e
 
 ### 3.1 Core Hub (1 page — already exists)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 1 | Country hub / overview | `/ireland-guide/` | ✅ Done |
+| #   | Page Title             | URL Pattern       | Priority |
+| --- | ---------------------- | ----------------- | -------- |
+| 1   | Country hub / overview | `/ireland-guide/` | ✅ Done  |
 
 ---
 
 ### 3.2 Regulations & Legality (3 pages)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 2 | Is online gambling legal in [Country]? | `/ireland-guide/gambling-laws/` | 🔴 High |
-| 3 | PayPal gambling regulations in [Country] | `/ireland-guide/paypal-regulations/` | 🔴 High |
-| 4 | Licensed casinos in [Country] — regulator list | `/ireland-guide/licensed-casinos/` | 🟡 Medium |
+| #   | Page Title                                     | URL Pattern                          | Priority  |
+| --- | ---------------------------------------------- | ------------------------------------ | --------- |
+| 2   | Is online gambling legal in [Country]?         | `/ireland-guide/gambling-laws/`      | 🔴 High   |
+| 3   | PayPal gambling regulations in [Country]       | `/ireland-guide/paypal-regulations/` | 🔴 High   |
+| 4   | Licensed casinos in [Country] — regulator list | `/ireland-guide/licensed-casinos/`   | 🟡 Medium |
 
 ---
 
 ### 3.3 Casino Lists (5 pages)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 5 | Best PayPal casinos in [Country] 2026 | `/ireland-guide/best-paypal-casinos/` | 🔴 High |
-| 6 | New casinos in [Country] accepting PayPal | `/ireland-guide/new-casinos/` | 🔴 High |
-| 7 | Mobile casinos PayPal — [Country] | `/ireland-guide/mobile-casinos/` | 🟡 Medium |
-| 8 | Live dealer casinos PayPal — [Country] | `/ireland-guide/live-casinos/` | 🟡 Medium |
-| 9 | No KYC casinos PayPal — [Country] | `/ireland-guide/no-kyc-casinos/` | 🟡 Medium |
+| #   | Page Title                                | URL Pattern                           | Priority  |
+| --- | ----------------------------------------- | ------------------------------------- | --------- |
+| 5   | Best PayPal casinos in [Country] 2026     | `/ireland-guide/best-paypal-casinos/` | 🔴 High   |
+| 6   | New casinos in [Country] accepting PayPal | `/ireland-guide/new-casinos/`         | 🔴 High   |
+| 7   | Mobile casinos PayPal — [Country]         | `/ireland-guide/mobile-casinos/`      | 🟡 Medium |
+| 8   | Live dealer casinos PayPal — [Country]    | `/ireland-guide/live-casinos/`        | 🟡 Medium |
+| 9   | No KYC casinos PayPal — [Country]         | `/ireland-guide/no-kyc-casinos/`      | 🟡 Medium |
 
 ---
 
 ### 3.4 Bonuses & Promotions (4 pages)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 10 | Best casino bonuses in [Country] — PayPal | `/ireland-guide/casino-bonuses/` | 🔴 High |
-| 11 | Free spins offers — [Country] PayPal casinos | `/ireland-guide/free-spins/` | 🔴 High |
-| 12 | No deposit bonuses — [Country] | `/ireland-guide/no-deposit-bonuses/` | 🟡 Medium |
-| 13 | VIP & loyalty programs — [Country] casinos | `/ireland-guide/vip-programs/` | 🟡 Medium |
+| #   | Page Title                                   | URL Pattern                          | Priority  |
+| --- | -------------------------------------------- | ------------------------------------ | --------- |
+| 10  | Best casino bonuses in [Country] — PayPal    | `/ireland-guide/casino-bonuses/`     | 🔴 High   |
+| 11  | Free spins offers — [Country] PayPal casinos | `/ireland-guide/free-spins/`         | 🔴 High   |
+| 12  | No deposit bonuses — [Country]               | `/ireland-guide/no-deposit-bonuses/` | 🟡 Medium |
+| 13  | VIP & loyalty programs — [Country] casinos   | `/ireland-guide/vip-programs/`       | 🟡 Medium |
 
 ---
 
 ### 3.5 Payments (3 pages)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 14 | PayPal deposits & withdrawals in [Country] | `/ireland-guide/paypal-deposits/` | 🔴 High |
-| 15 | PayPal vs local payment methods — [Country] | `/ireland-guide/payment-methods/` | 🟡 Medium |
-| 16 | Fastest PayPal withdrawal casinos — [Country] | `/ireland-guide/fast-withdrawals/` | 🟡 Medium |
+| #   | Page Title                                    | URL Pattern                        | Priority  |
+| --- | --------------------------------------------- | ---------------------------------- | --------- |
+| 14  | PayPal deposits & withdrawals in [Country]    | `/ireland-guide/paypal-deposits/`  | 🔴 High   |
+| 15  | PayPal vs local payment methods — [Country]   | `/ireland-guide/payment-methods/`  | 🟡 Medium |
+| 16  | Fastest PayPal withdrawal casinos — [Country] | `/ireland-guide/fast-withdrawals/` | 🟡 Medium |
 
 ---
 
 ### 3.6 Games (3 pages)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 17 | Best slots at PayPal casinos in [Country] | `/ireland-guide/best-slots/` | 🟡 Medium |
-| 18 | PayPal blackjack casinos — [Country] | `/ireland-guide/blackjack/` | 🟡 Medium |
-| 19 | PayPal roulette casinos — [Country] | `/ireland-guide/roulette/` | 🟡 Medium |
+| #   | Page Title                                | URL Pattern                  | Priority  |
+| --- | ----------------------------------------- | ---------------------------- | --------- |
+| 17  | Best slots at PayPal casinos in [Country] | `/ireland-guide/best-slots/` | 🟡 Medium |
+| 18  | PayPal blackjack casinos — [Country]      | `/ireland-guide/blackjack/`  | 🟡 Medium |
+| 19  | PayPal roulette casinos — [Country]       | `/ireland-guide/roulette/`   | 🟡 Medium |
 
 ---
 
 ### 3.7 Trust & Safety (1 page)
 
-| # | Page Title | URL Pattern | Priority |
-|---|---|---|---|
-| 20 | Responsible gambling tools — [Country] | `/ireland-guide/responsible-gambling/` | 🔴 High |
+| #   | Page Title                             | URL Pattern                            | Priority |
+| --- | -------------------------------------- | -------------------------------------- | -------- |
+| 20  | Responsible gambling tools — [Country] | `/ireland-guide/responsible-gambling/` | 🔴 High  |
 
 ---
 
@@ -306,13 +308,13 @@ Apply this structure to all existing countries and Germany. Each country guide e
 
 Germany has unique regulatory requirements. Adapt the standard 20-page structure with these additions:
 
-| Page | Germany-Specific Angle |
-|---|---|
-| Gambling laws | Cover the GGL (Gemeinsame Glücksspielbehörde der Länder) federal authority and the 4th Interstate Treaty on Gambling (GlüStV 2021) |
-| Licensed casinos | Only list GGL-licensed operators — unlicensed sites carry player risk under German law |
-| Payment methods | PayPal vs Sofortüberweisung vs Giropay — all popular in DE |
-| Responsible gambling | OASIS self-exclusion system is mandatory to mention |
-| Bonuses | Note the €1/spin maximum stake rule and the 5-second spin break — affects bonus play |
+| Page                 | Germany-Specific Angle                                                                                                             |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Gambling laws        | Cover the GGL (Gemeinsame Glücksspielbehörde der Länder) federal authority and the 4th Interstate Treaty on Gambling (GlüStV 2021) |
+| Licensed casinos     | Only list GGL-licensed operators — unlicensed sites carry player risk under German law                                             |
+| Payment methods      | PayPal vs Sofortüberweisung vs Giropay — all popular in DE                                                                         |
+| Responsible gambling | OASIS self-exclusion system is mandatory to mention                                                                                |
+| Bonuses              | Note the €1/spin maximum stake rule and the 5-second spin break — affects bonus play                                               |
 
 **Germany URL structure:**
 
@@ -343,14 +345,14 @@ Germany has unique regulatory requirements. Adapt the standard 20-page structure
 
 ## 4. Country Roadmap
 
-| Country | Hub | Language | i18n Priority | Next Action |
-|---|---|---|---|---|
-| 🇮🇪 Ireland | ✅ Exists | EN only | None needed | Add 19 sub-pages |
-| 🇫🇮 Finland | ✅ Exists | EN only | 🔴 High | Add 19 sub-pages + build `/fi/` version |
-| 🇳🇴 Norway | ✅ Exists | EN only | 🟡 Medium | Add 19 sub-pages + consider `/nb/` later |
-| 🇸🇪 Sweden | ✅ Exists | EN only | 🔴 High | Add 19 sub-pages + build `/sv/` version |
-| 🇩🇰 Denmark | ✅ Exists | EN only | 🟡 Medium | Add 19 sub-pages + consider `/da/` later |
-| 🇩🇪 Germany | ❌ Missing | EN + DE needed | 🔴 High | Build hub + 20 pages + DE translation |
+| Country    | Hub        | Language       | i18n Priority | Next Action                              |
+| ---------- | ---------- | -------------- | ------------- | ---------------------------------------- |
+| 🇮🇪 Ireland | ✅ Exists  | EN only        | None needed   | Add 19 sub-pages                         |
+| 🇫🇮 Finland | ✅ Exists  | EN only        | 🔴 High       | Add 19 sub-pages + build `/fi/` version  |
+| 🇳🇴 Norway  | ✅ Exists  | EN only        | 🟡 Medium     | Add 19 sub-pages + consider `/nb/` later |
+| 🇸🇪 Sweden  | ✅ Exists  | EN only        | 🔴 High       | Add 19 sub-pages + build `/sv/` version  |
+| 🇩🇰 Denmark | ✅ Exists  | EN only        | 🟡 Medium     | Add 19 sub-pages + consider `/da/` later |
+| 🇩🇪 Germany | ❌ Missing | EN + DE needed | 🔴 High       | Build hub + 20 pages + DE translation    |
 
 ---
 
@@ -374,11 +376,11 @@ i18n is worth doing, but not for all countries simultaneously. The ROI varies dr
 
 ### Why Not for Some Markets
 
-| Market | Reason to skip i18n |
-|---|---|
-| Ireland | English is the native language — no i18n needed |
-| Norway | Norsk Tipping monopoly makes PayPal content legally grey — lower ROI |
-| Denmark | Smaller market, English widely spoken — do this after FI/SE/DE |
+| Market  | Reason to skip i18n                                                  |
+| ------- | -------------------------------------------------------------------- |
+| Ireland | English is the native language — no i18n needed                      |
+| Norway  | Norsk Tipping monopoly makes PayPal content legally grey — lower ROI |
+| Denmark | Smaller market, English widely spoken — do this after FI/SE/DE       |
 
 > **Warning:** Machine-translated content risks a Google quality penalty if thin. Each i18n page needs human review or professional translation — budget accordingly. Use DeepL Pro + native editor review at minimum.
 
@@ -386,13 +388,13 @@ i18n is worth doing, but not for all countries simultaneously. The ROI varies dr
 
 ### Recommended Rollout
 
-| Phase | Quarter | Language | URL Structure | Pages to Translate |
-|---|---|---|---|---|
-| 1 | Q2 2026 | 🇫🇮 Finnish (fi) | `/fi/suomi-opas/` + subpages | Hub + 5 high-priority sub-pages |
-| 2 | Q3 2026 | 🇸🇪 Swedish (sv) | `/sv/sverige-guide/` + subpages | Hub + 5 high-priority sub-pages |
-| 3 | Q3 2026 | 🇩🇪 German (de) | `/de/deutschland/` + subpages | Full 20-page hub (DE is a new market — EN + DE simultaneously) |
-| 4 | Q4 2026 | 🇩🇰 Danish (da) | `/da/danmark-guide/` + subpages | Hub + 3 high-priority sub-pages |
-| 5 | 2027 | 🇳🇴 Norwegian (nb) | `/nb/norge-guide/` + subpages | Hub only, expand carefully |
+| Phase | Quarter | Language          | URL Structure                   | Pages to Translate                                             |
+| ----- | ------- | ----------------- | ------------------------------- | -------------------------------------------------------------- |
+| 1     | Q2 2026 | 🇫🇮 Finnish (fi)   | `/fi/suomi-opas/` + subpages    | Hub + 5 high-priority sub-pages                                |
+| 2     | Q3 2026 | 🇸🇪 Swedish (sv)   | `/sv/sverige-guide/` + subpages | Hub + 5 high-priority sub-pages                                |
+| 3     | Q3 2026 | 🇩🇪 German (de)    | `/de/deutschland/` + subpages   | Full 20-page hub (DE is a new market — EN + DE simultaneously) |
+| 4     | Q4 2026 | 🇩🇰 Danish (da)    | `/da/danmark-guide/` + subpages | Hub + 3 high-priority sub-pages                                |
+| 5     | 2027    | 🇳🇴 Norwegian (nb) | `/nb/norge-guide/` + subpages   | Hub only, expand carefully                                     |
 
 ---
 
@@ -404,17 +406,29 @@ Add to every page that has a language equivalent. Without this, Google may treat
 
 ```html
 <link rel="alternate" hreflang="en" href="https://ppcasinos.co/suomi-guide/" />
-<link rel="alternate" hreflang="fi" href="https://ppcasinos.co/fi/suomi-opas/" />
-<link rel="alternate" hreflang="sv" href="https://ppcasinos.co/sv/sverige-guide/" />
-<link rel="alternate" hreflang="de" href="https://ppcasinos.co/de/deutschland/" />
+<link
+  rel="alternate"
+  hreflang="fi"
+  href="https://ppcasinos.co/fi/suomi-opas/"
+/>
+<link
+  rel="alternate"
+  hreflang="sv"
+  href="https://ppcasinos.co/sv/sverige-guide/"
+/>
+<link
+  rel="alternate"
+  hreflang="de"
+  href="https://ppcasinos.co/de/deutschland/"
+/>
 <link rel="alternate" hreflang="x-default" href="https://ppcasinos.co/" />
 ```
 
 **2. URL structure — Use subdirectories, not subdomains**
 
-| ✅ Do this | ❌ Not this |
-|---|---|
-| `ppcasinos.co/fi/suomi-opas/` | `fi.ppcasinos.co/suomi-opas/` |
+| ✅ Do this                     | ❌ Not this                    |
+| ------------------------------ | ------------------------------ |
+| `ppcasinos.co/fi/suomi-opas/`  | `fi.ppcasinos.co/suomi-opas/`  |
 | `ppcasinos.co/de/deutschland/` | `de.ppcasinos.co/deutschland/` |
 
 Subdirectories share your domain authority. Subdomains dilute it.
@@ -482,4 +496,4 @@ ppcasinos.co/
 
 ---
 
-*Last updated: April 2026 | ppcasinos.co content strategy*
+_Last updated: April 2026 | ppcasinos.co content strategy_

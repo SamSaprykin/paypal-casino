@@ -1,0 +1,92 @@
+{
+  "_id": "6LMryjwOkuhbuzYMdUGJl1",
+  "_createdAt": "2025-10-14T12:42:36Z",
+  "_updatedAt": "2026-05-15T13:56:32Z",
+  "casinoName": "DRIP",
+  "slug": "drip",
+  "rating": 4.4,
+  "shortDescription": "DRIP Casino is a high-tech platform launched in 2023 with 5,000+ games and a full sportsbook. It features a sleek mobile app, tiered loyalty rewards, and rapid crypto payouts for modern players.",
+  "shortDescriptionIntl": {
+    "germany": "DRIP Casino ist eine hochmoderne Plattform, die 2023 mit über 5.000 Spielen und einem vollwertigen Sportwettenbereich gestartet ist. Sie bietet eine elegante mobile App, gestaffelte Treueprämien und schnelle Krypto-Auszahlungen für moderne Spieler.",
+    "denmark": "DRIP Casino er en højteknologisk platform lanceret i 2023 med over 5.000 spil og en fuld sportsbook. Den byder på en elegant mobilapp, trinvise loyalitetsbelønninger og hurtige kryptoudbetalinger til moderne spillere.",
+    "finland": "DRIP Casino on huipputeknologinen alusta, joka avattiin vuonna 2023 ja jossa on yli 5 000 peliä sekä täysimittainen vedonlyöntiosio. Se tarjoaa tyylikkään mobiilisovelluksen, porrastetut uskollisuuspalkinnot sekä nopeat kryptokotiutukset nykyaikaisille pelaajille.",
+    "norway": "DRIP Casino er en høyteknologisk plattform lansert i 2023 med over 5 000 spill og en fullverdig sportsbook. Den byr på en elegant mobilapp, trinnvise lojalitetsbelønninger og raske kryptoutbetalinger for moderne spillere.",
+    "sweden": "DRIP Casino är en högteknologisk plattform som lanserades 2023 med över 5 000 spel och en fullständig sportbok. Den erbjuder en elegant mobilapp, nivåbaserade lojalitetsbelöningar och snabba kryptoutbetalningar för moderna spelare."
+  },
+  "referralUrl": "/goto/drip.php",
+  "payoutLimits": "€20,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Microgaming",
+    "Endorphina",
+    "Pragmatic",
+    "PlayNGo",
+    "NetEnt",
+    "Evolution",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 42,
+  "userRecommendationsTotalNumber": 57,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#494d4e"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/89c3767acb45043c9890d2e2b9c69fa5d8044f6d-1000x1000.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5aeDbSIPP8SP7QD9AMSB9q",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to 100% on first deposit",
+      "descriptionIntl": {
+        "germany": "Bis zu 100 % auf die erste Einzahlung",
+        "denmark": "Op til 100 % på første indbetaling",
+        "finland": "Jopa 100 % ensimmäisestä talletuksesta",
+        "norway": "Opptil 100 % på første innskudd",
+        "sweden": "Upp till 100 % på första insättningen"
+      },
+      "referralUrl": "/goto/drip.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/89c3767acb45043c9890d2e2b9c69fa5d8044f6d-1000x1000.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

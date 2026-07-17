@@ -1,0 +1,88 @@
+{
+  "_id": "6Ciqu0qRFnkIvmK618JyCD",
+  "_createdAt": "2025-08-27T07:58:30Z",
+  "_updatedAt": "2026-05-15T13:55:23Z",
+  "casinoName": "CosmicSlot",
+  "slug": "cosmicslot",
+  "rating": 4.6,
+  "shortDescription": "CosmicSlot is a vibrant, space-themed casino with over 8,000 games. It features a unique \"Bonus Shop,\" a massive multi-tier welcome package, and 10% weekly cashback for all interstellar players.",
+  "shortDescriptionIntl": {
+    "germany": "CosmicSlot ist ein lebendiges Casino mit Weltraum-Thema und über 8.000 Spielen. Es bietet einen einzigartigen „Bonus Shop“, ein riesiges mehrstufiges Willkommenspaket und 10 % wöchentliches Cashback für alle interstellaren Spieler.",
+    "denmark": "CosmicSlot er et livligt casino med rumtema og over 8.000 spil. Det byder på en unik „Bonus Shop“, en enorm velkomstpakke i flere niveauer og 10 % ugentligt cashback til alle interstellare spillere.",
+    "finland": "CosmicSlot on eloisa, avaruusteemainen kasino, jossa on yli 8 000 peliä. Se tarjoaa ainutlaatuisen „Bonus Shop“ -kaupan, valtavan monitasoisen tervetuliaispaketin sekä 10 % viikoittaisen cashbackin kaikille tähtienvälisille pelaajille.",
+    "norway": "CosmicSlot er et livlig casino med romtema og over 8 000 spill. Det byr på en unik «Bonus Shop», en enorm velkomstpakke i flere nivåer og 10 % ukentlig cashback for alle interstellare spillere.",
+    "sweden": "CosmicSlot är ett livfullt casino med rymdtema och över 8 000 spel. Det erbjuder en unik ”Bonus Shop”, ett enormt flernivå-välkomstpaket och 10 % veckovis cashback för alla interstellära spelare."
+  },
+  "referralUrl": "/goto/cosmicslot.php",
+  "payoutLimits": "€30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Microgaming",
+    "Betsoft",
+    "Evolution",
+    "Pragmatic",
+    "Yggdrasil Gaming",
+    "NetEnt",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Curacao eGaming, licence no. 8048/JAZ2019-049",
+  "userRecommendationsRecommendedNumber": 42,
+  "userRecommendationsTotalNumber": 56,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#474389"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/f04e92d0fb134c99a2361de2d33005389f5fc52b-400x400.webp",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "18fIg4hZwzryETZTZO1RAX",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/cosmicslot.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,94 @@
+{
+  "_id": "68b9u9AmtUD6KHxN6laWiV",
+  "_createdAt": "2025-08-27T07:58:32Z",
+  "_updatedAt": "2026-05-15T14:08:03Z",
+  "casinoName": "Ritzo",
+  "slug": "ritzo",
+  "rating": 4.8,
+  "shortDescription": "Instant deposits, same-day withdrawals, and over 7,000 games at Ritzo Casino Play with PayPal — safe and mobile-friendly gaming started with your joining! ",
+  "shortDescriptionIntl": {
+    "germany": "Sofortige Einzahlungen, Auszahlungen am selben Tag und über 7.000 Spiele bei Ritzo Casino – spiele mit PayPal für sicheres und mobilfreundliches Gaming, gleich nach deiner Anmeldung!",
+    "denmark": "Øjeblikkelige indbetalinger, udbetalinger samme dag og over 7.000 spil hos Ritzo Casino — spil med PayPal for sikkert og mobilvenligt spil lige fra din tilmelding!",
+    "finland": "Välittömät talletukset, saman päivän kotiutukset ja yli 7 000 peliä Ritzo Casinolla — pelaa PayPalilla turvallista ja mobiiliystävällistä pelaamista heti liittymisestäsi alkaen!",
+    "norway": "Umiddelbare innskudd, utbetalinger samme dag og over 7 000 spill hos Ritzo Casino — spill med PayPal for trygt og mobilvennlig spill helt fra du melder deg inn!",
+    "sweden": "Omedelbara insättningar, uttag samma dag och över 7 000 spel hos Ritzo Casino — spela med PayPal för säkert och mobilvänligt spelande direkt när du går med!"
+  },
+  "referralUrl": "/goto/ritzo.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24 h"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "Playtech",
+    "NetEnt",
+    "Yggdrasil Gaming",
+    "Microgaming",
+    "Endorphina",
+    "Nolimit City"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 45,
+  "userRecommendationsTotalNumber": 60,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#472a3f"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/801e99b36823fc04efcbe48150aa7488a4e27177-320x127.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "6sYuBdi1lRaFXX9pTcZSQJ",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to 500 € + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/ritzo.php",
+      "bonusBackgroundColor": "#472A3F\t",
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/801e99b36823fc04efcbe48150aa7488a4e27177-320x127.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

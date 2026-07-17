@@ -58,7 +58,10 @@ export const termsSectionsEn: PrivacySection[] = [
   },
 ];
 
-function withTitles(sections: PrivacySection[], titles: string[]): PrivacySection[] {
+function withTitles(
+  sections: PrivacySection[],
+  titles: string[],
+): PrivacySection[] {
   return sections.map((s, i) => ({
     body: s.body,
     title: titles[i] ?? s.title,

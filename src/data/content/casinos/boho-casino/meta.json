@@ -1,0 +1,60 @@
+{
+  "_id": "terAQHgze15RtLO7XGp3xz",
+  "_createdAt": "2026-05-13T19:39:05Z",
+  "_updatedAt": "2026-05-15T13:52:51Z",
+  "casinoName": "Boho Casino",
+  "slug": "boho-casino",
+  "rating": 4.8,
+  "shortDescription": "Boho Casino is a stylish, bohemian-themed platform launched in 2022. It features over 8,000 games, a massive €2,000 welcome package, and supports both fiat and crypto with 24/7 live chat support.",
+  "shortDescriptionIntl": {
+    "germany": "Boho Casino ist eine stilvolle Plattform im Boho-Stil, die 2022 gestartet ist. Sie bietet über 8.000 Spiele, ein riesiges Willkommenspaket von 2.000 € und unterstützt Fiat sowie Krypto mit 24/7-Live-Chat-Support.",
+    "denmark": "Boho Casino er en stilfuld platform i bohemestil lanceret i 2022. Den byder på over 8.000 spil, en enorm velkomstpakke på 2.000 € og understøtter både fiat og krypto med 24/7 live chat-support.",
+    "finland": "Boho Casino on tyylikäs, boheemiteemainen alusta, joka avattiin vuonna 2022. Se tarjoaa yli 8 000 peliä, valtavan 2 000 euron tervetuliaispaketin sekä tukee sekä fiat- että kryptovaluuttoja 24/7-live-chatilla.",
+    "norway": "Boho Casino er en stilfull plattform i bohem-stil lansert i 2022. Den byr på over 8 000 spill, en enorm velkomstpakke på 2 000 € og støtter både fiat og krypto med 24/7 live chat-support.",
+    "sweden": "Boho Casino är en stilfull plattform i bohemstil som lanserades 2022. Den erbjuder över 8 000 spel, ett enormt välkomstpaket på 2 000 € och stöder både fiat och krypto med 24/7 live chatt-support."
+  },
+  "referralUrl": "/goto/bohocasino.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 242,
+  "userRecommendationsTotalNumber": 290,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/f07291b8126a9b91c2250ba0aff9f28c19330c95-48x48.png",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "rollingslots"],
+    "finland": ["rx-casino", "starda", "aquawin"],
+    "germany": ["lollybet", "yukon-gold", "hugo-casino"],
+    "ireland": ["cleobetra", "skycrown", "50-crowns"],
+    "norway": ["lets-lucky", "cosmicslot", "rx-casino"],
+    "sweden": ["luckydreams", "glitchspin", "pop-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["trickz", "rollingslots", "winshark"],
+    "finland": ["rx-casino", "flagman", "legzo"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["tsars", "cleobetra", "crownslots"],
+    "norway": ["tonybet", "cleobetra", "caspero"],
+    "sweden": ["rx-casino", "spinbetter", "tonybet"]
+  }
+}

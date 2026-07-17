@@ -1,0 +1,101 @@
+{
+  "_id": "7EBMjOzsIooqvBHSR0J1X9",
+  "_createdAt": "2025-08-27T07:58:45Z",
+  "_updatedAt": "2026-05-30T11:13:55Z",
+  "casinoName": "Trickz",
+  "slug": "trickz",
+  "rating": 4.7,
+  "shortDescription": "Experience the fastest deposit with PayPal at Trickz Casino, enjoy withdrawals without any hassles, security you can count on — become a member now and play 4,000+ games under the surveillance of trusted security!",
+  "shortDescriptionIntl": {
+    "germany": "Erlebe die schnellste Einzahlung mit PayPal bei Trickz Casino, genieße Auszahlungen ohne Umstände und Sicherheit, auf die du zählen kannst – werde jetzt Mitglied und spiele über 4.000 Spiele unter der Aufsicht vertrauenswürdiger Sicherheit!",
+    "denmark": "Oplev den hurtigste indbetaling med PayPal hos Trickz Casino, nyd udbetalinger uden besvær og en sikkerhed, du kan regne med — bliv medlem nu og spil over 4.000 spil under overvågning af pålidelig sikkerhed!",
+    "finland": "Koe nopein talletus PayPalilla Trickz Casinolla, nauti kotiutuksista ilman vaivaa ja turvasta, johon voit luottaa — liity jäseneksi nyt ja pelaa yli 4 000 peliä luotettavan turvan valvonnassa!",
+    "norway": "Opplev den raskeste innbetalingen med PayPal hos Trickz Casino, nyt utbetalinger uten bry og en sikkerhet du kan stole på — bli medlem nå og spill over 4 000 spill under overvåking av pålitelig sikkerhet!",
+    "sweden": "Upplev den snabbaste insättningen med PayPal hos Trickz Casino, njut av uttag utan krångel och en säkerhet du kan lita på — bli medlem nu och spela över 4 000 spel under övervakning av pålitlig säkerhet!"
+  },
+  "referralUrl": "/goto/trickz.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Blueprint Gaming",
+    "Elk Studios",
+    "Red Rake Gaming",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 42,
+  "userRecommendationsTotalNumber": 60,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#c7c9ad"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/bf806bfdb17936c5e0165a4bf74edce94ca7362e-259x194.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "EYAc8D7Zs0RODS81x4mml",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to 500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 + 200 Freispiele",
+        "denmark": "Op til 500 + 200 gratis spins",
+        "finland": "Jopa 500 + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 + 200 gratisspinn",
+        "sweden": "Upp till 500 + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/trickz.php",
+      "bonusBackgroundColor": "#FFFFFF",
+      "bonusLogo": null
+    },
+    {
+      "_id": "bonus-extra-trickz",
+      "name": "Weekend Reload",
+      "code": null,
+      "description": "Special weekend boost on deposits",
+      "descriptionIntl": {
+        "germany": "Spezieller Wochenend-Boost auf Einzahlungen",
+        "denmark": "Særligt weekendboost på indbetalinger",
+        "finland": "Erityinen viikonlopputehostus talletuksiin",
+        "norway": "Spesielt helgeboost på innskudd",
+        "sweden": "Speciell helgboost på insättningar"
+      },
+      "referralUrl": "/goto/trickz.php",
+      "bonusBackgroundColor": "#1f2937",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

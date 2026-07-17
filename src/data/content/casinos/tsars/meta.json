@@ -1,0 +1,94 @@
+{
+  "_id": "7yIL9P2YhyAFTVy6zq4mNL",
+  "_createdAt": "2025-08-27T07:58:47Z",
+  "_updatedAt": "2026-05-30T10:53:07Z",
+  "casinoName": "Tsars",
+  "slug": "tsars",
+  "rating": 4.6,
+  "shortDescription": "Tsars is a sleek, sky-themed casino launched in 2020. It offers over 3,000 games, instant withdrawals, and a massive €2,000 welcome package plus 200 free spins, all within a lightning-fast interface.",
+  "shortDescriptionIntl": {
+    "germany": "Tsars ist ein elegantes Casino im Himmels-Design, das 2020 gestartet ist. Es bietet über 3.000 Spiele, sofortige Auszahlungen und ein riesiges Willkommenspaket von 2.000 € plus 200 Freispiele – alles in einer blitzschnellen Oberfläche.",
+    "denmark": "Tsars er et elegant casino med himmeltema lanceret i 2020. Det byder på over 3.000 spil, øjeblikkelige udbetalinger og en enorm velkomstpakke på 2.000 € plus 200 gratis spins — alt sammen i en lynhurtig brugerflade.",
+    "finland": "Tsars on tyylikäs, taivasteemainen kasino, joka avattiin vuonna 2020. Se tarjoaa yli 3 000 peliä, välittömät kotiutukset sekä valtavan 2 000 euron tervetuliaispaketin ja 200 ilmaiskierrosta — kaikki salamannopeassa käyttöliittymässä.",
+    "norway": "Tsars er et elegant casino med himmeltema lansert i 2020. Det byr på over 3 000 spill, umiddelbare utbetalinger og en enorm velkomstpakke på 2 000 € pluss 200 gratisspinn — alt i et lynraskt grensesnitt.",
+    "sweden": "Tsars är ett elegant casino med himmelstema som lanserades 2020. Det erbjuder över 3 000 spel, omedelbara utbetalningar och ett enormt välkomstpaket på 2 000 € plus 200 gratissnurr — allt i ett blixtsnabbt gränssnitt."
+  },
+  "referralUrl": "/goto/tsars.php",
+  "payoutLimits": "Up to €5,000 per transaction",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
+  "software": [
+    "Pragmatic",
+    "PlayNGo",
+    "Yggdrasil Gaming",
+    "Betsoft",
+    "Evolution",
+    "Push Gaming",
+    "Wazdan",
+    "Elk Studios",
+    "Spinomenal",
+    "Relax Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Government of the Autonomous Island of Anjouan, Union of Comoros (License No. ALSI-202503021-FI1)",
+  "userRecommendationsRecommendedNumber": 45,
+  "userRecommendationsTotalNumber": 65,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#ebcaca"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/def24badfb50f82a7c9a761cbd1547e3569c9d74-500x500.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "3os8ya89wzhX85ZiMEabti",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €2,000 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 2.000 € + 200 Freispiele",
+        "denmark": "Op til 2.000 € + 200 gratis spins",
+        "finland": "Jopa 2 000 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 2 000 € + 200 gratisspinn",
+        "sweden": "Upp till 2 000 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/fambet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/def24badfb50f82a7c9a761cbd1547e3569c9d74-500x500.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

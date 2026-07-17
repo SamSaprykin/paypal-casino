@@ -1,4 +1,4 @@
-import { portableTextToPlainText } from "../sanity/portableTextPlain.ts";
+import { portableTextToPlainText } from "../cms/portableTextPlain.ts";
 
 // Schema type constants and validation helpers
 export const SCHEMA_TYPES = {

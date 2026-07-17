@@ -1,0 +1,54 @@
+[
+  {
+    "id": "41566515-6ad0-4a7a-becc-afdd95b4cc75",
+    "name": "Home Page",
+    "dir": "pages/home-page",
+    "slugs": {
+      "denmark": "/dk/",
+      "finland": "/fi/",
+      "germany": "/de/",
+      "ireland": "/",
+      "norway": "/no/",
+      "sweden": "/se/"
+    }
+  },
+  {
+    "id": "9e234a97-092f-485b-b992-0c72874615c2",
+    "name": "Paypal Casino",
+    "dir": "pages/paypal-casino",
+    "slugs": {
+      "denmark": "/paypal-casino-danmark/",
+      "finland": "/paypal-kasinot/",
+      "germany": "/casinos-mit-paypal/",
+      "ireland": "/paypal-casino-ireland/",
+      "norway": "/paypal-kasinoer-norge/",
+      "sweden": "/paypal-casinon-sverige/"
+    }
+  },
+  {
+    "id": "c7d9e1a2-3b4c-4d5e-8f60-1a2b3c4d5e6f",
+    "name": "New Casinos",
+    "dir": "pages/new-casinos",
+    "slugs": {
+      "denmark": "/nye-kasinoer/",
+      "finland": "/uudet-kasinot/",
+      "germany": "/neue-casinos/",
+      "ireland": "/new-casinos/",
+      "norway": "/nye-kasinoer/",
+      "sweden": "/nya-casinon/"
+    }
+  },
+  {
+    "id": "d8e0f2b3-4c5d-4e6f-9a71-2b3c4d5e6f70",
+    "name": "Bonuses",
+    "dir": "pages/casino-bonuses",
+    "slugs": {
+      "denmark": "/casino-bonusser/",
+      "finland": "/kasinobonukset/",
+      "germany": "/casino-bonus/",
+      "ireland": "/casino-bonuses/",
+      "norway": "/casino-bonuser/",
+      "sweden": "/casinobonusar/"
+    }
+  }
+]

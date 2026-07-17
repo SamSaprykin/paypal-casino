@@ -9,7 +9,7 @@ import {
   getWebsitePageHrefByName,
   homeHrefForLocale,
   type WebsiteLocaleKey,
-} from "../../lib/sanity";
+} from "../../lib/content";
 
 interface Props {
   locale?: WebsiteLocaleKey;
@@ -27,11 +27,19 @@ const { locale = ROOT_WEBSITE_LOCALE, localizedSlugs, localeHrefs } =
 const labels = NAV_LABELS[locale];
 const homeHref = homeHrefForLocale(locale);
 const paypalCasinoHref = await getWebsitePageHrefByName("Paypal Casino", locale);
+const newCasinosHref = await getWebsitePageHrefByName("New Casinos", locale);
+const bonusesHref = await getWebsitePageHrefByName("Bonuses", locale);
 
 const menuData = [
   { itemLinkRoute: homeHref, itemName: labels.onlineCasino },
   ...(paypalCasinoHref
     ? [{ itemLinkRoute: paypalCasinoHref, itemName: labels.paypalCasino }]
+    : []),
+  ...(newCasinosHref
+    ? [{ itemLinkRoute: newCasinosHref, itemName: labels.newCasinos }]
+    : []),
+  ...(bonusesHref
+    ? [{ itemLinkRoute: bonusesHref, itemName: labels.bonuses }]
     : []),
 ];
 ---

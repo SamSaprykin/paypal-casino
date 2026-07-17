@@ -1,0 +1,90 @@
+{
+  "_id": "4Q7ido3Vp2ww2HR30WxbGK",
+  "_createdAt": "2025-08-27T07:58:34Z",
+  "_updatedAt": "2026-05-15T14:04:15Z",
+  "casinoName": "Lucky Start",
+  "slug": "lucky-start",
+  "rating": 4.7,
+  "shortDescription": "LuckyStart Casino is a vibrant, modern platform featuring a massive library of 3,000+ games. Licensed in Curacao, it offers a generous multi-tier welcome package, rapid crypto payouts, and a 24/7 VIP support system.",
+  "shortDescriptionIntl": {
+    "germany": "LuckyStart Casino ist eine lebendige, moderne Plattform mit einer riesigen Bibliothek von über 3.000 Spielen. In Curaçao lizenziert, bietet es ein großzügiges mehrstufiges Willkommenspaket, schnelle Krypto-Auszahlungen und ein 24/7-VIP-Supportsystem.",
+    "denmark": "LuckyStart Casino er en livlig, moderne platform med et enormt bibliotek på over 3.000 spil. Licenseret i Curaçao byder det på en generøs velkomstpakke i flere niveauer, hurtige kryptoudbetalinger og et 24/7 VIP-supportsystem.",
+    "finland": "LuckyStart Casino on eloisa, moderni alusta, jossa on valtava yli 3 000 pelin valikoima. Curaçaossa lisensoitu kasino tarjoaa anteliaan monitasoisen tervetuliaispaketin, nopeat kryptokotiutukset sekä 24/7-VIP-tuen.",
+    "norway": "LuckyStart Casino er en livlig, moderne plattform med et enormt bibliotek på over 3 000 spill. Lisensiert i Curaçao byr det på en sjenerøs velkomstpakke i flere nivåer, raske kryptoutbetalinger og et 24/7 VIP-støttesystem.",
+    "sweden": "LuckyStart Casino är en livfull, modern plattform med ett enormt bibliotek på över 3 000 spel. Licensierat i Curaçao erbjuder det ett generöst flernivå-välkomstpaket, snabba kryptoutbetalningar och ett 24/7 VIP-supportsystem."
+  },
+  "referralUrl": "/goto/lucky-start.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "PlayNGo",
+    "Playtech"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 47,
+  "userRecommendationsTotalNumber": 68,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#474389"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/6304e21b98881ae7fb462202cc5c8370688ea40f-500x500.heif",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "1VLcU9wdlGgCg42qOeW0fu",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 and 100 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € und 100 Freispiele",
+        "denmark": "Op til 500 € og 100 gratis spins",
+        "finland": "Jopa 500 € ja 100 ilmaiskierrosta",
+        "norway": "Opptil 500 € og 100 gratisspinn",
+        "sweden": "Upp till 500 € och 100 gratissnurr"
+      },
+      "referralUrl": "/goto/lucky-start.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/6304e21b98881ae7fb462202cc5c8370688ea40f-500x500.heif",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,95 @@
+{
+  "_id": "6YtlBWCVbCMjIgRrW1aviq",
+  "_createdAt": "2025-08-27T07:58:41Z",
+  "_updatedAt": "2026-05-15T14:08:19Z",
+  "casinoName": "Rockwin",
+  "slug": "rockwin",
+  "rating": 4.7,
+  "shortDescription": "Rockwin is a sleek, crypto-friendly casino launched in 2023. It features a massive library of 7,000+ games, 10% wager-free crypto cashback, and a generous €500 welcome package plus 225 free spins.",
+  "shortDescriptionIntl": {
+    "germany": "Rockwin ist ein elegantes, kryptofreundliches Casino, das 2023 gestartet ist. Es bietet eine riesige Bibliothek von über 7.000 Spielen, 10 % umsatzfreies Krypto-Cashback und ein großzügiges Willkommenspaket von 500 € plus 225 Freispiele.",
+    "denmark": "Rockwin er et elegant, kryptovenligt casino lanceret i 2023. Det byder på et enormt bibliotek med over 7.000 spil, 10 % omsætningsfrit kryptocashback og en generøs velkomstpakke på 500 € plus 225 gratis spins.",
+    "finland": "Rockwin on tyylikäs, kryptoystävällinen kasino, joka avattiin vuonna 2023. Se tarjoaa valtavan yli 7 000 pelin valikoiman, 10 % kierrätysvapaan kryptocashbackin sekä anteliaan 500 euron tervetuliaispaketin ja 225 ilmaiskierrosta.",
+    "norway": "Rockwin er et elegant, kryptovennlig casino lansert i 2023. Det byr på et enormt bibliotek med over 7 000 spill, 10 % omsetningsfritt kryptocashback og en sjenerøs velkomstpakke på 500 € pluss 225 gratisspinn.",
+    "sweden": "Rockwin är ett elegant, kryptovänligt casino som lanserades 2023. Det erbjuder ett enormt bibliotek med över 7 000 spel, 10 % omsättningsfritt kryptocashback och ett generöst välkomstpaket på 500 € plus 225 gratissnurr."
+  },
+  "referralUrl": "/goto/rockwin.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24 h"
+  ],
+  "software": [
+    "PlayNGo",
+    "Pragmatic",
+    "Betsoft",
+    "Evolution",
+    "Big Time Gaming",
+    "Endorphina",
+    "Elk Studios",
+    "Wazdan",
+    "Microgaming",
+    "NetEnt",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 45,
+  "userRecommendationsTotalNumber": 65,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#c6d219"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/751db340c3b377691b539f85fde160d7f443fa55-588x136.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "16cNOUyy4cLtcRYSqEUvdM",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/rockwin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/751db340c3b377691b539f85fde160d7f443fa55-588x136.png",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

@@ -1,4 +1,4 @@
-import type { WebsiteLocaleKey } from "../sanity/locales";
+import type { WebsiteLocaleKey } from "../cms/locales";
 import type { LocaleId } from "./locales";
 
 export const WEBSITE_LOCALE_TO_LOCALE_ID: Record<WebsiteLocaleKey, LocaleId> = {

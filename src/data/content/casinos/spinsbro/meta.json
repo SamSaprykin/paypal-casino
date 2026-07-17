@@ -1,0 +1,166 @@
+{
+  "_id": "7zBeACDmxk6dlDjvIDJAYA",
+  "_createdAt": "2025-08-27T07:58:33Z",
+  "_updatedAt": "2026-05-15T14:11:48Z",
+  "casinoName": "SpinsBro",
+  "slug": "spinsbro",
+  "rating": 4.7,
+  "shortDescription": "SpinsBro is a vibrant, comic-book-themed casino launched in 2022. It boasts over 7,000 games, a massive welcome pack with 1,000 free spins, and a unique \"Bro Shop\" for exchanging loyalty coins.",
+  "shortDescriptionIntl": {
+    "germany": "SpinsBro ist ein lebendiges Casino im Comic-Stil, das 2022 gestartet ist. Es bietet über 7.000 Spiele, ein riesiges Willkommenspaket mit 1.000 Freispielen und einen einzigartigen „Bro Shop“ zum Eintauschen von Treuemünzen.",
+    "denmark": "SpinsBro er et livligt casino med tegneserietema lanceret i 2022. Det byder på over 7.000 spil, en enorm velkomstpakke med 1.000 gratis spins og en unik „Bro Shop“ til at ombytte loyalitetsmønter.",
+    "finland": "SpinsBro on eloisa, sarjakuvateemainen kasino, joka avattiin vuonna 2022. Se tarjoaa yli 7 000 peliä, valtavan tervetuliaispaketin 1 000 ilmaiskierroksella sekä ainutlaatuisen „Bro Shop“ -kaupan uskollisuuskolikoiden vaihtamiseen.",
+    "norway": "SpinsBro er et livlig casino med tegneserietema lansert i 2022. Det byr på over 7 000 spill, en enorm velkomstpakke med 1 000 gratisspinn og en unik «Bro Shop» for å bytte inn lojalitetsmynter.",
+    "sweden": "SpinsBro är ett livfullt casino med serietidningstema som lanserades 2022. Det erbjuder över 7 000 spel, ett enormt välkomstpaket med 1 000 gratissnurr och en unik ”Bro Shop” för att växla in lojalitetsmynt."
+  },
+  "referralUrl": "/goto/spinsbro.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Blueprint Gaming",
+    "Elk Studios",
+    "Red Rake Gaming",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Curaçao Gaming Control Board, OGL/2023/109/0075",
+  "userRecommendationsRecommendedNumber": 52,
+  "userRecommendationsTotalNumber": 75,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#f75e25"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/55842b8025999408e8be9ca7819063ac5389f1f5-1024x251.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "4v8njKfHpV36JCIkkTDJdm",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "200% match up to 500 + 200 Free Spins",
+      "descriptionIntl": {
+        "germany": "200 % bis zu 500 + 200 Freispiele",
+        "denmark": "200 % op til 500 + 200 gratis spins",
+        "finland": "200 % jopa 500 + 200 ilmaiskierrosta",
+        "norway": "200 % opptil 500 + 200 gratisspinn",
+        "sweden": "200 % upp till 500 + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/spinsbro.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    },
+    {
+      "_id": "bonus-extra-spinsbro",
+      "name": "Daily Casino Bonus",
+      "code": null,
+      "description": "70% + 70 Free Spins",
+      "descriptionIntl": {
+        "germany": "70 % + 70 Freispiele",
+        "denmark": "70 % + 70 gratis spins",
+        "finland": "70 % + 70 ilmaiskierrosta",
+        "norway": "70 % + 70 gratisspinn",
+        "sweden": "70 % + 70 gratissnurr"
+      },
+      "referralUrl": "/goto/spinsbro.php",
+      "bonusBackgroundColor": "#1f2937",
+      "bonusLogo": null
+    }
+  ],
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": [
+      "ritzo",
+      "lets-lucky",
+      "luckydreams"
+    ],
+    "finland": [
+      "lets-lucky",
+      "lucky-ones",
+      "lunubet"
+    ],
+    "germany": [
+      "zodiac-casino",
+      "bitstarz",
+      "rollingslots"
+    ],
+    "ireland": [
+      "crownslots",
+      "skycrown",
+      "cleobetra"
+    ],
+    "norway": [
+      "rx-casino",
+      "hugo-casino",
+      "kukimuki"
+    ],
+    "sweden": [
+      "ritzo",
+      "rollingslots",
+      "klirr-casino"
+    ]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": [
+      "winshark",
+      "lucky-start",
+      "trickz"
+    ],
+    "finland": [
+      "legzo",
+      "lucky-start",
+      "vincispin"
+    ],
+    "germany": [
+      "rollingslots",
+      "hugo-casino"
+    ],
+    "ireland": [
+      "crownslots",
+      "tonybet",
+      "ritzo"
+    ],
+    "norway": [
+      "cleobetra",
+      "legzo",
+      "tonybet"
+    ],
+    "sweden": [
+      "winshark",
+      "rollingslots",
+      "tonybet"
+    ]
+  }
+}

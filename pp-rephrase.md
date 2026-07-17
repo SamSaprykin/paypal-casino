@@ -1,4 +1,4 @@
-I have article like that, your task is improve it, add seo title and descritpion + faq + write 
+I have article like that, your task is improve it, add seo title and descritpion + faq + write
 
 PayPal er blevet en af de mest pålidelige måder at flytte penge online på, og danske casinospillere har taget metoden til sig af netop den grund. Transaktionerne sker med det samme, udbetalingerne er stabile, og du behøver ikke dele kortoplysninger med hvert enkelt casino, du spiller på. Her ser vi nærmere på, hvordan betalingsprocessen fungerer i praksis, og hvad du kan forvente, når du spiller på sider, der accepterer en af verdens mest kendte digitale tegnebøger.
 
@@ -26,7 +26,6 @@ Vi har over tyve års samlet erfaring med at teste online casinoers betalingssys
 Hvert casino på listen er testet gennem faktisk spil, hvor vi har oprettet konti, indbetalt, udbetalt og kontaktet support. Det viser tydeligt, hvordan PayPal fungerer på hvert site under normale forhold. Vores erfaring bygger på reel afprøvning, ikke teori – derfor kan vi pege på de casinoer, der leverer sikre og effektive PayPal-betalinger.
 
 Redaktørens note: “Efter mange år med test af betalingssystemer er PayPal stadig en af de få metoder, der sjældent fejler. Den er hurtig, stabil og gør præcis, hvad den lover.”
-
 
 Fordele og ulemper ved at bruge PayPal på online casinoer
 PayPal er en enkel og pålidelig måde at håndtere casinobetalinger på, men som med enhver metode er der både fordele og et par ulemper. Her får du et overblik over, hvad danske spillere kan forvente, når de bruger PayPal på licenserede casinoer.
@@ -62,30 +61,29 @@ Det er super nemt og simpelt at lave indbetalinger med PayPal på nettet. Når d
 Det hele starter selvfølgelig med, at du skal identificere et af de casinoer, der accepterer PayPal. Der er heldigvis ganske mange PayPal casinoer i Danmark, så det bør ikke være et problem.
 
 1. Opret en PayPal konto
-Du opretter en konto hos PayPal lynhurtigt. Gå ind på PayPal.com. Indtast dit navn, din adresse, din e-mail og dine kreditkortoplysninger. Det tager kun et øjeblik, og så er din konto registreret.
+   Du opretter en konto hos PayPal lynhurtigt. Gå ind på PayPal.com. Indtast dit navn, din adresse, din e-mail og dine kreditkortoplysninger. Det tager kun et øjeblik, og så er din konto registreret.
 
 2. Vælg dit PayPal casino
-Det her er den sjoveste del: Du skal nemlig vælge det PayPal casino, der tiltaler dig mest. Kig i vores liste her på siden og læs anmeldelserne for casinoerne. Så er du bedst stillet i forhold til at vælge det casino, der er bedst for dig og præcist det, du leder efter i et online casino.
+   Det her er den sjoveste del: Du skal nemlig vælge det PayPal casino, der tiltaler dig mest. Kig i vores liste her på siden og læs anmeldelserne for casinoerne. Så er du bedst stillet i forhold til at vælge det casino, der er bedst for dig og præcist det, du leder efter i et online casino.
 
 Vælg det, der er vigtigst for dig. Er det spiludvalget, dansk kundeservice eller noget helt tredje?
 
 3. Opret dig som ny spiller
-Når du har fundet det casino, der opfylder flest af dine krav, er det bare med at hoppe ind og oprette dig. Tryk på linket her fra vores side og kom direkte til casinoets registrering. Her skal du blot følge nogle få trin, hvor du skal udfylde dine oplysninger, og så er du kunde hos dit favorit casino. Det kan endda være, der følger en velkomstbonus med oven i hatten.
+   Når du har fundet det casino, der opfylder flest af dine krav, er det bare med at hoppe ind og oprette dig. Tryk på linket her fra vores side og kom direkte til casinoets registrering. Her skal du blot følge nogle få trin, hvor du skal udfylde dine oplysninger, og så er du kunde hos dit favorit casino. Det kan endda være, der følger en velkomstbonus med oven i hatten.
 
 4. Lav dit første indskud
-Nu er nu klar til at foretage din første indbetaling med PayPal! Vælg det beløb, du gerne vil indbetale, og forbind herefter din PayPal konto til spillekontoen. Det gør du blot med dit personlige PayPal brugernavn og den adgangskode, du har valgt. Overførslen sker øjeblikkeligt.
+   Nu er nu klar til at foretage din første indbetaling med PayPal! Vælg det beløb, du gerne vil indbetale, og forbind herefter din PayPal konto til spillekontoen. Det gør du blot med dit personlige PayPal brugernavn og den adgangskode, du har valgt. Overførslen sker øjeblikkeligt.
 
 5. Spil løs!
-Her kommer den sjove del af hele cirkusset: Nemlig at spille og have det sjovt på dine favorit spil.
+   Her kommer den sjove del af hele cirkusset: Nemlig at spille og have det sjovt på dine favorit spil.
 
 6. Få dine gevinster udbetalt
-Hvis du har haft heldet med dig, vinder du gevinster på dine spil. Her er du godt stillet med en PayPal konto: Du kan nemlig få dine vundne gevinster udbetalt vi PayPal, nemt og hurtigt. Du vil have dine penge inden for ganske kort tid, og det så afgjort en af de vigtigste ting ved en e-wallet som PayPal.
+   Hvis du har haft heldet med dig, vinder du gevinster på dine spil. Her er du godt stillet med en PayPal konto: Du kan nemlig få dine vundne gevinster udbetalt vi PayPal, nemt og hurtigt. Du vil have dine penge inden for ganske kort tid, og det så afgjort en af de vigtigste ting ved en e-wallet som PayPal.
 
 Spørgsmål og svar om PayPal casinoer
 Der kan godt dukke spørgsmål op undervejs, når man sidder med emner som betaling og e-wallets. Og det er helt normalt. Det er trods alt dine penge, det handler om, og du skal være tryg ved de sider, der behandler pengene.
 
 Derfor vil vi her guide dig igennem de oftest stillede spørgsmål, som vi oplever i forbindelse med casinoer med PayPal og oprettelse af PayPal konto.
-
 
 Custom components:
 
@@ -100,8 +98,6 @@ if (className.includes("tip-box")) {
 return <TipBox {...props} />;
 
 }
-
-
 
 if (className.includes("how-to")) {
 

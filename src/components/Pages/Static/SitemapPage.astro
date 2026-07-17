@@ -6,7 +6,7 @@ import {
   homeHrefForLocale,
   localizedStaticPageHref,
   type WebsiteLocaleKey,
-} from "../../../lib/sanity";
+} from "../../../lib/content";
 import {
   generateWebPageSchema,
   generateBreadcrumbSchema,
@@ -15,7 +15,7 @@ import {
 import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
 import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
 import { slugify } from "../../../lib/helpers.js";
-import type { WebsitePageListEntry } from "../../../lib/sanity";
+import type { WebsitePageListEntry } from "../../../lib/content";
 
 interface Props {
   locale: WebsiteLocaleKey;

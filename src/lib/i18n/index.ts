@@ -1,17 +1,9 @@
-export {
-  LOCALE_IDS,
-  LOCALES,
-  type LocaleId,
-  type LocaleMeta,
-} from "./locales";
+export { LOCALE_IDS, LOCALES, type LocaleId, type LocaleMeta } from "./locales";
 export {
   WEBSITE_LOCALE_TO_LOCALE_ID,
   localeIdForWebsiteLocale,
 } from "./websiteLocaleBridge";
-export {
-  FOOTER_COPY,
-  type FooterCopy,
-} from "./copies/footer";
+export { FOOTER_COPY, type FooterCopy } from "./copies/footer";
 export {
   STATIC_SITE_PAGES_COPY,
   staticSitePagesCopyFor,
@@ -38,11 +30,14 @@ export {
   CASINO_DETAIL_PAGE_COPY,
   type CasinoDetailPageCopy,
 } from "./copies/casino-detail-page";
+export { WEBSITE_PAGE_COPY, type WebsitePageCopy } from "./copies/website-page";
 export {
-  WEBSITE_PAGE_COPY,
-  type WebsitePageCopy,
-} from "./copies/website-page";
+  BLOCKED_CASINO_MODAL_COPY,
+  formatBlockedCasinoModalCopy,
+  type BlockedCasinoModalCopy,
+} from "./copies/blocked-casino-modal";
 export {
   INTL_DEMO_PAGE_COPY,
   type IntlDemoPageCopy,
 } from "./copies/page-intl-demo";
+export { BONUS_LIST_COPY, type BonusListCopy } from "./copies/bonus-list";

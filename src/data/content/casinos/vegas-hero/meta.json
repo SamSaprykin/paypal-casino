@@ -1,0 +1,93 @@
+{
+  "_id": "6NqYsDiYQhu8L0nIRbvoq6",
+  "_createdAt": "2025-08-27T07:58:49Z",
+  "_updatedAt": "2026-05-25T08:16:59Z",
+  "casinoName": "Vegas Hero",
+  "slug": "vegas-hero",
+  "rating": 4.6,
+  "shortDescription": "Vegas Hero is a high-energy casino featuring a superhero theme and over 1,300 games. Licensed by the MGA, it offers lightning-fast withdrawals, a robust mobile app, and a generous four-tier welcome package.",
+  "shortDescriptionIntl": {
+    "germany": "Vegas Hero ist ein energiegeladenes Casino mit Superhelden-Thema und über 1.300 Spielen. Von der MGA lizenziert, bietet es blitzschnelle Auszahlungen, eine robuste mobile App und ein großzügiges vierstufiges Willkommenspaket.",
+    "denmark": "Vegas Hero er et energisk casino med superhelte-tema og over 1.300 spil. Licenseret af MGA tilbyder det lynhurtige udbetalinger, en robust mobilapp og en generøs velkomstpakke i fire niveauer.",
+    "finland": "Vegas Hero on energinen, supersankariteemainen kasino, jossa on yli 1 300 peliä. MGA:n lisensoimana se tarjoaa salamannopeat kotiutukset, vankan mobiilisovelluksen sekä anteliaan nelitasoisen tervetuliaispaketin.",
+    "norway": "Vegas Hero er et energisk casino med superhelt-tema og over 1 300 spill. Lisensiert av MGA tilbyr det lynraske utbetalinger, en robust mobilapp og en sjenerøs velkomstpakke i fire nivåer.",
+    "sweden": "Vegas Hero är ett energiskt casino med superhjältetema och över 1 300 spel. Licensierat av MGA erbjuder det blixtsnabba utbetalningar, en robust mobilapp och ett generöst välkomstpaket i fyra nivåer."
+  },
+  "referralUrl": "/goto/vegas-hero.php",
+  "payoutLimits": "Up to €22,000/month",
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "PlayNGo",
+    "Pragmatic",
+    "Evolution",
+    "Microgaming"
+  ],
+  "depositMethods": [
+    "Neteller",
+    "Skrill",
+    "PayPal",
+    "Jeton",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "Neteller",
+    "Skrill",
+    "PayPal",
+    "Jeton",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 47,
+  "userRecommendationsTotalNumber": 68,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#daaaaa"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/35a8e7b33b156c4873716c9925d19649119c8a15-414x135.heif",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "2rE8WwXxn5e0Pei5F6wi6l",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €100 + 50 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 100 € + 50 Freispiele",
+        "denmark": "Op til 100 € + 50 gratis spins",
+        "finland": "Jopa 100 € + 50 ilmaiskierrosta",
+        "norway": "Opptil 100 € + 50 gratisspinn",
+        "sweden": "Upp till 100 € + 50 gratissnurr"
+      },
+      "referralUrl": "/goto/vegas-hero.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/35a8e7b33b156c4873716c9925d19649119c8a15-414x135.heif",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

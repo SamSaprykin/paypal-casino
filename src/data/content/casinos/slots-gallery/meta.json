@@ -1,0 +1,60 @@
+{
+  "_id": "GFP1SwMIoaDIp6PbKJirKu",
+  "_createdAt": "2026-05-13T19:38:53Z",
+  "_updatedAt": "2026-05-15T14:10:28Z",
+  "casinoName": "Slots Gallery",
+  "slug": "slots-gallery",
+  "rating": 4.7,
+  "shortDescription": "Slots Gallery is a sleek, multi-platform casino launched in 2021. It offers over 9,500 games, a generous three-tier welcome package up to €600 plus 225 free spins, and supports both fiat and cryptocurrencies.",
+  "shortDescriptionIntl": {
+    "germany": "Slots Gallery ist ein elegantes Multi-Plattform-Casino, das 2021 gestartet ist. Es bietet über 9.500 Spiele, ein großzügiges dreistufiges Willkommenspaket bis zu 600 € plus 225 Freispiele und unterstützt sowohl Fiat als auch Kryptowährungen.",
+    "denmark": "Slots Gallery er et elegant multi-platform casino lanceret i 2021. Det byder på over 9.500 spil, en generøs velkomstpakke i tre niveauer op til 600 € plus 225 gratis spins og understøtter både fiat og kryptovalutaer.",
+    "finland": "Slots Gallery on tyylikäs, monialustainen kasino, joka avattiin vuonna 2021. Se tarjoaa yli 9 500 peliä, anteliaan kolmitasoisen tervetuliaispaketin jopa 600 euroon asti sekä 225 ilmaiskierrosta ja tukee sekä fiat- että kryptovaluuttoja.",
+    "norway": "Slots Gallery er et elegant multiplattform-casino lansert i 2021. Det byr på over 9 500 spill, en sjenerøs velkomstpakke i tre nivåer opptil 600 € pluss 225 gratisspinn og støtter både fiat og kryptovalutaer.",
+    "sweden": "Slots Gallery är ett elegant flerplattformscasino som lanserades 2021. Det erbjuder över 9 500 spel, ett generöst välkomstpaket i tre nivåer upp till 600 € plus 225 gratissnurr och stöder både fiat och kryptovalutor."
+  },
+  "referralUrl": "/goto/slotsgallery.php",
+  "payoutLimits": "€5,000 per week",
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 165,
+  "userRecommendationsTotalNumber": 205,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1f2937"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/97765fe25d78cd6e8dcfac34dfe510a9170eb93c-192x192.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": null,
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["hugo-casino", "trickz", "kukimuki"],
+    "finland": ["legzo", "bitstarz", "lets-lucky"],
+    "germany": ["lollybet", "zodiac-casino", "villento"],
+    "ireland": ["villento", "skycrown", "cleobetra"],
+    "norway": ["lets-lucky", "hugo-casino", "trickz"],
+    "sweden": ["ritzo", "cosmicslot", "rx-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["ritzo", "lucky-start", "trickz"],
+    "finland": ["rx-casino", "legzo", "1go"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["ritzo", "lucky-start", "onluck"],
+    "norway": ["legzo", "vegas-hero", "tonybet"],
+    "sweden": ["rx-casino", "rollingslots", "tonybet"]
+  }
+}

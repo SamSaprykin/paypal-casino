@@ -190,11 +190,11 @@ export default function Sudoku() {
               }}
               className={[
                 "w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-xl sm:text-2xl font-medium rounded-sm border border-transparent",
-                given[i] ? "bg-slate-200 text-slate-900" : "bg-white text-slate-900",
+                given[i]
+                  ? "bg-slate-200 text-slate-900"
+                  : "bg-white text-slate-900",
                 selected === i ? "ring-2 ring-blue-500 ring-inset z-10" : "",
-                conflictMask[i] && v > 0
-                  ? "bg-rose-200 text-rose-900"
-                  : "",
+                conflictMask[i] && v > 0 ? "bg-rose-200 text-rose-900" : "",
                 !given[i] && v > 0 && !conflictMask[i] ? "text-blue-800" : "",
                 thickL && c > 0 ? "border-l-2 !border-slate-800" : "",
                 thickT && r > 0 ? "border-t-2 !border-slate-800" : "",
@@ -245,8 +245,11 @@ export default function Sudoku() {
 
       <p className="text-sm text-slate-500 text-center max-w-xl">
         Click a cell, then a number (or 1–9 on the keyboard). Givens cannot
-        change. <kbd className="px-2 py-0.5 bg-slate-100 rounded text-sm">Backspace</kbd> clears.
-        Cmd/Ctrl+N new game.
+        change.{" "}
+        <kbd className="px-2 py-0.5 bg-slate-100 rounded text-sm">
+          Backspace
+        </kbd>{" "}
+        clears. Cmd/Ctrl+N new game.
       </p>
     </div>
   );

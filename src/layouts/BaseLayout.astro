@@ -1,11 +1,15 @@
 ---
 import '../styles/global.css';
 import SEO from '../components/SEO.astro';
+import BlockedCasinoHandler from '../components/Pages/BlockedCasinoHandler.astro';
+import type { LocaleId } from '../lib/i18n/locales';
 
 export interface Props {
   class?: string;
   /** BCP 47 / HTML lang */
   lang?: string;
+  /** UI locale for blocked-casino modal copy */
+  localeId?: LocaleId;
   seo?: {
     title?: string;
     description?: string;
@@ -22,7 +26,7 @@ export interface Props {
   };
 }
 
-const { class: className, seo, lang: langProp } = Astro.props;
+const { class: className, seo, lang: langProp, localeId = "en-IE" } = Astro.props;
 
 // Favicon configuration - using static files for better Google indexing
 const htmlLang = langProp ?? "en";
@@ -51,5 +55,6 @@ const htmlLang = langProp ?? "en";
   </head>
   <body class={`min-h-screen flex flex-col ${className || ''}`}>
     <slot />
+    <BlockedCasinoHandler localeId={localeId} />
   </body>
 </html>

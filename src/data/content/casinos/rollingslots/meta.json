@@ -1,0 +1,85 @@
+{
+  "_id": "3dPDnVRqnXOPXj2ToEOEqm",
+  "_createdAt": "2025-08-27T07:58:38Z",
+  "_updatedAt": "2026-05-31T19:28:59Z",
+  "casinoName": "Rollingslots",
+  "slug": "rollingslots",
+  "rating": 4.2,
+  "shortDescription": "Rolling Slots is a high-octane, rock-and-roll themed casino launched in 2021. It offers over 5,000 games, a unique \"Vinyl Shop\" for loyalty rewards, and a generous three-tier bonus for new players.",
+  "shortDescriptionIntl": {
+    "germany": "Rolling Slots ist ein temporeiches Casino im Rock-'n'-Roll-Stil, das 2021 gestartet ist. Es bietet über 5.000 Spiele, einen einzigartigen „Vinyl Shop“ für Treueprämien und einen großzügigen dreistufigen Bonus für neue Spieler.",
+    "denmark": "Rolling Slots er et højoktan casino med rock-'n'-roll-tema lanceret i 2021. Det byder på over 5.000 spil, en unik „Vinyl Shop“ til loyalitetsbelønninger og en generøs bonus i tre niveauer til nye spillere.",
+    "finland": "Rolling Slots on vauhdikas, rock-'n'-roll-teemainen kasino, joka avattiin vuonna 2021. Se tarjoaa yli 5 000 peliä, ainutlaatuisen „Vinyl Shop“ -uskollisuuskaupan sekä anteliaan kolmitasoisen bonuksen uusille pelaajille.",
+    "norway": "Rolling Slots er et fartsfylt casino med rock-'n'-roll-tema lansert i 2021. Det byr på over 5 000 spill, en unik «Vinyl Shop» for lojalitetsbelønninger og en sjenerøs bonus i tre nivåer for nye spillere.",
+    "sweden": "Rolling Slots är ett fartfyllt casino med rock-'n'-roll-tema som lanserades 2021. Det erbjuder över 5 000 spel, en unik ”Vinyl Shop” för lojalitetsbelöningar och en generös bonus i tre nivåer för nya spelare."
+  },
+  "referralUrl": "/goto/rollingslots.php",
+  "payoutLimits": "Up to €30,000/month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Pragmatic",
+    "Evolution",
+    "PlayNGo",
+    "Yggdrasil Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 49,
+  "userRecommendationsTotalNumber": 70,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#413d51"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/c28649d5d45bf284d196c5857d9eb9d0db0102d0-180x180.png",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "1ScGnxo4eVGSbs3tQw0DV3",
+      "name": "Welcome Bonus",
+      "code": "WELCOME BONUS",
+      "codeIntl": {
+        "germany": "WILLKOMMENSBONUS",
+        "denmark": "VELKOMSTBONUS",
+        "finland": "TERVETULIAISBONUS",
+        "norway": "VELKOMSTBONUS",
+        "sweden": "VÄLKOMSTBONUS"
+      },
+      "description": "Up to €500 + 200 Free Spins ",
+      "descriptionIntl": {
+        "germany": "Bis zu 500 € + 200 Freispiele",
+        "denmark": "Op til 500 € + 200 gratis spins",
+        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
+        "norway": "Opptil 500 € + 200 gratisspinn",
+        "sweden": "Upp till 500 € + 200 gratissnurr"
+      },
+      "referralUrl": "/goto/rollingslots.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

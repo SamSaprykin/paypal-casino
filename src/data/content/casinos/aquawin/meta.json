@@ -1,0 +1,93 @@
+{
+  "_id": "1aUEmEsO9J9dLaUakMrZWr",
+  "_createdAt": "2025-08-27T07:58:37Z",
+  "_updatedAt": "2026-05-15T13:51:51Z",
+  "casinoName": "Aquawin",
+  "slug": "aquawin",
+  "rating": 4.4,
+  "shortDescription": "Aquawin is a fresh, aquatic-themed casino launched in 2024. It features over 5,000 games, a generous welcome package with 300 free spins, and a focus on high-speed cryptocurrency transactions and low wagering.",
+  "shortDescriptionIntl": {
+    "germany": "Aquawin ist ein frisches, aquatisch gestaltetes Casino, das 2024 gestartet ist. Es bietet über 5.000 Spiele, ein großzügiges Willkommenspaket mit 300 Freispielen und legt den Fokus auf schnelle Krypto-Transaktionen und niedrige Umsatzanforderungen.",
+    "denmark": "Aquawin er et friskt, akvatisk-tematiseret casino lanceret i 2024. Det byder på over 5.000 spil, en generøs velkomstpakke med 300 gratis spins og fokus på hurtige kryptotransaktioner og lave omsætningskrav.",
+    "finland": "Aquawin on raikas, vesiteemainen kasino, joka avattiin vuonna 2024. Se tarjoaa yli 5 000 peliä, anteliaan tervetuliaispaketin 300 ilmaiskierroksella sekä keskittyy nopeisiin kryptotapahtumiin ja matalaan kierrätysvaatimukseen.",
+    "norway": "Aquawin er et friskt, akvatisk-tematisert casino lansert i 2024. Det byr på over 5 000 spill, en sjenerøs velkomstpakke med 300 gratisspinn og fokus på raske kryptotransaksjoner og lave omsetningskrav.",
+    "sweden": "Aquawin är ett fräscht, akvatiskt casino som lanserades 2024. Det erbjuder över 5 000 spel, ett generöst välkomstpaket med 300 gratissnurr och fokus på snabba kryptotransaktioner och låga omsättningskrav."
+  },
+  "referralUrl": "/goto/aquawin.php",
+  "payoutLimits": "Up to $30,000 per month",
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Big Time Gaming",
+    "Pragmatic",
+    "Fugaso",
+    "Playson",
+    "PlayNGo",
+    "Betsoft",
+    "Endorphina",
+    "Wazdan"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "eZeeWallet"
+  ],
+  "license": "Malta Gaming Authority",
+  "userRecommendationsRecommendedNumber": 39,
+  "userRecommendationsTotalNumber": 54,
+  "availableInCountries": {
+    "denmark": "",
+    "finland": "",
+    "germany": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a598c"
+  },
+  "logo": {
+    "asset": {
+      "url": "https://cdn.sanity.io/images/m33lz39x/production/6910d19445e7055d100a71d565f7db65da9b8de6-180x180.jpg",
+      "altText": null
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "4Ie7lFUgfiIyLUrhymfO7x",
+      "name": "Welcome Bonus",
+      "code": "NO CODE NEEDED",
+      "codeIntl": {
+        "germany": "KEIN CODE NÖTIG",
+        "denmark": "INGEN KODE NØDVENDIG",
+        "finland": "EI KOODIA TARVITA",
+        "norway": "INGEN KODE NØDVENDIG",
+        "sweden": "INGEN KOD BEHÖVS"
+      },
+      "description": " Up to €4500 + 400 Free Spins",
+      "descriptionIntl": {
+        "germany": "Bis zu 4.500 € + 400 Freispiele",
+        "denmark": "Op til 4.500 € + 400 gratis spins",
+        "finland": "Jopa 4 500 € + 400 ilmaiskierrosta",
+        "norway": "Opptil 4 500 € + 400 gratisspinn",
+        "sweden": "Upp till 4 500 € + 400 gratissnurr"
+      },
+      "referralUrl": "/goto/aquawin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": {
+        "asset": {
+          "url": "https://cdn.sanity.io/images/m33lz39x/production/556cb002413a94922e5468afa274ab62dca05d7a-489x159.heif",
+          "altText": null
+        }
+      }
+    }
+  ],
+  "blocked": false
+}

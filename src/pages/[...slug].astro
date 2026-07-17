@@ -9,7 +9,7 @@ import {
  getWebsitePageStaticPaths,
  localizedHref,
  type WebsiteLocaleKey,
-} from "../lib/sanity";
+} from "../lib/content";
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
@@ -73,7 +73,7 @@ const updatedDisplay = formatDisplayDate(page.updatedAt);
 const showPageDates = Boolean(page.createdAt || page.updatedAt);
 ---
 
-<BaseLayout seo={seoData} lang={htmlLang}>
+<BaseLayout seo={seoData} lang={htmlLang} localeId={localeId}>
  <Header locale={locale} localizedSlugs={page.localizedSlugs} />
  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
  {faqSchemas.length > 0 && (
