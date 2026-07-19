@@ -1,0 +1,25 @@
+---
+/**
+ * Delegated click listener for any element with data-ref-link.
+ * Pairs with Button external-ref-link / blocked modal alt CTAs / content CTAs.
+ */
+---
+
+<script>
+  import { trackReferralClick } from "../../lib/analytics";
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const el = target.closest("[data-ref-link]");
+      if (!el) return;
+
+      const casinoName = el.getAttribute("data-casino-name");
+      trackReferralClick(casinoName);
+    },
+    true,
+  );
+</script>

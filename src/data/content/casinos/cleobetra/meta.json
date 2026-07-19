@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/cleobetra.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal / e-wallets: Minutes – 24h  "
-  ],
+  "payoutTimes": ["PayPal / e-wallets: Minutes – 24h  "],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -28,16 +26,8 @@
     "Big Time Gaming",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -54,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/57fe76097813835f0dcbce77cc34ed24d6dd5b62-338x74.webp",
+      "url": "/casino-logos/cleobetra-logo.webp",
       "altText": null
     }
   },
@@ -82,75 +72,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/57fe76097813835f0dcbce77cc34ed24d6dd5b62-338x74.webp",
+          "url": "/casino-logos/cleobetra-logo.webp",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "crownplay",
-      "yukon-gold",
-      "villento"
-    ],
-    "germany": [
-      "kukimuki",
-      "lollybet",
-      "villento"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lets-lucky",
-      "kukimuki"
-    ],
-    "finland": [
-      "lucky-ones",
-      "monro",
-      "spinbetter"
-    ],
-    "norway": [
-      "coolzino",
-      "cosmicslot",
-      "lucky-ones"
-    ],
-    "sweden": [
-      "lets-lucky",
-      "klirr-casino",
-      "luckydreams"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "rx-casino",
-      "spinbetter",
-      "crownplay"
-    ],
-    "germany": [
-      "yukon-gold",
-      "kukimuki",
-      "lollybet"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "lucky-start",
-      "rx-casino",
-      "monro"
-    ],
-    "norway": [
-      "rx-casino",
-      "cosmicslot",
-      "monro"
-    ],
-    "sweden": [
-      "cosmicslot",
-      "spinbetter",
-      "rx-casino"
-    ]
-  }
+  "blocked": false
 }

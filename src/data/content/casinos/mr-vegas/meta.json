@@ -1,0 +1,67 @@
+{
+  "_id": "UlcCTJSPTLY7CndtATIpTw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Mr Vegas",
+  "slug": "mr-vegas",
+  "rating": 4.7,
+  "shortDescription": "8,000-9,600+ games (count varies slightly by source/date). Official partner of Sheffield Wednesday FC and the Professional Darts Corporation",
+  "referralUrl": "/goto/mr-vegas.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets and most methods within 24 hours; bank cards 3-5 business days (per operator-affiliated source)"
+  ],
+  "software": [],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "ecoPayz",
+    "Neosurf",
+    "Paysafecard",
+    "PayID",
+    "Bank Transfer",
+    "Bitcoin",
+    "Ethereum",
+    "Litecoin"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "ecoPayz",
+    "Neosurf"
+  ],
+  "license": "Malta Gaming Authority — MGA/CRP/258/2014/01 (Mr Vegas Limited); Great Britain Gambling Commission — 39380 (Videoslots Limited, UK market only); Alcohol and Gaming Commission of Ontario / iGaming Ontario — registration OPIG1273101 (Ontario market, via mrvegas.ca)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#ff6b35"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/mr-vegas-logo.png",
+      "altText": "Mr Vegas"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "vVGZ012SIavjdvQdGMkhKA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €200",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/mr-vegas.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

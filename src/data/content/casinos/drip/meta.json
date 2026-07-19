@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/drip.php",
   "payoutLimits": "€20,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Betsoft",
     "Microgaming",
@@ -28,16 +26,8 @@
     "Evolution",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 57,
@@ -54,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/89c3767acb45043c9890d2e2b9c69fa5d8044f6d-1000x1000.png",
+      "url": "/casino-logos/drip-logo.png",
       "altText": null
     }
   },
@@ -82,7 +72,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/89c3767acb45043c9890d2e2b9c69fa5d8044f6d-1000x1000.png",
+          "url": "/casino-logos/drip-logo.png",
           "altText": null
         }
       }

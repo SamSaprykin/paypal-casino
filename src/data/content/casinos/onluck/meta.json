@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/onluck.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -28,16 +26,8 @@
     "PlayNGo",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Curacao Gaming Commission",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 59,
@@ -54,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/22738a3e78477332c9b10be061112d67ba629b27-248x67.webp",
+      "url": "/casino-logos/onluck-logo.webp",
       "altText": null
     }
   },
@@ -82,7 +72,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/22738a3e78477332c9b10be061112d67ba629b27-248x67.webp",
+          "url": "/casino-logos/onluck-logo.webp",
           "altText": null
         }
       }
@@ -104,69 +94,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "flagman",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "corgibet",
-      "just-casino",
-      "lucky-start"
-    ],
-    "finland": [
-      "lucky-start",
-      "rx-casino",
-      "slotbox"
-    ],
-    "norway": [
-      "flagman",
-      "just-casino",
-      "legzo"
-    ],
-    "sweden": [
-      "pop-casino",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "crownplay",
-      "flagman",
-      "lucky-start"
-    ],
-    "germany": [
-      "villento",
-      "50-crowns",
-      "stake"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "finland": [
-      "drip",
-      "flagman",
-      "legzo"
-    ],
-    "norway": [
-      "drip",
-      "flagman",
-      "legzo"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

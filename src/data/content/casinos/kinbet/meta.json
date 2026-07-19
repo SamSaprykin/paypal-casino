@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/kinbet.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -27,16 +25,8 @@
     "Evolution",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 52,
   "userRecommendationsTotalNumber": 75,
@@ -53,7 +43,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/584d9efb0d7be25392459c74a8ab8c207346de01-180x180.jpg",
+      "url": "/casino-logos/kinbet-logo.svg",
       "altText": null
     }
   },
@@ -82,69 +72,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "crownplay",
-      "yukon-gold",
-      "villento"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lets-lucky",
-      "kukimuki"
-    ],
-    "finland": [
-      "slotbox",
-      "bitstarz",
-      "lucky-ones"
-    ],
-    "norway": [
-      "rx-casino",
-      "slotbox",
-      "coolzino"
-    ],
-    "sweden": [
-      "lucky-ones",
-      "spinbetter",
-      "lets-lucky"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "crownplay",
-      "flagman",
-      "lucky-start"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "monro",
-      "spinbetter",
-      "1go"
-    ],
-    "norway": [
-      "monro",
-      "spinbetter",
-      "1go"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

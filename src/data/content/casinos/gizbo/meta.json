@@ -1,0 +1,46 @@
+{
+  "_id": "pAps4O7VkoApHrlyO0LKRw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Gizbo",
+  "slug": "gizbo",
+  "rating": 4.7,
+  "shortDescription": "11,000+ games from 70+ providers. Confirmed available to Ireland (IE) but Irish players receive a lower bonus tier (50% vs 225%)",
+  "referralUrl": "/goto/gizbo.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Usually within 24 hours; crypto faster; VIP players get priority processing"
+  ],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Control Board (GALAKTIKA N.V., licence OGL/2024/169/0146, issued 28 October 2024)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#b4d04e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/gizbo-logo.svg",
+      "altText": "Gizbo"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "yPF9sKtccCXUqVE9uvwJ1Q",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "150% up to CA$600 (1st deposit), then up to 600 FS (2nd deposit), then 75% up to CA$300 (3rd deposit) — up to CA$900 + 600 FS total",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/gizbo.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

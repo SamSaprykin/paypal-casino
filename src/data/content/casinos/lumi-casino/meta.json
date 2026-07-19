@@ -1,0 +1,47 @@
+{
+  "_id": "JFs-WgXYaCmCYqka0OxOQw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Lumi Casino",
+  "slug": "lumi-casino",
+  "rating": 4.5,
+  "shortDescription": "Lumi Casino brings Irish players a sleek, mobile-first experience with 3,000+ games, fast EUR payouts, and a generous welcome package backed by MGA licensing.. Providers: Pragmatic, NetEnt, PlayNGo, Evolution, Quickspin...",
+  "referralUrl": "/goto/lumi-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets (PayPal, Skrill, Neteller): within 24 hours; Visa/Mastercard: 2–3 business days; Bank transfer: 3–5 business days"
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Quickspin"],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Gambling Commission of Great Britain (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#ceb05f"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/lumi-casino-logo.png",
+      "altText": "Lumi Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "tr3jTQi5Q4ieLuW8ZAEdxg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "200% up to €300 + 50 Free Spins (figure conflicts with some third-party sources - see bonus-level notes)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/lumi-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

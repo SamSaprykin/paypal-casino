@@ -15,27 +15,10 @@
   },
   "referralUrl": "/goto/lucky-start.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Evolution",
-    "Pragmatic",
-    "PlayNGo",
-    "Playtech"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Evolution", "Pragmatic", "PlayNGo", "Playtech"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 47,
   "userRecommendationsTotalNumber": 68,
@@ -52,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/6304e21b98881ae7fb462202cc5c8370688ea40f-500x500.heif",
+      "url": "/casino-logos/lucky-start-logo.png",
       "altText": null
     }
   },
@@ -80,7 +63,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/6304e21b98881ae7fb462202cc5c8370688ea40f-500x500.heif",
+          "url": "/casino-logos/lucky-start-logo.png",
           "altText": null
         }
       }

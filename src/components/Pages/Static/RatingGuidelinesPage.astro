@@ -1,0 +1,236 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../Layout/Header.astro";
+import Footer from "../../Layout/Footer.astro";
+import {
+  homeHrefForLocale,
+  localizedStaticPageHref,
+  getWebsitePageHrefByName,
+  type WebsiteLocaleKey,
+} from "../../../lib/content";
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateStaticPageBreadcrumbs,
+} from "../../../lib/schema";
+import { LOCALES } from "../../../lib/i18n";
+import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
+import { ratingGuidelinesCopyFor } from "../../../lib/i18n/copies/rating-guidelines";
+
+interface Props {
+  locale: WebsiteLocaleKey;
+}
+
+const { locale } = Astro.props as Props;
+const id = localeIdForWebsiteLocale(locale);
+const copy = ratingGuidelinesCopyFor(locale);
+const htmlLang = LOCALES[id].htmlLang;
+
+const canonical = localizedStaticPageHref(locale, "rating-guidelines");
+const homeHref = homeHrefForLocale(locale);
+const blockedHref = await getWebsitePageHrefByName("Blocked Casinos", locale);
+const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
+
+const seoData = {
+  title: copy.metaTitle,
+  description: copy.metaDescription,
+  canonical,
+  openGraph: {
+    title: copy.ogTitle,
+    description: copy.ogDescription,
+    type: "website",
+  },
+  keywords: copy.keywords,
+};
+
+const pageData = {
+  name: copy.schemaName,
+  title: copy.h1,
+  slug: slugForSchema,
+  description: copy.schemaDescription,
+  sys: {
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+};
+
+const webPageSchema = generateWebPageSchema(pageData);
+const breadcrumbSchema = generateBreadcrumbSchema(
+  generateStaticPageBreadcrumbs(copy.h1, {
+    homeName: copy.breadcrumbHome,
+    homeUrl: homeHref,
+  }),
+);
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: copy.processTitle,
+  description: copy.processIntro,
+  step: copy.processSteps.map((step, i) => ({
+    "@type": "HowToStep",
+    position: i + 1,
+    name: step.title,
+    text: step.body,
+  })),
+};
+---
+
+<BaseLayout seo={seoData} lang={htmlLang}>
+  <Header locale={locale} />
+
+  <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+  <main class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50 pb-16 pt-28 md:pt-32">
+    <div class="mx-auto max-w-4xl px-6">
+      <header class="mb-10 text-center md:mb-12 md:text-left">
+        <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-700">
+          {copy.schemaName}
+        </p>
+        <h1 class="text-4xl font-bold tracking-tight text-blue-950 md:text-5xl">
+          {copy.h1}
+        </h1>
+        <p class="mt-4 max-w-3xl text-lg leading-relaxed text-slate-700">
+          {copy.lead}
+        </p>
+      </header>
+
+      <aside class="mb-12 rounded-2xl border border-blue-200 bg-blue-50/80 p-6 shadow-sm">
+        <h2 class="text-lg font-semibold text-blue-950">{copy.snippetTitle}</h2>
+        <p class="mt-2 text-slate-700 leading-relaxed">{copy.snippetBody}</p>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a
+            href={homeHref}
+            class="inline-flex items-center rounded-lg bg-blue-700 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-800"
+          >
+            {copy.ctaHome}
+          </a>
+          {
+            blockedHref ? (
+              <a
+                href={blockedHref}
+                class="inline-flex items-center rounded-lg border border-blue-300 bg-white px-4 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50"
+              >
+                {copy.ctaBlocked}
+              </a>
+            ) : null
+          }
+        </div>
+      </aside>
+
+      <section class="mb-14">
+        <h2 class="text-3xl font-bold text-blue-950">{copy.processTitle}</h2>
+        <p class="mt-2 text-slate-700">{copy.processIntro}</p>
+        <ol class="mt-8 space-y-4">
+          {
+            copy.processSteps.map((step, i) => (
+              <li class="flex gap-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-blue-800 text-sm font-bold text-white">
+                  {i + 1}
+                </span>
+                <div>
+                  <h3 class="text-lg font-semibold text-slate-900">{step.title}</h3>
+                  <p class="mt-1 text-slate-700 leading-relaxed">{step.body}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-3xl font-bold text-blue-950">{copy.pillarsTitle}</h2>
+        <p class="mt-2 text-slate-700">{copy.pillarsIntro}</p>
+        <div class="mt-8 space-y-3">
+          {
+            copy.pillars.map((pillar) => (
+              <details class="group rounded-xl border border-slate-200 bg-white shadow-sm open:border-blue-300 open:shadow-md">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5">
+                  <div class="min-w-0">
+                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                      <h3 class="text-lg font-semibold text-slate-900">{pillar.name}</h3>
+                      <span class="rounded-full bg-blue-100 px-2.5 py-0.5 text-sm font-bold text-blue-800">
+                        {pillar.weight}
+                      </span>
+                    </div>
+                    <p class="mt-1 text-slate-600">{pillar.summary}</p>
+                  </div>
+                  <span class="shrink-0 text-sm font-medium text-blue-700 group-open:hidden">
+                    {copy.pillarsToggle}
+                  </span>
+                </summary>
+                <ul class="border-t border-slate-100 px-5 pb-5 pt-3 space-y-2">
+                  {pillar.details.map((item) => (
+                    <li class="flex gap-2 text-slate-700">
+                      <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="mb-14">
+        <h2 class="text-3xl font-bold text-blue-950">{copy.scoresTitle}</h2>
+        <p class="mt-2 text-slate-700">{copy.scoresIntro}</p>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2">
+          {
+            copy.bands.map((band) => (
+              <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                <p class="text-sm font-bold uppercase tracking-wide text-blue-700">
+                  {band.range}
+                </p>
+                <h3 class="mt-1 text-xl font-semibold text-slate-900">{band.label}</h3>
+                <p class="mt-2 text-slate-700 leading-relaxed">{band.body}</p>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="mb-14 grid gap-6 md:grid-cols-2">
+        <div class="rounded-xl border border-amber-200 bg-amber-50/70 p-6">
+          <h2 class="text-xl font-bold text-amber-950">{copy.updatesTitle}</h2>
+          <p class="mt-2 text-slate-800 leading-relaxed">{copy.updatesBody}</p>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 class="text-xl font-bold text-slate-900">{copy.independenceTitle}</h2>
+          <p class="mt-2 text-slate-700 leading-relaxed">{copy.independenceBody}</p>
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-3xl font-bold text-blue-950">{copy.faqTitle}</h2>
+        <div class="mt-6 space-y-3">
+          {
+            copy.faq.map((item) => (
+              <details class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+                <summary class="cursor-pointer list-none font-semibold text-slate-900">
+                  {item.question}
+                </summary>
+                <p class="mt-3 text-slate-700 leading-relaxed">{item.answer}</p>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+
+      <p class="border-t border-slate-200 pt-6 text-center text-sm text-slate-500 md:text-left">
+        {copy.footerNote}
+      </p>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</BaseLayout>
+
+<style>
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

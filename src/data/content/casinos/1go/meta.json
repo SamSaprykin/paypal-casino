@@ -15,24 +15,10 @@
   },
   "referralUrl": "/goto/1go.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Betsoft",
-    "Microgaming",
-    "Endorphina"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Betsoft", "Microgaming", "Endorphina"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 57,
@@ -49,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/051a93bf5775107f21851de972ea4fdde776b2ff-1000x1000.png",
+      "url": "/casino-logos/1go-logo.png",
       "altText": null
     }
   },
@@ -77,7 +63,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/051a93bf5775107f21851de972ea4fdde776b2ff-1000x1000.png",
+          "url": "/casino-logos/1go-logo.png",
           "altText": null
         }
       }

@@ -15,27 +15,10 @@
   },
   "referralUrl": "/goto/crownplay.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Betsoft",
-    "Pragmatic",
-    "Evolution",
-    "NetEnt"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Betsoft", "Pragmatic", "Evolution", "NetEnt"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 51,
   "userRecommendationsTotalNumber": 73,
@@ -52,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/1534f1c29a093f54fb4b26c58745430447e1be0e-180x180.png",
+      "url": "/casino-logos/crownplay-logo.svg",
       "altText": null
     }
   },

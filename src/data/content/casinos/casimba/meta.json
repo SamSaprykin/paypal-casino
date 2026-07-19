@@ -1,0 +1,47 @@
+{
+  "_id": "0G8DREBcAaW-_YcsI88Y4A",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Casimba Casino",
+  "slug": "casimba",
+  "rating": 4.5,
+  "shortDescription": "Casimba is a feature-packed online casino for Irish players offering 2,300+ games, generous welcome bonuses, and fast EUR withdrawals via PayPal, Skrill & Visa.. Providers: NetEnt, Microgaming, Pragmatic, PlayNGo, Evolution...",
+  "referralUrl": "/goto/casimba.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets (PayPal/Skrill/Neteller): within 24 hours; Visa/Mastercard: 3-5 business days; Bank transfer: 3-7 business days"
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Microgaming"],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "UK Gambling Commission (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018) — applies to customers outside Great Britain",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/casimba-logo.png",
+      "altText": "Casimba Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "6BiwZRw60zBrNvyjTj8KGA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "200% up to $5,000 + 50 FS (1st deposit), then 25% up to $1,000 + 50 FS (2nd deposit), then 50% up to $500 + 25 FS (3rd deposit) — up to $6,500 + 125 FS total",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/casimba.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

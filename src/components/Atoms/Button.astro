@@ -58,8 +58,10 @@ const classes = cn(baseStyles, variants[variant], sizes[size], className);
 
 {buttonType === "external-ref-link" && (
   <button
+    type="button"
     class={classes}
     data-ref-link={refLink}
+    data-casino-name={casinoName}
     onclick={`window.open('${refLink}', '_blank')`}
   >
     <slot />

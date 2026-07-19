@@ -103,6 +103,7 @@ const copy = BLOCKED_CASINO_MODAL_COPY[localeId];
           type="button"
           class="blocked-casino-alt-play shrink-0 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:from-blue-600 hover:to-blue-800"
           data-ref-link="${escapeHtml(alt.referralUrl)}"
+          data-casino-name="${escapeHtml(alt.casinoName)}"
         >
           ${escapeHtml(modalCopy.playNow)}
         </button>

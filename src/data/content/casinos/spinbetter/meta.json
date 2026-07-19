@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/spinbetter.php",
   "payoutLimits": "Up to €45,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes to 24 hours "
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes to 24 hours "],
   "software": [
     "Pragmatic",
     "Evolution",
@@ -29,16 +27,8 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 46,
   "userRecommendationsTotalNumber": 67,
@@ -55,7 +45,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/0ba08b8561ee7511c86e225efc2b21255389f1f6-100x100.png",
+      "url": "/casino-logos/spinbetter-logo.svg",
       "altText": null
     }
   },

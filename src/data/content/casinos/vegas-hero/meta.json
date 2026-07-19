@@ -15,30 +15,10 @@
   },
   "referralUrl": "/goto/vegas-hero.php",
   "payoutLimits": "Up to €22,000/month",
-  "payoutTimes": [
-    "E-wallets: instant",
-    "Cards: 1-3 business days"
-  ],
-  "software": [
-    "PlayNGo",
-    "Pragmatic",
-    "Evolution",
-    "Microgaming"
-  ],
-  "depositMethods": [
-    "Neteller",
-    "Skrill",
-    "PayPal",
-    "Jeton",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "Neteller",
-    "Skrill",
-    "PayPal",
-    "Jeton",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["PlayNGo", "Pragmatic", "Evolution", "Microgaming"],
+  "depositMethods": ["Neteller", "Skrill", "PayPal", "Jeton", "EcoPayz"],
+  "withdrawalMethod": ["Neteller", "Skrill", "PayPal", "Jeton", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 47,
   "userRecommendationsTotalNumber": 68,
@@ -55,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/35a8e7b33b156c4873716c9925d19649119c8a15-414x135.heif",
+      "url": "/casino-logos/vegas-hero-logo.avif",
       "altText": null
     }
   },
@@ -83,75 +63,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/35a8e7b33b156c4873716c9925d19649119c8a15-414x135.heif",
+          "url": "/casino-logos/vegas-hero-logo.avif",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "spinbetter",
-      "zodiac-casino",
-      "crownplay"
-    ],
-    "germany": [
-      "kukimuki",
-      "lollybet",
-      "villento"
-    ],
-    "denmark": [
-      "cosmicslot",
-      "lucky-ones",
-      "spinbetter"
-    ],
-    "finland": [
-      "lucky-start",
-      "rx-casino",
-      "slotbox"
-    ],
-    "norway": [
-      "kukimuki",
-      "luckydreams",
-      "50-crowns"
-    ],
-    "sweden": [
-      "klirr-casino",
-      "luckydreams",
-      "just-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "lucky-start",
-      "rx-casino",
-      "spinbetter"
-    ],
-    "germany": [
-      "yukon-gold",
-      "kukimuki",
-      "lollybet"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "norway": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

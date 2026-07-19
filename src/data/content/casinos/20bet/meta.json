@@ -1,0 +1,61 @@
+{
+  "_id": "a6e8pzaVsSpLiWtlDf0BVw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "20Bet",
+  "slug": "20bet",
+  "rating": 4.6,
+  "shortDescription": "30-level VIP/loyalty program. Combined sportsbook + casino platform",
+  "referralUrl": "/goto/20bet.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [
+    "VISA debit",
+    "Mastercard debit",
+    "Neteller",
+    "Skrill",
+    "Jeton",
+    "Bitcoin",
+    "Litecoin",
+    "Ethereum"
+  ],
+  "withdrawalMethod": [
+    "VISA debit",
+    "Mastercard debit",
+    "Neteller",
+    "Skrill",
+    "Jeton",
+    "Bitcoin"
+  ],
+  "license": "Curaçao eGaming (licence 8048/JAZ2017-067)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1e3a8a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/20bet-logo.webp",
+      "altText": "20Bet"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5okBL7MlzwWhUrJK68QLng",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €120 + 120 FS (1st deposit), then 50% up to €100 + 50 FS (2nd deposit) — up to €220 + 170 FS total",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/20bet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

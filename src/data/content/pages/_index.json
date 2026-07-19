@@ -50,5 +50,18 @@
       "norway": "/casino-bonuser/",
       "sweden": "/casinobonusar/"
     }
+  },
+  {
+    "id": "e9f1a3c4-5d6e-4f70-ab82-3c4d5e6f7081",
+    "name": "Blocked Casinos",
+    "dir": "pages/blocked-casinos",
+    "slugs": {
+      "denmark": "/blokerede-kasinoer/",
+      "finland": "/estettyt-kasinot/",
+      "germany": "/gesperrte-casinos/",
+      "ireland": "/blocked-casinos/",
+      "norway": "/blokkerte-kasinoer/",
+      "sweden": "/blockerade-casinon/"
+    }
   }
 ]

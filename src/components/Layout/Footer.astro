@@ -5,6 +5,7 @@ import {
   ROOT_WEBSITE_LOCALE,
   homeHrefForLocale,
   localizedStaticPageHref,
+  getWebsitePageHrefByName,
   type WebsiteLocaleKey,
 } from "../../lib/content";
 import { FOOTER_COPY } from "../../lib/i18n/copies/footer";
@@ -20,6 +21,10 @@ const home = homeHrefForLocale(locale);
 
 const faqHref = localizedStaticPageHref(locale, "frequently-asked-questions");
 const ratingHref = localizedStaticPageHref(locale, "rating-guidelines");
+const blockedCasinosHref = await getWebsitePageHrefByName(
+  "Blocked Casinos",
+  locale,
+);
 
 const footerNav = {
   navigationItems: [
@@ -83,6 +88,15 @@ const footerNav = {
           linkText: t.casinoRatingGuide,
           linkType: "internal",
         },
+        ...(blockedCasinosHref
+          ? [
+              {
+                linkRoute: blockedCasinosHref,
+                linkText: t.blockedCasinos,
+                linkType: "internal",
+              },
+            ]
+          : []),
         {
           linkRoute: localizedStaticPageHref(locale, "sitemap"),
           linkText: t.sitemap,

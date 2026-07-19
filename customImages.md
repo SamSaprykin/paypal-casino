@@ -3,6 +3,7 @@
 Drop files into `src/images/content/`.
 
 **Naming (locale-specific for SEO):**
+
 - Shared fallback: `{name}.webp` (used if a locale file is missing)
 - Per market: `{name}.{suffix}.webp`
 

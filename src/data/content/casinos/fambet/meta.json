@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/fambet.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -26,18 +24,8 @@
     "Yggdrasil Gaming",
     "Blueprint Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 56,
@@ -54,7 +42,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/12a7254f308309aa4c0d49f2259aba3755a050e9-256x86.webp",
+      "url": "/casino-logos/fambet-logo.png",
       "altText": null
     }
   },
@@ -82,7 +70,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/12a7254f308309aa4c0d49f2259aba3755a050e9-256x86.webp",
+          "url": "/casino-logos/fambet-logo.png",
           "altText": null
         }
       }

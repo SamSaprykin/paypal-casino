@@ -1,0 +1,67 @@
+{
+  "_id": "WKIwE8_ZzgWrv52KDQZRWg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Club House",
+  "slug": "club-house",
+  "rating": 4.7,
+  "shortDescription": "400+ live casino titles from Ezugi and Evolution Gaming. Crypto-friendly with dedicated crypto welcome package",
+  "referralUrl": "/goto/club-house.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallet withdrawals reported as instant; bank transfer/card slower (exact times not confirmed)"
+  ],
+  "software": ["Evolution"],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "ecoPayz",
+    "Neosurf",
+    "Paysafecard",
+    "PayID",
+    "Bank Transfer",
+    "Bitcoin",
+    "Ethereum",
+    "Litecoin"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "ecoPayz",
+    "Neosurf"
+  ],
+  "license": "Curaçao (Curaçao Gaming Control Board, License No. OGL/2023/174/0082, verified via Antillephone N.V.)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#cf4444"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/club-house-logo.svg",
+      "altText": "Club House"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "Un1Y_q2wCWsU3_2iR5tBVA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €2,000 + 100 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/club-house.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

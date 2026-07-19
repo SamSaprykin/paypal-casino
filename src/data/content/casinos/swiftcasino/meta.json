@@ -1,0 +1,63 @@
+{
+  "_id": "e-fDl2PBEfYTKTFGnDSn9A",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Swiftcasino",
+  "slug": "swiftcasino",
+  "rating": 4.6,
+  "shortDescription": "2,500-5,000+ games (count varies by source/date) from NetEnt, Playtech, Quickspin, Evolution. iOS and Android mobile apps available (confirmed by multiple sources)",
+  "referralUrl": "/goto/swiftcasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "A few hours to 2 working days depending on payment method; Apple Pay reported as fastest per one source"
+  ],
+  "software": ["NetEnt", "Evolution", "Quickspin"],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "Apple Pay",
+    "PayPal",
+    "EcoPayz",
+    "Skrill",
+    "Paysafecard"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "Apple Pay",
+    "PayPal",
+    "EcoPayz"
+  ],
+  "license": "Malta Gaming Authority (MGA/CRP/171/2009/01, issued 1 August 2018); UK Gambling Commission (per multiple independent reviewers; not independently re-confirmed on-site during this research); Danish Gambling Authority (per multiple independent reviewers)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1919"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/swiftcasino-logo.png",
+      "altText": "Swiftcasino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "q7gHYbrSk1y-vvIqT7jLcQ",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €100 + 50 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/swiftcasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

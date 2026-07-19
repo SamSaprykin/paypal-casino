@@ -1,0 +1,121 @@
+{
+  "_id": "e9f1a3c4-5d6e-4f70-ab82-3c4d5e6f7081",
+  "_createdAt": "2026-07-19T18:00:00Z",
+  "_updatedAt": "2026-07-19T18:00:00Z",
+  "name": "Blocked Casinos",
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "bc-intro",
+      "name": "Blocked Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "bc-list",
+      "casinoListsByCountry": {
+        "ireland": [
+          "ritzo",
+          "betiton",
+          "cleobetra",
+          "crownslots",
+          "evospin",
+          "hugo-casino",
+          "lunubet",
+          "onluck",
+          "rockwin",
+          "skycrown",
+          "tonybet",
+          "trickz",
+          "vegasnow",
+          "caspero",
+          "divaspin",
+          "kinbet",
+          "tsars",
+          "vegas-hero",
+          "vincispin",
+          "wonderluck",
+          "crownplay",
+          "glitchspin",
+          "winshark",
+          "rollingslots"
+        ],
+        "germany": [
+          "boho-casino",
+          "hugo-casino",
+          "slots-gallery",
+          "rollingslots"
+        ],
+        "denmark": [
+          "ritzo",
+          "hugo-casino",
+          "trickz",
+          "tsars",
+          "winshark",
+          "rollingslots"
+        ],
+        "finland": [
+          "cleobetra",
+          "hugo-casino",
+          "lunubet",
+          "spinsbro",
+          "vegasnow",
+          "caspero",
+          "vegas-hero",
+          "vincispin",
+          "wonderluck",
+          "aquawin",
+          "fresh-casino",
+          "rollingslots",
+          "sol-casino"
+        ],
+        "norway": [
+          "boho-casino",
+          "cleobetra",
+          "hugo-casino",
+          "lunubet",
+          "slots-gallery",
+          "tonybet",
+          "trickz",
+          "caspero",
+          "tsars",
+          "vegas-hero",
+          "vincispin",
+          "wonderluck",
+          "aquawin",
+          "winshark",
+          "fresh-casino",
+          "rollingslots",
+          "sol-casino"
+        ],
+        "sweden": [
+          "ritzo",
+          "hugo-casino",
+          "spinsbro",
+          "tonybet",
+          "frank-fred",
+          "glitchspin",
+          "winshark",
+          "rollingslots"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "bc-why",
+      "name": "Why Casinos Get Blocked"
+    },
+    {
+      "kind": "howTo",
+      "id": "bc-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "bc-alternatives",
+      "name": "Finding Alternatives"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "bc-faq"
+    }
+  ]
+}

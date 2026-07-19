@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/starda.php",
   "payoutLimits": "€20,000/week",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -26,18 +24,8 @@
     "Evolution",
     "NetEnt"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 58,
@@ -54,7 +42,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/887f23d5b39a503d99c6582206832e05d1b426a1-1000x1000.png",
+      "url": "/casino-logos/starda-logo.png",
       "altText": null
     }
   },
@@ -82,7 +70,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/887f23d5b39a503d99c6582206832e05d1b426a1-1000x1000.png",
+          "url": "/casino-logos/starda-logo.png",
           "altText": null
         }
       }

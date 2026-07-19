@@ -1,0 +1,67 @@
+{
+  "_id": "n0qxvzdN6PTf8dvdpJ8Mkg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Video Slots",
+  "slug": "video-slots",
+  "rating": 4.7,
+  "shortDescription": "4,400-11,000+ games (count varies by source/date) from 120+ software providers. No dedicated mobile app; fully mobile-optimized website",
+  "referralUrl": "/goto/video-slots.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "First withdrawal each day is fee-free; subsequent same-day withdrawals incur a €2.50 fee per one source"
+  ],
+  "software": [],
+  "depositMethods": [
+    "Debit Cards",
+    "Apple Pay",
+    "Cashtocode",
+    "Citadel",
+    "ecoPayz",
+    "Euteller",
+    "Mifinity",
+    "MuchBetter",
+    "Neteller",
+    "Paypal",
+    "Paysafecard",
+    "Rapid Transfer"
+  ],
+  "withdrawalMethod": [
+    "Debit Cards",
+    "Apple Pay",
+    "Cashtocode",
+    "Citadel",
+    "ecoPayz",
+    "Euteller"
+  ],
+  "license": "Malta Gaming Authority — MGA/CRP/258/2014 (issued 19 May 2020); UK Gambling Commission — account number 39380; Swedish Gambling Authority (Spelinspektionen) — licence 18Li7373 (Sweden only); Danish Gambling Authority (Spillemyndigheden) — licence 18-0650512 (Denmark only); Alcohol and Gaming Commission of Ontario (AGCO) / iGaming Ontario — registration OPIG1267597 (since June 2023)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1e3a8a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/video-slots-logo.png",
+      "altText": "Video Slots"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "Q4_A1IrpouGnOOsCDYXoGg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €200",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/video-slots.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

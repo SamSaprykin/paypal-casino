@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/aquawin.php",
   "payoutLimits": "Up to $30,000 per month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Big Time Gaming",
     "Pragmatic",
@@ -28,17 +26,8 @@
     "Endorphina",
     "Wazdan"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "eZeeWallet"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "eZeeWallet"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 39,
   "userRecommendationsTotalNumber": 54,
@@ -55,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/6910d19445e7055d100a71d565f7db65da9b8de6-180x180.jpg",
+      "url": "/casino-logos/aquawin-logo.jpg",
       "altText": null
     }
   },
@@ -83,75 +72,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/556cb002413a94922e5468afa274ab62dca05d7a-489x159.heif",
+          "url": "/casino-logos/aquawin-logo.jpg",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "crownplay",
-      "yukon-gold",
-      "villento"
-    ],
-    "germany": [
-      "bitstarz",
-      "zodiac-casino",
-      "yukon-gold"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lets-lucky",
-      "kukimuki"
-    ],
-    "finland": [
-      "lucky-ones",
-      "monro",
-      "spinbetter"
-    ],
-    "norway": [
-      "luckydreams",
-      "50-crowns",
-      "flagman"
-    ],
-    "sweden": [
-      "luckydreams",
-      "just-casino",
-      "pop-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "flagman",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ],
-    "finland": [
-      "spinbetter",
-      "1go",
-      "fambet"
-    ],
-    "norway": [
-      "spinbetter",
-      "1go",
-      "fambet"
-    ],
-    "sweden": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ]
-  }
+  "blocked": false
 }

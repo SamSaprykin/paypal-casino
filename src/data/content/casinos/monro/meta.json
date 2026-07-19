@@ -15,25 +15,10 @@
   },
   "referralUrl": "/goto/monro.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Microgaming",
-    "Betsoft",
-    "Endorphina",
-    "Big Time Gaming"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Microgaming", "Betsoft", "Endorphina", "Big Time Gaming"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,
@@ -50,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/282e9e50e5276280f60d21ceda5b79c962a82341-1000x1000.png",
+      "url": "/casino-logos/monro-logo.png",
       "altText": null
     }
   },
@@ -78,7 +63,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/282e9e50e5276280f60d21ceda5b79c962a82341-1000x1000.png",
+          "url": "/casino-logos/monro-logo.png",
           "altText": null
         }
       }

@@ -1,0 +1,47 @@
+{
+  "_id": "LkNVGeg8IHs5IRUAWP13GQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Irwin",
+  "slug": "irwin",
+  "rating": 4.7,
+  "shortDescription": "6,860-11,000+ games (count varies by source/date) including 330 live dealer tables. Live chat connects directly to a human agent per one detailed reviewer (unusual positive)",
+  "referralUrl": "/goto/irwin.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "0-24 hours for most methods per one source; reportedly excellent live human-agent customer support"
+  ],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Control Board — License No. OGL/2024/169/0146 (issued 28 October 2024)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#8b4646"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/irwin-logo.png",
+      "altText": "Irwin"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "BTXFeKtK16nbOc0BcUOrXA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "150% up to €300",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/irwin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

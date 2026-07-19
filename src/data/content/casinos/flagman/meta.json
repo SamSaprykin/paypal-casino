@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/flagman.php",
   "payoutLimits": " Up to €80,000–€100,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -27,18 +25,8 @@
     "Quickspin",
     "NetEnt"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,
@@ -55,7 +43,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/995b85127763f438329896880b3620fd5d75128b-293x90.png",
+      "url": "/casino-logos/flagman-logo.png",
       "altText": null
     }
   },
@@ -83,7 +71,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/995b85127763f438329896880b3620fd5d75128b-293x90.png",
+          "url": "/casino-logos/flagman-logo.png",
           "altText": null
         }
       }

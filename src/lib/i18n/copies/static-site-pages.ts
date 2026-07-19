@@ -187,6 +187,7 @@ export const STATIC_SITE_PAGES_COPY: Record<LocaleId, StaticSitePagesCopy> = {
         contact: "Contact Us",
         privacy: "Privacy Policy",
         terms: "Terms and Conditions",
+        ratingGuidelines: "Casino Rating Guide",
         classicGames: "Classic games",
         tetris: "Tetris",
         tetris50: "Tetris 50",

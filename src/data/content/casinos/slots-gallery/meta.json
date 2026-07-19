@@ -15,26 +15,10 @@
   },
   "referralUrl": "/goto/slotsgallery.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": [
-    "E-wallets: instant",
-    "Cards: 1-3 business days"
-  ],
-  "software": [
-    "NetEnt",
-    "Microgaming",
-    "Evolution",
-    "Pragmatic"
-  ],
-  "depositMethods": [
-    "Visa",
-    "Mastercard",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Visa",
-    "MasterCard",
-    "Skrill"
-  ],
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 165,
   "userRecommendationsTotalNumber": 205,
@@ -51,74 +35,26 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/97765fe25d78cd6e8dcfac34dfe510a9170eb93c-192x192.jpg",
+      "url": "/casino-logos/slots-gallery-logo.webp",
       "altText": null
     }
   },
   "bonuses": null,
   "blocked": true,
   "alternativesByCountry": {
-    "ireland": [
-      "zodiac-casino",
-      "crownplay",
-      "yukon-gold"
-    ],
-    "germany": [
-      "lollybet",
-      "villento",
-      "50-crowns"
-    ],
-    "denmark": [
-      "lucky-ones",
-      "spinbetter",
-      "lets-lucky"
-    ],
-    "finland": [
-      "luckydreams",
-      "flagman",
-      "just-casino"
-    ],
-    "norway": [
-      "monro",
-      "spinbetter",
-      "1go"
-    ],
-    "sweden": [
-      "just-casino",
-      "pop-casino",
-      "rx-casino"
-    ]
+    "denmark": ["hugo-casino", "trickz", "kukimuki"],
+    "finland": ["lumi-casino", "slotbox", "rx-casino"],
+    "germany": ["lollybet", "zodiac-casino", "villento"],
+    "ireland": ["granawin", "flagman", "20bet"],
+    "norway": ["tonybet", "cleobetra", "kukimuki"],
+    "sweden": ["tonybet", "hugo-casino", "klirr-casino"]
   },
   "alternativesPaypalByCountry": {
-    "ireland": [
-      "crownplay",
-      "flagman",
-      "lucky-start"
-    ],
-    "germany": [
-      "kukimuki",
-      "lollybet",
-      "villento"
-    ],
-    "denmark": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ],
-    "finland": [
-      "drip",
-      "flagman",
-      "legzo"
-    ],
-    "norway": [
-      "drip",
-      "flagman",
-      "legzo"
-    ],
-    "sweden": [
-      "cosmicslot",
-      "spinbetter",
-      "rx-casino"
-    ]
+    "denmark": ["ritzo", "lucky-start", "trickz"],
+    "finland": ["swiftcasino", "drip", "vegasmobilecasino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["crownslots", "lucky-start", "vegasmobilecasino"],
+    "norway": ["fambet", "tsars", "caspero"],
+    "sweden": ["tonybet", "cosmicslot", "winshark"]
   }
 }

@@ -464,7 +464,7 @@ const TipBox = ({ hastChildren, children }) => {
   );
 };
 
-const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
+const CtaBoxWithImage = ({ src, alt, className, firstBonus, casinoName }) => {
   const b = getBonusFields(firstBonus);
   const href = b?.referralUrl;
   return (
@@ -486,6 +486,8 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            data-ref-link={href}
+            data-casino-name={casinoName || b?.name}
             className={`${ctaLinkClass} group max-w-xs mt-2`}
           >
             <span>Get Bonus</span>
@@ -507,7 +509,7 @@ const CtaBoxWithImage = ({ src, alt, className, firstBonus }) => {
   );
 };
 
-const HighlightBox = ({ firstBonus, children }) => {
+const HighlightBox = ({ firstBonus, casinoName, children }) => {
   const b = getBonusFields(firstBonus);
   const href = b?.referralUrl;
   return (
@@ -520,6 +522,8 @@ const HighlightBox = ({ firstBonus, children }) => {
             href={href}
             target="_blank"
             rel="noopener noreferrer"
+            data-ref-link={href}
+            data-casino-name={casinoName || b?.name}
             className={`${ctaLinkClass} group py-4 text-base`}
           >
             <span>Play Now</span>
@@ -545,12 +549,14 @@ const GridTwoColumns = ({ children }) => {
   );
 };
 
-const InlineBonusCard = ({ bonusName, bonusInfo, bonusLink }) => (
+const InlineBonusCard = ({ bonusName, bonusInfo, bonusLink, casinoName }) => (
   <a
     id="inline-bonus"
     href={bonusLink}
     target="_blank"
     rel="noopener noreferrer"
+    data-ref-link={bonusLink}
+    data-casino-name={casinoName || bonusName}
     className="max-w-md mx-auto my-6 p-5 rounded-2xl bg-gradient-to-b from-amber-50 via-yellow-100 to-orange-100 shadow-lg border-2 border-yellow-400 flex flex-col text-center items-center space-y-2 relative overflow-hidden
  transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-2xl active:scale-95 cursor-pointer group"
     style={{
@@ -604,6 +610,7 @@ const marginTopMap = {
 export const ContentComponent = ({
   content,
   firstBonus,
+  casinoName = undefined,
   spaceBottom = 0,
   spaceTop = 0,
 }) => {
@@ -690,7 +697,10 @@ export const ContentComponent = ({
 
                   if (className.includes("highlight-box")) {
                     return (
-                      <HighlightBox firstBonus={firstBonus}>
+                      <HighlightBox
+                        firstBonus={firstBonus}
+                        casinoName={casinoName}
+                      >
                         {props.children}
                       </HighlightBox>
                     );
@@ -795,6 +805,7 @@ export const ContentComponent = ({
                         bonusName={bonusName}
                         bonusInfo={bonusInfo}
                         bonusLink={bonusLink}
+                        casinoName={casinoName}
                       />
                     );
                   }
@@ -949,7 +960,11 @@ export const ContentComponent = ({
                   const className = props.className || "";
                   if (className.includes("cta-box-with-image")) {
                     return (
-                      <CtaBoxWithImage {...props} firstBonus={firstBonus} />
+                      <CtaBoxWithImage
+                        {...props}
+                        firstBonus={firstBonus}
+                        casinoName={casinoName}
+                      />
                     );
                   }
                   return (

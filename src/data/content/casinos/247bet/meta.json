@@ -1,0 +1,47 @@
+{
+  "_id": "LL1_6FBi6K2j-2A2Sdo2ig",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "247Bet",
+  "slug": "247bet",
+  "rating": 4.5,
+  "shortDescription": "247Bet is a round-the-clock online casino and sportsbook welcoming Irish players with slots, live dealer games, and sports betting all under one roof.. Providers: Pragmatic, NetEnt, PlayNGo, Evolution, Betsoft...",
+  "referralUrl": "/goto/247bet.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets (Skrill/Neteller): within 24 hours; Visa/Mastercard: 2–4 business days; Bank Wire Transfer: 3–5 business days; Crypto (Bitcoin/Ethereum): within 12 hours"
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Betsoft"],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Gambling Commission of Great Britain (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/247bet-logo.png",
+      "altText": "247Bet"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "6eU0j-kkAyf60ONXpedx6A",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €247 + 100 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/247bet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

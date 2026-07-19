@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/spinsbro.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -26,18 +24,8 @@
     "Red Rake Gaming",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Curaçao Gaming Control Board, OGL/2023/109/0075",
   "userRecommendationsRecommendedNumber": 52,
   "userRecommendationsTotalNumber": 75,
@@ -54,7 +42,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/55842b8025999408e8be9ca7819063ac5389f1f5-1024x251.png",
+      "url": "/casino-logos/spinsbro-logo.png",
       "altText": null
     }
   },
@@ -101,67 +89,19 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "ireland": [
-      "yukon-gold",
-      "villento",
-      "50-crowns"
-    ],
-    "germany": [
-      "yukon-gold",
-      "kukimuki",
-      "lollybet"
-    ],
-    "denmark": [
-      "lets-lucky",
-      "kukimuki",
-      "luckydreams"
-    ],
-    "finland": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "norway": [
-      "starda",
-      "drip",
-      "lets-lucky"
-    ],
-    "sweden": [
-      "lucky-ones",
-      "spinbetter",
-      "lets-lucky"
-    ]
+    "denmark": ["ritzo", "lets-lucky", "luckydreams"],
+    "finland": ["legzo", "vegas-hero", "20bet"],
+    "germany": ["zodiac-casino", "bitstarz", "rollingslots"],
+    "ireland": ["crownplay", "party-poker", "villento"],
+    "norway": ["kukimuki", "fambet", "1go"],
+    "sweden": ["lets-lucky", "klirr-casino", "glitchspin"]
   },
   "alternativesPaypalByCountry": {
-    "ireland": [
-      "rx-casino",
-      "spinbetter",
-      "crownplay"
-    ],
-    "germany": [
-      "zodiac-casino",
-      "yukon-gold",
-      "kukimuki"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "finland": [
-      "fambet",
-      "starda",
-      "drip"
-    ],
-    "norway": [
-      "fambet",
-      "starda",
-      "drip"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
+    "denmark": ["winshark", "lucky-start", "trickz"],
+    "finland": ["theonlinecasino", "lucky-start", "video-slots"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["ritzo", "evospin", "spinlander-casino"],
+    "norway": ["monro", "cosmicslot", "need-for-spin-casino"],
+    "sweden": ["glitchspin", "hugo-casino", "need-for-spin-casino"]
   }
 }

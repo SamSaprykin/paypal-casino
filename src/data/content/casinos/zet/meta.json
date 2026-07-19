@@ -1,0 +1,45 @@
+{
+  "_id": "HDWY6gbKnNrW1I6716CZCw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Zet",
+  "slug": "zet",
+  "rating": 4.7,
+  "shortDescription": "7,000+ games including sportsbook (horse racing, football, and more). Established 2018 — one of the longer-running brands in its portfolio",
+  "referralUrl": "/goto/zet.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Disputed/unconfirmed — sources cite, inconsistently: Curaçao (license number given variously as 8048/JAZ2020-001 or via Antillephone as master licensor), Anjouan/Comoros (Anjouan Gaming Board), and a Philippines PAGCOR offshore license (reported by FinTelegram as the only current valid license, and explicitly NOT valid for European or most other operation)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#432d2d"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/zet-logo.webp",
+      "altText": "Zet"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "4pMnLKL0AE6yEtsXfBLeLA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €500 + 200 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/zet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

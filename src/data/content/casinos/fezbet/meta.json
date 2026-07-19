@@ -1,0 +1,61 @@
+{
+  "_id": "NvUHOAtiA223uFKiyKhWFA",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Fezbet",
+  "slug": "fezbet",
+  "rating": 4.8,
+  "shortDescription": "9,000+ games from 80+ providers. Headquartered in Willemstad, Curacao",
+  "referralUrl": "/goto/fezbet.php",
+  "payoutLimits": null,
+  "payoutTimes": ["Most withdrawals reported within 24 hours per one source"],
+  "software": [],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "Bank Transfer",
+    "Bitcoin",
+    "Ethereum",
+    "Tether (USDT)"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "Bank Transfer",
+    "Bitcoin"
+  ],
+  "license": "Curaçao (Antillephone N.V.) — license number cited inconsistently across sources: \"8048/JAZ\", \"8048/JAZ2016-064\" (Brazilian source), and \"8048/JAZ2019-015\" seen for other Rabidi-operated brands. Could not confirm the exact current number from the operator's own site; verify live before publishing.",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#7066ff"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/fezbet-logo.svg",
+      "altText": "Fezbet"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "gn4cVXuRZ2rA9Juezr-Omg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €500 + 200 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/fezbet.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/skycrown.php",
   "payoutLimits": "Up to €30,000/month ",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes to 24h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes to 24h"],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -33,18 +31,8 @@
     "NetEnt",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 44,
   "userRecommendationsTotalNumber": 63,
@@ -61,7 +49,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/deeee3f948a7b02cc2d32be28cfd04af9bfad5d8-250x250.webp",
+      "url": "/casino-logos/skycrown-logo.webp",
       "altText": null
     }
   },
@@ -89,75 +77,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/deeee3f948a7b02cc2d32be28cfd04af9bfad5d8-250x250.webp",
+          "url": "/casino-logos/skycrown-logo.webp",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "rx-casino",
-      "slotbox",
-      "coolzino"
-    ],
-    "germany": [
-      "yukon-gold",
-      "kukimuki",
-      "lollybet"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "coolzino"
-    ],
-    "finland": [
-      "spinbetter",
-      "1go",
-      "fambet"
-    ],
-    "norway": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "sweden": [
-      "rx-casino",
-      "cosmicslot",
-      "lucky-ones"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "spinbetter",
-      "crownplay",
-      "flagman"
-    ],
-    "germany": [
-      "zodiac-casino",
-      "yukon-gold",
-      "kukimuki"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "finland": [
-      "rx-casino",
-      "monro",
-      "spinbetter"
-    ],
-    "norway": [
-      "cosmicslot",
-      "monro",
-      "spinbetter"
-    ],
-    "sweden": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ]
-  }
+  "blocked": false
 }

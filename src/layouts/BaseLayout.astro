@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import SEO from '../components/SEO.astro';
 import BlockedCasinoHandler from '../components/Pages/BlockedCasinoHandler.astro';
+import ReferralClickTracker from '../components/Analytics/ReferralClickTracker.astro';
+import Analytics from '@vercel/analytics/astro';
 import type { LocaleId } from '../lib/i18n/locales';
 
 export interface Props {
@@ -52,9 +54,11 @@ const htmlLang = langProp ?? "en";
     <meta name="theme-color" content="#ffffff" />
     
     <meta name="google-site-verification" content="gBjZhuFwfuSu52WiwXxR7QGjuKSJydTs45TL6T7J3h0" />
+    <Analytics />
   </head>
   <body class={`min-h-screen flex flex-col ${className || ''}`}>
     <slot />
     <BlockedCasinoHandler localeId={localeId} />
+    <ReferralClickTracker />
   </body>
 </html>

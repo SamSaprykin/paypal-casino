@@ -1,0 +1,65 @@
+{
+  "_id": "BSPccy07UHUJ6DKvB-vUsQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Crashino",
+  "slug": "crashino",
+  "rating": 4.6,
+  "shortDescription": "Crypto-focused (Bitcoin, Ethereum, Litecoin, and others); limited fiat deposit/withdrawal options. Launched 2021-2022 depending on source",
+  "referralUrl": "/goto/crashino.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [
+    "Bitcoin",
+    "USDC (ERC-20)",
+    "DAI (ERC-20)",
+    "Ethereum",
+    "Bitcoin Cash",
+    "LiteCoin",
+    "DOGE",
+    "Tron",
+    "Binance Smart Chain (BEP-20)",
+    "USDT (TRC-20)",
+    "USDT (BEP-20)",
+    "USDT (ERC-20)"
+  ],
+  "withdrawalMethod": [
+    "Bitcoin",
+    "USDC (ERC-20)",
+    "DAI (ERC-20)",
+    "Ethereum",
+    "Bitcoin Cash",
+    "LiteCoin"
+  ],
+  "license": "Anjouan, Union of Comoros — License No. ALSI-1423 | 1005-FI2 (originally cited, under Igloo Ventures SRL); Curaçao Gaming Control Board (cited by several 2025-2026 sources, under operator MIBS N.V.); Tobique Gaming Commission (cited by one April 2026 source as the newest licence, status listed as 'pending', under a newly-renamed Costa Rican entity)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a2e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/crashino-logo.svg",
+      "altText": "Crashino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "yNtU12VLnf3yls22EDsDXA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to 1,000 USDT",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/crashino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

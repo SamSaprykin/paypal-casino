@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/rockwin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24 h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24 h"],
   "software": [
     "PlayNGo",
     "Pragmatic",
@@ -31,16 +29,8 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -57,7 +47,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/751db340c3b377691b539f85fde160d7f443fa55-588x136.png",
+      "url": "/casino-logos/rockwin-logo.png",
       "altText": null
     }
   },
@@ -85,75 +75,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/751db340c3b377691b539f85fde160d7f443fa55-588x136.png",
+          "url": "/casino-logos/rockwin-logo.png",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "slotbox",
-      "coolzino",
-      "spinbetter"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "rx-casino",
-      "coolzino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "lets-lucky",
-      "yukon-gold",
-      "luckydreams"
-    ],
-    "norway": [
-      "coolzino",
-      "cosmicslot",
-      "lucky-ones"
-    ],
-    "sweden": [
-      "lets-lucky",
-      "klirr-casino",
-      "luckydreams"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "rx-casino",
-      "spinbetter",
-      "crownplay"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "lucky-start",
-      "rx-casino",
-      "monro"
-    ],
-    "norway": [
-      "rx-casino",
-      "cosmicslot",
-      "monro"
-    ],
-    "sweden": [
-      "cosmicslot",
-      "spinbetter",
-      "rx-casino"
-    ]
-  }
+  "blocked": false
 }

@@ -1,0 +1,47 @@
+{
+  "_id": "gu-EVL8ioHM0XKwZDNzSHA",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Lex",
+  "slug": "lex",
+  "rating": 4.5,
+  "shortDescription": "7,000-8,000+ games including 314 live dealer streams and sports/esports betting. Launched 2024 — sister brand to Gizbo (same Galaktika N.V. operator)",
+  "referralUrl": "/goto/lex.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Usually within 24 hours for most methods per one source; crypto faster"
+  ],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Authority — License No. OGL/2024/169/0146 (issued 28 October 2024)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#b96464"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/lex-logo.png",
+      "altText": "Lex"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "KY0pxOEQIg-kWTtXTrvkMQ",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "150% up to €600 + 400 Free Spins (2nd deposit)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/lex.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

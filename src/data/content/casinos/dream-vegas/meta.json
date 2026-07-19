@@ -1,0 +1,47 @@
+{
+  "_id": "HKLqFUa26203cJP-zLhCcw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Dream Vegas Casino",
+  "slug": "dream-vegas",
+  "rating": 4.5,
+  "shortDescription": "Dream Vegas is a sleek, MGA-licensed casino packed with 2,000+ slots and live games, welcoming Irish players with EUR banking, PayPal, and Revolut support.. Providers: NetEnt, Microgaming, Evolution, Pragmatic, PlayNGo...",
+  "referralUrl": "/goto/dream-vegas.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets (PayPal, Neteller, Skrill): within 24 hours; Visa/Mastercard: 2-4 business days; Bank transfer: 3-5 business days"
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Microgaming"],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Gambling Commission of Great Britain (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018); Alcohol and Gaming Commission of Ontario / iGaming Ontario (for Ontario, Canada operations only, served via a separate Ontario-facing site)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#040274"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/dream-vegas-logo.png",
+      "altText": "Dream Vegas Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "yFthbuuX09adAvSaO_KXzA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% match + free spins (exact cap unconfirmed/volatile - see bonus-level notes)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/dream-vegas.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

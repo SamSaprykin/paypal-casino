@@ -1,0 +1,62 @@
+{
+  "_id": "V49uW_r2F2QEGON5HcjO1w",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Bizzocasino",
+  "slug": "bizzocasino",
+  "rating": 4.7,
+  "shortDescription": "3,000+ games from 60+ providers including Pragmatic Play, Evolution, BGaming. 30-level VIP program with escalating perks",
+  "referralUrl": "/goto/bizzocasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Crypto withdrawals typically under 1 hour; e-wallets 24 hours; bank transfers up to a few days. Daily limit $4,000, weekly $16,000, monthly $50,000."
+  ],
+  "software": ["Pragmatic", "Evolution"],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Neteller",
+    "Skrill",
+    "Ecopayz",
+    "Bitcoin",
+    "Litecoin",
+    "Ethereum"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Neteller",
+    "Skrill",
+    "Ecopayz",
+    "Bitcoin"
+  ],
+  "license": "Curaçao (Antillephone, licence 8048/JAZ2017-067); Kahnawake Gaming Commission (per multiple independent reviewers)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1e40af"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/bizzocasino-logo.svg",
+      "altText": "Bizzocasino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "m4EuozOYs5EdAXy0Myc1CQ",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €100 + 100 FS (1st deposit), then 50% up to €300 + 50 FS (2nd deposit)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/bizzocasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

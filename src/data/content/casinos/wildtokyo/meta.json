@@ -1,0 +1,62 @@
+{
+  "_id": "UsLiqtqSZANJuUw--TO_Kw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Wildtokyo",
+  "slug": "wildtokyo",
+  "rating": 4.8,
+  "shortDescription": "8,000+ games from 110+ providers. Daily Bonuses: 60+ free spins depending on day when depositing €30+",
+  "referralUrl": "/goto/wildtokyo.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Within 5 business days per one Irish-specific source; no fees on withdrawals"
+  ],
+  "software": [],
+  "depositMethods": [
+    "Revolut",
+    "Paysafecard",
+    "Jeton",
+    "Visa Debit",
+    "Skrill",
+    "Neteller",
+    "Bitcoin",
+    "Ethereum"
+  ],
+  "withdrawalMethod": [
+    "Revolut",
+    "Paysafecard",
+    "Jeton",
+    "Visa Debit",
+    "Skrill",
+    "Neteller"
+  ],
+  "license": "Curaçao — commonly cited as license 8048/JAZ, though the operator's own site reportedly doesn't display a specific license number",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#0d0f21"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/wildtokyo-logo.svg",
+      "altText": "Wildtokyo"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "NEjfo7jAJJaw-EzDbtdlFg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €150 + 100 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/wildtokyo.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "lOeIJkqXRVMvbcNlljWt5A",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Party Poker",
+  "slug": "party-poker",
+  "rating": 4.8,
+  "shortDescription": "Poker platform (cash games, tournaments, SPINS, Fast Forward) — distinct from Party Casino. 20%+ weekly rakeback available",
+  "referralUrl": "/goto/party-poker.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Malta Gaming Authority (MGA/CRP/688/2019, issued 1/10/2020); UK Gambling Commission; Gibraltar Gambling Division; South Africa (via partner arrangement, per two independent sources — not independently re-confirmed as current)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#161313"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/party-poker-logo.png",
+      "altText": "Party Poker"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "24vmWt7KcQ9OEEIy25nz9Q",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to $600 (or local currency equivalent) + $30 in tickets",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/party-poker.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,66 @@
+{
+  "_id": "Jn4j7P_pW21uPr-rdQZASw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Dragonslots",
+  "slug": "dragonslots",
+  "rating": 4.7,
+  "shortDescription": "Launched 2023-2024; relatively new brand with aggressive affiliate marketing. Friday reload: 150% up to $1,500 + 150 FS per one source",
+  "referralUrl": "/goto/dragonslots.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Withdrawal requests reviewed within 24 hours per one source; KYC not required before first withdrawal per another source (unusual and worth verifying)"
+  ],
+  "software": [],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "ApplePay",
+    "Revolut Bank Transfer",
+    "Paysafecard",
+    "Skrill",
+    "Neteller",
+    "Tether",
+    "Bitcoin",
+    "Ethereum",
+    "Litecoin",
+    "Ripple"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "ApplePay",
+    "Revolut Bank Transfer",
+    "Paysafecard",
+    "Skrill"
+  ],
+  "license": "Curaçao Gaming Control Board — License No. OGL/2024/590/0758",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#8b0000"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/dragonslots-logo.svg",
+      "altText": "Dragonslots"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "gNLyU_w0J9hVaA8kO-A3oQ",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100%-225% up to €2,250 + 25-200 Free Spins depending on deposit size",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/dragonslots.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

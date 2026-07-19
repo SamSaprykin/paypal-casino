@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/winshark.php",
   "payoutLimits": "Up to €10,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -25,18 +23,8 @@
     "Evolution",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 61,
   "userRecommendationsTotalNumber": 70,
@@ -53,7 +41,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/2f22456d059a214fe2b5d8f155c63e345294ce04-512x512.png",
+      "url": "/casino-logos/winshark-logo.svg",
       "altText": null
     }
   },
@@ -82,69 +70,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "50-crowns",
-      "flagman",
-      "lucky-start"
-    ],
-    "germany": [
-      "zodiac-casino",
-      "yukon-gold",
-      "kukimuki"
-    ],
-    "denmark": [
-      "luckydreams",
-      "corgibet",
-      "just-casino"
-    ],
-    "finland": [
-      "just-casino",
-      "legzo",
-      "lucky-start"
-    ],
-    "norway": [
-      "rx-casino",
-      "slotbox",
-      "coolzino"
-    ],
-    "sweden": [
-      "lucky-ones",
-      "spinbetter",
-      "lets-lucky"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "spinbetter",
-      "crownplay",
-      "flagman"
-    ],
-    "germany": [
-      "bitstarz",
-      "zodiac-casino",
-      "yukon-gold"
-    ],
-    "denmark": [
-      "cosmicslot",
-      "spinbetter",
-      "lucky-start"
-    ],
-    "finland": [
-      "starda",
-      "drip",
-      "flagman"
-    ],
-    "norway": [
-      "starda",
-      "drip",
-      "flagman"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

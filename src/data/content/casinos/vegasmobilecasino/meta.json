@@ -1,0 +1,62 @@
+{
+  "_id": "O2K5Nq6aSPjk3uv4mV1IiA",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Vegas Mobile Casino",
+  "slug": "vegasmobilecasino",
+  "rating": 4.8,
+  "shortDescription": "600+ games with full live casino by Evolution and integrated sportsbook. Progress Play white-label — sister brand to The Online Casino in this dataset",
+  "referralUrl": "/goto/vegasmobilecasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Described as fast; specific times not found in Ireland-specific sources"
+  ],
+  "software": ["Evolution"],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "ecoPayz",
+    "Skrill",
+    "Paypal",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "ecoPayz",
+    "Skrill",
+    "Paypal"
+  ],
+  "license": "UK Gambling Commission (account/licence number 39335); Malta Gaming Authority (MGA/B2C/231/2012)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#3a3636"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/vegasmobilecasino-logo.webp",
+      "altText": "Vegas Mobile Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "075OjpVTEsSNDCHzuOfB5A",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "Up to £1,000 + 100 Free Spins across 5 deposits",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/vegasmobilecasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

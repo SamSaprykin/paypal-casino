@@ -1,0 +1,83 @@
+{
+  "_id": "YYxXx42pPyorwcK0mTpp_Q",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Sol Casino",
+  "slug": "sol-casino",
+  "rating": 4.2,
+  "shortDescription": "3,800+ casino games from 80+ providers including Pragmatic Play, NetEnt, Evolution, Play'n GO, Nolimit City. Operated by GALAKTIKA N.V. under Curaçao Gaming Authority licence OGL/2024/169/0146",
+  "referralUrl": "/goto/sol-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Crypto withdrawals typically process within a few hours. E-wallet and card withdrawals usually take 1–5 business days. Bank transfers may take 3–5 business days. Maximum withdrawal limit is 4,000 EUR per day and 125,000 EUR per month for standard players; higher limits available for VIP tiers."
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Nolimit City"],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Interac",
+    "Bitcoin (BTC)",
+    "Ethereum (ETH)",
+    "Litecoin (LTC)",
+    "Tether (USDT)",
+    "Bitcoin Cash (BCH)",
+    "Ripple (XRP)",
+    "Binance Coin (BNB)",
+    "ecoPayz",
+    "Jeton"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Interac",
+    "Bitcoin (BTC)",
+    "Ethereum (ETH)",
+    "Litecoin (LTC)"
+  ],
+  "license": "Curaçao Gaming Authority — Licence No. OGL/2024/169/0146 (issued 28 October 2024) — operated by GALAKTIKA N.V.",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "norway": ""
+  },
+  "backgroundColor": {
+    "hex": "#ffc107"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/sol-casino-logo.png",
+      "altText": "Sol Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "zaAsLut59ICHccCH-Oq2gg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100 % jopa 600 € + jopa 500 ilmaiskierrosta",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/sol-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "rollingslots", "lets-lucky"],
+    "finland": ["vinylcasino", "fezbet", "rollingslots"],
+    "germany": ["lollybet", "zodiac-casino", "stake"],
+    "ireland": ["luna-casino", "granawin", "slotbox"],
+    "norway": ["kukimuki", "winshark", "cleobetra"],
+    "sweden": ["lets-lucky", "cosmicslot", "tonybet"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["ritzo", "cosmicslot", "lucky-start"],
+    "finland": ["vegas-hero", "caspero", "spinlander-casino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["vegasmobilecasino", "lucky-start", "crownslots"],
+    "norway": ["tonybet", "tsars", "hugo-casino"],
+    "sweden": ["winshark", "need-for-spin-casino", "tonybet"]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "_id": "lX4qhhKal4ZbUdn6erSugg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "PlayKasino",
+  "slug": "playkasino",
+  "rating": 4.2,
+  "shortDescription": "PlayKasino is an online casino available in selected markets.",
+  "referralUrl": "/goto/playkasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Malta (Malta Gaming Authority, license MGA/CRP/171/2009/01, issued 1 August 2018)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/play-casino-logo.png",
+      "altText": "PlayKasino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "5MfTMJ4DcniNdxHwsB_Qcw",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €100 + 50 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/playkasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "JujK1c0i8DToE8AneBh_lQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Vinyl Casino",
+  "slug": "vinylcasino",
+  "rating": 3.7,
+  "shortDescription": "7,000+ casino games (slots, live dealer, table games, jackpots) from 100+ software providers including Pragmatic Play, NetEnt, Evolution, Play'n GO. Dual-licensed under Curaçao Gaming Authority and Anjouan Gaming Board (Comoros), operated by Rabidi N.V.",
+  "referralUrl": "/goto/vinylcasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets and crypto typically process within 0-24 hours to 3 banking days depending on method; bank transfers and card payments take roughly 3-7 days. Withdrawal requests are processed by the finance team Monday-Friday, 6am-5pm, generally within 3 business days once verification is complete. Players may hold up to 3 pending withdrawals at a time."
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO"],
+  "depositMethods": [
+    "Interac",
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "MiFinity",
+    "eZeeWallet",
+    "CashtoCode",
+    "Bitcoin (BTC)",
+    "Ethereum (ETH)",
+    "Litecoin (LTC)",
+    "Tether (USDT)"
+  ],
+  "withdrawalMethod": [
+    "Interac",
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "MiFinity"
+  ],
+  "license": "Curaçao Gaming Authority — Curaçao eGaming licence (Antillephone N.V. master licence No. 8048/JAZ), operated by Rabidi N.V.; Anjouan Gaming Board — Government of the Autonomous Island of Anjouan, Union of Comoros (dual/secondary licence held alongside Curaçao)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "norway": ""
+  },
+  "backgroundColor": {
+    "hex": "#292230"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/vinylcasino-logo.webp",
+      "altText": "Vinyl Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "v2z90fN1pJGCy0pVDvEZ2Q",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100 % jopa 500 € + 200 ilmaiskierrosta",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/vinylcasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

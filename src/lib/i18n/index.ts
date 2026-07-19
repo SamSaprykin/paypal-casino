@@ -8,6 +8,11 @@ export {
   STATIC_SITE_PAGES_COPY,
   staticSitePagesCopyFor,
 } from "./copies/static-site-pages";
+export {
+  ratingGuidelinesCopyFor,
+  RATING_GUIDELINES_COPY,
+} from "./copies/rating-guidelines";
+export type { RatingGuidelinesCopy } from "./copies/rating-guidelines-types";
 export type {
   StaticSitePagesCopy,
   ContactPageCopy,

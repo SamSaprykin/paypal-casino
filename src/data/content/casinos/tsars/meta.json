@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/tsars.php",
   "payoutLimits": "Up to €5,000 per transaction",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -30,16 +28,8 @@
     "Spinomenal",
     "Relax Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Government of the Autonomous Island of Anjouan, Union of Comoros (License No. ALSI-202503021-FI1)",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -56,7 +46,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/def24badfb50f82a7c9a761cbd1547e3569c9d74-500x500.png",
+      "url": "/casino-logos/tsars-logo.png",
       "altText": null
     }
   },
@@ -84,75 +74,11 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/def24badfb50f82a7c9a761cbd1547e3569c9d74-500x500.png",
+          "url": "/casino-logos/tsars-logo.png",
           "altText": null
         }
       }
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "coolzino",
-      "spinbetter",
-      "zodiac-casino"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "coolzino",
-      "cosmicslot",
-      "lucky-ones"
-    ],
-    "finland": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "norway": [
-      "drip",
-      "lets-lucky",
-      "kukimuki"
-    ],
-    "sweden": [
-      "spinbetter",
-      "lets-lucky",
-      "klirr-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "crownplay",
-      "flagman",
-      "lucky-start"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "monro",
-      "spinbetter",
-      "1go"
-    ],
-    "norway": [
-      "monro",
-      "spinbetter",
-      "1go"
-    ],
-    "sweden": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ]
-  }
+  "blocked": false
 }

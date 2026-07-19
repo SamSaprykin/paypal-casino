@@ -1,0 +1,44 @@
+{
+  "_id": "WLdu34TFQYe5lyXwRY_3gQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Luckyelf",
+  "slug": "luckyelf",
+  "rating": 4.7,
+  "shortDescription": "Luckyelf is an online casino available in selected markets.",
+  "referralUrl": "/goto/luckyelf.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Control Board / Antillephone N.V. — License No. 8048/JAZ2019-015 (registration 144359)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#2d8f47"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/luckyelf-logo.png",
+      "altText": "Luckyelf"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "dG2ET1rgXJenoj2RkGtruw",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €100 + 100 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/luckyelf.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

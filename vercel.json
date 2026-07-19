@@ -135,7 +135,6 @@
       "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=tsars",
       "statusCode": 301
     },
-
     {
       "source": "/goto/trickz.php",
       "destination": "https://go.spinwise.partners/visit/?bta=982990&brand=trickz",
@@ -306,7 +305,6 @@
       "destination": "/casino-guide/:path/",
       "statusCode": 301
     },
-
     {
       "source": "/goto/spinbetter.php",
       "destination": "https://redirspinner.com/2Vxd?p=%2Fregistration%2F",
@@ -420,6 +418,176 @@
     {
       "source": "/blog/",
       "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/20bet.php",
+      "destination": "https://mu.fastmui.com/redirect.aspx?pid=410238&lpid=278&bid=1971",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/247bet.php",
+      "destination": "https://media1.casimbaaff.com/redirect.aspx?pid=55243&bid=1751",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/bizzocasino.php",
+      "destination": "https://mu.fastmui.com/redirect.aspx?pid=410207&lpid=2074&bid=2058",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/casimba.php",
+      "destination": "https://media1.casimbaaff.com/redirect.aspx?pid=55243&bid=1641",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/club-house.php",
+      "destination": "https://thecc.media/avz997yrq",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/crashino.php",
+      "destination": "https://record.crashinoaffiliates.com/_RFP1Ust_FFz6PBA04iUMN2Nd7ZgqdRLk/1/",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/dragonslots.php",
+      "destination": "https://mu.fastmui.com/redirect.aspx?pid=410207&lpid=2397&bid=2159",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/dream-vegas.php",
+      "destination": "https://media1.casimbaaff.com/redirect.aspx?pid=55243&bid=1639",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/fezbet.php",
+      "destination": "https://fzb.naralvin.com/?mid=361768_2085697",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/gizbo.php",
+      "destination": "https://gizbo-way-seven.com/cc124653e",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/granawin.php",
+      "destination": "https://mu.fastmui.com/redirect.aspx?pid=410238&lpid=2624&bid=2169",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/greatwin.php",
+      "destination": "https://grtw.naralvin.com/?mid=361768_2085698",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/irwin.php",
+      "destination": "https://irwin-way-one.com/cbbfb8f41",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lex.php",
+      "destination": "https://lex-blit10.com/c563d96a5",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/luckyelf.php",
+      "destination": "https://luckyelfpromo.com/a7qsdvknc",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lumi-casino.php",
+      "destination": "https://media1.casimbaaff.com/redirect.aspx?pid=55243&bid=1609",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/luna-casino.php",
+      "destination": "https://ads.galaxyaffiliates.com/redirect.aspx?mid=5369&sid=16511&cid=&pid=&affid=9353",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/mr-vegas.php",
+      "destination": "https://trk.affiliates.mrvegas.com/o/30oVbQ?site_id=7013919",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/need-for-spin-casino.php",
+      "destination": "https://goneedforspin.com/dugcasvsr",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/party-poker.php",
+      "destination": "https://mediaserver.entainpartners.com/renderBanner.do?zoneId=2205941",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/playkasino.php",
+      "destination": "https://games.playkasino.com/redirect.aspx?mid=5530&sid=16511&cid=&pid=&affid=9353",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/playojo.php",
+      "destination": "https://site.gotoplayojo.com/index.php?aname=samsaprykin&zone_id=80spins_ie",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/slotrave.php",
+      "destination": "https://mu.fastmui.com/redirect.aspx?pid=410207&lpid=2713&bid=2172",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/spinlander-casino.php",
+      "destination": "https://sldredirect.com/ddkqk588j",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/swiftcasino.php",
+      "destination": "https://games.swiftcasino.com/redirect.aspx?mid=5308&sid=16511&cid=&pid=&affid=9353",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/theonlinecasino.php",
+      "destination": "https://games.theonlinecasino.co.uk/redirect.aspx?mid=4131&sid=16511&cid=&pid=&affid=9353",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/vegasmobilecasino.php",
+      "destination": "https://ads.galaxyaffiliates.com/redirect.aspx?mid=4223&sid=16511&cid=&pid=&affid=9353",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/video-slots.php",
+      "destination": "https://trk.affiliates.videoslots.com/o/ZgOML3?lpage=t3P2xw&site_id=7013918",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/vinylcasino.php",
+      "destination": "https://vnl.myloric.com/?mid=378393_2197712",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/wildtokyo.php",
+      "destination": "https://gowildtokyo.com/dmoompth1",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/zet.php",
+      "destination": "https://ztc.naralvin.com/?mid=361768_2085696",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/casino-rewards.php",
+      "destination": "https://iredirect.net/referral/?site=cr&aff_id=aff117050",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/lukki.php",
+      "destination": "https://lukki.site/k10kqeybg",
+      "statusCode": 301
+    },
+    {
+      "source": "/goto/jubla-casino.php",
+      "destination": "https://record.epic.partners/_4En9KC65KNXX172zxPL8HmNd7ZgqdRLk/1/",
       "statusCode": 301
     }
   ]

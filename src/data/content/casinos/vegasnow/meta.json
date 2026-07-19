@@ -1,0 +1,63 @@
+{
+  "_id": "121Ivz9T3tcsaSmgd_JTYA",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Vegasnow",
+  "slug": "vegasnow",
+  "rating": 4.7,
+  "shortDescription": "11,000-13,000+ games from top providers. Launched 2024 — relatively new brand",
+  "referralUrl": "/goto/vegasnow.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Crypto within minutes; e-wallets within 24 hours; VIP players reported to have priority processing"
+  ],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Control Board — License No. OGL/2024/164/0246",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a237e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/vegasnow-logo.svg",
+      "altText": "Vegasnow"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "B73V1JPHqDFYe1IgQN_w-A",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "150% up to €1,500 + 200 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/vegasnow.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["coolzino", "cosmicslot", "just-casino"],
+    "finland": ["luckydreams", "rollingslots", "monro"],
+    "germany": ["kukimuki", "villento", "lollybet"],
+    "ireland": ["rx-casino", "onluck", "hugo-casino"],
+    "norway": ["kukimuki", "vinylcasino", "coolzino"],
+    "sweden": ["lets-lucky", "tonybet", "hugo-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["winshark", "hugo-casino", "ritzo"],
+    "finland": ["starda", "fambet", "vegasmobilecasino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["ritzo", "glitchspin", "lucky-start"],
+    "norway": ["tonybet", "cosmicslot", "flagman"],
+    "sweden": ["spinlander-casino", "hugo-casino", "cosmicslot"]
+  }
+}

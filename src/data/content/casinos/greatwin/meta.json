@@ -1,0 +1,34 @@
+{
+  "_id": "GFwGEdWqbLZxNAlBqAUKPw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Greatwin",
+  "slug": "greatwin",
+  "rating": 4.7,
+  "shortDescription": "3,000+ slots and 3,000+ live games per one source. Confirmed sister brand to Fezbet, Zet, and Boomerang (Rabidi N.V. group)",
+  "referralUrl": "/goto/greatwin.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "1-3 business days typically per one detailed Irish-specific source"
+  ],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Disputed — cited variously as Anjouan (Gaming Board of Anjouan, two different license numbers given by different sources), Curaçao eGaming, and PAGCOR (Philippines) — see disambiguation notes",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#50e268"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/greatwin-logo.svg",
+      "altText": "Greatwin"
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

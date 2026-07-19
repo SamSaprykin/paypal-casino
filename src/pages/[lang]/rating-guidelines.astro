@@ -1,0 +1,23 @@
+---
+import RatingGuidelinesPage from "../../components/Pages/Static/RatingGuidelinesPage.astro";
+import {
+  LOCALIZED_PAGE_LANG_CODES,
+  websiteLocaleFromPageLang,
+  type WebsiteLocaleKey,
+} from "../../lib/content";
+
+export function getStaticPaths() {
+  return LOCALIZED_PAGE_LANG_CODES.map((lang) => {
+    const locale = websiteLocaleFromPageLang(lang)!;
+    return { params: { lang }, props: { locale } };
+  });
+}
+
+interface Props {
+  locale: WebsiteLocaleKey;
+}
+
+const { locale } = Astro.props as Props;
+---
+
+<RatingGuidelinesPage locale={locale} />

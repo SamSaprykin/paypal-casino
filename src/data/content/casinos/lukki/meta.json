@@ -1,0 +1,64 @@
+{
+  "_id": "JPSaHw7OY9lJiiuBsGHzLg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Lukki",
+  "slug": "lukki",
+  "rating": 4.6,
+  "shortDescription": "3,000-14,000+ games (count varies; likely library growth since 2023 launch). Dedicated Irish domain (lukkicasino.ie) and Ireland-specific bonus page",
+  "referralUrl": "/goto/lukki.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets instant; bank transfers up to several days; KYC required before first withdrawal"
+  ],
+  "software": [],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Paysafecard",
+    "Skrill",
+    "Neteller",
+    "Jeton",
+    "MiFinity",
+    "Bitcoin",
+    "Bank Transfer"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Paysafecard",
+    "Skrill",
+    "Neteller",
+    "Jeton"
+  ],
+  "license": "Curaçao Gaming Control Board (Just Entertainment B.V., licence OGL/2024/164/0246)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a2e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/lukki-logo.svg",
+      "altText": "Lukki"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "PPhQdVv7-mmY1zso3sCamA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €500 + 100 FS, then 100% up to €500 + 50 FS, then 50% up to €1,000 + 50 FS, then 25% up to €2,000 + 100 FS — up to €4,000 + 300 FS total",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/lukki.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

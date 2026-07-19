@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/vincispin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/Skrill/Neteller: min to 24 hours "
-  ],
+  "payoutTimes": ["PayPal/Skrill/Neteller: min to 24 hours "],
   "software": [
     "Playtech",
     "PlayNGo",
@@ -29,16 +27,8 @@
     "Quickspin",
     "Thunderkick"
   ],
-  "depositMethods": [
-    "Neteller",
-    "Skrill",
-    "PayPal"
-  ],
-  "withdrawalMethod": [
-    "Neteller",
-    "Skrill",
-    "PayPal"
-  ],
+  "depositMethods": ["Neteller", "Skrill", "PayPal"],
+  "withdrawalMethod": ["Neteller", "Skrill", "PayPal"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -55,7 +45,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/fcb2e4c93c2031787c94345f59a7263f334a21d7-192x192.png",
+      "url": "/casino-logos/vincispin-logo.svg",
       "altText": null
     }
   },
@@ -84,69 +74,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "yukon-gold",
-      "villento",
-      "50-crowns"
-    ],
-    "germany": [
-      "villento",
-      "50-crowns",
-      "stake"
-    ],
-    "denmark": [
-      "lets-lucky",
-      "kukimuki",
-      "luckydreams"
-    ],
-    "finland": [
-      "lucky-ones",
-      "monro",
-      "spinbetter"
-    ],
-    "norway": [
-      "rx-casino",
-      "slotbox",
-      "coolzino"
-    ],
-    "sweden": [
-      "lucky-ones",
-      "spinbetter",
-      "lets-lucky"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "lucky-start",
-      "rx-casino",
-      "spinbetter"
-    ],
-    "germany": [
-      "lollybet",
-      "villento",
-      "50-crowns"
-    ],
-    "denmark": [
-      "cosmicslot",
-      "spinbetter",
-      "lucky-start"
-    ],
-    "finland": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "norway": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

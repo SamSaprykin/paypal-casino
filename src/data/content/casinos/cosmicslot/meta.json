@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/cosmicslot.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -27,18 +25,8 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Curacao eGaming, licence no. 8048/JAZ2019-049",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 56,
@@ -55,7 +43,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/f04e92d0fb134c99a2361de2d33005389f5fc52b-400x400.webp",
+      "url": "/casino-logos/cosmicslot-logo.jpg",
       "altText": null
     }
   },

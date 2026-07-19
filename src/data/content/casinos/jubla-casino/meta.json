@@ -1,0 +1,49 @@
+{
+  "_id": "VMe7E_tcJfyWV4vp3XaIxQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Jubla Casino",
+  "slug": "jubla-casino",
+  "rating": 3.3,
+  "shortDescription": "1,500-2,543+ casino games from 30-58+ providers (NetEnt, Pragmatic Play, Evolution Gaming, Play'n GO, Nolimit City, Hacksaw Gaming, Big Time Gaming, Push Gaming, Relax Gaming, Red Tiger, Quickspin, Yggdrasil, ELK Studios, Thunderkick, Playson, Booming Games, Inspired Gaming, G…",
+  "referralUrl": "/goto/jubla-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Swish withdrawals: near-instant (within seconds to minutes). Trustly and Zimpler: within minutes to a few hours. Bank transfer: 1-3 business days. Withdrawals are automatically approved; larger amounts may require manual review. Daily withdrawal limit: SEK 50,000 (~€4,400); weekly: SEK 150,000 (~€13,200); monthly: SEK 250,000 (~€22,000)."
+  ],
+  "software": [
+    "Pragmatic",
+    "NetEnt",
+    "Evolution",
+    "Play'n GO",
+    "Nolimit City",
+    "Yggdrasil",
+    "Quickspin",
+    "Playson"
+  ],
+  "depositMethods": ["Swish", "Trustly", "Zimpler", "Bank Transfer", "BankID"],
+  "withdrawalMethod": [
+    "Swish",
+    "Trustly",
+    "Zimpler",
+    "Bank Transfer",
+    "BankID"
+  ],
+  "license": "Swedish Gambling Authority (Spelinspektionen) — operated by CoinToss Limited (org. no. C110426), Malta, under Swedish Spellagen (SFS 2018:1138). License valid until 2030-03-03. Parent company: Nordplay Group / Buccone Trading Limited / Epic Partners.",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/jubla_casino_logo.png",
+      "altText": "Jubla Casino"
+    }
+  },
+  "bonuses": null,
+  "blocked": false
+}

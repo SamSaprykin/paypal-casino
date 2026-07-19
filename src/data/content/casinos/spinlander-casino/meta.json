@@ -1,0 +1,69 @@
+{
+  "_id": "QbSAp64-bzXuLAvystdJgw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Spinlander Casino",
+  "slug": "spinlander-casino",
+  "rating": 3,
+  "shortDescription": "15,000+ casino games from 100+ providers — one of the largest libraries in the industry. 2,500+ slots including Mega Moolah, Book of Dead, Gates of Olympus, Sweet Bonanza, Money Train 2",
+  "referralUrl": "/goto/spinlander-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets and crypto: 0-24 hours. Cards: 3-5 business days. Bank transfer: 3-5 business days. 48-hour pending period standard. Minimum withdrawal: €10 (most methods), €50 (crypto). Maximum withdrawal: €500 per day, €15,000 per month. Some sources report up to 3 pending withdrawals allowed simultaneously."
+  ],
+  "software": ["Pragmatic", "Evolution"],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "PayPal",
+    "ecoPayz",
+    "MuchBetter",
+    "MiFinity",
+    "Jeton",
+    "iDebit",
+    "Instadebit",
+    "Paysafecard"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Skrill",
+    "Neteller",
+    "PayPal",
+    "ecoPayz"
+  ],
+  "license": "Anjouan Gaming Authority (Comoro Islands) — operated by Fionex Holding LTD (reg. 15771). License No. ALSI-202409044-FI2. Sister sites: Slotsvader, Spinzen, Birdspin Casino.",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/spinlander-logo.svg",
+      "altText": "Spinlander Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "wE68a3EFnHbt34M6FVHnRg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "250% up to €2,700 + 400 FS + 22 Gems",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/spinlander-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -13,6 +13,7 @@ export interface FooterCopy {
   contactUs: string;
   frequentlyAskedQuestions: string;
   casinoRatingGuide: string;
+  blockedCasinos: string;
   sitemap: string;
   gamblingTherapyAria: string;
   gamblingTherapyLabel: string;
@@ -42,6 +43,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Contact Us",
     frequentlyAskedQuestions: "Frequently Asked Questions",
     casinoRatingGuide: "Casino Rating Guide",
+    blockedCasinos: "Blocked Casinos",
     sitemap: "Sitemap",
     gamblingTherapyAria: "Gambling Therapy (opens in a new tab)",
     gamblingTherapyLabel: "Gambling Therapy",
@@ -70,6 +72,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Kontakta oss",
     frequentlyAskedQuestions: "Vanliga frågor",
     casinoRatingGuide: "Guide till casinobetyg",
+    blockedCasinos: "Blockerade casinon",
     sitemap: "Webbplatskarta",
     gamblingTherapyAria: "Gambling Therapy (öppnas i ny flik)",
     gamblingTherapyLabel: "Gambling Therapy",
@@ -98,6 +101,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Kontakt os",
     frequentlyAskedQuestions: "Ofte stillede spørgsmål",
     casinoRatingGuide: "Guide til casino-bedømmelser",
+    blockedCasinos: "Blokerede kasinoer",
     sitemap: "Sitemap",
     gamblingTherapyAria: "Gambling Therapy (åbner i ny fane)",
     gamblingTherapyLabel: "Gambling Therapy",
@@ -126,6 +130,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Ota yhteyttä",
     frequentlyAskedQuestions: "Usein kysytyt kysymykset",
     casinoRatingGuide: "Kasinoluokituksen opas",
+    blockedCasinos: "Estetyt kasinot",
     sitemap: "Sivukartta",
     gamblingTherapyAria: "Gambling Therapy (avautuu uuteen välilehteen)",
     gamblingTherapyLabel: "Gambling Therapy",
@@ -154,6 +159,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Kontakt",
     frequentlyAskedQuestions: "Häufig gestellte Fragen",
     casinoRatingGuide: "Leitfaden zur Casino-Bewertung",
+    blockedCasinos: "Gesperrte Casinos",
     sitemap: "Sitemap",
     gamblingTherapyAria: "Gambling Therapy (öffnet in neuem Tab)",
     gamblingTherapyLabel: "Gambling Therapy",
@@ -182,6 +188,7 @@ export const FOOTER_COPY: Record<LocaleId, FooterCopy> = {
     contactUs: "Kontakt oss",
     frequentlyAskedQuestions: "Ofte stilte spørsmål",
     casinoRatingGuide: "Guide til casinovurdering",
+    blockedCasinos: "Blokkerte kasinoer",
     sitemap: "Nettstedskart",
     gamblingTherapyAria: "Gambling Therapy (åpnes i ny fane)",
     gamblingTherapyLabel: "Gambling Therapy",

@@ -1,0 +1,45 @@
+{
+  "_id": "nuv3QVBqqgJMYLKhGUc0iw",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Slotrave",
+  "slug": "slotrave",
+  "rating": 4.7,
+  "shortDescription": "Slotrave is an online casino available in selected markets.",
+  "referralUrl": "/goto/slotrave.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [],
+  "withdrawalMethod": [],
+  "license": "Curaçao Gaming Authority (cited by most sources); one source also cites Kahnawake Gaming Commission specifically for the Canadian market — not independently cross-verified",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#7c3aed"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/slotrave-logo.png",
+      "altText": "Slotrave"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "pOuXExJ5yTRd9Qde9jHJ6A",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% match + 100 Free Spins (exact cap unconfirmed)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/slotrave.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/wonderluck.php",
   "payoutLimits": "Up to €30,000/month  ",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "NetEnt",
     "PlayNGo",
@@ -28,18 +26,8 @@
     "Evolution",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 48,
   "userRecommendationsTotalNumber": 69,
@@ -56,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/3f9fad671699e1189e43d77781ab159ba445e68b-192x108.webp",
+      "url": "/casino-logos/wonderluck-logo.png",
       "altText": null
     }
   },
@@ -84,7 +72,7 @@
       "bonusBackgroundColor": null,
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/3f9fad671699e1189e43d77781ab159ba445e68b-192x108.webp",
+          "url": "/casino-logos/wonderluck-logo.png",
           "altText": null
         }
       }
@@ -92,67 +80,19 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "ireland": [
-      "spinbetter",
-      "zodiac-casino",
-      "crownplay"
-    ],
-    "germany": [
-      "bitstarz",
-      "zodiac-casino",
-      "yukon-gold"
-    ],
-    "denmark": [
-      "cosmicslot",
-      "lucky-ones",
-      "spinbetter"
-    ],
-    "finland": [
-      "starda",
-      "drip",
-      "lets-lucky"
-    ],
-    "norway": [
-      "legzo",
-      "rx-casino",
-      "slotbox"
-    ],
-    "sweden": [
-      "cosmicslot",
-      "lucky-ones",
-      "spinbetter"
-    ]
+    "denmark": ["rollingslots", "corgibet", "ritzo"],
+    "finland": ["spinbetter", "lunubet", "casimba"],
+    "germany": ["hugo-casino", "50-crowns", "villento"],
+    "ireland": ["yukon-gold", "slotbox", "divaspin"],
+    "norway": ["caspero", "flagman", "tonybet"],
+    "sweden": ["rollingslots", "luckydreams", "need-for-spin-casino"]
   },
   "alternativesPaypalByCountry": {
-    "ireland": [
-      "spinbetter",
-      "crownplay",
-      "flagman"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ],
-    "finland": [
-      "rx-casino",
-      "monro",
-      "spinbetter"
-    ],
-    "norway": [
-      "cosmicslot",
-      "monro",
-      "spinbetter"
-    ],
-    "sweden": [
-      "cosmicslot",
-      "spinbetter",
-      "rx-casino"
-    ]
+    "denmark": ["ritzo", "hugo-casino", "trickz"],
+    "finland": ["drip", "vegas-hero", "vegasmobilecasino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["lucky-start", "playojo", "vegasmobilecasino"],
+    "norway": ["tonybet", "fambet", "monro"],
+    "sweden": ["winshark", "rx-casino", "hugo-casino"]
   }
 }

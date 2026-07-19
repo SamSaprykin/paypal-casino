@@ -15,27 +15,10 @@
   },
   "referralUrl": "/goto/rollingslots.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Pragmatic",
-    "Evolution",
-    "PlayNGo",
-    "Yggdrasil Gaming"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Pragmatic", "Evolution", "PlayNGo", "Yggdrasil Gaming"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 49,
   "userRecommendationsTotalNumber": 70,
@@ -52,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/c28649d5d45bf284d196c5857d9eb9d0db0102d0-180x180.png",
+      "url": "/casino-logos/rollingslots-logo.svg",
       "altText": null
     }
   },
@@ -81,69 +64,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "lucky-start",
-      "rx-casino",
-      "slotbox"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "just-casino",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "finland": [
-      "starda",
-      "drip",
-      "lets-lucky"
-    ],
-    "norway": [
-      "cosmicslot",
-      "lucky-ones",
-      "monro"
-    ],
-    "sweden": [
-      "klirr-casino",
-      "luckydreams",
-      "just-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "lucky-start",
-      "rx-casino",
-      "spinbetter"
-    ],
-    "germany": [
-      "villento",
-      "50-crowns",
-      "stake"
-    ],
-    "denmark": [
-      "spinbetter",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "finland": [
-      "legzo",
-      "lucky-start",
-      "rx-casino"
-    ],
-    "norway": [
-      "legzo",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "sweden": [
-      "spinbetter",
-      "rx-casino",
-      "cosmicslot"
-    ]
-  }
+  "blocked": false
 }

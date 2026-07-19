@@ -19,46 +19,40 @@
       "id": "nc-list",
       "casinoListsByCountry": {
         "ireland": [
-          "slotbox",
-          "yukon-gold",
-          "onluck",
-          "kinbet",
-          "flagman"
+          "fezbet",
+          "party-poker",
+          "playojo",
+          "vegasmobilecasino",
+          "wildtokyo"
         ],
-        "germany": [
-          "stake",
-          "villento",
-          "yukon-gold",
-          "50-crowns",
-          "lollybet"
-        ],
+        "germany": ["stake", "villento", "yukon-gold", "50-crowns", "lollybet"],
         "denmark": [
           "spinbetter",
-          "winshark",
           "just-casino",
-          "ritzo",
-          "kukimuki"
+          "kukimuki",
+          "lets-lucky",
+          "luckydreams"
         ],
         "finland": [
-          "lunubet",
-          "drip",
-          "hugo-casino",
-          "spinbetter",
-          "aquawin"
+          "fezbet",
+          "party-poker",
+          "playojo",
+          "vegasmobilecasino",
+          "club-house"
         ],
         "norway": [
-          "legzo",
-          "rollingslots",
-          "wonderluck",
-          "cosmicslot",
-          "coolzino"
+          "vinylcasino",
+          "need-for-spin-casino",
+          "spinlander-casino",
+          "lets-lucky",
+          "kukimuki"
         ],
         "sweden": [
-          "just-casino",
-          "glitchspin",
-          "klirr-casino",
-          "lucky-ones",
-          "spinsbro"
+          "jubla-casino",
+          "need-for-spin-casino",
+          "spinlander-casino",
+          "lets-lucky",
+          "klirr-casino"
         ]
       }
     },

@@ -21,23 +21,9 @@
     "Bank transfer: 1-3 days",
     "Crypto: within 1 hour"
   ],
-  "software": [
-    "PlayNGo",
-    "Pragmatic",
-    "Evolution",
-    "NetEnt",
-    "Microgaming"
-  ],
-  "depositMethods": [
-    "Visa",
-    "Mastercard",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Visa",
-    "MasterCard",
-    "Skrill"
-  ],
+  "software": ["PlayNGo", "Pragmatic", "Evolution", "NetEnt", "Microgaming"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
   "license": "Curaçao 8048/JAZ",
   "userRecommendationsRecommendedNumber": 232,
   "userRecommendationsTotalNumber": 292,
@@ -54,7 +40,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/3d03dcbc6a5286442e64078df08efeb9e6807d49-500x500.webp",
+      "url": "/casino-logos/50-crowns-logo.svg",
       "altText": null
     }
   },

@@ -8,14 +8,14 @@ They are rendered through `src/components/CustomImage.astro` and referenced by
 
 Prefer a unique file per market:
 
-| Market  | Suffix | Example                         |
-| ------- | ------ | ------------------------------- |
-| Ireland | `ie`   | `new-casinos-hero.ie.webp`      |
-| Germany | `de`   | `new-casinos-hero.de.webp`      |
-| Denmark | `dk`   | `new-casinos-hero.dk.webp`      |
-| Finland | `fi`   | `new-casinos-hero.fi.webp`      |
-| Norway  | `no`   | `new-casinos-hero.no.webp`      |
-| Sweden  | `se`   | `new-casinos-hero.se.webp`      |
+| Market  | Suffix | Example                    |
+| ------- | ------ | -------------------------- |
+| Ireland | `ie`   | `new-casinos-hero.ie.webp` |
+| Germany | `de`   | `new-casinos-hero.de.webp` |
+| Denmark | `dk`   | `new-casinos-hero.dk.webp` |
+| Finland | `fi`   | `new-casinos-hero.fi.webp` |
+| Norway  | `no`   | `new-casinos-hero.no.webp` |
+| Sweden  | `se`   | `new-casinos-hero.se.webp` |
 
 Lookup order: locale file → shared `{name}.webp` → render nothing if both missing.
 See root `customImages.md` for the full checklist.

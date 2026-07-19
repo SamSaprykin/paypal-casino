@@ -51,8 +51,8 @@ const menuData = [
         <Logo />
       </a>
 
-      <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2">
-        <ul class="flex items-center lg:space-x-6">
+      <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-[calc(100%-10rem)] justify-center">
+        <ul class="flex items-center xl:space-x-2">
           {menuData.map((item, idx) => (
             <SubMenu key={idx} item={item} />
           ))}

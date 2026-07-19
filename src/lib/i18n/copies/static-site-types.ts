@@ -64,6 +64,7 @@ export interface SitemapLabels {
   contact: string;
   privacy: string;
   terms: string;
+  ratingGuidelines: string;
   classicGames: string;
   tetris: string;
   tetris50: string;

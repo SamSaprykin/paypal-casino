@@ -1,0 +1,69 @@
+{
+  "_id": "CGHhyjz-RxTgZzoN1HaVHQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Need for Spin Casino",
+  "slug": "need-for-spin-casino",
+  "rating": 3.2,
+  "shortDescription": "8,000+ casino games from 110+ providers — one of the largest libraries in the industry. 2,500+ slots including Book of the Fallen, Gates of Olympus, Money Train 4, Sweet Bonanza, Thunderstruck II",
+  "referralUrl": "/goto/need-for-spin-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets and crypto: 0-24 hours after verification. Cards: 3-7 business days. Bank transfers: 3-7 business days. Internal processing up to 3 days. Minimum withdrawal: €20 (most methods). Maximum withdrawal: €500 per day, €10,000 per month. Some sources report €500 per transaction and €10,000 per month. Up to 3 pending withdrawals allowed simultaneously."
+  ],
+  "software": ["Pragmatic", "Evolution"],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "Interac",
+    "Skrill",
+    "Neteller",
+    "PayPal",
+    "ecoPayz",
+    "MuchBetter",
+    "MiFinity",
+    "AstroPay",
+    "Paysafecard"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "Interac",
+    "Skrill",
+    "Neteller"
+  ],
+  "license": "Curaçao Gaming Control Board — operated by GBL Solutions N.V., Perseusweg 27A, Willemstad, Curaçao. License No. OGL/2024/589/0556. Registration number 155090. Sister casinos: Rolling Slots, Wild Tokyo Casino, Hugo Casino, Spinline, Glitchspin, Winshark Casino, Ritzo Casino.",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": "",
+    "norway": "",
+    "sweden": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/needforspin-logo.svg",
+      "altText": "Need for Spin Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "DpNFDO1hKXg-YZraCD5KxQ",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "300% up to €1,000 + 300 FS",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/need-for-spin-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

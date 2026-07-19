@@ -1,0 +1,82 @@
+{
+  "_id": "4L-PKuwjqEn1zhXqZRaasQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Betiton",
+  "slug": "betiton",
+  "rating": 4.7,
+  "shortDescription": "2,500+ games from 40+ providers including NetEnt, Pragmatic Play, Evolution Gaming. 300+ live dealer games (Evolution, Pragmatic Play, Playtech)",
+  "referralUrl": "/goto/betiton.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Verified withdrawals usually processed within a few working days depending on method, per the operator's own Irish site"
+  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution"],
+  "depositMethods": [
+    "VISA Debit/Mastercard Debit",
+    "Trustly",
+    "Skrill",
+    "Skrill 1-Tap",
+    "Neteller",
+    "MuchBetter",
+    "ecoPayz",
+    "Paypal",
+    "Rapid Transfer",
+    "Giropay",
+    "Astropay card",
+    "Euteller"
+  ],
+  "withdrawalMethod": [
+    "VISA Debit/Mastercard Debit",
+    "Trustly",
+    "Skrill",
+    "Skrill 1-Tap",
+    "Neteller",
+    "MuchBetter"
+  ],
+  "license": "UK Gambling Commission (AG Communications Limited, remote licence 000-039483-R-319409-001); Malta Gaming Authority (MGA/CRP/148/2007); Ontario — AGCO / iGaming Ontario (licence GRSM1252347), separate Ontario-specific entity",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/betiton-logo.webp",
+      "altText": "Betiton"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "qFYfrnrOxnn5s7MDRgu-rw",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €500 + 150 Free Spins (unverified)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/betiton.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["tsars", "rx-casino", "lucky-start"],
+    "finland": ["luckydreams", "247bet", "lunubet"],
+    "germany": ["hugo-casino", "zodiac-casino", "kukimuki"],
+    "ireland": ["greatwin", "luckyelf", "cleobetra"],
+    "norway": ["hugo-casino", "tsars", "lunubet"],
+    "sweden": ["spinbetter", "pop-casino", "luckydreams"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["rx-casino", "spinbetter", "rollingslots"],
+    "finland": ["playojo", "spinbetter", "swiftcasino"],
+    "germany": ["hugo-casino", "rollingslots"],
+    "ireland": ["cleobetra", "ritzo", "rx-casino"],
+    "norway": ["monro", "spinbetter", "flagman"],
+    "sweden": ["spinlander-casino", "cosmicslot", "spinbetter"]
+  }
+}

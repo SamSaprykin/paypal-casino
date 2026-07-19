@@ -1,0 +1,63 @@
+{
+  "_id": "n0Cr2t1LfKZUuJ0C0CI_Pg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Luna Casino",
+  "slug": "luna-casino",
+  "rating": 4.6,
+  "shortDescription": "2,000-2,700+ games including 400+ live dealer titles from Evolution and Pragmatic Play Live. Six-tier VIP Lounge loyalty program",
+  "referralUrl": "/goto/luna-casino.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "E-wallets within 24 hours after up to 48-hour pending period; cards up to 5 days; bank transfers up to 7 days"
+  ],
+  "software": ["Pragmatic", "Evolution"],
+  "depositMethods": [
+    "Visa / Mastercard",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Bank Transfer",
+    "Paysafecard",
+    "Apple Pay",
+    "Payz",
+    "Trustly"
+  ],
+  "withdrawalMethod": [
+    "Visa / Mastercard",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Bank Transfer",
+    "Paysafecard"
+  ],
+  "license": "Malta Gaming Authority (MGA/CRP/171/2009/01, issued 1 August 2018)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/luna-casino-logo.webp",
+      "altText": "Luna Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "KsC_GwmAiHyOH3SUFzNtzw",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €100 + 50 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/luna-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

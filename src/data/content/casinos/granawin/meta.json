@@ -1,0 +1,66 @@
+{
+  "_id": "cLkVtvYf0ccLNPtm2THCaQ",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Granawin",
+  "slug": "granawin",
+  "rating": 4.6,
+  "shortDescription": "9,000-15,000+ games from 105+ providers (count varies; likely reflects ongoing library growth). Combined sportsbook + casino platform",
+  "referralUrl": "/goto/granawin.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Crypto same-day; e-wallets within 24 hours; cards/bank transfers a few business days. Min withdrawal €10 for most methods. KYC required before first withdrawal."
+  ],
+  "software": [],
+  "depositMethods": [
+    "Paysafecard",
+    "Skrill",
+    "Visa",
+    "Mastercard",
+    "Bitcoin (BTC)",
+    "Litecoin (LTC)",
+    "Neteller",
+    "ApplePay",
+    "Solana (SOL)",
+    "Interac e-Transfer",
+    "Revolut",
+    "Cardano (ADA)"
+  ],
+  "withdrawalMethod": [
+    "Paysafecard",
+    "Skrill",
+    "Visa",
+    "Mastercard",
+    "Bitcoin (BTC)",
+    "Litecoin (LTC)"
+  ],
+  "license": "Curaçao Gaming Control Board (certificate OGL/2024/590/0758); Kahnawake Gaming Commission",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1b2e"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/granawin-logo.svg",
+      "altText": "Granawin"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "fl31g47QK1o3fpaRlLPvCA",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €120 + 120 FS (1st deposit), then 50% up to €100 + 50 FS (2nd deposit) — up to €220 + 170 FS total",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/granawin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

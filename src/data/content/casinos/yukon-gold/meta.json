@@ -15,24 +15,10 @@
   },
   "referralUrl": "/goto/gold-yukon.php",
   "payoutLimits": "€50,000",
-  "payoutTimes": [
-    "E-wallets: 1-2 days"
-  ],
-  "software": [
-    "Betsoft",
-    "Microgaming",
-    "Playtech"
-  ],
-  "depositMethods": [
-    "Visa",
-    "Mastercard",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Visa",
-    "MasterCard",
-    "Skrill"
-  ],
+  "payoutTimes": ["E-wallets: 1-2 days"],
+  "software": ["Betsoft", "Microgaming", "Playtech"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 281,
   "userRecommendationsTotalNumber": 339,
@@ -49,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/154287280043b75f053ab9019fc21293440a1cf6-128x75.webp",
+      "url": "/casino-logos/yukon-gold-logo.png",
       "altText": null
     }
   },
@@ -70,7 +56,7 @@
       "bonusBackgroundColor": "#1a1a2e",
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/154287280043b75f053ab9019fc21293440a1cf6-128x75.webp",
+          "url": "/casino-logos/yukon-gold-logo.png",
           "altText": null
         }
       }

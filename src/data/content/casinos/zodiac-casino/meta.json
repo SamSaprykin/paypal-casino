@@ -15,26 +15,10 @@
   },
   "referralUrl": "/goto/zodiac.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": [
-    "E-wallets: instant",
-    "Cards: 1-3 business days"
-  ],
-  "software": [
-    "NetEnt",
-    "Microgaming",
-    "Evolution",
-    "Pragmatic"
-  ],
-  "depositMethods": [
-    "Visa",
-    "Mastercard",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Visa",
-    "MasterCard",
-    "Skrill"
-  ],
+  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
+  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 177,
   "userRecommendationsTotalNumber": 224,
@@ -51,7 +35,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/77021dfdaa7c41d207a87dbbefa482169498eeb1-32x32.png",
+      "url": "/casino-logos/zodiac-logo.png",
       "altText": null
     }
   },

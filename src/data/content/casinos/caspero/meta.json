@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/caspero.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -28,18 +26,8 @@
     "Yggdrasil Gaming",
     "Big Time Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 49,
   "userRecommendationsTotalNumber": 70,
@@ -56,7 +44,7 @@
   },
   "logo": {
     "asset": {
-      "url": "https://cdn.sanity.io/images/m33lz39x/production/143f50cc9ff493bb4eac59b12ca744dadaef9c3b-320x96.heif",
+      "url": "/casino-logos/caspero-logo.avif",
       "altText": null
     }
   },
@@ -84,7 +72,7 @@
       "bonusBackgroundColor": "#1B5583",
       "bonusLogo": {
         "asset": {
-          "url": "https://cdn.sanity.io/images/m33lz39x/production/143f50cc9ff493bb4eac59b12ca744dadaef9c3b-320x96.heif",
+          "url": "/casino-logos/caspero-logo.avif",
           "altText": null
         }
       }
@@ -106,69 +94,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "ireland": [
-      "villento",
-      "50-crowns",
-      "flagman"
-    ],
-    "germany": [
-      "stake",
-      "bitstarz",
-      "zodiac-casino"
-    ],
-    "denmark": [
-      "kukimuki",
-      "luckydreams",
-      "corgibet"
-    ],
-    "finland": [
-      "yukon-gold",
-      "luckydreams",
-      "flagman"
-    ],
-    "norway": [
-      "lucky-ones",
-      "monro",
-      "spinbetter"
-    ],
-    "sweden": [
-      "luckydreams",
-      "just-casino",
-      "pop-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "ireland": [
-      "lucky-start",
-      "rx-casino",
-      "spinbetter"
-    ],
-    "germany": [
-      "50-crowns",
-      "stake",
-      "bitstarz"
-    ],
-    "denmark": [
-      "lucky-start",
-      "rx-casino",
-      "cosmicslot"
-    ],
-    "finland": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "norway": [
-      "1go",
-      "fambet",
-      "starda"
-    ],
-    "sweden": [
-      "rx-casino",
-      "cosmicslot",
-      "spinbetter"
-    ]
-  }
+  "blocked": false
 }

@@ -1,0 +1,63 @@
+{
+  "_id": "bnIoDNDKaHsuYVCkzKaEmg",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "The Online Casino",
+  "slug": "theonlinecasino",
+  "rating": 4.7,
+  "shortDescription": "3,000+ games, primarily slots. Explicitly confirmed to accept Irish players",
+  "referralUrl": "/goto/theonlinecasino.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "PayPal",
+    "Apple Pay",
+    "PaybyBank",
+    "PaysafeCard",
+    "Payz",
+    "Neteller",
+    "Skrill",
+    "Neosurf"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "PayPal",
+    "Apple Pay",
+    "PaybyBank",
+    "PaysafeCard"
+  ],
+  "license": "UK Gambling Commission AND Malta Gaming Authority (MGA) — operated by Progress Play Ltd, Malta-based",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#19191a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/theonlinecasino-logo.webp",
+      "altText": "The Online Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "2Fa7jDoZTTT-nDyxYyThBg",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €200 + 20 Free Spins",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/theonlinecasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

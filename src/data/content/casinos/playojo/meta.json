@@ -1,0 +1,65 @@
+{
+  "_id": "ZgBP78l239jgT2iDHO_Fug",
+  "_createdAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "casinoName": "Playojo",
+  "slug": "playojo",
+  "rating": 4.8,
+  "shortDescription": "No wagering requirements on any bonus (brand-wide policy). 3,000+ slots, live casino, and bingo",
+  "referralUrl": "/goto/playojo.php",
+  "payoutLimits": null,
+  "payoutTimes": [],
+  "software": [],
+  "depositMethods": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "ecoPayz",
+    "Skrill",
+    "Neteller",
+    "Direct e-banking",
+    "Citadel",
+    "Paypal",
+    "Paysafecard",
+    "MuchBetter",
+    "Fast Bank Transfer"
+  ],
+  "withdrawalMethod": [
+    "Visa Debit",
+    "Mastercard Debit",
+    "Trustly",
+    "ecoPayz",
+    "Skrill",
+    "Neteller"
+  ],
+  "license": "Malta Gaming Authority — MGA/CRP/171/2009/01; UK Gambling Commission — Licence No. 39326; Alcohol and Gaming Commission of Ontario (AGCO) / iGaming Ontario; Danish Gambling Authority (Denmark only)",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": ""
+  },
+  "backgroundColor": {
+    "hex": "#f1eaea"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/playojo-logo.webp",
+      "altText": "Playojo"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "OgNdVrhLMxV0KMmGzQZIEw",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "Up to 50 Free Spins (Book of Dead)",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/playojo.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}
