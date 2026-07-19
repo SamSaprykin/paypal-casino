@@ -3,6 +3,10 @@
   "_createdAt": "2026-05-11T11:08:46Z",
   "_updatedAt": "2026-05-22T10:24:46Z",
   "name": "Paypal Casino",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
   "components": [
     {
       "kind": "contentComponent",

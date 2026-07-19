@@ -1,0 +1,95 @@
+{
+  "_id": "f1a2b3c4-5d6e-4780-9a12-3b4c5d6e7f80",
+  "_createdAt": "2026-07-19T19:00:00Z",
+  "_updatedAt": "2026-07-19T19:00:00Z",
+  "name": "Fast Payout Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "fp-intro",
+      "name": "Fast Payout Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "fp-list",
+      "casinoListsByCountry": {
+        "ireland": [
+          "yukon-gold",
+          "villento",
+          "50-crowns",
+          "flagman",
+          "lucky-start",
+          "coolzino",
+          "spinbetter"
+        ],
+        "germany": [
+          "yukon-gold",
+          "kukimuki",
+          "lollybet",
+          "villento",
+          "50-crowns",
+          "stake",
+          "zodiac-casino"
+        ],
+        "denmark": [
+          "lets-lucky",
+          "kukimuki",
+          "luckydreams",
+          "corgibet",
+          "just-casino",
+          "spinbetter",
+          "coolzino"
+        ],
+        "finland": [
+          "lets-lucky",
+          "yukon-gold",
+          "luckydreams",
+          "flagman",
+          "just-casino",
+          "coolzino",
+          "fezbet"
+        ],
+        "norway": [
+          "lets-lucky",
+          "kukimuki",
+          "luckydreams",
+          "50-crowns",
+          "flagman",
+          "vinylcasino",
+          "need-for-spin-casino"
+        ],
+        "sweden": [
+          "lets-lucky",
+          "klirr-casino",
+          "luckydreams",
+          "just-casino",
+          "pop-casino",
+          "jubla-casino",
+          "need-for-spin-casino"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "fp-guide",
+      "name": "Fast Payout Casinos Guide"
+    },
+    {
+      "kind": "howTo",
+      "id": "fp-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "fp-verdict",
+      "name": "Fast Payout Casinos Verdict"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "fp-faq"
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Header from "../../Layout/Header.astro";
 import Footer from "../../Layout/Footer.astro";
+import PageByline from "../PageByline.astro";
 import {
   homeHrefForLocale,
   localizedStaticPageHref,
@@ -13,9 +14,10 @@ import {
   generateBreadcrumbSchema,
   generateStaticPageBreadcrumbs,
 } from "../../../lib/schema";
-import { LOCALES } from "../../../lib/i18n";
+import { LOCALES, WEBSITE_PAGE_COPY } from "../../../lib/i18n";
 import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
 import { ratingGuidelinesCopyFor } from "../../../lib/i18n/copies/rating-guidelines";
+import { resolvePageAuthors } from "../../../lib/data/authors";
 
 interface Props {
   locale: WebsiteLocaleKey;
@@ -25,11 +27,30 @@ const { locale } = Astro.props as Props;
 const id = localeIdForWebsiteLocale(locale);
 const copy = ratingGuidelinesCopyFor(locale);
 const htmlLang = LOCALES[id].htmlLang;
+const pageCopy = WEBSITE_PAGE_COPY[id];
+const { addedBy, reviewedBy } = resolvePageAuthors(undefined, locale);
 
 const canonical = localizedStaticPageHref(locale, "rating-guidelines");
 const homeHref = homeHrefForLocale(locale);
 const blockedHref = await getWebsitePageHrefByName("Blocked Casinos", locale);
 const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
+
+const publishedAt = "2026-07-17T09:00:00.000Z";
+const updatedAt = "2026-07-17T09:00:00.000Z";
+
+function formatDisplayDate(iso: string | undefined) {
+  if (!iso) return null;
+  try {
+    return new Intl.DateTimeFormat(htmlLang || "en", {
+      dateStyle: "medium",
+    }).format(new Date(iso));
+  } catch {
+    return iso;
+  }
+}
+
+const createdDisplay = formatDisplayDate(publishedAt);
+const updatedDisplay = formatDisplayDate(updatedAt);
 
 const seoData = {
   title: copy.metaTitle,
@@ -48,9 +69,13 @@ const pageData = {
   title: copy.h1,
   slug: slugForSchema,
   description: copy.schemaDescription,
+  createdAt: publishedAt,
+  updatedAt,
+  addedBy,
+  reviewedBy,
   sys: {
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
+    createdAt: publishedAt,
+    updatedAt,
   },
 };
 
@@ -85,6 +110,19 @@ const howToSchema = {
 
   <main class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50 pb-16 pt-28 md:pt-32">
     <div class="mx-auto max-w-4xl px-6">
+      <div
+        class="mb-8 overflow-hidden rounded-xl border border-slate-200/90 bg-white/80 shadow-sm"
+      >
+        <PageByline
+          copy={pageCopy}
+          createdAt={publishedAt}
+          updatedAt={updatedAt}
+          createdDisplay={createdDisplay}
+          updatedDisplay={updatedDisplay}
+          addedBy={addedBy}
+          reviewedBy={reviewedBy}
+        />
+      </div>
       <header class="mb-10 text-center md:mb-12 md:text-left">
         <p class="mb-3 text-sm font-semibold uppercase tracking-wide text-blue-700">
           {copy.schemaName}

@@ -1,0 +1,95 @@
+{
+  "_id": "a2b3c4d5-6e7f-4891-ab23-4c5d6e7f8091",
+  "_createdAt": "2026-07-19T19:00:00Z",
+  "_updatedAt": "2026-07-19T19:00:00Z",
+  "name": "Mobile Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "mc-intro",
+      "name": "Mobile Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "mc-list",
+      "casinoListsByCountry": {
+        "ireland": [
+          "yukon-gold",
+          "villento",
+          "50-crowns",
+          "flagman",
+          "lucky-start",
+          "coolzino",
+          "spinbetter"
+        ],
+        "germany": [
+          "yukon-gold",
+          "kukimuki",
+          "lollybet",
+          "villento",
+          "50-crowns",
+          "stake",
+          "zodiac-casino"
+        ],
+        "denmark": [
+          "lets-lucky",
+          "kukimuki",
+          "luckydreams",
+          "corgibet",
+          "just-casino",
+          "spinbetter",
+          "coolzino"
+        ],
+        "finland": [
+          "lets-lucky",
+          "yukon-gold",
+          "luckydreams",
+          "flagman",
+          "just-casino",
+          "coolzino",
+          "fezbet"
+        ],
+        "norway": [
+          "lets-lucky",
+          "kukimuki",
+          "luckydreams",
+          "50-crowns",
+          "flagman",
+          "vinylcasino",
+          "need-for-spin-casino"
+        ],
+        "sweden": [
+          "lets-lucky",
+          "klirr-casino",
+          "luckydreams",
+          "just-casino",
+          "pop-casino",
+          "jubla-casino",
+          "need-for-spin-casino"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "mc-guide",
+      "name": "Mobile Casinos Guide"
+    },
+    {
+      "kind": "howTo",
+      "id": "mc-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "mc-verdict",
+      "name": "Mobile Casinos Verdict"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "mc-faq"
+    }
+  ]
+}

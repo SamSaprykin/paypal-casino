@@ -3,6 +3,10 @@
   "_createdAt": "2026-07-17T09:00:00Z",
   "_updatedAt": "2026-07-17T09:00:00Z",
   "name": "New Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
   "components": [
     {
       "kind": "contentComponent",
@@ -25,7 +29,13 @@
           "vegasmobilecasino",
           "wildtokyo"
         ],
-        "germany": ["stake", "villento", "yukon-gold", "50-crowns", "lollybet"],
+        "germany": [
+          "stake",
+          "villento",
+          "yukon-gold",
+          "50-crowns",
+          "lollybet"
+        ],
         "denmark": [
           "spinbetter",
           "just-casino",

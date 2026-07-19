@@ -134,6 +134,39 @@ export function generateFAQSchema(faqComponent) {
   return createBaseSchema(SCHEMA_TYPES.FAQ_PAGE, { mainEntity: faqItems });
 }
 
+function personSchemaFromAuthor(author, baseUrl) {
+  if (!author?.name) return null;
+  const person = {
+    "@type": SCHEMA_TYPES.PERSON,
+    name: author.name,
+  };
+  if (author.image) {
+    person.image = ensureAbsoluteUrl(author.image, baseUrl);
+  }
+  if (author.role) {
+    person.jobTitle = author.role;
+  }
+  if (author.bio) {
+    person.description = cleanTextForSchema(author.bio, 300);
+  }
+  if (author.email) {
+    person.email = author.email;
+  }
+  const sameAs = [
+    author.socialLinks?.linkedin,
+    author.socialLinks?.x,
+    author.socialLinks?.facebook,
+    author.socialLinks?.instagram,
+    ...(Array.isArray(author.externalProfiles)
+      ? author.externalProfiles.map((p) => p?.url).filter(Boolean)
+      : []),
+  ].filter(Boolean);
+  if (sameAs.length) {
+    person.sameAs = sameAs;
+  }
+  return person;
+}
+
 // WebPage schema for static pages
 export function generateWebPageSchema(page, baseUrl = "https://ppcasinos.co") {
   if (!page) return null;
@@ -151,6 +184,9 @@ export function generateWebPageSchema(page, baseUrl = "https://ppcasinos.co") {
     slugPath === "/" ? baseUrl : ensureAbsoluteUrl(slugPath, baseUrl);
 
   const seoFields = page.seo ?? page.seoComponent?.fields ?? page.seoComponent;
+
+  const author = personSchemaFromAuthor(page.addedBy, baseUrl);
+  const reviewedBy = personSchemaFromAuthor(page.reviewedBy, baseUrl);
 
   return createBaseSchema(SCHEMA_TYPES.WEB_PAGE, {
     name: page.name || page.title,
@@ -176,6 +212,8 @@ export function generateWebPageSchema(page, baseUrl = "https://ppcasinos.co") {
         page.createdAt ??
         page.sys?.createdAt,
     ),
+    ...(author ? { author } : {}),
+    ...(reviewedBy ? { reviewedBy } : {}),
   });
 }
 

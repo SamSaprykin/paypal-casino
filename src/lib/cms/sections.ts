@@ -7,6 +7,8 @@ import { adaptCasinoForCard } from "./cards";
 import type { WebsiteLocaleKey } from "./locales";
 import { pickIntlCasinoList } from "./intl";
 import { pickIntlMarkdown } from "./intlMarkdown";
+import type { PageAuthorRef } from "../data/authors";
+import { resolvePageAuthors } from "../data/authors";
 
 export type PageSection =
   | CasinoListSection
@@ -93,6 +95,8 @@ export interface WebsitePage {
   localizedSlugs?: Partial<Record<WebsiteLocaleKey, string>>;
   seo?: PageSeo;
   sections: PageSection[];
+  addedBy?: PageAuthorRef;
+  reviewedBy?: PageAuthorRef;
 }
 
 // ---------- Helpers ----------
@@ -256,6 +260,12 @@ export function adaptWebsitePage(
     .map((section) => adaptSection(section, locale, reviewBodyMap, cardOptions))
     .filter(Boolean) as PageSection[];
 
+  const authorsMeta =
+    raw.authors && typeof raw.authors === "object"
+      ? (raw.authors as { addedBy?: string; reviewedBy?: string })
+      : undefined;
+  const { addedBy, reviewedBy } = resolvePageAuthors(authorsMeta, locale);
+
   return {
     id: String(raw._id ?? ""),
     name: asString(raw.name),
@@ -264,5 +274,7 @@ export function adaptWebsitePage(
     updatedAt: asString(raw._updatedAt),
     seo,
     sections,
+    addedBy,
+    reviewedBy,
   };
 }

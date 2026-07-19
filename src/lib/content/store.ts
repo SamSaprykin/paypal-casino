@@ -618,6 +618,7 @@ async function assemblePageDoc(
     _createdAt: bundle.meta._createdAt,
     _updatedAt: bundle.meta._updatedAt,
     name: bundle.meta.name,
+    authors: bundle.meta.authors,
     slug: fm.slug,
     seoComponent: fm.seo,
     components,

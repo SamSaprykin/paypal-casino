@@ -63,5 +63,31 @@
       "norway": "/blokkerte-kasinoer/",
       "sweden": "/blockerade-casinon/"
     }
+  },
+  {
+    "id": "f1a2b3c4-5d6e-4780-9a12-3b4c5d6e7f80",
+    "name": "Fast Payout Casinos",
+    "dir": "pages/fast-payout-casinos",
+    "slugs": {
+      "ireland": "/fast-payout-casinos/",
+      "germany": "/casinos-mit-schneller-auszahlung/",
+      "denmark": "/kasinoer-med-hurtig-udbetaling/",
+      "finland": "/nopeat-kotiutukset-kasinot/",
+      "norway": "/kasinoer-med-rask-utbetaling/",
+      "sweden": "/casinon-med-snabb-utbetalning/"
+    }
+  },
+  {
+    "id": "a2b3c4d5-6e7f-4891-ab23-4c5d6e7f8091",
+    "name": "Mobile Casinos",
+    "dir": "pages/mobile-casinos",
+    "slugs": {
+      "ireland": "/mobile-casinos/",
+      "germany": "/handy-casinos/",
+      "denmark": "/mobil-kasinoer/",
+      "finland": "/mobiilikasinot/",
+      "norway": "/mobilkasinoer/",
+      "sweden": "/mobilcasinon/"
+    }
   }
 ]

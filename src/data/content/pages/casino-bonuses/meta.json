@@ -3,11 +3,30 @@
   "_createdAt": "2026-07-17T09:00:00Z",
   "_updatedAt": "2026-07-17T09:00:00Z",
   "name": "Bonuses",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
   "components": [
-    { "kind": "contentComponent", "id": "bn-intro", "name": "Bonuses Intro" },
-    { "kind": "image", "id": "bn-img-hero", "src": "casino-bonuses-hero.webp" },
-    { "kind": "bonusesList", "id": "bn-list" },
-    { "kind": "contentComponent", "id": "bn-types", "name": "Bonus Types" },
+    {
+      "kind": "contentComponent",
+      "id": "bn-intro",
+      "name": "Bonuses Intro"
+    },
+    {
+      "kind": "image",
+      "id": "bn-img-hero",
+      "src": "casino-bonuses-hero.webp"
+    },
+    {
+      "kind": "bonusesList",
+      "id": "bn-list"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "bn-types",
+      "name": "Bonus Types"
+    },
     {
       "kind": "image",
       "id": "bn-img-welcome",
@@ -23,8 +42,15 @@
       "id": "bn-img-wagering",
       "src": "casino-bonuses-wagering.webp"
     },
-    { "kind": "howTo", "id": "bn-howto" },
-    { "kind": "contentComponent", "id": "bn-freespins", "name": "Free Spins" },
+    {
+      "kind": "howTo",
+      "id": "bn-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "bn-freespins",
+      "name": "Free Spins"
+    },
     {
       "kind": "image",
       "id": "bn-img-freespins",
@@ -40,6 +66,9 @@
       "id": "bn-img-cashback",
       "src": "casino-bonuses-cashback-vip.webp"
     },
-    { "kind": "faqComponent", "id": "bn-faq" }
+    {
+      "kind": "faqComponent",
+      "id": "bn-faq"
+    }
   ]
 }

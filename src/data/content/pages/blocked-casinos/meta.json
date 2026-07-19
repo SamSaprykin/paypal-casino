@@ -3,6 +3,10 @@
   "_createdAt": "2026-07-19T18:00:00Z",
   "_updatedAt": "2026-07-19T18:00:00Z",
   "name": "Blocked Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
   "components": [
     {
       "kind": "contentComponent",
