@@ -13,6 +13,7 @@ import {
   Joystick,
   Coins,
   Lightbulb,
+  Clock,
   Trophy,
   DollarSign,
   Sparkles,
@@ -280,6 +281,22 @@ const InfoCard = ({ children }) => {
       <div className="flex flex-col md:flex-row items-start gap-4">
         <Info className="w-7 h-7 text-blue-500 mt-1 flex-shrink-0" />
         <div className="min-w-0 flex-1 text-blue-900 leading-relaxed text-base">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ContentFreshness = ({ children }) => {
+  return (
+    <div className="my-8 border-l-4 border-emerald-400 bg-emerald-50/60 px-4 lg:px-8 py-2 lg:py-6 rounded-xl shadow content-freshness">
+      <div className="flex flex-col md:flex-row items-start gap-4">
+        <Clock
+          className="w-7 h-7 text-emerald-600 mt-1 flex-shrink-0"
+          aria-hidden
+        />
+        <div className="min-w-0 flex-1 text-emerald-900 leading-relaxed text-base">
           {children}
         </div>
       </div>
@@ -707,6 +724,11 @@ export const ContentComponent = ({
                   }
                   if (className.includes("info-card")) {
                     return <InfoCard>{props.children}</InfoCard>;
+                  }
+                  if (className.includes("content-freshness")) {
+                    return (
+                      <ContentFreshness>{props.children}</ContentFreshness>
+                    );
                   }
                   if (className.includes("tip-box")) {
                     return (

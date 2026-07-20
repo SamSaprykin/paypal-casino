@@ -35,58 +35,122 @@ export const HOME_CMS_SLUG: Record<WebsiteLocaleKey, string> = {
 
 export const WEBSITE_LOCALE_LABELS: Record<WebsiteLocaleKey, string> = {
   ireland: "Ireland",
-  denmark: "Denmark",
-  finland: "Finland",
-  germany: "Germany",
-  norway: "Norway",
-  sweden: "Sweden",
+  denmark: "Danmark",
+  finland: "Suomi",
+  germany: "Deutschland",
+  norway: "Norge",
+  sweden: "Sverige",
 };
 
 /** Header nav labels per locale. Update here when copy needs tuning. */
+export type NavLabelSet = {
+  onlineCasino: string;
+  paypalCasino: string;
+  newCasinos: string;
+  bonuses: string;
+  fastPayoutCasinos: string;
+  mobileCasinos: string;
+};
+
 export const NAV_LABELS: Record<
   WebsiteLocaleKey,
-  {
-    onlineCasino: string;
-    paypalCasino: string;
-    newCasinos: string;
-    bonuses: string;
-  }
+  NavLabelSet & { short: NavLabelSet }
 > = {
   ireland: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     newCasinos: "New Casinos",
     bonuses: "Bonuses",
+    fastPayoutCasinos: "Fast Payout",
+    mobileCasinos: "Mobile Casinos",
+    short: {
+      onlineCasino: "Home",
+      paypalCasino: "PayPal",
+      newCasinos: "New",
+      bonuses: "Bonuses",
+      fastPayoutCasinos: "Payouts",
+      mobileCasinos: "Mobile",
+    },
   },
   denmark: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonusser",
+    fastPayoutCasinos: "Hurtig udbetaling",
+    mobileCasinos: "Mobil casinoer",
+    short: {
+      onlineCasino: "Forside",
+      paypalCasino: "PayPal",
+      newCasinos: "Nye",
+      bonuses: "Bonus",
+      fastPayoutCasinos: "Udbetaling",
+      mobileCasinos: "Mobil",
+    },
   },
   finland: {
     onlineCasino: "Nettikasino",
     paypalCasino: "Paypal-kasino",
     newCasinos: "Uudet kasinot",
     bonuses: "Bonukset",
+    fastPayoutCasinos: "Nopeat kotiutukset",
+    mobileCasinos: "Mobiilikasinot",
+    short: {
+      onlineCasino: "Etusivu",
+      paypalCasino: "PayPal",
+      newCasinos: "Uudet",
+      bonuses: "Bonukset",
+      fastPayoutCasinos: "Kotiutukset",
+      mobileCasinos: "Mobiili",
+    },
   },
   germany: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     newCasinos: "Neue Casinos",
     bonuses: "Bonus",
+    fastPayoutCasinos: "Schnelle Auszahlung",
+    mobileCasinos: "Handy-Casinos",
+    short: {
+      onlineCasino: "Start",
+      paypalCasino: "PayPal",
+      newCasinos: "Neue",
+      bonuses: "Bonus",
+      fastPayoutCasinos: "Auszahlung",
+      mobileCasinos: "Handy",
+    },
   },
   norway: {
     onlineCasino: "Nettkasino",
     paypalCasino: "Paypal Casino",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonuser",
+    fastPayoutCasinos: "Rask utbetaling",
+    mobileCasinos: "Mobilkasinoer",
+    short: {
+      onlineCasino: "Hjem",
+      paypalCasino: "PayPal",
+      newCasinos: "Nye",
+      bonuses: "Bonus",
+      fastPayoutCasinos: "Utbetaling",
+      mobileCasinos: "Mobil",
+    },
   },
   sweden: {
     onlineCasino: "Onlinecasino",
     paypalCasino: "Paypal Casino",
     newCasinos: "Nya casinon",
     bonuses: "Bonusar",
+    fastPayoutCasinos: "Snabb utbetalning",
+    mobileCasinos: "Mobilcasinon",
+    short: {
+      onlineCasino: "Start",
+      paypalCasino: "PayPal",
+      newCasinos: "Nya",
+      bonuses: "Bonus",
+      fastPayoutCasinos: "Utbetalning",
+      mobileCasinos: "Mobil",
+    },
   },
 };
 

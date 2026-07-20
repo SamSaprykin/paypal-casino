@@ -1,7 +1,9 @@
 ---
 import { ChevronDown } from "@lucide/astro";
 
-const { item, level = 0, dropdown = false } = Astro.props;
+const { item, level = 0, dropdown = false, compact = false } = Astro.props;
+const displayName =
+  compact && item.itemShortName ? item.itemShortName : item.itemName;
 
 const baseStyles =
   "flex items-center px-4 py-2 w-full text-left transition-colors hover:cursor-pointer";
@@ -20,7 +22,7 @@ const levelStyles =
       data-toggle={item.navigationItems?.length > 0 ? "true" : "false"}
     >
       {item.flagIcon && <span class="mr-2">{item.flagIcon}</span>}
-      {item.itemName}
+      {displayName}
       {item.navigationItems?.length > 0 && (
         <ChevronDown class="ml-2 w-4 h-4 transition-transform icon-chevron" />
       )}
@@ -30,7 +32,7 @@ const levelStyles =
       class={`${baseStyles} ${levelStyles} text-md lg:text-lg`}
       data-toggle={item.navigationItems?.length > 0 ? "true" : "false"}
     >
-      {item.itemName}
+      {displayName}
       {item.navigationItems?.length > 0 && (
         <ChevronDown class="ml-2 w-4 h-4 transition-transform icon-chevron" />
       )}

@@ -2,11 +2,7 @@ import type { WebsiteLocaleKey } from "../../cms/locales";
 import { ROOT_WEBSITE_LOCALE } from "../../cms/routing";
 import { seamusOConnor } from "./seamus-oconnor";
 import { stoyanMakoski } from "./stoyan-makoski";
-import type {
-  AuthorRecord,
-  PageAuthorRef,
-  PageAuthorsMeta,
-} from "./types";
+import type { AuthorRecord, PageAuthorRef, PageAuthorsMeta } from "./types";
 
 export const AUTHORS_BY_ID: Record<string, AuthorRecord> = {
   [seamusOConnor.id]: seamusOConnor,
@@ -18,7 +14,9 @@ export const DEFAULT_PAGE_AUTHORS: Required<PageAuthorsMeta> = {
   reviewedBy: stoyanMakoski.id,
 };
 
-export function getAuthorById(id: string | undefined | null): AuthorRecord | null {
+export function getAuthorById(
+  id: string | undefined | null,
+): AuthorRecord | null {
   if (!id) return null;
   return AUTHORS_BY_ID[id] ?? null;
 }

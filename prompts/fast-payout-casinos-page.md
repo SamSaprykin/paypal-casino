@@ -4,14 +4,14 @@ Use this prompt to write or replace the MDX locale file for the **Fast Payout Ca
 
 **Scaffold already exists:**
 
-| Locale key | File | Public URL slug |
-| ---------- | ---- | --------------- |
-| `ireland` | `src/data/content/pages/fast-payout-casinos/ireland.mdx` | `/fast-payout-casinos/` |
-| `germany` | `src/data/content/pages/fast-payout-casinos/germany.mdx` | `/casinos-mit-schneller-auszahlung/` |
-| `denmark` | `src/data/content/pages/fast-payout-casinos/denmark.mdx` | `/kasinoer-med-hurtig-udbetaling/` |
-| `finland` | `src/data/content/pages/fast-payout-casinos/finland.mdx` | `/nopeat-kotiutukset-kasinot/` |
-| `norway` | `src/data/content/pages/fast-payout-casinos/norway.mdx` | `/kasinoer-med-rask-utbetaling/` |
-| `sweden` | `src/data/content/pages/fast-payout-casinos/sweden.mdx` | `/casinon-med-snabb-utbetalning/` |
+| Locale key | File                                                     | Public URL slug                      |
+| ---------- | -------------------------------------------------------- | ------------------------------------ |
+| `ireland`  | `src/data/content/pages/fast-payout-casinos/ireland.mdx` | `/fast-payout-casinos/`              |
+| `germany`  | `src/data/content/pages/fast-payout-casinos/germany.mdx` | `/casinos-mit-schneller-auszahlung/` |
+| `denmark`  | `src/data/content/pages/fast-payout-casinos/denmark.mdx` | `/kasinoer-med-hurtig-udbetaling/`   |
+| `finland`  | `src/data/content/pages/fast-payout-casinos/finland.mdx` | `/nopeat-kotiutukset-kasinot/`       |
+| `norway`   | `src/data/content/pages/fast-payout-casinos/norway.mdx`  | `/kasinoer-med-rask-utbetaling/`     |
+| `sweden`   | `src/data/content/pages/fast-payout-casinos/sweden.mdx`  | `/casinon-med-snabb-utbetalning/`    |
 
 Ireland already has English copy. Other geos are English stubs with `<!-- TODO -->` markers — replace each entire file with native-language content.
 

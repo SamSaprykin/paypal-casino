@@ -29,17 +29,65 @@ const homeHref = homeHrefForLocale(locale);
 const paypalCasinoHref = await getWebsitePageHrefByName("Paypal Casino", locale);
 const newCasinosHref = await getWebsitePageHrefByName("New Casinos", locale);
 const bonusesHref = await getWebsitePageHrefByName("Bonuses", locale);
+const fastPayoutHref = await getWebsitePageHrefByName(
+  "Fast Payout Casinos",
+  locale,
+);
+const mobileCasinosHref = await getWebsitePageHrefByName(
+  "Mobile Casinos",
+  locale,
+);
 
-const menuData = [
-  { itemLinkRoute: homeHref, itemName: labels.onlineCasino },
+const menuItems = [
+  {
+    itemLinkRoute: homeHref,
+    itemName: labels.onlineCasino,
+    itemShortName: labels.short.onlineCasino,
+  },
   ...(paypalCasinoHref
-    ? [{ itemLinkRoute: paypalCasinoHref, itemName: labels.paypalCasino }]
+    ? [
+        {
+          itemLinkRoute: paypalCasinoHref,
+          itemName: labels.paypalCasino,
+          itemShortName: labels.short.paypalCasino,
+        },
+      ]
     : []),
   ...(newCasinosHref
-    ? [{ itemLinkRoute: newCasinosHref, itemName: labels.newCasinos }]
+    ? [
+        {
+          itemLinkRoute: newCasinosHref,
+          itemName: labels.newCasinos,
+          itemShortName: labels.short.newCasinos,
+        },
+      ]
     : []),
   ...(bonusesHref
-    ? [{ itemLinkRoute: bonusesHref, itemName: labels.bonuses }]
+    ? [
+        {
+          itemLinkRoute: bonusesHref,
+          itemName: labels.bonuses,
+          itemShortName: labels.short.bonuses,
+        },
+      ]
+    : []),
+  ...(fastPayoutHref
+    ? [
+        {
+          itemLinkRoute: fastPayoutHref,
+          itemName: labels.fastPayoutCasinos,
+          itemShortName: labels.short.fastPayoutCasinos,
+        },
+      ]
+    : []),
+  ...(mobileCasinosHref
+    ? [
+        {
+          itemLinkRoute: mobileCasinosHref,
+          itemName: labels.mobileCasinos,
+          itemShortName: labels.short.mobileCasinos,
+        },
+      ]
     : []),
 ];
 ---
@@ -53,7 +101,7 @@ const menuData = [
 
       <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-[calc(100%-10rem)] justify-center">
         <ul class="flex items-center xl:space-x-2">
-          {menuData.map((item, idx) => (
+          {menuItems.map((item, idx) => (
             <SubMenu key={idx} item={item} />
           ))}
         </ul>
@@ -80,8 +128,8 @@ const menuData = [
     <div id="mobile-menu" class="lg:hidden overflow-hidden transition-all duration-500 ease-in-out max-h-0">
       <div class="pb-4 mt-4 md:mt-0 px-2 flex flex-col gap-4">
         <ul>
-          {menuData.map((item, idx) => (
-            <SubMenu key={idx} item={item} />
+          {menuItems.map((item, idx) => (
+            <SubMenu key={idx} item={item} compact />
           ))}
         </ul>
       </div>
