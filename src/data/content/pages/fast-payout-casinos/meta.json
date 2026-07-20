@@ -14,6 +14,11 @@
       "name": "Fast Payout Casinos Intro"
     },
     {
+      "kind": "image",
+      "id": "fp-img-hero",
+      "name": "Fast Payout Hero"
+    },
+    {
       "kind": "casinoList",
       "id": "fp-list",
       "casinoListsByCountry": {
@@ -79,8 +84,18 @@
       "name": "Fast Payout Casinos Guide"
     },
     {
+      "kind": "image",
+      "id": "fp-img-payments",
+      "name": "Withdrawal Speed By Payment Method"
+    },
+    {
       "kind": "howTo",
       "id": "fp-howto"
+    },
+    {
+      "kind": "image",
+      "id": "fp-img-cashier",
+      "name": "Casino Withdrawal Cashier Screen"
     },
     {
       "kind": "contentComponent",

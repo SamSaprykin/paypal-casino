@@ -14,6 +14,11 @@
       "name": "Blocked Casinos Intro"
     },
     {
+      "kind": "image",
+      "id": "bc-img-hero",
+      "name": "Blocked Casino Paused Promotion Hero"
+    },
+    {
       "kind": "casinoList",
       "id": "bc-list",
       "casinoListsByCountry": {
@@ -109,8 +114,18 @@
       "name": "Why Casinos Get Blocked"
     },
     {
+      "kind": "image",
+      "id": "bc-img-warning",
+      "name": "Blocked Casino Reasons Checklist"
+    },
+    {
       "kind": "howTo",
       "id": "bc-howto"
+    },
+    {
+      "kind": "image",
+      "id": "bc-img-alternatives",
+      "name": "Choosing Licensed Alternative Casino"
     },
     {
       "kind": "contentComponent",

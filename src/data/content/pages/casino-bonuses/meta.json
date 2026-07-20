@@ -16,7 +16,8 @@
     {
       "kind": "image",
       "id": "bn-img-hero",
-      "src": "casino-bonuses-hero.webp"
+      "src": "casino-bonuses-hero.webp",
+      "name": "Casino Bonuses Guide Hero"
     },
     {
       "kind": "bonusesList",
@@ -30,7 +31,8 @@
     {
       "kind": "image",
       "id": "bn-img-welcome",
-      "src": "casino-bonuses-welcome-offer.webp"
+      "src": "casino-bonuses-welcome-offer.webp",
+      "name": "Welcome Deposit Match Offer"
     },
     {
       "kind": "contentComponent",
@@ -40,7 +42,8 @@
     {
       "kind": "image",
       "id": "bn-img-wagering",
-      "src": "casino-bonuses-wagering.webp"
+      "src": "casino-bonuses-wagering.webp",
+      "name": "Wagering Requirements Explainer"
     },
     {
       "kind": "howTo",
@@ -54,7 +57,8 @@
     {
       "kind": "image",
       "id": "bn-img-freespins",
-      "src": "casino-bonuses-free-spins.webp"
+      "src": "casino-bonuses-free-spins.webp",
+      "name": "Free Spins Slot Reels Burst"
     },
     {
       "kind": "contentComponent",
@@ -64,7 +68,8 @@
     {
       "kind": "image",
       "id": "bn-img-cashback",
-      "src": "casino-bonuses-cashback-vip.webp"
+      "src": "casino-bonuses-cashback-vip.webp",
+      "name": "Cashback And VIP Loyalty Tiers"
     },
     {
       "kind": "faqComponent",

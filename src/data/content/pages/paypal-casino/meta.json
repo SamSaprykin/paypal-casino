@@ -14,6 +14,11 @@
       "name": "Paypal Intro"
     },
     {
+      "kind": "image",
+      "id": "pp-img-hero",
+      "name": "PayPal Casino Hero"
+    },
+    {
       "kind": "casinoList",
       "id": "casinoListIntl.markets",
       "casinoListsByCountry": {
@@ -167,9 +172,19 @@
       }
     },
     {
+      "kind": "image",
+      "id": "pp-img-cashier",
+      "name": "PayPal Cashier Deposit And Withdrawal Screen"
+    },
+    {
       "kind": "contentComponent",
       "id": "a4821b7b-189c-4088-a106-b3114b938889",
       "name": "Paypal Body"
+    },
+    {
+      "kind": "image",
+      "id": "pp-img-security",
+      "name": "PayPal Trust And Licence Badges"
     }
   ]
 }

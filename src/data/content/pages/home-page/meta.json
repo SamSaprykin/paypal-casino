@@ -14,6 +14,11 @@
       "name": "Into HP"
     },
     {
+      "kind": "image",
+      "id": "hp-img-hero",
+      "name": "Home Page Payment Methods Hero"
+    },
+    {
       "kind": "casinoList",
       "id": "casinoListIntl.markets",
       "casinoListsByCountry": {
@@ -167,9 +172,19 @@
       }
     },
     {
+      "kind": "image",
+      "id": "hp-img-comparison",
+      "name": "Payment Speed Comparison Chart"
+    },
+    {
       "kind": "contentComponent",
       "id": "e6695325-bdb3-4018-a6bd-fd0729b66642",
       "name": "HP Body"
+    },
+    {
+      "kind": "image",
+      "id": "hp-img-trust",
+      "name": "PayPal Cashier Deposit Screen"
     },
     {
       "kind": "faqComponent",

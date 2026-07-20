@@ -22,6 +22,40 @@ Preferred: `.webp`, ~1600×900 (16:9), under ~250 KB. Bake market language/curre
 
 Until a file exists, `<CustomImage>` renders nothing — the build stays green.
 
+Each image has a human-readable **imageName** (what the asset depicts), a **src** file name, and an **imageType** (`stock`, `ai-generated`, or `screenshot`). Names live in `meta.json` (`name` field), MDX comments (`# imageName:`), and the registry below.
+
+### Master image registry
+
+| ID | imageName | src | imageType |
+| --- | --- | --- | --- |
+| `hp-img-hero` | Home Page Payment Methods Hero | `home-page-hero.webp` | ai-generated |
+| `hp-img-comparison` | Payment Speed Comparison Chart | `home-page-payment-comparison.webp` | stock |
+| `hp-img-trust` | PayPal Cashier Deposit Screen | `home-page-paypal-deposit.webp` | screenshot |
+| `pp-img-hero` | PayPal Casino Hero | `paypal-casino-hero.webp` | ai-generated |
+| `pp-img-cashier` | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp` | screenshot |
+| `pp-img-security` | PayPal Trust And Licence Badges | `paypal-casino-security.webp` | stock |
+| `bc-img-hero` | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp` | stock |
+| `bc-img-warning` | Blocked Casino Reasons Checklist | `blocked-casinos-warning.webp` | stock |
+| `bc-img-alternatives` | Choosing Licensed Alternative Casino | `blocked-casinos-alternatives.webp` | ai-generated |
+| `fp-img-hero` | Fast Payout Hero | `fast-payout-hero.webp` | ai-generated |
+| `fp-img-payments` | Withdrawal Speed By Payment Method | `fast-payout-payments.webp` | stock |
+| `fp-img-cashier` | Casino Withdrawal Cashier Screen | `fast-payout-cashier.webp` | screenshot |
+| `mc-img-hero` | Mobile Casino Phone Hero | `mobile-casinos-hero.webp` | ai-generated |
+| `mc-img-mobile-play` | Player On Smartphone Playing Slots | `mobile-casinos-mobile-play.webp` | stock |
+| `mc-img-cashier` | Mobile PayPal Cashier Screen | `mobile-casinos-cashier.webp` | screenshot |
+| `nc-img-hero` | New Casinos Launch Hero | `new-casinos-hero.webp` | ai-generated |
+| `nc-img-review` | New Casino Review Checklist | `new-casinos-how-we-review.webp` | stock |
+| `nc-img-safety` | Safety And Licensing Checklist | `new-casinos-safety-checklist.webp` | stock |
+| `nc-img-bonus` | Welcome Bonus Offer Visual | `new-casinos-welcome-bonus.webp` | ai-generated |
+| `nc-img-mobile` | Mobile Play At New Casino | `new-casinos-mobile-play.webp` | stock |
+| `bn-img-hero` | Casino Bonuses Guide Hero | `casino-bonuses-hero.webp` | ai-generated |
+| `bn-img-welcome` | Welcome Deposit Match Offer | `casino-bonuses-welcome-offer.webp` | ai-generated |
+| `bn-img-wagering` | Wagering Requirements Explainer | `casino-bonuses-wagering.webp` | stock |
+| `bn-img-freespins` | Free Spins Slot Reels Burst | `casino-bonuses-free-spins.webp` | ai-generated |
+| `bn-img-cashback` | Cashback And VIP Loyalty Tiers | `casino-bonuses-cashback-vip.webp` | stock |
+
+Source of truth script: `scripts/add-image-names.mjs` (also updates meta + MDX).
+
 ---
 
 ## New Casinos (`pages/new-casinos/`)
@@ -132,9 +166,133 @@ Until a file exists, `<CustomImage>` renders nothing — the build stays green.
 
 ---
 
+## Fast Payout Casinos (`pages/fast-payout-casinos/`)
+
+Image slots are wired in `meta.json` (no `src` yet). Localized alt/caption live as **commented** `kind: image` blocks in each locale MDX — uncomment the block and set `src` in meta when the file is ready.
+
+| ID | imageName | Suggested file | imageType | Placement |
+| --- | --- | --- | --- | --- |
+| `fp-img-hero` | Fast Payout Hero | `fast-payout-hero.webp` | ai-generated | After intro — hero collage (PayPal/e-wallet speed theme) |
+| `fp-img-payments` | Withdrawal Speed By Payment Method | `fast-payout-payments.webp` | stock | After guide — payment-method speed comparison visual |
+| `fp-img-cashier` | Casino Withdrawal Cashier Screen | `fast-payout-cashier.webp` | screenshot | After how-to — casino cashier withdrawal screen (blur PII) |
+
+### fast-payout-hero — Hero: fast withdrawals / PayPal & e-wallets
+
+{fast-payout-hero.ie.webp}, Ireland — EN hero, PayPal/Revolut cues
+{fast-payout-hero.de.webp}, Germany — DE hero, PayPal/Trustly cues
+{fast-payout-hero.dk.webp}, Denmark — DA hero, PayPal/Trustly/MobilePay
+{fast-payout-hero.fi.webp}, Finland — FI hero, PayPal/Trustly
+{fast-payout-hero.no.webp}, Norway — NO hero, Skrill/e-wallet
+{fast-payout-hero.se.webp}, Sweden — SV hero, Swish/PayPal
+{fast-payout-hero.webp}, Shared fallback
+
+### fast-payout-payments — Stock: payment methods ranked by speed
+
+{fast-payout-payments.ie.webp}, Ireland — EN payment-speed graphic
+{fast-payout-payments.de.webp}, Germany — DE payment-speed graphic
+{fast-payout-payments.dk.webp}, Denmark — DA payment-speed graphic
+{fast-payout-payments.fi.webp}, Finland — FI payment-speed graphic
+{fast-payout-payments.no.webp}, Norway — NO payment-speed graphic
+{fast-payout-payments.se.webp}, Sweden — SV payment-speed graphic
+{fast-payout-payments.webp}, Shared fallback
+
+### fast-payout-cashier — Screenshot: mobile/desktop withdrawal cashier
+
+{fast-payout-cashier.ie.webp}, Ireland — EN cashier screenshot (anonymised)
+{fast-payout-cashier.de.webp}, Germany — DE cashier screenshot
+{fast-payout-cashier.dk.webp}, Denmark — DA cashier screenshot
+{fast-payout-cashier.fi.webp}, Finland — FI cashier screenshot
+{fast-payout-cashier.no.webp}, Norway — NO cashier screenshot
+{fast-payout-cashier.se.webp}, Sweden — SV cashier screenshot
+{fast-payout-cashier.webp}, Shared fallback
+
+---
+
+## Mobile Casinos (`pages/mobile-casinos/`)
+
+Same enable flow as fast payout: uncomment MDX block + add `"src": "…"` to the matching `meta.json` image entry.
+
+| ID | imageName | Suggested file | imageType | Placement |
+| --- | --- | --- | --- | --- |
+| `mc-img-hero` | Mobile Casino Phone Hero | `mobile-casinos-hero.webp` | ai-generated | After intro — phone/tablet casino hero |
+| `mc-img-mobile-play` | Player On Smartphone Playing Slots | `mobile-casinos-mobile-play.webp` | stock | After guide — player on phone (portrait slots/live) |
+| `mc-img-cashier` | Mobile PayPal Cashier Screen | `mobile-casinos-cashier.webp` | screenshot | After how-to — mobile PayPal cashier (blur PII) |
+
+### mobile-casinos-hero — Hero: mobile casino on phone/tablet
+
+{mobile-casinos-hero.ie.webp}, Ireland — EN mobile hero
+{mobile-casinos-hero.de.webp}, Germany — DE mobile hero
+{mobile-casinos-hero.dk.webp}, Denmark — DA mobile hero
+{mobile-casinos-hero.fi.webp}, Finland — FI mobile hero
+{mobile-casinos-hero.no.webp}, Norway — NO mobile hero
+{mobile-casinos-hero.se.webp}, Sweden — SV mobile hero
+{mobile-casinos-hero.webp}, Shared fallback
+
+### mobile-casinos-mobile-play — Stock: player using casino on smartphone
+
+{mobile-casinos-mobile-play.ie.webp}, Ireland — EN mobile play scene
+{mobile-casinos-mobile-play.de.webp}, Germany — DE mobile play scene
+{mobile-casinos-mobile-play.dk.webp}, Denmark — DA mobile play scene
+{mobile-casinos-mobile-play.fi.webp}, Finland — FI mobile play scene
+{mobile-casinos-mobile-play.no.webp}, Norway — NO mobile play scene
+{mobile-casinos-mobile-play.se.webp}, Sweden — SV mobile play scene
+{mobile-casinos-mobile-play.webp}, Shared fallback
+
+### mobile-casinos-cashier — Screenshot: mobile casino cashier / PayPal
+
+{mobile-casinos-cashier.ie.webp}, Ireland — EN mobile cashier screenshot
+{mobile-casinos-cashier.de.webp}, Germany — DE mobile cashier screenshot
+{mobile-casinos-cashier.dk.webp}, Denmark — DA mobile cashier screenshot
+{mobile-casinos-cashier.fi.webp}, Finland — FI mobile cashier screenshot
+{mobile-casinos-cashier.no.webp}, Norway — NO mobile cashier screenshot
+{mobile-casinos-cashier.se.webp}, Sweden — SV mobile cashier screenshot
+{mobile-casinos-cashier.webp}, Shared fallback
+
+---
+
+## Home Page (`pages/home-page/`)
+
+Commented placeholders in each locale MDX. Image slots in `meta.json` (no `src` yet).
+
+| ID | imageName | Suggested file | imageType | Placement |
+| --- | --- | --- | --- | --- |
+| `hp-img-hero` | Home Page Payment Methods Hero | `home-page-hero.webp` | ai-generated | After intro — payment methods hero |
+| `hp-img-comparison` | Payment Speed Comparison Chart | `home-page-payment-comparison.webp` | stock | After casino list — speed/fees comparison visual |
+| `hp-img-trust` | PayPal Cashier Deposit Screen | `home-page-paypal-deposit.webp` | screenshot | After body — PayPal in casino cashier (blur PII) |
+
+Per-locale files: `{name}.{ie\|de\|dk\|fi\|no\|se}.webp` + shared `{name}.webp` fallback.
+
+---
+
+## PayPal Casino (`pages/paypal-casino/`)
+
+| ID | imageName | Suggested file | imageType | Placement |
+| --- | --- | --- | --- | --- |
+| `pp-img-hero` | PayPal Casino Hero | `paypal-casino-hero.webp` | ai-generated | After intro — PayPal casino hero |
+| `pp-img-cashier` | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp` | screenshot | After casino list — mobile/desktop cashier with PayPal |
+| `pp-img-security` | PayPal Trust And Licence Badges | `paypal-casino-security.webp` | stock | After body — licence badges + PayPal trust cues |
+
+---
+
+## Blocked Casinos (`pages/blocked-casinos/`)
+
+| ID | imageName | Suggested file | imageType | Placement |
+| --- | --- | --- | --- | --- |
+| `bc-img-hero` | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp` | stock | After intro — paused promotion concept |
+| `bc-img-warning` | Blocked Casino Reasons Checklist | `blocked-casinos-warning.webp` | stock | After why section — reasons checklist |
+| `bc-img-alternatives` | Choosing Licensed Alternative Casino | `blocked-casinos-alternatives.webp` | ai-generated | After how-to — picking a licensed alternative |
+
+---
+
+## New Casinos & Bonuses (already active)
+
+`new-casinos` and `casino-bonuses` already have live `kind: image` sections with `src` in meta. Each locale MDX now includes an `# imageType:` comment above every image block. See sections above for file names.
+
+---
+
 ## Totals
 
-- **60 locale files** (10 subjects × 6 markets) — preferred for unique SEO URLs
-- **+10 shared fallbacks** (optional) if you want a safety net while generating per-locale art
-
-Meta `src` stays as the base name (e.g. `new-casinos-hero.webp`); `CustomImage` picks `{name}.{suffix}.webp` when present.
+- **60 locale files** — new-casinos + casino-bonuses (10 subjects × 6 markets)
+- **+18 locale files** — home-page, paypal-casino, blocked-casinos (3 subjects × 6 markets)
+- **+18 locale files** — fast-payout + mobile (3 subjects × 6 markets)
+- **+10+ shared fallbacks** (optional) while generating per-locale art

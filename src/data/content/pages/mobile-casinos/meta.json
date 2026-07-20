@@ -14,6 +14,11 @@
       "name": "Mobile Casinos Intro"
     },
     {
+      "kind": "image",
+      "id": "mc-img-hero",
+      "name": "Mobile Casino Phone Hero"
+    },
+    {
       "kind": "casinoList",
       "id": "mc-list",
       "casinoListsByCountry": {
@@ -79,8 +84,18 @@
       "name": "Mobile Casinos Guide"
     },
     {
+      "kind": "image",
+      "id": "mc-img-mobile-play",
+      "name": "Player On Smartphone Playing Slots"
+    },
+    {
       "kind": "howTo",
       "id": "mc-howto"
+    },
+    {
+      "kind": "image",
+      "id": "mc-img-cashier",
+      "name": "Mobile PayPal Cashier Screen"
     },
     {
       "kind": "contentComponent",

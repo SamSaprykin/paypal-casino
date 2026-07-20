@@ -16,7 +16,8 @@
     {
       "kind": "image",
       "id": "nc-img-hero",
-      "src": "new-casinos-hero.webp"
+      "src": "new-casinos-hero.webp",
+      "name": "New Casinos Launch Hero"
     },
     {
       "kind": "casinoList",
@@ -29,7 +30,13 @@
           "vegasmobilecasino",
           "wildtokyo"
         ],
-        "germany": ["stake", "villento", "yukon-gold", "50-crowns", "lollybet"],
+        "germany": [
+          "stake",
+          "villento",
+          "yukon-gold",
+          "50-crowns",
+          "lollybet"
+        ],
         "denmark": [
           "spinbetter",
           "just-casino",
@@ -68,7 +75,8 @@
     {
       "kind": "image",
       "id": "nc-img-review",
-      "src": "new-casinos-how-we-review.webp"
+      "src": "new-casinos-how-we-review.webp",
+      "name": "New Casino Review Checklist"
     },
     {
       "kind": "howTo",
@@ -82,7 +90,8 @@
     {
       "kind": "image",
       "id": "nc-img-safety",
-      "src": "new-casinos-safety-checklist.webp"
+      "src": "new-casinos-safety-checklist.webp",
+      "name": "Safety And Licensing Checklist"
     },
     {
       "kind": "contentComponent",
@@ -92,7 +101,8 @@
     {
       "kind": "image",
       "id": "nc-img-bonus",
-      "src": "new-casinos-welcome-bonus.webp"
+      "src": "new-casinos-welcome-bonus.webp",
+      "name": "Welcome Bonus Offer Visual"
     },
     {
       "kind": "contentComponent",
@@ -102,7 +112,8 @@
     {
       "kind": "image",
       "id": "nc-img-mobile",
-      "src": "new-casinos-mobile-play.webp"
+      "src": "new-casinos-mobile-play.webp",
+      "name": "Mobile Play At New Casino"
     },
     {
       "kind": "faqComponent",

@@ -18,7 +18,7 @@ Prefer a unique file per market:
 | Sweden  | `se`   | `new-casinos-hero.se.webp` |
 
 Lookup order: locale file → shared `{name}.webp` → render nothing if both missing.
-See root `customImages.md` for the full checklist.
+See root `customImages.md` for the full checklist (includes **imageName** per asset).
 
-Recommended size: ~1600×900 (16:9), under ~250 KB each. Alt/caption text is
-localized in each page’s `<locale>.mdx`.
+Recommended size: ~1600×900 (16:9), under ~250 KB each. **imageName** describes
+what to create; **src** is the file name; alt/caption are localized in each page’s `<locale>.mdx`.
