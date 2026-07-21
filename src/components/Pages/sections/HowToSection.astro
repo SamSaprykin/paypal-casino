@@ -20,46 +20,53 @@ const IconsMap: Record<string, any> = {
 ---
 
 {section.items.length > 0 && (
-  <div class="space-y-8 py-12 bg-gradient-to-br from-blue-50 to-blue-100 px-4">
-    {section.title ? (
-      <div class="text-center space-y-4">
-        <h2 class="text-4xl font-bold text-gray-900 font-sans">{section.title}</h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full"></div>
-      </div>
-    ) : null}
-
-    <div class="flex flex-col md:flex-row justify-center items-stretch gap-6 flex-wrap w-full max-w-7xl mx-auto">
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-blue-100 px-4">
+    {section.title && (
+      <header class="text-center mb-10">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 font-sans drop-shadow-sm tracking-tight">
+          {section.title}
+        </h2>
+        <div class="w-28 h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-700 mx-auto rounded-full mt-4" />
+      </header>
+    )}
+    <div
+      class="flex flex-row flex-nowrap justify-start items-stretch gap-8 w-full max-w-6xl mx-auto overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 pb-6"
+      style="WebkitOverflowScrolling: touch;"
+    >
       {section.items.map((step) => {
         const IconComponent = step.iconName ? IconsMap[step.iconName] : null;
         return (
-          <div class="w-full md:w-56 lg:min-h-96 border-2 border-blue-100 shadow-lg flex-shrink-0 bg-white rounded-lg">
-            <div class="p-4 h-full flex flex-col">
-              <div class="text-center space-y-3 flex-1 flex flex-col">
-                <div class="flex flex-col items-center gap-2">
-                  <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-lg">
-                    {IconComponent ? <IconComponent class="w-6 h-6 text-white" /> : null}
-                  </div>
+          <div class="w-72 min-w-[260px] flex-1 group relative border-0 bg-white/80 backdrop-blur rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-blue-200 to-blue-500 opacity-60 group-hover:opacity-90 transition" />
+            <div class="relative flex flex-col items-center p-7 pb-6 h-full min-h-[340px]">
+              <div class="flex flex-col items-center gap-3 mb-5">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white group-hover:scale-110 transition-transform duration-200">
+                  {IconComponent && (
+                    <IconComponent class="w-8 h-8 text-white drop-shadow-lg" />
+                  )}
                 </div>
-                {step.title ? (
-                  <h3 class="text-lg font-semibold text-gray-900 font-sans leading-tight">
-                    {step.title}
-                  </h3>
-                ) : null}
-                {step.steps.length > 0 && (
-                  <ul class="space-y-2 text-left flex-1">
-                    {step.steps.map((item) => (
-                      <li class="flex items-start gap-2 text-gray-700 text-sm leading-relaxed">
-                        <div class="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
               </div>
+              {step.title && (
+                <h3 class="text-base md:text-lg font-semibold text-blue-800 font-sans mb-2 text-center tracking-tight leading-snug">
+                  {step.title}
+                </h3>
+              )}
+              {step.steps.length > 0 && (
+                <ol class="space-y-2 mt-1 w-full px-2">
+                  {step.steps.map((item, idx) => (
+                    <li class="flex items-start gap-3 text-gray-700 text-[15px] font-normal leading-relaxed">
+                      <div class="mt-2 flex-shrink-0">
+                        <span class="block w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 shadow-sm" />
+                      </div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ol>
+              )}
             </div>
           </div>
         );
       })}
     </div>
-  </div>
+  </section>
 )}

@@ -87,7 +87,7 @@ export function resolveBlockedAlternatives(
 ): BlockedCasinoAlternative[] {
   return pickAlternativeSlugs(raw, locale, paypalContext).flatMap((slug) => {
     const altRaw = casinoMetaBySlug.get(slug.replace(/^\/+|\/+$/g, ""));
-    if (!altRaw) return [];
+    if (!altRaw || isCasinoBlocked(altRaw)) return [];
     const alt = adaptBlockedAlternative(altRaw);
     return alt ? [alt] : [];
   });

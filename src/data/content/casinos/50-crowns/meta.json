@@ -78,5 +78,21 @@
       "bonusLogo": null
     }
   ],
-  "blocked": false
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "rollingslots"],
+    "finland": ["cleobetra", "fambet", "swiftcasino"],
+    "germany": ["lollybet", "yukon-gold", "hugo-casino"],
+    "ireland": ["yukon-gold", "party-poker", "onluck"],
+    "norway": ["tonybet", "winshark", "kukimuki"],
+    "sweden": ["klirr-casino", "rx-casino", "tonybet"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["trickz", "rollingslots", "winshark"],
+    "finland": ["vegasmobilecasino", "playojo", "drip"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["vegas-hero", "tsars", "video-slots"],
+    "norway": ["cosmicslot", "legzo", "flagman"],
+    "sweden": ["hugo-casino", "rollingslots", "spinbetter"]
+  }
 }

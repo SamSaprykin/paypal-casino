@@ -4,19 +4,19 @@ Quick index of agent prompts under `prompts/`. Run **one locale per generation**
 
 ## Priority order (from content plan)
 
-| Phase        | Task                                                 | Prompt file                                             |
-| ------------ | ---------------------------------------------------- | ------------------------------------------------------- |
-| **Now**      | Finish Fast payout + Mobile stubs (DE → FI/SE/NO/DK) | `fast-payout-casinos-page.md`, `mobile-casinos-page.md` |
-| **QA**       | Enhance + spell-check Home Page (all 6 locales)      | `home-page.md`                                          |
-| **Week 2**   | Minimum deposit casinos                              | `minimum-deposit-casinos-page.md`                       |
-| **Week 2**   | Live casino + PayPal                                 | `live-casino-paypal-page.md`                            |
-| **Week 3**   | Trustly & bank transfer                              | `trustly-casinos-page.md`                               |
-| **Week 3**   | Revolut casinos                                      | `revolut-casinos-page.md`                               |
-| **Week 4**   | Skrill & Neteller                                    | `skrill-neteller-casinos-page.md`                       |
-| **Week 4**   | Crypto deposits                                      | `crypto-casinos-page.md`                                |
-| **Week 5**   | No deposit / free spins hub                          | `no-deposit-bonus-page.md`                              |
-| **Week 5**   | Wagering requirements guide                          | `wagering-requirements-page.md`                         |
-| **Existing** | Blocked casinos localisation                         | `blocked-casinos-page.md`                               |
+| Phase      | Task                                            | Prompt file                       |
+| ---------- | ----------------------------------------------- | --------------------------------- |
+| **QA**     | Enhance + spell-check Home Page (all 6 locales) | `home-page.md`                    |
+| **Week 2** | Minimum deposit casinos                         | `minimum-deposit-casinos-page.md` |
+| **Week 2** | Live casino + PayPal                            | `live-casino-paypal-page.md`      |
+| **Week 3** | Trustly & bank transfer                         | `trustly-casinos-page.md`         |
+| **Week 3** | Revolut casinos                                 | `revolut-casinos-page.md`         |
+| **Week 4** | Skrill & Neteller                               | `skrill-neteller-casinos-page.md` |
+| **Week 4** | Crypto deposits                                 | `crypto-casinos-page.md`          |
+| **Week 5** | No deposit / free spins hub                     | `no-deposit-bonus-page.md`        |
+| **Week 5** | Wagering requirements guide                     | `wagering-requirements-page.md`   |
+
+**Shipped (no prompt — edit MDX directly):** Home, PayPal, New, Bonuses, Blocked, Fast payout, Mobile — all 6 locales in `src/data/content/pages/`.
 
 ## New page workflow
 

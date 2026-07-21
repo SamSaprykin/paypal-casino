@@ -1,5 +1,9 @@
 import { adaptCasinoForCard } from "../cms/cards";
-import { hasCasinoReviewBody, pickIntlMarkdown } from "../cms/intlMarkdown";
+import {
+  casinoReviewMapKey,
+  hasCasinoReviewBodyForLocale,
+  pickIntlMarkdown,
+} from "../cms/intlMarkdown";
 import type { WebsiteLocaleKey } from "../cms/locales";
 import { WEBSITE_LOCALE_KEYS } from "../cms/locales";
 import {
@@ -212,33 +216,25 @@ export function adaptCasinoPage(
   };
 }
 
-export function isCasinoAvailableInLocale(
+/** True when a full review page should exist for this casino in the locale. */
+export function isCasinoReviewPublishedInLocale(
   raw: Record<string, unknown>,
   locale: WebsiteLocaleKey,
 ): boolean {
   if (asString(raw.mdxPath)) return true;
-  if (hasCasinoReviewBody(raw.body)) {
-    const body = raw.body;
-    if (typeof body === "object" && body !== null) {
-      const text = pickIntlMarkdown(body, locale);
-      if (text.trim()) return true;
-    }
-  }
-  const flags = raw.availableInCountries;
-  if (!flags || typeof flags !== "object") return true;
-  const allowed = (flags as Record<string, unknown>)[locale];
-  return allowed === true;
+  return hasCasinoReviewBodyForLocale(raw.body, locale);
 }
 
 export function getCasinoCountrySelectorHrefs(
   casinoSlug: string,
-  raw: Record<string, unknown>,
+  casinoId: string,
+  reviewBodyMap: Map<string, boolean>,
 ): Partial<Record<WebsiteLocaleKey, string>> {
   const normalized = normalizeCasinoSlug(casinoSlug);
   const hrefs: Partial<Record<WebsiteLocaleKey, string>> = {};
 
   for (const locale of WEBSITE_LOCALE_KEYS) {
-    if (!isCasinoAvailableInLocale(raw, locale)) continue;
+    if (!reviewBodyMap.get(casinoReviewMapKey(casinoId, locale))) continue;
     hrefs[locale] = localizedCasinoDetailHref(locale, normalized);
   }
 
@@ -258,8 +254,11 @@ export async function getCasinoReviewBodyMap(): Promise<Map<string, boolean>> {
       const map = new Map<string, boolean>();
       for (const row of rows) {
         const id = String(row._id ?? "");
-        if (id && hasCasinoReviewBody(row.body)) {
-          map.set(id, true);
+        if (!id) continue;
+        for (const locale of WEBSITE_LOCALE_KEYS) {
+          if (hasCasinoReviewBodyForLocale(row.body, locale)) {
+            map.set(casinoReviewMapKey(id, locale), true);
+          }
         }
       }
       return map;
@@ -279,16 +278,18 @@ export async function getCasinoBySlug(
     getCasinoMetaBySlugMap(),
   ]);
   if (!raw) return null;
-  if (!isCasinoAvailableInLocale(raw, locale)) return null;
+  if (!isCasinoReviewPublishedInLocale(raw, locale)) return null;
 
   const page = adaptCasinoPage(raw, locale, reviewBodyMap, casinoMetaBySlug);
   if (!page) return null;
 
+  const casinoId = String(raw._id ?? normalized);
   return {
     ...page,
     countrySelectorHrefs: getCasinoCountrySelectorHrefs(
       normalized,
-      await getCasinoDocumentBySlug(normalized),
+      casinoId,
+      reviewBodyMap,
     ),
   };
 }
@@ -315,8 +316,7 @@ export async function getRootCasinoDetailStaticPaths(): Promise<
 
   return casinos.flatMap((raw) => {
     const id = String(raw._id ?? "");
-    if (!isCasinoAvailableInLocale(raw, locale)) return [];
-    if (!id || !reviewBodyMap.get(id)) return [];
+    if (!id || !reviewBodyMap.get(casinoReviewMapKey(id, locale))) return [];
     const slug = asString(raw.slug);
     if (!slug) return [];
     return [
@@ -344,8 +344,7 @@ export async function getLocalizedCasinoDetailStaticPaths(): Promise<
 
     for (const raw of casinos) {
       const id = String(raw._id ?? "");
-      if (!isCasinoAvailableInLocale(raw, locale)) continue;
-      if (!id || !reviewBodyMap.get(id)) continue;
+      if (!id || !reviewBodyMap.get(casinoReviewMapKey(id, locale))) continue;
       const slug = asString(raw.slug);
       if (!slug) continue;
       paths.push({
@@ -382,10 +381,10 @@ export async function getCasinoDetailEntries(
   return casinos.flatMap((raw) => {
     const slug = asString(raw.slug);
     const id = String(raw._id ?? "");
-    if (!slug || !id || !reviewBodyMap.get(id)) return [];
+    if (!slug || !id) return [];
     const normalized = normalizeCasinoSlug(slug);
     return locales.flatMap((loc) => {
-      if (!isCasinoAvailableInLocale(raw, loc)) return [];
+      if (!reviewBodyMap.get(casinoReviewMapKey(id, loc))) return [];
       return [
         {
           id: `${id}-${loc}`,

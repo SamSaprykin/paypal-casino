@@ -46,6 +46,30 @@ function coerceMarkdownValue(value: unknown): string {
   return "";
 }
 
+/** Map key for per-locale casino review presence (`casinoId:locale`). */
+export function casinoReviewMapKey(
+  casinoId: string,
+  locale: WebsiteLocaleKey,
+): string {
+  return `${casinoId}:${locale}`;
+}
+
+/** True when the requested locale has its own non-empty review body (no fallback). */
+export function hasCasinoReviewBodyForLocale(
+  body: unknown,
+  locale: WebsiteLocaleKey,
+): boolean {
+  if (typeof body === "string") return body.trim() !== "";
+  if (!body || typeof body !== "object") return false;
+
+  const obj = body as Record<string, unknown>;
+  if (Object.prototype.hasOwnProperty.call(obj, locale)) {
+    return intlMarkdownHasContent(obj[locale]);
+  }
+
+  return false;
+}
+
 /** True when any market language has review body content (markdown or legacy blocks). */
 export function hasCasinoReviewBody(body: unknown): boolean {
   if (typeof body === "string") return body.trim() !== "";

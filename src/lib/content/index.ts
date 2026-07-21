@@ -73,7 +73,7 @@ export {
   getCasinoReviewBodyMap,
   getLocalizedCasinoDetailStaticPaths,
   getRootCasinoDetailStaticPaths,
-  isCasinoAvailableInLocale,
+  isCasinoReviewPublishedInLocale,
   getCasinoCountrySelectorHrefs,
 } from "./casinos";
 export type {

@@ -7726,7 +7726,7 @@
             "isAvailable": true,
             "title": "Welcome Package up to €4,000 + 300 Free Spins",
             "description": "New players get a four-part welcome package: 100% up to €500 + 100 free spins on the first deposit (no code needed), then 100% up to €500 + 50 free spins (code LUKKI2), 50% up to €1,000 + 50 free spins (code LUKKI3), and 25% up to €2,000 + 100 free spins (code LUKKI4) — up to €4,000 + 300 free spins total. Minimum deposit is €20, wagering is 40x, with 7 days to complete it. Irish bank transfer options (AIB, Ulster Bank, Bank of Ireland) are specifically supported.",
-            "amount": "100% up to €500 + 100 FS, then 100% up to €500 + 50 FS, then 50% up to €1,000 + 50 FS, then 25% up to €2,000 + 100 FS — up to €4,000 + 300 FS total",
+            "amount": "100% up to €500 + 100 FS",
             "currency": "EUR",
             "minDeposit": "€20",
             "notes": "Ireland is not on the operator's own restricted-country list (confirmed via their Terms and Conditions), and Irish-specific banking options are supported"
@@ -9275,7 +9275,7 @@
             "isAvailable": true,
             "title": "Welcome Package up to CA$900 + 600 Free Spins",
             "description": "New Canadian players get a three-deposit welcome package: a 150% match up to CA$600 on the first deposit (minimum CA$20, 40x wagering, CA$10 max bet while wagering), up to 600 free spins on Secret Bar Multidice X on the second deposit (winnings wagered at 35x), and a 75% match up to CA$300 on the third deposit (also 40x wagering) — up to CA$900 + 600 Free Spins total. Multiple Canada-focused reviewers describe this as broadly available to Canadian players with no specific restrictions noted, though local regulations should still be checked.",
-            "amount": "150% up to CA$600 (1st deposit), then up to 600 FS (2nd deposit), then 75% up to CA$300 (3rd deposit) — up to CA$900 + 600 FS total",
+            "amount": "Up to 225% Match + 400 Free Spins",
             "currency": "CAD",
             "minDeposit": "CA$20",
             "notes": "No evidence of an AGCO/iGaming Ontario licence was found for this Curaçao-only operator — Ontario should not be assumed included in this CA entry, though explicit Ontario exclusion also wasn't independently confirmed either way by the Canada-focused reviewers, who described the offer generically as being for 'Canadian players' without addressing Ontario specifically."
@@ -9522,7 +9522,7 @@
             "isAvailable": true,
             "title": "Welcome Package — Up to CA$900 + 500 Free Spins",
             "description": "New Canadian players (outside Ontario) get a three-deposit welcome package: a 150% match up to CA$600 on the first deposit (40x wagering), 30-500 free spins on Fortuna TRUEWAYS on the second deposit (35x wagering on winnings), and a 75% match up to CA$300 on the third deposit (40x wagering) — up to CA$900 + 500 Free Spins total. Minimum qualifying deposit is CA$20. Maximum bonus winnings are capped at 10x the bonus amount.",
-            "amount": "150% up to CA$600 (1st deposit), then 30-500 FS (2nd deposit), then 75% up to CA$300 (3rd deposit) — up to CA$900 + 500 FS total",
+            "amount": "Up to 225% Match + 400 Free Spins",
             "currency": "CAD",
             "minDeposit": "CA$20",
             "notes": "Explicitly confirmed as not available to players residing in Ontario, per the operator's own promotional terms as quoted by an independent reviewer — consistent with this being a Curaçao-only licensed operator with no AGCO/iGaming Ontario licence."

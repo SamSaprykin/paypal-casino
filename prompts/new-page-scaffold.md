@@ -1,6 +1,6 @@
 # Shared scaffold: new website page types
 
-Use this **before** any page-specific prompt when shipping a **new** page type from `ppcasinos-content-plan-2026.md`. Existing prompts (`fast-payout-casinos-page.md`, etc.) assume the scaffold already exists.
+Use this **before** any page-specific prompt when shipping a **new** page type from `ppcasinos-content-plan-2026.md`. Page-specific prompts in `prompts/` assume the scaffold already exists.
 
 ## Files to create / edit
 

@@ -7,6 +7,7 @@
  */
 
 import type { WebsiteLocaleKey } from "./locales";
+import { casinoReviewMapKey } from "./intlMarkdown";
 import { localizedCasinoDetailHref } from "./routing";
 import {
   isCasinoBlocked,
@@ -117,7 +118,9 @@ export function adaptCasinoForCard(
 
   const id = String(c._id ?? c.slug ?? "");
   const slug = asString(c.slug);
-  const hasReview = Boolean(id && reviewBodyMap?.get(id));
+  const hasReview = Boolean(
+    id && locale && reviewBodyMap?.get(casinoReviewMapKey(id, locale)),
+  );
   const reviewHref =
     hasReview && slug && locale
       ? localizedCasinoDetailHref(locale, slug)
