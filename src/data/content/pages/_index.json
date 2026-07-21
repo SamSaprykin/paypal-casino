@@ -89,5 +89,18 @@
       "norway": "/mobilkasinoer/",
       "sweden": "/mobilcasinon/"
     }
+  },
+  {
+    "id": "b3c4d5e6-f7a8-4901-ab23-4c5d6e7f8092",
+    "name": "Minimum Deposit Casinos",
+    "dir": "pages/minimum-deposit-casinos",
+    "slugs": {
+      "ireland": "/minimum-deposit-casinos/",
+      "germany": "/de/casinos-mit-mindesteinzahlung/",
+      "denmark": "/dk/kasinoer-med-lav-indbetaling/",
+      "finland": "/fi/pienen-talletuksen-kasinot/",
+      "norway": "/no/kasinoer-med-lav-innskudd/",
+      "sweden": "/se/casinon-med-lag-insattning/"
+    }
   }
 ]

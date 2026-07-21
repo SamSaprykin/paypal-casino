@@ -1,0 +1,144 @@
+{
+  "_id": "b3c4d5e6-f7a8-4901-ab23-4c5d6e7f8092",
+  "_createdAt": "2026-07-21T13:00:00Z",
+  "_updatedAt": "2026-07-21T13:00:00Z",
+  "name": "Minimum Deposit Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "md-intro",
+      "name": "Minimum Deposit Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "md-list-1",
+      "name": "€1 Minimum Deposit Casinos",
+      "casinoListsByCountry": {
+        "ireland": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "lucky-start",
+          "dragonslots",
+          "lumi-casino"
+        ],
+        "germany": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "kukimuki",
+          "50-crowns",
+          "lollybet"
+        ],
+        "denmark": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "kukimuki",
+          "rx-casino",
+          "lucky-ones"
+        ],
+        "finland": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "monro",
+          "legzo",
+          "lumi-casino"
+        ],
+        "norway": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "kukimuki",
+          "just-casino",
+          "vinylcasino"
+        ],
+        "sweden": [
+          "villento",
+          "zodiac-casino",
+          "yukon-gold",
+          "cosmicslot",
+          "luckydreams",
+          "just-casino"
+        ]
+      }
+    },
+    {
+      "kind": "casinoList",
+      "id": "md-list-3",
+      "name": "€3 Minimum Deposit Casinos",
+      "casinoListsByCountry": {
+        "ireland": [
+          "coolzino",
+          "hugo-casino",
+          "swiftcasino",
+          "slotbox",
+          "20bet",
+          "bizzocasino"
+        ],
+        "germany": [
+          "coolzino",
+          "hugo-casino",
+          "dragonslots",
+          "bitstarz",
+          "stake"
+        ],
+        "denmark": [
+          "coolzino",
+          "hugo-casino",
+          "dragonslots",
+          "luckydreams",
+          "lucky-start",
+          "just-casino"
+        ],
+        "finland": [
+          "coolzino",
+          "hugo-casino",
+          "swiftcasino",
+          "dragonslots",
+          "slotbox",
+          "20bet"
+        ],
+        "norway": [
+          "coolzino",
+          "hugo-casino",
+          "dragonslots",
+          "slotbox",
+          "lucky-ones",
+          "cosmicslot"
+        ],
+        "sweden": [
+          "coolzino",
+          "hugo-casino",
+          "dragonslots",
+          "spinlander-casino",
+          "jubla-casino",
+          "rx-casino"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "md-guide",
+      "name": "Minimum Deposit Casinos Guide"
+    },
+    {
+      "kind": "howTo",
+      "id": "md-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "md-verdict",
+      "name": "Minimum Deposit Casinos Verdict"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "md-faq"
+    }
+  ]
+}
