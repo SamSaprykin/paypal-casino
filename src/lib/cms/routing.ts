@@ -50,6 +50,7 @@ export type NavLabelSet = {
   bonuses: string;
   fastPayoutCasinos: string;
   mobileCasinos: string;
+  minimumDepositCasinos: string;
 };
 
 export const NAV_LABELS: Record<
@@ -63,6 +64,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonuses",
     fastPayoutCasinos: "Fast Payout",
     mobileCasinos: "Mobile Casinos",
+    minimumDepositCasinos: "Min Deposit",
     short: {
       onlineCasino: "Home",
       paypalCasino: "PayPal",
@@ -70,6 +72,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonuses",
       fastPayoutCasinos: "Payouts",
       mobileCasinos: "Mobile",
+      minimumDepositCasinos: "Min Dep",
     },
   },
   denmark: {
@@ -79,6 +82,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonusser",
     fastPayoutCasinos: "Hurtig udbetaling",
     mobileCasinos: "Mobil casinoer",
+    minimumDepositCasinos: "Lav indbetaling",
     short: {
       onlineCasino: "Forside",
       paypalCasino: "PayPal",
@@ -86,6 +90,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonus",
       fastPayoutCasinos: "Udbetaling",
       mobileCasinos: "Mobil",
+      minimumDepositCasinos: "Min indskud",
     },
   },
   finland: {
@@ -95,6 +100,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonukset",
     fastPayoutCasinos: "Nopeat kotiutukset",
     mobileCasinos: "Mobiilikasinot",
+    minimumDepositCasinos: "Pieni talletus",
     short: {
       onlineCasino: "Etusivu",
       paypalCasino: "PayPal",
@@ -102,6 +108,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonukset",
       fastPayoutCasinos: "Kotiutukset",
       mobileCasinos: "Mobiili",
+      minimumDepositCasinos: "Min talletus",
     },
   },
   germany: {
@@ -111,6 +118,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonus",
     fastPayoutCasinos: "Schnelle Auszahlung",
     mobileCasinos: "Handy-Casinos",
+    minimumDepositCasinos: "Mindesteinzahlung",
     short: {
       onlineCasino: "Start",
       paypalCasino: "PayPal",
@@ -118,6 +126,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonus",
       fastPayoutCasinos: "Auszahlung",
       mobileCasinos: "Handy",
+      minimumDepositCasinos: "Min Einzahlung",
     },
   },
   norway: {
@@ -127,6 +136,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonuser",
     fastPayoutCasinos: "Rask utbetaling",
     mobileCasinos: "Mobilkasinoer",
+    minimumDepositCasinos: "Lav innskudd",
     short: {
       onlineCasino: "Hjem",
       paypalCasino: "PayPal",
@@ -134,6 +144,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetaling",
       mobileCasinos: "Mobil",
+      minimumDepositCasinos: "Min innskudd",
     },
   },
   sweden: {
@@ -143,6 +154,7 @@ export const NAV_LABELS: Record<
     bonuses: "Bonusar",
     fastPayoutCasinos: "Snabb utbetalning",
     mobileCasinos: "Mobilcasinon",
+    minimumDepositCasinos: "Låg insättning",
     short: {
       onlineCasino: "Start",
       paypalCasino: "PayPal",
@@ -150,6 +162,7 @@ export const NAV_LABELS: Record<
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetalning",
       mobileCasinos: "Mobil",
+      minimumDepositCasinos: "Min insättning",
     },
   },
 };

@@ -37,6 +37,10 @@ const mobileCasinosHref = await getWebsitePageHrefByName(
   "Mobile Casinos",
   locale,
 );
+const minimumDepositHref = await getWebsitePageHrefByName(
+  "Minimum Deposit Casinos",
+  locale,
+);
 
 const menuItems = [
   {
@@ -86,6 +90,15 @@ const menuItems = [
           itemLinkRoute: mobileCasinosHref,
           itemName: labels.mobileCasinos,
           itemShortName: labels.short.mobileCasinos,
+        },
+      ]
+    : []),
+  ...(minimumDepositHref
+    ? [
+        {
+          itemLinkRoute: minimumDepositHref,
+          itemName: labels.minimumDepositCasinos,
+          itemShortName: labels.short.minimumDepositCasinos,
         },
       ]
     : []),
