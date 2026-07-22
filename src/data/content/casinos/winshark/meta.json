@@ -1,7 +1,7 @@
 {
   "_id": "3S6cSLHZQYs3RpzeYYPONC",
   "_createdAt": "2025-08-27T07:58:29Z",
-  "_updatedAt": "2026-05-25T08:17:14Z",
+  "_updatedAt": "2026-07-22T13:00:00Z",
   "casinoName": "Winshark",
   "slug": "winshark",
   "rating": 4.4,
@@ -70,5 +70,21 @@
       "bonusLogo": null
     }
   ],
-  "blocked": false
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "rollingslots"],
+    "finland": ["ritzo", "hugo-casino", "playojo"],
+    "germany": ["ritzo", "hugo-casino", "glitchspin"],
+    "ireland": ["ritzo", "hugo-casino", "vegasmobilecasino"],
+    "norway": ["ritzo", "hugo-casino", "kukimuki"],
+    "sweden": ["ritzo", "hugo-casino", "rx-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "glitchspin"],
+    "finland": ["ritzo", "hugo-casino", "playojo"],
+    "germany": ["ritzo", "hugo-casino", "rollingslots"],
+    "ireland": ["ritzo", "hugo-casino", "vegasmobilecasino"],
+    "norway": ["ritzo", "hugo-casino", "cosmicslot"],
+    "sweden": ["ritzo", "hugo-casino", "crownslots"]
+  }
 }

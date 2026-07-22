@@ -69,7 +69,7 @@
     "finland": ["vinylcasino", "fezbet", "rollingslots"],
     "germany": ["lollybet", "zodiac-casino", "stake"],
     "ireland": ["luna-casino", "granawin", "slotbox"],
-    "norway": ["kukimuki", "winshark", "cleobetra"],
+    "norway": ["kukimuki", "ritzo", "cleobetra"],
     "sweden": ["lets-lucky", "cosmicslot", "tonybet"]
   },
   "alternativesPaypalByCountry": {
@@ -78,6 +78,6 @@
     "germany": ["rollingslots", "hugo-casino"],
     "ireland": ["vegasmobilecasino", "lucky-start", "crownslots"],
     "norway": ["tonybet", "tsars", "hugo-casino"],
-    "sweden": ["winshark", "need-for-spin-casino", "tonybet"]
+    "sweden": ["ritzo", "need-for-spin-casino", "tonybet"]
   }
 }
