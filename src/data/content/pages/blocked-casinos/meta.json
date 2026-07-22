@@ -53,7 +53,8 @@
           "hugo-casino",
           "slots-gallery",
           "rollingslots",
-          "winshark"
+          "winshark",
+          "vegas-hero"
         ],
         "denmark": [
           "ritzo",
@@ -61,7 +62,8 @@
           "trickz",
           "tsars",
           "winshark",
-          "rollingslots"
+          "rollingslots",
+          "vegas-hero"
         ],
         "finland": [
           "cleobetra",
@@ -106,7 +108,8 @@
           "frank-fred",
           "glitchspin",
           "winshark",
-          "rollingslots"
+          "rollingslots",
+          "vegas-hero"
         ]
       }
     },

@@ -1,7 +1,7 @@
 {
   "_id": "6NqYsDiYQhu8L0nIRbvoq6",
   "_createdAt": "2025-08-27T07:58:49Z",
-  "_updatedAt": "2026-05-25T08:16:59Z",
+  "_updatedAt": "2026-07-22T13:45:00Z",
   "casinoName": "Vegas Hero",
   "slug": "vegas-hero",
   "rating": 4.6,
@@ -69,5 +69,21 @@
       }
     }
   ],
-  "blocked": false
+  "blocked": true,
+  "alternativesByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "skycrown"],
+    "finland": ["playojo", "vegasmobilecasino", "ritzo"],
+    "germany": ["ritzo", "hugo-casino", "crownslots"],
+    "ireland": ["vegasmobilecasino", "playojo", "ritzo"],
+    "norway": ["ritzo", "hugo-casino", "flagman"],
+    "sweden": ["ritzo", "hugo-casino", "rx-casino"]
+  },
+  "alternativesPaypalByCountry": {
+    "denmark": ["ritzo", "hugo-casino", "skycrown"],
+    "finland": ["playojo", "vegasmobilecasino", "ritzo"],
+    "germany": ["ritzo", "hugo-casino", "crownslots"],
+    "ireland": ["vegasmobilecasino", "playojo", "ritzo"],
+    "norway": ["ritzo", "hugo-casino", "flagman"],
+    "sweden": ["ritzo", "hugo-casino", "rx-casino"]
+  }
 }
