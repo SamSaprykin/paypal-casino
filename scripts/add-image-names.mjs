@@ -183,10 +183,7 @@ function addImageNameToMdx(content, id, imageName) {
     "m",
   );
   if (commentedTypeRe.test(content)) {
-    return content.replace(
-      commentedTypeRe,
-      `  # imageName: ${imageName}\n$1`,
-    );
+    return content.replace(commentedTypeRe, `  # imageName: ${imageName}\n$1`);
   }
 
   // Commented block without preceding CustomImage header match (imageType only)

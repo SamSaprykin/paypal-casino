@@ -26,33 +26,33 @@ Each image has a human-readable **imageName** (what the asset depicts), a **src*
 
 ### Master image registry
 
-| ID | imageName | src | imageType |
-| --- | --- | --- | --- |
-| `hp-img-hero` | Home Page Payment Methods Hero | `home-page-hero.webp` | ai-generated |
-| `hp-img-comparison` | Payment Speed Comparison Chart | `home-page-payment-comparison.webp` | stock |
-| `hp-img-trust` | PayPal Cashier Deposit Screen | `home-page-paypal-deposit.webp` | screenshot |
-| `pp-img-hero` | PayPal Casino Hero | `paypal-casino-hero.webp` | ai-generated |
-| `pp-img-cashier` | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp` | screenshot |
-| `pp-img-security` | PayPal Trust And Licence Badges | `paypal-casino-security.webp` | stock |
-| `bc-img-hero` | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp` | stock |
-| `bc-img-warning` | Blocked Casino Reasons Checklist | `blocked-casinos-warning.webp` | stock |
-| `bc-img-alternatives` | Choosing Licensed Alternative Casino | `blocked-casinos-alternatives.webp` | ai-generated |
-| `fp-img-hero` | Fast Payout Hero | `fast-payout-hero.webp` | ai-generated |
-| `fp-img-payments` | Withdrawal Speed By Payment Method | `fast-payout-payments.webp` | stock |
-| `fp-img-cashier` | Casino Withdrawal Cashier Screen | `fast-payout-cashier.webp` | screenshot |
-| `mc-img-hero` | Mobile Casino Phone Hero | `mobile-casinos-hero.webp` | ai-generated |
-| `mc-img-mobile-play` | Player On Smartphone Playing Slots | `mobile-casinos-mobile-play.webp` | stock |
-| `mc-img-cashier` | Mobile PayPal Cashier Screen | `mobile-casinos-cashier.webp` | screenshot |
-| `nc-img-hero` | New Casinos Launch Hero | `new-casinos-hero.webp` | ai-generated |
-| `nc-img-review` | New Casino Review Checklist | `new-casinos-how-we-review.webp` | stock |
-| `nc-img-safety` | Safety And Licensing Checklist | `new-casinos-safety-checklist.webp` | stock |
-| `nc-img-bonus` | Welcome Bonus Offer Visual | `new-casinos-welcome-bonus.webp` | ai-generated |
-| `nc-img-mobile` | Mobile Play At New Casino | `new-casinos-mobile-play.webp` | stock |
-| `bn-img-hero` | Casino Bonuses Guide Hero | `casino-bonuses-hero.webp` | ai-generated |
-| `bn-img-welcome` | Welcome Deposit Match Offer | `casino-bonuses-welcome-offer.webp` | ai-generated |
-| `bn-img-wagering` | Wagering Requirements Explainer | `casino-bonuses-wagering.webp` | stock |
-| `bn-img-freespins` | Free Spins Slot Reels Burst | `casino-bonuses-free-spins.webp` | ai-generated |
-| `bn-img-cashback` | Cashback And VIP Loyalty Tiers | `casino-bonuses-cashback-vip.webp` | stock |
+| ID                    | imageName                                    | src                                 | imageType    |
+| --------------------- | -------------------------------------------- | ----------------------------------- | ------------ |
+| `hp-img-hero`         | Home Page Payment Methods Hero               | `home-page-hero.webp`               | ai-generated |
+| `hp-img-comparison`   | Payment Speed Comparison Chart               | `home-page-payment-comparison.webp` | stock        |
+| `hp-img-trust`        | PayPal Cashier Deposit Screen                | `home-page-paypal-deposit.webp`     | screenshot   |
+| `pp-img-hero`         | PayPal Casino Hero                           | `paypal-casino-hero.webp`           | ai-generated |
+| `pp-img-cashier`      | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp`        | screenshot   |
+| `pp-img-security`     | PayPal Trust And Licence Badges              | `paypal-casino-security.webp`       | stock        |
+| `bc-img-hero`         | Blocked Casino Paused Promotion Hero         | `blocked-casinos-hero.webp`         | stock        |
+| `bc-img-warning`      | Blocked Casino Reasons Checklist             | `blocked-casinos-warning.webp`      | stock        |
+| `bc-img-alternatives` | Choosing Licensed Alternative Casino         | `blocked-casinos-alternatives.webp` | ai-generated |
+| `fp-img-hero`         | Fast Payout Hero                             | `fast-payout-hero.webp`             | ai-generated |
+| `fp-img-payments`     | Withdrawal Speed By Payment Method           | `fast-payout-payments.webp`         | stock        |
+| `fp-img-cashier`      | Casino Withdrawal Cashier Screen             | `fast-payout-cashier.webp`          | screenshot   |
+| `mc-img-hero`         | Mobile Casino Phone Hero                     | `mobile-casinos-hero.webp`          | ai-generated |
+| `mc-img-mobile-play`  | Player On Smartphone Playing Slots           | `mobile-casinos-mobile-play.webp`   | stock        |
+| `mc-img-cashier`      | Mobile PayPal Cashier Screen                 | `mobile-casinos-cashier.webp`       | screenshot   |
+| `nc-img-hero`         | New Casinos Launch Hero                      | `new-casinos-hero.webp`             | ai-generated |
+| `nc-img-review`       | New Casino Review Checklist                  | `new-casinos-how-we-review.webp`    | stock        |
+| `nc-img-safety`       | Safety And Licensing Checklist               | `new-casinos-safety-checklist.webp` | stock        |
+| `nc-img-bonus`        | Welcome Bonus Offer Visual                   | `new-casinos-welcome-bonus.webp`    | ai-generated |
+| `nc-img-mobile`       | Mobile Play At New Casino                    | `new-casinos-mobile-play.webp`      | stock        |
+| `bn-img-hero`         | Casino Bonuses Guide Hero                    | `casino-bonuses-hero.webp`          | ai-generated |
+| `bn-img-welcome`      | Welcome Deposit Match Offer                  | `casino-bonuses-welcome-offer.webp` | ai-generated |
+| `bn-img-wagering`     | Wagering Requirements Explainer              | `casino-bonuses-wagering.webp`      | stock        |
+| `bn-img-freespins`    | Free Spins Slot Reels Burst                  | `casino-bonuses-free-spins.webp`    | ai-generated |
+| `bn-img-cashback`     | Cashback And VIP Loyalty Tiers               | `casino-bonuses-cashback-vip.webp`  | stock        |
 
 Source of truth script: `scripts/add-image-names.mjs` (also updates meta + MDX).
 
@@ -170,11 +170,11 @@ Source of truth script: `scripts/add-image-names.mjs` (also updates meta + MDX).
 
 Image slots are wired in `meta.json` (no `src` yet). Localized alt/caption live as **commented** `kind: image` blocks in each locale MDX — uncomment the block and set `src` in meta when the file is ready.
 
-| ID | imageName | Suggested file | imageType | Placement |
-| --- | --- | --- | --- | --- |
-| `fp-img-hero` | Fast Payout Hero | `fast-payout-hero.webp` | ai-generated | After intro — hero collage (PayPal/e-wallet speed theme) |
-| `fp-img-payments` | Withdrawal Speed By Payment Method | `fast-payout-payments.webp` | stock | After guide — payment-method speed comparison visual |
-| `fp-img-cashier` | Casino Withdrawal Cashier Screen | `fast-payout-cashier.webp` | screenshot | After how-to — casino cashier withdrawal screen (blur PII) |
+| ID                | imageName                          | Suggested file              | imageType    | Placement                                                  |
+| ----------------- | ---------------------------------- | --------------------------- | ------------ | ---------------------------------------------------------- |
+| `fp-img-hero`     | Fast Payout Hero                   | `fast-payout-hero.webp`     | ai-generated | After intro — hero collage (PayPal/e-wallet speed theme)   |
+| `fp-img-payments` | Withdrawal Speed By Payment Method | `fast-payout-payments.webp` | stock        | After guide — payment-method speed comparison visual       |
+| `fp-img-cashier`  | Casino Withdrawal Cashier Screen   | `fast-payout-cashier.webp`  | screenshot   | After how-to — casino cashier withdrawal screen (blur PII) |
 
 ### fast-payout-hero — Hero: fast withdrawals / PayPal & e-wallets
 
@@ -212,11 +212,11 @@ Image slots are wired in `meta.json` (no `src` yet). Localized alt/caption live 
 
 Same enable flow as fast payout: uncomment MDX block + add `"src": "…"` to the matching `meta.json` image entry.
 
-| ID | imageName | Suggested file | imageType | Placement |
-| --- | --- | --- | --- | --- |
-| `mc-img-hero` | Mobile Casino Phone Hero | `mobile-casinos-hero.webp` | ai-generated | After intro — phone/tablet casino hero |
-| `mc-img-mobile-play` | Player On Smartphone Playing Slots | `mobile-casinos-mobile-play.webp` | stock | After guide — player on phone (portrait slots/live) |
-| `mc-img-cashier` | Mobile PayPal Cashier Screen | `mobile-casinos-cashier.webp` | screenshot | After how-to — mobile PayPal cashier (blur PII) |
+| ID                   | imageName                          | Suggested file                    | imageType    | Placement                                           |
+| -------------------- | ---------------------------------- | --------------------------------- | ------------ | --------------------------------------------------- |
+| `mc-img-hero`        | Mobile Casino Phone Hero           | `mobile-casinos-hero.webp`        | ai-generated | After intro — phone/tablet casino hero              |
+| `mc-img-mobile-play` | Player On Smartphone Playing Slots | `mobile-casinos-mobile-play.webp` | stock        | After guide — player on phone (portrait slots/live) |
+| `mc-img-cashier`     | Mobile PayPal Cashier Screen       | `mobile-casinos-cashier.webp`     | screenshot   | After how-to — mobile PayPal cashier (blur PII)     |
 
 ### mobile-casinos-hero — Hero: mobile casino on phone/tablet
 
@@ -254,11 +254,11 @@ Same enable flow as fast payout: uncomment MDX block + add `"src": "…"` to the
 
 Commented placeholders in each locale MDX. Image slots in `meta.json` (no `src` yet).
 
-| ID | imageName | Suggested file | imageType | Placement |
-| --- | --- | --- | --- | --- |
-| `hp-img-hero` | Home Page Payment Methods Hero | `home-page-hero.webp` | ai-generated | After intro — payment methods hero |
-| `hp-img-comparison` | Payment Speed Comparison Chart | `home-page-payment-comparison.webp` | stock | After casino list — speed/fees comparison visual |
-| `hp-img-trust` | PayPal Cashier Deposit Screen | `home-page-paypal-deposit.webp` | screenshot | After body — PayPal in casino cashier (blur PII) |
+| ID                  | imageName                      | Suggested file                      | imageType    | Placement                                        |
+| ------------------- | ------------------------------ | ----------------------------------- | ------------ | ------------------------------------------------ |
+| `hp-img-hero`       | Home Page Payment Methods Hero | `home-page-hero.webp`               | ai-generated | After intro — payment methods hero               |
+| `hp-img-comparison` | Payment Speed Comparison Chart | `home-page-payment-comparison.webp` | stock        | After casino list — speed/fees comparison visual |
+| `hp-img-trust`      | PayPal Cashier Deposit Screen  | `home-page-paypal-deposit.webp`     | screenshot   | After body — PayPal in casino cashier (blur PII) |
 
 Per-locale files: `{name}.{ie\|de\|dk\|fi\|no\|se}.webp` + shared `{name}.webp` fallback.
 
@@ -266,20 +266,20 @@ Per-locale files: `{name}.{ie\|de\|dk\|fi\|no\|se}.webp` + shared `{name}.webp` 
 
 ## PayPal Casino (`pages/paypal-casino/`)
 
-| ID | imageName | Suggested file | imageType | Placement |
-| --- | --- | --- | --- | --- |
-| `pp-img-hero` | PayPal Casino Hero | `paypal-casino-hero.webp` | ai-generated | After intro — PayPal casino hero |
-| `pp-img-cashier` | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp` | screenshot | After casino list — mobile/desktop cashier with PayPal |
-| `pp-img-security` | PayPal Trust And Licence Badges | `paypal-casino-security.webp` | stock | After body — licence badges + PayPal trust cues |
+| ID                | imageName                                    | Suggested file                | imageType    | Placement                                              |
+| ----------------- | -------------------------------------------- | ----------------------------- | ------------ | ------------------------------------------------------ |
+| `pp-img-hero`     | PayPal Casino Hero                           | `paypal-casino-hero.webp`     | ai-generated | After intro — PayPal casino hero                       |
+| `pp-img-cashier`  | PayPal Cashier Deposit And Withdrawal Screen | `paypal-casino-cashier.webp`  | screenshot   | After casino list — mobile/desktop cashier with PayPal |
+| `pp-img-security` | PayPal Trust And Licence Badges              | `paypal-casino-security.webp` | stock        | After body — licence badges + PayPal trust cues        |
 
 ---
 
 ## Blocked Casinos (`pages/blocked-casinos/`)
 
-| ID | imageName | Suggested file | imageType | Placement |
-| --- | --- | --- | --- | --- |
-| `bc-img-hero` | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp` | stock | After intro — paused promotion concept |
-| `bc-img-warning` | Blocked Casino Reasons Checklist | `blocked-casinos-warning.webp` | stock | After why section — reasons checklist |
+| ID                    | imageName                            | Suggested file                      | imageType    | Placement                                     |
+| --------------------- | ------------------------------------ | ----------------------------------- | ------------ | --------------------------------------------- |
+| `bc-img-hero`         | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp`         | stock        | After intro — paused promotion concept        |
+| `bc-img-warning`      | Blocked Casino Reasons Checklist     | `blocked-casinos-warning.webp`      | stock        | After why section — reasons checklist         |
 | `bc-img-alternatives` | Choosing Licensed Alternative Casino | `blocked-casinos-alternatives.webp` | ai-generated | After how-to — picking a licensed alternative |
 
 ---

@@ -67,7 +67,9 @@ console.log("Kept", kept.length, "substantial reviews");
 if (removed.length) {
   console.log("\nRemoved:");
   for (const row of removed.sort((a, b) =>
-    a.slug === b.slug ? a.locale.localeCompare(b.locale) : a.slug.localeCompare(b.slug),
+    a.slug === b.slug
+      ? a.locale.localeCompare(b.locale)
+      : a.slug.localeCompare(b.slug),
   )) {
     console.log(`  ${row.slug}/${row.locale}.mdx (${row.words} words)`);
   }
