@@ -51,53 +51,88 @@ const starsAriaLabel =
 ---
 
 <div
-  class="casino-card bg-white transition-[max-height] duration-500 rounded-lg shadow-md border border-gray-200 md:overflow-hidden hover:shadow-lg"
+  class="casino-card overflow-hidden bg-white transition-[max-height] duration-500 rounded-lg shadow-md border border-gray-200 hover:shadow-lg"
 >
   <!-- Main horizontal layout -->
-  <div class="main-row flex items-center justify-between h-[158px] lg:h-[124px]">
-    <!-- 1. Logo + Casino Name Column -->
-    <div class="flex flex-col p-1.5 lg:p-0 w-1/2 lg:w-auto">
-      <div
-        class="flex flex-col items-center justify-center p-2.5 border border-gray-200 rounded-md mx-3 my-1 min-w-[100px] lg:min-w-[136px] -mt-7 md:mt-0"
-        style={`background-color:${casino?.fields?.backgroundColor}`}
-      >
-        <div class="mb-1 flex h-[34px] w-[72px] items-center justify-center overflow-hidden">
-          <Image
-            src={addHttps(casino?.fields?.logo?.fields?.file?.url)}
-            alt={`${casino?.fields?.casinoName} logo`}
-            width={72}
-            height={34}
-            format="webp"
-            class="rounded-md object-contain w-full h-full"
-            loading="lazy"
-            style="object-fit: contain; width: 100%; height: 100%;"
-          />
+  <div class="main-row flex flex-col gap-2 p-3 lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:p-0 lg:h-[124px]">
+    <div class="flex items-stretch gap-2 lg:contents">
+      <!-- 1. Logo + Casino Name Column -->
+      <div class="flex shrink-0 flex-col lg:w-auto lg:p-0">
+        <div
+          class="flex flex-col items-center justify-center rounded-md border border-gray-200 p-2 min-w-[96px] lg:mx-3 lg:my-1 lg:min-w-[136px] lg:p-2.5"
+          style={`background-color:${casino?.fields?.backgroundColor}`}
+        >
+          <div class="mb-1 flex h-[34px] w-[72px] items-center justify-center overflow-hidden">
+            <Image
+              src={addHttps(casino?.fields?.logo?.fields?.file?.url)}
+              alt={`${casino?.fields?.casinoName} logo`}
+              width={72}
+              height={34}
+              format="webp"
+              class="rounded-md object-contain w-full h-full"
+              loading="lazy"
+              style="object-fit: contain; width: 100%; height: 100%;"
+            />
+          </div>
+
+          {reviewHref ? (
+            <a
+              href={reviewHref}
+              class="text-xs md:text-sm text-center font-semibold text-gray-100 leading-tight underline decoration-gray-200/80 underline-offset-2 transition-colors duration-200 hover:decoration-white hover:text-white"
+              aria-label={`${copy.readReview}: ${casino?.fields?.casinoName}`}
+            >
+              {casino?.fields?.casinoName}
+            </a>
+          ) : (
+            <span class="text-xs md:text-sm text-center font-semibold text-gray-100 leading-tight">
+              {casino?.fields?.casinoName}
+            </span>
+          )}
+        </div>
+        <div class="mt-1.5 mx-auto flex max-w-[90%] flex-col items-center gap-0.5 rounded-xl bg-blue-50 px-2 py-1 lg:hidden">
+          <span class="text-center text-xs font-bold tabular-nums tracking-tight text-blue-950">
+            {ratingOutOfFive}
+          </span>
+          <RatingStars rating={ratingValue} ariaLabel={starsAriaLabel} size="sm" />
+          <span class="text-center text-[11px] font-semibold leading-tight text-blue-900">{gradationLabel}</span>
+        </div>
+      </div>
+
+      <!-- Mobile: bonus + CTA -->
+      <div class="flex min-w-0 flex-1 flex-col justify-between gap-2 lg:hidden">
+        <div class="rounded-lg border border-blue-200 bg-gradient-to-r from-blue-50 to-blue-100 p-2">
+          <p class="mb-0.5 text-[10px] font-bold uppercase tracking-wide text-blue-700">
+            {firstBonus?.fields?.code || copy.welcomeBonusFallback}
+          </p>
+          <p class="text-xs font-bold leading-snug text-blue-950 line-clamp-3">
+            {firstBonus?.fields?.description || copy.defaultBonusDescription}
+          </p>
         </div>
 
-        {reviewHref ? (
-          <a
-            href={reviewHref}
-            class="text-sm text-center font-semibold text-gray-100 leading-tight underline decoration-gray-200/80 underline-offset-2 transition-colors duration-200 hover:decoration-white hover:text-white"
-            aria-label={`${copy.readReview}: ${casino?.fields?.casinoName}`}
+        <div class="flex flex-col gap-1.5">
+          <CustomButton
+            variant="primary"
+            className="cta-btn w-full group min-h-[36px] font-semibold text-sm py-2"
+            buttonType={isBlocked ? "blocked-ref-link" : "external-ref-link"}
+            refLink={casino?.fields?.referralUrl}
+            casinoName={casino?.fields?.casinoName}
+            alternativesJson={alternativesJson}
           >
-            {casino?.fields?.casinoName}
-          </a>
-        ) : (
-          <span class="text-sm text-center font-semibold text-gray-100 leading-tight">
-            {casino?.fields?.casinoName}
-          </span>
-        )}
-      </div>
-      <div class="mb-0.5 mx-auto flex max-w-[90%] flex-col items-center gap-0.5 rounded-xl md:rounded-full bg-blue-50 px-2 py-1.5 lg:hidden">
-        <span class="text-center text-xs font-bold tabular-nums tracking-tight text-blue-950">
-          {ratingOutOfFive}
-        </span>
-        <RatingStars rating={ratingValue} ariaLabel={starsAriaLabel} size="sm" />
-        <span class="text-center text-[11px] font-semibold leading-tight text-blue-900">{gradationLabel}</span>
+            <span class="cta-text text-sm">{copy.playNow}</span>
+            <ArrowRight class="w-3.5 h-3.5 ml-0.5 transform transition-all duration-300 group-hover:translate-x-1 group-hover:text-gray-600 rounded-full group-hover:bg-blue-100" />
+          </CustomButton>
+
+          <button
+            class="toggle-btn min-h-[36px] w-full flex items-center justify-center gap-1 px-2.5 py-1.5 text-blue-700 hover:text-blue-900 bg-blue-100 hover:bg-blue-200 rounded-md transition-colors duration-200 font-semibold text-sm hover:cursor-pointer"
+          >
+            {copy.showMore}
+            <ChevronDown class="chevron w-3.5 h-3.5" />
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- 2. Rating Column -->
+    <!-- 2. Rating Column (desktop) -->
     <div class="hidden min-w-[92px] flex-col items-center justify-center lg:flex lg:px-2">
       <div class="mb-0.5 flex flex-col items-center gap-0.5 rounded-md md:rounded-full bg-blue-50 px-2 py-1.5">
         <span class="text-center text-xs font-bold tabular-nums tracking-tight text-blue-950">
@@ -108,7 +143,7 @@ const starsAriaLabel =
       </div>
     </div>
 
-    <!-- 3. Bonus Info + Description Column -->
+    <!-- 3. Bonus Info + Description Column (desktop) -->
     <div class="flex-1 px-3 hidden lg:block min-w-[200px]">
       <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-2 border border-blue-200">
         <p class="text-[11px] text-blue-700 font-bold mb-0.5 uppercase tracking-wide">
@@ -127,12 +162,12 @@ const starsAriaLabel =
       </p>
     </div>
 
-    <!-- 5. Buttons Column -->
-    <div class="flex flex-col justify-center gap-1.5 border-l border-gray-200 min-w-1/2 lg:min-w-[200px] h-full min-h-[124px] md:min-h-full">
-      <div class="flex flex-col gap-1.5 p-0 px-3 md:p-3">
+    <!-- 5. Buttons Column (desktop) -->
+    <div class="hidden lg:flex flex-col justify-center gap-1.5 border-l border-gray-200 min-w-[200px] h-full min-h-[124px]">
+      <div class="flex flex-col gap-1.5 p-3">
         <CustomButton
           variant="primary"
-          className="cta-btn w-full group min-h-[36px] font-semibold text-sm md:text-sm py-2"
+          className="cta-btn w-full group min-h-[36px] font-semibold text-sm py-2"
           buttonType={isBlocked ? "blocked-ref-link" : "external-ref-link"}
           refLink={casino?.fields?.referralUrl}
           casinoName={casino?.fields?.casinoName}
@@ -168,17 +203,6 @@ const starsAriaLabel =
         </div>
       </div>
       )}
-
-      <div class="flex-1 block lg:hidden">
-        <div class="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-2 border border-blue-200">
-          <p class="text-[11px] text-blue-700 font-bold mb-0.5 uppercase tracking-wide">
-            {firstBonus?.fields?.code || copy.welcomeBonusFallback}
-          </p>
-          <p class="text-blue-900 font-bold text-xs leading-snug">
-            {firstBonus?.fields?.description || copy.defaultBonusDescription}
-          </p>
-        </div>
-      </div>
 
       <div class="space-y-1.5 flex flex-col items-start lg:px-4">
         <div class="flex items-center gap-1.5">
@@ -234,39 +258,43 @@ const starsAriaLabel =
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    // Select all casino cards
     const cards = document.querySelectorAll(".casino-card");
 
     cards.forEach((card) => {
-      const btn = card.querySelector(".toggle-btn");
-      const chevron = card.querySelector(".chevron");
+      const btns = card.querySelectorAll(".toggle-btn");
+      const chevrons = card.querySelectorAll(".chevron");
       const extra = card.querySelector(".extra");
       const mainRow = card.querySelector(".main-row");
 
-      if (!btn || !extra || !mainRow) return;
+      if (!btns.length || !extra || !mainRow) return;
 
-      // Set initial collapsed height
-      const baseHeight = (mainRow as HTMLElement).offsetHeight;
-      (card as HTMLElement).style.maxHeight = baseHeight + "px";
+      const setCollapsedHeight = () => {
+        const baseHeight = (mainRow as HTMLElement).offsetHeight;
+        (card as HTMLElement).style.maxHeight = baseHeight + "px";
+        return baseHeight;
+      };
 
-      btn.addEventListener("click", () => {
+      let baseHeight = setCollapsedHeight();
+
+      const toggle = () => {
         const isOpen = extra.classList.contains("open");
 
         if (isOpen) {
           extra.classList.remove("open");
           (extra as HTMLElement).style.maxHeight = "0";
           (extra as HTMLElement).style.opacity = "0";
-          (card as HTMLElement).style.maxHeight = baseHeight + "px";
-          chevron && chevron.classList.remove("rotate-180");
+          baseHeight = setCollapsedHeight();
+          chevrons.forEach((chevron) => chevron.classList.remove("rotate-180"));
         } else {
           extra.classList.add("open");
           (extra as HTMLElement).style.maxHeight = extra.scrollHeight + "px";
           (extra as HTMLElement).style.opacity = "1";
           (card as HTMLElement).style.maxHeight = baseHeight + extra.scrollHeight + "px";
-          chevron && chevron.classList.add("rotate-180");
+          chevrons.forEach((chevron) => chevron.classList.add("rotate-180"));
         }
-      });
-    });
+      };
 
+      btns.forEach((btn) => btn.addEventListener("click", toggle));
+    });
   });
 </script>

@@ -839,7 +839,7 @@ export const ContentComponent = ({
                   return (
                     <h1
                       className={cn(
-                        "scroll-mt-28 text-center text-balance text-[2.35rem] font-bold leading-[1.2] tracking-[-0.02em] text-[#1a1a1a] first:mt-0 mt-5 mb-3 md:mt-6 md:mb-3.5 md:text-[2.5rem]",
+                        "scroll-mt-28 text-center text-balance text-2xl lg:text-[2.35rem] font-bold leading-[1.2] tracking-[-0.02em] text-[#1a1a1a] first:mt-0 mt-5 mb-3 md:mt-6 md:mb-3.5 md:text-[2.5rem]",
                         className,
                       )}
                       id={id}
@@ -853,7 +853,7 @@ export const ContentComponent = ({
                   return (
                     <h2
                       className={cn(
-                        "anchor scroll-mt-28 text-center text-balance text-[1.875rem] font-bold leading-snug tracking-[-0.018em] text-[#222] mt-5 mb-2.5",
+                        "anchor scroll-mt-28 text-center text-balance text-xl lg:text-[1.875rem] font-bold leading-snug tracking-[-0.018em] text-[#222] mt-5 mb-2.5",
                         className,
                       )}
                       id={id}
@@ -864,7 +864,7 @@ export const ContentComponent = ({
                 h3: ({ node, className, ...props }) => (
                   <h3
                     className={cn(
-                      "scroll-mt-28 text-center text-balance text-2xl font-semibold leading-snug tracking-[-0.016em] text-[#262626] mt-4 mb-2",
+                      "scroll-mt-28 text-center text-balance text-lg lg:text-2xl font-semibold leading-snug tracking-[-0.016em] text-[#262626] mt-4 mb-2",
                       className,
                     )}
                     {...props}
@@ -873,7 +873,7 @@ export const ContentComponent = ({
                 h4: ({ node, className, ...props }) => (
                   <h4
                     className={cn(
-                      "scroll-mt-28 text-xl font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-7 mb-3",
+                      "scroll-mt-28 text-base lg:text-xl font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-7 mb-3",
                       className,
                     )}
                     {...props}
@@ -882,7 +882,7 @@ export const ContentComponent = ({
                 h5: ({ node, className, ...props }) => (
                   <h5
                     className={cn(
-                      "scroll-mt-28 text-lg font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-6 mb-2",
+                      "scroll-mt-28 text-sm lg:text-lg font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-6 mb-2",
                       className,
                     )}
                     {...props}
@@ -891,7 +891,7 @@ export const ContentComponent = ({
                 h6: ({ node, className, ...props }) => (
                   <h6
                     className={cn(
-                      "scroll-mt-28 text-[17px] font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-5 mb-2",
+                      "scroll-mt-28 text-sm lg:text-[17px] font-semibold leading-snug tracking-[-0.015em] text-[#333] mt-5 mb-2",
                       className,
                     )}
                     {...props}

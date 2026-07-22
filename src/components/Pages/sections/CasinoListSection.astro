@@ -27,7 +27,7 @@ const cardCopy = CASINO_LISTING_CARD_COPY[localeIdForWebsiteLocale(locale)];
     ) : null}
 
     {casinos.length > 0 && (
-      <div class="grid flex flex-col gap-6 md:gap-3 container mx-auto mt-12 md:mt-8 mb-3">
+      <div class="grid flex flex-col gap-3 md:gap-3 container mx-auto mt-6 md:mt-8 mb-3">
         {casinos.map((casino) => (
           <CasinoListingCard casino={casino} copy={cardCopy} />
         ))}
