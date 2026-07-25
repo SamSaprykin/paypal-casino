@@ -1,0 +1,35 @@
+---
+import BonusCalculator from "../BonusCalculator.jsx";
+import type { BonusCalculatorSection, WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
+import {
+  BONUS_CALCULATOR_COPY,
+  localeIdForWebsiteLocale,
+} from "../../../lib/i18n";
+
+interface Props {
+  section: BonusCalculatorSection;
+  locale?: WebsiteLocaleKey;
+}
+
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
+const copy = BONUS_CALCULATOR_COPY[localeIdForWebsiteLocale(locale)];
+---
+
+<section class="bg-gradient-to-b from-white to-blue-50/40 px-4 py-12 sm:py-16">
+  <BonusCalculator
+    client:visible
+    minDeposit={section.minDeposit}
+    matchPercent={section.matchPercent}
+    maxBonus={section.maxBonus}
+    wagering={section.wagering}
+    includeDepositInWagering={section.includeDepositInWagering}
+    maxDeposit={section.maxDeposit}
+    step={section.step}
+    currency={section.currency || copy.currency}
+    localeTag={section.localeTag || copy.localeTag}
+    copy={copy}
+    title={section.title}
+    subtitle={section.subtitle}
+  />
+</section>

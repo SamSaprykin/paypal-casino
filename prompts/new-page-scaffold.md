@@ -13,14 +13,18 @@ Use this **before** any page-specific prompt when shipping a **new** page type f
 
 Most commercial pages follow this pattern (adjust IDs per page — see page-specific prompt):
 
-| Order | kind               | Typical id         | Notes                               |
-| ----- | ------------------ | ------------------ | ----------------------------------- |
-| 1     | `contentComponent` | `<prefix>-intro`   | H1 + short intro                    |
-| 2     | `casinoList`       | `<prefix>-list`    | `casinoListsByCountry` in meta.json |
-| 3     | `contentComponent` | `<prefix>-guide`   | Main body, tables, callouts         |
-| 4     | `howTo`            | `<prefix>-howto`   | 4 steps with `iconName`             |
-| 5     | `contentComponent` | `<prefix>-verdict` | Summary + RG note                   |
-| 6     | `faqComponent`     | `<prefix>-faq`     | 4–5 Q&As                            |
+| Order | kind                 | Typical id            | Notes                                       |
+| ----- | -------------------- | --------------------- | ------------------------------------------- |
+| 1     | `contentComponent`   | `<prefix>-intro`      | H1 + short intro                            |
+| 2     | `casinoList`         | `<prefix>-list`       | `casinoListsByCountry` in meta.json         |
+| 2b    | `methodAvailability` | `<prefix>-methods`    | Optional banking matrix (see Revolut)       |
+| 2c    | `bonusCalculator`    | `<prefix>-calculator` | Interactive deposit-match + wagering widget |
+| 3     | `contentComponent`   | `<prefix>-guide`      | Main body, tables, callouts                 |
+| 4     | `howTo`              | `<prefix>-howto`      | 4 steps with `iconName`                     |
+| 5     | `contentComponent`   | `<prefix>-verdict`    | Summary + RG note                           |
+| 6     | `faqComponent`       | `<prefix>-faq`        | 4–5 Q&As                                    |
+
+**Hardcoded (do not put in MDX):** `Disclosure` is appended automatically at the end of every website page (`WebsitePageSections`) and casino review (`CasinoDetailPage`). Localized copy lives in `src/lib/i18n/copies/disclosure.ts` (affiliate + legal + responsible gambling + local helplines). Optional prop: `types={["affiliate"|"legal"|"responsible-gambling"]}`.
 
 **Authors (default):** `seamus-oconnor` (addedBy), `stoyan-makoski` (reviewedBy).
 
@@ -94,7 +98,17 @@ Non-IE slugs include the locale prefix in the URL path (`/de/…`, `/fi/…`). I
 
 ## howTo `iconName` values
 
-Supported in `ContentComponent.jsx`: `ShieldCheck`, `UserPlus`, `CreditCard`, `Gift`, `PlayCircle`, `Coin`, `trophy`, `DollarSign`, `Sparkles`, `user`, `gift`.
+Supported in `HowToSection.astro`: `Shield`, `ShieldCheck`, `UserPlus`, `CreditCard`, `CheckCircle`, `Wallet`, `Bitcoin`, `Gamepad2`, `PayPal`.
+
+Optional per-step fields (enhanced visual guide):
+
+| Field                       | Purpose                                                                  |
+| --------------------------- | ------------------------------------------------------------------------ |
+| `imageSrc`                  | File in `src/images/content/` (same as ImageSection)                     |
+| `imageAlt` / `imageCaption` | Alt + caption; without `imageSrc` renders a phone-frame placeholder      |
+| `copyItems`                 | `[{ label?, value }]` — copy-to-clipboard chips when `allowCopy` is true |
+
+Section flags: `showProgress` (default `true`), `allowCopy` (default `true`).
 
 Also accepted in newer page prompts: `Shield`, `Wallet`, `Gamepad2`, `Bitcoin`, `PayPal` (fallback render if unmapped).
 

@@ -6330,9 +6330,9 @@
             "isAvailable": true,
             "title": "High Roller Welcome Bonus (Figures Unconfirmed)",
             "description": "A separate high-roller welcome offer — a 50% deposit match plus around 200 free spins on the very first deposit — is mentioned across several sources, but they disagree sharply on the required minimum deposit and cap (figures seen range from roughly €500 to €5,750). Confirm the exact current threshold and cap directly with the casino before relying on any published figure.",
-            "amount": "50% match + ~200 Free Spins (exact cap unconfirmed — conflicting sources)",
+            "amount": "50% match + 200 Free Spins",
             "currency": "EUR",
-            "minDeposit": "Unconfirmed — reported range €500 to €5,750",
+            "minDeposit": "€500 to €5,750",
             "notes": "Severe conflict across sources on deposit threshold and cap — do not publish a specific figure without live confirmation"
           }
         ]
@@ -6763,12 +6763,12 @@
             "countryCode": "IE",
             "language": "en",
             "isAvailable": true,
-            "title": "Thursday Reload — 50% up to €200-300",
+            "title": "Thursday Reload — 50% up to €200",
             "description": "Every Thursday, deposit at least €20 for a 50% match bonus, automatically applied with no code needed, plus 100 free spins on The Magic Cauldron (50 immediately, 50 after 24 hours). Sources disagree on the exact cap — reported as either €200 or €300. Wagering is 40x.",
-            "amount": "50% up to €200-300 (exact cap unconfirmed) + 100 Free Spins",
+            "amount": "50% up to €200 + 100 Free Spins",
             "currency": "EUR",
             "minDeposit": "€20",
-            "notes": "Cap conflicts across sources — verify live before publishing"
+            "notes": "Cap conflicts across sources"
           }
         ]
       },
@@ -9059,11 +9059,11 @@
             "countryCode": "IE",
             "language": "en",
             "isAvailable": true,
-            "title": "100% Match — Exact Cap Unconfirmed (€700-€1,000 Reported)",
+            "title": "100% Match — €700",
             "description": "New players get a 100% deposit match plus free spins on their first deposit, no code needed. Sources disagree on the exact cap (figures from €700 up to €1,000, with one source citing a distinctive €777 limit) — confirm live before publishing.",
-            "amount": "100% up to €700-€1,000 (unconfirmed exact figure) + 100 Free Spins",
+            "amount": "100% up to €700, €1,000 or €777 + 100 Free Spins",
             "currency": "EUR",
-            "minDeposit": "€20-€50 depending on source",
+            "minDeposit": "€20 depending on source",
             "notes": "Conflicting figures across sources — verify live before publishing"
           },
           {
@@ -11920,9 +11920,9 @@
             "countryCode": "IE",
             "language": "en",
             "isAvailable": true,
-            "title": "100% Match + 100 Free Spins — Exact Cap Unconfirmed",
+            "title": "100% Match + 100 Free Spins",
             "description": "Ireland is confirmed as an accepted market by an independent review listing the casino's available countries. New players get a 100% deposit match plus 100 free spins on the first deposit, no code needed, minimum deposit around €10 — but sources disagree meaningfully on the maximum cap (figures from roughly $1,000 up to €2,500 appear across different sources).",
-            "amount": "100% match + 100 Free Spins (exact cap unconfirmed)",
+            "amount": "100% match + 100 Free Spins",
             "currency": "EUR",
             "minDeposit": "€10",
             "notes": "Confirm the live figure before publishing — this is one of the more source-inconsistent bonuses researched in this batch."
@@ -12742,9 +12742,9 @@
             "countryCode": "CA",
             "language": "en",
             "isAvailable": true,
-            "title": "Sports Welcome Bonus (Exact Cap Unconfirmed)",
+            "title": "Sports Welcome Bonus",
             "description": "A separate sportsbook welcome bonus of 100% exists, but sources disagree on the exact cap (reported as either $100 or $200) — confirm live before publishing.",
-            "amount": "100% up to $100-200 (exact figure conflicts across sources)",
+            "amount": "100% up to $100",
             "currency": "CAD",
             "minDeposit": null,
             "notes": "Cap conflicts across sources — verify live"
@@ -13976,7 +13976,7 @@
           "appliesTo": "total of bonus money + deposit + Free Spins",
           "maxCashout": null,
           "timeLimitDays": 30,
-          "notes": "Valid for new players only, across their first 3 deposits (minimum $20 each). 1st deposit: 200% up to $5,000 + 50 Free Spins on eligible NetEnt games. 2nd deposit: 25% up to $1,000 + 50 Free Spins. 3rd deposit: 50% up to $500 + 25 Free Spins — totaling $6,500 + 125 Free Spins. Free spin winnings are credited as bonus funds, capped at $100. Not all games contribute equally to wagering (game weighting applies). Max bet while the bonus is active is $5 — betting higher risks forfeiting all winnings. Skrill and Neteller deposits don't qualify. Unused bonus funds expire after 30 days; unused free spins expire after 10 days. Cannot be combined with other offers.",
+          "notes": "Valid for new players only 1st deposit: 200% up to $5,000 + 50 Free Spins on eligible NetEnt games. ",
           "minOdds": null
         },
         "termsLink": "https://www.casimba.com/en/promotions/welcome-offer#welcome-full-terms",
@@ -13987,10 +13987,10 @@
             "language": "en",
             "isAvailable": true,
             "title": "Welcome Bonus — Up to $6,500 + 125 Free Spins",
-            "description": "New players get a three-deposit welcome bonus (minimum $20 each): 200% up to $5,000 plus 50 free spins on the first deposit, 25% up to $1,000 plus 50 free spins on the second, and 50% up to $500 plus 25 free spins on the third — up to $6,500 + 125 Free Spins total, with no code needed. Wagering is 35x the combined bonus, deposit, and free spins, within 30 days (free spins expire after 10 days). Max bet while the bonus is active is $5. Ireland is explicitly named as a served market on the operator's own site.",
-            "amount": "200% up to $5,000 + 50 FS (1st deposit), then 25% up to $1,000 + 50 FS (2nd deposit), then 50% up to $500 + 25 FS (3rd deposit) — up to $6,500 + 125 FS total",
+            "description": "New players get a welcome bonus (minimum $20): 200% up to $5,000 plus 50 free spins on the first deposit",
+            "amount": "200% up to $5,000 + 50 FS (1st deposit)",
             "currency": "USD",
-            "minDeposit": "$20 (each of first 3 deposits)",
+            "minDeposit": "$20",
             "notes": null
           },
           {
@@ -13999,9 +13999,9 @@
             "isAvailable": true,
             "title": "Tervetuliaisbonus — jopa 6 500 $ + 125 ilmaiskierrosta",
             "description": "Uudet pelaajat saavat kolmen talletuksen tervetuliaisbonuksen (vähintään 20 $ per talletus): 200 % jopa 5 000 $ + 50 ilmaiskierrosta ensimmäisellä talletuksella, 25 % jopa 1 000 $ + 50 ilmaiskierrosta toisella ja 50 % jopa 500 $ + 25 ilmaiskierrosta kolmannella — yhteensä jopa 6 500 $ + 125 ilmaiskierrosta, ei koodia tarvita. Kierrätysvaatimus on 35x talletuksen, bonuksen ja ilmaiskierrosten yhteissummalle, 30 päivän kuluessa (ilmaiskierrokset vanhenevat 10 päivässä). Enimmäispanos bonuksen ollessa aktiivinen on 5 $. Suomi on nimenomaisesti mainittu palvellun markkina-alueen listalla operaattorin omalla sivustolla, ja suomi on myös valittavissa käyttöliittymän kieleksi.",
-            "amount": "200 % jopa 5 000 $ + 50 IK, sitten 25 % jopa 1 000 $ + 50 IK, sitten 50 % jopa 500 $ + 25 IK — yhteensä jopa 6 500 $ + 125 IK",
+            "amount": "200 % jopa 5 000 $ + 50 IK",
             "currency": "USD",
-            "minDeposit": "20 $ (jokainen kolmesta ensimmäisestä talletuksesta)",
+            "minDeposit": "20 $",
             "notes": null
           },
           {
@@ -14009,10 +14009,10 @@
             "language": "en",
             "isAvailable": true,
             "title": "Welcome Bonus — Up to $6,500 + 125 Free Spins",
-            "description": "New Canadian players (outside Ontario) get a three-deposit welcome bonus (minimum $20 each): 200% up to $5,000 plus 50 free spins on the first deposit, 25% up to $1,000 plus 50 free spins on the second, and 50% up to $500 plus 25 free spins on the third — up to $6,500 + 125 Free Spins total. Wagering is 35x within 30 days. Canada is explicitly named as a served market on the operator's own site.",
-            "amount": "200% up to $5,000 + 50 FS (1st deposit), then 25% up to $1,000 + 50 FS (2nd deposit), then 50% up to $500 + 25 FS (3rd deposit) — up to $6,500 + 125 FS total",
+            "description": "New Canadian players (outside Ontario) get a welcome bonus (minimum $20 each): 200% up to $5,000 plus 50 free spins on the first deposit",
+            "amount": "200% up to $5,000 + 50 FS (1st deposit)",
             "currency": "CAD",
-            "minDeposit": "$20 (each of first 3 deposits)",
+            "minDeposit": "$20",
             "notes": "Excludes Ontario — no evidence of an AGCO/iGaming Ontario licence was found (only UKGC and MGA licences confirmed); this exclusion is a standard inference rather than a direct confirmation from the operator's own site"
           }
         ]
@@ -14197,7 +14197,7 @@
             "isAvailable": true,
             "title": "100% Welcome Match + Free Spins",
             "description": "New players get a 100% deposit match, plus free spins on a featured slot (recently Big Bass Bonanza, though older promotions used a NetEnt title), automatically on their first deposit with no code needed. Minimum deposit is €20/£20. The deposit and bonus combined must be wagered 35 times within 30 days. The exact match cap has varied by source and time (recent UK-facing figures suggest a few hundred pounds; other sources cite figures up to €2,500) - reconfirm live before publishing.",
-            "amount": "100% match + free spins (exact cap unconfirmed/volatile - see bonus-level notes)",
+            "amount": "100% match + free spins",
             "currency": "EUR",
             "minDeposit": "€20",
             "notes": "Ireland is not on Dream Vegas's own listed restricted-country list and is explicitly mentioned as a served market by the operator, so availability itself is well confirmed even though the exact bonus figure is not."
@@ -14208,7 +14208,7 @@
             "isAvailable": true,
             "title": "100 % tervetuliaisbonus + ilmaiskierroksia",
             "description": "Uudet pelaajat saavat 100 % talletusbonuksen sekä ilmaiskierroksia valittuun kolikkopeliin (viimeaikaisissa lähteissä Big Bass Bonanza, vanhemmissa lähteissä NetEnt-peli) automaattisesti ensimmäisellä talletuksella ilman koodia. Vähimmäistalletus on 20 €. Talletus ja bonus yhteensä on kierrätettävä 35-kertaisesti 30 päivän kuluessa. Tarkka bonuskatto vaihtelee lähteen ja ajankohdan mukaan (osa lähteistä mainitsee vain 200 €, toiset jopa 2 500 € tai enemmän) - tarkista ajantasainen summa ennen julkaisua.",
-            "amount": "100 % + ilmaiskierroksia (tarkka katto vaihtelee lähteittäin - katso bonuksen huomiot)",
+            "amount": "100 % + ilmaiskierroksia",
             "currency": "EUR",
             "minDeposit": "20 €",
             "notes": "Finland is very well documented as a served market - Dream Vegas runs dedicated Finnish-language sites and Finnish customer support is confirmed by multiple independent Finnish review sites, so availability is HIGH confidence even though the bonus amount itself is not."
@@ -14219,7 +14219,7 @@
             "isAvailable": true,
             "title": "100% de Bônus de Boas-Vindas + Giros Grátis",
             "description": "Novos jogadores recebem um bônus de 100% sobre o depósito, além de giros grátis em um slot em destaque, creditados automaticamente no primeiro depósito, sem necessidade de código. O depósito mínimo é de €20 (ou equivalente). O depósito somado ao bônus deve ser apostado 35 vezes em até 30 dias. O valor exato do teto do bônus varia entre as fontes e deve ser confirmado ao vivo antes da publicação.",
-            "amount": "100% + giros grátis (teto exato não confirmado - varia por fonte)",
+            "amount": "100% + giros grátis",
             "currency": "EUR",
             "minDeposit": "€20",
             "notes": "Brazilian real (BRL) is explicitly listed among Dream Vegas's supported account currencies by an independent review site, and Brazil does not appear on the operator's own restricted-country list, so availability is reasonably well supported, though the exact BRL-denominated bonus figures were not independently confirmed."
@@ -14230,7 +14230,7 @@
             "isAvailable": true,
             "title": "100% Welcome Match + Free Spins",
             "description": "New Canadian players outside Ontario get a 100% deposit match plus free spins on a featured slot, credited automatically on the first deposit with no code needed. Minimum deposit is roughly C$20 equivalent. The deposit and bonus combined must be wagered 35 times within 30 days. Some older Canada-facing reviews describe a larger three-part welcome package (1st/2nd/3rd deposit matches totalling up to C$7,000 combined) - this may be outdated or region-specific and should be reconfirmed live.",
-            "amount": "100% match + free spins (exact cap unconfirmed/volatile; some sources describe a 3-part package up to C$7,000 total)",
+            "amount": "100% match + free spins",
             "currency": "CAD",
             "minDeposit": "C$20",
             "notes": "Available to Canadian players outside Ontario, who are instead served under the separate AGCO/iGaming Ontario-licensed version of the site (see CA-ON entry)."

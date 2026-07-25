@@ -8,15 +8,18 @@ import FaqSection from "./sections/FaqSection.astro";
 import HowToSection from "./sections/HowToSection.astro";
 import BonusesListSection from "./sections/BonusesListSection.astro";
 import ImageSection from "./sections/ImageSection.astro";
+import MethodAvailabilitySection from "./sections/MethodAvailabilitySection.astro";
+import BonusCalculatorSection from "./sections/BonusCalculatorSection.astro";
+import Disclosure from "./Disclosure.astro";
 
 interface Props {
   sections: PageSection[];
   locale?: WebsiteLocaleKey;
+  /** When false, skip the hardcoded compliance banner (rare). Default true. */
+  showDisclosure?: boolean;
 }
 
-const { sections, locale } = Astro.props;
-
-
+const { sections, locale, showDisclosure = true } = Astro.props;
 ---
 
 <div class="website-page-sections flex flex-col bg-transparent py-4">
@@ -28,16 +31,29 @@ const { sections, locale } = Astro.props;
         case "faqComponent":
           return <FaqSection section={section} />;
         case "contentComponent":
-          return <ContentSection section={section} />;
+          return <ContentSection section={section} locale={locale} />;
         case "howTo":
-          return <HowToSection section={section} />;
+          return <HowToSection section={section} locale={locale} />;
         case "bonusesList":
           return <BonusesListSection section={section} locale={locale} />;
         case "image":
           return <ImageSection section={section} locale={locale} />;
+        case "methodAvailability":
+          return (
+            <MethodAvailabilitySection section={section} locale={locale} />
+          );
+        case "bonusCalculator":
+          return (
+            <BonusCalculatorSection section={section} locale={locale} />
+          );
         default:
           return null;
       }
     })
+  }
+  {
+    showDisclosure ? (
+      <Disclosure locale={locale} class="rounded-b-xl" />
+    ) : null
   }
 </div>

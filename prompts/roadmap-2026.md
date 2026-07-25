@@ -11,12 +11,17 @@ Quick index of agent prompts under `prompts/`. Run **one locale per generation**
 | **Week 2** | Live casino + PayPal                            | `live-casino-paypal-page.md`      |
 | **Week 3** | Trustly & bank transfer                         | `trustly-casinos-page.md`         |
 | **Week 3** | Revolut casinos                                 | `revolut-casinos-page.md`         |
+| **QA**     | Revolut method availability (cashier research)  | `revolut-method-research.md`      |
 | **Week 4** | Skrill & Neteller                               | `skrill-neteller-casinos-page.md` |
 | **Week 4** | Crypto deposits                                 | `crypto-casinos-page.md`          |
 | **Week 5** | No deposit / free spins hub                     | `no-deposit-bonus-page.md`        |
 | **Week 5** | Wagering requirements guide                     | `wagering-requirements-page.md`   |
 
-**Shipped (no prompt — edit MDX directly):** Home, PayPal, New, Bonuses, Blocked, Fast payout, Mobile — all 6 locales in `src/data/content/pages/`.
+**Shipped (edit MDX directly):** Home, New, Bonuses, Blocked, Fast payout, Mobile, Minimum deposit, Revolut — all 6 locales in `src/data/content/pages/`.
+
+| Task                                               | Prompt file            |
+| -------------------------------------------------- | ---------------------- |
+| **QA / gap** Add PayPal Casino FAQ (all 6 locales) | `paypal-casino-faq.md` |
 
 ## New page workflow
 

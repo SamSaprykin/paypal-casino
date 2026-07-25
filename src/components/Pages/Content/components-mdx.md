@@ -63,6 +63,15 @@ if (className.includes("info-card")) {
   return <InfoCard>{children}</InfoCard>;
 }
 
+if (className.includes("warning-box")) {
+  return <WarningBox>{children}</WarningBox>;
+}
+
+if (className.includes("content-freshness") || className.includes("last-updated")) {
+  // Prefer data-date / data-review-cycle / data-next-review → LastUpdated strip
+  return <ContentFreshness …>{children}</ContentFreshness>;
+}
+
 if (className.includes("tip-box")) {
   return <TipBox>{children}</TipBox>;
 }
@@ -137,6 +146,34 @@ return <div {...props} />;
   </div>
 </div>
 ```
+
+**Warning box** (`WarningBox` — Lucide `TriangleAlert`, amber)
+
+```html
+<div class="warning-box">
+  <div>
+    <strong>Before you deposit</strong>
+    <p>Gambling block / withdrawal limits / credit restrictions.</p>
+  </div>
+</div>
+```
+
+**Content freshness / Last updated** (`LastUpdated` — Lucide `CalendarDays`)
+
+When `data-date` is set, renders a structured “Last verified · Next review” strip. `data-next-review` is optional (defaults from `data-review-cycle`: `weekly` | `monthly` | `quarterly` | `yearly`).
+
+```html
+<div
+  class="content-freshness"
+  data-date="2026-07-25"
+  data-review-cycle="monthly"
+  data-next-review="2026-08-25"
+>
+  <p>Optional editorial note about what changed in this review.</p>
+</div>
+```
+
+Without `data-date`, the block stays a freeform emerald callout (legacy home-page notes).
 
 **Tip box** (`TipBox` — Lucide `Lightbulb`)
 
@@ -251,6 +288,8 @@ import {
   ArticleShell,
   InfoArticle,
   TipArticle,
+  WarningArticle,
+  LastUpdated,
   CriteriaGrid,
   CriteriaItem,
   EditorNote,
@@ -258,6 +297,12 @@ import {
   HowToArticle,
   StepCard,
 } from "../../components/Pages/Content/ContentArticleComponents.jsx";
+```
+
+Note: `LastUpdated` also ships from `src/components/Pages/LastUpdated.jsx` / `mdx-components.ts` for true MDX bodies:
+
+```tsx
+<LastUpdated date="2026-07-25" reviewCycle="monthly" nextReview="2026-08-25" />
 ```
 
 - **`CriteriaItem` `icon` prop:** `Shield` | `CreditCard` | `Eye` | `Smartphone` | `Headphones` | `LayoutDashboard`

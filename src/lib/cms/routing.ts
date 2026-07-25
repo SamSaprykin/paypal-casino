@@ -46,6 +46,7 @@ export const WEBSITE_LOCALE_LABELS: Record<WebsiteLocaleKey, string> = {
 export type NavLabelSet = {
   onlineCasino: string;
   paypalCasino: string;
+  revolutCasinos: string;
   newCasinos: string;
   bonuses: string;
   fastPayoutCasinos: string;
@@ -60,6 +61,7 @@ export const NAV_LABELS: Record<
   ireland: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
+    revolutCasinos: "Revolut Casinos",
     newCasinos: "New Casinos",
     bonuses: "Bonuses",
     fastPayoutCasinos: "Fast Payout",
@@ -68,6 +70,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Home",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "New",
       bonuses: "Bonuses",
       fastPayoutCasinos: "Payouts",
@@ -78,6 +81,7 @@ export const NAV_LABELS: Record<
   denmark: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
+    revolutCasinos: "Revolut Casinoer",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonusser",
     fastPayoutCasinos: "Hurtig udbetaling",
@@ -86,6 +90,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Forside",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "Nye",
       bonuses: "Bonus",
       fastPayoutCasinos: "Udbetaling",
@@ -96,6 +101,7 @@ export const NAV_LABELS: Record<
   finland: {
     onlineCasino: "Nettikasino",
     paypalCasino: "Paypal-kasino",
+    revolutCasinos: "Revolut Kasinot",
     newCasinos: "Uudet kasinot",
     bonuses: "Bonukset",
     fastPayoutCasinos: "Nopeat kotiutukset",
@@ -104,6 +110,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Etusivu",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "Uudet",
       bonuses: "Bonukset",
       fastPayoutCasinos: "Kotiutukset",
@@ -114,6 +121,7 @@ export const NAV_LABELS: Record<
   germany: {
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
+    revolutCasinos: "Revolut Casinos",
     newCasinos: "Neue Casinos",
     bonuses: "Bonus",
     fastPayoutCasinos: "Schnelle Auszahlung",
@@ -122,6 +130,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Start",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "Neue",
       bonuses: "Bonus",
       fastPayoutCasinos: "Auszahlung",
@@ -132,6 +141,7 @@ export const NAV_LABELS: Record<
   norway: {
     onlineCasino: "Nettkasino",
     paypalCasino: "Paypal Casino",
+    revolutCasinos: "Revolut Casinoer",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonuser",
     fastPayoutCasinos: "Rask utbetaling",
@@ -140,6 +150,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Hjem",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "Nye",
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetaling",
@@ -150,6 +161,7 @@ export const NAV_LABELS: Record<
   sweden: {
     onlineCasino: "Onlinecasino",
     paypalCasino: "Paypal Casino",
+    revolutCasinos: "Revolut Casinon",
     newCasinos: "Nya casinon",
     bonuses: "Bonusar",
     fastPayoutCasinos: "Snabb utbetalning",
@@ -158,6 +170,7 @@ export const NAV_LABELS: Record<
     short: {
       onlineCasino: "Start",
       paypalCasino: "PayPal",
+      revolutCasinos: "Revolut",
       newCasinos: "Nya",
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetalning",

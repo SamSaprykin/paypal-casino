@@ -1,14 +1,21 @@
 ---
 import { ContentComponent } from "../ContentComponent.jsx";
-import type { ContentSection } from "../../../lib/content";
+import type { ContentSection, WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
+import {
+  CONTENT_FRESHNESS_COPY,
+  localeIdForWebsiteLocale,
+} from "../../../lib/i18n";
 
 interface Props {
   section: ContentSection;
+  locale?: WebsiteLocaleKey;
 }
 
-const { section } = Astro.props;
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const markdown = section.bodyMarkdown ?? "";
 const sectionDomId = `content-section-${section.id.replace(/[^a-zA-Z0-9_-]/g, "-")}`;
+const freshnessCopy = CONTENT_FRESHNESS_COPY[localeIdForWebsiteLocale(locale)];
 ---
 
 {
@@ -23,6 +30,8 @@ const sectionDomId = `content-section-${section.id.replace(/[^a-zA-Z0-9_-]/g, "-
           firstBonus={null}
           spaceTop={0}
           spaceBottom={0}
+          localeTag={freshnessCopy.localeTag}
+          freshnessLabels={freshnessCopy}
         />
       </div>
     </section>

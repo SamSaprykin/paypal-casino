@@ -185,6 +185,11 @@
       "kind": "image",
       "id": "pp-img-security",
       "name": "PayPal Trust And Licence Badges"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "pp-faq",
+      "name": "PayPal Casino FAQ"
     }
   ]
 }

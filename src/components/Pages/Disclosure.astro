@@ -1,0 +1,106 @@
+---
+import type { WebsiteLocaleKey } from "../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../lib/content";
+import {
+  DEFAULT_DISCLOSURE_TYPES,
+  DISCLOSURE_COPY,
+  localeIdForWebsiteLocale,
+  type DisclosureType,
+} from "../../lib/i18n";
+
+interface Props {
+  locale?: WebsiteLocaleKey;
+  /**
+   * Which blocks to render. Defaults to affiliate + legal + responsible-gambling.
+   * Pass a subset when a surface only needs one disclosure (rare).
+   */
+  types?: DisclosureType[];
+  class?: string;
+}
+
+const {
+  locale = ROOT_WEBSITE_LOCALE,
+  types = DEFAULT_DISCLOSURE_TYPES,
+  class: className,
+} = Astro.props as Props;
+
+const copy = DISCLOSURE_COPY[localeIdForWebsiteLocale(locale)];
+const showAffiliate = types.includes("affiliate");
+const showLegal = types.includes("legal");
+const showRg = types.includes("responsible-gambling");
+const show = showAffiliate || showLegal || showRg;
+---
+
+{
+  show ? (
+    <aside
+      class:list={[
+        "disclosure-banner mt-10 border-t border-slate-200 bg-slate-50/90 px-4 py-6 sm:px-6 sm:py-8",
+        className,
+      ]}
+      aria-label={copy.rgTitle}
+      data-disclosure="true"
+    >
+      <div class="mx-auto flex max-w-5xl flex-col gap-5 sm:flex-row sm:gap-6">
+        <div class="flex shrink-0 flex-col items-center gap-1 sm:pt-1">
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-full border-2 border-slate-800 bg-slate-900 text-lg font-bold tracking-tight text-white shadow-sm"
+            aria-hidden="true"
+          >
+            {copy.ageBadge}
+          </div>
+          <span class="text-center text-[11px] font-semibold uppercase tracking-wide text-slate-600">
+            {copy.ageLabel}
+          </span>
+        </div>
+
+        <div class="min-w-0 flex-1 space-y-4 text-sm leading-relaxed text-slate-700">
+          {showAffiliate ? (
+            <div>
+              <h2 class="text-sm font-bold text-slate-900">
+                {copy.affiliateTitle}
+              </h2>
+              <p class="mt-1">{copy.affiliateBody}</p>
+            </div>
+          ) : null}
+
+          {showLegal ? (
+            <div>
+              <h2 class="text-sm font-bold text-slate-900">{copy.legalTitle}</h2>
+              <p class="mt-1">{copy.legalBody}</p>
+            </div>
+          ) : null}
+
+          {showRg ? (
+            <div>
+              <h2 class="text-sm font-bold text-slate-900">{copy.rgTitle}</h2>
+              <p class="mt-1">{copy.rgBody}</p>
+              <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                {copy.helplinesHeading}
+              </p>
+              <ul class="mt-2 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+                {copy.helplines.map((line) => (
+                  <li>
+                    <a
+                      href={line.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex flex-wrap items-baseline gap-x-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-blue-800 shadow-sm transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-950"
+                    >
+                      <span>{line.name}</span>
+                      {line.phone ? (
+                        <span class="font-normal text-slate-600">
+                          {line.phone}
+                        </span>
+                      ) : null}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </aside>
+  ) : null
+}

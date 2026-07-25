@@ -1,0 +1,574 @@
+{
+  "_id": "da6a6f6d-b8f3-4fc7-b69e-9dadf09254a8",
+  "_createdAt": "2026-07-25T08:00:00Z",
+  "_updatedAt": "2026-07-25T10:45:00Z",
+  "name": "Revolut Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "rv-intro",
+      "name": "Revolut Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "rv-list",
+      "name": "Revolut Casinos",
+      "casinoListsByCountry": {
+        "ireland": [
+          "dragonslots",
+          "dream-vegas",
+          "granawin",
+          "wildtokyo",
+          "coolzino",
+          "crashino",
+          "swiftcasino"
+        ],
+        "germany": [
+          "yukon-gold",
+          "kukimuki",
+          "villento",
+          "bitstarz",
+          "zodiac-casino",
+          "50-crowns",
+          "lollybet"
+        ],
+        "denmark": [
+          "coolzino",
+          "kukimuki",
+          "spinbetter",
+          "lucky-ones",
+          "lets-lucky",
+          "cosmicslot",
+          "just-casino"
+        ],
+        "finland": [
+          "swiftcasino",
+          "dream-vegas",
+          "crashino",
+          "20bet",
+          "playkasino",
+          "fezbet",
+          "spinbetter"
+        ],
+        "norway": [
+          "coolzino",
+          "kukimuki",
+          "flagman",
+          "spinbetter",
+          "lucky-ones",
+          "50-crowns",
+          "slotbox"
+        ],
+        "sweden": [
+          "klirr-casino",
+          "pop-casino",
+          "lucky-ones",
+          "cosmicslot",
+          "lets-lucky",
+          "spinbetter",
+          "jubla-casino"
+        ]
+      }
+    },
+    {
+      "kind": "methodAvailability",
+      "id": "rv-methods",
+      "name": "Revolut Method Availability",
+      "columns": ["cardDeposit", "revolutPay", "withdraw", "bonusOk"],
+      "rowsByCountry": {
+        "ireland": [
+          {
+            "casinoSlug": "dragonslots",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via bank transfer to Revolut",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "dream-vegas",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via Visa Fast Funds to Revolut",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "granawin",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via bank transfer to Revolut",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "wildtokyo",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via bank transfer — needs operational verification"
+          },
+          {
+            "casinoSlug": "coolzino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via bank transfer — needs operational verification"
+          },
+          {
+            "casinoSlug": "crashino",
+            "cells": {
+              "cardDeposit": "partial",
+              "revolutPay": "no",
+              "withdraw": "no",
+              "bonusOk": "yes"
+            },
+            "notes": "Card path partial (crypto/fiat mix); withdrawals crypto-only, not to Revolut",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "swiftcasino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Withdraw via bank transfer to Revolut",
+            "verifiedAt": "2026-07-25"
+          }
+        ],
+        "germany": [
+          {
+            "casinoSlug": "yukon-gold",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard. Auszahlung Bank, E-Wallet oder Scheck. Kein Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "kukimuki",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kasse: Visa/Mastercard. Kartenauszahlung 3–5 Werktage; auch Überweisung. Kein Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "villento",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, Bank, E-Wallets, Krypto. Kartenauszahlung 1–2 Werktage. Kein Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "bitstarz",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, E-Wallets, Krypto. Visa-OCT-Auszahlungen. Kein Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "zodiac-casino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, PayPal, E-Wallets, Bank. Kein Revolut Pay. Bonus akzeptiert Karten.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "50-crowns",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Auch Visa/Mastercard. Auszahlung Karte/E-Wallet oft schnell; Bank 1–5 Tage. Kein Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lollybet",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Karten, E-Wallets, Krypto u. a. Kein Revolut Pay. Auszahlung Bank oder E-Wallet möglich.",
+            "verifiedAt": "2026-07-25"
+          }
+        ],
+        "denmark": [
+          {
+            "casinoSlug": "coolzino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Udbetaling via bankoverførsel — kræver operationel verifikation"
+          },
+          {
+            "casinoSlug": "kukimuki",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kasse: Visa/Mastercard. Kortudbetaling 3–5 hverdage; også bankoverførsel. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "spinbetter",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard bekræftet. Revolut Pay ikke bekræftet via primær kilde. Udbetaling bank/e-wallet.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lucky-ones",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kort, e-wallets, bank, krypto. Ingen Revolut Pay. Bankoverførsel til Revolut-IBAN mulig.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lets-lucky",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, krypto, Skrill, MiFinity. Udbetaling bank/e-wallet. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "cosmicslot",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kort, e-wallets, transfers, krypto. Ingen Revolut Pay. Bankoverførsel til Revolut-IBAN mulig.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "just-casino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, bank, Bitcoin. Ingen Revolut Pay. Udbetaling bank eller kortrefundering.",
+            "verifiedAt": "2026-07-25"
+          }
+        ],
+        "finland": [
+          {
+            "casinoSlug": "swiftcasino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Nosto pankkisiirrolla Revolutille",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "dream-vegas",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Nosto Visa Fast Funds -reitillä Revolutille",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "crashino",
+            "cells": {
+              "cardDeposit": "partial",
+              "revolutPay": "no",
+              "withdraw": "no",
+              "bonusOk": "yes"
+            },
+            "notes": "Korttipolku osittainen (krypto/fiat); nostot vain kryptolla, ei Revolutille",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "20bet",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kassa: Visa/Mastercard. Nosto pankilla (jopa 7 pv) tai kortilla (3–5 pv) — Revolut-IBAN mahdollinen. Ei Revolut Payta.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "playkasino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard/Maestro. Nosto kortille tai tilisiirrolla. Ei Revolut Payta.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "fezbet",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, pankki, e-lompakot, krypto. Pankkisiirto Revolut-IBANiin mahdollinen. Ei Revolut Payta.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "spinbetter",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard vahvistettu. Revolut Payta ei vahvistettu ensisijaislähteestä. Nosto pankki/e-lompakko.",
+            "verifiedAt": "2026-07-25"
+          }
+        ],
+        "norway": [
+          {
+            "casinoSlug": "coolzino",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Uttak via bankoverføring — krever operasjonell verifisering"
+          },
+          {
+            "casinoSlug": "kukimuki",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kasse: Visa/Mastercard. Kortuttak 3–5 virkedager; også bankoverføring. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "flagman",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard/Maestro. Uttak typisk kort eller bank. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "spinbetter",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard bekreftet. Revolut Pay ikke bekreftet via primærkilde. Uttak bank/e-lommebok.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lucky-ones",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kort, e-lommebøker, bank, krypto. Ingen Revolut Pay. Bankoverføring til Revolut-IBAN mulig.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "50-crowns",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Også Visa/Mastercard. Uttak kort/e-lommebok ofte raskt; bank 1–5 dager. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "slotbox",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kortinnskudd umiddelbart; kortuttak 3–5 virkedager. Også bank. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          }
+        ],
+        "sweden": [
+          {
+            "casinoSlug": "klirr-casino",
+            "cells": {
+              "cardDeposit": "no",
+              "revolutPay": "no",
+              "withdraw": "no",
+              "bonusOk": "yes"
+            },
+            "notes": "Endast Trustly — inga Visa/Mastercard, ingen Revolut Pay. Uttag endast Trustly.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "pop-casino",
+            "cells": {
+              "cardDeposit": "no",
+              "revolutPay": "no",
+              "withdraw": "no",
+              "bonusOk": "yes"
+            },
+            "notes": "Endast Swish, Trustly, Zimpler. Inga kortinsättningar. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lucky-ones",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kort, e-plånböcker, bank, krypto. Ingen Revolut Pay. Banköverföring till Revolut-IBAN möjlig.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "cosmicslot",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Kort, e-plånböcker, överföringar, krypto. Ingen Revolut Pay. Banköverföring till Revolut-IBAN möjlig.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "lets-lucky",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard, krypto, Skrill, MiFinity. Uttag bank/e-plånbok. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "spinbetter",
+            "cells": {
+              "cardDeposit": "yes",
+              "revolutPay": "no",
+              "withdraw": "partial",
+              "bonusOk": "yes"
+            },
+            "notes": "Visa/Mastercard bekräftat. Revolut Pay inte bekräftat via primärkälla. Uttag bank/e-plånbok.",
+            "verifiedAt": "2026-07-25"
+          },
+          {
+            "casinoSlug": "jubla-casino",
+            "cells": {
+              "cardDeposit": "no",
+              "revolutPay": "no",
+              "withdraw": "no",
+              "bonusOk": "yes"
+            },
+            "notes": "Endast Swish, Trustly, Zimpler. Inga kortinsättningar. Ingen Revolut Pay.",
+            "verifiedAt": "2026-07-25"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "rv-guide",
+      "name": "Revolut Casinos Guide"
+    },
+    {
+      "kind": "howTo",
+      "id": "rv-howto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "rv-verdict",
+      "name": "Revolut Casinos Verdict"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "rv-faq"
+    }
+  ]
+}

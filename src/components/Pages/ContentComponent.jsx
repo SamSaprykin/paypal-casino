@@ -19,6 +19,7 @@ import {
   Sparkles,
   Shield,
   User,
+  TriangleAlert,
 } from "lucide-react";
 import { addHttps } from "../../lib/helpers";
 import { cn, slugify as slugifyHeading } from "../../lib/utils";
@@ -34,6 +35,8 @@ import {
   parseHowToStepCardsFromHast,
   parseProsConsFromHast,
 } from "./Content/articleMarkdownBlocks.jsx";
+import { LastUpdated } from "./LastUpdated.jsx";
+import { resolveFreshness } from "../../lib/content/freshness";
 
 const linkClassMd =
   "text-blue-700 underline hover:text-blue-900 transition-colors duration-200 font-medium";
@@ -211,9 +214,29 @@ const IconSwitch = ({ iconName }) => {
 };
 
 const HowToComponent = ({ steps }) => {
-  // Restored "Step" label above number, visible step numbers and titles.
+  const total = steps.length;
   return (
     <div className="relative w-full my-12">
+      {total > 1 ? (
+        <div
+          className="mb-6 flex items-center justify-center gap-1.5 px-4"
+          aria-hidden="true"
+        >
+          {steps.map((_, index) => (
+            <div
+              key={`progress-${index}`}
+              className="flex items-center gap-1.5"
+            >
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-700 text-xs font-bold text-white shadow">
+                {index + 1}
+              </div>
+              {index < total - 1 ? (
+                <div className="h-1 w-6 rounded-full bg-blue-200 sm:w-10" />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      ) : null}
       {/* Connecting horizontal line for desktop */}
       <div className="hidden lg:block absolute top-1/2 left-0 right-0 z-0 pointer-events-none">
         <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-slate-200 via-slate-100 to-blue-100 opacity-70 shadow-lg" />
@@ -230,9 +253,8 @@ const HowToComponent = ({ steps }) => {
               zIndex: 1,
             }}
           >
-            {/* "Step" word above step number, visible always */}
             <div className="mb-1 text-sm font-bold text-blue-700 tracking-wide uppercase">
-              Step
+              Step {index + 1} of {total}
             </div>
             {/* Circular step number badge with animated shadow */}
             <div className="mb-4 relative">
@@ -288,7 +310,53 @@ const InfoCard = ({ children }) => {
   );
 };
 
-const ContentFreshness = ({ children }) => {
+const WarningBox = ({ children }) => {
+  return (
+    <div className="my-8 border-l-4 border-amber-500 bg-amber-50/80 px-4 lg:px-8 py-2 lg:py-6 rounded-xl shadow warning-box">
+      <div className="flex flex-col md:flex-row items-start gap-4">
+        <TriangleAlert
+          className="w-7 h-7 text-amber-600 mt-1 flex-shrink-0"
+          aria-hidden
+        />
+        <div className="min-w-0 flex-1 text-amber-950 leading-relaxed text-base">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ContentFreshness = ({
+  children,
+  date,
+  nextReview,
+  reviewCycle = "monthly",
+  localeTag = "en-GB",
+  labels,
+}) => {
+  const resolved = resolveFreshness({
+    date,
+    nextReview,
+    reviewCycle,
+    localeTag,
+  });
+
+  // Structured mode (data-date / props) — calendar strip + optional notes
+  if (resolved) {
+    return (
+      <LastUpdated
+        date={resolved.dateIso}
+        nextReview={resolved.nextReviewIso}
+        reviewCycle={resolved.reviewCycle}
+        localeTag={localeTag}
+        labels={labels}
+      >
+        {children}
+      </LastUpdated>
+    );
+  }
+
+  // Legacy freeform callout (home pages with editorial notes only)
   return (
     <div className="my-8 border-l-4 border-emerald-400 bg-emerald-50/60 px-4 lg:px-8 py-2 lg:py-6 rounded-xl shadow content-freshness">
       <div className="flex flex-col md:flex-row items-start gap-4">
@@ -303,6 +371,25 @@ const ContentFreshness = ({ children }) => {
     </div>
   );
 };
+
+function hastDataAttr(node, props, name) {
+  const camel = name.replace(/-([a-z])/g, (_, c) => c.toUpperCase());
+  const dataCamel = `data${camel.charAt(0).toUpperCase()}${camel.slice(1)}`;
+  const fromProps =
+    props?.[name] ??
+    props?.[`data-${name}`] ??
+    props?.[dataCamel] ??
+    props?.[`data${camel}`];
+  if (fromProps != null && String(fromProps).trim())
+    return String(fromProps).trim();
+
+  const p = node?.properties;
+  if (!p || typeof p !== "object") return undefined;
+  const fromNode = p[dataCamel] ?? p[`data-${name}`] ?? p[name];
+  if (fromNode != null && String(fromNode).trim())
+    return String(fromNode).trim();
+  return undefined;
+}
 
 const tipBoxTextClass = "text-yellow-900 leading-relaxed text-sm sm:text-base";
 const tipBoxLinkClass =
@@ -630,6 +717,8 @@ export const ContentComponent = ({
   casinoName = undefined,
   spaceBottom = 0,
   spaceTop = 0,
+  localeTag = "en-GB",
+  freshnessLabels = undefined,
 }) => {
   const pbClass = paddingBottomMap[spaceBottom] ?? paddingBottomMap[0];
   const mtClass = marginTopMap[spaceTop] ?? marginTopMap[0];
@@ -725,9 +814,27 @@ export const ContentComponent = ({
                   if (className.includes("info-card")) {
                     return <InfoCard>{props.children}</InfoCard>;
                   }
-                  if (className.includes("content-freshness")) {
+                  if (className.includes("warning-box")) {
+                    return <WarningBox>{props.children}</WarningBox>;
+                  }
+                  if (
+                    className.includes("content-freshness") ||
+                    className.includes("last-updated")
+                  ) {
+                    const date = hastDataAttr(node, props, "date");
+                    const nextReview = hastDataAttr(node, props, "next-review");
+                    const reviewCycle =
+                      hastDataAttr(node, props, "review-cycle") || "monthly";
                     return (
-                      <ContentFreshness>{props.children}</ContentFreshness>
+                      <ContentFreshness
+                        date={date}
+                        nextReview={nextReview}
+                        reviewCycle={reviewCycle}
+                        localeTag={localeTag}
+                        labels={freshnessLabels}
+                      >
+                        {props.children}
+                      </ContentFreshness>
                     );
                   }
                   if (className.includes("tip-box")) {

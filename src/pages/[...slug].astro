@@ -4,6 +4,7 @@ import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
 import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
 import PageByline from "../components/Pages/PageByline.astro";
+import LastUpdated from "../components/Pages/LastUpdated.astro";
 
 import {
   getWebsitePageBySlug,
@@ -98,6 +99,7 @@ const updatedDisplay = formatDisplayDate(page.updatedAt);
           addedBy={page.addedBy}
           reviewedBy={page.reviewedBy}
         />
+        <LastUpdated locale={locale} updatedAt={page.updatedAt} reviewCycle="monthly" />
         <WebsitePageSections sections={page.sections} locale={locale} />
       </div>
     </div>

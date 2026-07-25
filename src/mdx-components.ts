@@ -8,13 +8,17 @@ import {
   ProsConsArticle,
   StepCard,
   TipArticle,
+  WarningArticle,
 } from "./components/Pages/Content/ContentArticleComponents.jsx";
+import { LastUpdated } from "./components/Pages/LastUpdated.jsx";
 
 export function useMDXComponents() {
   return {
     ArticleShell,
     InfoArticle,
     TipArticle,
+    WarningArticle,
+    LastUpdated,
     CriteriaGrid,
     CriteriaItem,
     EditorNote,

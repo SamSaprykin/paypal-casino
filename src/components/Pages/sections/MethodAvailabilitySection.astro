@@ -1,0 +1,117 @@
+---
+import type { MethodAvailabilitySection } from "../../../lib/cms/sections";
+import type { WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
+import {
+  METHOD_AVAILABILITY_COPY,
+  localeIdForWebsiteLocale,
+  type MethodAvailabilityStatus,
+} from "../../../lib/i18n";
+
+interface Props {
+  section: MethodAvailabilitySection;
+  locale?: WebsiteLocaleKey;
+}
+
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
+const copy = METHOD_AVAILABILITY_COPY[localeIdForWebsiteLocale(locale)];
+const title = section.title?.trim() || copy.title;
+const footnote = section.footnote?.trim() || copy.footnote;
+
+const statusClass: Record<MethodAvailabilityStatus, string> = {
+  yes: "bg-emerald-100 text-emerald-900 ring-emerald-200",
+  no: "bg-rose-100 text-rose-900 ring-rose-200",
+  partial: "bg-amber-100 text-amber-950 ring-amber-200",
+  unknown: "bg-slate-100 text-slate-600 ring-slate-200",
+};
+
+const columnLabel: Record<string, string> = {
+  cardDeposit: copy.cardDeposit,
+  revolutPay: copy.revolutPay,
+  withdraw: copy.withdraw,
+  bonusOk: copy.bonusOk,
+};
+---
+
+{
+  section.rows.length > 0 && (
+    <section class="bg-white px-3 py-10 sm:px-4 lg:py-12">
+      <div class="mx-auto max-w-6xl">
+        <header class="mb-6 text-center sm:mb-8">
+          <h2 class="font-sans text-2xl font-extrabold tracking-tight text-blue-950 sm:text-3xl">
+            {title}
+          </h2>
+          <div class="mx-auto mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-blue-500 to-blue-700" />
+        </header>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
+          <table class="min-w-full border-collapse text-left text-sm">
+            <thead class="bg-slate-50 text-xs uppercase tracking-wide text-slate-600">
+              <tr>
+                <th class="whitespace-nowrap px-3 py-3 font-semibold sm:px-4">
+                  {copy.casino}
+                </th>
+                {section.columns.map((col) => (
+                  <th class="whitespace-nowrap px-3 py-3 font-semibold sm:px-4">
+                    {columnLabel[col] ?? col}
+                  </th>
+                ))}
+                <th class="whitespace-nowrap px-3 py-3 font-semibold sm:px-4">
+                  {copy.verified}
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 bg-white">
+              {section.rows.map((row) => (
+                <tr class="hover:bg-slate-50/80">
+                  <td class="px-3 py-3 sm:px-4">
+                    <div class="font-semibold text-slate-900">
+                      {row.casinoName}
+                    </div>
+                    {row.notes ? (
+                      <div class="mt-0.5 max-w-xs text-xs leading-snug text-slate-500">
+                        {row.notes}
+                      </div>
+                    ) : null}
+                  </td>
+                  {section.columns.map((col) => {
+                    const status = (row.cells[col] ??
+                      "unknown") as MethodAvailabilityStatus;
+                    return (
+                      <td class="px-3 py-3 sm:px-4">
+                        <span
+                          class:list={[
+                            "inline-flex min-w-[2.5rem] items-center justify-center rounded-md px-2 py-1 text-xs font-semibold ring-1 ring-inset",
+                            statusClass[status],
+                          ]}
+                          title={copy.status[status]}
+                        >
+                          {copy.statusShort[status]}
+                        </span>
+                      </td>
+                    );
+                  })}
+                  <td class="px-3 py-3 text-xs text-slate-500 sm:px-4">
+                    {row.verifiedAt ? (
+                      <time datetime={row.verifiedAt}>{row.verifiedAt}</time>
+                    ) : (
+                      <span class="italic text-slate-400">
+                        {copy.unverified}
+                      </span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {footnote ? (
+          <p class="mx-auto mt-4 max-w-3xl text-center text-xs leading-relaxed text-slate-500 sm:text-sm">
+            {footnote}
+          </p>
+        ) : null}
+      </div>
+    </section>
+  )
+}

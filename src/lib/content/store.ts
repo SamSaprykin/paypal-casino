@@ -439,6 +439,28 @@ function resolveCasinoListSlugs(
   return fallbackSlugs;
 }
 
+function resolveMethodAvailabilityRows(
+  section: Record<string, unknown>,
+  locale: LocaleKey,
+): Record<string, unknown>[] {
+  if (Array.isArray(section.rows) && section.rows.length) {
+    return section.rows.filter(
+      (r): r is Record<string, unknown> => typeof r === "object" && r !== null,
+    );
+  }
+  const byCountry = section.rowsByCountry;
+  if (byCountry && typeof byCountry === "object") {
+    const forLocale = (byCountry as Record<string, unknown>)[locale];
+    if (Array.isArray(forLocale)) {
+      return forLocale.filter(
+        (r): r is Record<string, unknown> =>
+          typeof r === "object" && r !== null,
+      );
+    }
+  }
+  return [];
+}
+
 /** Merge meta.json component order with locale-specific section data from MDX frontmatter. */
 function mergePageSections(
   metaComponents: unknown[],
@@ -529,6 +551,8 @@ function mapPageSection(
         __typename: "HowToIntl",
         _id: id,
         title: section.title,
+        showProgress: section.showProgress !== false,
+        allowCopy: section.allowCopy !== false,
         howToItems: section.items ?? [],
       });
 
@@ -541,6 +565,72 @@ function mapPageSection(
         caption: section.caption,
         width: section.width,
         height: section.height,
+      });
+
+    case "methodAvailability":
+      return casinoResolver(
+        Array.isArray(section.rows)
+          ? (section.rows as { casinoSlug?: string }[]).map((r) => r.casinoSlug)
+          : [],
+      ).then((casinos) => {
+        const nameBySlug = new Map(
+          (casinos as { slug?: string; casinoName?: string }[])
+            .filter((c) => typeof c.slug === "string")
+            .map((c) => [c.slug as string, c.casinoName ?? c.slug]),
+        );
+        const rows = Array.isArray(section.rows)
+          ? (section.rows as Record<string, unknown>[]).flatMap((row) => {
+              const slug =
+                typeof row.casinoSlug === "string" ? row.casinoSlug : "";
+              if (!slug) return [];
+              return [
+                {
+                  casinoSlug: slug,
+                  casinoName:
+                    (typeof row.casinoName === "string" && row.casinoName) ||
+                    nameBySlug.get(slug) ||
+                    slug,
+                  cells:
+                    row.cells && typeof row.cells === "object" ? row.cells : {},
+                  notes: typeof row.notes === "string" ? row.notes : undefined,
+                  verifiedAt:
+                    typeof row.verifiedAt === "string"
+                      ? row.verifiedAt
+                      : undefined,
+                },
+              ];
+            })
+          : [];
+        return {
+          __typename: "MethodAvailabilityIntl",
+          _id: id,
+          title: section.title,
+          footnote: section.footnote,
+          columns: section.columns ?? [
+            "cardDeposit",
+            "revolutPay",
+            "withdraw",
+            "bonusOk",
+          ],
+          rows,
+        };
+      });
+
+    case "bonusCalculator":
+      return Promise.resolve({
+        __typename: "BonusCalculatorIntl",
+        _id: id,
+        title: section.title,
+        subtitle: section.subtitle,
+        minDeposit: section.minDeposit ?? 10,
+        matchPercent: section.matchPercent ?? 100,
+        maxBonus: section.maxBonus ?? 200,
+        wagering: section.wagering ?? 35,
+        includeDepositInWagering: section.includeDepositInWagering === true,
+        maxDeposit: section.maxDeposit,
+        step: section.step ?? 5,
+        currency: section.currency,
+        localeTag: section.localeTag,
       });
 
     default:
@@ -588,6 +678,9 @@ async function assemblePageDoc(
             locale,
             defaultCasinoSlugs,
           );
+        }
+        if (section.kind === "methodAvailability") {
+          section.rows = resolveMethodAvailabilityRows(section, locale);
         }
         if (
           section.kind === "bonusesList" &&

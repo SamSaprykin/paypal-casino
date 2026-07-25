@@ -4,6 +4,7 @@ import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
 import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
 import PageByline from "../components/Pages/PageByline.astro";
+import LastUpdated from "../components/Pages/LastUpdated.astro";
 
 import {
   getWebsitePageBySlug,
@@ -89,6 +90,11 @@ const seoData = {
           updatedDisplay={updatedDisplay}
           addedBy={homePage.addedBy}
           reviewedBy={homePage.reviewedBy}
+        />
+        <LastUpdated
+          locale={ROOT_WEBSITE_LOCALE}
+          updatedAt={homePage.updatedAt}
+          reviewCycle="monthly"
         />
         <WebsitePageSections
           sections={homePage.sections}

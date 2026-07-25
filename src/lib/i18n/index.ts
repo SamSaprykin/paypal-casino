@@ -37,6 +37,31 @@ export {
 } from "./copies/casino-detail-page";
 export { WEBSITE_PAGE_COPY, type WebsitePageCopy } from "./copies/website-page";
 export {
+  METHOD_AVAILABILITY_COPY,
+  type MethodAvailabilityCopy,
+  type MethodAvailabilityStatus,
+} from "./copies/method-availability";
+export {
+  DEFAULT_DISCLOSURE_TYPES,
+  DISCLOSURE_COPY,
+  type DisclosureCopy,
+  type DisclosureHelpline,
+  type DisclosureType,
+} from "./copies/disclosure";
+export {
+  HOW_TO_UI_COPY,
+  formatHowToStepOf,
+  type HowToUiCopy,
+} from "./copies/how-to-ui";
+export {
+  BONUS_CALCULATOR_COPY,
+  type BonusCalculatorCopy,
+} from "./copies/bonus-calculator";
+export {
+  CONTENT_FRESHNESS_COPY,
+  type ContentFreshnessCopy,
+} from "./copies/content-freshness";
+export {
   BLOCKED_CASINO_MODAL_COPY,
   formatBlockedCasinoModalCopy,
   type BlockedCasinoModalCopy,

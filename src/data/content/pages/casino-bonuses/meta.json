@@ -46,6 +46,16 @@
       "name": "Wagering Requirements Explainer"
     },
     {
+      "kind": "bonusCalculator",
+      "id": "bn-calculator",
+      "name": "Bonus Calculator",
+      "minDeposit": 10,
+      "matchPercent": 100,
+      "maxBonus": 200,
+      "wagering": 35,
+      "step": 5
+    },
+    {
       "kind": "howTo",
       "id": "bn-howto"
     },

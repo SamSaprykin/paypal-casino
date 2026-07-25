@@ -102,5 +102,18 @@
       "norway": "/no/kasinoer-med-lav-innskudd/",
       "sweden": "/se/casinon-med-lag-insattning/"
     }
+  },
+  {
+    "id": "da6a6f6d-b8f3-4fc7-b69e-9dadf09254a8",
+    "name": "Revolut Casinos",
+    "dir": "pages/revolut-casinos",
+    "slugs": {
+      "ireland": "/revolut-casinos/",
+      "germany": "/de/revolut-casinos/",
+      "denmark": "/dk/revolut-kasinoer/",
+      "finland": "/fi/revolut-kasinot/",
+      "norway": "/no/revolut-kasinoer/",
+      "sweden": "/se/revolut-casinon/"
+    }
   }
 ]

@@ -16,10 +16,54 @@ export type PageSection =
   | ContentSection
   | HowToSection
   | BonusesListSection
-  | ImageSection;
+  | ImageSection
+  | MethodAvailabilitySection
+  | BonusCalculatorSection;
 
 export interface BaseSection {
   id: string;
+}
+
+export type MethodAvailabilityCell = "yes" | "no" | "partial" | "unknown";
+
+export interface MethodAvailabilityRow {
+  casinoSlug: string;
+  casinoName: string;
+  cells: Partial<Record<string, MethodAvailabilityCell>>;
+  notes?: string;
+  /** ISO date (YYYY-MM-DD) when cashier was last checked. */
+  verifiedAt?: string;
+}
+
+export interface MethodAvailabilitySection extends BaseSection {
+  kind: "methodAvailability";
+  title?: string;
+  footnote?: string;
+  columns: string[];
+  rows: MethodAvailabilityRow[];
+}
+
+export interface BonusCalculatorSection extends BaseSection {
+  kind: "bonusCalculator";
+  title?: string;
+  subtitle?: string;
+  /** Minimum qualifying deposit (slider floor). */
+  minDeposit?: number;
+  /** Deposit match percentage, e.g. 100 = 100%. */
+  matchPercent?: number;
+  /** Cap on matched bonus. */
+  maxBonus?: number;
+  /** Playthrough multiple, e.g. 35. */
+  wagering?: number;
+  /** When true, playthrough = (deposit + bonus) × wagering. */
+  includeDepositInWagering?: boolean;
+  /** Slider ceiling; defaults from maxBonus / match. */
+  maxDeposit?: number;
+  step?: number;
+  /** ISO 4217; falls back to locale default in i18n copy. */
+  currency?: string;
+  /** BCP 47 tag for number formatting. */
+  localeTag?: string;
 }
 
 export interface CasinoListSection extends BaseSection {
@@ -45,10 +89,31 @@ export interface ContentSection extends BaseSection {
   mdxPath?: string;
 }
 
+export interface HowToCopyItem {
+  label?: string;
+  value: string;
+}
+
+export interface HowToStepItem {
+  iconName?: string;
+  title?: string;
+  steps: string[];
+  /** Optional screenshot under `src/images/content/` (same as ImageSection). */
+  imageSrc?: string;
+  imageAlt?: string;
+  imageCaption?: string;
+  /** Values shown with a copy-to-clipboard control when `allowCopy` is on. */
+  copyItems?: HowToCopyItem[];
+}
+
 export interface HowToSection extends BaseSection {
   kind: "howTo";
   title?: string;
-  items: { iconName?: string; title?: string; steps: string[] }[];
+  /** Show “Step X of Y” on each card. Default true. */
+  showProgress?: boolean;
+  /** Enable copy buttons for steps that define `copyItems`. Default true. */
+  allowCopy?: boolean;
+  items: HowToStepItem[];
 }
 
 export interface BonusItem {
@@ -188,18 +253,33 @@ function adaptSection(
 
     case "HowToIntl": {
       const items = pickArray<Record<string, unknown>>(b.howToItems).map(
-        (it) => ({
-          iconName: asString(it.iconName),
-          title: asString(it.title),
-          steps: pickArray<string>(it.steps).filter(
-            (s) => typeof s === "string" && s.trim() !== "",
-          ),
-        }),
+        (it) => {
+          const copyItems = pickArray<Record<string, unknown>>(
+            it.copyItems,
+          ).flatMap((c) => {
+            const value = asString(c.value);
+            if (!value) return [];
+            return [{ label: asString(c.label), value }];
+          });
+          return {
+            iconName: asString(it.iconName),
+            title: asString(it.title),
+            steps: pickArray<string>(it.steps).filter(
+              (s) => typeof s === "string" && s.trim() !== "",
+            ),
+            imageSrc: asString(it.imageSrc),
+            imageAlt: asString(it.imageAlt),
+            imageCaption: asString(it.imageCaption),
+            copyItems: copyItems.length ? copyItems : undefined,
+          };
+        },
       );
       return {
         kind: "howTo",
         id,
         title: asString(b.title),
+        showProgress: b.showProgress === false ? false : true,
+        allowCopy: b.allowCopy === false ? false : true,
         items,
       };
     }
@@ -223,6 +303,68 @@ function adaptSection(
         caption: asString(b.caption),
         width: asNumber(b.width),
         height: asNumber(b.height),
+      };
+
+    case "MethodAvailabilityIntl": {
+      const columns = pickArray<string>(b.columns).filter(
+        (c) => typeof c === "string" && c.trim() !== "",
+      );
+      const rows = pickArray<Record<string, unknown>>(b.rows).flatMap((row) => {
+        const casinoSlug = asString(row.casinoSlug);
+        const casinoName = asString(row.casinoName);
+        if (!casinoSlug || !casinoName) return [];
+        const cellsRaw =
+          row.cells && typeof row.cells === "object"
+            ? (row.cells as Record<string, unknown>)
+            : {};
+        const cells: MethodAvailabilityRow["cells"] = {};
+        for (const [key, value] of Object.entries(cellsRaw)) {
+          if (
+            value === "yes" ||
+            value === "no" ||
+            value === "partial" ||
+            value === "unknown"
+          ) {
+            cells[key] = value;
+          }
+        }
+        return [
+          {
+            casinoSlug,
+            casinoName,
+            cells,
+            notes: asString(row.notes),
+            verifiedAt: asString(row.verifiedAt),
+          },
+        ];
+      });
+      return {
+        kind: "methodAvailability",
+        id,
+        title: asString(b.title),
+        footnote: asString(b.footnote),
+        columns: columns.length
+          ? columns
+          : ["cardDeposit", "revolutPay", "withdraw", "bonusOk"],
+        rows,
+      };
+    }
+
+    case "BonusCalculatorIntl":
+      return {
+        kind: "bonusCalculator",
+        id,
+        title: asString(b.title),
+        subtitle: asString(b.subtitle),
+        minDeposit: asNumber(b.minDeposit) ?? 10,
+        matchPercent: asNumber(b.matchPercent) ?? 100,
+        maxBonus: asNumber(b.maxBonus) ?? 200,
+        wagering: asNumber(b.wagering) ?? 35,
+        includeDepositInWagering: b.includeDepositInWagering === true,
+        maxDeposit: asNumber(b.maxDeposit),
+        step: asNumber(b.step) ?? 5,
+        currency: asString(b.currency),
+        localeTag: asString(b.localeTag),
       };
 
     case "SeoComponentIntl":

@@ -1,72 +1,209 @@
 ---
-import { Shield, UserPlus, Bitcoin, Gamepad2, Wallet } from "@lucide/astro";
-import PayPal from "../../Layout/Logo.astro";
-import type { HowToSection } from "../../../lib/content";
-
-interface Props {
-  section: HowToSection;
-}
-
-const { section } = Astro.props;
-
-const IconsMap: Record<string, any> = {
+import {
   Shield,
+  ShieldCheck,
   UserPlus,
   Bitcoin,
   Gamepad2,
   Wallet,
+  CreditCard,
+  CheckCircle,
+  Image as ImageIcon,
+} from "@lucide/astro";
+import PayPal from "../../Layout/Logo.astro";
+import CustomImage from "../../CustomImage.astro";
+import HowToCopyButton from "../HowToCopyButton.astro";
+import type { HowToSection, WebsiteLocaleKey } from "../../../lib/content";
+import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
+import {
+  HOW_TO_UI_COPY,
+  formatHowToStepOf,
+  localeIdForWebsiteLocale,
+} from "../../../lib/i18n";
+
+interface Props {
+  section: HowToSection;
+  locale?: WebsiteLocaleKey;
+}
+
+const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
+const ui = HOW_TO_UI_COPY[localeIdForWebsiteLocale(locale)];
+const showProgress = section.showProgress !== false;
+const allowCopy = section.allowCopy !== false;
+const total = section.items.length;
+
+const IconsMap: Record<string, any> = {
+  Shield,
+  ShieldCheck,
+  UserPlus,
+  Bitcoin,
+  Gamepad2,
+  Wallet,
+  CreditCard,
+  CheckCircle,
   PayPal,
 };
 ---
 
-{section.items.length > 0 && (
-  <section class="py-16 bg-gradient-to-br from-blue-50 to-blue-100 px-4">
-    {section.title && (
-      <header class="text-center mb-10">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-blue-900 font-sans drop-shadow-sm tracking-tight">
-          {section.title}
-        </h2>
-        <div class="w-28 h-1.5 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-700 mx-auto rounded-full mt-4" />
-      </header>
+<section class="bg-gradient-to-br from-blue-50 to-blue-100 px-4 py-12 sm:py-16">
+  {section.title && (
+    <header class="mb-8 text-center sm:mb-10">
+      <h2 class="font-sans text-2xl font-semibold tracking-tight text-blue-900 sm:text-3xl">
+        {section.title}
+      </h2>
+      <div class="mx-auto mt-3 h-1.5 w-24 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 sm:w-28" />
+    </header>
+  )}
+
+  {/* Mobile: vertical timeline / Desktop: horizontal scroll */}
+  <div class={`
+    ${showProgress && total > 1 ? 'relative' : ''}
+    flex flex-col gap-6 md:flex-row md:gap-8
+    md:mx-auto md:max-w-6xl md:overflow-x-auto md:pb-6
+    md:snap-x md:snap-mandatory
+    [scrollbar-width:thin] md:[scrollbar-color:theme(colors.blue.300)_theme(colors.blue.100)]
+  `}
+  style="WebkitOverflowScrolling: touch;"
+  >
+    {/* Optional: connecting line for mobile vertical view */}
+    {showProgress && total > 1 && (
+      <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 md:hidden" aria-hidden="true" />
     )}
-    <div
-      class="flex flex-row flex-nowrap justify-start items-stretch gap-8 w-full max-w-6xl mx-auto overflow-x-auto scrollbar-thin scrollbar-thumb-blue-300 scrollbar-track-blue-100 pb-6"
-      style="WebkitOverflowScrolling: touch;"
-    >
-      {section.items.map((step) => {
-        const IconComponent = step.iconName ? IconsMap[step.iconName] : null;
-        return (
-          <div class="w-72 min-w-[260px] flex-1 group relative border-0 bg-white/80 backdrop-blur rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 ease-out hover:-translate-y-2 overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-blue-200 to-blue-500 opacity-60 group-hover:opacity-90 transition" />
-            <div class="relative flex flex-col items-center p-7 pb-6 h-full min-h-[340px]">
-              <div class="flex flex-col items-center gap-3 mb-5">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-full flex items-center justify-center shadow-2xl border-4 border-white group-hover:scale-110 transition-transform duration-200">
-                  {IconComponent && (
-                    <IconComponent class="w-8 h-8 text-white drop-shadow-lg" />
-                  )}
-                </div>
+
+    {section.items.map((step, index) => {
+      const IconComponent = step.iconName ? IconsMap[step.iconName] : null;
+      const imageSrc = step.imageSrc?.trim() || "";
+      const isPublicImage =
+        imageSrc.startsWith("/") ||
+        imageSrc.startsWith("http://") ||
+        imageSrc.startsWith("https://");
+      const isContentImage = Boolean(imageSrc) && !isPublicImage;
+      const hasImage = Boolean(imageSrc);
+      const showShot = hasImage || Boolean(step.imageCaption || step.imageAlt);
+      const imgAlt = step.imageAlt ?? step.title ?? ui.screenshotPlaceholder;
+
+      return (
+        <article class="
+          group relative flex gap-4 md:block
+          md:min-w-[280px] md:w-80 md:flex-1 md:snap-start
+          md:overflow-hidden md:rounded-xl md:border-0 md:bg-white/80
+          md:shadow-xl md:backdrop-blur md:transition-all md:duration-300
+          md:hover:-translate-y-2 md:hover:shadow-2xl
+        ">
+          {/* Mobile: timeline dot / Desktop: top gradient bar */}
+          <div class="relative z-10 flex flex-col items-center md:hidden">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-700 text-sm font-bold text-white shadow">
+              {IconComponent ? <IconComponent class="h-5 w-5" /> : index + 1}
+            </div>
+            {index < total - 1 && (
+              <div class="h-full w-0.5 bg-blue-200" aria-hidden="true" />
+            )}
+          </div>
+
+          {/* Card content */}
+          <div class="flex-1 rounded-xl border border-blue-100 bg-white/80 p-5 shadow-sm backdrop-blur md:border-0 md:bg-transparent md:p-6 md:pb-6 md:pt-7 md:shadow-none">
+            {/* Desktop-only top accent */}
+            <div class="hidden md:absolute md:left-0 md:top-0 md:block md:h-1.5 md:w-full md:bg-gradient-to-r md:from-blue-400 md:via-blue-200 md:to-blue-500 md:opacity-60 md:group-hover:opacity-90" />
+
+            {/* Desktop step badge */}
+            {showProgress && (
+              <div class="mb-3 hidden rounded-full bg-blue-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-blue-800 md:inline-block">
+                {formatHowToStepOf(ui.stepOf, index + 1, total)}
+              </div>
+            )}
+
+            {/* Icon */}
+            <div class="mb-3 flex items-center gap-3 md:mb-4 md:flex-col md:items-center">
+              <div class="flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg md:h-16 md:w-16 md:shadow-2xl md:group-hover:scale-110 md:transition-transform md:duration-200">
+                {IconComponent ? (
+                  <IconComponent class="h-6 w-6 text-white md:h-8 md:w-8" />
+                ) : (
+                  <span class="text-base font-bold text-white md:text-lg">{index + 1}</span>
+                )}
               </div>
               {step.title && (
-                <h3 class="text-base md:text-lg font-semibold text-blue-800 font-sans mb-2 text-center tracking-tight leading-snug">
+                <h3 class="text-left font-sans text-base font-semibold leading-snug text-blue-800 md:text-center md:text-lg">
                   {step.title}
                 </h3>
               )}
-              {step.steps.length > 0 && (
-                <ol class="space-y-2 mt-1 w-full px-2">
-                  {step.steps.map((item, idx) => (
-                    <li class="flex items-start gap-3 text-gray-700 text-[15px] font-normal leading-relaxed">
-                      <div class="mt-2 flex-shrink-0">
-                        <span class="block w-2 h-2 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 shadow-sm" />
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ol>
-              )}
             </div>
+
+            {/* Screenshot */}
+            {showShot && (
+              <div class="mb-4 w-full">
+                {hasImage && isPublicImage ? (
+                  <figure class="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-inner md:rounded-xl">
+                    <img
+                      src={imageSrc}
+                      alt={imgAlt}
+                      loading="lazy"
+                      decoding="async"
+                      class="mx-auto max-h-56 w-auto object-contain p-2 sm:max-h-64"
+                    />
+                    {step.imageCaption ? (
+                      <figcaption class="border-t border-slate-100 px-3 py-2 text-center text-[11px] leading-snug text-slate-500">
+                        {step.imageCaption}
+                      </figcaption>
+                    ) : null}
+                  </figure>
+                ) : hasImage && isContentImage ? (
+                  <div class="overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-inner md:rounded-xl [&_figure]:my-0 [&_img]:max-h-56 [&_img]:object-contain">
+                    <CustomImage
+                      src={imageSrc}
+                      alt={imgAlt}
+                      caption={step.imageCaption}
+                      locale={locale}
+                      maxWidth={480}
+                    />
+                  </div>
+                ) : (
+                  <figure class="overflow-hidden rounded-lg border border-dashed border-blue-300 bg-gradient-to-b from-slate-50 to-blue-50/60 md:rounded-xl">
+                    <div class="flex aspect-video max-h-40 flex-col items-center justify-center gap-2 px-4 py-6 text-center">
+                      <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-blue-100 md:h-12 md:w-12">
+                        <ImageIcon class="h-5 w-5 text-blue-500 md:h-6 md:w-6" aria-hidden="true" />
+                      </div>
+                      <figcaption class="text-xs font-medium text-blue-900/80">
+                        {step.imageCaption || step.imageAlt || ui.screenshotMissing}
+                      </figcaption>
+                    </div>
+                  </figure>
+                )}
+              </div>
+            )}
+
+            {/* Steps list */}
+            {step.steps.length > 0 && (
+              <ol class="mt-1 w-full space-y-2">
+                {step.steps.map((item) => (
+                  <li class="flex items-start gap-3 text-sm leading-relaxed text-gray-700 sm:text-[15px]">
+                    <span class="mt-2 block h-2 w-2 shrink-0 rounded-full bg-gradient-to-br from-blue-400 to-blue-700 shadow-sm" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+
+            {/* Copy buttons - fixed spacing */}
+            {allowCopy && step.copyItems?.length ? (
+              <div class="mt-4 flex flex-col gap-2">
+                {step.copyItems.map((item) => (
+                  <HowToCopyButton
+                    value={item.value}
+                    label={item.label}
+                    copyLabel={ui.copy}
+                    copiedLabel={ui.copied}
+                  />
+                ))}
+              </div>
+            ) : null}
           </div>
-        );
-      })}
-    </div>
-  </section>
-)}
+        </article>
+      );
+    })}
+  </div>
+
+  {/* Scroll hint for desktop only */}
+  <p class="mt-4 hidden text-center text-xs text-blue-400 md:block md:[@media(hover:hover)]:hidden">
+    ← Scroll to see all steps →
+  </p>
+</section>

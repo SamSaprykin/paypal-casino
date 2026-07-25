@@ -5,9 +5,11 @@ import Footer from "../../components/Layout/Footer.astro";
 import CasinoReviewHero from "../../components/Pages/CasinoReviewHero.astro";
 import { ContentComponent } from "../../components/Pages/ContentComponent.jsx";
 import FaqList from "../../components/Pages/FaqList.astro";
-
+import Disclosure from "../../components/Pages/Disclosure.astro";
+import LastUpdated from "../../components/Pages/LastUpdated.astro";
 import {
  CASINO_DETAIL_PAGE_COPY,
+ CONTENT_FRESHNESS_COPY,
  localeIdForWebsiteLocale,
  LOCALES,
 } from "../../lib/i18n";
@@ -28,6 +30,7 @@ const { casino, locale } = Astro.props as Props;
 
 const localeId = localeIdForWebsiteLocale(locale);
 const copy = CASINO_DETAIL_PAGE_COPY[localeId];
+const freshnessCopy = CONTENT_FRESHNESS_COPY[localeId];
 const htmlLang = LOCALES[localeId].htmlLang;
 const homeHref = homeHrefForLocale(locale);
 
@@ -92,6 +95,13 @@ const tagListClass =
 
  <div class="mx-auto max-w-5xl bg-gradient-to-b from-primary-50/40 to-white px-4 pb-4 pt-10 sm:px-6 lg:px-8">
 
+ <LastUpdated
+ locale={locale}
+ updatedAt={casino.updatedAt}
+ reviewCycle="monthly"
+ class="-mx-0 mb-2"
+ />
+
  {
  casino.bodyMarkdown?.trim() ? (
  <section class="mb-12 rounded-2xl border border-slate-200/80 bg-white/80 p-6 shadow-sm sm:p-8">
@@ -99,6 +109,8 @@ const tagListClass =
  content={casino.bodyMarkdown}
  firstBonus={firstBonus}
  casinoName={casino.casinoName}
+ localeTag={freshnessCopy.localeTag}
+ freshnessLabels={freshnessCopy}
  />
  </section>
  ) : null
@@ -245,6 +257,8 @@ const tagListClass =
  />
  ) : null
  }
+
+ <Disclosure locale={locale} class="-mx-4 mt-8 sm:-mx-6 lg:-mx-8" />
  </div>
  </main>
  <Footer locale={locale} />

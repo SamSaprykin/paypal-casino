@@ -27,6 +27,10 @@ const { locale = ROOT_WEBSITE_LOCALE, localizedSlugs, localeHrefs } =
 const labels = NAV_LABELS[locale];
 const homeHref = homeHrefForLocale(locale);
 const paypalCasinoHref = await getWebsitePageHrefByName("Paypal Casino", locale);
+const revolutCasinosHref = await getWebsitePageHrefByName(
+  "Revolut Casinos",
+  locale,
+);
 const newCasinosHref = await getWebsitePageHrefByName("New Casinos", locale);
 const bonusesHref = await getWebsitePageHrefByName("Bonuses", locale);
 const fastPayoutHref = await getWebsitePageHrefByName(
@@ -54,6 +58,15 @@ const menuItems = [
           itemLinkRoute: paypalCasinoHref,
           itemName: labels.paypalCasino,
           itemShortName: labels.short.paypalCasino,
+        },
+      ]
+    : []),
+  ...(revolutCasinosHref
+    ? [
+        {
+          itemLinkRoute: revolutCasinosHref,
+          itemName: labels.revolutCasinos,
+          itemShortName: labels.short.revolutCasinos,
         },
       ]
     : []),

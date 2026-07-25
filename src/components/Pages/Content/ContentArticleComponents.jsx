@@ -15,6 +15,7 @@ import {
   Smartphone,
   ThumbsDown,
   ThumbsUp,
+  TriangleAlert,
   UserPlus,
   X,
 } from "lucide-react";
@@ -64,6 +65,18 @@ export function TipArticle({ children }) {
     <div className="tip-box my-6 flex flex-col gap-3 rounded-xl border-l-4 border-yellow-400 bg-yellow-50/80 px-4 py-4 shadow-sm sm:flex-row sm:gap-4 sm:px-8 sm:py-6">
       <Lightbulb className="h-7 w-7 shrink-0 text-yellow-500" aria-hidden />
       <div className="min-w-0 flex-1 text-sm leading-relaxed text-yellow-900 sm:text-base">
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/** Warning callout — mirrors CMS `div.warning-box` styling. */
+export function WarningArticle({ children }) {
+  return (
+    <div className="warning-box my-8 flex flex-col gap-4 rounded-xl border-l-4 border-amber-500 bg-amber-50/80 px-4 py-4 shadow md:flex-row md:px-8 md:py-6">
+      <TriangleAlert className="h-7 w-7 shrink-0 text-amber-600" aria-hidden />
+      <div className="min-w-0 flex-1 text-base leading-relaxed text-amber-950">
         {children}
       </div>
     </div>

@@ -28,13 +28,19 @@ export type { LocalizedPageLangCode } from "../cms/routing";
 
 export { adaptWebsitePage } from "../cms/sections";
 export type {
+  BonusCalculatorSection,
   BonusItem,
   BonusesListSection,
   CasinoListSection,
   ContentSection,
   FaqSection,
+  HowToCopyItem,
   HowToSection,
+  HowToStepItem,
   ImageSection,
+  MethodAvailabilityCell,
+  MethodAvailabilityRow,
+  MethodAvailabilitySection,
   PageSection,
   PageSeo,
   WebsitePage,
@@ -43,6 +49,16 @@ export type {
 export { hasCasinoReviewBody } from "../cms/intlMarkdown";
 export { adaptCasinoForCard } from "../cms/cards";
 export type { CasinoCardData } from "../cms/cards";
+
+export {
+  addReviewCycle,
+  formatFreshnessDate,
+  isReviewCycle,
+  parseFreshnessDate,
+  resolveFreshness,
+  toIsoDateOnly,
+} from "./freshness";
+export type { ResolvedFreshness, ReviewCycle } from "./freshness";
 
 export {
   getPageSeoData,

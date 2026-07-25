@@ -1,0 +1,91 @@
+---
+/**
+ * Clipboard button for HowTo steps (bonus codes, app paths, card labels).
+ */
+interface Props {
+  value: string;
+  label?: string;
+  copyLabel: string;
+  copiedLabel: string;
+}
+
+const { value, label, copyLabel, copiedLabel } = Astro.props;
+---
+
+<div
+  class="howto-copy mt-3 w-full rounded-lg border border-blue-100 bg-blue-50/80 px-3 py-2 text-left"
+  data-howto-copy
+>
+  {
+    label ? (
+      <div class="mb-1 text-[11px] font-semibold uppercase tracking-wide text-blue-700/80">
+        {label}
+      </div>
+    ) : null
+  }
+  <div class="flex items-center gap-2">
+    <code
+      class="min-w-0 flex-1 truncate font-mono text-[13px] font-semibold text-blue-950"
+      data-howto-copy-value
+    >
+      {value}
+    </code>
+    <button
+      type="button"
+      class="shrink-0 rounded-md bg-blue-700 px-2.5 py-1 text-xs font-semibold text-white transition hover:bg-blue-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500"
+      data-howto-copy-btn
+      data-copy-label={copyLabel}
+      data-copied-label={copiedLabel}
+      data-copy-value={value}
+      aria-label={`${copyLabel}: ${value}`}
+    >
+      {copyLabel}
+    </button>
+  </div>
+</div>
+
+<script is:inline define:vars={{}}>
+  (function () {
+    function bind(root) {
+      (root || document)
+        .querySelectorAll("[data-howto-copy-btn]")
+        .forEach(function (btn) {
+          if (btn.dataset.bound === "1") return;
+          btn.dataset.bound = "1";
+          btn.addEventListener("click", async function () {
+            var value = btn.getAttribute("data-copy-value") || "";
+            var copyLabel = btn.getAttribute("data-copy-label") || "Copy";
+            var copiedLabel = btn.getAttribute("data-copied-label") || "Copied";
+            try {
+              await navigator.clipboard.writeText(value);
+              btn.textContent = copiedLabel;
+              setTimeout(function () {
+                btn.textContent = copyLabel;
+              }, 1600);
+            } catch (e) {
+              var ta = document.createElement("textarea");
+              ta.value = value;
+              ta.setAttribute("readonly", "");
+              ta.style.position = "absolute";
+              ta.style.left = "-9999px";
+              document.body.appendChild(ta);
+              ta.select();
+              try {
+                document.execCommand("copy");
+                btn.textContent = copiedLabel;
+                setTimeout(function () {
+                  btn.textContent = copyLabel;
+                }, 1600);
+              } finally {
+                document.body.removeChild(ta);
+              }
+            }
+          });
+        });
+    }
+    bind(document);
+    document.addEventListener("astro:page-load", function () {
+      bind(document);
+    });
+  })();
+</script>

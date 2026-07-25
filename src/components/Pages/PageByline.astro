@@ -76,16 +76,21 @@ const linkClass =
       {/* Dates first on mobile to keep the top compact; authors sit below */}
       {showDates ? (
         <div class="order-1 flex shrink-0 flex-wrap items-baseline gap-x-3 gap-y-0.5 sm:order-2 sm:flex-col sm:items-end sm:gap-0 sm:pt-0.5 sm:text-right">
-          {createdAt ? (
+          {updatedAt ? (
             <div>
-              <span class="font-medium text-slate-500">{copy.created}</span>{" "}
-              <time datetime={createdAt}>{createdDisplay}</time>
+              <span class="font-semibold text-slate-700">{copy.updated}</span>{" "}
+              <time
+                class="font-semibold text-slate-900"
+                datetime={updatedAt}
+              >
+                {updatedDisplay}
+              </time>
             </div>
           ) : null}
-          {updatedAt ? (
-            <div class:list={{ "sm:mt-1": Boolean(createdAt) }}>
-              <span class="font-medium text-slate-500">{copy.updated}</span>{" "}
-              <time datetime={updatedAt}>{updatedDisplay}</time>
+          {createdAt ? (
+            <div class:list={{ "sm:mt-1": Boolean(updatedAt) }}>
+              <span class="font-medium text-slate-500">{copy.created}</span>{" "}
+              <time datetime={createdAt}>{createdDisplay}</time>
             </div>
           ) : null}
         </div>
