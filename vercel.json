@@ -589,6 +589,11 @@
       "source": "/goto/jubla-casino.php",
       "destination": "https://record.epic.partners/_4En9KC65KNXX172zxPL8HmNd7ZgqdRLk/1/",
       "statusCode": 301
+    },
+    {
+      "source": "/goto/hahaspin.php",
+      "destination": "https://hahaspinplay.com/j4auccwuf",
+      "statusCode": 301
     }
   ]
 }
