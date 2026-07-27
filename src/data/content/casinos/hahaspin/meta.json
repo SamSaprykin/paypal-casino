@@ -1,0 +1,89 @@
+{
+  "_id": "b12cc7ce-f9da-4918-857e-b5aaf41bcd94",
+  "_createdAt": "2026-07-27T10:00:00Z",
+  "_updatedAt": "2026-07-27T10:00:00Z",
+  "casinoName": "HahaSpin Casino",
+  "slug": "hahaspin",
+  "rating": 4.5,
+  "shortDescription": "UK-focused casino with 26,000+ games and a six-deposit welcome package. Cards, Revolut, e-wallets and crypto accepted.",
+  "shortDescriptionIntl": {
+    "germany": "Casino mit über 26.000 Spielen und einem Sechs-Einzahlungs-Willkommenspaket. Karten, Revolut, E-Wallets und Krypto."
+  },
+  "referralUrl": "/goto/hahaspin.php",
+  "payoutLimits": null,
+  "payoutTimes": [
+    "Cryptocurrency: near-instant after approval",
+    "E-wallets: within 48 hours",
+    "Cards: within 48 hours",
+    "Bank transfer: within 48 hours"
+  ],
+  "software": [
+    "NetEnt",
+    "Play'n GO",
+    "Pragmatic Play",
+    "Evolution",
+    "Red Tiger",
+    "Big Time Gaming",
+    "Hacksaw Gaming",
+    "Nolimit City",
+    "Relax Gaming",
+    "Thunderkick",
+    "Yggdrasil"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Apple Pay",
+    "Revolut",
+    "Monzo",
+    "Skrill",
+    "Neteller",
+    "Google Pay",
+    "Bitcoin",
+    "Litecoin",
+    "Bank transfer"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Apple Pay",
+    "Revolut",
+    "Monzo",
+    "Skrill",
+    "Neteller",
+    "Google Pay",
+    "Bitcoin",
+    "Litecoin",
+    "Bank transfer"
+  ],
+  "license": "Curaçao — commonly cited as license 8048/JAZ",
+  "userRecommendationsRecommendedNumber": null,
+  "userRecommendationsTotalNumber": null,
+  "availableInCountries": {
+    "ireland": "",
+    "germany": ""
+  },
+  "backgroundColor": {
+    "hex": "#1a1a1a"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/hahaspin-logo.avif",
+      "altText": "HahaSpin Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "cc610eb0-c0eb-407d-aae7-b07879ee3826",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €750 + 50 free spins on first deposit; non-sticky, x35 wagering, €5 max bet.",
+      "descriptionIntl": null,
+      "referralUrl": "/goto/hahaspin.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}

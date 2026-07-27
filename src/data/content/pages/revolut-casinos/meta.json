@@ -33,7 +33,6 @@
           "villento",
           "bitstarz",
           "zodiac-casino",
-          "50-crowns",
           "lollybet"
         ],
         "denmark": [
@@ -60,7 +59,6 @@
           "flagman",
           "spinbetter",
           "lucky-ones",
-          "50-crowns",
           "slotbox"
         ],
         "sweden": [
@@ -78,7 +76,12 @@
       "kind": "methodAvailability",
       "id": "rv-methods",
       "name": "Revolut Method Availability",
-      "columns": ["cardDeposit", "revolutPay", "withdraw", "bonusOk"],
+      "columns": [
+        "cardDeposit",
+        "revolutPay",
+        "withdraw",
+        "bonusOk"
+      ],
       "rowsByCountry": {
         "ireland": [
           {
@@ -211,17 +214,6 @@
               "bonusOk": "yes"
             },
             "notes": "Visa/Mastercard, PayPal, E-Wallets, Bank. Kein Revolut Pay. Bonus akzeptiert Karten.",
-            "verifiedAt": "2026-07-25"
-          },
-          {
-            "casinoSlug": "50-crowns",
-            "cells": {
-              "cardDeposit": "yes",
-              "revolutPay": "no",
-              "withdraw": "partial",
-              "bonusOk": "yes"
-            },
-            "notes": "Auch Visa/Mastercard. Auszahlung Karte/E-Wallet oft schnell; Bank 1–5 Tage. Kein Revolut Pay.",
             "verifiedAt": "2026-07-25"
           },
           {
@@ -446,17 +438,6 @@
               "bonusOk": "yes"
             },
             "notes": "Kort, e-lommebøker, bank, krypto. Ingen Revolut Pay. Bankoverføring til Revolut-IBAN mulig.",
-            "verifiedAt": "2026-07-25"
-          },
-          {
-            "casinoSlug": "50-crowns",
-            "cells": {
-              "cardDeposit": "yes",
-              "revolutPay": "no",
-              "withdraw": "partial",
-              "bonusOk": "yes"
-            },
-            "notes": "Også Visa/Mastercard. Uttak kort/e-lommebok ofte raskt; bank 1–5 dager. Ingen Revolut Pay.",
             "verifiedAt": "2026-07-25"
           },
           {
