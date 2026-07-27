@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/kinbet.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -25,8 +27,16 @@
     "Evolution",
     "Quickspin"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 52,
   "userRecommendationsTotalNumber": 75,
@@ -62,10 +72,10 @@
       "description": "Up to €500 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/kinbet.php",
       "bonusBackgroundColor": null,

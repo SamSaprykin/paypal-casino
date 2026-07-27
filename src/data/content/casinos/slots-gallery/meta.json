@@ -8,17 +8,33 @@
   "shortDescription": "Slots Gallery is a sleek, multi-platform casino launched in 2021. It offers over 9,500 games, a generous three-tier welcome package up to €600 plus 225 free spins, and supports both fiat and cryptocurrencies.",
   "shortDescriptionIntl": {
     "germany": "Slots Gallery ist ein elegantes Multi-Plattform-Casino, das 2021 gestartet ist. Es bietet über 9.500 Spiele, ein großzügiges dreistufiges Willkommenspaket bis zu 600 € plus 225 Freispiele und unterstützt sowohl Fiat als auch Kryptowährungen.",
-    "denmark": "Slots Gallery er et elegant multi-platform casino lanceret i 2021. Det byder på over 9.500 spil, en generøs velkomstpakke i tre niveauer op til 600 € plus 225 gratis spins og understøtter både fiat og kryptovalutaer.",
+    "denmark": "Slots Gallery er et elegant multi-platform casino lanceret i 2021. Det byder på over 9.500 spil, en generøs velkomstpakke i tre niveauer op til 600 kr plus 225 gratis spins og understøtter både fiat og kryptovalutaer.",
     "finland": "Slots Gallery on tyylikäs, monialustainen kasino, joka avattiin vuonna 2021. Se tarjoaa yli 9 500 peliä, anteliaan kolmitasoisen tervetuliaispaketin jopa 600 euroon asti sekä 225 ilmaiskierrosta ja tukee sekä fiat- että kryptovaluuttoja.",
     "norway": "Slots Gallery er et elegant multiplattform-casino lansert i 2021. Det byr på over 9 500 spill, en sjenerøs velkomstpakke i tre nivåer opptil 600 € pluss 225 gratisspinn og støtter både fiat og kryptovalutaer.",
-    "sweden": "Slots Gallery är ett elegant flerplattformscasino som lanserades 2021. Det erbjuder över 9 500 spel, ett generöst välkomstpaket i tre nivåer upp till 600 € plus 225 gratissnurr och stöder både fiat och kryptovalutor."
+    "sweden": "Slots Gallery är ett elegant flerplattformscasino som lanserades 2021. Det erbjuder över 9 500 spel, ett generöst välkomstpaket i tre nivåer upp till 600 kr plus 225 gratissnurr och stöder både fiat och kryptovalutor."
   },
   "referralUrl": "/goto/slotsgallery.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 165,
   "userRecommendationsTotalNumber": 205,
@@ -42,19 +58,66 @@
   "bonuses": null,
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["hugo-casino", "trickz", "kukimuki"],
-    "finland": ["lumi-casino", "slotbox", "rx-casino"],
-    "germany": ["lollybet", "zodiac-casino", "villento"],
-    "ireland": ["granawin", "flagman", "20bet"],
-    "norway": ["tonybet", "cleobetra", "kukimuki"],
-    "sweden": ["tonybet", "hugo-casino", "klirr-casino"]
+    "denmark": [
+      "hugo-casino",
+      "trickz",
+      "kukimuki"
+    ],
+    "finland": [
+      "lumi-casino",
+      "slotbox",
+      "rx-casino"
+    ],
+    "germany": [
+      "lollybet",
+      "zodiac-casino",
+      "villento"
+    ],
+    "ireland": [
+      "granawin",
+      "flagman",
+      "20bet"
+    ],
+    "norway": [
+      "tonybet",
+      "cleobetra",
+      "kukimuki"
+    ],
+    "sweden": [
+      "tonybet",
+      "hugo-casino",
+      "klirr-casino"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["ritzo", "lucky-start", "trickz"],
-    "finland": ["swiftcasino", "drip", "vegasmobilecasino"],
-    "germany": ["rollingslots", "hugo-casino"],
-    "ireland": ["crownslots", "lucky-start", "vegasmobilecasino"],
-    "norway": ["fambet", "tsars", "caspero"],
-    "sweden": ["tonybet", "cosmicslot", "ritzo"]
+    "denmark": [
+      "ritzo",
+      "lucky-start",
+      "trickz"
+    ],
+    "finland": [
+      "swiftcasino",
+      "drip",
+      "vegasmobilecasino"
+    ],
+    "germany": [
+      "rollingslots",
+      "hugo-casino"
+    ],
+    "ireland": [
+      "crownslots",
+      "lucky-start",
+      "vegasmobilecasino"
+    ],
+    "norway": [
+      "fambet",
+      "tsars",
+      "caspero"
+    ],
+    "sweden": [
+      "tonybet",
+      "cosmicslot",
+      "ritzo"
+    ]
   }
 }

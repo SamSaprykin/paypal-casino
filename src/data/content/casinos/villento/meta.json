@@ -8,17 +8,33 @@
   "shortDescription": "Villento Casino is a sophisticated, Microgaming-powered platform and a member of the Casino Rewards group. It offers a tiered $1,000 welcome bonus across five deposits and a premium VIP loyalty program.",
   "shortDescriptionIntl": {
     "germany": "Villento Casino ist eine anspruchsvolle, von Microgaming betriebene Plattform und Mitglied der Casino-Rewards-Gruppe. Es bietet einen gestaffelten Willkommensbonus von 1.000 $ über fünf Einzahlungen und ein erstklassiges VIP-Treueprogramm.",
-    "denmark": "Villento Casino er en sofistikeret, Microgaming-drevet platform og medlem af Casino Rewards-gruppen. Det byder på en trinvis velkomstbonus på 1.000 $ fordelt over fem indbetalinger og et førsteklasses VIP-loyalitetsprogram.",
+    "denmark": "Villento Casino er en sofistikeret, Microgaming-drevet platform og medlem af Casino Rewards-gruppen. Det byder på en trinvis velkomstbonus på 1.000 kr fordelt over fem indbetalinger og et førsteklasses VIP-loyalitetsprogram.",
     "finland": "Villento Casino on hienostunut, Microgamingin voimin toimiva alusta ja Casino Rewards -ryhmän jäsen. Se tarjoaa porrastetun 1 000 dollarin tervetuliaisbonuksen viiden talletuksen kesken sekä ensiluokkaisen VIP-uskollisuusohjelman.",
     "norway": "Villento Casino er en sofistikert, Microgaming-drevet plattform og medlem av Casino Rewards-gruppen. Det byr på en trinnvis velkomstbonus på 1 000 $ fordelt over fem innskudd og et førsteklasses VIP-lojalitetsprogram.",
-    "sweden": "Villento Casino är en sofistikerad, Microgaming-driven plattform och medlem i Casino Rewards-gruppen. Det erbjuder en nivåbaserad välkomstbonus på 1 000 $ över fem insättningar och ett förstklassigt VIP-lojalitetsprogram."
+    "sweden": "Villento Casino är en sofistikerad, Microgaming-driven plattform och medlem i Casino Rewards-gruppen. Det erbjuder en nivåbaserad välkomstbonus på 1 000 kr över fem insättningar och ett förstklassigt VIP-lojalitetsprogram."
   },
   "referralUrl": "/goto/villento.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 258,
   "userRecommendationsTotalNumber": 314,
@@ -47,10 +63,10 @@
       "description": "$125 Free Bonus",
       "descriptionIntl": {
         "germany": "125 $ Gratisbonus",
-        "denmark": "125 $ gratis bonus",
+        "denmark": "125 kr gratis bonus",
         "finland": "125 $ ilmaisbonus",
         "norway": "125 $ gratisbonus",
-        "sweden": "125 $ gratisbonus"
+        "sweden": "125 kr gratisbonus"
       },
       "referralUrl": "/goto/villento.php",
       "bonusBackgroundColor": "#1f2937",

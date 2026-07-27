@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/caspero.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -26,8 +28,18 @@
     "Yggdrasil Gaming",
     "Big Time Gaming"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 49,
   "userRecommendationsTotalNumber": 70,
@@ -63,10 +75,10 @@
       "description": "up to €500 + 200 Free Spins  ",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/caspero.php",
       "bonusBackgroundColor": "#1B5583",
@@ -84,10 +96,10 @@
       "description": "50% up to €300 on Wednesdays",
       "descriptionIntl": {
         "germany": "50 % bis zu 300 € mittwochs",
-        "denmark": "50 % op til 300 € om onsdagen",
+        "denmark": "50 % op til 300 kr om onsdagen",
         "finland": "50 % jopa 300 € keskiviikkoisin",
         "norway": "50 % opptil 300 € på onsdager",
-        "sweden": "50 % upp till 300 € på onsdagar"
+        "sweden": "50 % upp till 300 kr på onsdagar"
       },
       "referralUrl": "/goto/caspero.php",
       "bonusBackgroundColor": "#1a1a2e",

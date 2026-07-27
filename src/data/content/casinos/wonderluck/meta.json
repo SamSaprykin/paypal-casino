@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/wonderluck.php",
   "payoutLimits": "Up to €30,000/month  ",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "NetEnt",
     "PlayNGo",
@@ -26,8 +28,18 @@
     "Evolution",
     "Nolimit City"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 48,
   "userRecommendationsTotalNumber": 69,
@@ -63,10 +75,10 @@
       "description": "Up to €500 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/wonderluck.php",
       "bonusBackgroundColor": null,
@@ -80,19 +92,66 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["rollingslots", "corgibet", "ritzo"],
-    "finland": ["spinbetter", "lunubet", "casimba"],
-    "germany": ["hugo-casino", "lollybet", "villento"],
-    "ireland": ["yukon-gold", "slotbox", "divaspin"],
-    "norway": ["caspero", "flagman", "tonybet"],
-    "sweden": ["rollingslots", "luckydreams", "need-for-spin-casino"]
+    "denmark": [
+      "rollingslots",
+      "corgibet",
+      "ritzo"
+    ],
+    "finland": [
+      "spinbetter",
+      "lunubet",
+      "casimba"
+    ],
+    "germany": [
+      "hugo-casino",
+      "lollybet",
+      "villento"
+    ],
+    "ireland": [
+      "yukon-gold",
+      "slotbox",
+      "divaspin"
+    ],
+    "norway": [
+      "caspero",
+      "flagman",
+      "tonybet"
+    ],
+    "sweden": [
+      "rollingslots",
+      "luckydreams",
+      "need-for-spin-casino"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["ritzo", "hugo-casino", "trickz"],
-    "finland": ["drip", "playojo", "vegasmobilecasino"],
-    "germany": ["rollingslots", "hugo-casino"],
-    "ireland": ["lucky-start", "playojo", "vegasmobilecasino"],
-    "norway": ["tonybet", "fambet", "monro"],
-    "sweden": ["ritzo", "rx-casino", "hugo-casino"]
+    "denmark": [
+      "ritzo",
+      "hugo-casino",
+      "trickz"
+    ],
+    "finland": [
+      "drip",
+      "playojo",
+      "vegasmobilecasino"
+    ],
+    "germany": [
+      "rollingslots",
+      "hugo-casino"
+    ],
+    "ireland": [
+      "lucky-start",
+      "playojo",
+      "vegasmobilecasino"
+    ],
+    "norway": [
+      "tonybet",
+      "fambet",
+      "monro"
+    ],
+    "sweden": [
+      "ritzo",
+      "rx-casino",
+      "hugo-casino"
+    ]
   }
 }

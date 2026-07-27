@@ -3,7 +3,7 @@
  */
 
 import type { CasinoCardData, AdaptCasinoForCardOptions } from "./cards";
-import { adaptCasinoForCard } from "./cards";
+import { adaptCasinoForCard, pickLocalizedString } from "./cards";
 import type { WebsiteLocaleKey } from "./locales";
 import { pickIntlCasinoList } from "./intl";
 import { pickIntlMarkdown } from "./intlMarkdown";
@@ -176,16 +176,28 @@ function pickArray<T = unknown>(v: unknown): T[] {
   return Array.isArray(v) ? (v as T[]) : [];
 }
 
-function adaptBonus(raw: unknown): BonusItem | null {
+function adaptBonus(
+  raw: unknown,
+  locale: WebsiteLocaleKey,
+): BonusItem | null {
   if (!raw || typeof raw !== "object") return null;
   const b = raw as Record<string, unknown>;
   const logo = b.bonusLogo as
     { asset?: { url?: string; altText?: string } } | undefined;
   return {
     id: String(b._id ?? b.code ?? b.name ?? ""),
-    name: asString(b.name),
-    code: asString(b.code),
-    description: asString(b.description),
+    name:
+      pickLocalizedString(b.nameIntl, locale, asString(b.name)) ??
+      asString(b.name),
+    code:
+      pickLocalizedString(b.codeIntl, locale, asString(b.code)) ??
+      asString(b.code),
+    description:
+      pickLocalizedString(
+        b.descriptionIntl,
+        locale,
+        asString(b.description),
+      ) ?? asString(b.description),
     referralUrl: asString(b.referralUrl),
     bonusBackgroundColor: asString(b.bonusBackgroundColor),
     bonusLogo: logo?.asset?.url
@@ -290,7 +302,7 @@ function adaptSection(
         id,
         title: asString(b.title),
         bonuses: pickArray(b.bonuses)
-          .map(adaptBonus)
+          .map((bonus) => adaptBonus(bonus, locale))
           .filter(Boolean) as BonusItem[],
       };
 

@@ -11,7 +11,10 @@
   "payoutTimes": [
     "E-wallets within 24 hours after up to 48-hour pending period; cards up to 5 days; bank transfers up to 7 days"
   ],
-  "software": ["Pragmatic", "Evolution"],
+  "software": [
+    "Pragmatic",
+    "Evolution"
+  ],
   "depositMethods": [
     "Visa / Mastercard",
     "PayPal",
@@ -53,7 +56,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €100 + 50 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 100 kr + 50 gratissnurr",
+        "denmark": "100 % op til 100 kr + 50 gratis spins"
+      },
       "referralUrl": "/goto/luna-casino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

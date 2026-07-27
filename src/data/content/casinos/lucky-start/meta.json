@@ -15,10 +15,27 @@
   },
   "referralUrl": "/goto/lucky-start.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
-  "software": ["Evolution", "Pragmatic", "PlayNGo", "Playtech"],
-  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Evolution",
+    "Pragmatic",
+    "PlayNGo",
+    "Playtech"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 47,
   "userRecommendationsTotalNumber": 68,
@@ -54,10 +71,10 @@
       "description": "Up to €500 and 100 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € und 100 Freispiele",
-        "denmark": "Op til 500 € og 100 gratis spins",
+        "denmark": "Op til 500 kr og 100 gratis spins",
         "finland": "Jopa 500 € ja 100 ilmaiskierrosta",
         "norway": "Opptil 500 € og 100 gratisspinn",
-        "sweden": "Upp till 500 € och 100 gratissnurr"
+        "sweden": "Upp till 500 kr och 100 gratissnurr"
       },
       "referralUrl": "/goto/lucky-start.php",
       "bonusBackgroundColor": null,

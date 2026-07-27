@@ -8,7 +8,9 @@
   "shortDescription": "9,000+ games from 80+ providers. Headquartered in Willemstad, Curacao",
   "referralUrl": "/goto/fezbet.php",
   "payoutLimits": null,
-  "payoutTimes": ["Most withdrawals reported within 24 hours per one source"],
+  "payoutTimes": [
+    "Most withdrawals reported within 24 hours per one source"
+  ],
   "software": [],
   "depositMethods": [
     "Visa",
@@ -51,7 +53,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €500 + 200 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 500 kr + 200 gratissnurr",
+        "denmark": "100 % op til 500 kr + 200 gratis spins"
+      },
       "referralUrl": "/goto/fezbet.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

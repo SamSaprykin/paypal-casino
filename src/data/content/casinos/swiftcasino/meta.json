@@ -11,7 +11,11 @@
   "payoutTimes": [
     "A few hours to 2 working days depending on payment method; Apple Pay reported as fastest per one source"
   ],
-  "software": ["NetEnt", "Evolution", "Quickspin"],
+  "software": [
+    "NetEnt",
+    "Evolution",
+    "Quickspin"
+  ],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",
@@ -53,7 +57,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €100 + 50 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 100 kr + 50 gratissnurr",
+        "denmark": "100 % op til 100 kr + 50 gratis spins"
+      },
       "referralUrl": "/goto/swiftcasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

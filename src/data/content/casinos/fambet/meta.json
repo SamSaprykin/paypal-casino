@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/fambet.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -24,8 +26,18 @@
     "Yggdrasil Gaming",
     "Blueprint Gaming"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 56,
@@ -61,10 +73,10 @@
       "description": "Up to €500 and 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € und 200 Freispiele",
-        "denmark": "Op til 500 € og 200 gratis spins",
+        "denmark": "Op til 500 kr og 200 gratis spins",
         "finland": "Jopa 500 € ja 200 ilmaiskierrosta",
         "norway": "Opptil 500 € og 200 gratisspinn",
-        "sweden": "Upp till 500 € och 200 gratissnurr"
+        "sweden": "Upp till 500 kr och 200 gratissnurr"
       },
       "referralUrl": "/goto/fambet.php",
       "bonusBackgroundColor": null,

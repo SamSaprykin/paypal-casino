@@ -4,12 +4,12 @@ Use this when adding a **new brand to casino lists** on PpCasinos.co. Output is 
 
 **Apply results to:**
 
-| Step | File |
-| ---- | ---- |
-| 1 | `src/data/content/casinos/<slug>/meta.json` (create) |
-| 2 | `src/data/content/casinos/_index.json` (register slug) |
-| 3 | `src/data/content/market-casino-lists.json` (add slug per market) |
-| 4 | Optional: page `meta.json` → `casinoListsByCountry` (home, PayPal, Revolut, etc.) |
+| Step | File                                                                              |
+| ---- | --------------------------------------------------------------------------------- |
+| 1    | `src/data/content/casinos/<slug>/meta.json` (create)                              |
+| 2    | `src/data/content/casinos/_index.json` (register slug)                            |
+| 3    | `src/data/content/market-casino-lists.json` (add slug per market)                 |
+| 4    | Optional: page `meta.json` → `casinoListsByCountry` (home, PayPal, Revolut, etc.) |
 
 **Markets:** `ireland` (root `/`), `germany` (`/de/`), `denmark` (`/dk/`), `finland` (`/fi/`), `norway` (`/no/`), `sweden` (`/se/`).
 
@@ -17,18 +17,18 @@ Use this when adding a **new brand to casino lists** on PpCasinos.co. Output is 
 
 ## What to research
 
-| Field | Source / rule |
-| ----- | ------------- |
-| **Brand name & slug** | Official site; slug = lowercase kebab-case (`dream-vegas`) |
-| **Markets** | Only list geos where the operator clearly accepts players (T&Cs, geo block, licence scope) |
-| **Licence** | Regulator name + number if published; say “unverified” if unclear |
-| **Payments** | Deposit + withdrawal methods from banking/payments page or cashier |
-| **Payout speed** | Stated processing times per method; use ranges, not marketing superlatives |
-| **Welcome bonus** | Headline offer for new players; include promo code only if public |
-| **Software** | 3–6 named providers if listed publicly |
-| **Rating** | Editorial 4.0–4.9 for cards; base on licence, payments, reputation — not invented user scores |
-| **Short description** | 1–2 sentences for listing cards (EN + localized variants for active markets) |
-| **List fit** | Which site pages the brand suits (PayPal, Revolut/card, fast payout, mobile, min deposit, crypto, new casinos) |
+| Field                 | Source / rule                                                                                                  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Brand name & slug** | Official site; slug = lowercase kebab-case (`dream-vegas`)                                                     |
+| **Markets**           | Only list geos where the operator clearly accepts players (T&Cs, geo block, licence scope)                     |
+| **Licence**           | Regulator name + number if published; say “unverified” if unclear                                              |
+| **Payments**          | Deposit + withdrawal methods from banking/payments page or cashier                                             |
+| **Payout speed**      | Stated processing times per method; use ranges, not marketing superlatives                                     |
+| **Welcome bonus**     | Headline offer for new players; include promo code only if public                                              |
+| **Software**          | 3–6 named providers if listed publicly                                                                         |
+| **Rating**            | Editorial 4.0–4.9 for cards; base on licence, payments, reputation — not invented user scores                  |
+| **Short description** | 1–2 sentences for listing cards (EN + localized variants for active markets)                                   |
+| **List fit**          | Which site pages the brand suits (PayPal, Revolut/card, fast payout, mobile, min deposit, crypto, new casinos) |
 
 **Do not produce:** review body copy, FAQ, pros/cons, how-to steps, or SEO long-form.
 
@@ -66,15 +66,35 @@ Return one object:
     "sweden": "MGA-licensierat casino med 2 000+ spel; kort och e-plånböcker för insättning."
   },
   "license": "UK Gambling Commission (52894); MGA B2C/370/2017 — verify current status before publish",
-  "depositMethods": ["Visa", "Mastercard", "PayPal", "Skrill", "Neteller", "Bank transfer"],
-  "withdrawalMethod": ["Visa", "Mastercard", "PayPal", "Skrill", "Neteller", "Bank transfer"],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Bank transfer"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Bank transfer"
+  ],
   "payoutLimits": null,
   "payoutTimes": [
     "E-wallets: within 24 hours",
     "Cards: 2-4 business days",
     "Bank transfer: 3-5 business days"
   ],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic Play", "Play'n GO"],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic Play",
+    "Play'n GO"
+  ],
   "availableInCountries": {
     "ireland": "",
     "germany": "",
@@ -114,19 +134,19 @@ Return one object:
 
 ### Field rules
 
-| Field | Rule |
-| ----- | ---- |
-| `slug` | Lowercase, hyphens, unique on site; must match folder name |
-| `referralUrl` | `/goto/<slug-no-hyphens-or-with-hyphens>.php` — match existing `/goto/` pattern in repo |
-| `availableInCountries` | Include only verified markets; value is `""` (presence = listed) |
-| `shortDescriptionIntl` | Only keys for markets in `availableInCountries` |
-| `rating` | Number 1.0–5.0; one decimal |
+| Field                                 | Rule                                                                                                                       |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `slug`                                | Lowercase, hyphens, unique on site; must match folder name                                                                 |
+| `referralUrl`                         | `/goto/<slug-no-hyphens-or-with-hyphens>.php` — match existing `/goto/` pattern in repo                                    |
+| `availableInCountries`                | Include only verified markets; value is `""` (presence = listed)                                                           |
+| `shortDescriptionIntl`                | Only keys for markets in `availableInCountries`                                                                            |
+| `rating`                              | Number 1.0–5.0; one decimal                                                                                                |
 | `depositMethods` / `withdrawalMethod` | Title case strings; use `PayPal`, `Visa`, `Mastercard`, `Bank transfer`, `Trustly`, `Revolut Pay`, crypto tickers if named |
-| `bonuses[0]` | Primary welcome offer; `code` null if none public |
-| `logo.asset.url` | Placeholder path `/casino-logos/<slug>-logo.png` — asset added separately |
-| `blocked` | `true` only if brand must not be promoted (regulatory / affiliate block) |
-| `listPlacement.marketCasinoLists` | Subset of `ireland`, `germany`, `denmark`, `finland`, `norway`, `sweden` |
-| `listPlacement.suggestedPages` | Page dir names under `src/data/content/pages/` |
+| `bonuses[0]`                          | Primary welcome offer; `code` null if none public                                                                          |
+| `logo.asset.url`                      | Placeholder path `/casino-logos/<slug>-logo.png` — asset added separately                                                  |
+| `blocked`                             | `true` only if brand must not be promoted (regulatory / affiliate block)                                                   |
+| `listPlacement.marketCasinoLists`     | Subset of `ireland`, `germany`, `denmark`, `finland`, `norway`, `sweden`                                                   |
+| `listPlacement.suggestedPages`        | Page dir names under `src/data/content/pages/`                                                                             |
 
 ---
 
@@ -143,7 +163,7 @@ After research, create `src/data/content/casinos/<slug>/meta.json`:
   "slug": "<from research>",
   "rating": 4.5,
   "shortDescription": "<from research>",
-  "shortDescriptionIntl": { },
+  "shortDescriptionIntl": {},
   "referralUrl": "/goto/<slug>.php",
   "payoutLimits": null,
   "payoutTimes": [],
@@ -153,7 +173,7 @@ After research, create `src/data/content/casinos/<slug>/meta.json`:
   "license": "<from research>",
   "userRecommendationsRecommendedNumber": null,
   "userRecommendationsTotalNumber": null,
-  "availableInCountries": { },
+  "availableInCountries": {},
   "backgroundColor": { "hex": "#1a1a1a" },
   "logo": {
     "asset": {

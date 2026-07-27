@@ -8,17 +8,33 @@
   "shortDescription": "Lucky Ones is a premium, high-roller-focused casino launched in 2023 by Dama N.V. It features a massive library of 12,000+ games and a record-breaking $20,000 welcome package plus 500 free spins.",
   "shortDescriptionIntl": {
     "germany": "Lucky Ones ist ein erstklassiges, auf High-Roller ausgerichtetes Casino, das 2023 von Dama N.V. gestartet wurde. Es bietet eine riesige Bibliothek von über 12.000 Spielen und ein rekordverdächtiges Willkommenspaket von 20.000 $ plus 500 Freispiele.",
-    "denmark": "Lucky Ones er et førsteklasses, high roller-fokuseret casino lanceret i 2023 af Dama N.V. Det byder på et enormt bibliotek med over 12.000 spil og en rekordstor velkomstpakke på 20.000 $ plus 500 gratis spins.",
+    "denmark": "Lucky Ones er et førsteklasses, high roller-fokuseret casino lanceret i 2023 af Dama N.V. Det byder på et enormt bibliotek med over 12.000 spil og en rekordstor velkomstpakke på 20.000 kr plus 500 gratis spins.",
     "finland": "Lucky Ones on ensiluokkainen, suurpelaajille suunnattu kasino, jonka Dama N.V. avasi vuonna 2023. Se tarjoaa valtavan yli 12 000 pelin valikoiman ja ennätyksellisen 20 000 dollarin tervetuliaispaketin sekä 500 ilmaiskierrosta.",
     "norway": "Lucky Ones er et førsteklasses, high roller-fokusert casino lansert i 2023 av Dama N.V. Det byr på et enormt bibliotek med over 12 000 spill og en rekordstor velkomstpakke på 20 000 $ pluss 500 gratisspinn.",
-    "sweden": "Lucky Ones är ett förstklassigt, high roller-inriktat casino som lanserades 2023 av Dama N.V. Det erbjuder ett enormt bibliotek med över 12 000 spel och ett rekordstort välkomstpaket på 20 000 $ plus 500 gratissnurr."
+    "sweden": "Lucky Ones är ett förstklassigt, high roller-inriktat casino som lanserades 2023 av Dama N.V. Det erbjuder ett enormt bibliotek med över 12 000 spel och ett rekordstort välkomstpaket på 20 000 kr plus 500 gratissnurr."
   },
   "referralUrl": "/goto/luckyones.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 275,
   "userRecommendationsTotalNumber": 350,
@@ -47,10 +63,10 @@
       "description": "Up to 20,000 € + 500 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 20.000 € + 500 Freispiele",
-        "denmark": "Op til 20.000 € + 500 gratis spins",
+        "denmark": "Op til 20.000 kr + 500 gratis spins",
         "finland": "Jopa 20 000 € + 500 ilmaiskierrosta",
         "norway": "Opptil 20 000 € + 500 gratisspinn",
-        "sweden": "Upp till 20 000 € + 500 gratissnurr"
+        "sweden": "Upp till 20 000 kr + 500 gratissnurr"
       },
       "referralUrl": null,
       "bonusBackgroundColor": null,

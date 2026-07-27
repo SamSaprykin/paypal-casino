@@ -55,7 +55,7 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to 1,000 USDT",
-      "descriptionIntl": null,
+      "descriptionIntl": {},
       "referralUrl": "/goto/crashino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

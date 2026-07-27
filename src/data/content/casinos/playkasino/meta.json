@@ -35,7 +35,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €100 + 50 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 100 kr + 50 gratissnurr",
+        "denmark": "100 % op til 100 kr + 50 gratis spins"
+      },
       "referralUrl": "/goto/playkasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -37,7 +37,10 @@
       "code": null,
       "codeIntl": null,
       "description": "150% up to €1,500 + 200 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "150 % upp till 1 500 kr + 200 gratissnurr",
+        "denmark": "150 % op til 1.500 kr + 200 gratis spins"
+      },
       "referralUrl": "/goto/vegasnow.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null
@@ -45,19 +48,66 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["coolzino", "cosmicslot", "just-casino"],
-    "finland": ["luckydreams", "rollingslots", "monro"],
-    "germany": ["kukimuki", "villento", "lollybet"],
-    "ireland": ["rx-casino", "onluck", "hugo-casino"],
-    "norway": ["kukimuki", "vinylcasino", "coolzino"],
-    "sweden": ["lets-lucky", "tonybet", "hugo-casino"]
+    "denmark": [
+      "coolzino",
+      "cosmicslot",
+      "just-casino"
+    ],
+    "finland": [
+      "luckydreams",
+      "rollingslots",
+      "monro"
+    ],
+    "germany": [
+      "kukimuki",
+      "villento",
+      "lollybet"
+    ],
+    "ireland": [
+      "rx-casino",
+      "onluck",
+      "hugo-casino"
+    ],
+    "norway": [
+      "kukimuki",
+      "vinylcasino",
+      "coolzino"
+    ],
+    "sweden": [
+      "lets-lucky",
+      "tonybet",
+      "hugo-casino"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["glitchspin", "hugo-casino", "ritzo"],
-    "finland": ["starda", "fambet", "vegasmobilecasino"],
-    "germany": ["rollingslots", "hugo-casino"],
-    "ireland": ["ritzo", "glitchspin", "lucky-start"],
-    "norway": ["tonybet", "cosmicslot", "flagman"],
-    "sweden": ["spinlander-casino", "hugo-casino", "cosmicslot"]
+    "denmark": [
+      "glitchspin",
+      "hugo-casino",
+      "ritzo"
+    ],
+    "finland": [
+      "starda",
+      "fambet",
+      "vegasmobilecasino"
+    ],
+    "germany": [
+      "rollingslots",
+      "hugo-casino"
+    ],
+    "ireland": [
+      "ritzo",
+      "glitchspin",
+      "lucky-start"
+    ],
+    "norway": [
+      "tonybet",
+      "cosmicslot",
+      "flagman"
+    ],
+    "sweden": [
+      "spinlander-casino",
+      "hugo-casino",
+      "cosmicslot"
+    ]
   }
 }

@@ -52,7 +52,9 @@
       "codeIntl": null,
       "description": "100% up to €120",
       "descriptionIntl": {
-        "ie": "100% up to €120"
+        "ie": "100% up to €120",
+        "sweden": "100 % upp till 120 kr",
+        "denmark": "100 % op til 120 kr"
       },
       "referralUrl": "/goto/20bet.php",
       "bonusBackgroundColor": null,

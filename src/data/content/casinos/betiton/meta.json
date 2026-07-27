@@ -11,7 +11,11 @@
   "payoutTimes": [
     "Verified withdrawals usually processed within a few working days depending on method, per the operator's own Irish site"
   ],
-  "software": ["Pragmatic", "NetEnt", "Evolution"],
+  "software": [
+    "Pragmatic",
+    "NetEnt",
+    "Evolution"
+  ],
   "depositMethods": [
     "VISA Debit/Mastercard Debit",
     "Trustly",
@@ -56,7 +60,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €500 + 150 Free Spins (unverified)",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 500 kr + 150 gratissnurr (overifierad)",
+        "denmark": "100 % op til 500 kr + 150 gratis spins (uverificeret)"
+      },
       "referralUrl": "/goto/betiton.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null
@@ -64,19 +71,66 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["tsars", "rx-casino", "lucky-start"],
-    "finland": ["luckydreams", "247bet", "lunubet"],
-    "germany": ["hugo-casino", "zodiac-casino", "kukimuki"],
-    "ireland": ["greatwin", "luckyelf", "cleobetra"],
-    "norway": ["hugo-casino", "tsars", "lunubet"],
-    "sweden": ["spinbetter", "pop-casino", "luckydreams"]
+    "denmark": [
+      "tsars",
+      "rx-casino",
+      "lucky-start"
+    ],
+    "finland": [
+      "luckydreams",
+      "247bet",
+      "lunubet"
+    ],
+    "germany": [
+      "hugo-casino",
+      "zodiac-casino",
+      "kukimuki"
+    ],
+    "ireland": [
+      "greatwin",
+      "luckyelf",
+      "cleobetra"
+    ],
+    "norway": [
+      "hugo-casino",
+      "tsars",
+      "lunubet"
+    ],
+    "sweden": [
+      "spinbetter",
+      "pop-casino",
+      "luckydreams"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["rx-casino", "spinbetter", "rollingslots"],
-    "finland": ["playojo", "spinbetter", "swiftcasino"],
-    "germany": ["hugo-casino", "rollingslots"],
-    "ireland": ["cleobetra", "ritzo", "rx-casino"],
-    "norway": ["monro", "spinbetter", "flagman"],
-    "sweden": ["spinlander-casino", "cosmicslot", "spinbetter"]
+    "denmark": [
+      "rx-casino",
+      "spinbetter",
+      "rollingslots"
+    ],
+    "finland": [
+      "playojo",
+      "spinbetter",
+      "swiftcasino"
+    ],
+    "germany": [
+      "hugo-casino",
+      "rollingslots"
+    ],
+    "ireland": [
+      "cleobetra",
+      "ritzo",
+      "rx-casino"
+    ],
+    "norway": [
+      "monro",
+      "spinbetter",
+      "flagman"
+    ],
+    "sweden": [
+      "spinlander-casino",
+      "cosmicslot",
+      "spinbetter"
+    ]
   }
 }

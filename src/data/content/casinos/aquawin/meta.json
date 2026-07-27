@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/aquawin.php",
   "payoutLimits": "Up to $30,000 per month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Big Time Gaming",
     "Pragmatic",
@@ -26,8 +28,17 @@
     "Endorphina",
     "Wazdan"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "eZeeWallet"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "eZeeWallet"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 39,
   "userRecommendationsTotalNumber": 54,
@@ -63,10 +74,10 @@
       "description": " Up to €4500 + 400 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 4.500 € + 400 Freispiele",
-        "denmark": "Op til 4.500 € + 400 gratis spins",
+        "denmark": "Op til 4.500 kr + 400 gratis spins",
         "finland": "Jopa 4 500 € + 400 ilmaiskierrosta",
         "norway": "Opptil 4 500 € + 400 gratisspinn",
-        "sweden": "Upp till 4 500 € + 400 gratissnurr"
+        "sweden": "Upp till 4 500 kr + 400 gratissnurr"
       },
       "referralUrl": "/goto/aquawin.php",
       "bonusBackgroundColor": null,

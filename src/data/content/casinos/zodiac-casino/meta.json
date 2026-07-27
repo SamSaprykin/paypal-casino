@@ -15,10 +15,26 @@
   },
   "referralUrl": "/goto/zodiac.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 177,
   "userRecommendationsTotalNumber": 224,
@@ -47,10 +63,10 @@
       "description": "100% match up to $500 + 50 Free Spins",
       "descriptionIntl": {
         "germany": "100 % bis zu 500 $ + 50 Freispiele",
-        "denmark": "100 % op til 500 $ + 50 gratis spins",
+        "denmark": "100 % op til 500 kr + 50 gratis spins",
         "finland": "100 % jopa 500 $ + 50 ilmaiskierrosta",
         "norway": "100 % opptil 500 $ + 50 gratisspinn",
-        "sweden": "100 % upp till 500 $ + 50 gratissnurr"
+        "sweden": "100 % upp till 500 kr + 50 gratissnurr"
       },
       "referralUrl": "/goto/zodiaccasino.php",
       "bonusBackgroundColor": "#1a1a2e",

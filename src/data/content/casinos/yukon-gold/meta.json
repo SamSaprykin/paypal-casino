@@ -15,10 +15,24 @@
   },
   "referralUrl": "/goto/gold-yukon.php",
   "payoutLimits": "€50,000",
-  "payoutTimes": ["E-wallets: 1-2 days"],
-  "software": ["Betsoft", "Microgaming", "Playtech"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: 1-2 days"
+  ],
+  "software": [
+    "Betsoft",
+    "Microgaming",
+    "Playtech"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 281,
   "userRecommendationsTotalNumber": 339,
@@ -47,10 +61,10 @@
       "description": "150 Chances To Win €1 Million",
       "descriptionIntl": {
         "germany": "150 Chancen auf 1 Million €",
-        "denmark": "150 chancer for at vinde 1 million €",
+        "denmark": "150 chancer for at vinde 1 million kr",
         "finland": "150 mahdollisuutta voittaa 1 miljoona €",
         "norway": "150 sjanser til å vinne 1 million €",
-        "sweden": "150 chanser att vinna 1 miljon €"
+        "sweden": "150 chanser att vinna 1 miljon kr"
       },
       "referralUrl": "/goto/yukongold.php",
       "bonusBackgroundColor": "#1a1a2e",

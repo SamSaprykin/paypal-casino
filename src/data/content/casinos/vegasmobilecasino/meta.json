@@ -11,7 +11,9 @@
   "payoutTimes": [
     "Described as fast; specific times not found in Ireland-specific sources"
   ],
-  "software": ["Evolution"],
+  "software": [
+    "Evolution"
+  ],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",
@@ -52,7 +54,7 @@
       "code": null,
       "codeIntl": null,
       "description": "Up to £1,000 + 100 Free Spins across 5 deposits",
-      "descriptionIntl": null,
+      "descriptionIntl": {},
       "referralUrl": "/goto/vegasmobilecasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

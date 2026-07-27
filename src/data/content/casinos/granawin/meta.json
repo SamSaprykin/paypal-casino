@@ -56,7 +56,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €120",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 120 kr",
+        "denmark": "100 % op til 120 kr"
+      },
       "referralUrl": "/goto/granawin.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/drip.php",
   "payoutLimits": "€20,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Betsoft",
     "Microgaming",
@@ -26,8 +28,16 @@
     "Evolution",
     "Quickspin"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 57,

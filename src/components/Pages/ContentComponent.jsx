@@ -20,10 +20,16 @@ import {
   Shield,
   User,
   TriangleAlert,
+  Headphones,
+  Wallet,
+  Lock,
+  Gamepad2,
 } from "lucide-react";
 import { addHttps } from "../../lib/helpers";
 import { cn, slugify as slugifyHeading } from "../../lib/utils";
 import remarkGfm from "remark-gfm";
+import { ArticleContentImage } from "./Content/ArticleContentImage.jsx";
+import { PaymentSpeedChart } from "./Content/PaymentSpeedChart.jsx";
 import {
   ArticleMarkdownArticleWrapper,
   ArticleMarkdownCriteriaGrid,
@@ -189,22 +195,38 @@ function hastId(properties) {
 // cleaner card, subtle interactivity, shadow/lift, visually distinct cards.
 const IconSwitch = ({ iconName }) => {
   const iconProps = "w-9 h-9 text-blue-600 flex-shrink-0";
+  const key = typeof iconName === "string" ? iconName.trim() : "";
   const icons = {
     ShieldCheck: <ShieldCheck className={iconProps} />,
+    Shield: <Shield className={iconProps} />,
     UserPlus: <UserPlus className={iconProps} />,
     CreditCard: <CreditCard className={iconProps} />,
     Gift: <Gift className={iconProps} />,
+    Headphones: <Headphones className={iconProps} />,
+    Wallet: <Wallet className={iconProps} />,
+    Lock: <Lock className={iconProps} />,
+    Gamepad: <Gamepad2 className={iconProps} />,
+    Gamepad2: <Gamepad2 className={iconProps} />,
     PlayCircle: <Joystick className={iconProps} />,
     Coin: <Coins className={iconProps} />,
+    Coins: <Coins className={iconProps} />,
+    Trophy: <Trophy className={iconProps} />,
     trophy: <Trophy className={iconProps} />,
     DollarSign: <DollarSign className={iconProps} />,
     Sparkles: <Sparkles className={iconProps} />,
     sparkles: <Sparkles className={iconProps} />,
+    User: <User className={iconProps} />,
     user: <User className={iconProps} />,
     gift: <Gift className={iconProps} />,
+    // kebab-case aliases used in some MDX
+    "user-plus": <UserPlus className={iconProps} />,
+    "shield-check": <ShieldCheck className={iconProps} />,
+    "credit-card": <CreditCard className={iconProps} />,
+    "play-circle": <Joystick className={iconProps} />,
+    shield: <Shield className={iconProps} />,
   };
   return (
-    icons[iconName] || (
+    icons[key] || (
       <span className="inline-block w-9 h-9 bg-gray-200 rounded-full text-blue-600 flex items-center justify-center">
         {" "}
         {iconName}
@@ -717,6 +739,7 @@ export const ContentComponent = ({
   casinoName = undefined,
   spaceBottom = 0,
   spaceTop = 0,
+  localeId = "en-IE",
   localeTag = "en-GB",
   freshnessLabels = undefined,
 }) => {
@@ -813,6 +836,23 @@ export const ContentComponent = ({
                   }
                   if (className.includes("info-card")) {
                     return <InfoCard>{props.children}</InfoCard>;
+                  }
+                  if (className.includes("payment-speed-chart")) {
+                    return <PaymentSpeedChart localeId={localeId} />;
+                  }
+                  if (className.includes("content-image")) {
+                    const src = hastDataAttr(node, props, "src");
+                    const alt =
+                      hastDataAttr(node, props, "alt") ||
+                      (typeof props.alt === "string" ? props.alt : "");
+                    const caption = hastDataAttr(node, props, "caption");
+                    return (
+                      <ArticleContentImage
+                        src={src}
+                        alt={alt}
+                        caption={caption}
+                      />
+                    );
                   }
                   if (className.includes("warning-box")) {
                     return <WarningBox>{props.children}</WarningBox>;
@@ -1102,8 +1142,8 @@ export const ContentComponent = ({
                       alt={props.alt}
                       width={560}
                       height={350}
-                      sizes="(max-width: 768px) 100vw, 560px"
-                      className="object-contain mx-auto my-8 max-h-[360px] rounded-xl overflow-hidden"
+                      sizes="(max-width: 640px) 100vw, 60vw"
+                      className="object-contain mx-auto my-8 h-auto w-full max-w-full max-h-[360px] rounded-xl overflow-hidden sm:max-w-[60%]"
                     />
                   );
                 },

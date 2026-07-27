@@ -53,7 +53,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €200 + 20 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 200 kr + 20 gratissnurr",
+        "denmark": "100 % op til 200 kr + 20 gratis spins"
+      },
       "referralUrl": "/goto/theonlinecasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

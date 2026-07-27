@@ -1,4 +1,4 @@
-import { adaptCasinoForCard } from "../cms/cards";
+import { adaptCasinoForCard, pickLocalizedString } from "../cms/cards";
 import {
   casinoReviewMapKey,
   hasCasinoReviewBodyForLocale,
@@ -80,16 +80,28 @@ function normalizeCasinoSlug(slug: string): string {
   return slug.replace(/^\/+|\/+$/g, "");
 }
 
-function adaptBonus(raw: unknown): BonusItem | null {
+function adaptBonus(
+  raw: unknown,
+  locale: WebsiteLocaleKey,
+): BonusItem | null {
   if (!raw || typeof raw !== "object") return null;
   const b = raw as Record<string, unknown>;
   const logo = b.bonusLogo as
     { asset?: { url?: string; altText?: string } } | undefined;
   return {
     id: String(b._id ?? b.code ?? b.name ?? ""),
-    name: asString(b.name),
-    code: asString(b.code),
-    description: asString(b.description),
+    name:
+      pickLocalizedString(b.nameIntl, locale, asString(b.name)) ??
+      asString(b.name),
+    code:
+      pickLocalizedString(b.codeIntl, locale, asString(b.code)) ??
+      asString(b.code),
+    description:
+      pickLocalizedString(
+        b.descriptionIntl,
+        locale,
+        asString(b.description),
+      ) ?? asString(b.description),
     referralUrl: asString(b.referralUrl),
     bonusBackgroundColor: asString(b.bonusBackgroundColor),
     bonusLogo: logo?.asset?.url
@@ -201,7 +213,9 @@ export function adaptCasinoPage(
     playerReview: adaptPlayerReview(raw.reviewsIntl),
     faq: adaptFaq(raw.faq, locale),
     bonuses: Array.isArray(raw.bonuses)
-      ? (raw.bonuses as unknown[]).map(adaptBonus).filter(Boolean)
+      ? (raw.bonuses as unknown[])
+          .map((bonus) => adaptBonus(bonus, locale))
+          .filter(Boolean)
       : [],
     userRecommendationsRecommendedNumber: asNumber(
       raw.userRecommendationsRecommendedNumber,

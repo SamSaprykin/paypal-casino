@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/flagman.php",
   "payoutLimits": " Up to €80,000–€100,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -25,8 +27,18 @@
     "Quickspin",
     "NetEnt"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,
@@ -62,10 +74,10 @@
       "description": "150% up to 600 EUR + up to 500 FS",
       "descriptionIntl": {
         "germany": "150 % bis zu 600 EUR + bis zu 500 Freispiele",
-        "denmark": "150 % op til 600 EUR + op til 500 gratis spins",
+        "denmark": "150 % op til 600 kr + op til 500 gratis spins",
         "finland": "150 % jopa 600 EUR + jopa 500 ilmaiskierrosta",
         "norway": "150 % opptil 600 EUR + opptil 500 gratisspinn",
-        "sweden": "150 % upp till 600 EUR + upp till 500 gratissnurr"
+        "sweden": "150 % upp till 600 kr + upp till 500 gratissnurr"
       },
       "referralUrl": "/goto/flagman.php",
       "bonusBackgroundColor": null,

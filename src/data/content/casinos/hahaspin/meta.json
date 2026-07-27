@@ -79,7 +79,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €750 + 50 free spins on first deposit; non-sticky, x35 wagering, €5 max bet.",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 750 kr + 50 gratissnurr på första insättningen; icke-sticky, x35 omsättningskrav, 5 kr max bet.",
+        "denmark": "100 % op til 750 kr + 50 gratis spins på første indbetaling; non-sticky, x35 omsætningskrav, 5 kr max bet."
+      },
       "referralUrl": "/goto/hahaspin.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

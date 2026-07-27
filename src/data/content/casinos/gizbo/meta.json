@@ -37,7 +37,9 @@
       "codeIntl": null,
       "description": "50% up to €600 (1st deposit)",
       "descriptionIntl": {
-        "ie": "50% up to €600 (1st deposit)"
+        "ie": "50% up to €600 (1st deposit)",
+        "sweden": "50 % upp till 600 kr (1:a insättningen)",
+        "denmark": "50 % op til 600 kr (1. indbetaling)"
       },
       "referralUrl": "/goto/gizbo.php",
       "bonusBackgroundColor": null,

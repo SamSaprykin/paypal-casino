@@ -11,7 +11,10 @@
   "payoutTimes": [
     "E-wallets and crypto: 0-24 hours. Cards: 3-5 business days. Bank transfer: 3-5 business days. 48-hour pending period standard. Minimum withdrawal: €10 (most methods), €50 (crypto). Maximum withdrawal: €500 per day, €15,000 per month. Some sources report up to 3 pending withdrawals allowed simultaneously."
   ],
-  "software": ["Pragmatic", "Evolution"],
+  "software": [
+    "Pragmatic",
+    "Evolution"
+  ],
   "depositMethods": [
     "Visa",
     "Mastercard",
@@ -59,7 +62,10 @@
       "code": null,
       "codeIntl": null,
       "description": "250% up to €2,700 + 400 FS + 22 Gems",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "250 % upp till 2 700 kr + 400 gratissnurr + 22 Gems",
+        "denmark": "250 % op til 2.700 kr + 400 gratis spins + 22 Gems"
+      },
       "referralUrl": "/goto/spinlander-casino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/glitchspin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal Withdrawals: Minutes to 24 hours"],
+  "payoutTimes": [
+    "PayPal Withdrawals: Minutes to 24 hours"
+  ],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -23,8 +25,16 @@
     "Yggdrasil Gaming",
     "Betsoft"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 58,
@@ -60,10 +70,10 @@
       "description": "Up to €1,000 +  Free Spins ",
       "descriptionIntl": {
         "germany": "Bis zu 1.000 € + Freispiele",
-        "denmark": "Op til 1.000 € + gratis spins",
+        "denmark": "Op til 1.000 kr + gratis spins",
         "finland": "Jopa 1 000 € + ilmaiskierroksia",
         "norway": "Opptil 1 000 € + gratisspinn",
-        "sweden": "Upp till 1 000 € + gratissnurr"
+        "sweden": "Upp till 1 000 kr + gratissnurr"
       },
       "referralUrl": "/goto/glitchspin.php",
       "bonusBackgroundColor": null,

@@ -1,7 +1,7 @@
 {
   "_id": "41566515-6ad0-4a7a-becc-afdd95b4cc75",
   "_createdAt": "2026-05-11T09:55:54Z",
-  "_updatedAt": "2026-07-20T10:54:20Z",
+  "_updatedAt": "2026-07-27T12:00:00Z",
   "name": "Home Page",
   "authors": {
     "addedBy": "seamus-oconnor",
@@ -171,19 +171,14 @@
       }
     },
     {
-      "kind": "image",
-      "id": "hp-img-comparison",
-      "name": "Payment Speed Comparison Chart"
+      "kind": "contentComponent",
+      "id": "cc-paypal-top-5-2026",
+      "name": "Top 5 PayPal Casinoer"
     },
     {
       "kind": "contentComponent",
       "id": "e6695325-bdb3-4018-a6bd-fd0729b66642",
       "name": "HP Body"
-    },
-    {
-      "kind": "image",
-      "id": "hp-img-trust",
-      "name": "PayPal Cashier Deposit Screen"
     },
     {
       "kind": "faqComponent",

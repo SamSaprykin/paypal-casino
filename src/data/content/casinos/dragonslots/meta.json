@@ -56,7 +56,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100%-225% up to €2,250 + 25-200 Free Spins depending on deposit size",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 %-225 % upp till 2 250 kr + 25-200 gratissnurr beroende på insättningsstorlek",
+        "denmark": "100 %-225 % op til 2.250 kr + 25-200 gratis spins afhængigt af indbetalingsstørrelse"
+      },
       "referralUrl": "/goto/dragonslots.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

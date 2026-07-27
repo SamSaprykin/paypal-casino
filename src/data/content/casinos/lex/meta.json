@@ -37,7 +37,10 @@
       "code": null,
       "codeIntl": null,
       "description": "150% up to €600 + 400 Free Spins (2nd deposit)",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "150 % upp till 600 kr + 400 gratissnurr (2:a insättningen)",
+        "denmark": "150 % op til 600 kr + 400 gratis spins (2. indbetaling)"
+      },
       "referralUrl": "/goto/lex.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

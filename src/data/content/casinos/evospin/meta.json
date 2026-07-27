@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/evospin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal / E-wallets: Minutes – 24h  "],
+  "payoutTimes": [
+    "PayPal / E-wallets: Minutes – 24h  "
+  ],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -25,8 +27,16 @@
     "Yggdrasil Gaming",
     "Quickspin"
   ],
-  "depositMethods": ["Neteller", "PayPal", "Skrill"],
-  "withdrawalMethod": ["Neteller", "PayPal", "Skrill"],
+  "depositMethods": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 55,
@@ -62,10 +72,10 @@
       "description": "Up to €300 + 100 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 300 € + 100 Freispiele",
-        "denmark": "Op til 300 € + 100 gratis spins",
+        "denmark": "Op til 300 kr + 100 gratis spins",
         "finland": "Jopa 300 € + 100 ilmaiskierrosta",
         "norway": "Opptil 300 € + 100 gratisspinn",
-        "sweden": "Upp till 300 € + 100 gratissnurr"
+        "sweden": "Upp till 300 kr + 100 gratissnurr"
       },
       "referralUrl": "/goto/evospin.php",
       "bonusBackgroundColor": null,

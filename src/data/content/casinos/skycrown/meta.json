@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/skycrown.php",
   "payoutLimits": "Up to €30,000/month ",
-  "payoutTimes": ["PayPal/E-wallets: Minutes to 24h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes to 24h"
+  ],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -31,8 +33,18 @@
     "NetEnt",
     "Nolimit City"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 44,
   "userRecommendationsTotalNumber": 63,
@@ -68,10 +80,10 @@
       "description": "Up to €5000 + 400 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 5.000 € + 400 Freispiele",
-        "denmark": "Op til 5.000 € + 400 gratis spins",
+        "denmark": "Op til 5.000 kr + 400 gratis spins",
         "finland": "Jopa 5 000 € + 400 ilmaiskierrosta",
         "norway": "Opptil 5 000 € + 400 gratisspinn",
-        "sweden": "Upp till 5 000 € + 400 gratissnurr"
+        "sweden": "Upp till 5 000 kr + 400 gratissnurr"
       },
       "referralUrl": "/goto/skycrown.php",
       "bonusBackgroundColor": null,

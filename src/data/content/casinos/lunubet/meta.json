@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/lunubet.php",
   "payoutLimits": "Up €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets :Minutes-24 h"],
+  "payoutTimes": [
+    "PayPal/E-wallets :Minutes-24 h"
+  ],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -23,8 +25,16 @@
     "Push Gaming",
     "Big Time Gaming"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller"],
-  "withdrawalMethod": ["PayPal", "Skrill", "Neteller"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -60,10 +70,10 @@
       "description": "Up to €500 + 200 Free Spins+ 1 Bonus Crab",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele + 1 Bonus Crab",
-        "denmark": "Op til 500 € + 200 gratis spins + 1 Bonus Crab",
+        "denmark": "Op til 500 kr + 200 gratis spins + 1 Bonus Crab",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta + 1 Bonus Crab",
         "norway": "Opptil 500 € + 200 gratisspinn + 1 Bonus Crab",
-        "sweden": "Upp till 500 € + 200 gratissnurr + 1 Bonus Crab"
+        "sweden": "Upp till 500 kr + 200 gratissnurr + 1 Bonus Crab"
       },
       "referralUrl": "/goto/lunubet.php",
       "bonusBackgroundColor": null,

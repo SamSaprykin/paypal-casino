@@ -94,7 +94,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     },
     "sv-SE": {
       welcomeBonusFallback: "Välkomstbonus",
-      defaultBonusDescription: "Upp till 1 000 € + 100 gratissnurr",
+      defaultBonusDescription: "Upp till 1 000 kr + 100 gratissnurr",
       defaultShortDescription:
         "Premiumspel, live dealers och snabba uttag. Gör som tusentals nöjda spelare.",
       ratingExceptional: "Exceptionell",
@@ -118,7 +118,7 @@ export const CASINO_LISTING_CARD_COPY: Record<LocaleId, CasinoListingCardCopy> =
     },
     "da-DK": {
       welcomeBonusFallback: "Velkomstbonus",
-      defaultBonusDescription: "Op til 1.000 € + 100 gratis spins",
+      defaultBonusDescription: "Op til 1.000 kr + 100 gratis spins",
       defaultShortDescription:
         "Premium spil, live dealers og hurtige udbetalinger. Slut dig til tusindvis af tilfredse spillere.",
       ratingExceptional: "Enestående",

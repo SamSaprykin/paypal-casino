@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/onluck.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -26,8 +28,16 @@
     "PlayNGo",
     "Nolimit City"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Curacao Gaming Commission",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 59,
@@ -63,10 +73,10 @@
       "description": "Up to ~€/$500 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu ~€/$500 + 200 Freispiele",
-        "denmark": "Op til ~€/$500 + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa ~€/$500 + 200 ilmaiskierrosta",
         "norway": "Opptil ~€/$500 + 200 gratisspinn",
-        "sweden": "Upp till ~€/$500 + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/onluck.php",
       "bonusBackgroundColor": null,
@@ -84,10 +94,10 @@
       "description": "66% deposit bonus up to €1,000 every Saturday or Sunday",
       "descriptionIntl": {
         "germany": "66 % Einzahlungsbonus bis zu 1.000 € jeden Samstag oder Sonntag",
-        "denmark": "66 % indbetalingsbonus op til 1.000 € hver lørdag eller søndag",
+        "denmark": "66 % indbetalingsbonus op til 1.000 kr hver lørdag eller søndag",
         "finland": "66 %:n talletusbonus jopa 1 000 € joka lauantai tai sunnuntai",
         "norway": "66 % innskuddsbonus opptil 1 000 € hver lørdag eller søndag",
-        "sweden": "66 % insättningsbonus upp till 1 000 € varje lördag eller söndag"
+        "sweden": "66 % insättningsbonus upp till 1 000 kr varje lördag eller söndag"
       },
       "referralUrl": "/goto/onluck.php",
       "bonusBackgroundColor": "#1a1a2e",

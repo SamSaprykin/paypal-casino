@@ -15,10 +15,25 @@
   },
   "referralUrl": "/goto/monro.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
-  "software": ["Microgaming", "Betsoft", "Endorphina", "Big Time Gaming"],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Microgaming",
+    "Betsoft",
+    "Endorphina",
+    "Big Time Gaming"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,

@@ -15,7 +15,8 @@ interface Props {
 const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const markdown = section.bodyMarkdown ?? "";
 const sectionDomId = `content-section-${section.id.replace(/[^a-zA-Z0-9_-]/g, "-")}`;
-const freshnessCopy = CONTENT_FRESHNESS_COPY[localeIdForWebsiteLocale(locale)];
+const localeId = localeIdForWebsiteLocale(locale);
+const freshnessCopy = CONTENT_FRESHNESS_COPY[localeId];
 ---
 
 {
@@ -30,6 +31,7 @@ const freshnessCopy = CONTENT_FRESHNESS_COPY[localeIdForWebsiteLocale(locale)];
           firstBonus={null}
           spaceTop={0}
           spaceBottom={0}
+          localeId={localeId}
           localeTag={freshnessCopy.localeTag}
           freshnessLabels={freshnessCopy}
         />

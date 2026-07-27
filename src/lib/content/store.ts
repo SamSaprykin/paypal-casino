@@ -5,6 +5,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import yaml from "yaml";
+import { localizeMoneyForLocale } from "../cms/cards";
 import { readContentBody } from "./mdx";
 
 const CONTENT_ROOT = path.join(process.cwd(), "src/data/content");
@@ -404,10 +405,14 @@ async function getDefaultBonusesForPage(
         pickIntlString(rawBonus.codeIntl, locale) ??
         rawBonus.code ??
         localizedBonusLabel,
-      description:
+      description: localizeMoneyForLocale(
         pickIntlString(rawBonus.descriptionIntl, locale) ??
-        rawBonus.description ??
-        localizedShort,
+          (typeof rawBonus.description === "string"
+            ? rawBonus.description
+            : undefined) ??
+          localizedShort,
+        locale,
+      ),
       referralUrl: rawBonus.referralUrl ?? casinoRef,
       bonusBackgroundColor: rawBonus.bonusBackgroundColor ?? casinoBg,
       bonusLogo: rawBonus.bonusLogo ?? casinoLogo,

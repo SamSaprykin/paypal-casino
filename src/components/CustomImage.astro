@@ -106,14 +106,14 @@ for (const candidate of candidates) {
         src={image}
         alt={alt}
         widths={[480, 768, maxWidth]}
-        sizes={`(max-width: 768px) 100vw, ${maxWidth}px`}
+        sizes={`(max-width: 640px) 100vw, 60vw`}
         width={width}
         height={height}
         loading={loading}
-        class={`w-full max-w-3xl rounded-xl object-cover shadow-sm ring-1 ring-slate-200 ${className}`}
+        class={`h-auto w-full max-w-full rounded-xl object-contain shadow-sm ring-1 ring-slate-200 sm:max-w-[60%] ${className}`}
       />
       {caption ? (
-        <figcaption class="mt-3 text-center text-sm italic text-slate-500">
+        <figcaption class="mt-3 max-w-full text-center text-sm italic text-slate-500 sm:max-w-[60%]">
           {caption}
         </figcaption>
       ) : null}

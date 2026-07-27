@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/spinbetter.php",
   "payoutLimits": "Up to €45,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes to 24 hours "],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes to 24 hours "
+  ],
   "software": [
     "Pragmatic",
     "Evolution",
@@ -27,8 +29,16 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 46,
   "userRecommendationsTotalNumber": 67,
@@ -64,10 +74,10 @@
       "description": "Up to €5000 + 50 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 5.000 € + 50 Freispiele",
-        "denmark": "Op til 5.000 € + 50 gratis spins",
+        "denmark": "Op til 5.000 kr + 50 gratis spins",
         "finland": "Jopa 5 000 € + 50 ilmaiskierrosta",
         "norway": "Opptil 5 000 € + 50 gratisspinn",
-        "sweden": "Upp till 5 000 € + 50 gratissnurr"
+        "sweden": "Upp till 5 000 kr + 50 gratissnurr"
       },
       "referralUrl": "/goto/spinbetter.php",
       "bonusBackgroundColor": null,

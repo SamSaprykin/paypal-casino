@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/starda.php",
   "payoutLimits": "€20,000/week",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -24,8 +26,18 @@
     "Evolution",
     "NetEnt"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 58,
@@ -61,10 +73,10 @@
       "description": "Up to €1,000 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 1.000 € + 200 Freispiele",
-        "denmark": "Op til 1.000 € + 200 gratis spins",
+        "denmark": "Op til 1.000 kr + 200 gratis spins",
         "finland": "Jopa 1 000 € + 200 ilmaiskierrosta",
         "norway": "Opptil 1 000 € + 200 gratisspinn",
-        "sweden": "Upp till 1 000 € + 200 gratissnurr"
+        "sweden": "Upp till 1 000 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/starda.php",
       "bonusBackgroundColor": null,

@@ -15,10 +15,24 @@
   },
   "referralUrl": "/goto/1go.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
-  "software": ["Betsoft", "Microgaming", "Endorphina"],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Microgaming",
+    "Endorphina"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 57,
@@ -54,10 +68,10 @@
       "description": "100% match bonus up to €500 on first deposit",
       "descriptionIntl": {
         "germany": "100 % Einzahlungsbonus bis zu 500 € auf die erste Einzahlung",
-        "denmark": "100 % matchbonus op til 500 € på første indbetaling",
+        "denmark": "100 % matchbonus op til 500 kr på første indbetaling",
         "finland": "100 %:n talletusbonus jopa 500 € ensimmäisestä talletuksesta",
         "norway": "100 % innskuddsbonus opptil 500 € på første innskudd",
-        "sweden": "100 % insättningsbonus upp till 500 € på första insättningen"
+        "sweden": "100 % insättningsbonus upp till 500 kr på första insättningen"
       },
       "referralUrl": "/goto/1go.php",
       "bonusBackgroundColor": null,

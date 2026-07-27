@@ -37,7 +37,10 @@
       "code": null,
       "codeIntl": null,
       "description": "150% up to €300",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "150 % upp till 300 kr",
+        "denmark": "150 % op til 300 kr"
+      },
       "referralUrl": "/goto/irwin.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -11,11 +11,13 @@
     "denmark": "Oplev den hurtigste indbetaling med PayPal hos Trickz Casino, nyd udbetalinger uden besvær og en sikkerhed, du kan regne med — bliv medlem nu og spil over 4.000 spil under overvågning af pålidelig sikkerhed!",
     "finland": "Koe nopein talletus PayPalilla Trickz Casinolla, nauti kotiutuksista ilman vaivaa ja turvasta, johon voit luottaa — liity jäseneksi nyt ja pelaa yli 4 000 peliä luotettavan turvan valvonnassa!",
     "norway": "Opplev den raskeste innbetalingen med PayPal hos Trickz Casino, nyt utbetalinger uten bry og en sikkerhet du kan stole på — bli medlem nå og spill over 4 000 spill under overvåking av pålitelig sikkerhet!",
-    "sweden": "Upplev den snabbaste insättningen med PayPal hos Trickz Casino, njut av uttag utan krångel och en säkerhet du kan lita på — bli medlem nu och spela över 4 000 spel under övervakning av pålitlig säkerhet!"
+    "sweden": "Upplev den snabbaste insättningen med PayPal hos Trickz Casino, njut av uttag utan kr ångel och en säkerhet du kan lita på — bli medlem nu och spela över 4 000 spel under övervakning av pålitlig säkerhet!"
   },
   "referralUrl": "/goto/trickz.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -24,8 +26,16 @@
     "Red Rake Gaming",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Skrill", "Neteller"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 60,

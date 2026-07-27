@@ -54,7 +54,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €500 + 100 FS",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 500 kr + 100 gratissnurr",
+        "denmark": "100 % op til 500 kr + 100 gratis spins"
+      },
       "referralUrl": "/goto/lukki.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

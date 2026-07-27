@@ -52,7 +52,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €150 + 100 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 150 kr + 100 gratissnurr",
+        "denmark": "100 % op til 150 kr + 100 gratis spins"
+      },
       "referralUrl": "/goto/wildtokyo.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -8,14 +8,16 @@
   "shortDescription": "Tsars is a sleek, sky-themed casino launched in 2020. It offers over 3,000 games, instant withdrawals, and a massive €2,000 welcome package plus 200 free spins, all within a lightning-fast interface.",
   "shortDescriptionIntl": {
     "germany": "Tsars ist ein elegantes Casino im Himmels-Design, das 2020 gestartet ist. Es bietet über 3.000 Spiele, sofortige Auszahlungen und ein riesiges Willkommenspaket von 2.000 € plus 200 Freispiele – alles in einer blitzschnellen Oberfläche.",
-    "denmark": "Tsars er et elegant casino med himmeltema lanceret i 2020. Det byder på over 3.000 spil, øjeblikkelige udbetalinger og en enorm velkomstpakke på 2.000 € plus 200 gratis spins — alt sammen i en lynhurtig brugerflade.",
+    "denmark": "Tsars er et elegant casino med himmeltema lanceret i 2020. Det byder på over 3.000 spil, øjeblikkelige udbetalinger og en enorm velkomstpakke på2.000 kr plus 200 gratis spins — alt sammen i en lynhurtig brugerflade.",
     "finland": "Tsars on tyylikäs, taivasteemainen kasino, joka avattiin vuonna 2020. Se tarjoaa yli 3 000 peliä, välittömät kotiutukset sekä valtavan 2 000 euron tervetuliaispaketin ja 200 ilmaiskierrosta — kaikki salamannopeassa käyttöliittymässä.",
     "norway": "Tsars er et elegant casino med himmeltema lansert i 2020. Det byr på over 3 000 spill, umiddelbare utbetalinger og en enorm velkomstpakke på 2 000 € pluss 200 gratisspinn — alt i et lynraskt grensesnitt.",
-    "sweden": "Tsars är ett elegant casino med himmelstema som lanserades 2020. Det erbjuder över 3 000 spel, omedelbara utbetalningar och ett enormt välkomstpaket på 2 000 € plus 200 gratissnurr — allt i ett blixtsnabbt gränssnitt."
+    "sweden": "Tsars är ett elegant casino med himmelstema som lanserades 2020. Det erbjuder över 3 000 spel, omedelbara utbetalningar och ett enormt välkomstpaket på2 000 kr plus 200 gratissnurr — allt i ett blixtsnabbt gränssnitt."
   },
   "referralUrl": "/goto/tsars.php",
   "payoutLimits": "Up to €5,000 per transaction",
-  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24h"
+  ],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -28,8 +30,16 @@
     "Spinomenal",
     "Relax Gaming"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Government of the Autonomous Island of Anjouan, Union of Comoros (License No. ALSI-202503021-FI1)",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -65,10 +75,10 @@
       "description": "Up to €2,000 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 2.000 € + 200 Freispiele",
-        "denmark": "Op til 2.000 € + 200 gratis spins",
+        "denmark": "Op til 2.000 kr + 200 gratis spins",
         "finland": "Jopa 2 000 € + 200 ilmaiskierrosta",
         "norway": "Opptil 2 000 € + 200 gratisspinn",
-        "sweden": "Upp till 2 000 € + 200 gratissnurr"
+        "sweden": "Upp till 2 000 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/fambet.php",
       "bonusBackgroundColor": null,

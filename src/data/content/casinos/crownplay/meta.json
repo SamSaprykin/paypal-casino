@@ -15,10 +15,27 @@
   },
   "referralUrl": "/goto/crownplay.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
-  "software": ["Betsoft", "Pragmatic", "Evolution", "NetEnt"],
-  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "Betsoft",
+    "Pragmatic",
+    "Evolution",
+    "NetEnt"
+  ],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 51,
   "userRecommendationsTotalNumber": 73,
@@ -54,10 +71,10 @@
       "description": "Up to €500 + 200 Free Spins  ",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/crownplay.php",
       "bonusBackgroundColor": null,

@@ -230,9 +230,11 @@ Inside each `step-item`:
 - `span.icon` — **plain text** Lucide key for `IconSwitch`
 - `p.step-description` — body (HTML allowed inside per `HastStepDescription`)
 
-Allowed **`IconSwitch`** icon strings (exact, case-sensitive):
+Allowed **`IconSwitch`** icon strings (exact, case-sensitive unless noted):
 
-`ShieldCheck`, `UserPlus`, `CreditCard`, `Gift`, `PlayCircle`, `Coin`, `Trophy`, `DollarSign`
+`Shield`, `ShieldCheck`, `UserPlus`, `CreditCard`, `Gift`, `Headphones`, `Wallet`, `Lock`, `Gamepad`, `Gamepad2`, `PlayCircle`, `Coin`, `Coins`, `Trophy`, `DollarSign`, `Sparkles`, `User`
+
+Aliases: `gift`, `user`, `trophy`, `sparkles`, `shield`, `user-plus`, `shield-check`, `credit-card`, `play-circle`
 
 Example:
 

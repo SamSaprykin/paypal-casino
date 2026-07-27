@@ -8,14 +8,16 @@
   "shortDescription": "Rockwin is a sleek, crypto-friendly casino launched in 2023. It features a massive library of 7,000+ games, 10% wager-free crypto cashback, and a generous €500 welcome package plus 225 free spins.",
   "shortDescriptionIntl": {
     "germany": "Rockwin ist ein elegantes, kryptofreundliches Casino, das 2023 gestartet ist. Es bietet eine riesige Bibliothek von über 7.000 Spielen, 10 % umsatzfreies Krypto-Cashback und ein großzügiges Willkommenspaket von 500 € plus 225 Freispiele.",
-    "denmark": "Rockwin er et elegant, kryptovenligt casino lanceret i 2023. Det byder på et enormt bibliotek med over 7.000 spil, 10 % omsætningsfrit kryptocashback og en generøs velkomstpakke på 500 € plus 225 gratis spins.",
+    "denmark": "Rockwin er et elegant, kryptovenligt casino lanceret i 2023. Det byder på et enormt bibliotek med over 7.000 spil, 10 % omsætningsfrit kryptocashback og en generøs velkomstpakke på500 kr plus 225 gratis spins.",
     "finland": "Rockwin on tyylikäs, kryptoystävällinen kasino, joka avattiin vuonna 2023. Se tarjoaa valtavan yli 7 000 pelin valikoiman, 10 % kierrätysvapaan kryptocashbackin sekä anteliaan 500 euron tervetuliaispaketin ja 225 ilmaiskierrosta.",
     "norway": "Rockwin er et elegant, kryptovennlig casino lansert i 2023. Det byr på et enormt bibliotek med over 7 000 spill, 10 % omsetningsfritt kryptocashback og en sjenerøs velkomstpakke på 500 € pluss 225 gratisspinn.",
-    "sweden": "Rockwin är ett elegant, kryptovänligt casino som lanserades 2023. Det erbjuder ett enormt bibliotek med över 7 000 spel, 10 % omsättningsfritt kryptocashback och ett generöst välkomstpaket på 500 € plus 225 gratissnurr."
+    "sweden": "Rockwin är ett elegant, kryptovänligt casino som lanserades 2023. Det erbjuder ett enormt bibliotek med över 7 000 spel, 10 % omsättningsfritt kryptocashback och ett generöst välkomstpaket på500 kr plus 225 gratissnurr."
   },
   "referralUrl": "/goto/rockwin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets: Minutes-24 h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24 h"
+  ],
   "software": [
     "PlayNGo",
     "Pragmatic",
@@ -29,8 +31,16 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -66,10 +76,10 @@
       "description": "Up to €500 + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/rockwin.php",
       "bonusBackgroundColor": null,

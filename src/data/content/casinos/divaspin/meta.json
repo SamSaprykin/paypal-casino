@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/divaspin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal Withdrawals: Minutes to 24 hours"],
+  "payoutTimes": [
+    "PayPal Withdrawals: Minutes to 24 hours"
+  ],
   "software": [
     "NetEnt",
     "Evolution",
@@ -23,8 +25,16 @@
     "Betsoft",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": ["Neteller", "PayPal", "Skrill"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "Neteller",
+    "PayPal",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 50,
   "userRecommendationsTotalNumber": 65,
@@ -60,10 +70,10 @@
       "description": "Up to €500 + Free Spins  ",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + Freispiele",
-        "denmark": "Op til 500 € + gratis spins",
+        "denmark": "Op til 500 kr + gratis spins",
         "finland": "Jopa 500 € + ilmaiskierroksia",
         "norway": "Opptil 500 € + gratisspinn",
-        "sweden": "Upp till 500 € + gratissnurr"
+        "sweden": "Upp till 500 kr + gratissnurr"
       },
       "referralUrl": "/goto/divaspin.php",
       "bonusBackgroundColor": null,

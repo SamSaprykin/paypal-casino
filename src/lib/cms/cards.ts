@@ -55,6 +55,63 @@ export interface AdaptCasinoForCardOptions {
 const asString = (v: unknown): string | undefined =>
   typeof v === "string" && v.trim() !== "" ? v : undefined;
 
+/** Markets that show amounts in local kroner, not euro. */
+const KR_LOCALES = new Set<WebsiteLocaleKey>([
+  "sweden",
+  "denmark",
+  "norway",
+]);
+
+const KR_NUMBER_LOCALE: Record<"sweden" | "denmark" | "norway", string> = {
+  sweden: "sv-SE",
+  denmark: "da-DK",
+  norway: "nb-NO",
+};
+
+/**
+ * Rewrites €/$/EUR amounts to locale `kr` with local number formatting.
+ * Used so SE/DK/NO cards don't fall back to English euro copy.
+ */
+export function localizeMoneyForLocale(
+  text: string,
+  locale: WebsiteLocaleKey | undefined,
+): string {
+  if (!locale || !KR_LOCALES.has(locale) || !text) return text;
+  const numberLocale = KR_NUMBER_LOCALE[locale];
+
+  const formatKr = (raw: string): string | null => {
+    const normalized = raw
+      .trim()
+      .replace(/\u00a0/g, " ")
+      .replace(/\s/g, "")
+      .replace(/,(?=\d{3}(\D|$))/g, "")
+      .replace(/\.(?=\d{3}(\D|$))/g, "")
+      .replace(",", ".");
+    const n = Number(normalized);
+    if (!Number.isFinite(n)) return null;
+    return `${new Intl.NumberFormat(numberLocale, {
+      maximumFractionDigits: 0,
+    }).format(n)} kr`;
+  };
+
+  let out = text;
+  // Number token must end on a digit so we don't swallow the following space.
+  const num = "([\\d\\s.,]*\\d)";
+  out = out.replace(
+    new RegExp(`~?\\s*€\\s*/\\s*\\$\\s*${num}`, "g"),
+    (_, raw: string) => formatKr(raw) ?? _,
+  );
+  out = out.replace(
+    new RegExp(`(?<!\\w)(?:€|EUR|\\$)\\s*${num}`, "g"),
+    (full, raw: string) => formatKr(raw) ?? full,
+  );
+  out = out.replace(
+    new RegExp(`${num}\\s*(?:€|EUR)(?!\\w)`, "g"),
+    (full, raw: string) => formatKr(raw) ?? full,
+  );
+  return out;
+}
+
 /**
  * Picks a localized string from an `xIntl` map (keyed by WebsiteLocaleKey),
  * falling back to the provided default when no translation exists.
@@ -93,27 +150,32 @@ export function adaptCasinoForCard(
   const ratingNumber = typeof c.rating === "number" ? c.rating : undefined;
 
   const bonuses: CasinoBonusCardData[] = Array.isArray(c.bonuses)
-    ? (c.bonuses as Array<Record<string, unknown>>).map((b) => ({
-        fields: {
-          name: pickLocalizedString(
-            b.nameIntl,
-            locale,
-            typeof b.name === "string" ? b.name : undefined,
-          ),
-          code: pickLocalizedString(
-            b.codeIntl,
-            locale,
-            typeof b.code === "string" ? b.code : undefined,
-          ),
-          description: pickLocalizedString(
-            b.descriptionIntl,
-            locale,
-            typeof b.description === "string" ? b.description : undefined,
-          ),
-          referralUrl:
-            typeof b.referralUrl === "string" ? b.referralUrl : undefined,
-        },
-      }))
+    ? (c.bonuses as Array<Record<string, unknown>>).map((b) => {
+        const description = pickLocalizedString(
+          b.descriptionIntl,
+          locale,
+          typeof b.description === "string" ? b.description : undefined,
+        );
+        return {
+          fields: {
+            name: pickLocalizedString(
+              b.nameIntl,
+              locale,
+              typeof b.name === "string" ? b.name : undefined,
+            ),
+            code: pickLocalizedString(
+              b.codeIntl,
+              locale,
+              typeof b.code === "string" ? b.code : undefined,
+            ),
+            description: description
+              ? localizeMoneyForLocale(description, locale)
+              : undefined,
+            referralUrl:
+              typeof b.referralUrl === "string" ? b.referralUrl : undefined,
+          },
+        };
+      })
     : [];
 
   const id = String(c._id ?? c.slug ?? "");
@@ -144,15 +206,19 @@ export function adaptCasinoForCard(
       slug,
       backgroundColor,
       shortDescription:
-        typeof c.shortDescription === "string" ? c.shortDescription : undefined,
+        typeof c.shortDescription === "string"
+          ? localizeMoneyForLocale(c.shortDescription, locale)
+          : undefined,
       referralUrl:
         typeof c.referralUrl === "string" ? c.referralUrl : undefined,
       payoutLimits:
-        typeof c.payoutLimits === "string" ? c.payoutLimits : undefined,
+        typeof c.payoutLimits === "string"
+          ? localizeMoneyForLocale(c.payoutLimits, locale)
+          : undefined,
       payoutTimes: Array.isArray(c.payoutTimes)
-        ? (c.payoutTimes as unknown[]).filter(
-            (s): s is string => typeof s === "string",
-          )
+        ? (c.payoutTimes as unknown[])
+            .filter((s): s is string => typeof s === "string")
+            .map((s) => localizeMoneyForLocale(s, locale))
         : undefined,
       license: asString(c.license),
       userRecommendationsRecommendedNumber:

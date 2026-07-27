@@ -62,6 +62,10 @@ export {
   type ContentFreshnessCopy,
 } from "./copies/content-freshness";
 export {
+  PAYMENT_SPEED_CHART_COPY,
+  type PaymentSpeedChartCopy,
+} from "./copies/payment-speed-chart";
+export {
   BLOCKED_CASINO_MODAL_COPY,
   formatBlockedCasinoModalCopy,
   type BlockedCasinoModalCopy,

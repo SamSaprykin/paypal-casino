@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/ritzo.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets: Minutes-24 h"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes-24 h"
+  ],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -26,8 +28,18 @@
     "Endorphina",
     "Nolimit City"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 60,
@@ -63,10 +75,10 @@
       "description": "Up to 500 € + 200 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 € + 200 gratis spins",
+        "denmark": "Op til 500 kr + 200 gratis spins",
         "finland": "Jopa 500 € + 200 ilmaiskierrosta",
         "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 € + 200 gratissnurr"
+        "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/ritzo.php",
       "bonusBackgroundColor": "#472A3F\t",

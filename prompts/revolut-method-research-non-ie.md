@@ -19,10 +19,10 @@ If a local list includes one of these, copy IE cells and only translate notes â€
 
 | Locale  | Slugs                                                                                                |
 | ------- | ---------------------------------------------------------------------------------------------------- |
-| germany | `yukon-gold`, `kukimuki`, `villento`, `bitstarz`, `zodiac-casino`, `lollybet`                      |
+| germany | `yukon-gold`, `kukimuki`, `villento`, `bitstarz`, `zodiac-casino`, `lollybet`                        |
 | denmark | `kukimuki`, `spinbetter`, `lucky-ones`, `lets-lucky`, `cosmicslot`, `just-casino`                    |
 | finland | `20bet`, `playkasino`, `fezbet`, `spinbetter`                                                        |
-| norway  | `kukimuki`, `flagman`, `spinbetter`, `lucky-ones`, `slotbox`                                       |
+| norway  | `kukimuki`, `flagman`, `spinbetter`, `lucky-ones`, `slotbox`                                         |
 | sweden  | `klirr-casino`, `pop-casino`, `lucky-ones`, `cosmicslot`, `lets-lucky`, `spinbetter`, `jubla-casino` |
 
 Deduplicate shared brands across markets when the banking stack is the same; otherwise note the market in `notes`.

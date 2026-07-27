@@ -5,6 +5,7 @@ import {
   CreditCard,
   Eye,
   Gamepad2,
+  Gift,
   Headphones,
   Info,
   Landmark,
@@ -38,6 +39,9 @@ const STEP_ICONS = {
   CreditCard,
   Gamepad2,
   Banknote,
+  Shield,
+  Headphones,
+  Gift,
 };
 
 /** Root wrapper for layout composition (MDX or previews). */

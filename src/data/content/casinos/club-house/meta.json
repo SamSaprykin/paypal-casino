@@ -11,7 +11,9 @@
   "payoutTimes": [
     "E-wallet withdrawals reported as instant; bank transfer/card slower (exact times not confirmed)"
   ],
-  "software": ["Evolution"],
+  "software": [
+    "Evolution"
+  ],
   "depositMethods": [
     "Visa",
     "Mastercard",
@@ -57,7 +59,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €2,000 + 100 Free Spins",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 2 000 kr + 100 gratissnurr",
+        "denmark": "100 % op til 2.000 kr + 100 gratis spins"
+      },
       "referralUrl": "/goto/club-house.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

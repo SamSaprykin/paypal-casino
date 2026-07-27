@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/rx-casino.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-wallets: Minutes – 24 hours"],
+  "payoutTimes": [
+    "PayPal/E-wallets: Minutes – 24 hours"
+  ],
   "software": [
     "Betsoft",
     "Big Time Gaming",
@@ -27,8 +29,16 @@
     "Thunderkick",
     "Wazdan"
   ],
-  "depositMethods": ["PayPal", "Skrill", "Neteller"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
+  "depositMethods": [
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 60,

@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/vincispin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/Skrill/Neteller: min to 24 hours "],
+  "payoutTimes": [
+    "PayPal/Skrill/Neteller: min to 24 hours "
+  ],
   "software": [
     "Playtech",
     "PlayNGo",
@@ -27,8 +29,16 @@
     "Quickspin",
     "Thunderkick"
   ],
-  "depositMethods": ["Neteller", "Skrill", "PayPal"],
-  "withdrawalMethod": ["Neteller", "Skrill", "PayPal"],
+  "depositMethods": [
+    "Neteller",
+    "Skrill",
+    "PayPal"
+  ],
+  "withdrawalMethod": [
+    "Neteller",
+    "Skrill",
+    "PayPal"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,
@@ -64,10 +74,10 @@
       "description": "Up to €500 + 100 Free Spins",
       "descriptionIntl": {
         "germany": "Bis zu 500 € + 100 Freispiele",
-        "denmark": "Op til 500 € + 100 gratis spins",
+        "denmark": "Op til 500 kr + 100 gratis spins",
         "finland": "Jopa 500 € + 100 ilmaiskierrosta",
         "norway": "Opptil 500 € + 100 gratisspinn",
-        "sweden": "Upp till 500 € + 100 gratissnurr"
+        "sweden": "Upp till 500 kr + 100 gratissnurr"
       },
       "referralUrl": "/goto/vincispin.php",
       "bonusBackgroundColor": null,

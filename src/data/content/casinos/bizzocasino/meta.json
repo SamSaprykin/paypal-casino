@@ -11,7 +11,10 @@
   "payoutTimes": [
     "Crypto withdrawals typically under 1 hour; e-wallets 24 hours; bank transfers up to a few days. Daily limit $4,000, weekly $16,000, monthly $50,000."
   ],
-  "software": ["Pragmatic", "Evolution"],
+  "software": [
+    "Pragmatic",
+    "Evolution"
+  ],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",
@@ -52,7 +55,10 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €100 + 100 FS (1st deposit), then 50% up to €300 + 50 FS (2nd deposit)",
-      "descriptionIntl": null,
+      "descriptionIntl": {
+        "sweden": "100 % upp till 100 kr + 100 gratissnurr (1:a insättningen), sedan 50 % upp till 300 kr + 50 gratissnurr (2:a insättningen)",
+        "denmark": "100 % op til 100 kr + 100 gratis spins (1. indbetaling), derefter 50 % op til 300 kr + 50 gratis spins (2. indbetaling)"
+      },
       "referralUrl": "/goto/bizzocasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null
