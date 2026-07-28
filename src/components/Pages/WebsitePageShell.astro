@@ -1,0 +1,74 @@
+---
+import WebsitePageSections from "./WebsitePageSections.astro";
+import WebsitePageToc from "./WebsitePageToc.astro";
+import PageByline from "./PageByline.astro";
+import LastUpdated from "./LastUpdated.astro";
+import { extractWebsitePageToc } from "../../lib/content/websitePageToc";
+import type { WebsitePage } from "../../lib/cms/sections";
+import type { WebsiteLocaleKey } from "../../lib/content";
+import type { WebsitePageCopy } from "../../lib/i18n";
+
+interface Props {
+  page: WebsitePage;
+  locale: WebsiteLocaleKey;
+  pageCopy: WebsitePageCopy;
+  createdDisplay: string | null;
+  updatedDisplay: string | null;
+  /** Slight spacing tweak — home uses a bit more top margin. */
+  mainClass?: string;
+}
+
+const {
+  page,
+  locale,
+  pageCopy,
+  createdDisplay,
+  updatedDisplay,
+  mainClass = "flex-1 pt-12 my-12 lg:my-32",
+} = Astro.props as Props;
+
+const tocItems = extractWebsitePageToc(page.sections);
+const hasToc = tocItems.length > 0;
+---
+
+<main id="main-content" class={mainClass}>
+  <div
+    class:list={[
+      "mx-auto w-full px-4 pb-16 sm:px-6 lg:px-8",
+      hasToc ? "max-w-5xl min-[1400px]:max-w-[88rem]" : "max-w-5xl",
+    ]}
+  >
+    <div
+      class:list={[
+        hasToc &&
+          "min-[1400px]:grid min-[1400px]:grid-cols-[minmax(0,64rem)_20rem] min-[1400px]:gap-6 min-[1400px]:items-start min-[1400px]:justify-center",
+      ]}
+    >
+      <div
+        class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm"
+      >
+        <PageByline
+          copy={pageCopy}
+          createdAt={page.createdAt}
+          updatedAt={page.updatedAt}
+          createdDisplay={createdDisplay}
+          updatedDisplay={updatedDisplay}
+          addedBy={page.addedBy}
+          reviewedBy={page.reviewedBy}
+        />
+        <LastUpdated
+          locale={locale}
+          updatedAt={page.updatedAt}
+          reviewCycle="monthly"
+        />
+        <WebsitePageSections sections={page.sections} locale={locale} />
+      </div>
+
+      {
+        hasToc && (
+          <WebsitePageToc items={tocItems} label={pageCopy.onThisPage} />
+        )
+      }
+    </div>
+  </div>
+</main>

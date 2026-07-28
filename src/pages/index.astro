@@ -2,9 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
-import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
-import PageByline from "../components/Pages/PageByline.astro";
-import LastUpdated from "../components/Pages/LastUpdated.astro";
+import WebsitePageShell from "../components/Pages/WebsitePageShell.astro";
 
 import {
   getWebsitePageBySlug,
@@ -77,31 +75,13 @@ const seoData = {
       />
     )
   }
-  <main id="main-content" class="flex-1 pt-12 my-16 lg:my-32">
-    <div class="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-      <div
-        class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm"
-      >
-        <PageByline
-          copy={pageCopy}
-          createdAt={homePage.createdAt}
-          updatedAt={homePage.updatedAt}
-          createdDisplay={createdDisplay}
-          updatedDisplay={updatedDisplay}
-          addedBy={homePage.addedBy}
-          reviewedBy={homePage.reviewedBy}
-        />
-        <LastUpdated
-          locale={ROOT_WEBSITE_LOCALE}
-          updatedAt={homePage.updatedAt}
-          reviewCycle="monthly"
-        />
-        <WebsitePageSections
-          sections={homePage.sections}
-          locale={ROOT_WEBSITE_LOCALE}
-        />
-      </div>
-    </div>
-  </main>
+  <WebsitePageShell
+    page={homePage}
+    locale={ROOT_WEBSITE_LOCALE}
+    pageCopy={pageCopy}
+    createdDisplay={createdDisplay}
+    updatedDisplay={updatedDisplay}
+    mainClass="flex-1 pt-12 my-16 lg:my-32"
+  />
   <Footer locale={ROOT_WEBSITE_LOCALE} />
 </BaseLayout>

@@ -2,9 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
-import WebsitePageSections from "../components/Pages/WebsitePageSections.astro";
-import PageByline from "../components/Pages/PageByline.astro";
-import LastUpdated from "../components/Pages/LastUpdated.astro";
+import WebsitePageShell from "../components/Pages/WebsitePageShell.astro";
 
 import {
   getWebsitePageBySlug,
@@ -85,24 +83,12 @@ const updatedDisplay = formatDisplayDate(page.updatedAt);
       />
     )
   }
-  <main id="main-content" class="flex-1 pt-12 my-12 lg:my-32">
-    <div class="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6 lg:px-8">
-      <div
-        class="overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50/70 shadow-sm"
-      >
-        <PageByline
-          copy={pageCopy}
-          createdAt={page.createdAt}
-          updatedAt={page.updatedAt}
-          createdDisplay={createdDisplay}
-          updatedDisplay={updatedDisplay}
-          addedBy={page.addedBy}
-          reviewedBy={page.reviewedBy}
-        />
-        <LastUpdated locale={locale} updatedAt={page.updatedAt} reviewCycle="monthly" />
-        <WebsitePageSections sections={page.sections} locale={locale} />
-      </div>
-    </div>
-  </main>
+  <WebsitePageShell
+    page={page}
+    locale={locale}
+    pageCopy={pageCopy}
+    createdDisplay={createdDisplay}
+    updatedDisplay={updatedDisplay}
+  />
   <Footer locale={locale} />
 </BaseLayout>

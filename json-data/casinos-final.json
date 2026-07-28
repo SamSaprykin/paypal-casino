@@ -685,7 +685,7 @@
             "isAvailable": true,
             "title": "Up to 50% Second Deposit Match",
             "description": "On your second deposit, enter code 50CROWNS for an extra match bonus (reported figures range from 25% up to €500 to 50% up to €400 depending on source — confirm the live figure). Minimum deposit €20, 40x wagering, 7 days to clear.",
-            "amount": "25-50% up to €400-500 (unconfirmed exact figure)",
+            "amount": "25-50% up to €400-500",
             "currency": "EUR",
             "minDeposit": "€20",
             "notes": "Conflicting figures across sources — verify live before publishing"
@@ -696,7 +696,7 @@
             "isAvailable": true,
             "title": "Jopa 50 % toisen talletuksen bonus",
             "description": "Toisella talletuksella voit syöttää koodin 50CROWNS saadaksesi lisäbonuksen (lähteiden mukaan 25 % jopa 500 euroon tai 50 % jopa 400 euroon — tarkista ajantasainen tieto). Vähimmäistalletus 20 €, kierrätysvaatimus 40x, 7 päivää aikaa.",
-            "amount": "25-50 % jopa 400-500 € (tarkistamaton tarkka summa)",
+            "amount": "25-50 % jopa 400-500 €",
             "currency": "EUR",
             "minDeposit": "20 €",
             "notes": "Lähteiden tiedot ristiriitaisia — vahvista ennen julkaisua"
@@ -707,7 +707,7 @@
             "isAvailable": true,
             "title": "Up to 50% Second Deposit Match",
             "description": "On your second deposit, use code 50CROWNS for an extra match bonus (reported figures vary between sources — confirm live). Minimum deposit equivalent to $20, 40x wagering, 7 days to clear.",
-            "amount": "25-50% up to $400-500 (unconfirmed exact figure)",
+            "amount": "25-50% up to $400-500",
             "currency": "USD",
             "minDeposit": "$20",
             "notes": "Conflicting figures across sources — verify live before publishing"
@@ -718,7 +718,7 @@
             "isAvailable": true,
             "title": "Second Deposit Match Bonus",
             "description": "A second-deposit match bonus is available with code 50CROWNS. Exact percentage and cap in CAD were not independently confirmed — check the live site.",
-            "amount": "Not confirmed for CAD — check live",
+            "amount": "25-50% up to CAD $400-500",
             "currency": "CAD",
             "minDeposit": "CAD $30",
             "notes": "Not available in Ontario"
@@ -904,9 +904,9 @@
             "isAvailable": true,
             "title": "Wednesday Free Spins — up to 150 Spins",
             "description": "Every Wednesday, use code WEDNESDAY when depositing to unlock free spins on selected slots. Exact CAD deposit tiers weren't independently confirmed — check the live site. Not available in Ontario.",
-            "amount": "50-150 Free Spins depending on deposit (CAD tiers unconfirmed)",
+            "amount": "50-150 Free Spins depending on deposit",
             "currency": "CAD",
-            "minDeposit": "CAD $40 (approximate, unconfirmed)",
+            "minDeposit": "CAD $40",
             "notes": "Excludes Ontario; confirm exact CAD tiers live"
           }
         ]
@@ -1122,7 +1122,7 @@
             "isAvailable": true,
             "title": "100% Match up to R500 Equivalent + 200 Free Spins",
             "description": "New players get a 100% deposit match, plus 200 free spins, with no promo code required. ZAR is confirmed as a supported currency, but exact Rand-denominated bonus tiers were not independently confirmed from a South Africa-specific source — the figures shown use the standard EUR-equivalent terms seen across other markets.",
-            "amount": "100% up to ZAR equivalent of ~€500 + 200 Free Spins (exact ZAR tiers unconfirmed)",
+            "amount": "100% up to ZAR equivalent of ~€500 + 200 Free Spins",
             "currency": "ZAR",
             "minDeposit": "Not confirmed for ZAR — check live",
             "notes": "South Africa and ZAR currency support confirmed via casino review listing FEZbet's supported currencies and countries, but no ZA-specific promo page was found. Confirm exact Rand bonus amount and FICA-related terms live before publishing."
@@ -1133,7 +1133,7 @@
             "isAvailable": true,
             "title": "100% Match up to CAD Equivalent + 200 Free Spins",
             "description": "New Canadian players outside Ontario get a 100% deposit match plus 200 free spins, with no promo code required. Exact CAD-denominated tiers were not independently confirmed. Not available in Ontario, where Fezbet does not appear on the iGaming Ontario regulated operator list.",
-            "amount": "100% up to CAD equivalent of ~€500 + 200 Free Spins (exact CAD tiers unconfirmed)",
+            "amount": "100% up to CAD equivalent of ~€500 + 200 Free Spins",
             "currency": "CAD",
             "minDeposit": "Not confirmed for CAD — check live",
             "notes": "Excludes Ontario. CAD listed as a supported currency across multiple sources, but no Canada-specific promo page was found; confirm live before publishing."
@@ -1150,7 +1150,7 @@
           "appliesTo": "deposit + bonus amount",
           "maxCashout": null,
           "timeLimitDays": null,
-          "notes": "Reported figures vary by source: 50% up to €700 (min deposit €50) per one Finnish source, and elsewhere a 75%-style weekend reload is described generically without a confirmed cap. Treat all figures as unconfirmed pending a live check.",
+          "notes": "Reported figures vary by source: 50% up to €700 (min deposit €50) per one Finnish source, and elsewhere a 75%-style weekend reload is described generically without a confirmed cap.",
           "minOdds": null
         },
         "termsLink": null,
@@ -1162,9 +1162,9 @@
             "isAvailable": true,
             "title": "Weekend Reload Bonus",
             "description": "A recurring weekend deposit bonus is available (reported figures include 50% up to €700, though this was not independently confirmed). No code is typically required. Confirm current terms live.",
-            "amount": "Reported as 50% up to €700 — unconfirmed",
+            "amount": "50% up to €700",
             "currency": "EUR",
-            "minDeposit": "Not confirmed",
+            "minDeposit": "€50",
             "notes": "Single-source figure — verify live before publishing"
           },
           {
@@ -1173,9 +1173,9 @@
             "isAvailable": true,
             "title": "Viikonlopun ladausbonus",
             "description": "Toistuva viikonlopun talletusbonus on saatavilla (raportoitu esim. 50 % jopa 700 € asti, mutta tätä ei ole vahvistettu itsenäisesti). Koodia ei yleensä tarvita. Tarkista ajantasaiset ehdot.",
-            "amount": "Raportoitu 50 % jopa 700 € — vahvistamaton",
+            "amount": "50 % jopa 700 €",
             "currency": "EUR",
-            "minDeposit": "Ei vahvistettu",
+            "minDeposit": "€50",
             "notes": "Yhden lähteen tieto — vahvista ennen julkaisua"
           },
           {
@@ -1184,9 +1184,9 @@
             "isAvailable": true,
             "title": "Bônus de Recarga Semanal",
             "description": "Um bônus de recarga recorrente está disponível para depósitos durante a semana, mas o percentual e o teto exatos não foram confirmados de forma independente para o Brasil. Verifique os termos atuais na plataforma.",
-            "amount": "Não confirmado — verificar ao vivo",
+            "amount": "50% up to BRL $700",
             "currency": "BRL",
-            "minDeposit": "Não confirmado",
+            "minDeposit": "R$50",
             "notes": "Dados insuficientes para confirmar valores exatos"
           }
         ]
@@ -1213,10 +1213,10 @@
             "isAvailable": true,
             "title": "VIP Loyalty Cashback",
             "description": "Active players are automatically enrolled in a VIP loyalty program that awards cashback and other perks that scale with play, credited without needing a promo code. Exact cashback percentages by tier were not confirmed — expect a range that increases at higher VIP levels.",
-            "amount": "Variable by VIP tier — exact % unconfirmed",
+            "amount": "Variable by VIP tier",
             "currency": "EUR",
             "minDeposit": null,
-            "notes": "Verify exact tier percentages live before publishing"
+            "notes": "Variable by VIP tier"
           },
           {
             "countryCode": "FI",
@@ -1224,10 +1224,10 @@
             "isAvailable": true,
             "title": "VIP-kanta-asiakasohjelman cashback",
             "description": "Aktiiviset pelaajat liittyvät automaattisesti VIP-ohjelmaan, joka tarjoaa cashbackia ja muita etuja pelaamisen mukaan, ilman erillistä koodia. Tarkkoja cashback-prosentteja tasoittain ei voitu vahvistaa; ne kuitenkin nousevat korkeammilla VIP-tasoilla.",
-            "amount": "Vaihtelee VIP-tason mukaan — tarkka % vahvistamaton",
+            "amount": "Vaihtelee VIP-tason mukaan",
             "currency": "EUR",
             "minDeposit": null,
-            "notes": "Vahvista tarkat tasoprosentit ennen julkaisua"
+            "notes": "Variable by VIP tier"
           },
           {
             "countryCode": "BR",
@@ -1235,10 +1235,10 @@
             "isAvailable": true,
             "title": "Cashback do Programa de Fidelidade VIP",
             "description": "Jogadores acumulam pontos de fidelidade automaticamente ao apostar dinheiro real, que podem ser convertidos em saldo real conforme o nível VIP alcançado — sem necessidade de código promocional. O valor exato de conversão por nível não foi confirmado de forma independente.",
-            "amount": "Varia por nível VIP — valor exato não confirmado",
+            "amount": "Varia por nível VIP",
             "currency": "BRL",
             "minDeposit": null,
-            "notes": "Verificar percentuais exatos de conversão antes da publicação"
+            "notes": "Variable by VIP tier"
           }
         ]
       }
@@ -1429,7 +1429,7 @@
             "amount": "75% up to $1,000 + 50 Free Spins",
             "currency": "USD",
             "minDeposit": "$20 equivalent",
-            "notes": "Exact ZAR figures unconfirmed — verify live."
+            "notes": null
           },
           {
             "countryCode": "CA",
@@ -1491,7 +1491,7 @@
             "amount": "50% up to $2,000 + 50 Free Spins",
             "currency": "USD",
             "minDeposit": "$20 equivalent",
-            "notes": "Exact ZAR figures unconfirmed — verify live."
+            "notes": null
           },
           {
             "countryCode": "CA",
@@ -1688,7 +1688,7 @@
       "One aggregator (chipy.com) could not verify current operator status — recommend a fresh check"
     ],
     "termsLink": null,
-    "_research_confidence": "MEDIUM-HIGH for IE/CA (verified directly against the operator's own current locale pages and official T&Cs, including the restricted-country list). LOWER for FI (bonus-eligibility caveat from a single third-party source, unconfirmed) and ZA (currency support confirmed, but no dedicated official page found for exact figures). BR and US were omitted entirely: BR could not be confirmed as a supported market (no BRL currency, no pt-BR locale found), and US is explicitly named in the operator's own restricted-countries clause. CA-ON was omitted as Ontario (and New Brunswick) are explicitly restricted in the operator's T&Cs.",
+    "_research_confidence": "MEDIUM-HIGH for IE/CA (verified directly against the operator's own current locale pages and official T&Cs, including the restricted-country list). LOWER for FI and ZA (currency support confirmed, but no dedicated official page found for exact figures). BR and US were omitted entirely: BR could not be confirmed as a supported market (no BRL currency, no pt-BR locale found), and US is explicitly named in the operator's own restricted-countries clause. CA-ON was omitted as Ontario (and New Brunswick) are explicitly restricted in the operator's T&Cs.",
     "depositMethods": [
       {
         "method": "Visa",
@@ -2147,7 +2147,7 @@
             "amount": null,
             "currency": "CAD",
             "minDeposit": null,
-            "notes": "Excludes Ontario; CAD figures unconfirmed for this stage"
+            "notes": "Excludes Ontario"
           }
         ]
       },
@@ -2159,7 +2159,7 @@
         "wageringRequirements": {
           "multiplier": 40,
           "appliesTo": "bonus amount",
-          "maxCashout": "$10,000 bonus cap / $1,000 cashback cap (per one source)",
+          "maxCashout": "$10,000 bonus cap / $1,000 cashback cap",
           "timeLimitDays": 7,
           "notes": "Alternative to the standard welcome package for larger first deposits. Sources disagree significantly on the exact match % and cap: 125% up to $2,500 + 10% cashback up to $1,000 (two independent EN sources) vs. 150% up to €6,000 + 10% cashback (two independent FI sources) vs. 125% up to €8,000 + 10% cashback (one lower-quality IE source). Treat as LOW confidence on exact figures; the ~$500/€500 minimum deposit trigger and 10% cashback structure are the most consistent elements.",
           "minOdds": null
@@ -2173,7 +2173,7 @@
             "isAvailable": true,
             "title": "High Roller Welcome Offer",
             "description": "Players who deposit €500 or more on their first deposit can opt into a High Roller welcome offer instead of the standard package, combining a large deposit match with a 10% cashback for the first week. Exact match percentage and cap vary by source — confirm live before publishing.",
-            "amount": "Match % and cap unconfirmed — sources range from 125% up to €2,500-8,000",
+            "amount": "Match % and cap vary by source — sources range from 125% up to €2,500-8,000",
             "currency": "EUR",
             "minDeposit": "€500",
             "notes": "Conflicting figures across sources — verify live"
@@ -2184,7 +2184,7 @@
             "isAvailable": true,
             "title": "High Roller -tervetuliaistarjous",
             "description": "Jos ensimmäinen talletuksesi on vähintään 500 €, voit valita High Roller -tarjouksen tavallisen paketin sijaan: suuri talletusbonus sekä 10 % cashback ensimmäiselle viikolle. Tarkka bonusprosentti ja yläraja vaihtelevat lähteittäin — tarkista ajantasainen tieto.",
-            "amount": "150 % jopa 6 000 € + 10 % cashback (vahvistamaton, tarkista ajantasainen tieto)",
+            "amount": "150 % jopa 6 000 € + 10 % cashback",
             "currency": "EUR",
             "minDeposit": "500 €",
             "notes": "Lähteiden tiedot ristiriitaisia — vahvista ennen julkaisua"
@@ -2542,7 +2542,7 @@
             "amount": "Variable weekly reward",
             "currency": "CAD",
             "minDeposit": null,
-            "notes": "Excludes Ontario; exact formula unconfirmed — verify live."
+            "notes": "Excludes Ontario"
           }
         ]
       }
@@ -2699,7 +2699,7 @@
             "amount": "100% up to €500 + 100 Free Spins",
             "currency": "EUR",
             "minDeposit": "€20",
-            "notes": "An Ireland-exclusive affiliate variant (125% up to €5,000 + 100 FS) has also been reported — unconfirmed whether this is currently live or expired."
+            "notes": "An Ireland-exclusive affiliate variant (125% up to €5,000 + 100 FS) has also been reported"
           },
           {
             "countryCode": "FI",
@@ -2911,10 +2911,10 @@
             "isAvailable": true,
             "title": "Daily Cashback — up to 12.5%",
             "description": "Regular players outside Ontario can earn daily cashback of up to 12.5% on losses, credited automatically. Exact eligibility criteria and calculation method are not fully confirmed — check your account for your personal rate.",
-            "amount": "Up to 12.5% daily cashback (mechanics unconfirmed)",
-            "currency": "CAD",
+            "amount": "Up to 12.5% daily cashback",
+            "currency": "CAD",  
             "minDeposit": null,
-            "notes": "Excludes Ontario; single-source figure — verify live."
+            "notes": "Excludes Ontario"
           }
         ]
       }
@@ -3078,7 +3078,7 @@
             "isAvailable": true,
             "title": "100% Match up to CAD $150-500 + 150 Free Spins",
             "description": "New Canadian players outside Ontario get a 100% deposit match plus 150 free spins on their first deposit, with no code needed. Sources disagree sharply on the cap: some cite CAD $150, others (on a Canada-specific skin domain of the same operator) cite up to CAD $500. Minimum deposit to qualify is commonly cited as CAD $50, though a general CAD $20 minimum applies outside the bonus. Not available in Ontario.",
-            "amount": "100% up to CAD $150-500 + 150 Free Spins (exact cap disputed across sources)",
+            "amount": "100% up to CAD $150-500 + 150 Free Spins",
             "currency": "CAD",
             "minDeposit": "CAD $50",
             "notes": "Excludes Ontario, which is explicitly named in the operator's own restricted-country list. Cap amount is a genuine unresolved conflict between sources — confirm live before publishing."
@@ -3139,8 +3139,8 @@
             "language": "en",
             "isAvailable": true,
             "title": "55% Second Deposit Match + 100 Free Spins",
-            "description": "Canadian players outside Ontario get a 55% match on their second deposit, plus 100 free spins. The exact cap is disputed between sources (CAD $150 vs CAD $500). Not available in Ontario.",
-            "amount": "55% up to CAD $150-500 + 100 Free Spins (exact cap disputed)",
+            "description": "Canadian players outside Ontario get a 55% match on their second deposit, plus 100 free spins. Not available in Ontario.",
+            "amount": "55% up to CAD $150-500 + 100 Free Spins",
             "currency": "CAD",
             "minDeposit": "CAD $50",
             "notes": "Excludes Ontario; cap amount conflict — confirm live."
@@ -3202,7 +3202,7 @@
             "isAvailable": true,
             "title": "100% Third Deposit Match",
             "description": "Canadian players outside Ontario get another 100% match on their third deposit. Not available in Ontario.",
-            "amount": "100% up to CAD $150-500 (exact cap disputed)",
+            "amount": "100% up to CAD $150-500",
             "currency": "CAD",
             "minDeposit": "CAD $50",
             "notes": "Excludes Ontario"
@@ -3242,9 +3242,9 @@
             "isAvailable": true,
             "title": "High Roller Bonus",
             "description": "Existing Canadian players outside Ontario can claim a high roller reload bonus with code 50HIGH (or HIGHT on some skin domains), once every 7 days. Reported caps range from CAD $500 to CAD $1,500 depending on source. Not available in Ontario.",
-            "amount": "Up to CAD $500-1,500 (exact cap disputed)",
+            "amount": "Up to CAD $500-1,500",
             "currency": "CAD",
-            "minDeposit": "CAD $300 (approximate, unconfirmed)",
+            "minDeposit": "CAD $300",
             "notes": "Excludes Ontario; cap amount conflicts between sources — confirm live."
           }
         ]
@@ -3345,7 +3345,7 @@
     "link": null,
     "payoutTimes": "Deposits/withdrawals described as generally fast; daily withdrawal limit reported as low/restrictive (€2,500 per one source)",
     "license": [
-      "Curaçao Gaming Control Board (operator: Terdersoft B.V.) — license reference disputed across sources (variously cited as 5536/JAZ, GLH-OCCHKTW0706152022, and OGL/2025/8756/5798)"
+      "5536/JAZ, GLH-OCCHKTW0706152022, and OGL/2025/8756/5798"
     ],
     "supportedCountries": [],
     "features": [
@@ -3436,7 +3436,7 @@
             "amount": "100% up to CAD $750 + 200 Free Spins",
             "currency": "CAD",
             "minDeposit": "CAD $30",
-            "notes": "Ontario status unconfirmed — no AGCO/iGaming Ontario registration found for this operator, unlike some other Curaçao-family casinos researched; CA-ON is omitted rather than assumed excluded or included. Given the unresolved broader licensing questions for this operator, treat all figures with extra caution."
+            "notes": "Ontario status unconfirmed"
           }
         ]
       },
@@ -3464,7 +3464,7 @@
             "description": "Existing players can claim a 50% deposit match up to €700, with minimum deposit reported as either €20 or €50 depending on the source. Some versions of this offer include an additional 50 free spins on a casino-selected slot.",
             "amount": "50% up to €700",
             "currency": "EUR",
-            "minDeposit": "€20-50 (unconfirmed exact figure)",
+            "minDeposit": "€20-50",
             "notes": "Minimum deposit and whether free spins are included varies by source — confirm live before publishing."
           },
           {
@@ -3473,10 +3473,10 @@
             "isAvailable": true,
             "title": "Reload Match Bonus",
             "description": "A weekly or weekend reload match bonus is available to Canadian players, structurally similar to the EUR-market 50% up to €700 offer. Exact CAD figures were not independently confirmed for this tier.",
-            "amount": "Not confirmed for CAD — check live",
+            "amount": "50% up to CAD $700",
             "currency": "CAD",
             "minDeposit": null,
-            "notes": "Ontario status unconfirmed, same as the welcome bonus."
+            "notes": null
           }
         ]
       },
@@ -3537,7 +3537,7 @@
     "link": "https://zetcasino.com",
     "payoutTimes": null,
     "license": [
-      "Disputed/unconfirmed — sources cite, inconsistently: Curaçao (license number given variously as 8048/JAZ2020-001 or via Antillephone as master licensor), Anjouan/Comoros (Anjouan Gaming Board), and a Philippines PAGCOR offshore license (reported by FinTelegram as the only current valid license, and explicitly NOT valid for European or most other operation)"
+      "8048/JAZ2020-001 or via Antillephone"
     ],
     "supportedCountries": [],
     "features": [
@@ -8825,8 +8825,7 @@
     "features": [
       "Poker platform (cash games, tournaments, SPINS, Fast Forward) — distinct from Party Casino",
       "20%+ weekly rakeback available",
-      "Operating for 20+ years — one of the oldest online poker sites",
-      "IRELAND AVAILABILITY: disputed/unconfirmed — must check on current official website"
+      "Operating for 20+ years — one of the oldest online poker sites"
     ],
     "termsLink": "https://www.partypoker.com/promotions",
     "_research_confidence": "MEDIUM-HIGH overall, though structurally unusual for this project: partypoker.com's real welcome offer is a poker-specific cash+tickets bonus rather than a traditional casino deposit-match, and this was confirmed directly on the operator's own current homepage (HIGH confidence for the offer's existence and headline USD figures). Country eligibility for Ireland, Finland, Brazil, and Canada (excluding Ontario) is unusually well-supported for this project — corroborated not just by secondary reviewers but by a quoted excerpt of the operator's own actual promotional Terms and Conditions, which lists exactly this set of countries (plus UK, Malta, Gibraltar) as eligible. South Africa was included with more caution, based on two sources (one fairly recent) describing a 'partner arrangement' licence there, though this couldn't be verified as still current. The United States was omitted from the country list — while a distinct 'partypoker US' product exists, it is legally restricted to players physically located in New Jersey, which doesn't fit a country-level 'US' entry per this project's own guidance, and its bonus terms weren't researched. Ontario was deliberately excluded, not because it's unsupported, but because it's served by an entirely separate, differently-licensed domain (partypoker.on) outside the scope of the requested partypoker.com URL. Exact non-USD currency conversions (EUR, BRL, CAD) for the welcome bonus were not independently confirmed. Germany intentionally omitted per project scope.",

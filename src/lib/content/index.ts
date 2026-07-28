@@ -113,3 +113,6 @@ export type {
   HeaderNavIconKey,
   HeaderNavLink,
 } from "./headerNav";
+
+export { extractWebsitePageToc } from "./websitePageToc";
+export type { WebsitePageTocItem } from "./websitePageToc";

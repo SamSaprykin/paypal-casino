@@ -1,0 +1,113 @@
+---
+import type { WebsitePageTocItem } from "../../lib/content/websitePageToc";
+
+interface Props {
+  items: WebsitePageTocItem[];
+  label?: string;
+}
+
+const { items, label = "On this page" } = Astro.props as Props;
+---
+
+<aside
+  class="relative hidden min-[1400px]:block"
+  aria-label={label}
+  data-page-toc
+>
+  {/* Reserves the grid column; nav is fixed and pinned to this slot. */}
+  <div class="w-full" data-toc-anchor aria-hidden="true"></div>
+
+  <nav
+    data-toc-nav
+    class="fixed top-44 z-30 max-h-[calc(100vh-10rem)] overflow-y-auto rounded-xl border border-slate-200/90 bg-white/95 p-3.5 shadow-sm backdrop-blur-sm ring-1 ring-black/5"
+  >
+    <p
+      class="mb-2.5 text-[0.625rem] font-semibold uppercase tracking-wider text-slate-400"
+    >
+      {label}
+    </p>
+    <ul class="space-y-0.5 border-l border-slate-200">
+      {
+        items.map((item) => (
+          <li>
+            <a
+              href={`#${item.id}`}
+              data-toc-link={item.id}
+              class:list={[
+                "block border-l-2 border-transparent -ml-px py-1 text-xs leading-snug text-slate-500 transition-colors hover:text-primary-800 hover:border-primary-300 data-[active]:text-primary-800 data-[active]:border-primary-300",
+                item.level === 1
+                  ? "pl-3 font-semibold text-slate-700 data-[active]:text-primary-800"
+                  : "pl-4",
+              ]}
+            >
+              {item.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</aside>
+
+<script is:inline>
+  (function () {
+    const root = document.querySelector("[data-page-toc]");
+    if (!root || root.dataset.initialized === "1") return;
+    root.dataset.initialized = "1";
+
+    const anchor = root.querySelector("[data-toc-anchor]");
+    const nav = root.querySelector("[data-toc-nav]");
+    if (!anchor || !nav) return;
+
+    const syncPosition = () => {
+      const rect = anchor.getBoundingClientRect();
+      if (rect.width < 8) {
+        nav.style.visibility = "hidden";
+        return;
+      }
+      nav.style.visibility = "visible";
+      nav.style.left = `${rect.left}px`;
+      nav.style.width = `${rect.width}px`;
+    };
+
+    syncPosition();
+    window.addEventListener("resize", syncPosition);
+
+    const links = Array.from(root.querySelectorAll("[data-toc-link]"));
+    if (links.length === 0) return;
+
+    const headings = links
+      .map((el) => {
+        const id = el.getAttribute("data-toc-link");
+        const heading = id ? document.getElementById(id) : null;
+        return heading ? { id, el, heading } : null;
+      })
+      .filter(Boolean);
+
+    if (headings.length === 0) return;
+
+    const setActive = (id) => {
+      headings.forEach(({ id: itemId, el }) => {
+        if (itemId === id) el.setAttribute("data-active", "");
+        else el.removeAttribute("data-active");
+      });
+    };
+
+    // Offset matches sticky header + scroll-mt on headings (~top-44 / scroll-mt-28).
+    const OFFSET = 180;
+
+    const updateActiveFromScroll = () => {
+      let current = headings[0].id;
+      for (const item of headings) {
+        if (item.heading.getBoundingClientRect().top <= OFFSET) {
+          current = item.id;
+        }
+      }
+      setActive(current);
+    };
+
+    updateActiveFromScroll();
+    window.addEventListener("scroll", updateActiveFromScroll, { passive: true });
+    window.addEventListener("resize", updateActiveFromScroll);
+  })();
+</script>
