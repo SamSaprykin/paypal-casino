@@ -49,7 +49,7 @@ export function LastUpdated({
         </div>
         <div className="min-w-0 flex-1 text-emerald-950">
           {resolved ? (
-            <div className="flex flex-col flex-wrap gap-1 text-[10px] font-semibold leading-snug sm:flex-row sm:items-center sm:gap-x-2 sm:text-base">
+            <div className="flex flex-col flex-wrap gap-1 text-[10px] font-semibold leading-snug sm:flex-row sm:items-center sm:gap-x-2 sm:text-sm">
               {/* On mobile use text-xs, on sm+ use text-base */}
               <span className="break-words">
                 {lastVerified}:{" "}

@@ -106,3 +106,10 @@ export {
   portableTextToPlainText,
 } from "../cms/portableTextPlain";
 export { readContentBody, isComponentMdx } from "./mdx";
+
+export { resolveHeaderNav } from "./headerNav";
+export type {
+  HeaderCategory,
+  HeaderNavIconKey,
+  HeaderNavLink,
+} from "./headerNav";

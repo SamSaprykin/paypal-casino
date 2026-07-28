@@ -4,8 +4,12 @@ import rehypeRaw from "rehype-raw";
 import ReactMarkdown from "react-markdown";
 import {
   ArrowRight,
+  BarChart3,
+  CheckCircle2,
   Crown,
   Info,
+  Search,
+  Settings,
   ShieldCheck,
   UserPlus,
   CreditCard,
@@ -196,6 +200,14 @@ function hastId(properties) {
 const IconSwitch = ({ iconName }) => {
   const iconProps = "w-9 h-9 text-blue-600 flex-shrink-0";
   const key = typeof iconName === "string" ? iconName.trim() : "";
+  // Emoji / non-slug icons (e.g. 🔐) — render as-is, not as a failed Lucide lookup
+  if (key && !/^[a-zA-Z][a-zA-Z0-9_-]*$/.test(key)) {
+    return (
+      <span className="inline-flex h-9 w-9 items-center justify-center text-3xl leading-none" aria-hidden>
+        {key}
+      </span>
+    );
+  }
   const icons = {
     ShieldCheck: <ShieldCheck className={iconProps} />,
     Shield: <Shield className={iconProps} />,
@@ -218,6 +230,20 @@ const IconSwitch = ({ iconName }) => {
     User: <User className={iconProps} />,
     user: <User className={iconProps} />,
     gift: <Gift className={iconProps} />,
+    Search: <Search className={iconProps} />,
+    search: <Search className={iconProps} />,
+    Settings: <Settings className={iconProps} />,
+    settings: <Settings className={iconProps} />,
+    Chart: <BarChart3 className={iconProps} />,
+    chart: <BarChart3 className={iconProps} />,
+    BarChart: <BarChart3 className={iconProps} />,
+    BarChart3: <BarChart3 className={iconProps} />,
+    Check: <CheckCircle2 className={iconProps} />,
+    check: <CheckCircle2 className={iconProps} />,
+    CheckCircle: <CheckCircle2 className={iconProps} />,
+    CheckCircle2: <CheckCircle2 className={iconProps} />,
+    Payment: <CreditCard className={iconProps} />,
+    payment: <CreditCard className={iconProps} />,
     // kebab-case aliases used in some MDX
     "user-plus": <UserPlus className={iconProps} />,
     "shield-check": <ShieldCheck className={iconProps} />,
@@ -227,8 +253,7 @@ const IconSwitch = ({ iconName }) => {
   };
   return (
     icons[key] || (
-      <span className="inline-block w-9 h-9 bg-gray-200 rounded-full text-blue-600 flex items-center justify-center">
-        {" "}
+      <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gray-200 text-blue-600">
         {iconName}
       </span>
     )

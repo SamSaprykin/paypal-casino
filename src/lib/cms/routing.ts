@@ -54,9 +54,16 @@ export type NavLabelSet = {
   minimumDepositCasinos: string;
 };
 
+/** Mega-menu category trigger labels (not page titles). */
+export type NavCategoryLabelSet = {
+  casinoTypes: string;
+  payments: string;
+  offers: string;
+};
+
 export const NAV_LABELS: Record<
   WebsiteLocaleKey,
-  NavLabelSet & { short: NavLabelSet }
+  NavLabelSet & { short: NavLabelSet; categories: NavCategoryLabelSet }
 > = {
   ireland: {
     onlineCasino: "Online Casino",
@@ -76,6 +83,11 @@ export const NAV_LABELS: Record<
       fastPayoutCasinos: "Payouts",
       mobileCasinos: "Mobile",
       minimumDepositCasinos: "Min Dep",
+    },
+    categories: {
+      casinoTypes: "Casino Types",
+      payments: "Payments",
+      offers: "Offers",
     },
   },
   denmark: {
@@ -97,6 +109,11 @@ export const NAV_LABELS: Record<
       mobileCasinos: "Mobil",
       minimumDepositCasinos: "Min indskud",
     },
+    categories: {
+      casinoTypes: "Kasinotyper",
+      payments: "Betalinger",
+      offers: "Tilbud",
+    },
   },
   finland: {
     onlineCasino: "Nettikasino",
@@ -116,6 +133,11 @@ export const NAV_LABELS: Record<
       fastPayoutCasinos: "Kotiutukset",
       mobileCasinos: "Mobiili",
       minimumDepositCasinos: "Min talletus",
+    },
+    categories: {
+      casinoTypes: "Kasinotyypit",
+      payments: "Maksut",
+      offers: "Tarjoukset",
     },
   },
   germany: {
@@ -137,6 +159,11 @@ export const NAV_LABELS: Record<
       mobileCasinos: "Handy",
       minimumDepositCasinos: "Min Einzahlung",
     },
+    categories: {
+      casinoTypes: "Casino-Arten",
+      payments: "Zahlungen",
+      offers: "Angebote",
+    },
   },
   norway: {
     onlineCasino: "Nettkasino",
@@ -157,6 +184,11 @@ export const NAV_LABELS: Record<
       mobileCasinos: "Mobil",
       minimumDepositCasinos: "Min innskudd",
     },
+    categories: {
+      casinoTypes: "Kasinotyper",
+      payments: "Betalinger",
+      offers: "Tilbud",
+    },
   },
   sweden: {
     onlineCasino: "Onlinecasino",
@@ -176,6 +208,11 @@ export const NAV_LABELS: Record<
       fastPayoutCasinos: "Utbetalning",
       mobileCasinos: "Mobil",
       minimumDepositCasinos: "Min insättning",
+    },
+    categories: {
+      casinoTypes: "Kasinotyper",
+      payments: "Betalningar",
+      offers: "Erbjudanden",
     },
   },
 };

@@ -1,0 +1,38 @@
+---
+import NewIcon from "../Icons/newIcon.astro";
+import FastIcon from "../Icons/fastIcon.astro";
+import MobileIcon from "../Icons/mobileIcon.astro";
+import MinDepositIcon from "../Icons/minDepositIcon.astro";
+import PayPalIcon from "../Icons/payPalIcon.astro";
+import RevolutIcon from "../Icons/revolutIcon.astro";
+import BonusIcon from "../Icons/bonusIcon.astro";
+import type { HeaderNavIconKey } from "../../lib/content/headerNav";
+
+interface Props {
+  name: HeaderNavIconKey;
+  /** Slightly smaller badge for compact mobile rows */
+  compact?: boolean;
+}
+
+const { name, compact = false } = Astro.props as Props;
+
+const icons = {
+  new: NewIcon,
+  fast: FastIcon,
+  mobile: MobileIcon,
+  minDeposit: MinDepositIcon,
+  paypal: PayPalIcon,
+  revolut: RevolutIcon,
+  bonus: BonusIcon,
+} as const;
+
+const Icon = icons[name];
+
+---
+
+<span
+  class={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-100 text-primary-800`}
+  aria-hidden="true"
+>
+  <Icon class="h-4 w-4" />
+</span>
