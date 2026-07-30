@@ -4,7 +4,7 @@
   "_updatedAt": "2026-07-22T13:00:00Z",
   "casinoName": "Winshark",
   "slug": "winshark",
-  "rating": 4.4,
+  "rating": 4.8,
   "shortDescription": "Winshark is a dynamic, crypto-friendly casino launched around 2024. It features over 3,000 games, a high-roller friendly welcome bonus up to €2,500, and a unique \"Shark Shop\" for loyalty rewards.",
   "shortDescriptionIntl": {
     "germany": "Winshark ist ein dynamisches, kryptofreundliches Casino, das um 2024 gestartet ist. Es bietet über 3.000 Spiele, einen High-Roller-freundlichen Willkommensbonus bis zu 2.500 € und einen einzigartigen „Shark Shop“ für Treueprämien.",
@@ -41,10 +41,8 @@
   "userRecommendationsRecommendedNumber": 61,
   "userRecommendationsTotalNumber": 70,
   "availableInCountries": {
-    "denmark": "",
-    "finland": "",
-    "germany": "",
     "ireland": "",
+    "denmark": "",
     "norway": "",
     "sweden": ""
   },
@@ -82,69 +80,5 @@
       "bonusLogo": null
     }
   ],
-  "blocked": true,
-  "alternativesByCountry": {
-    "denmark": [
-      "ritzo",
-      "hugo-casino",
-      "rollingslots"
-    ],
-    "finland": [
-      "ritzo",
-      "hugo-casino",
-      "playojo"
-    ],
-    "germany": [
-      "ritzo",
-      "hugo-casino",
-      "glitchspin"
-    ],
-    "ireland": [
-      "ritzo",
-      "hugo-casino",
-      "vegasmobilecasino"
-    ],
-    "norway": [
-      "ritzo",
-      "hugo-casino",
-      "kukimuki"
-    ],
-    "sweden": [
-      "ritzo",
-      "hugo-casino",
-      "rx-casino"
-    ]
-  },
-  "alternativesPaypalByCountry": {
-    "denmark": [
-      "ritzo",
-      "hugo-casino",
-      "glitchspin"
-    ],
-    "finland": [
-      "ritzo",
-      "hugo-casino",
-      "playojo"
-    ],
-    "germany": [
-      "ritzo",
-      "hugo-casino",
-      "rollingslots"
-    ],
-    "ireland": [
-      "ritzo",
-      "hugo-casino",
-      "vegasmobilecasino"
-    ],
-    "norway": [
-      "ritzo",
-      "hugo-casino",
-      "cosmicslot"
-    ],
-    "sweden": [
-      "ritzo",
-      "hugo-casino",
-      "crownslots"
-    ]
-  }
+  "blocked": false
 }

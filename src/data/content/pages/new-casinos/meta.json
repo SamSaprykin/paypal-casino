@@ -26,15 +26,23 @@
         "ireland": [
           "fezbet",
           "party-poker",
+          "winshark",
           "playojo",
           "vegasmobilecasino",
           "wildtokyo",
           "hahaspin"
         ],
-        "germany": ["stake", "villento", "yukon-gold", "lollybet", "hahaspin"],
+        "germany": [
+          "stake",
+          "villento",
+          "yukon-gold",
+          "lollybet",
+          "hahaspin"
+        ],
         "denmark": [
           "spinbetter",
           "just-casino",
+          "winshark",
           "kukimuki",
           "lets-lucky",
           "luckydreams"
@@ -49,6 +57,7 @@
         "norway": [
           "vinylcasino",
           "need-for-spin-casino",
+          "winshark",
           "spinlander-casino",
           "lets-lucky",
           "kukimuki"
@@ -56,6 +65,7 @@
         "sweden": [
           "jubla-casino",
           "need-for-spin-casino",
+          "winshark",
           "spinlander-casino",
           "lets-lucky",
           "klirr-casino"
