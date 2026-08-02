@@ -13,6 +13,7 @@ export type HeaderNavIconKey =
   | "minDeposit"
   | "paypal"
   | "revolut"
+  | "crypto"
   | "bonus";
 
 export type HeaderNavLink = {
@@ -36,6 +37,7 @@ export async function resolveHeaderNav(
   const [
     paypalCasinoHref,
     revolutCasinosHref,
+    cryptoCasinosHref,
     newCasinosHref,
     bonusesHref,
     fastPayoutHref,
@@ -44,6 +46,7 @@ export async function resolveHeaderNav(
   ] = await Promise.all([
     getWebsitePageHrefByName("Paypal Casino", locale),
     getWebsitePageHrefByName("Revolut Casinos", locale),
+    getWebsitePageHrefByName("Crypto Casinos", locale),
     getWebsitePageHrefByName("New Casinos", locale),
     getWebsitePageHrefByName("Bonuses", locale),
     getWebsitePageHrefByName("Fast Payout Casinos", locale),
@@ -97,6 +100,12 @@ export async function resolveHeaderNav(
           labels.revolutCasinos,
           labels.short.revolutCasinos,
           "revolut",
+        ),
+        link(
+          cryptoCasinosHref,
+          labels.cryptoCasinos,
+          labels.short.cryptoCasinos,
+          "crypto",
         ),
       ].filter((item): item is HeaderNavLink => item != null),
     },

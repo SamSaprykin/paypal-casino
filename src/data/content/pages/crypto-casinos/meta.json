@@ -1,0 +1,104 @@
+{
+  "_id": "c7a1f0e2-9b4d-4e8a-a1c3-5d6e7f8091a2",
+  "_createdAt": "2026-08-02T08:00:00Z",
+  "_updatedAt": "2026-08-02T08:00:00Z",
+  "name": "Crypto Casinos",
+  "authors": {
+    "addedBy": "seamus-oconnor",
+    "reviewedBy": "stoyan-makoski"
+  },
+  "components": [
+    {
+      "kind": "contentComponent",
+      "id": "cc-intro",
+      "name": "Crypto Casinos Intro"
+    },
+    {
+      "kind": "casinoList",
+      "id": "cc-list",
+      "name": "Crypto Casinos",
+      "casinoListsByCountry": {
+        "ireland": [
+          "crashino",
+          "stake",
+          "bitstarz",
+          "winshark",
+          "bizzocasino",
+          "lucky-start",
+          "just-casino",
+          "20bet"
+        ],
+        "finland": [
+          "crashino",
+          "bitstarz",
+          "just-casino",
+          "lucky-start",
+          "20bet",
+          "fezbet",
+          "lukki",
+          "club-house"
+        ],
+        "germany": [
+          "crashino",
+          "bitstarz",
+          "stake",
+          "winshark",
+          "20bet",
+          "fezbet",
+          "bizzocasino",
+          "coolzino"
+        ],
+        "sweden": [
+          "crashino",
+          "bitstarz",
+          "stake",
+          "winshark",
+          "20bet",
+          "lucky-ones",
+          "cosmicslot",
+          "spinbetter"
+        ],
+        "denmark": [
+          "crashino",
+          "bitstarz",
+          "stake",
+          "winshark",
+          "20bet",
+          "fezbet",
+          "coolzino",
+          "cosmicslot"
+        ]
+      }
+    },
+    {
+      "kind": "contentComponent",
+      "id": "cc-guide",
+      "name": "Crypto Casinos Guide"
+    },
+    {
+      "kind": "whatPeopleSay",
+      "id": "cc-voices",
+      "name": "What People Say"
+    },
+    {
+      "kind": "howTo",
+      "id": "cc-howto",
+      "name": "How to Deposit with Crypto"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "cc-depth",
+      "name": "Crypto Casinos Depth"
+    },
+    {
+      "kind": "faqComponent",
+      "id": "cc-faq",
+      "name": "Crypto Casinos FAQ"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "cc-verdict",
+      "name": "Crypto Casinos Verdict"
+    }
+  ]
+}

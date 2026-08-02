@@ -115,5 +115,17 @@
       "norway": "/no/revolut-kasinoer/",
       "sweden": "/se/revolut-casinon/"
     }
+  },
+  {
+    "id": "c7a1f0e2-9b4d-4e8a-a1c3-5d6e7f8091a2",
+    "name": "Crypto Casinos",
+    "dir": "pages/crypto-casinos",
+    "slugs": {
+      "ireland": "/crypto-casinos/",
+      "finland": "/fi/krypto-kasinot/",
+      "germany": "/de/krypto-casinos/",
+      "sweden": "/se/krypto-casinon/",
+      "denmark": "/dk/krypto-casinoer/"
+    }
   }
 ]

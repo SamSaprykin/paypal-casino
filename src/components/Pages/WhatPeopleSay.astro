@@ -1,0 +1,154 @@
+---
+import type { WhatPeopleSaySection } from "../../lib/content";
+import { ExternalLink } from "@lucide/astro";
+
+interface Props {
+  section: WhatPeopleSaySection;
+}
+
+const { section } = Astro.props;
+
+const title = section.title?.trim() || "What real players are saying";
+const subtitle =
+  section.subtitle?.trim() ||
+  "Unfiltered opinions from the licensed vs crypto casino debate.";
+const eyebrow = section.eyebrow?.trim() || "Forum thread";
+const forumName = section.forumName?.trim() || "TheBitcoinPub";
+const forumLabel = section.forumLabel?.trim() || "Read the full thread";
+const forumUrl = section.forumUrl?.trim() || "";
+const quotes = Array.isArray(section.quotes) ? section.quotes : [];
+
+const stanceLabels = {
+  "pro-crypto": "Pro crypto",
+  "pro-licensed": "Pro licensed",
+  balanced: "Balanced",
+} as const;
+
+const stanceBadge = {
+  "pro-crypto": "bg-emerald-100 text-emerald-800 ring-emerald-200",
+  "pro-licensed": "bg-sky-100 text-sky-800 ring-sky-200",
+  balanced: "bg-amber-100 text-amber-900 ring-amber-200",
+} as const;
+
+if (quotes.length === 0) return null;
+---
+
+<section
+  class="my-8 overflow-hidden rounded-xl border border-slate-200 bg-slate-100/80 shadow-sm mx-auto" style="max-width:calc(100% - 4rem);"
+  aria-labelledby={`forum-${section.id}`}
+>
+  <header class="border-b border-slate-200 bg-white px-4 py-5 sm:px-6">
+    <div class="flex flex-wrap items-start justify-between gap-4">
+      <div class="min-w-0 flex-1">
+        <p class="text-xs font-semibold uppercase tracking-wider text-orange-600">
+          {eyebrow}
+          {
+            forumName ? (
+              <span class="font-normal normal-case tracking-normal text-slate-500">
+                {" "}
+                · {forumName}
+              </span>
+            ) : null
+          }
+        </p>
+        <h2
+          id={`forum-${section.id}`}
+          class="mt-1 font-sans text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl"
+        >
+          {title}
+        </h2>
+        {
+          subtitle ? (
+            <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              {subtitle}
+            </p>
+          ) : null
+        }
+      </div>
+      {
+        forumUrl ? (
+          <a
+            href={forumUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="inline-flex shrink-0 items-center gap-2 rounded-lg bg-orange-500 px-3.5 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-orange-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-500"
+          >
+            {forumLabel}
+            <ExternalLink class="h-4 w-4" aria-hidden="true" />
+          </a>
+        ) : null
+      }
+    </div>
+  </header>
+
+  <ol class="divide-y divide-slate-200 bg-white">
+    {
+      quotes.map((item, index) => {
+        const initial = item.user.charAt(0).toUpperCase();
+        const metaBits = [
+          item.role,
+          item.location,
+          item.postedAt,
+        ].filter(Boolean);
+        const stance = item.stance;
+        return (
+          <li class="flex gap-3 px-4 py-5 sm:gap-4 sm:px-6">
+            <div
+              class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-800 text-sm font-bold text-white sm:h-11 sm:w-11"
+              aria-hidden="true"
+            >
+              {initial}
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                <span class="text-sm font-semibold text-slate-900">
+                  @{item.user}
+                </span>
+                <span class="text-xs text-slate-400">#{index + 1}</span>
+                {stance ? (
+                  <span
+                    class={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset ${stanceBadge[stance]}`}
+                  >
+                    {stanceLabels[stance]}
+                  </span>
+                ) : null}
+                {item.topic ? (
+                  <span class="text-[11px] font-medium uppercase tracking-wide text-slate-400">
+                    {item.topic}
+                  </span>
+                ) : null}
+              </div>
+              {metaBits.length ? (
+                <p class="mt-0.5 text-xs text-slate-500">
+                  {metaBits.join(" · ")}
+                </p>
+              ) : null}
+              <blockquote class="mt-3 rounded-lg border border-slate-100 bg-slate-50 px-3.5 py-3 text-sm leading-relaxed text-slate-700 sm:text-[15px]">
+                {item.quote}
+              </blockquote>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+
+  {
+    forumUrl ? (
+      <footer class="border-t border-slate-200 bg-slate-50 px-4 py-4 text-center sm:px-6">
+        <p class="text-sm text-slate-600">
+          Excerpted from a public forum discussion.{" "}
+          <a
+            href={forumUrl}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            class="font-semibold text-orange-700 underline decoration-orange-300 underline-offset-2 hover:text-orange-800"
+          >
+            View the original thread on {forumName}
+          </a>
+          .
+        </p>
+      </footer>
+    ) : null
+  }
+</section>

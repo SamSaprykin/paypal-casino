@@ -6,6 +6,9 @@
   "slug": "lukki",
   "rating": 4.6,
   "shortDescription": "3,000-14,000+ games (count varies; likely library growth since 2023 launch). Dedicated Irish domain (lukkicasino.ie) and Ireland-specific bonus page",
+  "shortDescriptionIntl": {
+    "finland": "3 000–14 000+ peliä (määrä vaihtelee; kirjasto kasvanut vuoden 2023 julkaisun jälkeen). Kansainvälinen kryptomyönteinen kasino."
+  },
   "referralUrl": "/goto/lukki.php",
   "payoutLimits": null,
   "payoutTimes": [
@@ -56,7 +59,8 @@
       "description": "100% up to €500 + 100 FS",
       "descriptionIntl": {
         "sweden": "100 % upp till 500 kr + 100 gratissnurr",
-        "denmark": "100 % op til 500 kr + 100 gratis spins"
+        "denmark": "100 % op til 500 kr + 100 gratis spins",
+        "finland": "100 % jopa 500 € + 100 ilmaiskierrosta"
       },
       "referralUrl": "/goto/lukki.php",
       "bonusBackgroundColor": null,

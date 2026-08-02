@@ -44,6 +44,8 @@ export type {
   PageSection,
   PageSeo,
   WebsitePage,
+  WhatPeopleSayQuote,
+  WhatPeopleSaySection,
 } from "../cms/sections";
 
 export { hasCasinoReviewBody } from "../cms/intlMarkdown";

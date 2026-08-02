@@ -1,0 +1,105 @@
+---
+/**
+ * Locale-gated market notice for Denmark pages (tax, crypto SKM, ROFUS, AML).
+ * Mirrors Disclosure: one hardcoded block, all denmark website pages.
+ */
+import { DENMARK_MARKET_NOTICE_COPY } from "../../lib/i18n/copies/denmark-market-notice";
+
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props as Props;
+const copy = DENMARK_MARKET_NOTICE_COPY;
+---
+
+<aside
+  class:list={[
+    "denmark-market-notice my-6 rounded-lg border-l-4 border-blue-400 bg-blue-50/60 px-3 py-4 shadow-sm sm:px-5 sm:py-5",
+    "max-w-[calc(100%_-_4rem)] mx-auto",
+    className,
+  ]}
+  aria-label={copy.title}
+  data-denmark-market-notice="true"
+>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+    <div
+      class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600"
+      aria-hidden="true"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M12 16v-4"></path>
+        <path d="M12 8h.01"></path>
+      </svg>
+    </div>
+
+    <div class="min-w-0 flex-1 space-y-2 text-[0.96rem] leading-relaxed text-blue-950">
+      <h2 class="text-sm font-semibold text-blue-950">{copy.title}</h2>
+
+      <div>
+        <h3 class="text-xs font-semibold text-blue-900">{copy.taxTitle}</h3>
+        <p class="mt-1">{copy.taxBody}</p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold text-blue-900">{copy.cryptoTaxTitle}</h3>
+        <p class="mt-1">{copy.cryptoTaxBody}</p>
+        <p class="mt-2">
+          <a
+            href={copy.cryptoTaxSource.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-800 underline decoration-blue-300 underline-offset-2 hover:text-blue-950"
+          >
+            {copy.cryptoTaxSource.label}
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold text-blue-900">{copy.rofusTitle}</h3>
+        <p class="mt-1">{copy.rofusBody}</p>
+        <p class="mt-2">
+          <a
+            href={copy.rofusLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-800 underline decoration-blue-300 underline-offset-2 hover:text-blue-950"
+          >
+            {copy.rofusLink.label}
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xs font-semibold text-blue-900">{copy.amlTitle}</h3>
+        <p class="mt-1">{copy.amlBody}</p>
+        <p class="mt-2">
+          <a
+            href={copy.amlLink.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium text-blue-800 underline decoration-blue-300 underline-offset-2 hover:text-blue-950"
+          >
+            {copy.amlLink.label}
+          </a>
+        </p>
+      </div>
+
+      <p class="border-t border-blue-200/80 pt-2 text-xs text-blue-800/90">
+        {copy.disclaimer}
+      </p>
+    </div>
+  </div>
+</aside>

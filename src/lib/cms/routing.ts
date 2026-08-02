@@ -47,6 +47,7 @@ export type NavLabelSet = {
   onlineCasino: string;
   paypalCasino: string;
   revolutCasinos: string;
+  cryptoCasinos: string;
   newCasinos: string;
   bonuses: string;
   fastPayoutCasinos: string;
@@ -69,6 +70,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     revolutCasinos: "Revolut Casinos",
+    cryptoCasinos: "Crypto Casinos",
     newCasinos: "New Casinos",
     bonuses: "Bonuses",
     fastPayoutCasinos: "Fast Payout",
@@ -78,6 +80,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Home",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Crypto",
       newCasinos: "New",
       bonuses: "Bonuses",
       fastPayoutCasinos: "Payouts",
@@ -94,6 +97,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     revolutCasinos: "Revolut Casinoer",
+    cryptoCasinos: "Krypto Casinoer",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonusser",
     fastPayoutCasinos: "Hurtig udbetaling",
@@ -103,6 +107,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Forside",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Krypto",
       newCasinos: "Nye",
       bonuses: "Bonus",
       fastPayoutCasinos: "Udbetaling",
@@ -119,6 +124,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Nettikasino",
     paypalCasino: "Paypal-kasino",
     revolutCasinos: "Revolut Kasinot",
+    cryptoCasinos: "Krypto Kasinot",
     newCasinos: "Uudet kasinot",
     bonuses: "Bonukset",
     fastPayoutCasinos: "Nopeat kotiutukset",
@@ -128,6 +134,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Etusivu",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Krypto",
       newCasinos: "Uudet",
       bonuses: "Bonukset",
       fastPayoutCasinos: "Kotiutukset",
@@ -144,6 +151,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Online Casino",
     paypalCasino: "Paypal Casino",
     revolutCasinos: "Revolut Casinos",
+    cryptoCasinos: "Krypto Casinos",
     newCasinos: "Neue Casinos",
     bonuses: "Bonus",
     fastPayoutCasinos: "Schnelle Auszahlung",
@@ -153,6 +161,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Start",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Krypto",
       newCasinos: "Neue",
       bonuses: "Bonus",
       fastPayoutCasinos: "Auszahlung",
@@ -169,6 +178,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Nettkasino",
     paypalCasino: "Paypal Casino",
     revolutCasinos: "Revolut Casinoer",
+    cryptoCasinos: "Krypto Casinoer",
     newCasinos: "Nye kasinoer",
     bonuses: "Bonuser",
     fastPayoutCasinos: "Rask utbetaling",
@@ -178,6 +188,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Hjem",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Krypto",
       newCasinos: "Nye",
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetaling",
@@ -194,6 +205,7 @@ export const NAV_LABELS: Record<
     onlineCasino: "Onlinecasino",
     paypalCasino: "Paypal Casino",
     revolutCasinos: "Revolut Casinon",
+    cryptoCasinos: "Krypto Casinon",
     newCasinos: "Nya casinon",
     bonuses: "Bonusar",
     fastPayoutCasinos: "Snabb utbetalning",
@@ -203,6 +215,7 @@ export const NAV_LABELS: Record<
       onlineCasino: "Start",
       paypalCasino: "PayPal",
       revolutCasinos: "Revolut",
+      cryptoCasinos: "Krypto",
       newCasinos: "Nya",
       bonuses: "Bonus",
       fastPayoutCasinos: "Utbetalning",

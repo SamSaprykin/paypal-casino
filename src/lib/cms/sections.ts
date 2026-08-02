@@ -18,10 +18,33 @@ export type PageSection =
   | BonusesListSection
   | ImageSection
   | MethodAvailabilitySection
-  | BonusCalculatorSection;
+  | BonusCalculatorSection
+  | WhatPeopleSaySection;
 
 export interface BaseSection {
   id: string;
+}
+
+export interface WhatPeopleSayQuote {
+  user: string;
+  role?: string;
+  location?: string;
+  quote: string;
+  stance?: "pro-crypto" | "pro-licensed" | "balanced";
+  topic?: string;
+  /** Optional post timestamp shown in the forum UI. */
+  postedAt?: string;
+}
+
+export interface WhatPeopleSaySection extends BaseSection {
+  kind: "whatPeopleSay";
+  title?: string;
+  subtitle?: string;
+  eyebrow?: string;
+  forumUrl?: string;
+  forumLabel?: string;
+  forumName?: string;
+  quotes: WhatPeopleSayQuote[];
 }
 
 export type MethodAvailabilityCell = "yes" | "no" | "partial" | "unknown";
@@ -378,6 +401,45 @@ function adaptSection(
         currency: asString(b.currency),
         localeTag: asString(b.localeTag),
       };
+
+    case "WhatPeopleSayIntl": {
+      const quotes: WhatPeopleSayQuote[] = pickArray<
+        Record<string, unknown>
+      >(b.quotes).flatMap((q) => {
+        const user = asString(q.user);
+        const quote = asString(q.quote);
+        if (!user || !quote) return [];
+        const stanceRaw = asString(q.stance);
+        const stance: WhatPeopleSayQuote["stance"] =
+          stanceRaw === "pro-crypto" ||
+          stanceRaw === "pro-licensed" ||
+          stanceRaw === "balanced"
+            ? stanceRaw
+            : undefined;
+        return [
+          {
+            user,
+            quote,
+            role: asString(q.role),
+            location: asString(q.location),
+            stance,
+            topic: asString(q.topic),
+            postedAt: asString(q.postedAt),
+          },
+        ];
+      });
+      return {
+        kind: "whatPeopleSay",
+        id,
+        title: asString(b.title),
+        subtitle: asString(b.subtitle),
+        eyebrow: asString(b.eyebrow),
+        forumUrl: asString(b.forumUrl),
+        forumLabel: asString(b.forumLabel),
+        forumName: asString(b.forumName),
+        quotes,
+      };
+    }
 
     case "SeoComponentIntl":
       // SEO blocks live on the page, not in the body — skip if they show up here.

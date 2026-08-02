@@ -6,6 +6,9 @@
   "slug": "20bet",
   "rating": 4.6,
   "shortDescription": "30-level VIP/loyalty program. Combined sportsbook + casino platform",
+  "shortDescriptionIntl": {
+    "finland": "30-tasoinen VIP-/uskollisuusohjelma. Yhdistetty vedonlyönti- ja kasinoalusta."
+  },
   "referralUrl": "/goto/20bet.php",
   "payoutLimits": null,
   "payoutTimes": [],
@@ -54,7 +57,8 @@
       "descriptionIntl": {
         "ie": "100% up to €120",
         "sweden": "100 % upp till 120 kr",
-        "denmark": "100 % op til 120 kr"
+        "denmark": "100 % op til 120 kr",
+        "finland": "100 % jopa 120 €"
       },
       "referralUrl": "/goto/20bet.php",
       "bonusBackgroundColor": null,

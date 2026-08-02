@@ -30,7 +30,8 @@ const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const ui = HOW_TO_UI_COPY[localeIdForWebsiteLocale(locale)];
 const showProgress = section.showProgress !== false;
 const allowCopy = section.allowCopy !== false;
-const total = section.items.length;
+const total = section.items?.length ?? 0;
+if (total === 0) return null;
 
 const IconsMap: Record<string, any> = {
   Shield,

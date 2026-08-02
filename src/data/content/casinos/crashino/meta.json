@@ -6,6 +6,9 @@
   "slug": "crashino",
   "rating": 4.6,
   "shortDescription": "Crypto-focused (Bitcoin, Ethereum, Litecoin, and others); limited fiat deposit/withdrawal options. Launched 2021-2022 depending on source",
+  "shortDescriptionIntl": {
+    "finland": "Kryptopainotteinen kasino (Bitcoin, Ethereum, Litecoin ym.); rajalliset fiat-talletus- ja kotiutusvaihtoehdot. Julkaistu 2021–2022 lähteestä riippuen."
+  },
   "referralUrl": "/goto/crashino.php",
   "payoutLimits": null,
   "payoutTimes": [],
@@ -55,7 +58,9 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to 1,000 USDT",
-      "descriptionIntl": {},
+      "descriptionIntl": {
+        "finland": "100 % jopa 1 000 USDT"
+      },
       "referralUrl": "/goto/crashino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

@@ -49,6 +49,11 @@ export {
   type DisclosureType,
 } from "./copies/disclosure";
 export {
+  DENMARK_MARKET_NOTICE_COPY,
+  type DenmarkMarketNoticeCopy,
+  type DenmarkMarketNoticeLink,
+} from "./copies/denmark-market-notice";
+export {
   HOW_TO_UI_COPY,
   formatHowToStepOf,
   type HowToUiCopy,

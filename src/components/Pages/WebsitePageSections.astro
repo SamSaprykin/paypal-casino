@@ -10,16 +10,25 @@ import BonusesListSection from "./sections/BonusesListSection.astro";
 import ImageSection from "./sections/ImageSection.astro";
 import MethodAvailabilitySection from "./sections/MethodAvailabilitySection.astro";
 import BonusCalculatorSection from "./sections/BonusCalculatorSection.astro";
+import WhatPeopleSay from "./WhatPeopleSay.astro";
+import DenmarkMarketNotice from "./DenmarkMarketNotice.astro";
 import Disclosure from "./Disclosure.astro";
 
 interface Props {
   sections: PageSection[];
   locale?: WebsiteLocaleKey;
+  /** When false, skip the Denmark tax/ROFUS/AML notice. Default true. */
+  showDenmarkMarketNotice?: boolean;
   /** When false, skip the hardcoded compliance banner (rare). Default true. */
   showDisclosure?: boolean;
 }
 
-const { sections, locale, showDisclosure = true } = Astro.props;
+const {
+  sections,
+  locale,
+  showDenmarkMarketNotice = true,
+  showDisclosure = true,
+} = Astro.props;
 ---
 
 <div class="website-page-sections flex flex-col bg-transparent py-4">
@@ -46,10 +55,19 @@ const { sections, locale, showDisclosure = true } = Astro.props;
           return (
             <BonusCalculatorSection section={section} locale={locale} />
           );
+        case "whatPeopleSay":
+          return section.quotes?.length ? (
+            <WhatPeopleSay section={section} />
+          ) : null;
         default:
           return null;
       }
     })
+  }
+  {
+    showDenmarkMarketNotice && locale === "denmark" ? (
+      <DenmarkMarketNotice />
+    ) : null
   }
   {
     showDisclosure ? (

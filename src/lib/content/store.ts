@@ -638,6 +638,19 @@ function mapPageSection(
         localeTag: section.localeTag,
       });
 
+    case "whatPeopleSay":
+      return Promise.resolve({
+        __typename: "WhatPeopleSayIntl",
+        _id: id,
+        title: section.title,
+        subtitle: section.subtitle,
+        eyebrow: section.eyebrow,
+        forumUrl: section.forumUrl,
+        forumLabel: section.forumLabel,
+        forumName: section.forumName,
+        quotes: Array.isArray(section.quotes) ? section.quotes : [],
+      });
+
     default:
       return Promise.resolve(null);
   }

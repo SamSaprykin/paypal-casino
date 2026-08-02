@@ -131,7 +131,7 @@ export async function getWebsitePageHrefByName(
   const entry = entries.find((e) => e.name === name);
   if (!entry?.slugs) return null;
 
-  const raw = entry.slugs[locale] ?? entry.slugs[ROOT_WEBSITE_LOCALE];
+  const raw = entry.slugs[locale];
   if (raw == null || String(raw).trim() === "") return null;
 
   return localizedHref(locale, normalizeCmsSlug(String(raw)));

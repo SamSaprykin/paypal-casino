@@ -6,6 +6,9 @@
   "slug": "club-house",
   "rating": 4.7,
   "shortDescription": "400+ live casino titles from Ezugi and Evolution Gaming. Crypto-friendly with dedicated crypto welcome package",
+  "shortDescriptionIntl": {
+    "finland": "Yli 400 livekasinopeliä Ezugilta ja Evolution Gamingilta. Kryptomyönteinen, oma kryptotervetuliaispaketti."
+  },
   "referralUrl": "/goto/club-house.php",
   "payoutLimits": null,
   "payoutTimes": [
@@ -61,7 +64,8 @@
       "description": "100% up to €2,000 + 100 Free Spins",
       "descriptionIntl": {
         "sweden": "100 % upp till 2 000 kr + 100 gratissnurr",
-        "denmark": "100 % op til 2.000 kr + 100 gratis spins"
+        "denmark": "100 % op til 2.000 kr + 100 gratis spins",
+        "finland": "100 % jopa 2 000 € + 100 ilmaiskierrosta"
       },
       "referralUrl": "/goto/club-house.php",
       "bonusBackgroundColor": null,
