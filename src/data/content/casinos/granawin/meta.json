@@ -1,7 +1,7 @@
 {
   "_id": "cLkVtvYf0ccLNPtm2THCaQ",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Granawin",
   "slug": "granawin",
   "rating": 4.6,
@@ -55,10 +55,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to €120",
+      "description": "Welcome Package up to €220 + 170 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 120 kr",
-        "denmark": "100 % op til 120 kr"
+        "ireland": "Welcome Package up to €220 + 170 Free Spins"
       },
       "referralUrl": "/goto/granawin.php",
       "bonusBackgroundColor": null,

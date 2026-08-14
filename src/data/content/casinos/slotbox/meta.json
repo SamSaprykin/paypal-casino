@@ -1,7 +1,7 @@
 {
   "_id": "GFP1SwMIoaDIp6PbKJigmi",
   "_createdAt": "2026-05-13T19:38:31Z",
-  "_updatedAt": "2026-05-15T14:10:03Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Slotbox",
   "slug": "slotbox",
   "rating": 4.7,
@@ -15,10 +15,26 @@
   },
   "referralUrl": "/goto/slotbox.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 304,
   "userRecommendationsTotalNumber": 379,
@@ -39,6 +55,20 @@
       "altText": null
     }
   },
-  "bonuses": null,
+  "bonuses": [
+    {
+      "_id": "slotbox-welcome",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "Up to €1,000 + 100 Free Spins",
+      "descriptionIntl": {
+        "ireland": "Up to €1,000 + 100 Free Spins"
+      },
+      "referralUrl": "/goto/slotbox.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
   "blocked": false
 }

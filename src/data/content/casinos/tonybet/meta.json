@@ -1,7 +1,7 @@
 {
   "_id": "15QuuUwZ2G1FMfKdjzNCy7",
   "_createdAt": "2025-08-27T07:58:46Z",
-  "_updatedAt": "2026-05-15T14:13:08Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Tonybet",
   "slug": "tonybet",
   "rating": 4.7,
@@ -68,13 +68,9 @@
         "norway": "INGEN KODE NØDVENDIG",
         "sweden": "INGEN KOD BEHÖVS"
       },
-      "description": "Up to €750 + 100 Free Spins",
+      "description": "100% up to €750 + 120 Free Spins",
       "descriptionIntl": {
-        "germany": "Bis zu 750 € + 100 Freispiele",
-        "denmark": "Op til 750 kr + 100 gratis spins",
-        "finland": "Jopa 750 € + 100 ilmaiskierrosta",
-        "norway": "Opptil 750 € + 100 gratisspinn",
-        "sweden": "Upp till 750 kr + 100 gratissnurr"
+        "ireland": "100% up to €750 + 120 Free Spins"
       },
       "referralUrl": "/goto/tonybet.php",
       "bonusBackgroundColor": "#4B0082",

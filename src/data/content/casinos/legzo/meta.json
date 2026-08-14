@@ -1,7 +1,7 @@
 {
   "_id": "6yjWdaUj3IVXQdtDG6IKYQ",
   "_createdAt": "2025-10-13T15:24:59Z",
-  "_updatedAt": "2026-05-15T14:01:58Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Legzo",
   "slug": "legzo",
   "rating": 4.7,
@@ -15,8 +15,16 @@
   },
   "referralUrl": "/goto/legzo.php",
   "payoutLimits": "€80,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
-  "software": ["NetEnt", "Microgaming", "PlayNGo", "Betsoft", "PlayNGo"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "PlayNGo",
+    "Betsoft",
+    "PlayNGo"
+  ],
   "depositMethods": [
     "PayPal",
     "Neteller",
@@ -65,13 +73,9 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "Up to 100% + Free Spins",
+      "description": "100% up to €600",
       "descriptionIntl": {
-        "germany": "Bis zu 100 % + Freispiele",
-        "denmark": "Op til 100 % + gratis spins",
-        "finland": "Jopa 100 % + ilmaiskierroksia",
-        "norway": "Opptil 100 % + gratisspinn",
-        "sweden": "Upp till 100 % + gratissnurr"
+        "ireland": "100% up to €600"
       },
       "referralUrl": "/goto/legzo.php",
       "bonusBackgroundColor": null,

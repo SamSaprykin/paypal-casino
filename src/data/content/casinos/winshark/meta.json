@@ -1,7 +1,7 @@
 {
   "_id": "3S6cSLHZQYs3RpzeYYPONC",
   "_createdAt": "2025-08-27T07:58:29Z",
-  "_updatedAt": "2026-07-22T13:00:00Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Winshark",
   "slug": "winshark",
   "rating": 4.8,
@@ -71,7 +71,7 @@
       "descriptionIntl": {
         "germany": "Bis zu 2.500 € + 300 Freispiele",
         "denmark": "Op til 2.500 kr + 300 gratis spins",
-        "finland": "Jopa 2 500 € + 300 ilmaiskierrosta",
+        "finland": "Tervetuliaispaketti — jopa 650 $ + 250 ilmaiskierrosta (vakiopolku)",
         "norway": "Opptil 2 500 € + 300 gratisspinn",
         "sweden": "Upp till 2 500 kr + 300 gratissnurr"
       },

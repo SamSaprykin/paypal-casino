@@ -1,7 +1,7 @@
 {
   "_id": "lX4qhhKal4ZbUdn6erSugg",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "PlayKasino",
   "slug": "playkasino",
   "rating": 4.2,
@@ -37,7 +37,7 @@
       "description": "100% up to €100 + 50 Free Spins",
       "descriptionIntl": {
         "sweden": "100 % upp till 100 kr + 50 gratissnurr",
-        "denmark": "100 % op til 100 kr + 50 gratis spins"
+        "denmark": "Eksklusivt velkomsttilbud: 100% op til 500 kr"
       },
       "referralUrl": "/goto/playkasino.php",
       "bonusBackgroundColor": null,

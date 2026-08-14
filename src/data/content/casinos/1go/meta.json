@@ -1,7 +1,7 @@
 {
   "_id": "2sbsiKnfxd5QuIZAQCq2Nc",
   "_createdAt": "2025-10-14T15:12:22Z",
-  "_updatedAt": "2026-05-15T13:40:11Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "1GO",
   "slug": "1go",
   "rating": 4.5,
@@ -65,13 +65,9 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "100% match bonus up to €500 on first deposit",
+      "description": "150% up to €100",
       "descriptionIntl": {
-        "germany": "100 % Einzahlungsbonus bis zu 500 € auf die erste Einzahlung",
-        "denmark": "100 % matchbonus op til 500 kr på første indbetaling",
-        "finland": "100 %:n talletusbonus jopa 500 € ensimmäisestä talletuksesta",
-        "norway": "100 % innskuddsbonus opptil 500 € på første innskudd",
-        "sweden": "100 % insättningsbonus upp till 500 kr på första insättningen"
+        "ireland": "150% up to €100"
       },
       "referralUrl": "/goto/1go.php",
       "bonusBackgroundColor": null,

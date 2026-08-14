@@ -1,7 +1,7 @@
 {
   "_id": "ZgBP78l239jgT2iDHO_Fug",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Playojo",
   "slug": "playojo",
   "rating": 4.8,
@@ -55,7 +55,10 @@
       "code": null,
       "codeIntl": null,
       "description": "Up to 50 Free Spins (Book of Dead)",
-      "descriptionIntl": {},
+      "descriptionIntl": {
+        "germany": "50 Freispiele ohne Umsatzbedingungen",
+        "finland": "50 ilmaiskierrosta — Ei kierrätysvaatimusta"
+      },
       "referralUrl": "/goto/playojo.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

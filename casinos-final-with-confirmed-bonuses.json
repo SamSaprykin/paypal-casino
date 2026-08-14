@@ -13177,11 +13177,14 @@
       "5% weekly cashback on net losses, no opt-in required",
       "Brand ambassador: former Irish footballer Tony Cascarino"
     ],
+    "referralUrls": {
+      "refPath": "/tonybet.php"
+    },
     "termsLink": null,
     "_research_confidence": "MEDIUM overall. Operator identity and the multi-jurisdiction licensing structure (including genuine, confirmed Ontario licensing) are solidly established. The core 2-deposit IE welcome package is reasonably corroborated between two independent sources, though the sheer number of unofficial-looking mirror domains quoting conflicting figures (some dramatically different) means this should be reconfirmed against the live site before publishing. CAD-specific figures for the general Canadian market (outside Ontario) were not found from a reliable source. As with other genuinely Ontario-licensed operators in this batch, CA-ON bonus terms are deliberately left unpublished pending confirmation of what's permissible under AGCO's third-party advertising restrictions. Finland shows language support but no dedicated bonus page; South Africa and Brazil were not addressed in any source found and are omitted.",
     "operator": "OÜ Tonybet (Estonia) for general/international markets; Ligtip Limited (Malta) specifically for the Ontario-regulated product",
     "_brand_disambiguation_notes": "TonyBet is a genuine, long-established operator, but a significant number of non-official domains (tonybetcasino-ireland.com, tonybet-ie.net, tonybet.us.org, tonybetting.ie, tonybetcad.ca, bettony.ca, tony-bet.ca) publish their own versions of bonus content, several with wildly different figures — one even falsely claims an MGA licence, which contradicts the well-corroborated Estonia/Kahnawake/AGCO licensing structure found everywhere else. I've prioritized the two most established, consistent sources over these. Separately (not a conflict): the operator is structured with OÜ Tonybet (Estonia) handling general/international markets and Ligtip Limited (Malta) specifically holding the Ontario AGCO registration — a legitimate split seen elsewhere in this batch (Videoslots, PlayOJO), not a red flag. Note also that the requested domain (tonybet.com) serves markets outside Ontario; Ontario players use a separate tonybet.ca platform.",
-    "blocked": true
+    "blocked": false
   },
   {
     "name": "Vegas Mobile Casino",
@@ -14631,8 +14634,8 @@
     "slug": "winshark",
     "logo": "/casino-logos/winshark-logo.svg",
     "bgColor": "oklch(47% 0.157 37.304)",
-    "rating": 4.6,
-    "blocked": true,
+    "rating": 4.7,
+    "blocked": false,
     "bonuses": [
       {
         "bonusType": "welcome",
@@ -14804,6 +14807,9 @@
         "Tervetulotarjous ilman koodia",
         "High Roller -ensitalletusbonus — 50 % jopa 2 000 €"
       ]
+    },
+    "referralUrls": {
+      "refPath": "/winshark.php"
     }
   },
   {

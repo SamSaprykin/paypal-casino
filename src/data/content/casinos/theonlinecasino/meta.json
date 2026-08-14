@@ -1,7 +1,7 @@
 {
   "_id": "bnIoDNDKaHsuYVCkzKaEmg",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "The Online Casino",
   "slug": "theonlinecasino",
   "rating": 4.7,
@@ -52,10 +52,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to €200 + 20 Free Spins",
+      "description": "100% up to €100 + 20 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 200 kr + 20 gratissnurr",
-        "denmark": "100 % op til 200 kr + 20 gratis spins"
+        "ireland": "100% up to €100 + 20 Free Spins"
       },
       "referralUrl": "/goto/theonlinecasino.php",
       "bonusBackgroundColor": null,

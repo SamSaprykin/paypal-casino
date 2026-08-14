@@ -47,6 +47,22 @@ import {
 } from "./Content/articleMarkdownBlocks.jsx";
 import { LastUpdated } from "./LastUpdated.jsx";
 import { resolveFreshness } from "../../lib/content/freshness";
+import { HOW_TO_UI_COPY, formatHowToStepOf } from "../../lib/i18n";
+
+/** Strip shared leading indent so MDX HTML bodies are not parsed as markdown code blocks. */
+function dedentMarkdown(text) {
+  if (typeof text !== "string" || !text.trim()) return text;
+  const normalized = text.replace(/\r\n/g, "\n").replace(/^\n+|\n+$/g, "");
+  const lines = normalized.split("\n");
+  const indents = lines
+    .filter((line) => line.trim().length > 0)
+    .map((line) => (line.match(/^[ \t]*/)?.[0].length ?? 0));
+  const minIndent = indents.length ? Math.min(...indents) : 0;
+  return lines
+    .map((line) => line.slice(minIndent))
+    .join("\n")
+    .trim();
+}
 
 const linkClassMd =
   "text-blue-700 underline hover:text-blue-900 transition-colors duration-200 font-medium";
@@ -64,14 +80,14 @@ function HastStepDescription({ hastChildren, children }) {
   // Reusable markdown renderer component to avoid duplicate code
   const MarkdownRenderer = ({ text }) => (
     <ReactMarkdown
-      children={text}
+      children={dedentMarkdown(text)}
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
       components={{
         p: ({ node, ...props }) => (
           <p
             {...props}
-            className="text-center text-[15px] text-neutral-700 leading-relaxed"
+            className="text-center text-[15px] text-neutral-700 leading-relaxed break-words"
           />
         ),
         strong: ({ node, ...props }) => (
@@ -79,10 +95,16 @@ function HastStepDescription({ hastChildren, children }) {
         ),
         em: ({ node, ...props }) => <em {...props} />,
         a: ({ node, ...props }) => <a {...props} className={linkClassMd} />,
+        pre: ({ node, ...props }) => (
+          <pre
+            {...props}
+            className="max-w-full whitespace-pre-wrap break-words text-left text-[15px]"
+          />
+        ),
         code: ({ node, ...props }) => (
           <code
             {...props}
-            className="rounded bg-neutral-900/10 px-1 py-0.5 text-sm"
+            className="rounded bg-neutral-900/10 px-1 py-0.5 text-sm break-words whitespace-pre-wrap"
           />
         ),
         br: ({ node, ...props }) => <br {...props} />,
@@ -93,7 +115,7 @@ function HastStepDescription({ hastChildren, children }) {
   // 1. Support rendering markdown string directly if given as children
   if (children && typeof children === "string") {
     return (
-      <div className="mt-auto space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed">
+      <div className="mt-auto min-w-0 space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed break-words">
         <MarkdownRenderer text={children} />
       </div>
     );
@@ -110,7 +132,7 @@ function HastStepDescription({ hastChildren, children }) {
       if (hasMarkdown) {
         return <MarkdownRenderer key={i} text={node.value} />;
       }
-      return node.value;
+      return dedentMarkdown(node.value);
     }
 
     if (node.type !== "element" || !node.tagName) {
@@ -125,7 +147,7 @@ function HastStepDescription({ hastChildren, children }) {
         return (
           <p
             key={i}
-            className="text-center text-[15px] text-neutral-700 leading-relaxed"
+            className="text-center text-[15px] text-neutral-700 leading-relaxed break-words"
           >
             {kids}
           </p>
@@ -168,7 +190,7 @@ function HastStepDescription({ hastChildren, children }) {
   };
 
   return (
-    <div className="mt-auto space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed">
+    <div className="mt-auto min-w-0 space-y-2 text-center text-[15px] text-neutral-700 leading-relaxed break-words">
       {hastChildren.map((c, i) => renderNode(c, i))}
     </div>
   );
@@ -260,75 +282,64 @@ const IconSwitch = ({ iconName }) => {
   );
 };
 
-const HowToComponent = ({ steps }) => {
+const HowToComponent = ({ steps, localeId = "en-IE" }) => {
   const total = steps.length;
+  const stepOfTemplate =
+    HOW_TO_UI_COPY[localeId]?.stepOf ?? HOW_TO_UI_COPY["en-IE"].stepOf;
   return (
-    <div className="relative w-full my-12">
+    <div className="relative my-12 w-full min-w-0 max-w-full">
       {total > 1 ? (
         <div
-          className="mb-6 flex items-center justify-center gap-1.5 px-4"
+          className="mb-6 flex max-w-full items-center justify-center gap-1.5 overflow-hidden px-2"
           aria-hidden="true"
         >
           {steps.map((_, index) => (
             <div
               key={`progress-${index}`}
-              className="flex items-center gap-1.5"
+              className="flex min-w-0 items-center gap-1.5"
             >
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-700 text-xs font-bold text-white shadow">
+              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-700 text-xs font-bold text-white shadow">
                 {index + 1}
               </div>
               {index < total - 1 ? (
-                <div className="h-1 w-6 rounded-full bg-blue-200 sm:w-10" />
+                <div className="h-1 w-4 rounded-full bg-blue-200 sm:w-8 md:w-10" />
               ) : null}
             </div>
           ))}
         </div>
       ) : null}
       {/* Connecting horizontal line for desktop */}
-      <div className="hidden lg:block absolute top-1/2 left-0 right-0 z-0 pointer-events-none">
+      <div className="pointer-events-none absolute top-1/2 right-0 left-0 z-0 hidden lg:block">
         <div className="mx-12 h-2 rounded-full bg-gradient-to-r from-slate-200 via-slate-100 to-blue-100 opacity-70 shadow-lg" />
       </div>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 z-10 relative">
+      <div className="relative z-10 grid min-w-0 grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
         {steps.map((step, index) => (
           <div
             key={index}
             className={cn(
-              "flex flex-col relative items-center text-center px-5 py-7 rounded-2xl bg-white/60 backdrop-blur-md shadow-md border-2 border-transparent transition-all duration-200 hover:shadow-2xl hover:-translate-y-1 bg-slate-50",
-              "hover:border-blue-500 hover:ring-2 hover:ring-blue-300 hover:ring-offset-2",
+              "relative flex min-w-0 w-full flex-col items-center rounded-2xl border-2 border-transparent bg-slate-50 bg-white/60 px-4 py-6 text-center shadow-md backdrop-blur-md transition-all duration-200 sm:px-5 sm:py-7",
+              "hover:-translate-y-1 hover:border-blue-500 hover:shadow-2xl hover:ring-2 hover:ring-blue-300 hover:ring-offset-2",
             )}
-            style={{
-              zIndex: 1,
-            }}
           >
-            <div className="mb-1 text-sm font-bold text-blue-700 tracking-wide uppercase">
-              Step {index + 1} of {total}
+            <div className="mb-1 text-xs font-bold tracking-wide text-blue-700 uppercase sm:text-sm">
+              {formatHowToStepOf(stepOfTemplate, index + 1, total)}
             </div>
-            {/* Circular step number badge with animated shadow */}
-            <div className="mb-4 relative">
+            <div className="mb-4">
               <div
                 className={cn(
-                  "w-11 h-11 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-500/90 to-blue-300 font-roboto text-xl font-bold text-white shadow-lg ring-4 ring-white transition-transform transform-gpu",
-                  "group-hover:scale-105 group-hover:ring-blue-700",
+                  "flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-blue-500/90 to-blue-300 font-roboto text-xl font-bold text-white shadow-lg ring-4 ring-white",
                 )}
               >
                 {index + 1}
               </div>
-              {/* Draw connecting lines for mobile below badge */}
-              {index !== steps.length - 1 && (
-                <div className="lg:hidden absolute left-1/2 top-full mt-1 w-0.5 h-8 bg-gradient-to-b from-blue-300/60 via-gray-200 to-slate-100 rounded-full -translate-x-1/2" />
-              )}
             </div>
-            {/* Icon for the step */}
             <div className="mb-2">
               <IconSwitch iconName={step.icon} />
             </div>
-            {/* Step Title */}
-            <h3 className="font-roboto text-lg font-semibold text-neutral-900 sm:text-xl mb-2 leading-tight h-[56px]">
-              {/* If the step title is empty, fallback to 'Step X' */}
+            <h3 className="font-roboto mb-2 min-h-0 w-full text-lg leading-tight font-semibold break-words text-neutral-900 sm:text-xl">
               {step.title?.trim() ? step.title : `Step ${index + 1}`}
             </h3>
-            {/* Description, aligns bottom if space */}
-            <div className="flex flex-col w-full">
+            <div className="flex min-w-0 w-full flex-col">
               <HastStepDescription
                 hastChildren={
                   step.descriptionChildren?.length
@@ -448,6 +459,7 @@ function HastTipContent({ hastChildren, children }) {
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       rehypePlugins={[rehypeRaw]}
+      children={dedentMarkdown(text)}
       components={{
         p: ({ node, ...props }) => (
           <p
@@ -489,9 +501,7 @@ function HastTipContent({ hastChildren, children }) {
         ),
         br: ({ node, ...props }) => <br {...props} />,
       }}
-    >
-      {text}
-    </ReactMarkdown>
+    />
   );
 
   if (children && typeof children === "string") {
@@ -776,7 +786,7 @@ export const ContentComponent = ({
   return (
     <div
       className={cn(
-        "content-component font-roboto relative flex w-full flex-col gap-0",
+        "content-component font-roboto relative flex w-full min-w-0 max-w-full flex-col gap-0",
         pbClass,
         mtClass,
       )}
@@ -960,7 +970,9 @@ export const ContentComponent = ({
                         };
                       });
 
-                    return <HowToComponent steps={steps} />;
+                    return (
+                      <HowToComponent steps={steps} localeId={localeId} />
+                    );
                   }
                   if (
                     props.id === "inline-bonus" ||
@@ -1112,9 +1124,9 @@ export const ContentComponent = ({
                   <hr className="my-10 border-0 border-t border-slate-200" />
                 ),
                 table: ({ node, ...props }) => (
-                  <div className="overflow-x-auto my-8 px-2 md:px-0">
+                  <div className="my-8 min-w-0 max-w-full overflow-x-auto px-2 md:px-0">
                     <table
-                      className="table-auto w-full border border-neutral-200 bg-white rounded-xl overflow-hidden shadow-sm min-w-[600px]"
+                      className="table-auto w-full min-w-[600px] overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm"
                       {...props}
                     />
                   </div>

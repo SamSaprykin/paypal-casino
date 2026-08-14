@@ -1,7 +1,7 @@
 {
   "_id": "bM1XvOWAYTpVwSIzO9mq0w",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Fresh Casino",
   "slug": "fresh-casino",
   "rating": 4.2,
@@ -63,7 +63,9 @@
       "code": null,
       "codeIntl": null,
       "description": "50% match bonus",
-      "descriptionIntl": {},
+      "descriptionIntl": {
+        "finland": "100% + jopa 500 ilmaiskierrosta"
+      },
       "referralUrl": "/goto/fresh-casino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

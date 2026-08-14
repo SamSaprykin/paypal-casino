@@ -1,7 +1,7 @@
 {
   "_id": "LL1_6FBi6K2j-2A2Sdo2ig",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "247Bet",
   "slug": "247bet",
   "rating": 4.5,
@@ -44,8 +44,7 @@
       "codeIntl": null,
       "description": "100% up to €247 + 100 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 247 kr + 100 gratissnurr",
-        "denmark": "100 % op til 247 kr + 100 gratis spins"
+        "finland": "100% jopa 247€ + 100 ilmaiskierrosta"
       },
       "referralUrl": "/goto/247bet.php",
       "bonusBackgroundColor": null,

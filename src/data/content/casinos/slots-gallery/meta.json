@@ -1,7 +1,7 @@
 {
   "_id": "GFP1SwMIoaDIp6PbKJirKu",
   "_createdAt": "2026-05-13T19:38:53Z",
-  "_updatedAt": "2026-05-15T14:10:28Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Slots Gallery",
   "slug": "slots-gallery",
   "rating": 4.7,
@@ -55,7 +55,22 @@
       "altText": null
     }
   },
-  "bonuses": null,
+  "bonuses": [
+    {
+      "_id": "slots-gallery-welcome",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €777 + 100 FS",
+      "descriptionIntl": {
+        "norway": "100 % opptil 7 770 kr + 100 FS",
+        "ireland": "100% up to €777 + 100 FS"
+      },
+      "referralUrl": "/goto/slotsgallery.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
   "blocked": true,
   "alternativesByCountry": {
     "denmark": [

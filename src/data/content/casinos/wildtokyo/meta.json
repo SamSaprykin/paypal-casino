@@ -1,7 +1,7 @@
 {
   "_id": "UsLiqtqSZANJuUw--TO_Kw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Wildtokyo",
   "slug": "wildtokyo",
   "rating": 4.8,
@@ -51,10 +51,10 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to €150 + 100 Free Spins",
+      "description": "100% up to €1,500 + 300 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 150 kr + 100 gratissnurr",
-        "denmark": "100 % op til 150 kr + 100 gratis spins"
+        "ireland": "100% up to €1,500 + 300 Free Spins",
+        "finland": "100% jopa 1 500 € + 300 ilmaiskierrosta"
       },
       "referralUrl": "/goto/wildtokyo.php",
       "bonusBackgroundColor": null,

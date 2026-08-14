@@ -1,4 +1,8 @@
-import { adaptCasinoForCard, pickLocalizedString } from "../cms/cards";
+import {
+  adaptCasinoForCard,
+  localizeMoneyForLocale,
+  pickLocalizedString,
+} from "../cms/cards";
 import {
   casinoReviewMapKey,
   hasCasinoReviewBodyForLocale,
@@ -194,7 +198,14 @@ export function adaptCasinoPage(
     id: String(raw._id ?? slug),
     casinoName,
     slug: normalizeCasinoSlug(slug),
-    shortDescription: asString(raw.shortDescription),
+    shortDescription: (() => {
+      const text = pickLocalizedString(
+        raw.shortDescriptionIntl,
+        locale,
+        asString(raw.shortDescription),
+      );
+      return text ? localizeMoneyForLocale(text, locale) : undefined;
+    })(),
     bodyMarkdown: bodyMarkdown.trim() ? bodyMarkdown : undefined,
     mdxPath,
     referralUrl,

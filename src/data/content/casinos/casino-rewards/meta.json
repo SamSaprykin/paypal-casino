@@ -1,7 +1,7 @@
 {
   "_id": "7gLdsK193IAK5jfOEwiWRA",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Casino Rewards",
   "slug": "casino-rewards",
   "rating": 4.7,
@@ -61,10 +61,7 @@
       "code": null,
       "codeIntl": null,
       "description": "80 Free Spins for €1",
-      "descriptionIntl": {
-        "sweden": "80 gratissnurr för 1 kr",
-        "denmark": "80 gratis spins for 1 kr"
-      },
+      "descriptionIntl": {},
       "referralUrl": "/goto/casino-rewards.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

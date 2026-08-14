@@ -1,7 +1,7 @@
 {
   "_id": "YYxXx42pPyorwcK0mTpp_Q",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Sol Casino",
   "slug": "sol-casino",
   "rating": 4.2,
@@ -65,7 +65,8 @@
       "description": "100 % jopa 600 € + jopa 500 ilmaiskierrosta",
       "descriptionIntl": {
         "sweden": "100 % jopa 600 kr + jopa 500 ilmaiskierrosta",
-        "denmark": "100 % jopa 600 kr + jopa 500 ilmaiskierrosta"
+        "denmark": "100 % jopa 600 kr + jopa 500 ilmaiskierrosta",
+        "finland": "100 % jopa 600 € + jopa 500 ilmaiskierrosta"
       },
       "referralUrl": "/goto/sol-casino.php",
       "bonusBackgroundColor": null,

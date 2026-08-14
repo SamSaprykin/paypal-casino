@@ -1,7 +1,7 @@
 {
   "_id": "121Ivz9T3tcsaSmgd_JTYA",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Vegasnow",
   "slug": "vegasnow",
   "rating": 4.7,
@@ -36,10 +36,10 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "150% up to €1,500 + 200 Free Spins",
+      "description": "150% up to €1,500/$1,500 + 200 Free Spins",
       "descriptionIntl": {
-        "sweden": "150 % upp till 1 500 kr + 200 gratissnurr",
-        "denmark": "150 % op til 1.500 kr + 200 gratis spins"
+        "ireland": "150% up to €1,500/$1,500 + 200 Free Spins",
+        "norway": "150% opptil 15 000 kr + 200 gratisspinn"
       },
       "referralUrl": "/goto/vegasnow.php",
       "bonusBackgroundColor": null,

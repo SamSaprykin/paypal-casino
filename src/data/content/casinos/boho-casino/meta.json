@@ -1,7 +1,7 @@
 {
   "_id": "terAQHgze15RtLO7XGp3xz",
   "_createdAt": "2026-05-13T19:39:05Z",
-  "_updatedAt": "2026-05-15T13:52:51Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Boho Casino",
   "slug": "boho-casino",
   "rating": 4.8,
@@ -55,7 +55,22 @@
       "altText": null
     }
   },
-  "bonuses": null,
+  "bonuses": [
+    {
+      "_id": "boho-casino-welcome",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to $777 + 100 FS",
+      "descriptionIntl": {
+        "norway": "100% opptil 7 770 kr + 100 FS",
+        "ireland": "100% up to $777 + 100 FS"
+      },
+      "referralUrl": "/goto/bohocasino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
   "blocked": true,
   "alternativesByCountry": {
     "denmark": [

@@ -1,7 +1,7 @@
 {
   "_id": "3dPDnVRqnXOPXj2ToEOEqm",
   "_createdAt": "2025-08-27T07:58:38Z",
-  "_updatedAt": "2026-05-31T19:28:59Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Rollingslots",
   "slug": "rollingslots",
   "rating": 4.2,
@@ -68,13 +68,10 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "Up to €500 + 200 Free Spins ",
+      "description": "100% up to €1,000 + 300 Free Spins + 3 Coins",
       "descriptionIntl": {
-        "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 kr + 200 gratis spins",
-        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
-        "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 kr + 200 gratissnurr"
+        "norway": "100% opptil 11 700 kr + 300 Gratisspinn + 3 Mynter",
+        "ireland": "100% up to €1,000 + 300 Free Spins + 3 Coins"
       },
       "referralUrl": "/goto/rollingslots.php",
       "bonusBackgroundColor": null,

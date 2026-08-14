@@ -205,10 +205,16 @@ export function adaptCasinoForCard(
       casinoName: typeof c.casinoName === "string" ? c.casinoName : undefined,
       slug,
       backgroundColor,
-      shortDescription:
-        typeof c.shortDescription === "string"
-          ? localizeMoneyForLocale(c.shortDescription, locale)
-          : undefined,
+      shortDescription: (() => {
+        const text = pickLocalizedString(
+          c.shortDescriptionIntl,
+          locale,
+          typeof c.shortDescription === "string"
+            ? c.shortDescription
+            : undefined,
+        );
+        return text ? localizeMoneyForLocale(text, locale) : undefined;
+      })(),
       referralUrl:
         typeof c.referralUrl === "string" ? c.referralUrl : undefined,
       payoutLimits:

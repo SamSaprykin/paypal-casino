@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCq6X5",
   "_createdAt": "2026-05-13T19:43:17Z",
-  "_updatedAt": "2026-05-25T08:17:03Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Villento",
   "slug": "villento",
   "rating": 4.8,
@@ -60,13 +60,9 @@
       "_id": "3Lohqb5kZjH9GnOA77f491",
       "name": "Welcome Bonus",
       "code": null,
-      "description": "$125 Free Bonus",
+      "description": "Up to £1,000 on first 5 deposits",
       "descriptionIntl": {
-        "germany": "125 $ Gratisbonus",
-        "denmark": "125 kr gratis bonus",
-        "finland": "125 $ ilmaisbonus",
-        "norway": "125 $ gratisbonus",
-        "sweden": "125 kr gratisbonus"
+        "ireland": "Up to £1,000 on first 5 deposits"
       },
       "referralUrl": "/goto/villento.php",
       "bonusBackgroundColor": "#1f2937",

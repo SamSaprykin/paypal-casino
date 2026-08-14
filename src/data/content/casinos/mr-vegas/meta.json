@@ -1,7 +1,7 @@
 {
   "_id": "UlcCTJSPTLY7CndtATIpTw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Mr Vegas",
   "slug": "mr-vegas",
   "rating": 4.7,
@@ -56,10 +56,11 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to €200",
+      "description": "100% up to €200 (MGA) / £50 (GCGB) + 11 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 200 kr",
-        "denmark": "100 % op til 200 kr"
+        "sweden": "Mr Vegas Välkomstbonus – 100% upp till SEK 2000",
+        "denmark": "Mr Vegas Indbetalingsbonus – 100% op til DKK 1000",
+        "ireland": "100% up to €200 (MGA) / £50 (GCGB) + 11 Free Spins"
       },
       "referralUrl": "/goto/mr-vegas.php",
       "bonusBackgroundColor": null,

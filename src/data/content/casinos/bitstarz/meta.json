@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCpzMh",
   "_createdAt": "2026-05-13T19:42:01Z",
-  "_updatedAt": "2026-05-15T13:52:29Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "BitStarz",
   "slug": "bitstarz",
   "rating": 4.6,
@@ -64,7 +64,7 @@
       "descriptionIntl": {
         "germany": "100 % bis zu 100 € + 25 Freispiele auf die erste Einzahlung",
         "denmark": "100 % op til 100 kr + 25 gratis spins på første indbetaling",
-        "finland": "100 % jopa 100 € + 25 ilmaiskierrosta ensimmäisestä talletuksesta",
+        "finland": "100 % jopa 100 € tai 1 BTC + 180 ilmaiskierrosta",
         "norway": "100 % opptil 100 € + 25 gratisspinn på første innskudd",
         "sweden": "100 % upp till 100 kr + 25 gratissnurr på första insättningen"
       },

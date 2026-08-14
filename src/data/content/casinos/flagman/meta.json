@@ -1,7 +1,7 @@
 {
   "_id": "5nN21012EUGNCLNXdEWx4J",
   "_createdAt": "2025-10-13T16:21:37Z",
-  "_updatedAt": "2026-05-15T13:58:07Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Flagman",
   "slug": "flagman",
   "rating": 4.7,
@@ -71,13 +71,9 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "150% up to 600 EUR + up to 500 FS",
+      "description": "150% up to €600",
       "descriptionIntl": {
-        "germany": "150 % bis zu 600 EUR + bis zu 500 Freispiele",
-        "denmark": "150 % op til 600 kr + op til 500 gratis spins",
-        "finland": "150 % jopa 600 EUR + jopa 500 ilmaiskierrosta",
-        "norway": "150 % opptil 600 EUR + opptil 500 gratisspinn",
-        "sweden": "150 % upp till 600 kr + upp till 500 gratissnurr"
+        "ireland": "150% up to €600"
       },
       "referralUrl": "/goto/flagman.php",
       "bonusBackgroundColor": null,

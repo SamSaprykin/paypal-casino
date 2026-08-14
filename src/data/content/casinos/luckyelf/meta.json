@@ -1,7 +1,7 @@
 {
   "_id": "WLdu34TFQYe5lyXwRY_3gQ",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Luckyelf",
   "slug": "luckyelf",
   "rating": 4.7,
@@ -34,10 +34,7 @@
       "code": null,
       "codeIntl": null,
       "description": "100% up to €100 + 100 Free Spins",
-      "descriptionIntl": {
-        "sweden": "100 % upp till 100 kr + 100 gratissnurr",
-        "denmark": "100 % op til 100 kr + 100 gratis spins"
-      },
+      "descriptionIntl": {},
       "referralUrl": "/goto/luckyelf.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

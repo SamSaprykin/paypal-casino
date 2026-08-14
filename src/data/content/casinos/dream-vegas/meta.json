@@ -1,7 +1,7 @@
 {
   "_id": "HKLqFUa26203cJP-zLhCcw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Dream Vegas Casino",
   "slug": "dream-vegas",
   "rating": 4.5,
@@ -42,8 +42,11 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% match + free spins",
-      "descriptionIntl": {},
+      "description": "100% up to €2500 + 50 Spins",
+      "descriptionIntl": {
+        "ireland": "100% up to €2500 + 50 Spins",
+        "finland": "100% jopa 2500€ + 50 ilmaiskierrosta"
+      },
       "referralUrl": "/goto/dream-vegas.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

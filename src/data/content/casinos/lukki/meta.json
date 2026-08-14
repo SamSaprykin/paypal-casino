@@ -1,7 +1,7 @@
 {
   "_id": "JPSaHw7OY9lJiiuBsGHzLg",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Lukki",
   "slug": "lukki",
   "rating": 4.6,
@@ -56,11 +56,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to €500 + 100 FS",
+      "description": "200% up to 2,000 €/$ + 300 FS",
       "descriptionIntl": {
-        "sweden": "100 % upp till 500 kr + 100 gratissnurr",
-        "denmark": "100 % op til 500 kr + 100 gratis spins",
-        "finland": "100 % jopa 500 € + 100 ilmaiskierrosta"
+        "ireland": "200% up to 2,000 €/$ + 300 FS"
       },
       "referralUrl": "/goto/lukki.php",
       "bonusBackgroundColor": null,

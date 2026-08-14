@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCpbeV",
   "_createdAt": "2026-05-13T19:38:02Z",
-  "_updatedAt": "2026-05-15T13:54:33Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Coolzino",
   "slug": "coolzino",
   "rating": 4.6,
@@ -55,6 +55,20 @@
       "altText": null
     }
   },
-  "bonuses": null,
+  "bonuses": [
+    {
+      "_id": "coolzino-welcome",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "100% up to €150 + 150 Free Spins",
+      "descriptionIntl": {
+        "ireland": "100% up to €150 + 150 Free Spins"
+      },
+      "referralUrl": "/goto/coolzino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
   "blocked": false
 }

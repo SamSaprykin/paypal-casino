@@ -1,7 +1,7 @@
 {
   "_id": "JujK1c0i8DToE8AneBh_lQ",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Vinyl Casino",
   "slug": "vinylcasino",
   "rating": 3.7,
@@ -64,7 +64,8 @@
       "description": "100 % jopa 500 € + 200 ilmaiskierrosta",
       "descriptionIntl": {
         "sweden": "100 % jopa 500 kr + 200 ilmaiskierrosta",
-        "denmark": "100 % jopa 500 kr + 200 ilmaiskierrosta"
+        "denmark": "100 % jopa 500 kr + 200 ilmaiskierrosta",
+        "finland": "100 % jopa 500 € + 200 ilmaiskierrosta"
       },
       "referralUrl": "/goto/vinylcasino.php",
       "bonusBackgroundColor": null,

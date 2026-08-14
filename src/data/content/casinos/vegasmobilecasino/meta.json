@@ -1,7 +1,7 @@
 {
   "_id": "O2K5Nq6aSPjk3uv4mV1IiA",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Vegas Mobile Casino",
   "slug": "vegasmobilecasino",
   "rating": 4.8,
@@ -54,7 +54,9 @@
       "code": null,
       "codeIntl": null,
       "description": "Up to £1,000 + 100 Free Spins across 5 deposits",
-      "descriptionIntl": {},
+      "descriptionIntl": {
+        "finland": "Jopa 1 000 £ + 100 ilmaiskierrosta 5 talletuksella"
+      },
       "referralUrl": "/goto/vegasmobilecasino.php",
       "bonusBackgroundColor": null,
       "bonusLogo": null

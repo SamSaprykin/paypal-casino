@@ -1,7 +1,7 @@
 {
   "_id": "1mrHt5wUQXIoWGZu4aWjPH",
   "_createdAt": "2025-08-27T07:58:39Z",
-  "_updatedAt": "2026-05-15T13:55:40Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "CrownPlay",
   "slug": "crownplay",
   "rating": 4.5,
@@ -68,13 +68,10 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "Up to €500 + 200 Free Spins  ",
+      "description": "Welcome Package — Up to €3,000 + 350 Free Spins",
       "descriptionIntl": {
-        "germany": "Bis zu 500 € + 200 Freispiele",
-        "denmark": "Op til 500 kr + 200 gratis spins",
-        "finland": "Jopa 500 € + 200 ilmaiskierrosta",
-        "norway": "Opptil 500 € + 200 gratisspinn",
-        "sweden": "Upp till 500 kr + 200 gratissnurr"
+        "finland": "Tervetuliaispaketti — jopa 3 000 € + 350 ilmaiskierrosta",
+        "ireland": "Welcome Package — Up to €3,000 + 350 Free Spins"
       },
       "referralUrl": "/goto/crownplay.php",
       "bonusBackgroundColor": null,

@@ -1,7 +1,7 @@
 {
   "_id": "7zBeACDmxk6dlDjvIDJAYA",
   "_createdAt": "2025-08-27T07:58:33Z",
-  "_updatedAt": "2026-05-15T14:11:48Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "SpinsBro",
   "slug": "spinsbro",
   "rating": 4.7,
@@ -15,7 +15,9 @@
   },
   "referralUrl": "/goto/spinsbro.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "payoutTimes": [
+    "PayPal/E-Wallets: Minutes-24h"
+  ],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -24,8 +26,18 @@
     "Red Rake Gaming",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
-  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "depositMethods": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
+  "withdrawalMethod": [
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "EcoPayz"
+  ],
   "license": "Curaçao Gaming Control Board, OGL/2023/109/0075",
   "userRecommendationsRecommendedNumber": 52,
   "userRecommendationsTotalNumber": 75,
@@ -58,13 +70,9 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "200% match up to 500 + 200 Free Spins",
+      "description": "115% up to €420 + 100 Free Spins",
       "descriptionIntl": {
-        "germany": "200 % bis zu 500 + 200 Freispiele",
-        "denmark": "200 % op til 500 + 200 gratis spins",
-        "finland": "200 % jopa 500 + 200 ilmaiskierrosta",
-        "norway": "200 % opptil 500 + 200 gratisspinn",
-        "sweden": "200 % upp till 500 + 200 gratissnurr"
+        "ireland": "115% up to €420 + 100 Free Spins"
       },
       "referralUrl": "/goto/spinsbro.php",
       "bonusBackgroundColor": null,
@@ -89,19 +97,66 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": ["ritzo", "lets-lucky", "luckydreams"],
-    "finland": ["legzo", "playojo", "20bet"],
-    "germany": ["zodiac-casino", "bitstarz", "rollingslots"],
-    "ireland": ["crownplay", "party-poker", "villento"],
-    "norway": ["kukimuki", "fambet", "1go"],
-    "sweden": ["lets-lucky", "klirr-casino", "glitchspin"]
+    "denmark": [
+      "ritzo",
+      "lets-lucky",
+      "luckydreams"
+    ],
+    "finland": [
+      "legzo",
+      "playojo",
+      "20bet"
+    ],
+    "germany": [
+      "zodiac-casino",
+      "bitstarz",
+      "rollingslots"
+    ],
+    "ireland": [
+      "crownplay",
+      "party-poker",
+      "villento"
+    ],
+    "norway": [
+      "kukimuki",
+      "fambet",
+      "1go"
+    ],
+    "sweden": [
+      "lets-lucky",
+      "klirr-casino",
+      "glitchspin"
+    ]
   },
   "alternativesPaypalByCountry": {
-    "denmark": ["ritzo", "lucky-start", "trickz"],
-    "finland": ["theonlinecasino", "lucky-start", "video-slots"],
-    "germany": ["rollingslots", "hugo-casino"],
-    "ireland": ["ritzo", "evospin", "spinlander-casino"],
-    "norway": ["monro", "cosmicslot", "need-for-spin-casino"],
-    "sweden": ["glitchspin", "hugo-casino", "need-for-spin-casino"]
+    "denmark": [
+      "ritzo",
+      "lucky-start",
+      "trickz"
+    ],
+    "finland": [
+      "theonlinecasino",
+      "lucky-start",
+      "video-slots"
+    ],
+    "germany": [
+      "rollingslots",
+      "hugo-casino"
+    ],
+    "ireland": [
+      "ritzo",
+      "evospin",
+      "spinlander-casino"
+    ],
+    "norway": [
+      "monro",
+      "cosmicslot",
+      "need-for-spin-casino"
+    ],
+    "sweden": [
+      "glitchspin",
+      "hugo-casino",
+      "need-for-spin-casino"
+    ]
   }
 }

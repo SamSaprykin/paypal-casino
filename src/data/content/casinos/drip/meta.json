@@ -1,7 +1,7 @@
 {
   "_id": "6LMryjwOkuhbuzYMdUGJl1",
   "_createdAt": "2025-10-14T12:42:36Z",
-  "_updatedAt": "2026-05-15T13:56:32Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "DRIP",
   "slug": "drip",
   "rating": 4.4,
@@ -70,13 +70,9 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "Up to 100% on first deposit",
+      "description": "150% + up to 325 FS",
       "descriptionIntl": {
-        "germany": "Bis zu 100 % auf die erste Einzahlung",
-        "denmark": "Op til 100 % på første indbetaling",
-        "finland": "Jopa 100 % ensimmäisestä talletuksesta",
-        "norway": "Opptil 100 % på første innskudd",
-        "sweden": "Upp till 100 % på första insättningen"
+        "ireland": "150% + up to 325 FS"
       },
       "referralUrl": "/goto/drip.php",
       "bonusBackgroundColor": null,

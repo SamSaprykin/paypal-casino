@@ -1,7 +1,7 @@
 {
   "_id": "QbSAp64-bzXuLAvystdJgw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Spinlander Casino",
   "slug": "spinlander-casino",
   "rating": 3,
@@ -64,7 +64,8 @@
       "description": "250% up to €2,700 + 400 FS + 22 Gems",
       "descriptionIntl": {
         "sweden": "250 % upp till 2 700 kr + 400 gratissnurr + 22 Gems",
-        "denmark": "250 % op til 2.700 kr + 400 gratis spins + 22 Gems"
+        "finland": "250 % jopa 2 700 € + 400 ilmaiskierrosta + 22 Gemsiä",
+        "norway": "250% opptil €2,700 + 400 gratisspinn + 22 Gems"
       },
       "referralUrl": "/goto/spinlander-casino.php",
       "bonusBackgroundColor": null,

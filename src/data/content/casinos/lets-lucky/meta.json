@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCptHf",
   "_createdAt": "2026-05-13T19:40:32Z",
-  "_updatedAt": "2026-05-15T14:02:43Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Let's Lucky",
   "slug": "lets-lucky",
   "rating": 4.9,
@@ -15,10 +15,26 @@
   },
   "referralUrl": "/goto/letslucky.php",
   "payoutLimits": "€5,000 per week",
-  "payoutTimes": ["E-wallets: instant", "Cards: 1-3 business days"],
-  "software": ["NetEnt", "Microgaming", "Evolution", "Pragmatic"],
-  "depositMethods": ["Visa", "Mastercard", "Skrill"],
-  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
+  "payoutTimes": [
+    "E-wallets: instant",
+    "Cards: 1-3 business days"
+  ],
+  "software": [
+    "NetEnt",
+    "Microgaming",
+    "Evolution",
+    "Pragmatic"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Skrill"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "MasterCard",
+    "Skrill"
+  ],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 391,
   "userRecommendationsTotalNumber": 467,
@@ -39,6 +55,22 @@
       "altText": null
     }
   },
-  "bonuses": null,
+  "bonuses": [
+    {
+      "_id": "lets-lucky-welcome",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "Up to €4,500/$4,500 + 300 Free Spins",
+      "descriptionIntl": {
+        "finland": "150% jopa 750€ + 100 ilmaiskierrosta",
+        "norway": "Opptil 45 000 kr + 300 gratisspinn",
+        "ireland": "Up to €4,500/$4,500 + 300 Free Spins"
+      },
+      "referralUrl": "/goto/letslucky.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
   "blocked": false
 }

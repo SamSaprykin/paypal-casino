@@ -1,7 +1,7 @@
 {
   "_id": "HDWY6gbKnNrW1I6716CZCw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Zet",
   "slug": "zet",
   "rating": 4.7,
@@ -36,8 +36,7 @@
       "codeIntl": null,
       "description": "100% up to €500 + 200 Free Spins",
       "descriptionIntl": {
-        "sweden": "100 % upp till 500 kr + 200 gratissnurr",
-        "denmark": "100 % op til 500 kr + 200 gratis spins"
+        "finland": "100 % jopa 500 € + 200 ilmaiskierrosta"
       },
       "referralUrl": "/goto/zet.php",
       "bonusBackgroundColor": null,

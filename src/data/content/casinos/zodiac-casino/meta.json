@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCq431",
   "_createdAt": "2026-05-13T19:42:43Z",
-  "_updatedAt": "2026-05-25T08:17:29Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Zodiac Casino",
   "slug": "zodiac-casino",
   "rating": 4.6,
@@ -60,13 +60,10 @@
       "_id": "GFP1SwMIoaDIp6PbKJwfyC",
       "name": "Welcome Bonus",
       "code": null,
-      "description": "100% match up to $500 + 50 Free Spins",
+      "description": "80 Mega Money Wheel spins for €1 + up to €480 on next 4 deposits",
       "descriptionIntl": {
-        "germany": "100 % bis zu 500 $ + 50 Freispiele",
-        "denmark": "100 % op til 500 kr + 50 gratis spins",
-        "finland": "100 % jopa 500 $ + 50 ilmaiskierrosta",
-        "norway": "100 % opptil 500 $ + 50 gratisspinn",
-        "sweden": "100 % upp till 500 kr + 50 gratissnurr"
+        "finland": "80 Mega Money Wheel -kierrosta 1 €:lla + jopa 480 € seuraavilla 4 talletuksella",
+        "ireland": "80 Mega Money Wheel spins for €1 + up to €480 on next 4 deposits"
       },
       "referralUrl": "/goto/zodiaccasino.php",
       "bonusBackgroundColor": "#1a1a2e",

@@ -1,7 +1,7 @@
 {
   "_id": "0G8DREBcAaW-_YcsI88Y4A",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Casimba Casino",
   "slug": "casimba",
   "rating": 4.5,
@@ -42,10 +42,10 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "200% up to $5,000 + 50 FS (1st deposit)",
+      "description": "200% up to €5000 + 50 Free Spins",
       "descriptionIntl": {
-        "sweden": "200 % upp till 5 000 kr + 50 gratissnurr (1:a insättningen)",
-        "denmark": "200 % op til 5.000 kr + 50 gratis spins (1. indbetaling)"
+        "ireland": "200% up to €5000 + 50 Free Spins",
+        "finland": "200% jopa €5000 + 50 ilmaiskierrosta"
       },
       "referralUrl": "/goto/casimba.php",
       "bonusBackgroundColor": null,

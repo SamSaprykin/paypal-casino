@@ -1,7 +1,7 @@
 {
   "_id": "CGHhyjz-RxTgZzoN1HaVHQ",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Need for Spin Casino",
   "slug": "need-for-spin-casino",
   "rating": 3.2,
@@ -61,10 +61,11 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "300% up to €1,000 + 300 FS",
+      "description": "100% up to €500 + 100 Free Spins",
       "descriptionIntl": {
-        "sweden": "300 % upp till 1 000 kr + 300 gratissnurr",
-        "denmark": "300 % op til 1.000 kr + 300 gratis spins"
+        "ireland": "100% up to €500 + 100 Free Spins",
+        "finland": "100% jopa 500 € + 100 ilmaiskierrosta",
+        "norway": "100% opptil 6 000 kr + 100 Gratisspinn"
       },
       "referralUrl": "/goto/need-for-spin-casino.php",
       "bonusBackgroundColor": null,

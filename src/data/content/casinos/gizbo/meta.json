@@ -1,7 +1,7 @@
 {
   "_id": "pAps4O7VkoApHrlyO0LKRw",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-07-19T16:10:07.735Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Gizbo",
   "slug": "gizbo",
   "rating": 4.7,
@@ -35,11 +35,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "50% up to €600 (1st deposit)",
+      "description": "150% up to €600",
       "descriptionIntl": {
-        "ie": "50% up to €600 (1st deposit)",
-        "sweden": "50 % upp till 600 kr (1:a insättningen)",
-        "denmark": "50 % op til 600 kr (1. indbetaling)"
+        "ireland": "150% up to €600"
       },
       "referralUrl": "/goto/gizbo.php",
       "bonusBackgroundColor": null,

@@ -1,7 +1,7 @@
 {
   "_id": "GFP1SwMIoaDIp6PbKJilJg",
   "_createdAt": "2026-05-13T19:38:42Z",
-  "_updatedAt": "2026-05-25T08:17:25Z",
+  "_updatedAt": "2026-08-14T12:00:00.000Z",
   "casinoName": "Yukon Gold",
   "slug": "yukon-gold",
   "rating": 4.9,
@@ -58,13 +58,10 @@
       "_id": "erBhhDYSfCig8tH7sCs4Ql",
       "name": "Welcome Bonus",
       "code": "YUKON",
-      "description": "150 Chances To Win €1 Million",
+      "description": "150 Mega Money Wheel spins for €10 + 100% up to €150",
       "descriptionIntl": {
-        "germany": "150 Chancen auf 1 Million €",
-        "denmark": "150 chancer for at vinde 1 million kr",
-        "finland": "150 mahdollisuutta voittaa 1 miljoona €",
-        "norway": "150 sjanser til å vinne 1 million €",
-        "sweden": "150 chanser att vinna 1 miljon kr"
+        "finland": "150 Mega Money Wheel -kierrosta 10 €:lla + 100 % jopa 150 €",
+        "ireland": "150 Mega Money Wheel spins for €10 + 100% up to €150"
       },
       "referralUrl": "/goto/yukongold.php",
       "bonusBackgroundColor": "#1a1a2e",
