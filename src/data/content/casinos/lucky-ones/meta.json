@@ -1,7 +1,7 @@
 {
   "_id": "GFP1SwMIoaDIp6PbKJje2G",
   "_createdAt": "2026-05-13T19:40:50Z",
-  "_updatedAt": "2026-08-14T12:00:00.000Z",
+  "_updatedAt": "2026-08-14T09:38:44.775Z",
   "casinoName": "Lucky Ones",
   "slug": "lucky-ones",
   "rating": 4.6,
@@ -60,10 +60,10 @@
       "_id": "d00f316d-3d31-4da6-8b15-22cd6af1296e",
       "name": "Welcome Bonus",
       "code": null,
-      "description": "150% up to €/$3,000 + 200 Free Spins",
+      "description": "150% up to €3,000 + 200 Free Spins",
       "descriptionIntl": {
         "norway": "150% opptil 30,000 kr + 200 gratisspinn",
-        "ireland": "150% up to €/$3,000 + 200 Free Spins"
+        "ireland": "150% up to €3,000 + 200 Free Spins"
       },
       "referralUrl": null,
       "bonusBackgroundColor": null,

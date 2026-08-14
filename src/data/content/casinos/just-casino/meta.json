@@ -1,7 +1,7 @@
 {
   "_id": "terAQHgze15RtLO7XGpo27",
   "_createdAt": "2026-05-13T19:41:11Z",
-  "_updatedAt": "2026-08-14T12:00:00.000Z",
+  "_updatedAt": "2026-08-14T09:38:44.776Z",
   "casinoName": "Just Casino",
   "slug": "just-casino",
   "rating": 4.7,
@@ -61,9 +61,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to 500 €/$ + 100 Free Spins",
+      "description": "100% up to 500 € + 100 Free Spins",
       "descriptionIntl": {
-        "ireland": "100% up to 500 €/$ + 100 Free Spins"
+        "ireland": "100% up to 500 € + 100 Free Spins"
       },
       "referralUrl": "/goto/justcasino.php",
       "bonusBackgroundColor": null,

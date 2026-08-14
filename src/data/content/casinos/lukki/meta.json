@@ -1,7 +1,7 @@
 {
   "_id": "JPSaHw7OY9lJiiuBsGHzLg",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-08-14T12:00:00.000Z",
+  "_updatedAt": "2026-08-14T09:38:44.776Z",
   "casinoName": "Lukki",
   "slug": "lukki",
   "rating": 4.6,
@@ -56,9 +56,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "200% up to 2,000 €/$ + 300 FS",
+      "description": "200% up to 2,000 € + 300 FS",
       "descriptionIntl": {
-        "ireland": "200% up to 2,000 €/$ + 300 FS"
+        "ireland": "200% up to 2,000 € + 300 FS"
       },
       "referralUrl": "/goto/lukki.php",
       "bonusBackgroundColor": null,

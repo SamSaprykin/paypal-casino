@@ -92,6 +92,7 @@ function displayHeadline(entry, locale) {
   const amountOk = isUsefulHeadline(amount);
   const titleOk = isUsefulHeadline(title);
 
+  let headline = null;
   if (
     locale &&
     locale !== "ireland" &&
@@ -100,14 +101,38 @@ function displayHeadline(entry, locale) {
     looksEnglishHeadline(amount) &&
     !looksEnglishHeadline(title)
   ) {
-    return title.length <= 110 ? title : amount;
+    headline = title.length <= 110 ? title : amount;
+  } else if (amountOk && amount.length <= 90) {
+    headline = amount;
+  } else if (titleOk && title.length <= 90) {
+    headline = title;
+  } else if (amountOk) {
+    headline = amount;
+  } else if (titleOk) {
+    headline = title;
   }
 
-  if (amountOk && amount.length <= 90) return amount;
-  if (titleOk && title.length <= 90) return title;
-  if (amountOk) return amount;
-  if (titleOk) return title;
-  return null;
+  return headline ? normalizeHeadlineCurrency(headline, locale) : null;
+}
+
+/** Keep stored EUR-market headlines in euro, not dual €/$ or leftover £. */
+function normalizeHeadlineCurrency(headline, locale) {
+  if (!headline) return headline;
+  const eurLocales = new Set(["ireland", "germany", "finland"]);
+  if (!eurLocales.has(locale)) return headline;
+
+  let out = headline;
+  const num = "\\d(?:[\\d\\u00a0\\s.,]*\\d)?";
+  out = out.replace(new RegExp(`(€\\s*${num})\\s*/\\s*\\$\\s*${num}`, "g"), "$1");
+  if (locale !== "ireland") {
+    out = out.replace(/\s*\/\s*£\s*[\d\s.,]*\d(?:\s*\([^)]+\))?/g, "");
+    out = out.replace(new RegExp(`£\\s*(${num})`, "g"), "€$1");
+    out = out.replace(new RegExp(`(${num})\\s*£`, "g"), "$1 €");
+  }
+  out = out.replace(new RegExp(`€\\s*/\\s*\\$\\s*(${num})`, "g"), "€$1");
+  out = out.replace(new RegExp(`(${num})\\s*€\\s*/\\s*\\$`, "g"), "$1 €");
+  out = out.replace(new RegExp(`(?<![A-Za-z])\\$(?!\\/)(${num})`, "g"), "€$1");
+  return out;
 }
 
 function countryEntry(bonus, countryCode) {

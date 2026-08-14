@@ -100,12 +100,15 @@ function adaptBonus(
     code:
       pickLocalizedString(b.codeIntl, locale, asString(b.code)) ??
       asString(b.code),
-    description:
-      pickLocalizedString(
-        b.descriptionIntl,
-        locale,
-        asString(b.description),
-      ) ?? asString(b.description),
+    description: (() => {
+      const text =
+        pickLocalizedString(
+          b.descriptionIntl,
+          locale,
+          asString(b.description),
+        ) ?? asString(b.description);
+      return text ? localizeMoneyForLocale(text, locale) : text;
+    })(),
     referralUrl: asString(b.referralUrl),
     bonusBackgroundColor: asString(b.bonusBackgroundColor),
     bonusLogo: logo?.asset?.url

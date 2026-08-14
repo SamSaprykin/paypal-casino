@@ -70,12 +70,12 @@
         "norway": "VELKOMSTBONUS",
         "sweden": "VÄLKOMSTBONUS"
       },
-      "description": "Up to ~€/$500 + 200 Free Spins",
+      "description": "Up to ~€500 + 200 Free Spins",
       "descriptionIntl": {
-        "germany": "Bis zu ~€/$500 + 200 Freispiele",
+        "germany": "Bis zu ~€500 + 200 Freispiele",
         "denmark": "Op til 500 kr + 200 gratis spins",
-        "finland": "Jopa ~€/$500 + 200 ilmaiskierrosta",
-        "norway": "Opptil ~€/$500 + 200 gratisspinn",
+        "finland": "Jopa ~€500 + 200 ilmaiskierrosta",
+        "norway": "Opptil ~500 kr + 200 gratisspinn",
         "sweden": "Upp till 500 kr + 200 gratissnurr"
       },
       "referralUrl": "/goto/onluck.php",

@@ -1,7 +1,7 @@
 {
   "_id": "erBhhDYSfCig8tH7sCptHf",
   "_createdAt": "2026-05-13T19:40:32Z",
-  "_updatedAt": "2026-08-14T12:00:00.000Z",
+  "_updatedAt": "2026-08-14T09:38:44.776Z",
   "casinoName": "Let's Lucky",
   "slug": "lets-lucky",
   "rating": 4.9,
@@ -61,11 +61,11 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "Up to €4,500/$4,500 + 300 Free Spins",
+      "description": "Up to €4,500 + 300 Free Spins",
       "descriptionIntl": {
         "finland": "150% jopa 750€ + 100 ilmaiskierrosta",
         "norway": "Opptil 45 000 kr + 300 gratisspinn",
-        "ireland": "Up to €4,500/$4,500 + 300 Free Spins"
+        "ireland": "Up to €4,500 + 300 Free Spins"
       },
       "referralUrl": "/goto/letslucky.php",
       "bonusBackgroundColor": null,

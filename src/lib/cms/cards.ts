@@ -7,6 +7,7 @@
  */
 
 import type { WebsiteLocaleKey } from "./locales";
+import { localizeMoneyForLocale } from "./localizeMoney";
 import { casinoReviewMapKey } from "./intlMarkdown";
 import { localizedCasinoDetailHref } from "./routing";
 import {
@@ -14,6 +15,8 @@ import {
   resolveBlockedAlternatives,
   type BlockedCasinoAlternative,
 } from "../affiliates/blocked";
+
+export { localizeMoneyForLocale };
 
 export interface CasinoBonusCardData {
   fields: {
@@ -54,63 +57,6 @@ export interface AdaptCasinoForCardOptions {
 
 const asString = (v: unknown): string | undefined =>
   typeof v === "string" && v.trim() !== "" ? v : undefined;
-
-/** Markets that show amounts in local kroner, not euro. */
-const KR_LOCALES = new Set<WebsiteLocaleKey>([
-  "sweden",
-  "denmark",
-  "norway",
-]);
-
-const KR_NUMBER_LOCALE: Record<"sweden" | "denmark" | "norway", string> = {
-  sweden: "sv-SE",
-  denmark: "da-DK",
-  norway: "nb-NO",
-};
-
-/**
- * Rewrites €/$/EUR amounts to locale `kr` with local number formatting.
- * Used so SE/DK/NO cards don't fall back to English euro copy.
- */
-export function localizeMoneyForLocale(
-  text: string,
-  locale: WebsiteLocaleKey | undefined,
-): string {
-  if (!locale || !KR_LOCALES.has(locale) || !text) return text;
-  const numberLocale = KR_NUMBER_LOCALE[locale];
-
-  const formatKr = (raw: string): string | null => {
-    const normalized = raw
-      .trim()
-      .replace(/\u00a0/g, " ")
-      .replace(/\s/g, "")
-      .replace(/,(?=\d{3}(\D|$))/g, "")
-      .replace(/\.(?=\d{3}(\D|$))/g, "")
-      .replace(",", ".");
-    const n = Number(normalized);
-    if (!Number.isFinite(n)) return null;
-    return `${new Intl.NumberFormat(numberLocale, {
-      maximumFractionDigits: 0,
-    }).format(n)} kr`;
-  };
-
-  let out = text;
-  // Number token must end on a digit so we don't swallow the following space.
-  const num = "([\\d\\s.,]*\\d)";
-  out = out.replace(
-    new RegExp(`~?\\s*€\\s*/\\s*\\$\\s*${num}`, "g"),
-    (_, raw: string) => formatKr(raw) ?? _,
-  );
-  out = out.replace(
-    new RegExp(`(?<!\\w)(?:€|EUR|\\$)\\s*${num}`, "g"),
-    (full, raw: string) => formatKr(raw) ?? full,
-  );
-  out = out.replace(
-    new RegExp(`${num}\\s*(?:€|EUR)(?!\\w)`, "g"),
-    (full, raw: string) => formatKr(raw) ?? full,
-  );
-  return out;
-}
 
 /**
  * Picks a localized string from an `xIntl` map (keyed by WebsiteLocaleKey),

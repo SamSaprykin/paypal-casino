@@ -1,7 +1,7 @@
 {
   "_id": "BSPccy07UHUJ6DKvB-vUsQ",
   "_createdAt": "2026-07-19T16:10:07.735Z",
-  "_updatedAt": "2026-08-14T12:00:00.000Z",
+  "_updatedAt": "2026-08-14T09:38:44.776Z",
   "casinoName": "Crashino",
   "slug": "crashino",
   "rating": 4.6,
@@ -57,9 +57,9 @@
       "name": "Welcome Bonus",
       "code": null,
       "codeIntl": null,
-      "description": "100% up to $1,000 + 200 Free Spins",
+      "description": "100% up to €1,000 + 200 Free Spins",
       "descriptionIntl": {
-        "ireland": "100% up to $1,000 + 200 Free Spins",
+        "ireland": "100% up to €1,000 + 200 Free Spins",
         "norway": "100% opptil $1.000 + 200 gratisspinn"
       },
       "referralUrl": "/goto/crashino.php",
