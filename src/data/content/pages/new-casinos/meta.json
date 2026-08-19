@@ -24,6 +24,7 @@
       "id": "nc-list",
       "casinoListsByCountry": {
         "ireland": [
+          "monster-casino",
           "fezbet",
           "party-poker",
           "winshark",
@@ -48,6 +49,7 @@
           "luckydreams"
         ],
         "finland": [
+          "monster-casino",
           "fezbet",
           "party-poker",
           "playojo",
@@ -55,6 +57,7 @@
           "club-house"
         ],
         "norway": [
+          "monster-casino",
           "vinylcasino",
           "need-for-spin-casino",
           "winshark",

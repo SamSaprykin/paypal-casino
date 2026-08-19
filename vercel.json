@@ -594,6 +594,11 @@
       "source": "/goto/hahaspin.php",
       "destination": "https://hahaspinplay.com/j4auccwuf",
       "statusCode": 301
+    },
+    {
+      "source": "/goto/monster-casino.php",
+      "destination": "https://creatives.excelaffiliates.com/redirect.aspx?mid=5593&sid=1019684&cid=&pid=&affid=1014712",
+      "statusCode": 301
     }
   ]
 }

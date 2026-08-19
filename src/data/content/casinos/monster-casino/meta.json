@@ -1,0 +1,86 @@
+{
+  "_id": "1QcWoOL2I0PvzuWtlCVe3N",
+  "_createdAt": "2026-08-19T10:26:29.804Z",
+  "_updatedAt": "2026-08-19T12:00:00.000Z",
+  "casinoName": "Monster Casino",
+  "slug": "monster-casino",
+  "rating": 4.7,
+  "shortDescription": "Monster Casino offers Irish players a massive game library, generous welcome bonuses, and fast EUR payouts via Visa, PayPal, and Skrill — all under a UKGC and MGA licence.",
+  "shortDescriptionIntl": {
+    "finland": "Monster Casino tarjoaa suomalaisille pelaajille laajan pelikirjaston, anteliaat tervetuliaisbonukset ja nopeat EUR-kotiutukset Visalla, Skrillillä ja Netellerillä — UKGC- ja MGA-lisenssien alaisuudessa.",
+    "norway": "Monster Casino tilbyr norske spillere et stort spillbibliotek, sjenerøse velkomstbonuser og raske utbetalinger via Visa, Skrill og Neosurf — under UKGC- og MGA-lisens."
+  },
+  "referralUrl": "/goto/monster-casino.php",
+  "payoutLimits": "Up to €25,000/month",
+  "payoutTimes": [
+    "E-wallets (PayPal/Skrill/Neteller): within 24 hours",
+    "Visa/Mastercard: 2–4 business days",
+    "Bank transfer: 3–5 business days"
+  ],
+  "software": [
+    "Pragmatic",
+    "NetEnt",
+    "Play'n GO",
+    "Microgaming",
+    "Evolution",
+    "Quickspin"
+  ],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Revolut",
+    "Bank Wire Transfer",
+    "Neosurf",
+    "Trustly",
+    "Paysafecard"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "PayPal",
+    "Skrill",
+    "Neteller",
+    "Bank Wire Transfer",
+    "Trustly"
+  ],
+  "license": "UK Gambling Commission (account 39335); Malta Gaming Authority (MGA/B2C/231/2012)",
+  "userRecommendationsRecommendedNumber": 171,
+  "userRecommendationsTotalNumber": 214,
+  "availableInCountries": {
+    "finland": "",
+    "ireland": "",
+    "norway": ""
+  },
+  "backgroundColor": {
+    "hex": "#c0cde3"
+  },
+  "logo": {
+    "asset": {
+      "url": "/casino-logos/monster-casino-logo.png",
+      "altText": "Monster Casino"
+    }
+  },
+  "bonuses": [
+    {
+      "_id": "1QarOPnmm2LP0HOvfZx75S",
+      "name": "Welcome Bonus",
+      "code": null,
+      "codeIntl": null,
+      "description": "Up to €1,000 + 100 Free Spins",
+      "descriptionIntl": {
+        "ireland": "Up to €1,000 + 100 Free Spins",
+        "finland": "Jopa 1 000 € + 100 ilmaiskierrosta",
+        "norway": "Opptil €1 000 + 100 gratisspinn"
+      },
+      "referralUrl": "/goto/monster-casino.php",
+      "bonusBackgroundColor": null,
+      "bonusLogo": null
+    }
+  ],
+  "blocked": false
+}
