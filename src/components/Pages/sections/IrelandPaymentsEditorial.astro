@@ -1,5 +1,7 @@
 ---
+import AuthorContactLinks from "../AuthorContactLinks.astro";
 import { paypalPaymentsCopyFor } from "../../../lib/i18n/copies/paypal-payments";
+import { getAuthorById } from "../../../lib/data/authors";
 import {
   getCasinoBySlug,
   getCasinoMetaBySlugMap,
@@ -15,6 +17,11 @@ interface Props {
 
 const { locale = ROOT_WEBSITE_LOCALE } = Astro.props;
 const copy = paypalPaymentsCopyFor(locale);
+const authorRecord = getAuthorById(
+  copy.authorName.toLowerCase().includes("stoyan")
+    ? "stoyan-makoski"
+    : "seamus-oconnor",
+);
 const ratingHref = localizedStaticPageHref(locale, "rating-guidelines");
 const casinoMetaBySlug = await getCasinoMetaBySlugMap();
 
@@ -76,6 +83,11 @@ function logoFor(slug: string, fallbackName: string) {
         <span>{copy.lastPaymentTestLabel}: {copy.authorTestedDate}</span>
         <span>{copy.pageUpdatedLabel}: {copy.pageUpdatedDate}</span>
       </div>
+      {
+        authorRecord ? (
+          <AuthorContactLinks author={authorRecord} class="mt-3" />
+        ) : null
+      }
     </div>
   </div>
 </aside>
