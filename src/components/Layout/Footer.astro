@@ -5,7 +5,6 @@ import {
   ROOT_WEBSITE_LOCALE,
   homeHrefForLocale,
   localizedStaticPageHref,
-  getWebsitePageHrefByName,
   type WebsiteLocaleKey,
 } from "../../lib/content";
 import { FOOTER_COPY } from "../../lib/i18n/copies/footer";
@@ -19,56 +18,10 @@ const { locale = ROOT_WEBSITE_LOCALE } = Astro.props as Props;
 const t = FOOTER_COPY[localeIdForWebsiteLocale(locale)];
 const home = homeHrefForLocale(locale);
 
-const faqHref = localizedStaticPageHref(locale, "frequently-asked-questions");
 const ratingHref = localizedStaticPageHref(locale, "rating-guidelines");
-const blockedCasinosHref = await getWebsitePageHrefByName(
-  "Blocked Casinos",
-  locale,
-);
 
 const footerNav = {
   navigationItems: [
-    {
-      itemName: t.classicGames,
-      itemLinkRoute: localizedStaticPageHref(locale, "classic-games"),
-      navigationItems: [
-        {
-          linkRoute: localizedStaticPageHref(locale, "classic-games"),
-          linkText: t.allGamesOverview,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/tetris/",
-          linkText: t.tetris,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/tetris-50/",
-          linkText: t.tetris50,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/sudoku/",
-          linkText: t.sudoku,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/solitaire/",
-          linkText: t.solitaire,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/yukon/",
-          linkText: t.yukonSolitaire,
-          linkType: "internal",
-        },
-        {
-          linkRoute: "/classic-games/russian/",
-          linkText: t.russianSolitaire,
-          linkType: "internal",
-        },
-      ],
-    },
     {
       itemName: t.support,
       itemLinkRoute: "",
@@ -83,15 +36,6 @@ const footerNav = {
           linkText: t.casinoRatingGuide,
           linkType: "internal",
         },
-        ...(blockedCasinosHref
-          ? [
-              {
-                linkRoute: blockedCasinosHref,
-                linkText: t.blockedCasinos,
-                linkType: "internal",
-              },
-            ]
-          : []),
         {
           linkRoute: localizedStaticPageHref(locale, "sitemap"),
           linkText: t.sitemap,

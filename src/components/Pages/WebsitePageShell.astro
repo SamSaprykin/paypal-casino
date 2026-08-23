@@ -61,7 +61,11 @@ const hasToc = tocItems.length > 0;
           updatedAt={page.updatedAt}
           reviewCycle="monthly"
         />
-        <WebsitePageSections sections={page.sections} locale={locale} />
+        <WebsitePageSections
+          sections={page.sections}
+          locale={locale}
+          pageName={page.name}
+        />
       </div>
 
       {

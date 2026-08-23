@@ -33897,8 +33897,8 @@
     "slug": "zencasino",
     "logo": "/casino-logos/zen-casino-logo.png",
     "bgColor": "#800080",
-    "blocked": true,
-    "rating": 4,
+    "blocked": false,
+    "rating": 4.7,
     "bonuses": [
       {
         "bonusType": "welcome",

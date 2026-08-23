@@ -38,8 +38,10 @@
   "userRecommendationsRecommendedNumber": null,
   "userRecommendationsTotalNumber": null,
   "availableInCountries": {
+    "denmark": "",
     "finland": "",
-    "ireland": ""
+    "ireland": "",
+    "sweden": ""
   },
   "backgroundColor": {
     "hex": "#1e3a8a"

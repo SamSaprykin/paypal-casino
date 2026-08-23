@@ -10,6 +10,7 @@ import BonusesListSection from "./sections/BonusesListSection.astro";
 import ImageSection from "./sections/ImageSection.astro";
 import MethodAvailabilitySection from "./sections/MethodAvailabilitySection.astro";
 import BonusCalculatorSection from "./sections/BonusCalculatorSection.astro";
+import IrelandPaymentsEditorial from "./sections/IrelandPaymentsEditorial.astro";
 import WhatPeopleSay from "./WhatPeopleSay.astro";
 import DenmarkMarketNotice from "./DenmarkMarketNotice.astro";
 import Disclosure from "./Disclosure.astro";
@@ -17,6 +18,7 @@ import Disclosure from "./Disclosure.astro";
 interface Props {
   sections: PageSection[];
   locale?: WebsiteLocaleKey;
+  pageName?: string;
   /** When false, skip the Denmark tax/ROFUS/AML notice. Default true. */
   showDenmarkMarketNotice?: boolean;
   /** When false, skip the hardcoded compliance banner (rare). Default true. */
@@ -26,9 +28,13 @@ interface Props {
 const {
   sections,
   locale,
+  pageName,
   showDenmarkMarketNotice = true,
   showDisclosure = true,
 } = Astro.props;
+
+const usePaypalPaymentsEditorial = pageName === "Paypal Casino";
+let paypalEditorialRendered = false;
 ---
 
 <div class="website-page-sections flex flex-col bg-transparent py-4">
@@ -36,6 +42,11 @@ const {
     sections.map((section) => {
       switch (section.kind) {
         case "casinoList":
+          if (usePaypalPaymentsEditorial) {
+            if (paypalEditorialRendered) return null;
+            paypalEditorialRendered = true;
+            return <IrelandPaymentsEditorial locale={locale} />;
+          }
           return <CasinoListSection section={section} locale={locale} />;
         case "faqComponent":
           return <FaqSection section={section} />;

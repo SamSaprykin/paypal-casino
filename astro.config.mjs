@@ -20,7 +20,16 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap({
-      filter: (page) => !page.includes("/intl-demo") && !page.includes("/404"),
+      filter: (page) =>
+        !page.includes("/intl-demo") &&
+        !page.includes("/404") &&
+        !page.includes("/classic-games") &&
+        !page.includes("/blocked-casinos") &&
+        !page.includes("/gesperrte-casinos") &&
+        !page.includes("/blokerede-kasinoer") &&
+        !page.includes("/estettyt-kasinot") &&
+        !page.includes("/blokkerte-kasinoer") &&
+        !page.includes("/blockerade-casinon"),
     }),
     robotsTxt(),
   ],

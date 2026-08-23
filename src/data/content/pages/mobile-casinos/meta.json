@@ -1,7 +1,7 @@
 {
   "_id": "a2b3c4d5-6e7f-4891-ab23-4c5d6e7f8091",
   "_createdAt": "2026-07-19T19:00:00Z",
-  "_updatedAt": "2026-07-19T19:00:00Z",
+  "_updatedAt": "2026-08-22T12:00:00Z",
   "name": "Mobile Casinos",
   "authors": {
     "addedBy": "seamus-oconnor",
@@ -63,8 +63,7 @@
           "kukimuki",
           "luckydreams",
           "flagman",
-          "vinylcasino",
-          "need-for-spin-casino"
+          "vinylcasino"
         ],
         "sweden": [
           "lets-lucky",
@@ -72,8 +71,7 @@
           "luckydreams",
           "just-casino",
           "pop-casino",
-          "jubla-casino",
-          "need-for-spin-casino"
+          "jubla-casino"
         ]
       }
     },

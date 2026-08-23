@@ -24,13 +24,13 @@ const en: RatingGuidelinesCopy = {
     "Independent methodology for reviewing and scoring online casinos on PpCasinos.co.",
   breadcrumbHome: "Home",
   h1: "How we rate online casinos",
-  lead: "Every casino we promote is reviewed by a person — not a bot checklist alone. We register, deposit, claim offers, play, contact support, and withdraw where possible. Below is exactly what we measure, how weights work, and how often scores change.",
+  lead: "We prioritize hands-on testing for top-listed brands. For those, we register, deposit, claim offers, play, contact support, and withdraw where possible. Other brands are researched from operator data, licence records, and player feedback — we do not claim a full deposit-and-withdraw test at every casino in every language.",
   snippetTitle: "How we pick these casinos",
   snippetBody:
-    "Our team tests listed brands with real player flows — including common banking options such as PayPal where available. We score each site across five pillars. Casinos below our publish threshold stay off the main ranking lists (and may appear on Blocked Casinos if we cannot promote them).",
+    "Our team tests listed brands with real player flows — including common banking options such as PayPal where available. We score each site across five pillars. Hands-on deposit and withdrawal tests are reserved for the shortlist; other brands are researched, not claimed as fully play-tested.",
   processTitle: "Our review process",
   processIntro:
-    "We follow the same six steps for every brand so scores stay comparable across markets.",
+    "We follow the same six steps for featured shortlist brands so scores stay comparable across markets.",
   processSteps: [
     {
       title: "Registration test",
@@ -144,7 +144,7 @@ const en: RatingGuidelinesCopy = {
     {
       range: "Below 4.0",
       label: "Not on main lists",
-      body: "We do not feature these on primary ranking pages. Brands we cannot promote may appear on Blocked Casinos instead.",
+      body: "We do not feature these on primary ranking pages.",
     },
   ],
   updatesTitle: "Scores are updated regularly",
@@ -158,17 +158,17 @@ const en: RatingGuidelinesCopy = {
     {
       question: "Do you really deposit and withdraw?",
       answer:
-        "Yes where practical. We prioritise real banking flows (including PayPal when offered). Some markets or brand holds can limit how far a test goes; we note friction either way.",
+        "Yes where practical on our featured shortlist. We prioritise real banking flows (including PayPal when offered). Some markets or brand holds can limit how far a test goes; we note friction either way. We do not complete this process at every brand we mention.",
     },
     {
       question: "Can a commercial deal raise a score?",
       answer:
-        "No. Partnerships can affect whether we have a live referral link, not the numerical rating. Missing links are handled via blocked / alternatives flows.",
+        "No. Partnerships can affect whether we have a live referral link, not the numerical rating.",
     },
     {
       question: "Why did a casino disappear from the list?",
       answer:
-        "Usually a score drop, a market eligibility change, or a paused affiliate path. Check Blocked Casinos if promotions are paused.",
+        "Usually a score drop, a market eligibility change, or a paused affiliate path.",
     },
     {
       question: "Are scores identical in every country?",
@@ -261,25 +261,165 @@ export const RATING_GUIDELINES_COPY: Record<LocaleId, RatingGuidelinesCopy> = {
     metaDescription:
       "Näin PpCasinos.co arvioi nettikasinot: talletukset, bonusehdot, PayPal-nostot, lisenssi ja tuki.",
     ogTitle: "Näin arvioimme kasinot | PpCasinos.co",
+    ogDescription:
+      "Menetelmämme: rekisteröityminen, talletus, bonus, pelit, tuki ja kotiutus — viisi pilaria.",
     keywords: ["kasinoluokitus", "arvostelumenetelmä", "PayPal kasino"],
     schemaName: "Kasinoluokituksen ohjeet",
+    schemaDescription: "Riippumaton menetelmä nettikasinoiden arviointiin.",
     breadcrumbHome: "Etusivu",
     h1: "Näin arvioimme nettikasinot",
-    lead: "Jokainen mainostamamme kasino arvioidaan ihmisen toimesta — ei pelkällä botilla. Rekisteröidymme, talletamme, lunastamme tarjouksia, pelaamme, otamme yhteyttä tukeen ja nostamme kun mahdollista.",
+    lead: "Keskitymme käytännön testeihin kärkilistojen brändeille. Niissä rekisteröidymme, talletamme, lunastamme tarjouksia, pelaamme, otamme yhteyttä tukeen ja kotiutamme kun se on mahdollista. Muut brändit tutkitaan operaattorin tietojen, lisenssitietojen ja pelaajapalautteen perusteella — emme väitä tekevämme täyttä talletus- ja kotiutustestiä jokaisessa kasinossa jokaisella kielellä.",
     snippetTitle: "Näin valitsemme kasinot",
     snippetBody:
-      "Testaamme listattuja brändejä oikeilla pelaajavirroilla — myös PayPalilla kun se on tarjolla. Arvioimme viisi osa-aluetta. Julkaisukynnyksen alle jäävät eivät ole päälistoilla.",
+      "Testaamme listattuja brändejä oikeilla pelaajavirroilla — myös PayPalilla kun se on tarjolla. Arvioimme viisi osa-aluetta. Täydet talletus- ja kotiutustestit tehdään lyhytlistalle; muita brändejä tutkitaan, niitä ei esitetä täysin pelitestattuina.",
     processTitle: "Arviointiprosessimme",
-    processIntro: "Käytämme samoja kuutta vaihetta jokaiselle brändille.",
+    processIntro:
+      "Käytämme samoja kuutta vaihetta kärkilistan brändeille, jotta pisteet ovat vertailukelpoisia eri markkinoilla.",
+    processSteps: [
+      {
+        title: "Rekisteröitymistesti",
+        body: "Rekisteröidymme uutena pelaajana ilman VIP-kohtelua. Sekavat lomakkeet, pakotetut lisämyynnit tai epäselvä KYC laskevat pistettä.",
+      },
+      {
+        title: "Oikea talletus",
+        body: "Talletamme markkinalla oikeasti käytetyillä tavoilla — PayPal, kortit, e-lompakot, Trustly/Swish kun se on relevanttia — ja kirjaamme nopeuden, kulut ja minimit.",
+      },
+      {
+        title: "Bonuksen lunastus",
+        body: "Aktivoimme tervetuliaistarjouksen ja luemme ehdot. Kierrätys, max panos, max kotiutus, pelipainotukset ja aikarajat tarkistetaan realismia varten.",
+      },
+      {
+        title: "Pelitesti",
+        body: "Kokeilemme kolikkopelejä, pöytäpelejä ja live-kasinoa työpöydällä ja mobiilissa. Etsimme tunnettuja tarjoajia, vakaata peliä ja selkeää RTP-tietoa kun se on julkaistu.",
+      },
+      {
+        title: "Tukikontakti",
+        body: "Kysymme oikean kysymyksen live-chatissa ja/tai sähköpostilla. Vastausaika, selkeys ja vastausten yhtäpitävyys ehtojen kanssa pisteytetään.",
+      },
+      {
+        title: "Kotiutustesti",
+        body: "Kun se on mahdollista, pyydämme kotiutuksen ja mittaamme ajan pyynnöstä varojen saapumiseen, mukaan lukien lisävarmennuksen kitka.",
+      },
+    ],
     pillarsTitle: "Viisi arviointipilaria",
     pillarsIntro:
       "Yksi vahva osa-alue ei pelasta heikkoa kokonaisuutta. Kasinon on suoriuduttava tasapainoisesti.",
     pillarsToggle: "Näytä tiedot",
+    pillars: [
+      {
+        name: "Pelit",
+        weight: "25%",
+        summary:
+          "Valikoiman laajuus ja laatu, mobiilitoimivuus ja se, ovatko kärkistudiot mukana.",
+        details: [
+          "Kattavuus kolikkopeleissä, pöytäpeleissä ja live-kasinossa",
+          "Vakaus mobiiliselaimissa",
+          "Tunnistetut tarjoajat (esim. Pragmatic, Play’n GO, Evolution)",
+          "Pelitietojen / RTP:n läpinäkyvyys kun saatavilla",
+        ],
+      },
+      {
+        name: "Bonukset",
+        weight: "25%",
+        summary:
+          "Otsikon arvoa tärkeämpää on se, voiko oikea pelaaja lunastaa tarjouksen reilusti.",
+        details: [
+          "Kierrätyskertoimet ja aikarajat",
+          "Max panos / max kotiutus",
+          "Pelipainotukset ja poissuljetut pelit",
+          "Opt-in- ja koodivaatimusten selkeys",
+        ],
+      },
+      {
+        name: "Luottamus ja lisenssi",
+        weight: "20%",
+        summary:
+          "Sääntelyasema, operaattorin historia ja puhdas track record ovat perusta.",
+        details: [
+          "Lisenssin näkyvyys ja valvojan maine",
+          "Yhtiön / ryhmän historia ja brändin jatkuvuus",
+          "Valituskuviot ja riitasignaalit",
+          "Vastuullisen pelaamisen työkalut ja ikärajat",
+        ],
+      },
+      {
+        name: "Maksut",
+        weight: "20%",
+        summary:
+          "Meille merkitsevät oikeat kotiutusajat ja pelaajien käyttämät tavat — erityisesti PayPal tällä sivustolla.",
+        details: [
+          "Talletus- ja kotiutustapojen kattavuus",
+          "Mitattu kotiutusnopeus ja odotusajat",
+          "Kulut, rajat ja tunnistautumisen kitka",
+          "PayPalin / e-lompakon luotettavuus kun sitä mainostetaan",
+        ],
+      },
+      {
+        name: "Tuki",
+        weight: "10%",
+        summary: "Testaamme tuen itse sen sijaan että luottaisimme etusivun väitteisiin.",
+        details: [
+          "Live-chatin / sähköpostin saatavuus",
+          "Aika ensimmäiseen hyödylliseen vastaukseen",
+          "Tarkkuus suhteessa julkaistuihin ehtoihin",
+          "Kielikattavuus markkinalle",
+        ],
+      },
+    ],
     scoresTitle: "Mitä pisteet tarkoittavat",
-    scoresIntro: "Kokonaisarvosana on viiden pilarin painotettu keskiarvo.",
+    scoresIntro:
+      "Kokonaisarvosana on viiden pilarin painotettu keskiarvo, pyöristettynä kasinokorteilla.",
+    bands: [
+      {
+        range: "4.8–5.0",
+        label: "Erinomaista",
+        body: "Vahva kaikilla pilareilla. Markkinan vahvimpia suosituksiamme.",
+      },
+      {
+        range: "4.5–4.7",
+        label: "Erittäin hyvä",
+        body: "Vahva yleisvalinta, jonka heikkoudet harvoin haittaavat ydin­kokemusta.",
+      },
+      {
+        range: "4.0–4.4",
+        label: "Hyvä",
+        body: "Suosittelemisen arvoinen, mutta parannettavaa on selvästi.",
+      },
+      {
+        range: "Alle 4.0",
+        label: "Ei päälistoilla",
+        body: "Emme nosta näitä ensisijaisille ranking-sivuille.",
+      },
+    ],
     updatesTitle: "Pisteitä päivitetään säännöllisesti",
+    updatesBody:
+      "Kasinot muuttuvat — bonukset vaihtuvat, kotiutusajat venyvät, tuen laatu vaihtelee. Palaamme listattuihin brändeihin säännöllisesti ja nopeammin, jos tapahtuu jotain olennaista (lisenssi, omistus, rikkoutunut affiliate-linkki tai pelaajaongelmien piikki).",
     independenceTitle: "Toimituksellinen riippumattomuus",
+    independenceBody:
+      "Osa lähtevistä linkeistä on affiliate-linkkejä — voimme saada provision, jos rekisteröidyt. Se ei koskaan määritä arvosanaa. Arviot seuraavat yllä olevia pilareita. Tarkista aina operaattorin ajantasaiset ehdot, lisenssi ja vastuullisen pelaamisen työkalut ennen talletusta. Vain 18+.",
     faqTitle: "UKK arvioinneista",
+    faq: [
+      {
+        question: "Talletatteko ja kotiutatteko oikeasti?",
+        answer:
+          "Kyllä lyhytlistan brändeillä, kun se on käytännössä mahdollista. Priorisoimme oikeita maksuratoja (myös PayPalia kun se on tarjolla). Emme tee tätä prosessia jokaiselle mainitsemallemme brändille.",
+      },
+      {
+        question: "Voiko kaupallinen sopimus nostaa arvosanaa?",
+        answer:
+          "Ei. Kumppanuudet voivat vaikuttaa siihen, onko meillä toimiva affiliate-linkki, ei numeeriseen arvosanaan.",
+      },
+      {
+        question: "Miksi kasino katosi listalta?",
+        answer:
+          "Yleensä arvosanan lasku, markkinakelpoisuuden muutos tai tauolla oleva affiliate-polku.",
+      },
+      {
+        question: "Ovatko pisteet samat joka maassa?",
+        answer:
+          "Pilarit ovat samat, mutta maksutavat, lisenssikonteksti ja paikalliset tarjoukset eroavat — siksi markkinasivuilla voi olla eri lyhytlista.",
+      },
+    ],
     ctaBlocked: "Katso estetyt kasinot",
     ctaHome: "Takaisin kasinolistoihin",
     footerNote:

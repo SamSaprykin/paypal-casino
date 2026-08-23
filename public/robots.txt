@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
 
+Disallow: /classic-games
+Disallow: /blocked-casinos
+Disallow: /de/gesperrte-casinos
+Disallow: /dk/blokerede-kasinoer
+Disallow: /fi/estettyt-kasinot
+Disallow: /no/blokkerte-kasinoer
+Disallow: /se/blockerade-casinon
+
 # Sitemap
 Sitemap: https://ppcasinos.co/sitemap-index.xml
 
@@ -8,4 +16,3 @@ Sitemap: https://ppcasinos.co/sitemap-index.xml
 Allow: /favicon.ico
 Allow: /site.webmanifest
 Allow: /*.png
-

@@ -1,4 +1,16 @@
 {
+  "routes": [
+    { "src": "/classic-games(?:/.*)?", "status": 410 },
+    { "src": "/(?:de|dk|fi|no|se)/classic-games(?:/.*)?", "status": 410 },
+    { "src": "/blocked-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/gesperrte-casinos(?:/.*)?", "status": 410 },
+    { "src": "/dk/blokerede-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/fi/estettyt-kasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/blokkerte-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/se/blockerade-casinon(?:/.*)?", "status": 410 },
+    { "src": "/tetris(?:/)?", "status": 410 },
+    { "src": "/tetris-50(?:/)?", "status": 410 }
+  ],
   "redirects": [
     {
       "source": "/ireland-guide",
@@ -278,26 +290,6 @@
     {
       "source": "/goto/drip.php",
       "destination": "https://dripway61.com/c9cd7d7f0",
-      "statusCode": 301
-    },
-    {
-      "source": "/tetris",
-      "destination": "/classic-games/tetris/",
-      "statusCode": 301
-    },
-    {
-      "source": "/tetris/",
-      "destination": "/classic-games/tetris/",
-      "statusCode": 301
-    },
-    {
-      "source": "/tetris-50",
-      "destination": "/classic-games/tetris-50/",
-      "statusCode": 301
-    },
-    {
-      "source": "/tetris-50/",
-      "destination": "/classic-games/tetris-50/",
       "statusCode": 301
     },
     {

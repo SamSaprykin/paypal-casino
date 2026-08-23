@@ -1,0 +1,205 @@
+---
+import { paypalPaymentsCopyFor } from "../../../lib/i18n/copies/paypal-payments";
+import {
+  getCasinoBySlug,
+  getCasinoMetaBySlugMap,
+  localizedCasinoDetailHref,
+  localizedStaticPageHref,
+  ROOT_WEBSITE_LOCALE,
+  type WebsiteLocaleKey,
+} from "../../../lib/content";
+
+interface Props {
+  locale?: WebsiteLocaleKey;
+}
+
+const { locale = ROOT_WEBSITE_LOCALE } = Astro.props;
+const copy = paypalPaymentsCopyFor(locale);
+const ratingHref = localizedStaticPageHref(locale, "rating-guidelines");
+const casinoMetaBySlug = await getCasinoMetaBySlugMap();
+
+const reviewHrefBySlug = new Map<string, string>();
+await Promise.all(
+  copy.casinos.map(async (casino) => {
+    const review = await getCasinoBySlug(casino.reviewSlug, locale);
+    if (!review) return;
+    reviewHrefBySlug.set(
+      casino.reviewSlug,
+      localizedCasinoDetailHref(locale, casino.reviewSlug),
+    );
+  }),
+);
+
+function logoFor(slug: string, fallbackName: string) {
+  const meta = casinoMetaBySlug.get(slug);
+  const logo = meta?.logo as
+    | { asset?: { url?: string; altText?: string } }
+    | undefined;
+  const bg =
+    meta?.backgroundColor && typeof meta.backgroundColor === "object"
+      ? (meta.backgroundColor as { hex?: string }).hex
+      : typeof meta?.backgroundColor === "string"
+        ? meta.backgroundColor
+        : undefined;
+  return {
+    src: logo?.asset?.url,
+    alt: logo?.asset?.altText || `${fallbackName} logo`,
+    bg,
+  };
+}
+---
+
+<aside class="mb-6 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm max-w-[calc(100%-2rem)] mx-auto">
+  <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
+    <div class="shrink-0">
+      <img
+        src={copy.authorPhotoSrc}
+        alt={copy.authorPhotoAlt}
+        class="h-20 w-20 rounded-full object-cover ring-2 ring-blue-100"
+        width="80"
+        height="80"
+      />
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <h2 class="text-lg font-bold text-slate-900">
+          {copy.reviewedByPrefix} {copy.authorName}
+        </h2>
+        <span
+          class="inline-flex items-center rounded-full bg-blue-50 px-2.5 py-0.5 text-xs font-semibold text-blue-800"
+        >
+          {copy.authorRole}
+        </span>
+      </div>
+      <p class="mb-3 text-sm leading-relaxed text-slate-600">{copy.authorBio}</p>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-500">
+        <span>{copy.lastPaymentTestLabel}: {copy.authorTestedDate}</span>
+        <span>{copy.pageUpdatedLabel}: {copy.pageUpdatedDate}</span>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<aside class="mb-8 rounded-2xl border border-blue-200 bg-blue-50/80 p-6 shadow-sm max-w-[calc(100%-2rem)] mx-auto">
+  <h2 class="text-lg font-bold text-blue-950">{copy.methodologyTitle}</h2>
+  {
+    copy.methodologyBody.map((para) => (
+      <p class="mt-2 text-sm leading-relaxed text-slate-700">{para}</p>
+    ))
+  }
+  <p class="mt-2 text-sm leading-relaxed text-slate-700">
+    See our{" "}
+    <a
+      href={ratingHref}
+      class="font-semibold text-blue-700 underline decoration-blue-300 hover:text-blue-900"
+    >
+      {copy.methodologyCtaText}
+    </a>
+    .
+  </p>
+  <div class="mt-4 flex flex-wrap gap-2">
+    {
+      copy.methodologyStats.map((stat) => (
+        <span class="inline-flex items-center rounded-md border border-blue-200 bg-white px-2.5 py-1 text-xs font-medium text-blue-800">
+          {stat}
+        </span>
+      ))
+    }
+  </div>
+</aside>
+
+<section
+  class="max-w-6xl mx-auto py-4 max-w-[calc(100%-2rem)] mx-auto"
+  id="paypal-payments-shortlist"
+>
+  <h2 class="mb-2 text-xl font-bold text-gray-800 md:text-2xl">
+    {copy.shortlistTitle}
+  </h2>
+  <p class="mb-6 max-w-3xl text-sm text-gray-600">{copy.shortlistIntro}</p>
+
+  {
+    copy.casinos.map((casino) => {
+      const logo = logoFor(casino.reviewSlug, casino.name);
+      const reviewHref = reviewHrefBySlug.get(casino.reviewSlug);
+      return (
+      <article class="mb-6 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm">
+        <div class="p-4 lg:p-5">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-start">
+            <div class="shrink-0">
+              <div
+                class="flex h-16 w-24 items-center justify-center overflow-hidden rounded-md border border-gray-200 p-2"
+                style={`background-color: ${logo.bg || casino.logoBgColor}`}
+              >
+                {logo.src ? (
+                  <img
+                    src={logo.src}
+                    alt={logo.alt}
+                    width="64"
+                    height="64"
+                    class="h-full w-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <span
+                    class="text-xs font-bold"
+                    style={`color: ${casino.logoTextColor}`}
+                  >
+                    {casino.name.split(" ")[0]}
+                  </span>
+                )}
+              </div>
+            </div>
+            <div class="min-w-0 flex-1">
+              <div class="mb-1 flex flex-wrap items-center gap-2">
+                <h3 class="text-lg font-bold text-gray-900">{casino.name}</h3>
+                <span class="inline-flex items-center rounded-full bg-blue-50 px-2 py-0.5 text-xs font-semibold text-blue-800">
+                  {casino.rating}/5
+                </span>
+                <span class="text-xs text-gray-500">
+                  {copy.testedLabel}: {casino.testedDate}
+                </span>
+              </div>
+              <p class="mb-3 text-sm leading-relaxed text-gray-700">
+                {casino.body}
+              </p>
+              <div class="mb-3 flex flex-wrap gap-2">
+                {casino.methods.map((method) => (
+                  <span class="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700">
+                    {method}
+                  </span>
+                ))}
+              </div>
+              <p class="mb-3 text-xs italic text-gray-500">
+                <strong>{casino.frictionTitle}:</strong> {casino.frictionBody}
+              </p>
+            </div>
+            <div class="shrink-0 lg:w-44">
+              <a
+                href={casino.ctaSlug}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-referral-click
+                class="block w-full rounded-lg bg-blue-600 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+              >
+                {copy.playCtaPrefix} {casino.name.replace(" Casino", "")}
+              </a>
+              {
+                reviewHref && (
+                  <a
+                    href={reviewHref}
+                    class="mt-2 block w-full text-center text-xs font-medium text-blue-700 hover:underline"
+                  >
+                    {copy.reviewCta}
+                  </a>
+                )
+              }
+            </div>
+          </div>
+        </div>
+      </article>
+      );
+    })
+  }
+
+  <p class="mt-4 text-xs text-gray-500">{copy.shortlistFooterNote}</p>
+</section>

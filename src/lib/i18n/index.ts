@@ -12,6 +12,19 @@ export {
   ratingGuidelinesCopyFor,
   RATING_GUIDELINES_COPY,
 } from "./copies/rating-guidelines";
+export {
+  irelandPaymentsCopyFor,
+  IRELAND_PAYMENTS_COPY,
+} from "./copies/ireland-payments";
+export type { IrelandPaymentsCopy } from "./copies/ireland-payments";
+export {
+  paypalPaymentsCopyFor,
+  PAYPAL_PAYMENTS_COPY,
+} from "./copies/paypal-payments";
+export type {
+  PaypalPaymentsCopy,
+  PaypalPaymentsCasinoCopy,
+} from "./copies/paypal-payments";
 export type { RatingGuidelinesCopy } from "./copies/rating-guidelines-types";
 export type {
   StaticSitePagesCopy,

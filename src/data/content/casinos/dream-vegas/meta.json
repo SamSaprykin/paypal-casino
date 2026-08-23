@@ -18,8 +18,22 @@
     "Play'n GO",
     "Microgaming"
   ],
-  "depositMethods": [],
-  "withdrawalMethod": [],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "PayPal",
+    "Neteller",
+    "Skrill",
+    "Revolut"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "PayPal",
+    "Neteller",
+    "Skrill"
+  ],
   "license": "Gambling Commission of Great Britain (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018); Alcohol and Gaming Commission of Ontario / iGaming Ontario (for Ontario, Canada operations only, served via a separate Ontario-facing site)",
   "userRecommendationsRecommendedNumber": null,
   "userRecommendationsTotalNumber": null,

@@ -83,6 +83,8 @@ export {
 } from "./blogPosts";
 export type { BlogArticle } from "./blogPosts";
 
+export { getCasinoMetaBySlugMap } from "./store";
+
 export {
   adaptCasinoPage,
   getAllCasinos,

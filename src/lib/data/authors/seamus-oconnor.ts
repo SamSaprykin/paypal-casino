@@ -18,6 +18,11 @@ const enProfile: AuthorProfile = {
   ],
 };
 
+const deProfile: AuthorProfile = {
+  role: "Senior Casino-Analyst",
+  bio: "Senior Casino-Analyst mit über 8 Jahren Erfahrung in der irischen Glücksspielbranche. Seamus ist spezialisiert auf Bonusanalyse, Zahlungsmethoden und Spielerschutz.",
+};
+
 const fiProfile: AuthorProfile = {
   role: "Johtava kasinoanalyytikko",
   bio: "Johtava kasinoanalyytikko, jolla on yli 8 vuoden kokemus Irlannin uhkapelialalta. Seamus on erikoistunut bonusanalyysiin ja pelaajien suojeluun.",
@@ -36,6 +41,16 @@ const fiProfile: AuthorProfile = {
   ],
 };
 
+const daProfile: AuthorProfile = {
+  role: "Senior casinoanalytiker",
+  bio: "Senior casinoanalytiker med over 8 års erfaring i den irske spilindustri. Seamus er specialiseret i bonusanalyse, betalingsmetoder og spillerbeskyttelse.",
+};
+
+const svProfile: AuthorProfile = {
+  role: "Senior casinoanalytiker",
+  bio: "Senior casinoanalytiker med över 8 års erfarenhet av den irländska spelbranschen. Seamus är specialiserad på bonusanalys, betalmetoder och spelansvar.",
+};
+
 export const seamusOConnor: AuthorRecord = {
   id: "seamus-oconnor",
   name: "Seamus O’Connor",
@@ -50,10 +65,10 @@ export const seamusOConnor: AuthorRecord = {
   externalProfiles: [{ label: "IrishLucky", url: "https://irishlucky.com" }],
   profiles: {
     ireland: enProfile,
-    germany: enProfile,
-    denmark: enProfile,
+    germany: deProfile,
+    denmark: daProfile,
     finland: fiProfile,
     norway: enProfile,
-    sweden: enProfile,
+    sweden: svProfile,
   },
 };

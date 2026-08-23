@@ -35,6 +35,7 @@ const htmlLang = LOCALES[localeId].htmlLang;
 const homeHref = homeHrefForLocale(locale);
 
 const canonicalPath = localizedCasinoDetailHref(locale, casino.slug);
+const isThinReview = (casino.bodyMarkdown ?? "").trim().length < 800;
 
 const seoData = {
  title:
@@ -45,6 +46,7 @@ const seoData = {
  casino.shortDescription ||
  `Read our ${casino.casinoName} review — bonuses, payments, pros and cons.`,
  canonical: canonicalPath,
+ noIndex: isThinReview,
  openGraph: {
  title: casino.seo?.seoTitle || `${casino.casinoName} Review`,
  description: casino.seo?.seoDescription || casino.shortDescription,

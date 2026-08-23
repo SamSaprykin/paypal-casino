@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../Layout/Header.astro";
+import Footer from "../../Layout/Footer.astro";
+import {
+  homeHrefForLocale,
+  ROOT_WEBSITE_LOCALE,
+  type WebsiteLocaleKey,
+} from "../../../lib/content";
+
+interface Props {
+  locale?: WebsiteLocaleKey;
+}
+
+const { locale = ROOT_WEBSITE_LOCALE } = Astro.props as Props;
+Astro.response.status = 410;
+
+const homeHref = homeHrefForLocale(locale);
+const seoData = {
+  title: "Page removed",
+  description: "This page has been permanently removed.",
+  noIndex: true,
+  noFollow: true,
+};
+---
+
+<BaseLayout seo={seoData} lang="en">
+  <Header locale={locale} />
+  <main class="min-h-[60vh] px-6 pb-16 pt-32">
+    <div class="mx-auto max-w-xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-slate-500">
+        410 Gone
+      </p>
+      <h1 class="mt-2 text-3xl font-bold text-slate-900">This page is gone</h1>
+      <p class="mt-4 text-slate-600 leading-relaxed">
+        We removed this URL from the site. It will not return.
+      </p>
+      <a
+        href={homeHref}
+        class="mt-8 inline-flex rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+      >
+        Back to homepage
+      </a>
+    </div>
+  </main>
+  <Footer locale={locale} />
+</BaseLayout>

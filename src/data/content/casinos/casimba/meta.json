@@ -18,8 +18,21 @@
     "Play'n GO",
     "Microgaming"
   ],
-  "depositMethods": [],
-  "withdrawalMethod": [],
+  "depositMethods": [
+    "Visa",
+    "Mastercard",
+    "Maestro",
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
+  "withdrawalMethod": [
+    "Visa",
+    "Mastercard",
+    "PayPal",
+    "Skrill",
+    "Neteller"
+  ],
   "license": "UK Gambling Commission (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018) — applies to customers outside Great Britain",
   "userRecommendationsRecommendedNumber": null,
   "userRecommendationsTotalNumber": null,

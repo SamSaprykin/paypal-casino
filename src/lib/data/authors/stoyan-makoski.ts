@@ -7,7 +7,22 @@ const enProfile: AuthorProfile = {
 
 const fiProfile: AuthorProfile = {
   role: "Pääsisältötoimittaja",
-  bio: "Entinen projektipäällikkö huipputason nettikasinolla. Viiden vuoden pelialan kokemuksen jälkeen Stoyan perusti itsenäisen toimituksellisen yrityksen auttaakseen pelaajia ymmärtämään bonuksia, maksutapoja ja operaattoreiden pienellä präntättyjä ehtoja — muuttaen sisäpiirin tiedon selkeiksi, rehellisiksi oppaisi.",
+  bio: "Entinen projektipäällikkö huipputason nettikasinolla. Viiden vuoden pelialan kokemuksen jälkeen Stoyan perusti itsenäisen toimituksellisen yrityksen auttaakseen pelaajia ymmärtämään bonuksia, maksutapoja ja operaattoreiden pienellä präntättyjä ehtoja.",
+};
+
+const daProfile: AuthorProfile = {
+  role: "Ledende indholdsredaktør",
+  bio: "Tidligere projektleder hos et tier-one online casino. Efter fem år i spilindustrien grundlagde Stoyan en uafhængig redaktion, der hjælper spillere med at forstå bonusser, betalingsmetoder og det med småt.",
+};
+
+const svProfile: AuthorProfile = {
+  role: "Ledande innehållsredaktör",
+  bio: "Tidigare projektledare på ett tier-one-casinobolag. Efter fem år i spelbranschen grundade Stoyan en oberoende redaktion för att hjälpa spelare förstå bonusar, betalmetoder och det finstilta.",
+};
+
+const nbProfile: AuthorProfile = {
+  role: "Ledende innholdsredaktør",
+  bio: "Tidligere prosjektleder hos et tier-one nettkasino. Etter fem år i spillbransjen grunnla Stoyan en uavhengig redaksjon som hjelper spillere å forstå bonuser, betalingsmetoder og det som står med liten skrift.",
 };
 
 export const stoyanMakoski: AuthorRecord = {
@@ -24,9 +39,9 @@ export const stoyanMakoski: AuthorRecord = {
   profiles: {
     ireland: enProfile,
     germany: enProfile,
-    denmark: enProfile,
+    denmark: daProfile,
     finland: fiProfile,
-    norway: enProfile,
-    sweden: enProfile,
+    norway: nbProfile,
+    sweden: svProfile,
   },
 };
