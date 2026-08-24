@@ -36,14 +36,23 @@ import { ArticleContentImage } from "./Content/ArticleContentImage.jsx";
 import { PaymentSpeedChart } from "./Content/PaymentSpeedChart.jsx";
 import {
   ArticleMarkdownArticleWrapper,
+  ArticleMarkdownCheckList,
   ArticleMarkdownCriteriaGrid,
   ArticleMarkdownEditorNote,
   ArticleMarkdownHowToStepCards,
+  ArticleMarkdownInfoYellowBox,
   ArticleMarkdownProsCons,
+  ArticleMarkdownReferencesList,
+  ArticleMarkdownRelatedPages,
+  ArticleMarkdownSlider,
+  parseCheckListFromHast,
   parseCriteriaGridFromHast,
   parseEditorNoteParagraphs,
   parseHowToStepCardsFromHast,
   parseProsConsFromHast,
+  parseReferencesListFromHast,
+  parseRelatedPagesFromHast,
+  parseSliderFromHast,
 } from "./Content/articleMarkdownBlocks.jsx";
 import { LastUpdated } from "./LastUpdated.jsx";
 import { resolveFreshness } from "../../lib/content/freshness";
@@ -845,6 +854,58 @@ export const ContentComponent = ({
                           cons={pc.cons}
                         />
                       );
+                    }
+                  }
+
+                  if (className.includes("check-list")) {
+                    const list = parseCheckListFromHast(node);
+                    if (list.items.length) {
+                      return (
+                        <ArticleMarkdownCheckList
+                          title={list.title}
+                          items={list.items}
+                        />
+                      );
+                    }
+                  }
+
+                  if (className.includes("references-list")) {
+                    const list = parseReferencesListFromHast(node);
+                    if (list.items.length) {
+                      return (
+                        <ArticleMarkdownReferencesList
+                          title={list.title}
+                          items={list.items}
+                        />
+                      );
+                    }
+                  }
+
+                  if (className.includes("info-yellow-box")) {
+                    return (
+                      <ArticleMarkdownInfoYellowBox>
+                        {props.children}
+                      </ArticleMarkdownInfoYellowBox>
+                    );
+                  }
+
+                  if (
+                    className.includes("slider-component") ||
+                    props.id === "slider-component"
+                  ) {
+                    const items = parseSliderFromHast(node);
+                    if (items.length) {
+                      return <ArticleMarkdownSlider items={items} />;
+                    }
+                  }
+
+                  if (
+                    className.includes("related-pages") ||
+                    className.includes("link-hub")
+                  ) {
+                    const items = parseRelatedPagesFromHast(node);
+                    if (items.length) {
+                      return <ArticleMarkdownRelatedPages items={items} />;
                     }
                   }
 

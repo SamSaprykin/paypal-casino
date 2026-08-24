@@ -1,187 +1,231 @@
-# Prompt: Enhance & QA Home Page content (per geo)
+# Home Page — structure, research, then implement
 
-Use this prompt to **audit, improve, and spell-check** the Home Page MDX for one market. This is an **enhancement pass**, not a full rewrite — preserve structure, section IDs, and casino rankings unless the task explicitly asks for a rewrite.
+Two-phase workflow. **Do not write full locale copy until Phase A is filled.** Ireland (`ireland.mdx`) is the structural gold copy. DE/DK/FI/NO/SE homes were accidentally filled with PayPal-page IDs, so `mergePageSections` dropped the body (IDs must match `meta.json`).
 
-**Files (do not change `meta.json` or casino lists unless asked):**
+**Files**
 
-| Locale key | File                                           | Public URL |
-| ---------- | ---------------------------------------------- | ---------- |
-| `ireland`  | `src/data/content/pages/home-page/ireland.mdx` | `/`        |
-| `germany`  | `src/data/content/pages/home-page/germany.mdx` | `/de/`     |
-| `denmark`  | `src/data/content/pages/home-page/denmark.mdx` | `/dk/`     |
-| `finland`  | `src/data/content/pages/home-page/finland.mdx` | `/fi/`     |
-| `norway`   | `src/data/content/pages/home-page/norway.mdx`  | `/no/`     |
-| `sweden`   | `src/data/content/pages/home-page/sweden.mdx`  | `/se/`     |
+| Locale   | MDX                                              | URL    |
+| -------- | ------------------------------------------------ | ------ |
+| ireland  | `src/data/content/pages/home-page/ireland.mdx`   | `/`    |
+| germany  | `src/data/content/pages/home-page/germany.mdx`   | `/de/` |
+| denmark  | `src/data/content/pages/home-page/denmark.mdx`   | `/dk/` |
+| finland  | `src/data/content/pages/home-page/finland.mdx`   | `/fi/` |
+| norway   | `src/data/content/pages/home-page/norway.mdx`    | `/no/` |
+| sweden   | `src/data/content/pages/home-page/sweden.mdx`    | `/se/` |
 
-Casino cards are injected from `meta.json` via section id `casinoListIntl.markets` — **never duplicate rankings in copy**.
+Casino cards come from `home-page/meta.json` → `casinoListIntl.markets` → `casinoListsByCountry`. Never invent ranking order.
+
+PayPal long-form lives in `src/data/content/pages/paypal-casino/` — **do not paste it onto Home**.
+
+Research output: `prompts/research/home-<locale>.md` (start from `prompts/research/home-template.md`).
 
 ---
 
-## System prompt
+## Why merge drops copy
 
-You are a senior iGaming editor for **PpCasinos.co**. Your job is to improve existing Home Page copy for **one locale**: fix spelling/grammar, remove English bleed, tighten SEO, validate links, and optionally modernise callout markup. Tone: direct, editorial, player-first. No hype, no guaranteed wins.
+`src/lib/content/store.ts` `mergePageSections` joins **by section `id`**. Meta order wins. Locale YAML only applies when `id` matches.
 
-### Page structure (must not change)
+Required IDs:
 
-Home Page uses **YAML frontmatter only** — all body copy lives in `sections[].bodyMarkdown` or `faqComponent.items`. There is no MDX body below the closing `---`.
+| kind                 | id                                           | Role                                      |
+| -------------------- | -------------------------------------------- | ----------------------------------------- |
+| `contentComponent`   | `cc19c2f3-0994-47bd-b143-61f880188e97` | Into HP — **one H1** + short intro       |
+| `image` (optional)   | `hp-img-hero`                          | Hero when file exists in `src/images/content/` |
+| `casinoList`         | `casinoListIntl.markets`               | Cards from meta                          |
+| `contentComponent`   | `e6695325-bdb3-4018-a6bd-fd0729b66642` | HP Body — guide, tables, callouts, links |
+| `faqComponent`       | `81648ffc-2ace-40ad-9c81-8b4d896c9bb4` | 4–5 FAQs                                 |
 
-| Section kind       | ID                                                 | Purpose                                   |
-| ------------------ | -------------------------------------------------- | ----------------------------------------- |
-| `contentComponent` | `cc19c2f3-0994-47bd-b143-61f880188e97` (`Into HP`) | H1 + short intro (above casino list)      |
-| `casinoList`       | `casinoListIntl.markets`                           | **In meta.json only** — do not add to MDX |
-| `contentComponent` | `e6695325-bdb3-4018-a6bd-fd0729b66642` (`HP Body`) | Main guide body                           |
-| `faqComponent`     | `81648ffc-2ace-40ad-9c81-8b4d896c9bb4`             | 4–5 market-relevant Q&As                  |
+YAML frontmatter only (no MDX body after closing `---`). Use `bodyMarkdown` on content sections (Ireland shape). Headings after H1 start at `##`.
 
-**One H1** in `Into HP` only. All other headings start at `##`.
+---
 
-### Non-negotiable rules
+## Phase A — research (human fills; AI does not invent)
 
-1. **Language:** 100% native for the target locale. Keep brand names, PayPal, MGA, KYC, GGL, OASIS, ROFUS, etc. as-is.
-2. **Output:** One complete MDX file only — YAML between `---` fences, nothing after the closing `---`.
-3. **YAML safety:** Quote strings containing `:`, `#`, `—`, `*`, or leading digits. Use `|-` block scalars for `bodyMarkdown`.
-4. **Section IDs:** Keep exact IDs above. Do not add/remove/reorder sections.
-5. **Do not invent** licence numbers, fine amounts, operator scandals, or legal claims. Hedge regulatory dates.
-6. **Responsible gambling:** End `HP Body` or FAQ with 18+ and a local help resource once.
-7. **Internal links only** — use slugs from `src/data/content/pages/_index.json` for that locale (see table below). No `/denmark-guide/`, `/ireland-guide/`, or placeholder English anchor text.
-8. **Spelling pass:** Run a full native-language spell-check. Fix typos, wrong compound words, inconsistent capitalisation, and anglicisms that have a natural local equivalent.
+Copy `prompts/research/home-template.md` → `prompts/research/home-<locale>.md`.
 
-### Known issues to fix (check every locale)
+Collect:
 
-- **English bleed:** Leftover English phrases in non-IE files (e.g. _"Autumn 2026 PayPal Casino Bonuses"_, _"Best Slot Games to Play at PayPal"_, _"When to Use PayPal – Smart Guide 2026"_). Translate or replace with real internal links.
-- **Broken / legacy URLs:** Remove links to `/denmark-guide/`, `/suomi-guide/`, `/germany-guide/`, `/casino-guide/` — these are redirects only.
-- **Wrong HTML attribute:** Use `class="info-card"` not `className="info-card"` inside `bodyMarkdown`.
-- **Inconsistent positioning:** Ireland home is a **payment-methods comparison** hub; other locales should match their market angle (PayPal-first, GGL/regulation-first, etc.) — align intro H1/SEO with body, don't mix unrelated angles.
-- **Placeholder links:** Replace plain-text guide references with working relative links or remove them.
-- **Emoji in how-to steps:** Prefer structured markup (see Components below) over raw 🎰 emoji if refactoring callouts.
+1. **Angle** (see geo pack below).
+2. **Regulator + help URLs** (primary sources).
+3. **Payment mix** with deposit/withdraw/fees/bonus eligibility; mark `confirmed | operator-stated | unknown`.
+4. **Casino list audit** vs `casinoListsByCountry` — no new ranking.
+5. **Screenshots** listed in § Assets.
+6. **Internal hrefs** from the table below.
+7. **FAQ questions** that match the body.
 
-### Internal link reference (per locale)
+Forbidden in research and later copy: licence numbers, fines, scandals, “we tested on DATE” unless you attach evidence, copying another geo’s table.
 
-Use these paths when cross-linking (prefix `/de/`, `/fi/`, etc. for non-IE markets):
+### Geo pack
 
-| Page              | ireland                   | germany                                 | denmark                               | finland                           | norway                              | sweden                               |
-| ----------------- | ------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------- | ----------------------------------- | ------------------------------------ |
-| Home              | `/`                       | `/de/`                                  | `/dk/`                                | `/fi/`                            | `/no/`                              | `/se/`                               |
-| PayPal            | `/paypal-casino-ireland/` | `/de/casinos-mit-paypal/`               | `/dk/paypal-casino-danmark/`          | `/fi/paypal-kasinot/`             | `/no/paypal-kasinoer-norge/`        | `/se/paypal-casinon-sverige/`        |
-| New casinos       | `/new-casinos/`           | `/de/neue-casinos/`                     | `/dk/nye-kasinoer/`                   | `/fi/uudet-kasinot/`              | `/no/nye-kasinoer/`                 | `/se/nya-casinon/`                   |
-| Bonuses           | `/casino-bonuses/`        | `/de/casino-bonus/`                     | `/dk/casino-bonusser/`                | `/fi/kasinobonukset/`             | `/no/casino-bonuser/`               | `/se/casinobonusar/`                 |
-| Blocked           | `/blocked-casinos/`       | `/de/gesperrte-casinos/`                | `/dk/blokerede-kasinoer/`             | `/fi/estettyt-kasinot/`           | `/no/blokkerte-kasinoer/`           | `/se/blockerade-casinon/`            |
-| Fast payout       | `/fast-payout-casinos/`   | `/de/casinos-mit-schneller-auszahlung/` | `/dk/kasinoer-med-hurtig-udbetaling/` | `/fi/nopeat-kotiutukset-kasinot/` | `/no/kasinoer-med-rask-utbetaling/` | `/se/casinon-med-snabb-utbetalning/` |
-| Mobile            | `/mobile-casinos/`        | `/de/handy-casinos/`                    | `/dk/mobil-kasinoer/`                 | `/fi/mobiilikasinot/`             | `/no/mobilkasinoer/`                | `/se/mobilcasinon/`                  |
-| Rating guidelines | `/rating-guidelines/`     | `/de/rating-guidelines/`                | `/dk/rating-guidelines/`              | `/fi/rating-guidelines/`          | `/no/rating-guidelines/`            | `/se/rating-guidelines/`             |
+| Locale  | Angle | Help (verify URL) |
+| ------- | ----- | ----------------- |
+| ireland | Payment methods hub | gamblingcare.ie / BeGambleAware |
+| germany | GGL vs MGA; PayPal often off GGL | BZgA 0800 1 372 700 |
+| denmark | Spillemyndigheden / ROFUS | stopspillet.dk |
+| finland | International MGA vs FI context | peluuri.fi |
+| norway  | Bank blocks; no legal advice | Hjelpelinjen |
+| sweden  | Spelinspektionen / Spelpaus; Swish/Trustly | stodlinjen.se |
 
-### Markup: HTML callouts vs MDX components
+### What each page is for (Home is the hub)
 
-Home Page content is stored in **YAML `bodyMarkdown` strings**, not importable MDX bodies. Two valid approaches:
+Home **introduces** the market and **points** to specialist pages. Do not paste those pages onto Home. One or two sentences + a link is enough. Match the header mega-menu.
 
-#### A) Keep HTML callouts (default — lowest risk)
+**Header — Casino types**
 
-Continue using these patterns; they render via `ContentComponent.jsx`:
+| Page | What it is | Home should say (then link) |
+| ---- | ---------- | --------------------------- |
+| **New casinos** | Brands launched or newly listed recently — freshness, first bonuses, who they suit. | Where to look if you want a new operator, not a payment deep-dive. |
+| **Fast payout** | Withdrawal speed: e-wallets vs cards vs crypto; KYC delays. | How cashout speed differs; full comparison lives here. |
+| **Mobile** | Play on phone/tablet: browser vs app, cashier on small screens. | Mobile-first play; not a payment-methods article. |
+| **Min deposit** | Low first deposits (€1 / €5 / €10 tiers) and which methods allow them. | Small bankroll / test deposit; details on that page. |
+
+**Header — Payments**
+
+| Page | What it is | Home should say (then link) |
+| ---- | ---------- | --------------------------- |
+| **PayPal** | Full PayPal cashier guide: deposits, withdrawals, fees, bonus exclusions, which brands list PayPal. | Home may mention PayPal in a comparison table — **all operator PayPal reviews stay on this page**. |
+| **Revolut** | Revolut as **card / Revolut Pay**, not a PayPal-style wallet. Gambling MCC blocks, FX, withdrawals usually not “to Revolut”. | Card-fintech path vs e-wallet; do not treat Revolut as PayPal. |
+| **Crypto** | BTC / ETH / stablecoins: speed, volatility, irreversible errors, KYC still applies. **No Norway URL in `_index.json`.** Germany: crypto typically **not** on GGL casinos. | Privacy/speed trade-offs; risks stay on the crypto page. |
+
+**Header — Offers**
+
+| Page | What it is | Home should say (then link) |
+| ---- | ---------- | --------------------------- |
+| **Bonuses** | Welcome/reload terms, wagering, method exclusions (PayPal/e-wallets often out). | Bonus hunters go here; Home does not dump T&Cs. |
+
+**Not in the header (still link from Home)**
+
+| Page | What it is |
+| ---- | ---------- |
+| **Blocked casinos** | Brands we paused affiliate links for (not a legal ban). |
+| **Rating guidelines** | How we score casinos (static page). Builds EEAT; link once. |
+| **Home** | This page: market overview, ranked list, payment **orientation**, then links into the silos above. |
+
+Related-pages hub must include **every header item that exists for that locale** (skip crypto on NO). Add blocked + rating guidelines as well.
+
+### Internal links (`_index.json`)
+
+Prefix `/de/`, `/dk/`, `/fi/`, `/no/`, `/se/` on paths that are **not** already prefixed.
+
+| Page | ireland | germany | denmark | finland | norway | sweden |
+| ---- | ------- | ------- | ------- | ------- | ------ | ------ |
+| Home | `/` | `/de/` | `/dk/` | `/fi/` | `/no/` | `/se/` |
+| PayPal | `/paypal-casino-ireland/` | `/casinos-mit-paypal/` | `/paypal-casino-danmark/` | `/paypal-kasinot/` | `/paypal-kasinoer-norge/` | `/paypal-casinon-sverige/` |
+| New | `/new-casinos/` | `/neue-casinos/` | `/nye-kasinoer/` | `/uudet-kasinot/` | `/nye-kasinoer/` | `/nya-casinon/` |
+| Bonuses | `/casino-bonuses/` | `/casino-bonus/` | `/casino-bonusser/` | `/kasinobonukset/` | `/casino-bonuser/` | `/casinobonusar/` |
+| Fast payout | `/fast-payout-casinos/` | `/casinos-mit-schneller-auszahlung/` | `/kasinoer-med-hurtig-udbetaling/` | `/nopeat-kotiutukset-kasinot/` | `/kasinoer-med-rask-utbetaling/` | `/casinon-med-snabb-utbetalning/` |
+| Mobile | `/mobile-casinos/` | `/handy-casinos/` | `/mobil-kasinoer/` | `/mobiilikasinot/` | `/mobilkasinoer/` | `/mobilcasinon/` |
+| Min deposit | `/minimum-deposit-casinos/` | `/de/casinos-mit-mindesteinzahlung/` | `/dk/kasinoer-med-lav-indbetaling/` | `/fi/pienen-talletuksen-kasinot/` | `/no/kasinoer-med-lav-innskudd/` | `/se/casinon-med-lag-insattning/` |
+| Revolut | `/revolut-casinos/` | `/de/revolut-casinos/` | `/dk/revolut-kasinoer/` | `/fi/revolut-kasinot/` | `/no/revolut-kasinoer/` | `/se/revolut-casinon/` |
+| Crypto | `/crypto-casinos/` | `/de/krypto-casinos/` | `/dk/krypto-casinoer/` | `/fi/krypto-kasinot/` | *(no NO slug in `_index`)* | `/se/krypto-casinon/` |
+| Blocked | `/blocked-casinos/` | `/gesperrte-casinos/` | `/blokerede-kasinoer/` | `/estettyt-kasinot/` | `/blokkerte-kasinoer/` | `/blockerade-casinon/` |
+| Rating | `/rating-guidelines/` | `/de/rating-guidelines/` | `/dk/rating-guidelines/` | `/fi/rating-guidelines/` | `/no/rating-guidelines/` | `/se/rating-guidelines/` |
+
+Every HP Body must include a `.related-pages` hub with **at least** PayPal, new, bonuses, fast payout, mobile, min deposit, Revolut, and rating guidelines (plus crypto/blocked when the locale has a URL).
+
+### Task message — research
+
+```
+Fill prompts/research/home-<locale>.md from prompts/research/home-template.md.
+Do not write MDX. Do not invent speeds, fees, licences, or “we tested” claims.
+Cite primary URLs. Mark unknown where unverified.
+```
+
+---
+
+## Phase B — implement + QA research (after Phase A)
+
+### System prompt
+
+You are a senior iGaming editor for **PpCasinos.co**. Implement **one** Home locale from a filled `prompts/research/home-<locale>.md`. Native language. Direct, player-first, no hype, no guaranteed wins. YAML-only MDX.
+
+### Research QA (fail the run if any hit)
+
+- Fact in copy not in the research file (except obvious UI chrome / RG boilerplate).
+- Evidence `unknown` presented as confirmed.
+- Payment table copied from another geo.
+- Casino order changed vs meta.
+- PayPal page operator reviews duplicated.
+- Broken or English-only internal links on a non-IE page.
+- `className=` in HTML (must be `class=`).
+- Nested custom block divs.
+- More than one H1.
+
+### Markup catalog (HTML inside `bodyMarkdown`)
+
+Do **not** nest these wrappers. Markdown tables (GFM pipes) are allowed as-is.
+
+**Existing:** `info-card`, `tip-box`, `warning-box`, `editor-note`, `criteria-grid` + `data-lucide`, `how-to` (`step-card` or `step-item`), `content-freshness` / `last-updated`, `payment-speed-chart` (empty div — chart is React), `pros-cons` (either `.pros`/`.cons` items **or** two `<ul>` after headings).
+
+**Home / CMS extras:**
 
 ```html
-<div class="info-card">…</div>
-<div class="tip-box">…</div>
-<div class="pros-cons">
-  <div class="pros">…</div>
-  <div class="cons">…</div>
+<div class="check-list">
+  <h2>Key Details</h2>
+  <ul>
+    <li>Minimum deposit: €10</li>
+  </ul>
 </div>
-<div class="how-to">
-  <div class="step-item">
-    <span class="icon">🔍</span>
-    <h5 class="step-title">Title</h5>
-    <p class="step-description">Description</p>
-  </div>
+
+<div class="references-list">
+  <h2>Reference list</h2>
+  <ul>
+    <li><a href="https://example.com">Source name — document</a></li>
+  </ul>
+</div>
+
+<div class="info-yellow-box">
+  <p><strong>Editor's note:</strong> Confirm bonus terms on the operator site.</p>
+</div>
+
+<div id="slider-component">
+  <div id="slider-item"><span id="name">Safety</span><span id="value">85</span></div>
+  <div id="slider-item"><span id="name">Bonus</span><span id="value">90</span></div>
+  <div id="slider-item"><span id="name">Games</span><span id="value">90</span></div>
+  <div id="slider-item"><span id="name">License</span><span id="value">80</span></div>
+  <div id="slider-item"><span id="name">T&amp;C</span><span id="value">85</span></div>
+  <div id="slider-item"><span id="name">Customer Service</span><span id="value">85</span></div>
+</div>
+
+<div class="related-pages">
+  <a href="/paypal-casino-ireland/">PayPal casinos</a>
+  <a href="/new-casinos/">New casinos</a>
 </div>
 ```
 
-Use `class`, never `className`. Tables use standard markdown pipe syntax inside the block scalar.
+Slider names (English or local label): Safety, Bonus, Games, License, T&C, Customer Service (also Sicherheit, Spiele, Lizenz, Geschäftsbedingungen, Kundendienst). Values 0–100. Icons are Lucide, not PNGs.
 
-#### B) Migrate to MDX components (optional refactor)
+Full parser notes: `src/components/Pages/Content/components-mdx.md`.
 
-Only if you also change how sections are loaded (split body into a separate `.mdx` partial with `mdxPath`, or move content below frontmatter). Then you may use components from `src/mdx-components.ts`:
+### Assets to source (not implemented until files exist)
 
-| Component                                                                           | Replaces                       |
-| ----------------------------------------------------------------------------------- | ------------------------------ |
-| `<InfoArticle>`                                                                     | `div.info-card`                |
-| `<TipArticle>`                                                                      | `div.tip-box`                  |
-| `<ProsConsArticle pros={[]} cons={[]}>`                                             | `div.pros-cons`                |
-| `<HowToArticle>` + `<StepCard icon="Shield" stepNum="1" title="…" description="…">` | `div.how-to` / `div.step-item` |
-| `<CriteriaGrid>` + `<CriteriaItem icon="CreditCard" title="…" description="…">`     | Feature grids                  |
-| `<EditorNote>`                                                                      | Editorial asides               |
+**SVGs** → `src/assets/svg/` or `src/components/Icons/` (brand marks only if licensed; otherwise Lucide):
 
-`StepCard` icons: `UserPlus`, `Landmark`, `ClipboardList`, `CreditCard`, `Gamepad2`, `Banknote`, `Shield`, `Eye`, `Smartphone`, `Headphones`, `LayoutDashboard`.
+- Payments: PayPal, Trustly, Revolut, Visa, Mastercard, Skrill, Neteller, Bitcoin, USDT, Swish, MobilePay, BankID.
+- Trust: licence/shield, KYC, 18+, responsible gambling.
+- Hub: fast payout, mobile, bonus, new casino (`payPalIcon`, `cryptoIcon`, `fastIcon`, `mobileIcon`, `bonusIcon`, `newIcon`, `revolutIcon` already exist).
 
-**Do not mix approaches in one section** without testing the build. For a content-only QA pass, prefer **approach A**.
+**Screenshots** → `src/images/content/` (`home-hero.{locale}.webp`, `home-cashier-paypal`, `home-cashier-local`, `home-withdraw-status`, `home-bonus-tnc`, `home-licence-footer`, `home-kyc`, `home-rg-tools`). Prefer real cashier/licence shots. Uncomment `kind: image` in MDX only when the file exists.
 
-### Geo pack — pick ONE per run
+### Task message — implement
 
-#### Ireland (`ireland.mdx`) — English (en-IE)
+```
+Implement Home Page for locale: <locale> using prompts/research/home-<locale>.md.
+Follow prompts/home-page.md Phase B.
+Overwrite only src/data/content/pages/home-page/<locale>.mdx
+Keep IDs: cc19c2f3-0994-47bd-b143-61f880188e97, casinoListIntl.markets,
+e6695325-bdb3-4018-a6bd-fd0729b66642, 81648ffc-2ace-40ad-9c81-8b4d896c9bb4.
+Do not change meta.json casino lists.
+QA the research file first; reject unsourced claims.
+Tease each header page in one or two sentences (see “What each page is for”) then link — do not copy PayPal/Revolut/bonus articles onto Home.
+Include a related-pages hub covering every header item for that locale.
+Return the full MDX only.
+```
 
-- Angle: **payment-methods comparison** (PayPal, crypto, Neteller, bank card).
-- Regulator: GRAI / Gambling Regulation Act (hedged).
-- Help: gamblingcare.ie / BeGambleAware.
-- Currency: EUR.
-
-#### Germany (`germany.mdx`) — German (de-DE)
-
-- Angle: GGL-licensed / legal DE online casinos; PayPal & Trustly.
-- Regulator: GGL, GlüStV, OASIS, LUGAS (high level).
-- Help: BZgA 0800 1 372 700.
-- Currency: EUR.
-
-#### Denmark (`denmark.mdx`) — Danish (da-DK)
-
-- Angle: PayPal casinos + Spillemyndigheden / ROFUS.
-- Help: StopSpillet / stopspillet.dk.
-- Currency: DKK (natural) / EUR where relevant.
-
-#### Finland (`finland.mdx`) — Finnish (fi-FI)
-
-- Angle: Finnish + international casinos, payment methods.
-- Help: Peluuri (peluuri.fi).
-- Currency: EUR (`10 €` spacing).
-
-#### Norway (`norway.mdx`) — Norwegian Bokmål (nb-NO)
-
-- Angle: PayPal / offshore context — careful compliance tone, no legal advice.
-- Currency: NOK.
-
-#### Sweden (`sweden.mdx`) — Swedish (sv-SE)
-
-- Angle: PayPal casinos, Spelinspektionen context.
-- Currency: SEK.
-
-### Enhancement checklist (apply in order)
-
-1. Read current file + `meta.json` section IDs.
-2. Native spell-check entire file (including FAQ).
-3. Remove/fix English bleed and placeholder anchor text.
-4. Validate every internal link against the table above.
-5. Tighten `seoTitle` (≤65 chars) and `seoDescription` (140–160 chars) — include 2026, market, and primary intent.
-6. Improve scannability: tables, bullet lists, callouts where walls of text exist.
-7. Ensure FAQ questions match the body (payment methods, PayPal, regulation, withdrawals).
-8. Add `*Last updated: …*` line at end of `HP Body` if missing.
-9. Return the full MDX file only.
-
-### Reference files
-
-- Best-structure example (payment comparison): `src/data/content/pages/home-page/ireland.mdx`
-- PayPal-focused example: `src/data/content/pages/home-page/denmark.mdx`
-- GGL/regulation example: `src/data/content/pages/home-page/germany.mdx`
-- Component source: `src/components/Pages/Content/ContentArticleComponents.jsx`
+One locale per generation.
 
 ---
 
-## Task message (copy per geo)
+## Appendix — old enhancement QA (Ireland refresh)
 
-```
-Enhance and spell-check the Home Page for locale: <ireland|germany|denmark|finland|norway|sweden>.
-
-Follow prompts/home-page.md strictly.
-Overwrite: src/data/content/pages/home-page/<locale>.mdx
-Keep section IDs: cc19c2f3-0994-47bd-b143-61f880188e97, e6695325-bdb3-4018-a6bd-fd0729b66642, 81648ffc-2ace-40ad-9c81-8b4d896c9bb4.
-Do not change meta.json or casino lists.
-Fix English bleed, spelling, broken links, and className→class issues.
-Return only the MDX file contents.
-```
-
-Run **one locale per generation**. Suggested order: `denmark` → `finland` → `norway` → `sweden` → `germany` → `ireland` (refresh last).
+Spell-check, English bleed, `class` not `className`, no `/denmark-guide/` URLs, `seoTitle` ≤65 / `seoDescription` 140–160, last-updated line, RG once. Do not use this appendix to rewrite non-IE stubs until Phase A exists.

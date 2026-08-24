@@ -17,6 +17,11 @@ import {
   Gamepad2,
   Banknote,
   Info,
+  FileText,
+  Scale,
+  Headphones as Headset,
+  Gift,
+  ListChecks,
 } from "lucide-react";
 
 const LUCIDE_ICONS = {
@@ -38,7 +43,18 @@ const LUCIDE_ICONS = {
   Gamepad2,
   Banknote,
   Info,
+  FileText,
+  Scale,
+  Headset,
+  Gift,
+  ListChecks,
 };
+
+function hastId(properties) {
+  const id = properties?.id;
+  if (Array.isArray(id)) return id[0];
+  return typeof id === "string" ? id : "";
+}
 
 function hastClassList(properties) {
   const c = properties?.className;
@@ -267,17 +283,33 @@ export function parseProsConsFromHast(node) {
       .filter(Boolean);
   };
 
-  const pros = extractLines(prosContainer, "pro-item");
-  const cons = extractLines(consContainer, "con-item");
+  let pros = extractLines(prosContainer, "pro-item");
+  let cons = extractLines(consContainer, "con-item");
 
-  const prosTitle = prosLabelEl
+  let prosTitle = prosLabelEl
     ? textFromHastTree(stripIconPlaceholdersFromTree(prosLabelEl)).trim() ||
       "Fordele"
     : "Fordele";
-  const consTitle = consLabelEl
+  let consTitle = consLabelEl
     ? textFromHastTree(stripIconPlaceholdersFromTree(consLabelEl)).trim() ||
       "Ulemper"
     : "Ulemper";
+
+  const lists = childrenElements(node).filter((c) => c.tagName === "ul");
+  if ((!pros.length && !cons.length) && lists.length >= 2) {
+    const headings = childrenElements(node).filter((c) =>
+      /^h[1-6]$/.test(c.tagName || ""),
+    );
+    if (headings[0]) prosTitle = textFromHastTree(headings[0]).trim() || prosTitle;
+    if (headings[1]) consTitle = textFromHastTree(headings[1]).trim() || consTitle;
+    const listLines = (ul) =>
+      childrenElements(ul)
+        .filter((li) => li.tagName === "li")
+        .map((li) => textFromHastTree(li).trim())
+        .filter(Boolean);
+    pros = listLines(lists[0]);
+    cons = listLines(lists[1]);
+  }
 
   return { prosTitle, consTitle, pros, cons };
 }
@@ -359,5 +391,230 @@ export function parseEditorNoteParagraphs(node) {
 export function ArticleMarkdownArticleWrapper({ children }) {
   return (
     <div className="article-markdown flex w-full flex-col">{children}</div>
+  );
+}
+
+export function parseCheckListFromHast(node) {
+  const heading = childrenElements(node).find((c) =>
+    /^h[1-6]$/.test(c.tagName || ""),
+  );
+  const ul = childrenElements(node).find((c) => c.tagName === "ul");
+  const items = ul
+    ? childrenElements(ul)
+        .filter((li) => li.tagName === "li")
+        .map((li) => textFromHastTree(li).trim())
+        .filter(Boolean)
+    : [];
+  return {
+    title: heading ? textFromHastTree(heading).trim() : "Key Details",
+    items,
+  };
+}
+
+export function ArticleMarkdownCheckList({ title = "Key Details", items }) {
+  return (
+    <div className="check-list my-8 overflow-hidden rounded-xl border border-blue-100 shadow-sm">
+      <div className="flex items-center gap-2 bg-blue-700 px-4 py-2.5 font-heading text-sm font-semibold text-white">
+        <ListChecks className="h-4 w-4 shrink-0" aria-hidden />
+        {title}
+      </div>
+      <ul className="m-0 list-none space-y-0 bg-white p-0">
+        {(items || []).map((line, i) => (
+          <li
+            key={i}
+            className="flex gap-2 border-t border-blue-50 px-4 py-2.5 text-sm leading-relaxed text-neutral-800 first:border-t-0"
+          >
+            <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" aria-hidden />
+            <span>{line}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function parseAnchorFromHast(li) {
+  const a = findDescendant(li, (n) => n.type === "element" && n.tagName === "a");
+  const href = a?.properties?.href ? String(a.properties.href) : "";
+  const text = textFromHastTree(li).trim();
+  return { href, text };
+}
+
+export function parseReferencesListFromHast(node) {
+  const heading = childrenElements(node).find((c) =>
+    /^h[1-6]$/.test(c.tagName || ""),
+  );
+  const ul = childrenElements(node).find((c) => c.tagName === "ul");
+  const items = ul
+    ? childrenElements(ul)
+        .filter((li) => li.tagName === "li")
+        .map(parseAnchorFromHast)
+        .filter((it) => it.text)
+    : [];
+  return {
+    title: heading ? textFromHastTree(heading).trim() : "Reference list",
+    items,
+  };
+}
+
+export function ArticleMarkdownReferencesList({
+  title = "Reference list",
+  items,
+}) {
+  return (
+    <div className="references-list my-8 overflow-hidden rounded-xl border border-neutral-200 shadow-sm">
+      <div className="bg-neutral-800 px-4 py-2.5 font-heading text-sm font-semibold text-white">
+        {title}
+      </div>
+      <ol className="m-0 list-none p-0">
+        {(items || []).map((item, i) => (
+          <li
+            key={i}
+            className={`flex gap-3 px-4 py-2.5 text-sm ${
+              i % 2 === 0 ? "bg-white" : "bg-red-50/70"
+            }`}
+          >
+            <span className="w-6 shrink-0 font-semibold text-neutral-500">
+              {i + 1}.
+            </span>
+            {item.href ? (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-700 underline hover:text-blue-900"
+              >
+                {item.text}
+              </a>
+            ) : (
+              <span>{item.text}</span>
+            )}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+export function ArticleMarkdownInfoYellowBox({ children }) {
+  return (
+    <aside className="info-yellow-box my-8 rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm leading-relaxed text-neutral-800 shadow-sm [&_p]:mb-0">
+      {children}
+    </aside>
+  );
+}
+
+const SLIDER_ICON_BY_NAME = {
+  safety: Shield,
+  sicherheit: Shield,
+  bonus: Gift,
+  games: Gamepad2,
+  spiele: Gamepad2,
+  license: Scale,
+  licence: Scale,
+  lizenz: Scale,
+  "t&c": FileText,
+  tc: FileText,
+  geschaftsbedingungen: FileText,
+  geschäftsbedingungen: FileText,
+  "customer service": Headset,
+  kundendienst: Headset,
+};
+
+function sliderIconForName(name) {
+  const key = String(name || "")
+    .trim()
+    .toLowerCase();
+  return SLIDER_ICON_BY_NAME[key] || Shield;
+}
+
+export function parseSliderFromHast(node) {
+  const items = childrenElements(node).filter((c) => {
+    if (c.tagName !== "div") return false;
+    if (hastId(c.properties) === "slider-item") return true;
+    return hastClassIncludes(c.properties, "slider-item");
+  });
+  return items
+    .map((el) => {
+      const nameEl = findDescendant(
+        el,
+        (n) =>
+          n.type === "element" &&
+          (hastId(n.properties) === "name" ||
+            hastClassIncludes(n.properties, "name")),
+      );
+      const valueEl = findDescendant(
+        el,
+        (n) =>
+          n.type === "element" &&
+          (hastId(n.properties) === "value" ||
+            hastClassIncludes(n.properties, "value")),
+      );
+      const name = textFromHastTree(nameEl).trim();
+      const raw = parseInt(textFromHastTree(valueEl).trim(), 10);
+      const value = Number.isFinite(raw) ? Math.min(100, Math.max(0, raw)) : 0;
+      return { name, value, Icon: sliderIconForName(name) };
+    })
+    .filter((it) => it.name);
+}
+
+export function ArticleMarkdownSlider({ items }) {
+  return (
+    <div className="slider-component my-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {(items || []).map((item, i) => {
+        const Icon = item.Icon || Shield;
+        return (
+          <div
+            key={i}
+            className="rounded-xl border border-neutral-200 bg-white p-4 shadow-sm"
+          >
+            <div className="mb-2 flex items-center gap-2">
+              <Icon className="h-5 w-5 text-blue-700" aria-hidden />
+              <span className="font-heading text-sm font-semibold text-neutral-900">
+                {item.name}
+              </span>
+              <span className="ml-auto text-sm font-bold text-blue-800">
+                {item.value}
+              </span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-neutral-100">
+              <div
+                className="h-full rounded-full bg-blue-600"
+                style={{ width: `${item.value}%` }}
+              />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+export function parseRelatedPagesFromHast(node) {
+  return childrenElements(node)
+    .filter((c) => c.tagName === "a")
+    .map((a) => ({
+      href: a.properties?.href ? String(a.properties.href) : "",
+      text: textFromHastTree(a).trim(),
+    }))
+    .filter((it) => it.href && it.text);
+}
+
+export function ArticleMarkdownRelatedPages({ items }) {
+  return (
+    <nav
+      className="related-pages my-8 grid gap-3 sm:grid-cols-2"
+      aria-label="Related guides"
+    >
+      {(items || []).map((item, i) => (
+        <a
+          key={i}
+          href={item.href}
+          className="rounded-xl border border-blue-100 bg-blue-50/50 px-4 py-3 text-sm font-semibold text-blue-800 no-underline shadow-sm transition hover:border-blue-300 hover:bg-blue-50"
+        >
+          {item.text}
+        </a>
+      ))}
+    </nav>
   );
 }

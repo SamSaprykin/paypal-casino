@@ -205,7 +205,7 @@ Without `data-date`, the block stays a freeform emerald callout (legacy home-pag
 </div>
 ```
 
-**Pros / cons**
+**Pros / cons** — either `.pros` / `.cons` rows **or** two `<ul>` lists (first = pros, second = cons).
 
 ```html
 <div class="pros-cons">
@@ -219,6 +219,68 @@ Without `data-date`, the block stays a freeform emerald callout (legacy home-pag
   </div>
 </div>
 ```
+
+```html
+<div class="pros-cons">
+  <h3>Pros</h3>
+  <ul>
+    <li>Fast withdrawals</li>
+  </ul>
+  <h3>Cons</h3>
+  <ul>
+    <li>No dedicated app</li>
+  </ul>
+</div>
+```
+
+**Check list**
+
+```html
+<div class="check-list">
+  <h2>Key Details</h2>
+  <ul>
+    <li>Minimum deposit: €10</li>
+  </ul>
+</div>
+```
+
+**References list** (links open in a new tab)
+
+```html
+<div class="references-list">
+  <h2>Reference list</h2>
+  <ul>
+    <li><a href="https://example.com">Source title</a></li>
+  </ul>
+</div>
+```
+
+**Yellow info box**
+
+```html
+<div class="info-yellow-box">
+  <p><strong>Editor's note:</strong> Confirm terms on the operator site.</p>
+</div>
+```
+
+**Score slider** (`id="slider-component"`). Names: Safety, Bonus, Games, License, T&C, Customer Service (0–100). Lucide icons, not PNGs.
+
+```html
+<div id="slider-component">
+  <div id="slider-item"><span id="name">Safety</span><span id="value">85</span></div>
+</div>
+```
+
+**Related pages hub** (internal links)
+
+```html
+<div class="related-pages">
+  <a href="/paypal-casino-ireland/">PayPal casinos</a>
+  <a href="/new-casinos/">New casinos</a>
+</div>
+```
+
+Do not nest these custom wrappers.
 
 ### B2. How-to — choose exactly one shape inside `.how-to`
 
