@@ -97,13 +97,20 @@ async function readLocaleFileByStem(
 ): Promise<LocaleFile | undefined> {
   for (const ext of [".mdx", ".md"]) {
     const filePath = path.join(dir, `${locale}${ext}`);
+    const relative = path.relative(CONTENT_ROOT, filePath).replace(/\\/g, "/");
+    let source: string;
     try {
-      const relative = path
-        .relative(CONTENT_ROOT, filePath)
-        .replace(/\\/g, "/");
-      return await readLocaleFile(filePath, relative);
+      source = await fs.readFile(filePath, "utf8");
     } catch {
-      /* try next extension */
+      continue; // no file with this extension
+    }
+    // A malformed file must not be treated as "locale missing": that silently
+    // turns the page into a 404 instead of failing the build.
+    try {
+      return { ...parseLocaleFile(source), mdxPath: relative };
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : String(error);
+      throw new Error(`Invalid frontmatter in ${relative}: ${reason}`);
     }
   }
   return undefined;
@@ -617,6 +624,7 @@ function mapPageSection(
             "withdraw",
             "bonusOk",
           ],
+          columnLabels: section.columnLabels,
           rows,
         };
       });

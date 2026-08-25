@@ -1,72 +1,280 @@
 ---
 slug: /fi/
 seo:
-  seoTitle: Parhaat nettikasinot Suomi 2026 – maksut ja lisenssit
-  seoDescription: Katso kasinolista suomalaisille pelaajille. PayPal-, Trustly- ja lisenssiopas täydentyy researchin jälkeen.
+  seoTitle: Nettikasinot Suomessa 2026 – lisenssit, maksut ja kotiutusajat
+  seoDescription: Suomen lisenssijärjestelmä uudistuu. Vertaa Trustlyn, PayPalin, kortin ja krypton kotiutusaikoja sekä lue mitä muutos tarkoittaa pelaajalle.
   seoSlug: /fi/
 sections:
   - kind: contentComponent
     id: cc19c2f3-0994-47bd-b143-61f880188e97
     name: Into HP
     bodyMarkdown: |-
-      # Nettikasinot Suomessa 2026 – maksutavat ja lisenssit
+      # Nettikasinot Suomessa 2026 – lisenssit, maksutavat ja kotiutusajat
 
-      Etusivu täydentyy, kun markkinatutkimus on valmis (kansainväliset MGA-brändit, Trustly, PayPal, MobilePay). Siihen asti: lista alla ja linkit oppaisiin.
+      Suomen rahapelijärjestelmä on siirtymävaiheessa. Uutta rahapelilakia on tarkoitus soveltaa pääosin 1. tammikuuta 2027 alkaen, ja osa säännöksistä astuu voimaan jo 1. tammikuuta 2026. Käytännössä tämä tarkoittaa, että vuonna 2026 pelaat edelleen kansainvälisillä lisensseillä toimivilla sivustoilla.
+
+      Siksi tällä sivulla puhutaan kahdesta asiasta: siitä, mitä lisenssi kertoo sinulle pelaajana, ja siitä, mikä maksutapa vie rahat perille nopeimmin. Tarkemmat oppaat löytyvät linkkien takaa.
+  # IMAGE (hero) — file: src/images/content/home-page-hero.fi.webp
+  # Renders only once the file exists. Nothing breaks while it is missing.
+  # Brief: Finnish-language payment collage (Trustly, PayPal, Visa, BTC), EUR cues, 1600x900.
+  - kind: image
+    id: hp-img-hero
+    alt: Nettikasinoiden maksutavat suomalaisille pelaajille 2026
+    caption: Trustly, PayPal, kortti vai krypto — nopeus ja bonuskelpoisuus vaihtelevat maksutavan mukaan.
   - kind: casinoList
     id: casinoListIntl.markets
     anchorTitle: suositellut-nettikasinot-suomi-2026
-    copyBefore: Suositellut nettikasinot Suomessa (2026)
+    copyBefore: Suositellut nettikasinot suomalaisille pelaajille (2026)
+  # RESEARCH (Finland body):
+  # 1. LAW STATUS IS THE BIGGEST RISK ON THIS PAGE. Our PayPal page already flags that
+  #    whether HE 16/2025 vp has been finally approved as of Aug 2026 is an open question.
+  #    Verify on eduskunta.fi before publishing and correct the dates if they moved.
+  #    Also confirm the regulator handover: Poliisihallitus during 2026 -> Lupa- ja
+  #    valvontavirasto from 2027.
+  # 2. CONFLICT TO RESOLVE: /fi/nopeat-kotiutukset-kasinot/ states PayPal 1-12 h, while the
+  #    shared payment-speed chart (src/lib/i18n/copies/payment-speed-chart.ts) says 12-48 t.
+  #    One of the two is wrong. Pick a single figure and align both.
+  # 3. Peluuri's coverage has never been confirmed directly from peluuri.fi in our research.
+  #    Verify before publishing.
+  # 4. Tax claims are deliberately absent here. Verohallinto guidance has not been verified;
+  #    do not add tax figures to the home page until it is.
   - kind: contentComponent
     id: e6695325-bdb3-4018-a6bd-fd0729b66642
     name: HP Body
     bodyMarkdown: |-
-      Täysi maksuvertailu kirjoitetaan, kun `prompts/research/home-finland.md` on täytetty.
+      ## Mitä lisenssi kertoo sinulle
 
-      ## Avainkohdat (luonnos)
+      Suomessa ei vielä ole kotimaista kasinolisenssiä, joten käytännössä valitset kansainvälisten lisenssien väliltä. Ne eivät ole keskenään samanarvoisia. MGA:n ja UKGC:n vaatimukset pelaajansuojasta ovat selvästi tiukemmat kuin Curaçaon, ja se näkyy sekä ehdoissa että siinä, miten valituksia käsitellään.
+
+      | Asia | MGA / UKGC | Curaçao |
+      |---|---|---|
+      | Pelaajansuojan vaatimukset | Tiukat | Kevyet |
+      | Valitusten käsittely | Selkeä prosessi | Vaihtelee paljon |
+      | Pelirajat ja itsesulku | Vaaditaan | Riippuu operaattorista |
+      | Ehtojen läpinäkyvyys | Yleensä hyvä | Vaihtelee |
+      | Bonusten koko | Maltillisempi | Usein suurempi |
+
+      Kannattaa muistaa, että lisenssi ei ole tae mistään. Se kertoo, kenelle voit valittaa, jos jotain menee pieleen — ja miten todennäköisesti asia hoituu.
 
       <div class="check-list">
-        <h2>Tärkeät tiedot</h2>
+        <h2>Lyhyesti</h2>
         <ul>
-          <li>Erota kansainvälinen lisenssi ja kotimainen sääntely</li>
-          <li>Trustly on usein PayPalia yleisempi</li>
-          <li>Peluuri on vastuullisen pelaamisen tuki</li>
+          <li>Uusi rahapelilaki on tarkoitus saattaa pääosin voimaan 1.1.2027, osa säännöksistä 1.1.2026.</li>
+          <li>Trustly, Zimpler ja Brite ovat suomalaisille yleisimmät pikamaksutavat — nopeampia kuin PayPal.</li>
+          <li>PayPal on rajatumpi kuin muualla Euroopassa. Tarkista kassa ennen kuin luotat siihen kotiutuksessa.</li>
+          <li>Kortti on hitain: kotiutus kestää useita pankkipäiviä.</li>
+          <li>Vaikka kasinon minimitalletus on 5 €, PayPal itse voi vaatia 10–15 €.</li>
         </ul>
       </div>
 
-      | Tapa | Rooli FI | Tiedot |
-      |---|---|---|
-      | PayPal | Rajattu | Katso PayPal-sivu — älä arvaa |
-      | Trustly | Yleinen | Vahvista kassasta |
-      | MobilePay | Paikallinen | Harvinainen kansainvälisillä kasinoilla |
+      ## Maksutavat suomalaiselle pelaajalle
 
-      <div class="info-yellow-box">
-        <p><strong>Huom:</strong> Kulut ja kotiutusajat lisätään vasta researchin jälkeen. 18+.</p>
+      Alla olevat ajat ovat operaattoreiden itsensä ilmoittamia, eivät omia aikaleimattuja testituloksia. Erottelemme nämä tarkoituksella.
+
+      | Maksutapa | Talletus | Kotiutus | Rooli Suomessa |
+      |---|---|---|---|
+      | **Trustly** | Heti | 5–15 min | Yleisin pikamaksu, suora pankkitunnistus |
+      | **Zimpler / Brite** | Heti | 5–15 min | Samaa perhettä, laajasti tarjolla |
+      | **Skrill / Neteller** | Heti | 1–6 t | Nopea, usein bonuksen ulkopuolella |
+      | **PayPal** | Heti | 1–12 t | Rajattu saatavuus, tarkista kassa |
+      | **Kortti (Visa / Mastercard)** | Heti | 1–5 pankkipäivää | Kaikkialla, hitain kotiutus |
+      | **Pankkisiirto** | 1–5 pankkipäivää | 1–5 pankkipäivää | Varareitti, kun muu ei toimi |
+      | **Krypto (BTC/ETH/USDT)** | Alle 10 min | Alle 1 t | Vain osalla kansainvälisiä sivustoja |
+
+      Jos kotiutusnopeus on sinulle tärkein asia, ratkaisu on maksutapa — ei kasino. Koko vertailu ja KYC-viiveiden vaikutus löytyy sivulta [nopeat kotiutukset](/fi/nopeat-kotiutukset-kasinot/).
+
+      <div class="info-card">
+        <div>
+          <strong>Talletuksen minimi ei ole aina se, mitä kasino lupaa</strong>
+          <p>Kasino voi ilmoittaa minimitalletukseksi 5 €, mutta maksupalvelu voi asettaa oman rajansa. PayPalilla raja on usein 10 € tai 15 €. Pienimmät 1 euron talletukset onnistuvat käytännössä vain tietyillä maksutavoilla. Käymme tasot läpi pienen talletuksen sivulla.</p>
+        </div>
       </div>
 
-      ## Lisää oppaita
+      <div class="warning-box">
+        <div>
+          <strong>Ennen ensimmäistä talletusta</strong>
+          <p>Tarkista, kelpaako valitsemasi maksutapa tervetuliaisbonukseen — Skrill ja Neteller on usein rajattu ulos. Tarkista myös kierrätysvaatimus ja bonuksen aikainen enimmäispanos: nämä kaksi ratkaisevat, onko tarjous sinulle järkevä. Aseta lisäksi omat talletusrajat heti tilin luonnin yhteydessä.</p>
+        </div>
+      </div>
+
+      ## Näin arvioimme listan kasinot
+
+      <div class="criteria-grid">
+        <div class="criteria-item">
+          <span data-lucide="Shield" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Lisenssi ja pelaajansuoja</div>
+            <div class="criteria-desc">Kerromme lisenssin ja sen, mitä se tarkoittaa valitustilanteessa. MGA ja Curaçao eivät ole samanarvoisia.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="CreditCard" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Kassa ja kulut</div>
+            <div class="criteria-desc">Mitkä maksutavat ovat todella tarjolla, mitkä ovat minimit ja missä syntyy valuutanvaihto- tai palvelukuluja.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Smartphone" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Kotiutusnopeus</div>
+            <div class="criteria-desc">Ilmoitettu käsittelyaika ja sen päälle KYC-tarkistus, joka käytännössä ratkaisee ensimmäisen kotiutuksen keston.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Eye" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Bonusehdot</div>
+            <div class="criteria-desc">Kierrätys, enimmäispanos ja ulos rajatut maksutavat — yleisin syy pettymykseen.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Headphones" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Suomenkielinen tuki</div>
+            <div class="criteria-desc">Palveluajat ja kieli. Maksuongelmassa asiakaspalvelu on ainoa reitti eteenpäin.</div>
+          </div>
+        </div>
+      </div>
+
+      Koko menetelmä on kuvattu [arviointiohjeissa](/fi/rating-guidelines/).
+
+      ## Mistä jatkat
+
+      Tämä etusivu on yleiskuva. Jokaisella aiheella on oma sivu, jossa yksityiskohdat ovat — emme toista niitä täällä.
+
+      | Sivu | Mitä siellä on |
+      |---|---|
+      | [PayPal-kasinot](/fi/paypal-kasinot/) | Missä PayPal todella on tarjolla, talletus ja kotiutus, kulut ja bonusrajoitukset |
+      | [Nopeat kotiutukset](/fi/nopeat-kotiutukset-kasinot/) | Kotiutusnopeus maksutapa kerrallaan ja KYC:n vaikutus |
+      | [Kasinobonukset](/fi/kasinobonukset/) | Tervetuliais- ja reload-tarjoukset, kierrätyslasku ja rajatut maksutavat |
+      | [Uudet kasinot](/fi/uudet-kasinot/) | Juuri avatut tai juuri listatut brändit ja kenelle ne sopivat |
+      | [Mobiilikasinot](/fi/mobiilikasinot/) | Selain vai sovellus ja miten kassa toimii pienellä näytöllä |
+      | [Pienen talletuksen kasinot](/fi/pienen-talletuksen-kasinot/) | 1 €, 5 € ja 10 € tasot ja mitkä maksutavat ne mahdollistavat |
+      | [Revolut-kasinot](/fi/revolut-kasinot/) | Revolut korttina ja Revolut Pay — ei PayPal-tyyppinen lompakko — sekä sovelluksen gambling block |
+      | [Kryptokasinot](/fi/krypto-kasinot/) | BTC, ETH ja stablecoinit: nopeus, kurssiriski, peruuttamattomat siirrot ja silti KYC |
+      | [Arviointiohjeet](/fi/rating-guidelines/) | Miten arvioimme ja mikä johtaa brändin poistoon |
 
       <div class="related-pages">
         <a href="/fi/paypal-kasinot/">PayPal-kasinot</a>
-        <a href="/fi/uudet-kasinot/">Uudet kasinot</a>
-        <a href="/fi/kasinobonukset/">Kasinobonukset</a>
         <a href="/fi/nopeat-kotiutukset-kasinot/">Nopeat kotiutukset</a>
+        <a href="/fi/kasinobonukset/">Kasinobonukset</a>
+        <a href="/fi/uudet-kasinot/">Uudet kasinot</a>
         <a href="/fi/mobiilikasinot/">Mobiilikasinot</a>
         <a href="/fi/pienen-talletuksen-kasinot/">Pienen talletuksen kasinot</a>
         <a href="/fi/revolut-kasinot/">Revolut-kasinot</a>
         <a href="/fi/krypto-kasinot/">Kryptokasinot</a>
-        <a href="/fi/estettyt-kasinot/">Estetyt kasinot</a>
         <a href="/fi/rating-guidelines/">Arviointiohjeet</a>
       </div>
+  # IMAGE (cashier) — file: src/images/content/home-page-cashier.fi.webp
+  # Brief: real cashier in Finnish UI showing Trustly/Zimpler alongside card. Blur all PII.
+  - kind: image
+    id: hp-img-cashier
+    alt: Nettikasinon kassa suomalaisen pelaajan maksutavoilla
+    caption: "Kuvakaappaus: tarkista oikeasta kassasta, mitkä maksutavat ovat aktiivisia."
+  - kind: howTo
+    id: hp-howto
+    title: Ensimmäinen talletus vaihe vaiheelta
+    items:
+      - iconName: ShieldCheck
+        title: Tarkista lisenssi
+        steps:
+          - Etsi lisenssitieto sivun alaosasta.
+          - MGA ja UKGC tarkoittavat tiukempaa pelaajansuojaa kuin Curaçao.
+          - Katso samalla, löytyvätkö pelirajat ja itsesulku asetuksista.
+      - iconName: UserPlus
+        title: Luo tili ja vahvista henkilöllisyys
+        steps:
+          - Käytä nimeä ja osoitetta, jotka vastaavat henkilöllisyystodistusta.
+          - Lataa asiakirjat heti äläkä vasta kotiutuksen yhteydessä.
+          - Näin ensimmäinen kotiutus ei jää KYC-jonoon.
+      - iconName: Wallet
+        title: Valitse maksutapa
+        steps:
+          - Avaa kassa ja katso, mitkä tavat ovat todella listattuna.
+          - Varmista, kelpaako tapa bonukseen.
+          - Huomioi maksupalvelun oma minimi, ei vain kasinon ilmoittamaa.
+      - iconName: CreditCard
+        title: Tee talletus
+        steps:
+          - Syötä summa ja vahvista maksu.
+          - Trustly, Zimpler, kortti ja PayPal kirjautuvat yleensä heti.
+          - Aseta omat talletusrajat samalla kertaa.
+      - iconName: CheckCircle
+        title: Pyydä kotiutus
+        steps:
+          - Kotiuta samalla tavalla, jolla talletit, jos se on mahdollista.
+          - Trustly ja e-lompakot hoituvat tunneissa, kortti vaatii pankkipäiviä.
+          - Lisää ensimmäiseen kertaan KYC-tarkistuksen kesto.
+  # PAYMENT MATRIX — activate by adding `rowsByCountry.finland` to home-page/meta.json
+  # (one row per casino slug in the list above), then uncomment this block.
+  # RESEARCH: open each cashier yourself, note what is listed, set verifiedAt to that date.
+  # - kind: methodAvailability
+  #   id: hp-methods
+  #   title: Maksutavat listatuilla kasinoilla
+  #   footnote: Tarkistettu live-kassalla merkittynä päivänä. Operaattorit vaihtavat palveluntarjoajia ilman ilmoitusta — vahvista aina itse ennen talletusta.
+  #   columns: [paypal, card, local, crypto]
+  #   columnLabels:
+  #     paypal: PayPal
+  #     card: Visa / Mastercard
+  #     local: Trustly / Zimpler
+  #     crypto: Krypto
+  # IMAGE (payout proof) — file: src/images/content/home-page-payout-proof.fi.webp
+  # Brief: withdrawal history with visible timestamps, PII blurred. Highest E-E-A-T value here.
+  - kind: image
+    id: hp-img-payout
+    alt: Nettikasinon kotiutushistoria aikaleimoilla
+    caption: "Kuvakaappaus: valmistuneen kotiutuksen aikaleimat."
+  # RESEARCH (verdict): Peluuri number and URL are reused from the other Finnish pages.
+  # Confirm both from peluuri.fi before publishing.
+  - kind: contentComponent
+    id: hp-verdict
+    name: HP Verdict
+    bodyMarkdown: |-
+      ## Mikä sopii sinulle?
 
-      *Päivitetty: elokuu 2026. Sisältö korvataan researchin jälkeen. Pelaa vastuullisesti. 18+.*
+      ### Haluat rahat nopeasti tilille
+
+      Valitse Trustly, Zimpler tai Brite. Ne ovat suomalaisille suunnitellut pikamaksut, ja ilmoitetut kotiutusajat ovat lyhyimmät koko listalla. Kortti on tässä vertailussa aina viimeinen vaihtoehto.
+
+      ### Haluat vahvimman pelaajansuojan
+
+      Katso MGA- tai UKGC-lisenssiä ja tarkista, että pelirajat, tappiorajat ja itsesulku löytyvät asetuksista. Curaçao-lisenssi ei tarjoa samaa selkänojaa valitustilanteessa.
+
+      ### Metsästät bonuksia
+
+      Lue kierrätysvaatimus ja enimmäispanos ennen talletusta, ja varmista että maksutapasi kelpaa. Skrill ja Neteller on usein rajattu tarjousten ulkopuolelle, mikä yllättää monet. Bonussivu käy laskennan läpi euromäärillä.
+
+      ### Kokeilet ensin pienellä summalla
+
+      Pienen talletuksen kasinot ovat oikea lähtökohta, mutta muista että maksupalvelun oma minimi voi olla korkeampi kuin kasinon ilmoittama. Testaa ensin pienellä summalla ja tee yksi kotiutus, ennen kuin pelaat suuremmilla panoksilla.
+
+      <div class="info-yellow-box">
+        <p><strong>Pelaaminen on viihdettä, ei tulonlähde.</strong> Maksutonta ja luottamuksellista apua saat Peluurista numerosta <strong>0800 100 101</strong> ja osoitteesta <a href="https://www.peluuri.fi" rel="nofollow noopener" target="_blank">peluuri.fi</a>. Vain täysi-ikäisille.</p>
+      </div>
+
+      <div class="references-list">
+        <h2>Lähteet</h2>
+        <ul>
+          <li><a href="https://www.peluuri.fi">Peluuri – tukea rahapeliongelmiin</a></li>
+        </ul>
+      </div>
+
+      <div class="content-freshness" data-date="2026-08-24" data-review-cycle="monthly">
+        <p>Lisenssivertailu, maksutaulukko ja sisäiset linkit tarkistettu. Lakiuudistuksen aikataulu, kulut ja maksutapojen saatavuus voivat muuttua — vahvista aina kasinon kassalta ennen talletusta.</p>
+      </div>
   - kind: faqComponent
     id: 81648ffc-2ace-40ad-9c81-8b4d896c9bb4
-    title: UKK – Nettikasinot Suomi
+    title: UKK – Nettikasinot Suomessa
     items:
-      - question: Onko PayPal yleinen suomalaisilla kasinoilla?
-        answer: Usein harvinaisempi kuin Trustly. Tarkista PayPal-opas ja kassa. Tähän luonnokseen ei ole merkitty aikoja tai kuluja.
-      - question: Mistä saan apua pelaamiseen?
-        answer: Peluuri on keskeinen suomalainen tukipalvelu. Viralliset URL-osoitteet lisätään research-tiedostosta.
-      - question: Missä bonukset ja nopeat kotiutukset?
-        answer: Käytä kasinobonukset- ja nopeat kotiutukset -sivuja. Yllä oleva lista on tämän markkinan nykyinen valikoima.
+      - question: Milloin Suomen uusi rahapelilaki tulee voimaan?
+        answer: Uutta rahapelilakia on tarkoitus soveltaa pääosin 1. tammikuuta 2027 alkaen, ja osa säännöksistä astuu voimaan jo 1. tammikuuta 2026. Lupa- ja valvontatehtävät siirtyvät uudelle virastolle, ja siirtymävaiheessa valvonta on Poliisihallituksella. Aikataulu on voinut tarkentua sen jälkeen, kun tämä sivu kirjoitettiin, joten tarkista ajantasainen tilanne eduskunnan omilta sivuilta. Emme anna oikeudellista neuvontaa.
+      - question: Onko PayPal yleinen suomalaisilla nettikasinoilla?
+        answer: Se on rajatumpi kuin monessa muussa Euroopan maassa. Trustly, Zimpler ja Brite ovat käytännössä yleisempiä, koska ne rakentuvat suomalaisten pankkitunnusten päälle. Jos PayPal on sinulle tärkeä, avaa kassa ja varmista, että se on tarjolla sekä talletukseen että kotiutukseen — pelkkä logo etusivulla ei riitä. PayPal-sivullamme on kasinot, joilla olemme nähneet menetelmän, sekä siihen liittyvät rajoitukset.
+      - question: Mikä maksutapa kotiuttaa nopeimmin?
+        answer: Operaattoreiden ilmoitusten mukaan Trustly, Zimpler ja Brite ovat kärjessä 5–15 minuutin haarukalla, sen jälkeen tulevat Skrill ja Neteller 1–6 tunnissa. PayPalille ilmoitetaan 1–12 tuntia. Kortille kotiuttaminen kestää useita pankkipäiviä. Ensimmäisessä kotiutuksessa KYC-tarkistus lisää aikaa maksutavasta riippumatta. Nämä eivät ole omia mitattuja tuloksia vaan operaattoreiden ilmoittamia aikoja.
+      - question: Miksi talletukseni ei mennyt läpi 5 eurolla?
+        answer: Kasinon ilmoittama minimitalletus ja maksupalvelun oma minimi ovat kaksi eri asiaa. Kasino voi hyväksyä 5 euron talletuksen, mutta PayPal saattaa vaatia 10 tai 15 euroa, ennen kuin maksu lähtee liikkeelle. Sama pätee joihinkin korttimaksuihin. Jos haluat aloittaa mahdollisimman pienellä summalla, tarkista molemmat rajat pienen talletuksen kasinot -sivulta.
+      - question: Mistä saan apua, jos pelaaminen alkaa haitata?
+        answer: Peluuri tarjoaa maksutonta ja luottamuksellista tukea numerossa 0800 100 101 sekä verkossa osoitteessa peluuri.fi. Palvelu on tarkoitettu sekä pelaajalle itselleen että läheisille. Aseta lisäksi talletus- ja tappiorajat kasinon asetuksista heti tilin luonnin yhteydessä, ja käytä itsesulkua, jos tarvitset tauon. Nämä työkalut löytyvät kaikilta vastuullisesti toimivilta operaattoreilta.
 ---

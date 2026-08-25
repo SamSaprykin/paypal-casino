@@ -72,6 +72,16 @@
     },
     {
       "kind": "contentComponent",
+      "id": "cc-legal",
+      "name": "Crypto Casinos Legal"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "cc-reform",
+      "name": "Crypto Casinos Reform"
+    },
+    {
+      "kind": "contentComponent",
       "id": "cc-guide",
       "name": "Crypto Casinos Guide"
     },
@@ -86,9 +96,24 @@
       "name": "How to Deposit with Crypto"
     },
     {
+      "kind": "image",
+      "id": "cc-image-wallet",
+      "name": "Wallet Send Screen With Network Fee"
+    },
+    {
       "kind": "contentComponent",
       "id": "cc-depth",
       "name": "Crypto Casinos Depth"
+    },
+    {
+      "kind": "image",
+      "id": "cc-image-cashier",
+      "name": "Casino Cashier Crypto Deposit Screen"
+    },
+    {
+      "kind": "image",
+      "id": "cc-image-payout",
+      "name": "Completed Crypto Withdrawal With Timestamps"
     },
     {
       "kind": "faqComponent",

@@ -30,6 +30,7 @@ const columnLabel: Record<string, string> = {
   revolutPay: copy.revolutPay,
   withdraw: copy.withdraw,
   bonusOk: copy.bonusOk,
+  ...(section.columnLabels ?? {}),
 };
 ---
 

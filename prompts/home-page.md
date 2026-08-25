@@ -25,15 +25,39 @@ Research output: `prompts/research/home-<locale>.md` (start from `prompts/resear
 
 `src/lib/content/store.ts` `mergePageSections` joins **by section `id`**. Meta order wins. Locale YAML only applies when `id` matches.
 
-Required IDs:
+Required IDs (meta order — this is the render order):
 
-| kind                 | id                                           | Role                                      |
-| -------------------- | -------------------------------------------- | ----------------------------------------- |
-| `contentComponent`   | `cc19c2f3-0994-47bd-b143-61f880188e97` | Into HP — **one H1** + short intro       |
-| `image` (optional)   | `hp-img-hero`                          | Hero when file exists in `src/images/content/` |
-| `casinoList`         | `casinoListIntl.markets`               | Cards from meta                          |
-| `contentComponent`   | `e6695325-bdb3-4018-a6bd-fd0729b66642` | HP Body — guide, tables, callouts, links |
-| `faqComponent`       | `81648ffc-2ace-40ad-9c81-8b4d896c9bb4` | 4–5 FAQs                                 |
+| #   | kind                 | id                                     | Role                                                              |
+| --- | -------------------- | -------------------------------------- | ----------------------------------------------------------------- |
+| 1   | `contentComponent`   | `cc19c2f3-0994-47bd-b143-61f880188e97` | Into HP — **one H1** + short intro                                |
+| 2   | `image`              | `hp-img-hero`                          | Hero. `src` is in meta; locale MDX supplies `alt` / `caption`      |
+| 3   | `casinoList`         | `casinoListIntl.markets`               | Cards from meta                                                   |
+| 4   | `contentComponent`   | `e6695325-bdb3-4018-a6bd-fd0729b66642` | HP Body — guide, tables, callouts, page teasers, related-pages hub |
+| 5   | `image`              | `hp-img-cashier`                       | Cashier screenshot                                                |
+| 6   | `howTo`              | `hp-howto`                             | First-deposit steps (native component, not the HTML `.how-to`)    |
+| 7   | `methodAvailability` | `hp-methods`                           | Payment matrix — renders only when `rowsByCountry` is filled       |
+| 8   | `image`              | `hp-img-payout`                         | Withdrawal proof screenshot                                       |
+| 9   | `contentComponent`   | `hp-verdict`                           | Verdict + RG line + `references-list` + `content-freshness`        |
+| 10  | `faqComponent`       | `81648ffc-2ace-40ad-9c81-8b4d896c9bb4` | 4–5 FAQs                                                          |
+
+Image and matrix sections render **nothing** while their asset/rows are missing, so all ten slots can ship at once. Drop `home-page-hero.de.webp` (etc.) into `src/images/content/` and the image appears with no code change.
+
+`hp-methods` YAML (in the locale MDX) sets the columns; `rowsByCountry` goes in `meta.json`:
+
+```yaml
+- kind: methodAvailability
+  id: hp-methods
+  title: Zahlungsmethoden bei den gelisteten Casinos
+  footnote: In der Live-Kasse am angegebenen Datum geprüft.
+  columns: [paypal, card, local, crypto]
+  columnLabels:
+    paypal: PayPal
+    card: Visa / Mastercard
+    local: Trustly / Sofort
+    crypto: Krypto
+```
+
+Cell values: `yes` | `no` | `partial` | `unknown`. `verifiedAt` must be the date the cashier was actually opened.
 
 YAML frontmatter only (no MDX body after closing `---`). Use `bodyMarkdown` on content sections (Ireland shape). Headings after H1 start at `##`.
 
@@ -97,11 +121,12 @@ Home **introduces** the market and **points** to specialist pages. Do not paste 
 
 | Page | What it is |
 | ---- | ---------- |
-| **Blocked casinos** | Brands we paused affiliate links for (not a legal ban). |
-| **Rating guidelines** | How we score casinos (static page). Builds EEAT; link once. |
+| **Rating guidelines** | How we score casinos (static page, exists for every locale). Builds EEAT; link once. |
 | **Home** | This page: market overview, ranked list, payment **orientation**, then links into the silos above. |
 
-Related-pages hub must include **every header item that exists for that locale** (skip crypto on NO). Add blocked + rating guidelines as well.
+> **Do not link blocked casinos.** `pages/blocked-casinos/` is not in `_index.json` and has no route, so `/gesperrte-casinos/`, `/blokerede-kasinoer/`, `/estettyt-kasinot/`, `/blokkerte-kasinoer/`, `/blockerade-casinon/` and `/blocked-casinos/` all 404. Either build the page or leave the links out.
+
+Related-pages hub must include **every header item that exists for that locale** (skip crypto on NO). Add rating guidelines as well.
 
 ### Internal links (`_index.json`)
 
@@ -118,8 +143,9 @@ Prefix `/de/`, `/dk/`, `/fi/`, `/no/`, `/se/` on paths that are **not** already 
 | Min deposit | `/minimum-deposit-casinos/` | `/de/casinos-mit-mindesteinzahlung/` | `/dk/kasinoer-med-lav-indbetaling/` | `/fi/pienen-talletuksen-kasinot/` | `/no/kasinoer-med-lav-innskudd/` | `/se/casinon-med-lag-insattning/` |
 | Revolut | `/revolut-casinos/` | `/de/revolut-casinos/` | `/dk/revolut-kasinoer/` | `/fi/revolut-kasinot/` | `/no/revolut-kasinoer/` | `/se/revolut-casinon/` |
 | Crypto | `/crypto-casinos/` | `/de/krypto-casinos/` | `/dk/krypto-casinoer/` | `/fi/krypto-kasinot/` | *(no NO slug in `_index`)* | `/se/krypto-casinon/` |
-| Blocked | `/blocked-casinos/` | `/gesperrte-casinos/` | `/blokerede-kasinoer/` | `/estettyt-kasinot/` | `/blokkerte-kasinoer/` | `/blockerade-casinon/` |
 | Rating | `/rating-guidelines/` | `/de/rating-guidelines/` | `/dk/rating-guidelines/` | `/fi/rating-guidelines/` | `/no/rating-guidelines/` | `/se/rating-guidelines/` |
+
+`localizedHref()` always adds the locale prefix for non-IE, so the published href is `/de/casinos-mit-paypal/` even though the `_index.json` slug is stored unprefixed. **Write the prefixed form in body copy.**
 
 Every HP Body must include a `.related-pages` hub with **at least** PayPal, new, bonuses, fast payout, mobile, min deposit, Revolut, and rating guidelines (plus crypto/blocked when the locale has a URL).
 

@@ -1,72 +1,288 @@
 ---
 slug: /se/
 seo:
-  seoTitle: Bästa casinon Sverige 2026 – betalning och licens
-  seoDescription: Se casinolistan för svenska spelare. Guiden om Spelinspektionen, Swish, Trustly och PayPal fylls i efter research.
+  seoTitle: Onlinecasino i Sverige 2026 – svensk licens, Swish och utbetalningar
+  seoDescription: Svensk licens eller utländsk? Jämför Swish, Trustly, PayPal och krypto på utbetalningstid, och se vad Spelpaus och bonusregeln faktiskt betyder.
   seoSlug: /se/
 sections:
   - kind: contentComponent
     id: cc19c2f3-0994-47bd-b143-61f880188e97
     name: Into HP
     bodyMarkdown: |-
-      # Casinon i Sverige 2026 – betalning och licens
+      # Onlinecasino i Sverige 2026 – svensk licens, betalningar och utbetalningstid
 
-      Startsida byggs ut när research är klar (Spelinspektionen, Spelpaus, Swish, Trustly, PayPal). Tills dess: listan nedan och länkar till guiderna.
+      I Sverige är valet tydligare än i de flesta andra länder. Antingen spelar du på ett casino med svensk licens från Spelinspektionen, med BankID, Spelpaus och en enda bonus per spelare — eller på ett utländskt casino med MGA-, Curaçao- eller Anjouan-licens, med större bonusar men utan svenskt skyddsnät.
+
+      Den skillnaden märks direkt i kassan. Svensklicensierade sajter bygger på Swish, Trustly och Zimpler. PayPal hör i praktiken till den utländska sidan. Här går vi igenom bägge spåren och länkar vidare till detaljerna.
+  # IMAGE (hero) — file: src/images/content/home-page-hero.se.webp
+  # Renders only once the file exists. Nothing breaks while it is missing.
+  # Brief: Swedish payment collage (Swish, Trustly, BankID, Visa), SEK cues, 1600x900.
+  - kind: image
+    id: hp-img-hero
+    alt: Betalningsmetoder för onlinecasino i Sverige 2026
+    caption: Swish, Trustly, PayPal eller krypto — licensen avgör i stor utsträckning vad som ens finns i kassan.
   - kind: casinoList
     id: casinoListIntl.markets
-    anchorTitle: rekommenderade-casinon-sverige-2026
-    copyBefore: Rekommenderade casinon i Sverige (2026)
+    anchorTitle: rekommenderade-onlinecasinon-sverige-2026
+    copyBefore: Rekommenderade onlinecasinon för svenska spelare (2026)
+  # RESEARCH (Sweden body):
+  # 1. The "one bonus per player" rule comes from spellagen and is the single most useful
+  #    thing on this page, because it explains why svensklicensierade sajter in our own list
+  #    (klirr-casino, pop-casino) have no welcome bonus. Verify the current wording on
+  #    spelinspektionen.se before publishing.
+  # 2. TAX: our Swedish pages say winnings on a Swedish/EU-EEA licence are tax-free and that
+  #    winnings from outside the EEA are taxable. Skatteverket has NOT been verified directly
+  #    in any research round. Confirm on skatteverket.se or remove the tax row.
+  # 3. CONFLICT TO RESOLVE: Swish withdrawal is "under 1 tim" in the shared payment-speed
+  #    chart but "1-24 timmar" on /se/casinon-med-snabb-utbetalning/. Align the two.
+  # 4. Verify the PayPal minimum range (100-150 kr) that we reuse from the PayPal page.
   - kind: contentComponent
     id: e6695325-bdb3-4018-a6bd-fd0729b66642
     name: HP Body
     bodyMarkdown: |-
-      Den fulla betaljämförelsen kommer när `prompts/research/home-sweden.md` är ifylld.
+      ## Svensk licens eller utländsk licens
 
-      ## Nyckelpunkter (utkast)
+      Spelinspektionen kräver BankID-inloggning, anslutning till Spelpaus och att bonusar begränsas till ett erbjudande per spelare. Utländska operatörer tar emot svenska spelare men omfattas inte av något av det. Det är där hela skillnaden ligger.
+
+      | Förhållande | Svensk licens (Spelinspektionen) | Utländsk licens |
+      |---|---|---|
+      | Spelpaus | Ja, gäller alla svenska licenser | Nej |
+      | BankID | Krav | Sällan |
+      | Bonusar | En per spelare | Flera, ofta större |
+      | Swish i kassan | Vanligt | Ovanligt |
+      | PayPal i kassan | Ovanligt | Vanligare |
+      | Krypto | Nej | Möjligt hos vissa |
+      | Skatt på vinst | Skattefri | Beror på var licensen finns |
+      | Tillsyn | Spelinspektionen | MGA, Curaçao eller Anjouan |
+
+      Bonusregeln förklarar något som förvirrar många: flera svensklicensierade casinon har helt enkelt ingen välkomstbonus. Det är inte snålhet, det är regelverket. Utländska sajter kan däremot erbjuda paket på flera tusen kronor — utan Spelpaus i utbyte.
 
       <div class="check-list">
-        <h2>Viktiga detaljer</h2>
+        <h2>Kort sammanfattat</h2>
         <ul>
-          <li>Skilj svensklicensierade sajter från internationella varumärken</li>
-          <li>Swish och Trustly dominerar ofta lokalt; PayPal är sällsynt på Spelinspektionen-sidor</li>
-          <li>Spelpaus och Stödlinjen hör till spelansvar</li>
+          <li>Ett svenskt spelkonto får bara ett bonuserbjudande per spelare — därför saknar många svensklicensierade sajter välkomstbonus.</li>
+          <li>Spelpaus gäller bara hos operatörer med svensk licens. Ett utländskt casino omfattas inte.</li>
+          <li>Swish och Trustly är standard på svensklicensierade sajter. PayPal är ovanligt där.</li>
+          <li>Pay N Play via Trustly betyder konto och insättning i ett steg, verifierat med BankID.</li>
+          <li>Kort är den långsammaste uttagsvägen: flera bankdagar mot timmar för Swish och Trustly.</li>
         </ul>
       </div>
 
-      | Metod | Roll i SE | Detaljer |
-      |---|---|---|
-      | PayPal | Ovanligt på SE-licens | Se PayPal-sidan |
-      | Swish | Lokalt stark | Bekräfta i kassan |
-      | Trustly | Vanlig | Bank-id, egna gränser |
+      ## Betalningsmetoder för svenska spelare
 
-      <div class="info-yellow-box">
-        <p><strong>Obs:</strong> Avgifter och tider läggs in efter research. 18+.</p>
+      Tiderna nedan är operatörernas egna uppgifter, inte resultat från egna tidsstämplade testinsättningar. Vi skiljer medvetet på de två.
+
+      <div class="payment-speed-chart"></div>
+
+      | Metod | Insättning | Uttag | Roll i Sverige |
+      |---|---|---|---|
+      | **Swish** | Direkt | 1–24 timmar | Standard på svensklicensierade sajter |
+      | **Trustly (Pay N Play)** | Direkt | Under 5 timmar | Konto och insättning i ett steg via BankID |
+      | **Zimpler** | Direkt | 1–12 timmar | Vanligt alternativ till Trustly |
+      | **Skrill / Neteller** | Direkt | 1–6 timmar | Snabbt, ofta utanför bonusen |
+      | **PayPal** | Direkt | 12–48 timmar | Ovanligt med svensk licens, minimum ofta 100–150 kr |
+      | **Kort (Visa / Mastercard)** | Direkt | 1–5 bankdagar | Finns överallt, långsammast uttag |
+      | **Banköverföring** | 1–2 bankdagar | 1–5 bankdagar | Reservväg |
+      | **Krypto (BTC/ETH/USDT)** | Under 10 min | Under 1 timme | Bara utländska sajter |
+
+      Vill du ha pengarna snabbt är det metoden som avgör, inte casinot. Hela jämförelsen inklusive KYC-fördröjningar finns på sidan om [casinon med snabb utbetalning](/se/casinon-med-snabb-utbetalning/).
+
+      <div class="info-card">
+        <div>
+          <strong>Spelpaus är inte samma sak som en paus hos operatören</strong>
+          <p>Spelpaus stänger av dig från samtliga operatörer med svensk licens samtidigt. En paus du sätter hos ett enskilt utländskt casino gäller bara där. Behöver du ett verkligt avbrott är det skillnaden som spelar roll — och den är avgörande när du väljer mellan svensk och utländsk licens.</p>
+        </div>
       </div>
 
-      ## Fler guider
+      <div class="warning-box">
+        <div>
+          <strong>Innan du sätter in</strong>
+          <p>Kontrollera om din metod kvalificerar till bonusen — e-plånböcker som Skrill och Neteller är ofta undantagna. Kontrollera också omsättningskravet och maxinsatsen under bonus. Spelar du på en utländsk sajt: skatt på vinster beror på var licensen finns, och vi ger inte skatterådgivning. Läs Skatteverkets aktuella information om du är osäker.</p>
+        </div>
+      </div>
+
+      ## Så bedömer vi casinona i listan
+
+      <div class="criteria-grid">
+        <div class="criteria-item">
+          <span data-lucide="Shield" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Licens och skydd</div>
+            <div class="criteria-desc">Vi anger licensen och om Spelpaus gäller. En utländsk licens är inte likvärdig med svensk licens.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="CreditCard" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Kassan och avgifter</div>
+            <div class="criteria-desc">Vilka metoder som faktiskt finns i kassan, minimibelopp och var det tillkommer växlings- eller tjänsteavgifter.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Smartphone" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Utbetalningstid</div>
+            <div class="criteria-desc">Angiven handläggningstid plus KYC, som i praktiken avgör hur lång tid det första uttaget tar.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Eye" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Bonusvillkor</div>
+            <div class="criteria-desc">Omsättningskrav, maxinsats under bonus och undantagna betalningsmetoder — den vanligaste källan till besvikelse.</div>
+          </div>
+        </div>
+        <div class="criteria-item">
+          <span data-lucide="Headphones" aria-hidden="true"></span>
+          <div>
+            <div class="criteria-title">Support på svenska</div>
+            <div class="criteria-desc">Öppettider och språk. Vid betalningsproblem är supporten den enda vägen framåt.</div>
+          </div>
+        </div>
+      </div>
+
+      Hela metoden finns i våra [bedömningsriktlinjer](/se/rating-guidelines/).
+
+      ## Vidare härifrån
+
+      Den här startsidan är översikten. Varje ämne har en egen sida med detaljerna — dem upprepar vi inte här.
+
+      | Sida | Vad du hittar där |
+      |---|---|
+      | [PayPal-casinon](/se/paypal-casinon-sverige/) | Vilka sajter som verkligen har PayPal, insättning och uttag, avgifter och bonusundantag |
+      | [Snabb utbetalning](/se/casinon-med-snabb-utbetalning/) | Utbetalningstid metod för metod och vad KYC lägger till |
+      | [Casinobonusar](/se/casinobonusar/) | Välkomst- och reload-erbjudanden, omsättningsräkningen och regeln om en bonus per spelare |
+      | [Nya casinon](/se/nya-casinon/) | Nyligen lanserade eller nyligen listade sajter och vem de passar |
+      | [Mobilcasinon](/se/mobilcasinon/) | Webbläsare mot app och hur kassan beter sig på liten skärm |
+      | [Låg insättning](/se/casinon-med-lag-insattning/) | De lägsta insättningsnivåerna och vilka metoder som tillåter dem |
+      | [Revolut-casinon](/se/revolut-casinon/) | Revolut som kort och Revolut Pay — inte en e-plånbok som PayPal — plus gambling block i appen |
+      | [Kryptocasinon](/se/krypto-casinon/) | BTC, ETH och stablecoins: hastighet, kursrisk, oåterkalleliga överföringar och KYC ändå |
+      | [Bedömningsriktlinjer](/se/rating-guidelines/) | Hur vi bedömer och vad som leder till att en sajt tas bort |
 
       <div class="related-pages">
         <a href="/se/paypal-casinon-sverige/">PayPal-casinon</a>
-        <a href="/se/nya-casinon/">Nya casinon</a>
-        <a href="/se/casinobonusar/">Casinobonusar</a>
         <a href="/se/casinon-med-snabb-utbetalning/">Snabb utbetalning</a>
+        <a href="/se/casinobonusar/">Casinobonusar</a>
+        <a href="/se/nya-casinon/">Nya casinon</a>
         <a href="/se/mobilcasinon/">Mobilcasinon</a>
         <a href="/se/casinon-med-lag-insattning/">Låg insättning</a>
         <a href="/se/revolut-casinon/">Revolut-casinon</a>
         <a href="/se/krypto-casinon/">Kryptocasinon</a>
-        <a href="/se/blockerade-casinon/">Blockerade casinon</a>
         <a href="/se/rating-guidelines/">Bedömningsriktlinjer</a>
       </div>
+  # IMAGE (cashier) — file: src/images/content/home-page-cashier.se.webp
+  # Brief: real cashier on a Swedish-licensed site showing Swish + Trustly, and ideally a
+  # second shot from an offshore site showing PayPal. Blur all PII and balances.
+  - kind: image
+    id: hp-img-cashier
+    alt: Kassan på ett onlinecasino med betalningsmetoder för svenska spelare
+    caption: "Skärmbild: kontrollera i den faktiska kassan vilka metoder som är aktiva."
+  - kind: howTo
+    id: hp-howto
+    title: Första insättningen steg för steg
+    items:
+      - iconName: ShieldCheck
+        title: Kontrollera licensen
+        steps:
+          - Leta efter licensraden längst ned på casinots sida.
+          - Svensk licens innebär BankID, Spelpaus och en bonus per spelare.
+          - Utländsk licens innebär större bonusar men inget Spelpaus.
+      - iconName: UserPlus
+        title: Skapa konto och verifiera
+        steps:
+          - Med svensk licens sker verifieringen med BankID på några sekunder.
+          - Utan BankID får du ladda upp id och adressbevis manuellt.
+          - Gör det direkt så slipper du vänta vid första uttaget.
+      - iconName: Wallet
+        title: Välj metod
+        steps:
+          - Öppna kassan och se vilka metoder som faktiskt finns listade.
+          - Kontrollera om metoden kvalificerar till bonusen.
+          - Notera minimibeloppet — PayPal ligger ofta högre än Swish.
+      - iconName: CreditCard
+        title: Sätt in
+        steps:
+          - Ange beloppet och slutför betalningen.
+          - Swish, Trustly, kort och PayPal bokförs normalt direkt.
+          - Sätt en insättningsgräns för dig själv i samma steg.
+      - iconName: CheckCircle
+        title: Begär uttag
+        steps:
+          - Ta ut till samma metod du satte in med när det är möjligt.
+          - Swish och Trustly klarar det på timmar, kort tar bankdagar.
+          - Lägg till tid för KYC första gången.
+  # PAYMENT MATRIX — activate by adding `rowsByCountry.sweden` to home-page/meta.json
+  # (one row per casino slug in the list above), then uncomment this block.
+  # RESEARCH: Sweden is the best market for this table, because the licence split is visible
+  # in the cashier — svensklicensierade sajter have Swish and no PayPal, offshore is the reverse.
+  # - kind: methodAvailability
+  #   id: hp-methods
+  #   title: Betalningsmetoder hos de listade casinona
+  #   footnote: Kontrollerat i den aktiva kassan på angivet datum. Operatörer byter leverantör utan förvarning — bekräfta alltid själv före insättning.
+  #   columns: [paypal, card, local, crypto]
+  #   columnLabels:
+  #     paypal: PayPal
+  #     card: Visa / Mastercard
+  #     local: Swish / Trustly
+  #     crypto: Krypto
+  # IMAGE (payout proof) — file: src/images/content/home-page-payout-proof.se.webp
+  # Brief: withdrawal history with visible timestamps, PII blurred. Highest E-E-A-T value here.
+  - kind: image
+    id: hp-img-payout
+    alt: Uttagshistorik från ett onlinecasino med tidsstämplar
+    caption: "Skärmbild: tidsstämplar från ett genomfört uttag."
+  # RESEARCH (verdict): Stödlinjen and spelpaus.se are already cited on the Swedish pages.
+  # Re-confirm the number and URLs at review time.
+  - kind: contentComponent
+    id: hp-verdict
+    name: HP Verdict
+    bodyMarkdown: |-
+      ## Vad passar dig?
 
-      *Uppdaterad: augusti 2026. Innehållet ersätts efter research. Spela ansvarsfullt. 18+.*
+      ### Du vill ha det starkaste skyddet
+
+      Välj svensk licens. Du får BankID, insättningsgränser och Spelpaus som gäller hos samtliga svensklicensierade operatörer samtidigt. Priset är att bonusen begränsas till ett erbjudande per spelare, och att flera sajter därför inte har någon välkomstbonus alls. Betala med Swish eller Trustly.
+
+      ### Du vill ha pengarna snabbt
+
+      Då är metoden viktigare än sajten. Trustly anges till under 5 timmar och Skrill och Neteller till 1–6 timmar, medan kortuttag tar flera bankdagar. Lägg alltid till KYC första gången du begär uttag.
+
+      ### Du jagar bonusar
+
+      Då hamnar du på utländska sajter, där paketen kan ligga på flera tusen kronor. Räkna med att Spelpaus inte gäller där, att omsättningskravet måste läsas noga och att skatten beror på var licensen finns. Sätt egna gränser innan du sätter in, inte efteråt.
+
+      ### Du vill använda PayPal
+
+      Då blir urvalet begränsat i Sverige. PayPal är ovanligt på svensklicensierade sajter och vanligare på utländska, och minimibeloppet ligger ofta högre än för Swish. Vår PayPal-sida listar de sajter där vi har sett metoden och vilka begränsningar som gäller.
+
+      <div class="info-yellow-box">
+        <p><strong>Spel är underhållning, inte en inkomstkälla.</strong> Behöver du prata med någon ringer du Stödlinjen på <strong>020-81 91 00</strong> eller besöker <a href="https://www.stodlinjen.se" rel="nofollow noopener" target="_blank">stodlinjen.se</a>. Vill du stänga av dig från alla svenska licenser använder du <a href="https://www.spelpaus.se" rel="nofollow noopener" target="_blank">spelpaus.se</a>. 18+.</p>
+      </div>
+
+      <div class="references-list">
+        <h2>Källor</h2>
+        <ul>
+          <li><a href="https://www.spelinspektionen.se">Spelinspektionen</a></li>
+          <li><a href="https://www.spelpaus.se">Spelpaus</a></li>
+          <li><a href="https://www.stodlinjen.se">Stödlinjen</a></li>
+        </ul>
+      </div>
+
+      <div class="content-freshness" data-date="2026-08-24" data-review-cycle="monthly">
+        <p>Licensjämförelse, betalningstabell och interna länkar genomgångna. Avgifter, gränser och tillgängliga metoder ändras utan förvarning — bekräfta alltid i operatörens kassa före insättning. Inget på den här sidan är skatterådgivning.</p>
+      </div>
   - kind: faqComponent
     id: 81648ffc-2ace-40ad-9c81-8b4d896c9bb4
-    title: FAQ – Casinon Sverige
+    title: Vanliga frågor – onlinecasino i Sverige
     items:
-      - question: Finns PayPal på casinon med svensk licens?
-        answer: Sällan. Lokala spår som Swish och Trustly är vanligare. Läs PayPal-guiden och kolla kassan — den här utkastssidan gissar inte tider.
-      - question: Vad är Spelpaus?
-        answer: Spelpaus är det nationella självavstängningssystemet. Officiell URL läggs in från researchfilen.
-      - question: Var hittar jag bonusar och snabba uttag?
-        answer: Använd sidorna för casinobonusar och casinon med snabb utbetalning. Listan ovan är urvalet för Sverige just nu.
+      - question: Varför har flera svenska casinon ingen välkomstbonus?
+        answer: Den svenska spellagen tillåter bara ett bonuserbjudande per spelare hos varje operatör med svensk licens. Många väljer därför att inte erbjuda något välkomstpaket alls, eftersom de sparar erbjudandet till ett annat tillfälle eller helt hoppar över det. Det är alltså regelverket och inte snålhet som ligger bakom. Utländska sajter omfattas inte av regeln och kan erbjuda flera bonusar — men de saknar samtidigt Spelpaus.
+      - question: Gäller Spelpaus på utländska casinon?
+        answer: Nej. Spelpaus stänger av dig från samtliga operatörer med svensk licens samtidigt, men det omfattar inte sajter med MGA-, Curaçao- eller Anjouan-licens. Väljer du en utländsk operatör får du förlita dig på deras egna verktyg för gränser och pauser, och kvaliteten varierar kraftigt. Behöver du stöd oavsett var du spelar finns Stödlinjen på 020-81 91 00.
+      - question: Är PayPal vanligt på svenska casinon?
+        answer: Nej, det är ovanligt på svensklicensierade sajter, där Swish och Trustly dominerar kassan. PayPal förekommer oftare på utländska casinon. Minimibeloppet för PayPal ligger dessutom ofta högre än för Swish, kring 100–150 kronor. Öppna kassan hos den enskilda sajten och kontrollera att PayPal går att använda för både insättning och uttag — det är inte alltid båda.
+      - question: Vilken metod ger snabbast uttag?
+        answer: Enligt operatörernas egna uppgifter ligger Trustly först med under 5 timmar, följt av Skrill och Neteller på 1–6 timmar och Zimpler på 1–12 timmar. Swish anges till 1–24 timmar och PayPal till 12–48 timmar. Kortuttag tar 1–5 bankdagar. Första gången du begär uttag tillkommer KYC-kontrollen oavsett metod. Siffrorna är inte mätta i egna testinsättningar.
+      - question: Måste jag betala skatt på mina vinster?
+        answer: Vinster från operatörer med svensk licens är skattefria, och detsamma gäller normalt vinster från licenser inom EU och EES. Vinster från sajter licensierade utanför EES kan vara skattepliktiga. Reglerna har undantag och beror på din situation, och vi ger inte skatterådgivning. Kontrollera Skatteverkets aktuella information eller prata med en rådgivare om beloppen är stora.
 ---

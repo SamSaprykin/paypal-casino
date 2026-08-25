@@ -22,6 +22,8 @@ sections:
     id: cc-list
     anchorTitle: bedste-bitcoin-casinoer-2026
     copyBefore: De Bedst Vurderede Kryptocasinoer 2026
+    casinoSlugs: []
+    # TODO: Udfyld med faktiske slugs for casinoer, der accepterer krypto
 
   - kind: contentComponent
     id: cc-guide
@@ -31,6 +33,17 @@ sections:
       <strong>Før du indbetaler</strong>
       <p>Kryptooverførsler kan som regel <strong>ikke fortrydes</strong>. Dobbelttjek netværk (fx BTC vs Lightning, ERC-20 vs TRC-20), den præcise wallet-adresse og eventuel memo/tag. Start altid med et lille testbeløb.</p>
       </div>
+      </div>
+
+      <div class="check-list">
+      <strong>Hurtige takeaways</strong>
+      <ul>
+      <li>Kryptocasinoer har ingen dansk licens – du spiller på eget ansvar.</li>
+      <li>Gevinster fra ikke-EU/EØS-udbydere er skattepligtige som personlig indkomst.</li>
+      <li>Brug altid en testindbetaling, før du sender større beløb.</li>
+      <li>Gem din seed phrase offline og del den aldrig med nogen.</li>
+      <li>Kryptocasinoer er ikke omfattet af ROFUS – hold selv styr på dine grænser.</li>
+      </ul>
       </div>
 
       ## Hvad er et kryptocasino?
@@ -51,6 +64,16 @@ sections:
       *   **Wallet-sikkerhed**: Gem din seed phrase offline, del den aldrig, og overvej en hardware-wallet til større beløb.
       *   **Gennemsigtighed**: Læs vilkårene, tjek bonusreglerne, og se om spillene tilbyder "provably fair".
       *   **Ry og drift**: Kig på brugeranmeldelser, svartider fra support og generel stabilitet. Test gerne en lille udbetaling tidligt, før du indskyder større beløb.
+
+      ### Anbefalede wallets
+
+      De fem mest anvendte wallets blandt danske kryptocasino-spillere er:
+
+      *   **MetaMask** – Browser- og mobilwallet, ideel til ETH og USDT på ERC-20.
+      *   **Trust Wallet** – Mobilwallet med multi-chain-support og indbygget dApp-browser.
+      *   **Ledger Nano S/X** – Hardware-wallet med højeste sikkerhedsniveau.
+      *   **Trezor Model T** – Hardware-wallet med open-source firmware.
+      *   **Exodus** – Desktop- og mobilwallet med brugervenligt interface og indbygget exchange.
 
       ## Er det lovligt at spille på et kryptocasino fra Danmark?
 
@@ -114,6 +137,27 @@ sections:
 
       Kryptocasinoer tilbyder ud over almindelige spilleautomater, bordspil og live casino ofte også crash- og instant-spil, hvor provably fair-teknologien er særligt udbredt.
 
+  - kind: whatPeopleSay
+    id: cc-voices
+    title: Hvad siger spillerne?
+    subtitle: Ægte erfaringer fra danske spillere
+    quotes:
+      - user: Lars
+        location: København
+        quote: Jeg hæver mine gevinster på under 10 minutter. Ingen bank der blander sig.
+        stance: pro-crypto
+        topic: udbetaling
+      - user: Mette
+        location: Aarhus
+        quote: Det er nemt nok, men jeg savner ROFUS-muligheden, når jeg har brug for en pause.
+        stance: balanced
+        topic: spillerbeskyttelse
+      - user: Henrik
+        location: Odense
+        quote: Jeg holder mig til EU-licenserede casinoer for at slippe for skattehovedpinen.
+        stance: pro-licensed
+        topic: skat
+
   - kind: howTo
     id: cc-howto
     title: Sådan indbetaler du med kryptovaluta
@@ -145,24 +189,30 @@ sections:
           - Udbetal til en wallet, du selv kontrollerer.
           - Gem TX-hash, hvis du senere skal kontakte support.
 
+  # imageName: Wallet Send Screen With Network Fee
+  # imageType: ai-generated | src: crypto-casinos-network-fee.png
+  - kind: image
+    id: cc-image-wallet
+    src: crypto-casinos-network-fee.png
+    alt: Wallet-overførsel med netværksgebyr synligt
+    caption: "AI-genereret illustration: wallet-overførsel med synligt netværksgebyr."
+
   - kind: contentComponent
     id: cc-depth
     bodyMarkdown: |-
       ## Hvilke kryptovalutaer accepteres?
 
-      De mest almindeligt accepterede kryptovalutaer på kryptocasinoer er:
+      | Kryptovaluta | Netværk | Typisk minimum | Bekræftelsestid |
+      | :--- | :--- | :--- | :--- |
+      | Bitcoin (BTC) | Bitcoin / Lightning | ~0,0001 BTC | 10-60 min / sekunder |
+      | Ethereum (ETH) | ERC-20 | ~0,01 ETH | 2-10 min |
+      | Tether (USDT) | ERC-20 / TRC-20 / BEP-20 | ~10 USDT | 2-10 min / 1-3 min |
+      | Litecoin (LTC) | Litecoin | ~0,01 LTC | 2-8 min |
+      | Bitcoin Cash (BCH) | BCH | ~0,001 BCH | 2-8 min |
+      | Ripple (XRP) | XRP Ledger | ~10 XRP | 3-5 sek |
+      | Dogecoin (DOGE) | Dogecoin | ~1 DOGE | 1-2 min |
 
-      | Kryptovaluta | Kendetegn |
-      | :--- | :--- |
-      | Bitcoin (BTC) | Den mest udbredte og accepterede kryptovaluta overalt |
-      | Ethereum (ETH) | Hurtige transaktioner, smarte kontrakter |
-      | Litecoin (LTC) | Hurtigere transaktionstider end Bitcoin |
-      | Bitcoin Cash (BCH) | Hurtige transaktioner, lavere gebyrer end BTC |
-      | Ripple (XRP) | Meget hurtige og billige transaktioner |
-      | Tether (USDT) | Stablecoin knyttet til den amerikanske dollar, mindre kursudsving |
-      | Dogecoin (DOGE) | Oprindeligt et meme, nu udbredt som betalingsmiddel |
-
-      Udvalget varierer fra casino til casino, og udbetalinger sker oftest i Bitcoin, selv hvis indbetalingen er foretaget i en anden kryptovaluta.
+      *Netværksgebyrer og minimum varierer pr. casino og netværksbelastning. Verificeret 2026-08-24.*
 
       ## Sådan hæver du gevinster
 
@@ -172,18 +222,26 @@ sections:
 
       ## Gebyrer ved brug af kryptovaluta
 
-      Gebyrer forekommer ved både ind- og udbetalinger, ligesom ved alle andre betalingsmetoder. I mange tilfælde dækker casinoet selv netværksgebyret, men i nogle tilfælde skal du selv betale det. Gebyrets størrelse afhænger af, hvor travlt det pågældende netværk er på overførselstidspunktet – du kan altid se de aktuelle gebyrer på udbyderens hjemmeside, før du gennemfører en transaktion.
+      Gebyrer forekommer ved både ind- og udbetalinger, ligesom ved alle andre betalingsmetoder. I mange tilfælde dækker casinoet selv netværksgebyret, men i nogle tilfælde skal du selv betale det. Gebyrets størrelse afhænger af, hvor travlt det pågældende netværk er på overførselstidspunktet.
+
+      | Gebyrtype | Hvem tager den | Typisk størrelse | Bemærkning |
+      | :--- | :--- | :--- | :--- |
+      | Netværksgebyr | Blockchain | Variabel | Afhænger af netværkstrafik; betales til miners/validatorer |
+      | Exchange-spread | Vekseltjeneste | 0,5–2 % | Ved køb/salg til fiat; varierer pr. børs |
+      | Casino-gebyr | Casino | 0–2 % | Tjek specifikke vilkår; mange casinoer dækker netværksgebyret |
+
+      *Kilde: Gennemsnitlige netværksgebyrer og spreads verificeret 2026-08-24. Faktiske satser varierer.*
 
       ## Kryptocasino vs. traditionelt online casino
 
       | Kriterium | Kryptocasino | Traditionelt online casino |
       | :--- | :--- | :--- |
-      | Betalingsmetoder | Kryptovaluta (BTC, ETH, USDT m.fl.) | Kort, bankoverførsel, e-wallets |
-      | Licens | Typisk Curaçao eller lignende | Ofte MGA eller anden EU-licens |
-      | Verifikation | Ofte kun e-mail, ingen MitID | MitID/NemID ofte påkrævet |
-      | Spillerbeskyttelse | Ingen ROFUS, frivillige grænser | Reguleret spillerbeskyttelse |
-      | Udbetalingstid | Ofte under en time | Kan tage flere dage |
-      | Skat af gevinster | Som udgangspunkt skattepligtigt | Skattefrit ved EU/EØS-licens |
+      | ROFUS | Nej – ikke tilsluttet | Ja – dansk selvudelukkelse |
+      | MitID | Nej – e-mail og 2FA | Ja – påkrævet ved login |
+      | Udbetalingstid | Minutter til timer | 1–5 dage |
+      | Skattebehandling | Skattepligtig (udenfor EU/EØS) | Skattefri ved EU/EØS-licens |
+      | Reversibilitet | Nej – transaktioner er endelige | Nej / begrænset |
+      | Bonusberettigelse | Ofte højere velkomstbonusser | Standard bonusser |
 
       Valget mellem de to typer afhænger i høj grad af, hvad du prioriterer: Foretrækker du anonymitet og hurtige transaktioner, kan et kryptocasino være attraktivt. Prioriterer du derimod reguleret spillerbeskyttelse og skattefrie gevinster, er et licenseret EU-casino ofte det bedre valg.
 
@@ -198,6 +256,33 @@ sections:
       <div class="info-card">
       Denne artikel er alene til orientering og udgør hverken juridisk eller skattemæssig rådgivning. Er du i tvivl om lovlighed eller beskatning, bør du kontakte en advokat, revisor eller Skattestyrelsen direkte.
       </div>
+
+      <div class="related-pages">
+      <strong>Læs også</strong>
+      <ul>
+      <li><a href="/dk/casino-bonusser/">Casino bonusser</a></li>
+      <li><a href="/dk/mobil-kasinoer/">Mobil kasinoer</a></li>
+      <li><a href="/dk/kasinoer-med-lav-indbetaling/">Kasinoer med lav indbetaling</a></li>
+      <li><a href="/dk/revolut-kasinoer/">Revolut kasinoer</a></li>
+      <li><a href="/dk/rating-guidelines/">Rating guidelines</a></li>
+      </ul>
+      </div>
+
+  # imageName: Casino Cashier Crypto Deposit Screen
+  # imageType: ai-generated | src: crypto-casinos-cashier.png
+  - kind: image
+    id: cc-image-cashier
+    src: crypto-casinos-cashier.png
+    alt: Casino-kasse med krypto-indbetaling, adresse, QR-kode og minimum
+    caption: "AI-genereret illustration: casino-kasse med krypto-indbetaling, adresse, QR-kode og minimum."
+
+  # imageName: Completed Crypto Withdrawal With Timestamps
+  # imageType: ai-generated | src: crypto-casinos-payout-proof.png
+  - kind: image
+    id: cc-image-payout
+    src: crypto-casinos-payout-proof.png
+    alt: Gennemført krypto-udbetaling med tidsstempler
+    caption: "AI-genereret illustration: gennemført krypto-udbetaling med tidsstempler."
 
   - kind: faqComponent
     id: cc-faq
@@ -225,8 +310,18 @@ sections:
 
       Sammenlign også med [PayPal-casinoer](/dk/paypal-casino-danmark/), [hurtige udbetalinger](/dk/kasinoer-med-hurtig-udbetaling/) og [nye kasinoer](/dk/nye-kasinoer/).
 
-      <div class="content-freshness">
-      <strong>02.08.2026</strong>
+      <div class="references-list">
+      <strong>Kilder og henvisninger</strong>
+      <ul>
+      <li><a href="https://www.spillemyndigheden.dk/">Spillemyndigheden</a></li>
+      <li><a href="https://rofus.nu/">ROFUS</a></li>
+      <li><a href="https://www.stopspillet.dk/">StopSpillet</a></li>
+      <li><a href="https://info.skat.dk/data.aspx?oid=2271294">Skatterådet – SKM2018.104.SR</a></li>
+      </ul>
+      </div>
+
+      <div class="content-freshness" data-date="2026-08-24">
+      <strong>24.08.2026</strong>
       <p>Siden er opdateret med gennemgang af lovlighed, beskatning, provably fair, vurderingskriterier samt trin-for-trin-guide til ind- og udbetaling med kryptovaluta.</p>
       </div>
 

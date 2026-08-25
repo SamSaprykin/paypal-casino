@@ -7,6 +7,7 @@
     "addedBy": "seamus-oconnor",
     "reviewedBy": "stoyan-makoski"
   },
+  "_imageNote": "Image sections render nothing until the file exists in src/images/content/. Locale file wins over the shared one: home-page-hero.de.webp > home-page-hero.webp. See root customImages.md.",
   "components": [
     {
       "kind": "contentComponent",
@@ -16,7 +17,8 @@
     {
       "kind": "image",
       "id": "hp-img-hero",
-      "name": "Home Page Payment Methods Hero"
+      "name": "Home Page Payment Methods Hero",
+      "src": "home-page-hero.webp"
     },
     {
       "kind": "casinoList",
@@ -86,6 +88,137 @@
       "kind": "contentComponent",
       "id": "e6695325-bdb3-4018-a6bd-fd0729b66642",
       "name": "HP Body"
+    },
+    {
+      "kind": "image",
+      "id": "hp-img-cashier",
+      "name": "Cashier Screenshot",
+      "src": "home-page-cashier.webp"
+    },
+    {
+      "kind": "howTo",
+      "id": "hp-howto",
+      "name": "First Deposit Steps"
+    },
+    {
+      "kind": "methodAvailability",
+      "id": "hp-methods",
+      "name": "Payment Availability Matrix",
+      "_note": "Renders only once rowsByCountry is filled. One row per casino slug from casinoListsByCountry above; cells keys must match the `columns` list set in each locale MDX (yes | no | partial | unknown) and verifiedAt is the date the cashier was actually opened.",
+      "_rowShape": {
+        "casinoSlug": "winshark",
+        "cells": {
+          "paypal": "no",
+          "card": "yes",
+          "local": "yes",
+          "crypto": "no"
+        },
+        "notes": "Short cashier note",
+        "verifiedAt": "2026-08-24"
+      },
+      "rowsByCountry": {
+        "denmark": [
+          {
+            "casinoSlug": "lets-lucky",
+            "cells": {
+              "paypal": "no",
+              "card": "yes",
+              "local": "no",
+              "crypto": "yes"
+            },
+
+            "verifiedAt": "2026-07-30"
+          },
+          {
+            "casinoSlug": "winshark",
+            "cells": {
+              "paypal": "yes",
+              "card": "yes",
+              "local": "no",
+              "crypto": "yes"
+            },
+
+            "verifiedAt": "2026-07-31"
+          },
+          {
+            "casinoSlug": "kukimuki",
+            "cells": {
+              "paypal": "no",
+              "card": "yes",
+              "local": "no",
+              "crypto": "yes"
+            },
+
+            "verifiedAt": "2026-07-31"
+          },
+          {
+            "casinoSlug": "luckydreams",
+            "cells": {
+              "paypal": "no",
+              "card": "yes",
+              "local": "no",
+              "crypto": "yes"
+            },
+
+            "verifiedAt": "2026-07-31"
+          },
+          {
+            "casinoSlug": "corgibet",
+            "cells": {
+              "paypal": "no",
+              "card": "yes",
+              "local": "no",
+              "crypto": "no"
+            },
+
+            "verifiedAt": "2026-05-15"
+          },
+          {
+            "casinoSlug": "just-casino",
+            "cells": {
+              "paypal": "no",
+              "card": "yes",
+              "local": "no",
+              "crypto": "no"
+            },
+
+            "verifiedAt": "2026-07-31"
+          },
+          {
+            "casinoSlug": "lucky-start",
+            "cells": {
+              "paypal": "yes",
+              "card": "no",
+              "local": "no",
+              "crypto": "no"
+            },
+      
+            "verifiedAt": "2026-05-15"
+          },
+          {
+            "casinoSlug": "rx-casino",
+            "cells": {
+              "paypal": "yes",
+              "card": "no",
+              "local": "no",
+              "crypto": "no"
+            },
+
+            "verifiedAt": "2026-05-15"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "image",
+      "id": "hp-img-payout",
+      "name": "Withdrawal Proof Screenshot",
+      "src": "home-page-payout-proof.webp"
+    },
+    {
+      "kind": "contentComponent",
+      "id": "hp-verdict",
+      "name": "HP Verdict"
     },
     {
       "kind": "faqComponent",

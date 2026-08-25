@@ -63,6 +63,12 @@ export interface MethodAvailabilitySection extends BaseSection {
   title?: string;
   footnote?: string;
   columns: string[];
+  /**
+   * Per-column header overrides keyed by column id. Needed when the matrix is
+   * reused outside the Revolut page, where `cardDeposit` / `revolutPay` /
+   * `withdraw` / `bonusOk` come from `METHOD_AVAILABILITY_COPY`.
+   */
+  columnLabels?: Record<string, string>;
   rows: MethodAvailabilityRow[];
 }
 
@@ -199,10 +205,7 @@ function pickArray<T = unknown>(v: unknown): T[] {
   return Array.isArray(v) ? (v as T[]) : [];
 }
 
-function adaptBonus(
-  raw: unknown,
-  locale: WebsiteLocaleKey,
-): BonusItem | null {
+function adaptBonus(raw: unknown, locale: WebsiteLocaleKey): BonusItem | null {
   if (!raw || typeof raw !== "object") return null;
   const b = raw as Record<string, unknown>;
   const logo = b.bonusLogo as
@@ -216,11 +219,8 @@ function adaptBonus(
       pickLocalizedString(b.codeIntl, locale, asString(b.code)) ??
       asString(b.code),
     description:
-      pickLocalizedString(
-        b.descriptionIntl,
-        locale,
-        asString(b.description),
-      ) ?? asString(b.description),
+      pickLocalizedString(b.descriptionIntl, locale, asString(b.description)) ??
+      asString(b.description),
     referralUrl: asString(b.referralUrl),
     bonusBackgroundColor: asString(b.bonusBackgroundColor),
     bonusLogo: logo?.asset?.url
@@ -373,6 +373,15 @@ function adaptSection(
           },
         ];
       });
+      const columnLabelsRaw =
+        b.columnLabels && typeof b.columnLabels === "object"
+          ? (b.columnLabels as Record<string, unknown>)
+          : {};
+      const columnLabels: Record<string, string> = {};
+      for (const [key, value] of Object.entries(columnLabelsRaw)) {
+        const label = asString(value);
+        if (label) columnLabels[key] = label;
+      }
       return {
         kind: "methodAvailability",
         id,
@@ -381,6 +390,9 @@ function adaptSection(
         columns: columns.length
           ? columns
           : ["cardDeposit", "revolutPay", "withdraw", "bonusOk"],
+        columnLabels: Object.keys(columnLabels).length
+          ? columnLabels
+          : undefined,
         rows,
       };
     }
@@ -403,10 +415,10 @@ function adaptSection(
       };
 
     case "WhatPeopleSayIntl": {
-      const quotes: WhatPeopleSayQuote[] = pickArray<
-        Record<string, unknown>
-      >(b.quotes).flatMap((q) => {
-        const user = asString(q.user);
+      const quotes: WhatPeopleSayQuote[] = pickArray<Record<string, unknown>>(
+        b.quotes,
+      ).flatMap((q) => {
+        const user = asString(q.user) ?? asString(q.author);
         const quote = asString(q.quote);
         if (!user || !quote) return [];
         const stanceRaw = asString(q.stance);

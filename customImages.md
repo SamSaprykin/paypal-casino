@@ -53,6 +53,9 @@ Each image has a human-readable **imageName** (what the asset depicts), a **src*
 | `bn-img-wagering`     | Wagering Requirements Explainer              | `casino-bonuses-wagering.webp`      | stock        |
 | `bn-img-freespins`    | Free Spins Slot Reels Burst                  | `casino-bonuses-free-spins.webp`    | ai-generated |
 | `bn-img-cashback`     | Cashback And VIP Loyalty Tiers               | `casino-bonuses-cashback-vip.webp`  | stock        |
+| `cc-image-wallet`     | Wallet Send Screen With Network Fee          | `crypto-casinos-network-fee.png`    | ai-generated |
+| `cc-image-cashier`    | Casino Cashier Crypto Deposit Screen         | `crypto-casinos-cashier.png`        | ai-generated |
+| `cc-image-payout`     | Completed Crypto Withdrawal With Timestamps  | `crypto-casinos-payout-proof.png`   | ai-generated |
 
 Source of truth script: `scripts/add-image-names.mjs` (also updates meta + MDX).
 
@@ -281,6 +284,30 @@ Per-locale files: `{name}.{ie\|de\|dk\|fi\|no\|se}.webp` + shared `{name}.webp` 
 | `bc-img-hero`         | Blocked Casino Paused Promotion Hero | `blocked-casinos-hero.webp`         | stock        | After intro — paused promotion concept        |
 | `bc-img-warning`      | Blocked Casino Reasons Checklist     | `blocked-casinos-warning.webp`      | stock        | After why section — reasons checklist         |
 | `bc-img-alternatives` | Choosing Licensed Alternative Casino | `blocked-casinos-alternatives.webp` | ai-generated | After how-to — picking a licensed alternative |
+
+---
+
+## Crypto Casinos (`pages/crypto-casinos/`)
+
+Denmark-only files live in `src/images/content/dk/crypto-casino/`. `src` is set in `denmark.mdx` so other locales render nothing until their files exist. Captions disclose that the art is AI-generated.
+
+| ID                  | imageName                                   | Suggested file                     | imageType    | Placement                                      |
+| ------------------- | ------------------------------------------- | ---------------------------------- | ------------ | ---------------------------------------------- |
+| `cc-image-wallet`   | Wallet Send Screen With Network Fee         | `crypto-casinos-network-fee.png`   | ai-generated | After how-to — wallet send with network fee    |
+| `cc-image-cashier`  | Casino Cashier Crypto Deposit Screen        | `crypto-casinos-cashier.png`       | ai-generated | After depth — cashier with address, QR, min    |
+| `cc-image-payout`   | Completed Crypto Withdrawal With Timestamps | `crypto-casinos-payout-proof.png`  | ai-generated | After cashier — completed withdrawal timestamps |
+
+### crypto-casinos-network-fee — Wallet send screen with the network fee visible
+
+{crypto-casinos-network-fee.dk.png}, Denmark — AI-generated wallet send / fee screen
+
+### crypto-casinos-cashier — Casino cashier crypto deposit (address, QR, minimum)
+
+{crypto-casinos-cashier.dk.png}, Denmark — AI-generated cashier deposit screen
+
+### crypto-casinos-payout-proof — Completed crypto withdrawal with timestamps
+
+{crypto-casinos-payout-proof.dk.png}, Denmark — AI-generated payout proof
 
 ---
 

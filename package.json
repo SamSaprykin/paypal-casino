@@ -25,7 +25,8 @@
     "format:check": "prettier --check .",
     "content:restructure": "node scripts/restructure-content.mjs",
     "content:migrate-mdx": "node scripts/migrate-to-mdx.mjs",
-    "content:sync-blocked": "node scripts/sync-blocked-casinos.mjs"
+    "content:sync-blocked": "node scripts/sync-blocked-casinos.mjs",
+    "content:check-links": "node scripts/check-internal-links.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
