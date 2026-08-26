@@ -27,7 +27,7 @@ const {
   mainClass = "flex-1 pt-12 my-12 lg:my-32",
 } = Astro.props as Props;
 
-const tocItems = extractWebsitePageToc(page.sections);
+const tocItems = extractWebsitePageToc(page.sections, locale);
 const hasToc = tocItems.length > 0;
 ---
 

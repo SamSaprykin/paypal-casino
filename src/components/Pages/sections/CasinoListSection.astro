@@ -3,7 +3,10 @@ import CasinoListingCard from "../Cards/CasinoListingCard.astro";
 import SwedenCasinoCard from "../Cards/SwedenCasinoCard.astro";
 import { MarkdownSnippet } from "../MarkdownSnippet.jsx";
 import type { CasinoListSection, WebsiteLocaleKey } from "../../../lib/content";
-import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
+import {
+  ROOT_WEBSITE_LOCALE,
+  resolveCopyPlaceholders,
+} from "../../../lib/content";
 import { CASINO_LISTING_CARD_COPY, localeIdForWebsiteLocale } from "../../../lib/i18n";
 import { SWEDEN_TOPLIST_CASINOS } from "../../../data/sweden-toplist-casinos";
 import { slugify } from "../../../lib/utils";
@@ -11,30 +14,6 @@ import { slugify } from "../../../lib/utils";
 interface Props {
   section: CasinoListSection;
   locale?: WebsiteLocaleKey;
-}
-
-const MONTH_LOCALES: Record<WebsiteLocaleKey, string> = {
-  ireland: "en-IE",
-  sweden: "sv-SE",
-  denmark: "da-DK",
-  finland: "fi-FI",
-  germany: "de-DE",
-  norway: "nb-NO",
-};
-
-function resolveCopyPlaceholders(
-  text: string | undefined,
-  locale: WebsiteLocaleKey,
-): string | undefined {
-  if (!text) return text;
-  const now = new Date();
-  const currentMonth = new Intl.DateTimeFormat(MONTH_LOCALES[locale], {
-    month: "long",
-  }).format(now);
-  const currentYear = String(now.getFullYear());
-  return text
-    .replaceAll("${currentMonth}", currentMonth)
-    .replaceAll("${currentYear}", currentYear);
 }
 
 const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;

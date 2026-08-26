@@ -1,5 +1,8 @@
 import type { PageSection } from "../cms/sections";
+import type { WebsiteLocaleKey } from "../cms/locales";
+import { ROOT_WEBSITE_LOCALE } from "../cms/routing";
 import { slugify } from "../utils";
+import { resolveCopyPlaceholders } from "./copyPlaceholders";
 
 export type WebsitePageTocItem = {
   level: 1 | 2;
@@ -33,6 +36,7 @@ function pushUnique(
  */
 export function extractWebsitePageToc(
   sections: PageSection[],
+  locale: WebsiteLocaleKey = ROOT_WEBSITE_LOCALE,
 ): WebsitePageTocItem[] {
   const items: WebsitePageTocItem[] = [];
   const seen = new Set<string>();
@@ -73,12 +77,9 @@ export function extractWebsitePageToc(
       continue;
     }
 
-    if (
-      section.kind === "casinoList" &&
-      section.copyBefore?.trim() &&
-      section.casinos.length > 0
-    ) {
-      const text = plainHeadingText(section.copyBefore);
+    if (section.kind === "casinoList" && section.copyBefore?.trim()) {
+      const resolved = resolveCopyPlaceholders(section.copyBefore, locale);
+      const text = plainHeadingText(resolved ?? section.copyBefore);
       pushUnique(items, seen, {
         level: 2,
         text,

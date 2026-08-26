@@ -120,3 +120,4 @@ export type {
 
 export { extractWebsitePageToc } from "./websitePageToc";
 export type { WebsitePageTocItem } from "./websitePageToc";
+export { resolveCopyPlaceholders } from "./copyPlaceholders";
