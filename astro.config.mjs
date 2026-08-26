@@ -20,16 +20,53 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap({
-      filter: (page) =>
-        !page.includes("/intl-demo") &&
-        !page.includes("/404") &&
-        !page.includes("/classic-games") &&
-        !page.includes("/blocked-casinos") &&
-        !page.includes("/gesperrte-casinos") &&
-        !page.includes("/blokerede-kasinoer") &&
-        !page.includes("/estettyt-kasinot") &&
-        !page.includes("/blokkerte-kasinoer") &&
-        !page.includes("/blockerade-casinon"),
+      filter: (page) => {
+        const gone = [
+          "/intl-demo",
+          "/404",
+          "/classic-games",
+          "/blocked-casinos",
+          "/gesperrte-casinos",
+          "/blokerede-kasinoer",
+          "/estettyt-kasinot",
+          "/blokkerte-kasinoer",
+          "/blockerade-casinon",
+          "/new-casinos",
+          "/neue-casinos",
+          "/nye-kasinoer",
+          "/uudet-kasinot",
+          "/nya-casinon",
+          "/casino-bonuses",
+          "/casino-bonus",
+          "/casino-bonusser",
+          "/kasinobonukset",
+          "/casino-bonuser",
+          "/casinobonusar",
+          "/fast-payout-casinos",
+          "/casinos-mit-schneller-auszahlung",
+          "/kasinoer-med-hurtig-udbetaling",
+          "/nopeat-kotiutukset-kasinot",
+          "/kasinoer-med-rask-utbetaling",
+          "/casinon-med-snabb-utbetalning",
+          "/mobile-casinos",
+          "/handy-casinos",
+          "/mobil-kasinoer",
+          "/mobiilikasinot",
+          "/mobilkasinoer",
+          "/mobilcasinon",
+          "/minimum-deposit-casinos",
+          "/casinos-mit-mindesteinzahlung",
+          "/kasinoer-med-lav-indbetaling",
+          "/pienen-talletuksen-kasinot",
+          "/kasinoer-med-lav-innskudd",
+          "/casinon-med-lag-insattning",
+          "/revolut-casinos",
+          "/revolut-kasinoer",
+          "/revolut-kasinot",
+          "/revolut-casinon",
+        ];
+        return !gone.some((path) => page.includes(path));
+      },
     }),
     robotsTxt(),
   ],

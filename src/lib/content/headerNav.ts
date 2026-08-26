@@ -28,30 +28,19 @@ export type HeaderCategory = {
   items: HeaderNavLink[];
 };
 
+/**
+ * Header for every locale: Online Casino (home) + Payments (PayPal, Crypto) only.
+ * Casino types, Revolut, bonuses, etc. are retired (410).
+ */
 export async function resolveHeaderNav(
   locale: WebsiteLocaleKey = ROOT_WEBSITE_LOCALE,
 ) {
   const labels = NAV_LABELS[locale];
   const homeHref = homeHrefForLocale(locale);
 
-  const [
-    paypalCasinoHref,
-    revolutCasinosHref,
-    cryptoCasinosHref,
-    newCasinosHref,
-    bonusesHref,
-    fastPayoutHref,
-    mobileCasinosHref,
-    minimumDepositHref,
-  ] = await Promise.all([
+  const [paypalCasinoHref, cryptoCasinosHref] = await Promise.all([
     getWebsitePageHrefByName("Paypal Casino", locale),
-    getWebsitePageHrefByName("Revolut Casinos", locale),
     getWebsitePageHrefByName("Crypto Casinos", locale),
-    getWebsitePageHrefByName("New Casinos", locale),
-    getWebsitePageHrefByName("Bonuses", locale),
-    getWebsitePageHrefByName("Fast Payout Casinos", locale),
-    getWebsitePageHrefByName("Mobile Casinos", locale),
-    getWebsitePageHrefByName("Minimum Deposit Casinos", locale),
   ]);
 
   const link = (
@@ -63,30 +52,6 @@ export async function resolveHeaderNav(
 
   const categories: HeaderCategory[] = [
     {
-      title: labels.categories.casinoTypes,
-      items: [
-        link(newCasinosHref, labels.newCasinos, labels.short.newCasinos, "new"),
-        link(
-          fastPayoutHref,
-          labels.fastPayoutCasinos,
-          labels.short.fastPayoutCasinos,
-          "fast",
-        ),
-        link(
-          mobileCasinosHref,
-          labels.mobileCasinos,
-          labels.short.mobileCasinos,
-          "mobile",
-        ),
-        link(
-          minimumDepositHref,
-          labels.minimumDepositCasinos,
-          labels.short.minimumDepositCasinos,
-          "minDeposit",
-        ),
-      ].filter((item): item is HeaderNavLink => item != null),
-    },
-    {
       title: labels.categories.payments,
       items: [
         link(
@@ -96,23 +61,11 @@ export async function resolveHeaderNav(
           "paypal",
         ),
         link(
-          revolutCasinosHref,
-          labels.revolutCasinos,
-          labels.short.revolutCasinos,
-          "revolut",
-        ),
-        link(
           cryptoCasinosHref,
           labels.cryptoCasinos,
           labels.short.cryptoCasinos,
           "crypto",
         ),
-      ].filter((item): item is HeaderNavLink => item != null),
-    },
-    {
-      title: labels.categories.offers,
-      items: [
-        link(bonusesHref, labels.bonuses, labels.short.bonuses, "bonus"),
       ].filter((item): item is HeaderNavLink => item != null),
     },
   ].filter((cat) => cat.items.length > 0);

@@ -8,10 +8,103 @@
     { "src": "/fi/estettyt-kasinot(?:/.*)?", "status": 410 },
     { "src": "/no/blokkerte-kasinoer(?:/.*)?", "status": 410 },
     { "src": "/se/blockerade-casinon(?:/.*)?", "status": 410 },
+
+    { "src": "/new-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/neue-casinos(?:/.*)?", "status": 410 },
+    { "src": "/dk/nye-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/fi/uudet-kasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/nye-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/se/nya-casinon(?:/.*)?", "status": 410 },
+
+    { "src": "/casino-bonuses(?:/.*)?", "status": 410 },
+    { "src": "/de/casino-bonus(?:/.*)?", "status": 410 },
+    { "src": "/dk/casino-bonusser(?:/.*)?", "status": 410 },
+    { "src": "/fi/kasinobonukset(?:/.*)?", "status": 410 },
+    { "src": "/no/casino-bonuser(?:/.*)?", "status": 410 },
+    { "src": "/se/casinobonusar(?:/.*)?", "status": 410 },
+
+    { "src": "/fast-payout-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/casinos-mit-schneller-auszahlung(?:/.*)?", "status": 410 },
+    { "src": "/dk/kasinoer-med-hurtig-udbetaling(?:/.*)?", "status": 410 },
+    { "src": "/fi/nopeat-kotiutukset-kasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/kasinoer-med-rask-utbetaling(?:/.*)?", "status": 410 },
+    { "src": "/se/casinon-med-snabb-utbetalning(?:/.*)?", "status": 410 },
+
+    { "src": "/mobile-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/handy-casinos(?:/.*)?", "status": 410 },
+    { "src": "/dk/mobil-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/fi/mobiilikasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/mobilkasinoer(?:/.*)?", "status": 410 },
+    { "src": "/se/mobilcasinon(?:/.*)?", "status": 410 },
+
+    { "src": "/minimum-deposit-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/casinos-mit-mindesteinzahlung(?:/.*)?", "status": 410 },
+    { "src": "/dk/kasinoer-med-lav-indbetaling(?:/.*)?", "status": 410 },
+    { "src": "/fi/pienen-talletuksen-kasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/kasinoer-med-lav-innskudd(?:/.*)?", "status": 410 },
+    { "src": "/se/casinon-med-lag-insattning(?:/.*)?", "status": 410 },
+
+    { "src": "/revolut-casinos(?:/.*)?", "status": 410 },
+    { "src": "/de/revolut-casinos(?:/.*)?", "status": 410 },
+    { "src": "/dk/revolut-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/fi/revolut-kasinot(?:/.*)?", "status": 410 },
+    { "src": "/no/revolut-kasinoer(?:/.*)?", "status": 410 },
+    { "src": "/se/revolut-casinon(?:/.*)?", "status": 410 },
+
     { "src": "/tetris(?:/)?", "status": 410 },
     { "src": "/tetris-50(?:/)?", "status": 410 }
   ],
   "redirects": [
+    {
+      "source": "/:lang(de|dk|fi|no|se)/contact-us",
+      "destination": "/contact-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/contact-us/",
+      "destination": "/contact-us/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/privacy-policy",
+      "destination": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/privacy-policy/",
+      "destination": "/privacy-policy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/terms-and-conditions",
+      "destination": "/terms-and-conditions/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/terms-and-conditions/",
+      "destination": "/terms-and-conditions/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/rating-guidelines",
+      "destination": "/rating-guidelines/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/rating-guidelines/",
+      "destination": "/rating-guidelines/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/sitemap",
+      "destination": "/sitemap/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:lang(de|dk|fi|no|se)/sitemap/",
+      "destination": "/sitemap/",
+      "statusCode": 301
+    },
     {
       "source": "/ireland-guide",
       "destination": "/",
@@ -591,6 +684,17 @@
       "source": "/goto/monster-casino.php",
       "destination": "https://creatives.excelaffiliates.com/redirect.aspx?mid=5593&sid=1019684&cid=&pid=&affid=1014712",
       "statusCode": 301
+    },
+    {
+      "source": "/kungaslottet.php",
+      "destination": "https://trk.affiliates.kungaslottet.se/o/_x6ocG?lpage=hxjafI",
+      "statusCode": 301
+    },
+    {
+      "source": "/megariches.php",
+      "destination": "https://trk.affiliates.megariches.com/o/N5IsZ6?lpage=NylQkC&site_id=7013630",
+      "statusCode": 301
     }
+
   ]
 }

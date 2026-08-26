@@ -1,0 +1,276 @@
+---
+/**
+ * Horizontal Sweden toplist card — structure inspired by casino-list.html,
+ * styled to match CasinoListingCard (blue accents, white surface, primary CTA).
+ */
+import { ArrowRight, Clock } from "@lucide/astro";
+import CustomButton from "../../Atoms/Button.astro";
+import type { SwedenToplistCasino } from "../../../data/sweden-toplist-casinos";
+
+export interface SwedenCasinoCardCopy {
+  visit: string;
+  readReview: string;
+  bonus: string;
+  freeSpins: string;
+  wagering: string;
+  responsiblePlay: string;
+  supportLineLabel: string;
+  supportLineHref: string;
+  ageGate: string;
+  termsApply: string;
+  advertLink: string;
+}
+
+const DEFAULT_COPY: SwedenCasinoCardCopy = {
+  visit: "Besök",
+  soon: "Kommer snart",
+  readReview: "Läs recensionen",
+  bonus: "Bonus",
+  freeSpins: "Free Spins",
+  wagering: "Omsättning",
+  responsiblePlay: "Spela ansvarsfullt",
+  supportLineLabel: "stödlinjen.se",
+  supportLineHref: "https://www.stodlinjen.se",
+  ageGate: "18+",
+  termsApply: "Regler & villkor gäller",
+  advertLink: "Reklamlänk",
+};
+
+interface Props {
+  casino: SwedenToplistCasino;
+  copy?: Partial<SwedenCasinoCardCopy>;
+  /** Show rank badge from casino.position */
+  showRank?: boolean;
+}
+
+const { casino, copy: copyProp, showRank = true } = Astro.props;
+const copy: SwedenCasinoCardCopy = { ...DEFAULT_COPY, ...copyProp };
+
+const hasOfferStats = Boolean(casino.bonus || casino.freeSpins);
+const termsHref = casino.termsUrl ?? undefined;
+---
+
+<article
+  class="sweden-casino-card overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
+  data-casino-id={casino.id}
+  data-position={casino.position}
+>
+  <div
+    class="flex flex-col gap-3 p-3 lg:flex-row lg:items-stretch lg:gap-0 lg:p-0"
+  >
+    <!-- Logo -->
+    <div class="relative flex shrink-0 items-center gap-3 lg:w-[148px] lg:flex-col lg:justify-center lg:gap-0 lg:px-3 lg:py-3">
+      {
+        showRank && (
+          <span class="absolute left-0 top-0 z-10 flex h-6 min-w-6 items-center justify-center rounded-br-md rounded-tl-lg bg-blue-700 px-1.5 text-xs font-bold text-white lg:left-3 lg:top-3 lg:rounded-md">
+            {casino.position}
+          </span>
+        )
+      }
+      <div
+        class="flex h-[72px] w-[120px] items-center justify-center overflow-hidden rounded-md border border-gray-200 p-2 lg:h-[88px] lg:w-full"
+        style={`background-color:${casino.backgroundColor || "#0f172a"}`}
+      >
+        {
+          casino.logoUrl ? (
+            <img
+              src={casino.logoUrl}
+              alt={`${casino.name} logo`}
+              width="120"
+              height="56"
+              class="max-h-full max-w-full object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <span class="px-1 text-center text-[11px] font-semibold leading-tight text-white/90">
+              {casino.name}
+            </span>
+          )
+        }
+      </div>
+    </div>
+
+    <!-- Name + advantages -->
+    <div class="flex min-w-0 flex-1 flex-col justify-center gap-1.5 lg:max-w-[240px] lg:border-l lg:border-gray-100 lg:px-4 lg:py-3">
+      <h3 class="text-base font-semibold leading-tight text-gray-900">
+        {
+          casino.reviewUrl ? (
+            <a
+              href={casino.reviewUrl}
+              class="underline decoration-blue-200 underline-offset-2 transition-colors hover:text-blue-700 hover:decoration-blue-500"
+            >
+              {casino.name}
+            </a>
+          ) : (
+            casino.name
+          )
+        }
+      </h3>
+      {
+        casino.advantages.length > 0 && (
+          <ul class="space-y-0.5">
+            {casino.advantages.map((item) => (
+              <li class="flex items-start gap-1.5 text-xs leading-snug text-blue-900">
+                <span
+                  class="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-blue-500"
+                  aria-hidden="true"
+                />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      {
+        casino.reviewUrl && (
+          <a
+            href={casino.reviewUrl}
+            class="mt-0.5 hidden text-xs font-semibold text-blue-700 underline decoration-blue-200 underline-offset-2 hover:text-blue-900 hover:decoration-blue-500 lg:inline-block"
+          >
+            {copy.readReview}
+          </a>
+        )
+      }
+    </div>
+
+    <!-- Offer details -->
+    <div class="flex flex-1 items-stretch gap-2 lg:min-w-[220px] lg:border-l lg:border-gray-100 lg:px-4 lg:py-3">
+      {
+        hasOfferStats ? (
+          <div class="grid w-full grid-cols-2 gap-2">
+            {casino.bonus && (
+              <div class="rounded-lg border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-2.5">
+                <p class="text-[10px] font-bold uppercase tracking-wide text-blue-700">
+                  {casino.bonus.label || copy.bonus}
+                </p>
+                <p class="mt-0.5 text-sm font-bold leading-tight text-blue-950">
+                  {casino.bonus.value}
+                </p>
+                {casino.bonus.wagering && (
+                  <p class="mt-1 text-[11px] text-blue-700">
+                    {copy.wagering}: {casino.bonus.wagering}
+                  </p>
+                )}
+              </div>
+            )}
+            {casino.freeSpins && (
+              <div class="rounded-lg border border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100 p-2.5">
+                <p class="text-[10px] font-bold uppercase tracking-wide text-blue-700">
+                  {casino.freeSpins.label || copy.freeSpins}
+                </p>
+                <p class="mt-0.5 text-sm font-bold leading-tight text-blue-950">
+                  {casino.freeSpins.value}
+                </p>
+                {casino.freeSpins.wagering && (
+                  <p class="mt-1 text-[11px] text-blue-700">
+                    {copy.wagering}: {casino.freeSpins.wagering}
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+        ) : casino.highlight ? (
+          <div class="flex w-full items-center rounded-lg border border-blue-200 bg-gradient-to-r from-blue-50 to-blue-100 p-3">
+            <p class="text-sm font-semibold leading-snug text-blue-950">
+              {casino.highlight}
+            </p>
+          </div>
+        ) : null
+      }
+    </div>
+
+    <!-- Actions -->
+    <div class="flex flex-col justify-center gap-1.5 lg:min-w-[180px] lg:border-l lg:border-gray-200 lg:px-3 lg:py-3">
+      {
+        casino.visitUrl ? (
+          <CustomButton
+            variant="primary"
+            className="cta-btn group w-full min-h-[40px] py-2 font-semibold text-sm"
+            buttonType="external-ref-link"
+            refLink={casino.visitUrl}
+            casinoName={casino.name}
+          >
+            <span class="text-sm">{copy.visit}</span>
+            <ArrowRight class="ml-1.5 h-3.5 w-3.5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </CustomButton>
+        ) : (
+          <button
+            type="button"
+            disabled
+            class="inline-flex min-h-[40px] w-full cursor-not-allowed items-center justify-center rounded-lg bg-gray-200 px-3 py-2 text-sm font-semibold text-gray-500"
+          >
+            {copy.soon}
+          </button>
+        )
+      }
+      {
+        casino.reviewUrl && (
+          <a
+            href={casino.reviewUrl}
+            class="flex min-h-[36px] items-center justify-center rounded-md bg-blue-100 px-2.5 py-1.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-200 hover:text-blue-900 lg:hidden"
+          >
+            {copy.readReview}
+          </a>
+        )
+      }
+    </div>
+  </div>
+
+  <!-- Footer: compliance + withdrawal speed -->
+  <footer
+    class="flex flex-col gap-2 border-t border-gray-200 bg-blue-50/80 px-3 py-2 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+  >
+    <p class="text-[10px] leading-relaxed text-blue-800/80">
+      {copy.advertLink}
+      {" | "}
+      {copy.ageGate}
+      {" | "}
+      {
+        termsHref ? (
+          <a
+            href={termsHref}
+            target="_blank"
+            rel="nofollow noreferrer noopener"
+            class="underline decoration-blue-300 underline-offset-2 hover:text-blue-950"
+          >
+            {copy.termsApply}
+          </a>
+        ) : (
+          copy.termsApply
+        )
+      }
+      {" | "}
+      {copy.responsiblePlay}
+      {" | "}
+      <a
+        href={copy.supportLineHref}
+        target="_blank"
+        rel="nofollow noreferrer noopener"
+        class="underline decoration-blue-300 underline-offset-2 hover:text-blue-950"
+      >
+        {copy.supportLineLabel}
+      </a>
+    </p>
+
+    {
+      casino.withdrawalTime && (
+        <div class="flex shrink-0 items-center gap-2 rounded-md bg-white px-2.5 py-1.5 shadow-sm ring-1 ring-blue-100">
+          <Clock class="h-3.5 w-3.5 text-blue-600" aria-hidden="true" />
+          <div class="leading-tight">
+            <p class="text-xs font-bold tabular-nums text-blue-950">
+              {casino.withdrawalTime}
+            </p>
+            {
+              casino.withdrawalMethodLabel && (
+                <p class="text-[10px] text-blue-700">
+                  {casino.withdrawalMethodLabel}
+                </p>
+              )
+            }
+          </div>
+        </div>
+      )
+    }
+  </footer>
+</article>

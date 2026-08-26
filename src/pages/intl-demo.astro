@@ -3,6 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Layout/Header.astro";
 import Footer from "../components/Layout/Footer.astro";
 import CasinoListingCard from "../components/Pages/Cards/CasinoListingCard.astro";
+import SwedenCasinoCard from "../components/Pages/Cards/SwedenCasinoCard.astro";
+import { SWEDEN_TOPLIST_CASINOS } from "../data/sweden-toplist-casinos";
 import {
   LOCALE_IDS,
   LOCALES,
@@ -84,6 +86,24 @@ const seoData = {
           );
         })
       }
+    </section>
+
+    <section class="mt-20 space-y-4" lang="sv" aria-labelledby="sweden-card-demo">
+      <div>
+        <h2 id="sweden-card-demo" class="text-2xl font-bold text-gray-900">
+          SwedenCasinoCard (same list as /se/)
+        </h2>
+        <p class="mt-1 text-sm text-gray-500">
+          From sweden-toplist-casinos.ts · live on Sweden home via CasinoListSection
+        </p>
+      </div>
+      <div class="space-y-3">
+        {
+          SWEDEN_TOPLIST_CASINOS.slice(0, 3).map((casino) => (
+            <SwedenCasinoCard casino={casino} />
+          ))
+        }
+      </div>
     </section>
   </main>
   <Footer />

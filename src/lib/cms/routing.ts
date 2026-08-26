@@ -317,14 +317,34 @@ export function websiteLocaleFromPageLang(
 }
 
 /**
+ * Static legal / utility pages that exist only in English at the site root
+ * (no `/dk|/fi|/de|/no|/se/` variants). Links from any locale go here.
+ */
+export const ENGLISH_ONLY_STATIC_PATHS = new Set([
+  "contact-us",
+  "privacy-policy",
+  "terms-and-conditions",
+  "rating-guidelines",
+  "sitemap",
+]);
+
+/**
  * Public URL for a non-CMS static path (e.g. `"contact-us"`, `"classic-games/tetris"`).
- * Ireland (root locale) has no `/ie/` prefix; other locales use `/{dk|fi|de|no|se}/`.
+ * English-only utility pages always use the unprefixed root URL.
+ * Other paths: Ireland (root locale) has no `/ie/` prefix; other locales use `/{dk|fi|de|no|se}/`.
  */
 export function localizedStaticPageHref(
   locale: WebsiteLocaleKey,
   relativePath: string,
 ): string {
   const trimmed = relativePath.replace(/^\/+|\/+$/g, "");
+  const rootSegment = trimmed.split("/")[0] ?? "";
+  if (
+    ENGLISH_ONLY_STATIC_PATHS.has(trimmed) ||
+    ENGLISH_ONLY_STATIC_PATHS.has(rootSegment)
+  ) {
+    return trimmed ? `/${trimmed}/` : `/`;
+  }
   if (locale === ROOT_WEBSITE_LOCALE) {
     return trimmed ? `/${trimmed}/` : `/`;
   }

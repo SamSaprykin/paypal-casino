@@ -1,9 +1,11 @@
 ---
 import CasinoListingCard from "../Cards/CasinoListingCard.astro";
+import SwedenCasinoCard from "../Cards/SwedenCasinoCard.astro";
 import { MarkdownSnippet } from "../MarkdownSnippet.jsx";
 import type { CasinoListSection, WebsiteLocaleKey } from "../../../lib/content";
 import { ROOT_WEBSITE_LOCALE } from "../../../lib/content";
 import { CASINO_LISTING_CARD_COPY, localeIdForWebsiteLocale } from "../../../lib/i18n";
+import { SWEDEN_TOPLIST_CASINOS } from "../../../data/sweden-toplist-casinos";
 import { slugify } from "../../../lib/utils";
 
 interface Props {
@@ -11,10 +13,37 @@ interface Props {
   locale?: WebsiteLocaleKey;
 }
 
+const MONTH_LOCALES: Record<WebsiteLocaleKey, string> = {
+  ireland: "en-IE",
+  sweden: "sv-SE",
+  denmark: "da-DK",
+  finland: "fi-FI",
+  germany: "de-DE",
+  norway: "nb-NO",
+};
+
+function resolveCopyPlaceholders(
+  text: string | undefined,
+  locale: WebsiteLocaleKey,
+): string | undefined {
+  if (!text) return text;
+  const now = new Date();
+  const currentMonth = new Intl.DateTimeFormat(MONTH_LOCALES[locale], {
+    month: "long",
+  }).format(now);
+  const currentYear = String(now.getFullYear());
+  return text
+    .replaceAll("${currentMonth}", currentMonth)
+    .replaceAll("${currentYear}", currentYear);
+}
+
 const { section, locale = ROOT_WEBSITE_LOCALE } = Astro.props;
-const { anchorTitle, copyBefore, copyAfter, casinos } = section;
-const headingId = anchorTitle?.trim() || (copyBefore ? slugify(copyBefore) : undefined);
+const { anchorTitle, copyAfter, casinos } = section;
+const copyBefore = resolveCopyPlaceholders(section.copyBefore, locale);
+const headingId =
+  anchorTitle?.trim() || (copyBefore ? slugify(copyBefore) : undefined);
 const cardCopy = CASINO_LISTING_CARD_COPY[localeIdForWebsiteLocale(locale)];
+const useSwedenToplist = locale === "sweden";
 ---
 
 <div class="bg-blue-50/50 py-3 lg:py-3 px-3 sm:px-4">
@@ -28,12 +57,22 @@ const cardCopy = CASINO_LISTING_CARD_COPY[localeIdForWebsiteLocale(locale)];
       </h2>
     ) : null}
 
-    {casinos.length > 0 && (
-      <div class="grid flex flex-col gap-3 md:gap-3 container mx-auto mt-6 md:mt-8 mb-3">
-        {casinos.map((casino) => (
-          <CasinoListingCard casino={casino} copy={cardCopy} />
-        ))}
-      </div>
+    {useSwedenToplist ? (
+      SWEDEN_TOPLIST_CASINOS.length > 0 && (
+        <div class="mx-auto mt-6 mb-3 flex w-full max-w-6xl flex-col gap-3 md:mt-8">
+          {SWEDEN_TOPLIST_CASINOS.map((casino) => (
+            <SwedenCasinoCard casino={casino} />
+          ))}
+        </div>
+      )
+    ) : (
+      casinos.length > 0 && (
+        <div class="grid flex flex-col gap-3 md:gap-3 container mx-auto mt-6 md:mt-8 mb-3">
+          {casinos.map((casino) => (
+            <CasinoListingCard casino={casino} copy={cardCopy} />
+          ))}
+        </div>
+      )
     )}
 
     {copyAfter && copyAfter.trim() ? (

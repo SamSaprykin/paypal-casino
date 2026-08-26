@@ -469,12 +469,33 @@ Add badges:
 
 ### Section 7: Featured Casinos for Sweden
 
-Add badges:
+**UI:** Use `SwedenCasinoCard.astro` with data from `src/data/sweden-toplist-casinos.ts` (seeded from research toplist).
+
+**Card fields:** logo + brand colour · rank · name · 3 advantages · bonus + free spins (or highlight) · Besök CTA · review link · average withdrawal time by method · 18+ / T&Cs / stödlinjen.se footer
+
+Add badges where relevant:
 
 - "Svensk Kundtjänst"
 - "SEK Valuta"
 - "Snabbast Uttag"
 - "Trustly Tillgängligt"
+- "Swish" / "Zimpler" (from withdrawal method on each card)
+
+**Research toplist (Aug 2026 seed — replace visit/review URLs with our affiliate + review routes):**
+
+| # | Casino | Bonus | Free spins | Avg. withdrawal |
+| --- | --- | --- | --- | --- |
+| 1 | Mr Vegas Casino | 2 000 kr (35x) | 11 (0x) | 1 min Trustly |
+| 2 | Kungaslottet | 20 000 kr (125x) | 150 (35x) | Direkt Trustly |
+| 3 | Jubla | — (fastest payout highlight) | — | Direkt Zimpler |
+| 4 | Videoslots | 2 000 kr (35x) | 11 (0x) | 1.9 min Swish |
+| 5 | Megaways Casino | — (new) | — | Swish (slow in sample) |
+| 6 | Mega Riches | 25 000 kr (125x) | 150 (35x) | Direkt Swish |
+| 7 | BetMGM | 4 000 kr (20x) | 200 (0x) | Direkt Swish |
+| 8 | PlayKasino | — (new Mar 2026) | — | 114 min Swish |
+| 9 | Klirr Casino | — | — | Direkt Zimpler |
+| 10 | Pop Casino | — | — | 0.6 min Zimpler |
+| 11 | Frank & Fred Casino | — | — | 1.3 min Swish |
 
 ### Section 8: FAQ
 
@@ -485,6 +506,24 @@ Add badges:
 5. Vad är skillnaden mellan Spelinspektionen-licens och MGA-licens?
 6. Hur lång tid tar ett PayPal-uttag?
 7. Kan jag få bonusar på PayPal-casinon?
+
+### Research insights (from `home-page-research-data/sweden/`)
+
+Useful angles to weave into SE homepage copy — verify against primary sources before publishing:
+
+| Topic | Insight |
+| --- | --- |
+| **Payments hierarchy** | On Swedish-licensed sites: Swish (fastest, ~0–15 min) → Trustly / Zimpler → e-wallets (PayPal, Skrill, Neteller) → cards / bank transfer. PayPal is present but mid-tier vs Swish/Trustly. |
+| **Availability** | Research claims ~87% of partners offer Swish withdrawals, ~90% Trustly, ~25% Zimpler. PayPal is rarer — reinforce our privacy/buyer-protection angle for international MGA play. |
+| **One bonus rule** | Swedish licence = one welcome bonus per player/licence; no reload/loyalty. Lowest wagering beats largest headline amount (research: 78% don't read T&Cs; 1 in 4 had bonus issues). |
+| **BankID / Pay N Play** | BankID collapses KYC; Pop Casino–style "utan registrering" is a strong local UX expectation. |
+| **Tax** | Swedish-licensed winnings: tax-free for players (operator pays 22%). Outside EU: risk of 30% tax + weaker consumer protection. |
+| **Spelpaus** | National self-exclusion; research cites 85k–131k+ excluded and high awareness (~85%). Frame informationally — never as a circumvention tip. |
+| **Market scale** | Spelinspektionen 2024: ~27.8 bn SEK GGR; 65 companies / 121+ sites historically; active commercial licences rising into 2025–2026 (~138 cited Aug 2026 — re-verify). |
+| **Comparison criteria players care about** | Svensk licens · välkomstbonus (low wagering) · Swish/Trustly/Zimpler speed · game library · review score. |
+| **Responsible gambling** | Spelpaus.se + Stödlinjen.se on every card footer (already in `SwedenCasinoCard`). |
+
+**Content caution:** Competitor research (Casinon.com / CasinoFeber) is inspiration only — do not copy claims, rankings, or "we tested" language unless we have our own verified tests.
 
 ---
 
