@@ -1,12 +1,7 @@
 import type { LocaleId } from "../locales";
 
 export type PaymentSpeedMethodId =
-  | "paypal"
-  | "trustly"
-  | "revolut"
-  | "swish"
-  | "bank"
-  | "crypto";
+  "paypal" | "trustly" | "revolut" | "swish" | "bank" | "crypto";
 
 export interface PaymentSpeedMethodCopy {
   id: PaymentSpeedMethodId;

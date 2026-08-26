@@ -34,13 +34,14 @@ Method: parsed every `meta.json`/`.mdx` (frontmatter + body), diffed sections/wo
 ```
 
 **What was done:**
+
 - Cross-referenced the brands named in the first note (Tonybet, Spinbetter, Skycrown, Evospin, Starda, Crownslots, Cosmicslot, Rollingslots, Legzo, Crownplay, Glitchspin, Vincispin, Wonderluck) against the confirmed dataset (`casinos-final-with-confirmed-bonuses.json`, added 2026-08-09). None of them are actually named anywhere else in the page body (they only appeared inside the note itself), and none have PayPal confirmed as a deposit method in the dataset — so the note was simply removed rather than "resolved" with those brands.
 - Queried the confirmed dataset for casinos that are simultaneously (a) supported in Ireland (`supportedCountries` includes `IE`), (b) confirmed to accept PayPal as a deposit method, and (c) already present in this page's own Ireland `casinoList` (`meta.json` → `casinoListsByCountry.ireland`), to guarantee the recommendations are consistent with what's actually promoted on the page. That produced exactly four matches: **PlayOJO**, **The Online Casino**, **Vegas Mobile Casino**, and **Need for Spin Casino**.
 - Replaced the three placeholders and added a fourth (previously-unfilled) recommendation with these four, matched to the category they best fit on confirmed features/data:
-  - *Experienced players / VIP / fast withdrawals* → **Need for Spin Casino** (8,000+ games, 50-level VIP club with an invite-only dedicated-manager tier, PayPal instant).
-  - *New/budget players* → **PlayOJO** (PayPal from €10, brand-wide no-wagering-requirements policy).
-  - *Slots enthusiasts* → **The Online Casino** (2,000–3,000 games incl. Pragmatic Play and Play'n GO, as the original copy specifically asked for).
-  - *Sports bettors who also play casino* → **Vegas Mobile Casino** (integrated sportsbook + Evolution live tables + PayPal from €20).
+  - _Experienced players / VIP / fast withdrawals_ → **Need for Spin Casino** (8,000+ games, 50-level VIP club with an invite-only dedicated-manager tier, PayPal instant).
+  - _New/budget players_ → **PlayOJO** (PayPal from €10, brand-wide no-wagering-requirements policy).
+  - _Slots enthusiasts_ → **The Online Casino** (2,000–3,000 games incl. Pragmatic Play and Play'n GO, as the original copy specifically asked for).
+  - _Sports bettors who also play casino_ → **Vegas Mobile Casino** (integrated sportsbook + Evolution live tables + PayPal from €20).
   - Added a short disclaimer line reminding readers to confirm the live offer/PayPal availability before depositing, since the dataset itself flags some bonus figures (especially exact wagering multipliers) as still having minor source conflicts — see the `_research_confidence` notes per casino in `casinos-final-with-confirmed-bonuses.json` if those need tightening further.
 - Removed both editorial notes from the published `bodyMarkdown`.
 - Swept the rest of the corpus for the same "please confirm/slot in" pattern (`rg "please confirm each one before publishing|please slot in|to be confirmed\]"`) — no other occurrences found across `data/content/pages/`. Worth re-running that grep as a pre-publish check on any newly added page.
@@ -49,24 +50,24 @@ Method: parsed every `meta.json`/`.mdx` (frontmatter + body), diffed sections/wo
 
 **Status: resolved on 2026-08-09.** Verified against `hjelpelinjen.no` / Blå Kors / Lotteritilsynet — **the only correct number is 800 800 40** (free, Blå Kors/Lotteritilsynet, weekdays 09:00–18:00). Two other, fabricated numbers were quoted in three files and have now been corrected to `800 800 40`:
 
-| File | Line | Number printed (before) | Now |
-|---|---|---|---|
-| `pages/new-casinos/norway.mdx` | 148 | 915 00 800 | **800 800 40** ✅ |
-| `pages/casino-bonuses/norway.mdx` | 153 | 915 00 800 | **800 800 40** ✅ |
-| `pages/minimum-deposit-casinos/norway.mdx` | 76 | 800 800 099 | **800 800 40** ✅ |
+| File                                       | Line | Number printed (before) | Now               |
+| ------------------------------------------ | ---- | ----------------------- | ----------------- |
+| `pages/new-casinos/norway.mdx`             | 148  | 915 00 800              | **800 800 40** ✅ |
+| `pages/casino-bonuses/norway.mdx`          | 153  | 915 00 800              | **800 800 40** ✅ |
+| `pages/minimum-deposit-casinos/norway.mdx` | 76   | 800 800 099             | **800 800 40** ✅ |
 
 These already had it right and were used as the reference copy: `paypal-casino/norway.mdx`, `revolut-casinos/norway.mdx`, `mobile-casinos/norway.mdx`, `home-page/norway.mdx`, `blocked-casinos/norway.mdx`, `fast-payout-casinos/norway.mdx`.
 
 **What to research:** while fixing this, also re-verify the other five markets' helpline numbers periodically (they were correct as of this audit, cross-checked against the operators' own sites):
 
-| Market | Service | Number confirmed correct |
-|---|---|---|
-| Ireland | GamblingCare.ie (Dunlewey) | 1800 936 725 |
+| Market  | Service                         | Number confirmed correct                                          |
+| ------- | ------------------------------- | ----------------------------------------------------------------- |
+| Ireland | GamblingCare.ie (Dunlewey)      | 1800 936 725                                                      |
 | Denmark | StopSpillet (Spillemyndigheden) | 70 22 28 25 (written as "70 222 825" in-repo — same digits, fine) |
-| Finland | Peluuri | 0800 100 101 |
-| Germany | BZgA / check-dein-spiel.de | 0800 1 37 27 00 |
-| Sweden | Stödlinjen | 020‑81 91 00 |
-| Norway | Hjelpelinjen | **800 800 40** |
+| Finland | Peluuri                         | 0800 100 101                                                      |
+| Germany | BZgA / check-dein-spiel.de      | 0800 1 37 27 00                                                   |
+| Sweden  | Stödlinjen                      | 020‑81 91 00                                                      |
+| Norway  | Hjelpelinjen                    | **800 800 40**                                                    |
 
 ### 1.3 Missing locale page — Crypto Casinos / Norway
 
@@ -80,19 +81,20 @@ These already had it right and were used as the reference copy: `paypal-casino/n
 
 Every `kind: image` section and every commented-out `# CustomImage …` placeholder was checked against `src/images/content/` (which currently contains only `home-page-hero.se.webp`, unused, plus a README). Result: **every other referenced filename is missing.** Some sections are "live" (`kind: image` uncommented, e.g. New Casinos, Casino Bonuses) and will simply render nothing (the `CustomImage` component fails silently — confirmed in code, so no broken build, just an invisible gap); most are still commented out in the MDX pending an asset.
 
-| Page | Missing filenames referenced |
-|---|---|
-| Home Page | `home-page-hero.webp`, `home-page-payment-comparison.webp`, `home-page-paypal-deposit.webp` |
-| PayPal Casino | `paypal-casino-hero.webp`, `paypal-casino-cashier.webp`, `paypal-casino-security.webp` |
-| New Casinos | `new-casinos-hero.webp`, `new-casinos-how-we-review.webp`, `new-casinos-safety-checklist.webp`, `new-casinos-welcome-bonus.webp`, `new-casinos-mobile-play.webp` |
-| Casino Bonuses | `casino-bonuses-hero.webp`, `casino-bonuses-welcome-offer.webp`, `casino-bonuses-wagering.webp`, `casino-bonuses-free-spins.webp`, `casino-bonuses-cashback-vip.webp` |
-| Blocked Casinos | `blocked-casinos-hero.webp`, `blocked-casinos-warning.webp`, `blocked-casinos-alternatives.webp` |
-| Fast Payout Casinos | `fast-payout-hero.webp`, `fast-payout-payments.webp`, `fast-payout-cashier.webp` |
-| Mobile Casinos | `mobile-casinos-hero.webp`, `mobile-casinos-mobile-play.webp`, `mobile-casinos-cashier.webp` |
+| Page                | Missing filenames referenced                                                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Home Page           | `home-page-hero.webp`, `home-page-payment-comparison.webp`, `home-page-paypal-deposit.webp`                                                                           |
+| PayPal Casino       | `paypal-casino-hero.webp`, `paypal-casino-cashier.webp`, `paypal-casino-security.webp`                                                                                |
+| New Casinos         | `new-casinos-hero.webp`, `new-casinos-how-we-review.webp`, `new-casinos-safety-checklist.webp`, `new-casinos-welcome-bonus.webp`, `new-casinos-mobile-play.webp`      |
+| Casino Bonuses      | `casino-bonuses-hero.webp`, `casino-bonuses-welcome-offer.webp`, `casino-bonuses-wagering.webp`, `casino-bonuses-free-spins.webp`, `casino-bonuses-cashback-vip.webp` |
+| Blocked Casinos     | `blocked-casinos-hero.webp`, `blocked-casinos-warning.webp`, `blocked-casinos-alternatives.webp`                                                                      |
+| Fast Payout Casinos | `fast-payout-hero.webp`, `fast-payout-payments.webp`, `fast-payout-cashier.webp`                                                                                      |
+| Mobile Casinos      | `mobile-casinos-hero.webp`, `mobile-casinos-mobile-play.webp`, `mobile-casinos-cashier.webp`                                                                          |
 
 The one page type that got this right end-to-end is **Revolut Casinos** — its `howTo` steps reference `public/assets/revolut-howto-01…04` and those files genuinely exist. Use that page as the production template.
 
 **What to research/produce:**
+
 - For each filename above: decide `ai-generated` vs `stock` vs `screenshot` (the MDX comments already specify which — e.g. hero images are tagged `ai-generated`, cashier/UI shots are tagged `screenshot`, trust/badge imagery is tagged `stock`).
 - Screenshots (`*-cashier.webp`, `*-deposit.webp`) need an actual casino cashier UI captured — these can't be stock or AI-generated without looking fake; budget real QA time to capture them per the alt text already written (e.g. "PayPal selected as deposit method in a casino cashier on mobile").
 - `CustomImage.astro` supports per-locale variants (`name.se.webp`, `name.de.webp`, etc. via the same `LOCALE_IMAGE_SUFFIX` map) — decide whether images should be genuinely localized (e.g. a cashier screenshot in the local currency/language) or shared across all six locales with one file. The one existing asset, `home-page-hero.se.webp`, suggests locale-specific images were planned but the pipeline was never finished (the Swedish home page itself doesn't even reference this filename — it's an orphaned asset).
@@ -112,26 +114,27 @@ No English-language leakage was found inside the five other locales' body copy t
 
 ## 4. Content depth & parity across locales
 
-Word counts for the `contentComponent` body text (excludes FAQ/how-to/table markup) show large, likely-unintentional depth gaps between locales of the *same* page — several pages read as clearly "finished" in one language and "rushed" in another:
+Word counts for the `contentComponent` body text (excludes FAQ/how-to/table markup) show large, likely-unintentional depth gaps between locales of the _same_ page — several pages read as clearly "finished" in one language and "rushed" in another:
 
-| Page | Ireland | Denmark | Finland | Germany | Norway | Sweden |
-|---|---:|---:|---:|---:|---:|---:|
-| Home Page | 4,119 | 2,855 | **726** | 3,379 | 3,843 | 3,454 |
-| PayPal Casino | 3,929 | **1,246** | 2,540 | 2,251 | 2,152 | 2,137 |
-| Crypto Casinos | 1,298 | 1,700 | 1,111 | 1,274 | *(missing, §1.3)* | 1,318 |
-| New Casinos | 1,012 | 943 | 745 | 903 | 916 | 919 |
-| Casino Bonuses | 1,006 | 932 | 721 | 876 | 919 | 921 |
-| Minimum Deposit Casinos | 909 | 899 | 693 | 903 | 873 | 859 |
-| Fast Payout Casinos | 590 | 512 | 428 | 519 | 525 | 502 |
-| Revolut Casinos | 696 | 598 | 488 | 587 | 577 | 583 |
-| Blocked Casinos | 417 | 356 | 289 | 366 | 361 | 350 |
-| Mobile Casinos | 256 | 264 | 208 | 279 | 257 | 254 |
+| Page                    | Ireland |   Denmark | Finland | Germany |            Norway | Sweden |
+| ----------------------- | ------: | --------: | ------: | ------: | ----------------: | -----: |
+| Home Page               |   4,119 |     2,855 | **726** |   3,379 |             3,843 |  3,454 |
+| PayPal Casino           |   3,929 | **1,246** |   2,540 |   2,251 |             2,152 |  2,137 |
+| Crypto Casinos          |   1,298 |     1,700 |   1,111 |   1,274 | _(missing, §1.3)_ |  1,318 |
+| New Casinos             |   1,012 |       943 |     745 |     903 |               916 |    919 |
+| Casino Bonuses          |   1,006 |       932 |     721 |     876 |               919 |    921 |
+| Minimum Deposit Casinos |     909 |       899 |     693 |     903 |               873 |    859 |
+| Fast Payout Casinos     |     590 |       512 |     428 |     519 |               525 |    502 |
+| Revolut Casinos         |     696 |       598 |     488 |     587 |               577 |    583 |
+| Blocked Casinos         |     417 |       356 |     289 |     366 |               361 |    350 |
+| Mobile Casinos          |     256 |       264 |     208 |     279 |               257 |    254 |
 
 **What this means / what to research:**
+
 - **Home Page / Finland (726 words)** is a stub next to the other five (2,855–4,119 words) — it's missing the entire "Comparing the Top Casino Payment Methods", method-by-method deep dives, and the 2026-trends section that Ireland/Germany/Norway/Sweden all have. It does have a nice touch none of the others have (a dated "content freshness" note, see §6) but structurally it's the thinnest page on the site by a wide margin.
 - **PayPal Casino / Denmark (1,246 words)** is roughly a third the length of Ireland's version and skips sections the other locales cover (e.g. no "Why PayPal Works as a Trust Signal", no game-provider breakdown, no small-deposit strategy section).
 - Every page type is consistently 1.5–2× longer in Ireland than in the thinnest locale — decide whether that's an acceptable "EN is the flagship, others are summaries" strategy, or whether it should be closer to parity for SEO/topical-authority reasons in each local market.
-- Mobile Casinos and Blocked Casinos are thin (250–420 words) across *all* locales, not just one — these read more like stubs site-wide and are candidates for a genuine content expansion pass (more FAQ depth, more brand-specific mobile UX detail, etc.) rather than a translation fix.
+- Mobile Casinos and Blocked Casinos are thin (250–420 words) across _all_ locales, not just one — these read more like stubs site-wide and are candidates for a genuine content expansion pass (more FAQ depth, more brand-specific mobile UX detail, etc.) rather than a translation fix.
 
 ---
 
@@ -145,7 +148,7 @@ Cross-referencing each page type's `meta.json` component list against what's act
 - **FAQ item counts vary locale-to-locale on the same page**, e.g. Crypto Casinos: Ireland 7, Denmark 6, Finland 7, Germany 7, Sweden 7 (one question dropped in Danish); Home Page: Ireland 4, Denmark 7, Finland 5, Germany 6, Norway 5, Sweden 4. Since every FAQ item also feeds the `FAQPage` JSON-LD schema (`generateFAQSchema` in `src/lib/schema.ts`), this is a direct, per-locale SEO/rich-snippet inconsistency, not just a copy nit.
 - **The "content freshness" callout (`<div class="content-freshness">…</div>`, a dated note describing what was just updated) appears on only 6 of the 60 files** (Home Page: Denmark, Finland, Germany, Norway, Sweden; Crypto Casinos: Denmark). It's a nice, concrete E-E-A-T signal ("we last touched this on 20.07.2026, here's exactly what changed") that isn't rolled out consistently — worth turning into a standard block on every page rather than an incidental one.
 
-**What to research:** decide a per-page-type "target section set" (which of `howTo` / `methodAvailability` / `bonusCalculator` / `whatPeopleSay` / `image` each page type *should* carry) and audit against that checklist going forward, rather than letting `meta.json`'s component list silently drift ahead of what's actually written per locale.
+**What to research:** decide a per-page-type "target section set" (which of `howTo` / `methodAvailability` / `bonusCalculator` / `whatPeopleSay` / `image` each page type _should_ carry) and audit against that checklist going forward, rather than letting `meta.json`'s component list silently drift ahead of what's actually written per locale.
 
 ---
 

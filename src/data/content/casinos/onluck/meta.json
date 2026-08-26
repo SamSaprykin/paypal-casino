@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/onluck.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -28,16 +26,8 @@
     "PlayNGo",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Curacao Gaming Commission",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 59,

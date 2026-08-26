@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/winshark.php",
   "payoutLimits": "Up to €10,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -25,18 +23,8 @@
     "Evolution",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 61,
   "userRecommendationsTotalNumber": 70,

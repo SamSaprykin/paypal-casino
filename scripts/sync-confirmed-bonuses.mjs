@@ -123,7 +123,10 @@ function normalizeHeadlineCurrency(headline, locale) {
 
   let out = headline;
   const num = "\\d(?:[\\d\\u00a0\\s.,]*\\d)?";
-  out = out.replace(new RegExp(`(€\\s*${num})\\s*/\\s*\\$\\s*${num}`, "g"), "$1");
+  out = out.replace(
+    new RegExp(`(€\\s*${num})\\s*/\\s*\\$\\s*${num}`, "g"),
+    "$1",
+  );
   if (locale !== "ireland") {
     out = out.replace(/\s*\/\s*£\s*[\d\s.,]*\d(?:\s*\([^)]+\))?/g, "");
     out = out.replace(new RegExp(`£\\s*(${num})`, "g"), "€$1");
@@ -148,13 +151,20 @@ function pickPrimaryBonus(bonuses) {
   const marketOrder = ["IE", "DE", "DK", "FI", "NO", "SE"];
   for (const countryCode of marketOrder) {
     const hit = pool.find((bonus) =>
-      displayHeadline(countryEntry(bonus, countryCode), COUNTRY_TO_LOCALE[countryCode]),
+      displayHeadline(
+        countryEntry(bonus, countryCode),
+        COUNTRY_TO_LOCALE[countryCode],
+      ),
     );
     if (hit) return hit;
   }
-  return pool.find((bonus) =>
-    (bonus.countryRelated || []).some((row) => displayHeadline(row)),
-  ) ?? pool[0] ?? null;
+  return (
+    pool.find((bonus) =>
+      (bonus.countryRelated || []).some((row) => displayHeadline(row)),
+    ) ??
+    pool[0] ??
+    null
+  );
 }
 
 function titlesByLocale(casino) {
@@ -190,7 +200,8 @@ function isWeakerHeadline(next, current) {
 function localCurrencyConflict(locale, next, current) {
   if (!current || !next) return false;
   const localKr = /(?:^|[\s\d])kr\b|SEK|DKK|NOK/i.test(current);
-  const nextEuroOnly = /€/.test(next) && !/(?:^|[\s\d])kr\b|SEK|DKK|NOK/i.test(next);
+  const nextEuroOnly =
+    /€/.test(next) && !/(?:^|[\s\d])kr\b|SEK|DKK|NOK/i.test(next);
   if (
     (locale === "sweden" || locale === "denmark" || locale === "norway") &&
     localKr &&
@@ -231,7 +242,12 @@ async function loadLocalCasinos() {
   );
   const casinos = [];
   for (const entry of index) {
-    const metaPath = path.join(ROOT, "src/data/content", entry.dir, "meta.json");
+    const metaPath = path.join(
+      ROOT,
+      "src/data/content",
+      entry.dir,
+      "meta.json",
+    );
     const meta = JSON.parse(await fs.readFile(metaPath, "utf8"));
     casinos.push({ metaPath, meta, slug: meta.slug || entry.slug });
   }
@@ -252,7 +268,11 @@ function currentWelcomeBonus(meta) {
   return bonuses[0] ?? null;
 }
 
-function applyTitles(bonus, titles, { pruneStale = false, allTitles = {} } = {}) {
+function applyTitles(
+  bonus,
+  titles,
+  { pruneStale = false, allTitles = {} } = {},
+) {
   const next = { ...bonus };
   const intl = {
     ...(bonus.descriptionIntl && typeof bonus.descriptionIntl === "object"

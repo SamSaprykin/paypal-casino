@@ -21,12 +21,12 @@ Copy this file to `prompts/research/home-<locale>.md` and fill every field. The 
 
 ## 2. Regulator and player help (primary URLs only)
 
-| Item | Name | URL | Notes |
-| --- | --- | --- | --- |
-| Regulator | | | |
-| Self-exclusion / block | | | |
-| Help / RG org | | | |
-| Age | 18+ or 19+ | | |
+| Item                   | Name       | URL | Notes |
+| ---------------------- | ---------- | --- | ----- |
+| Regulator              |            |     |       |
+| Self-exclusion / block |            |     |       |
+| Help / RG org          |            |     |       |
+| Age                    | 18+ or 19+ |     |       |
 
 Do not invent licence numbers or fine amounts.
 
@@ -34,26 +34,26 @@ Do not invent licence numbers or fine amounts.
 
 For each method that matters locally, fill. Evidence: `confirmed` (cashier/screenshot) | `operator-stated` | `unknown`.
 
-| Method | Deposit speed | Withdraw speed | Fees | Bonus eligible | Evidence | Source URL / screenshot file |
-| --- | --- | --- | --- | --- | --- | --- |
-| PayPal | | | | | | |
-| Trustly | | | | | | |
-| Revolut (card vs Revolut Pay) | | | | | | |
-| Visa/Mastercard debit | | | | | | |
-| Crypto / stablecoin | | | | | | |
-| Skrill / Neteller | | | | | | |
-| Swish (SE) | | | | | | |
-| MobilePay (DK/FI) | | | | | | |
-| BankID (SE/NO/FI) | | | | | | |
-| Bank transfer | | | | | | |
+| Method                        | Deposit speed | Withdraw speed | Fees | Bonus eligible | Evidence | Source URL / screenshot file |
+| ----------------------------- | ------------- | -------------- | ---- | -------------- | -------- | ---------------------------- |
+| PayPal                        |               |                |      |                |          |                              |
+| Trustly                       |               |                |      |                |          |                              |
+| Revolut (card vs Revolut Pay) |               |                |      |                |          |                              |
+| Visa/Mastercard debit         |               |                |      |                |          |                              |
+| Crypto / stablecoin           |               |                |      |                |          |                              |
+| Skrill / Neteller             |               |                |      |                |          |                              |
+| Swish (SE)                    |               |                |      |                |          |                              |
+| MobilePay (DK/FI)             |               |                |      |                |          |                              |
+| BankID (SE/NO/FI)             |               |                |      |                |          |                              |
+| Bank transfer                 |               |                |      |                |          |                              |
 
 ## 4. Casino list check
 
 Compare `src/data/content/pages/home-page/meta.json` → `casinoListsByCountry.<locale>`.
 
 | Slug | Still valid for this market? | PayPal in cashier? | Notes |
-| --- | --- | --- | --- |
-| | yes / no / unknown | | |
+| ---- | ---------------------------- | ------------------ | ----- |
+|      | yes / no / unknown           |                    |       |
 
 Do **not** invent a new ranking order. Flag removals only.
 
@@ -76,33 +76,33 @@ Home is the hub. For each destination, write **one sentence** the implementer ca
 
 **Header — Casino types**
 
-| Page | Href | One-line teaser (what the page does) |
-| ---- | ---- | ------------------------------------ |
-| New casinos | | Recently listed brands — not a payment guide |
-| Fast payout | | Withdrawal speed and KYC delays |
-| Mobile | | Phone/tablet cashier and play |
-| Min deposit | | €1 / €5 / €10 first deposits |
+| Page        | Href | One-line teaser (what the page does)         |
+| ----------- | ---- | -------------------------------------------- |
+| New casinos |      | Recently listed brands — not a payment guide |
+| Fast payout |      | Withdrawal speed and KYC delays              |
+| Mobile      |      | Phone/tablet cashier and play                |
+| Min deposit |      | €1 / €5 / €10 first deposits                 |
 
 **Header — Payments**
 
-| Page | Href | One-line teaser |
-| ---- | ---- | --------------- |
-| PayPal | | Full PayPal cashier + which brands accept it |
-| Revolut | | Card / Revolut Pay — not a PayPal wallet |
-| Crypto | | BTC/ETH/stablecoins — skip if no locale URL |
+| Page    | Href | One-line teaser                              |
+| ------- | ---- | -------------------------------------------- |
+| PayPal  |      | Full PayPal cashier + which brands accept it |
+| Revolut |      | Card / Revolut Pay — not a PayPal wallet     |
+| Crypto  |      | BTC/ETH/stablecoins — skip if no locale URL  |
 
 **Header — Offers**
 
-| Page | Href | One-line teaser |
-| ---- | ---- | --------------- |
-| Bonuses | | Wagering and method exclusions |
+| Page    | Href | One-line teaser                |
+| ------- | ---- | ------------------------------ |
+| Bonuses |      | Wagering and method exclusions |
 
 **Also link**
 
-| Page | Href | One-line teaser |
-| ---- | ---- | --------------- |
-| Blocked casinos | | Brands we paused promoting |
-| Rating guidelines | | How we score casinos |
+| Page              | Href | One-line teaser            |
+| ----------------- | ---- | -------------------------- |
+| Blocked casinos   |      | Brands we paused promoting |
+| Rating guidelines |      | How we score casinos       |
 
 ## 7. FAQ seeds (questions only; answers from this pack)
 

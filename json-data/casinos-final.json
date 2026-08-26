@@ -2912,7 +2912,7 @@
             "title": "Daily Cashback — up to 12.5%",
             "description": "Regular players outside Ontario can earn daily cashback of up to 12.5% on losses, credited automatically. Exact eligibility criteria and calculation method are not fully confirmed — check your account for your personal rate.",
             "amount": "Up to 12.5% daily cashback",
-            "currency": "CAD",  
+            "currency": "CAD",
             "minDeposit": null,
             "notes": "Excludes Ontario"
           }
@@ -3344,9 +3344,7 @@
     "reviewLink": "https://irishlucky.com/casino-review/coolzino/",
     "link": null,
     "payoutTimes": "Deposits/withdrawals described as generally fast; daily withdrawal limit reported as low/restrictive (€2,500 per one source)",
-    "license": [
-      "5536/JAZ, GLH-OCCHKTW0706152022, and OGL/2025/8756/5798"
-    ],
+    "license": ["5536/JAZ, GLH-OCCHKTW0706152022, and OGL/2025/8756/5798"],
     "supportedCountries": [],
     "features": [
       "6,000+ games from Pragmatic Play, Evolution Gaming, BGaming, and others",
@@ -3536,9 +3534,7 @@
     "reviewLink": "https://irishlucky.com/casino-review/zet/",
     "link": "https://zetcasino.com",
     "payoutTimes": null,
-    "license": [
-      "8048/JAZ2020-001 or via Antillephone"
-    ],
+    "license": ["8048/JAZ2020-001 or via Antillephone"],
     "supportedCountries": [],
     "features": [
       "7,000+ games including sportsbook (horse racing, football, and more)",

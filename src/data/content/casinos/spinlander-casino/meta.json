@@ -11,10 +11,7 @@
   "payoutTimes": [
     "E-wallets and crypto: 0-24 hours. Cards: 3-5 business days. Bank transfer: 3-5 business days. 48-hour pending period standard. Minimum withdrawal: €10 (most methods), €50 (crypto). Maximum withdrawal: €500 per day, €15,000 per month. Some sources report up to 3 pending withdrawals allowed simultaneously."
   ],
-  "software": [
-    "Pragmatic",
-    "Evolution"
-  ],
+  "software": ["Pragmatic", "Evolution"],
   "depositMethods": [
     "Visa",
     "Mastercard",

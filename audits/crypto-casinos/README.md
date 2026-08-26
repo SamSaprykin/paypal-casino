@@ -4,14 +4,14 @@ One file per locale page. Each audit was produced by measuring the actual MDX
 (`src/data/content/pages/crypto-casinos/*.mdx`) against `meta.json`, not by reading
 the rendered page, so section IDs and word counts are exact.
 
-| Locale | File | Slug | Body words | Sections present | Verdict |
-|---|---|---|---|---|---|
-| Ireland | `ireland.md` | `/crypto-casinos/` | 1 314 | 8 of 8 | Strongest page. Template source. Needs images + link fixes. |
-| Germany | `germany.md` | `/de/krypto-casinos/` | 1 264 | 7 of 8 | Translated template. Missing the entire German tax + GlüStV angle. |
-| Denmark | `denmark.md` | `/dk/krypto-casinoer/` | 1 789 | 7 of 8 | Most original copy, but zero tables and only 3 internal links. |
-| Finland | `finland.md` | `/fi/krypto-kasinot/` | 1 124 | 7 of 8 | Thinnest page. Law reform angle almost absent. |
-| Sweden | `sweden.md` | `/se/krypto-casinon/` | 1 337 | 7 of 8 | Translated template. Missing the licence/Spelpaus contrast that matters most in SE. |
-| Norway | — | — | — | **page does not exist** | See `norway.md` for the build brief. |
+| Locale  | File         | Slug                   | Body words | Sections present        | Verdict                                                                             |
+| ------- | ------------ | ---------------------- | ---------- | ----------------------- | ----------------------------------------------------------------------------------- |
+| Ireland | `ireland.md` | `/crypto-casinos/`     | 1 314      | 8 of 8                  | Strongest page. Template source. Needs images + link fixes.                         |
+| Germany | `germany.md` | `/de/krypto-casinos/`  | 1 264      | 7 of 8                  | Translated template. Missing the entire German tax + GlüStV angle.                  |
+| Denmark | `denmark.md` | `/dk/krypto-casinoer/` | 1 789      | 7 of 8                  | Most original copy, but zero tables and only 3 internal links.                      |
+| Finland | `finland.md` | `/fi/krypto-kasinot/`  | 1 124      | 7 of 8                  | Thinnest page. Law reform angle almost absent.                                      |
+| Sweden  | `sweden.md`  | `/se/krypto-casinon/`  | 1 337      | 7 of 8                  | Translated template. Missing the licence/Spelpaus contrast that matters most in SE. |
+| Norway  | —            | —                      | —          | **page does not exist** | See `norway.md` for the build brief.                                                |
 
 ## The five findings that apply to every locale
 

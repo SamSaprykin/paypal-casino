@@ -7,19 +7,19 @@
 
 ## Snapshot
 
-| Signal | Value |
-|---|---|
-| Section IDs present | 7 of 8 — **`cc-voices` missing** |
-| Body words | 1 789 (intro 127, guide 1 053, depth 516, verdict 93) — the longest in the silo |
-| H2/H3 headings | 14 — the most in the silo |
-| Tables | **0** |
-| Custom blocks | `info-card`, `warning-box`, `content-freshness` |
-| Player quotes | 0 |
-| How-to groups | 4 |
-| Images | 0 |
-| Internal links | **3** — the fewest in the silo, all valid |
-| Tax mentions | 23 |
-| Freshness block | yes (the only locale that has one) |
+| Signal              | Value                                                                           |
+| ------------------- | ------------------------------------------------------------------------------- |
+| Section IDs present | 7 of 8 — **`cc-voices` missing**                                                |
+| Body words          | 1 789 (intro 127, guide 1 053, depth 516, verdict 93) — the longest in the silo |
+| H2/H3 headings      | 14 — the most in the silo                                                       |
+| Tables              | **0**                                                                           |
+| Custom blocks       | `info-card`, `warning-box`, `content-freshness`                                 |
+| Player quotes       | 0                                                                               |
+| How-to groups       | 4                                                                               |
+| Images              | 0                                                                               |
+| Internal links      | **3** — the fewest in the silo, all valid                                       |
+| Tax mentions        | 23                                                                              |
+| Freshness block     | yes (the only locale that has one)                                              |
 
 ## Locale relevance: pass, and the best in the silo
 

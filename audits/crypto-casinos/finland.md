@@ -7,19 +7,19 @@
 
 ## Snapshot
 
-| Signal | Value |
-|---|---|
-| Section IDs present | 7 of 8 — **`cc-voices` missing** |
-| Body words | 1 124 (intro 74, guide 515, depth 480, verdict 55) — **thinnest in the silo** |
-| H2/H3 headings | 10 |
-| Tables | 16 table rows across 2 comparison tables |
-| Custom blocks | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
-| Player quotes | 0 |
-| How-to groups | 4 |
-| Images | 0 |
-| Internal links | 8, of which **1 is broken** |
-| Tax mentions | 9 |
-| Freshness block | none |
+| Signal              | Value                                                                         |
+| ------------------- | ----------------------------------------------------------------------------- |
+| Section IDs present | 7 of 8 — **`cc-voices` missing**                                              |
+| Body words          | 1 124 (intro 74, guide 515, depth 480, verdict 55) — **thinnest in the silo** |
+| H2/H3 headings      | 10                                                                            |
+| Tables              | 16 table rows across 2 comparison tables                                      |
+| Custom blocks       | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box`     |
+| Player quotes       | 0                                                                             |
+| How-to groups       | 4                                                                             |
+| Images              | 0                                                                             |
+| Internal links      | 8, of which **1 is broken**                                                   |
+| Tax mentions        | 9                                                                             |
+| Freshness block     | none                                                                          |
 
 ## Locale relevance: pass on copy, thin on the one thing that matters
 

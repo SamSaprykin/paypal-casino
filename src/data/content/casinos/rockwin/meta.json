@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/rockwin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24 h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24 h"],
   "software": [
     "PlayNGo",
     "Pragmatic",
@@ -31,16 +29,8 @@
     "NetEnt",
     "Quickspin"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,

@@ -11,9 +11,7 @@
   "payoutTimes": [
     "Described as fast; specific times not found in Ireland-specific sources"
   ],
-  "software": [
-    "Evolution"
-  ],
+  "software": ["Evolution"],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",

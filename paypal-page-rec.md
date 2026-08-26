@@ -15,6 +15,7 @@ Purpose: these articles currently read as thin because most of the "authority" c
 ## 1. Cross-locale research (do once, reuse everywhere)
 
 ### Licensing — verify each operator against the primary register, not third-party aggregators
+
 - [ ] MGA license lookup: https://www.mga.org.mt/support/online-gaming-licence-verification/ — confirm license number, status (active/suspended), and legal entity name for every casino mentioned in any locale.
 - [ ] UKGC public register: https://www.gamblingcommission.gov.uk/public-register — same check.
 - [ ] Curaçao license verification (note: Curaçao moved to a new licensing framework in 2024 under the Curaçao Gaming Authority — confirm which regime each "Curaçao" casino actually falls under, since older GBL Solutions-style master license numbers may no longer be current).
@@ -22,11 +23,13 @@ Purpose: these articles currently read as thin because most of the "authority" c
 - [ ] For every operator, confirm current company/brand ownership. Igaming brands change hands or get folded into other operator groups; a license check from a few months ago can be stale.
 
 ### PayPal itself
+
 - [ ] Pull PayPal's own current fee schedule for each currency corridor (EUR, DKK, SEK, NOK) from PayPal's official fee pages, rather than the generic "2.5–4%" figure reused across all five articles. PayPal publishes exact currency conversion spreads by country — use the real number.
 - [ ] Confirm PayPal's current merchant-category policy on gambling. PayPal periodically changes which gambling operators/regions it will process for; this affects which "PayPal casinos" claims are even still current.
 - [ ] Confirm minimum/maximum transaction limits PayPal itself imposes, separate from casino-imposed limits (articles currently blend the two).
 
 ### Comparative payment-method data
+
 - [ ] Find a real source (e.g., a national payments association report, Statista, or the relevant gambling regulator's annual report) for e-wallet vs. bank-transfer vs. card usage share among online gamblers in each market. Right now "moderat," "høy," "vanligt" etc. are unsourced editorial impressions.
 
 ---
@@ -40,6 +43,7 @@ Purpose: these articles currently read as thin because most of the "authority" c
 - [ ] Check whether Denmark has updated gambling tax rules for operators in 2025–2026 that might affect what bonuses can legally look like (Denmark taxes operators, not players, but bonus structure rules do change).
 
 ## 3. Finland (fi-FI)
+
 - [ ] Get a current status update on Finland's gambling monopoly reform (Veikkauksen monopoli päättymässä) — confirm the actual target date/status for the new licensing model as of August 2026; this is a live, moving political process and the article treats it vaguely.
 - [ ] Confirm Peluuri's actual scope of self-exclusion — verify directly with peluuri.fi whether their national exclusion register (if any exists in this form) covers only Veikkaus or has broader reach, since this claim needs a primary-source check.
 - [ ] Confirm current MGA/UKGC license validity for Dream Vegas, PlayOJO, Vegas Mobile Casino, and Casimba (all White Hat Gaming / Skill On Net / Progress Play brands — check for any brand consolidation).
@@ -47,6 +51,7 @@ Purpose: these articles currently read as thin because most of the "authority" c
 - [ ] Check whether Trustly's real average payout time in Finland is actually "0–5 tuntia" — this looks unsourced.
 
 ## 4. Germany (de-DE)
+
 - [ ] This is the highest-priority locale to fix: verify current GlüStV 2021 limits directly against GGL (Gemeinsame Glücksspielbehörde der Länder) official guidance — the 1 €/spin limit, autoplay ban, and 1.000 €/month deposit limit are all real GlüStV features in general, but confirm current figures/exceptions (e.g., whether the deposit limit is per-operator or cross-operator via LUGAS, and current LUGAS enrollment status for the market).
 - [ ] Confirm OASIS's actual current scope and whether cross-operator deposit limit tracking (LUGAS) has any bearing on non-GGL-licensed operators — the article's claim that OASIS "doesn't apply" to MGA/Curaçao operators needs a citation from gluecksspiel-behoerde.de.
 - [ ] Verify current license status and any regulatory actions against Yukon Gold, BitStarz, Stake, and Kukimuki (or whichever casino list is retained after the reconciliation above) — Stake in particular has faced regulatory scrutiny in multiple jurisdictions and this should be checked, not assumed clean.
@@ -54,12 +59,14 @@ Purpose: these articles currently read as thin because most of the "authority" c
 - [ ] Double check EU/EEA tax-free winnings claim against current German tax code (Einkommensteuergesetz) guidance — "in der Regel steuerfrei" is asserted without a source.
 
 ## 5. Norway (nb-NO)
+
 - [ ] Verify the "banks block gambling transactions" claim against the current Norwegian betalingsformidlingsloven / Lotteritilsynet guidance — confirm this is still active policy in 2026 and get the correct legal citation instead of the informal description currently in the article.
 - [ ] Confirm Need for Spin's and Spinlander's current license status (Curaçao Gaming Control Board / Anjouan) and NO market inclusion — these change more often than the article implies.
 - [ ] Get current data on how effective the bank-blocking actually is in practice (Lotteritilsynet or Finanstilsynet may publish enforcement/effectiveness figures) — right now the article presents PayPal as a reliable workaround without evidence of how consistently that holds.
 - [ ] Confirm Norwegian tax authority (Skatteetaten) guidance on foreign gambling winnings is accurately summarized — cite the actual Skatteetaten page rather than paraphrasing from memory.
 
 ## 6. Sweden (sv-SE)
+
 - [ ] Confirm Video Slots' dual SE/DK license numbers (18Li7373 / 18-0650512) against Spelinspektionen's public register: https://www.spelinspektionen.se
 - [ ] Verify Pop Casino's current status as a Pay N Play, Spelinspektionen-licensed operator with no PayPal — or, if the article keeps Rolling Slots instead per the reconciliation decision, verify Rolling Slots' license claims (the source article already flags these as contradictory between Curaçao and MGA — this needs to be resolved with a primary source, not left as "vi hittade motstridiga uppgifter").
 - [ ] Confirm Spinlander's Anjouan license is still active and get the current registration status.

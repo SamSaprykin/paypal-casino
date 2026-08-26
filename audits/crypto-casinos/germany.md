@@ -7,27 +7,27 @@
 
 ## Snapshot
 
-| Signal | Value |
-|---|---|
-| Section IDs present | 7 of 8 — **`cc-voices` missing** |
-| Body words | 1 264 (intro 135, guide 572, depth 480, verdict 77) |
-| H2/H3 headings | 10 |
-| Tables | 16 table rows across 2 comparison tables |
-| Custom blocks | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
-| Player quotes | 0 |
-| How-to groups | 4 |
-| Images | 0 |
-| Internal links | 8, of which **1 is broken** |
-| Regulator mentions | 15 |
-| Tax mentions | **0** |
-| Freshness block | none |
+| Signal              | Value                                                                     |
+| ------------------- | ------------------------------------------------------------------------- |
+| Section IDs present | 7 of 8 — **`cc-voices` missing**                                          |
+| Body words          | 1 264 (intro 135, guide 572, depth 480, verdict 77)                       |
+| H2/H3 headings      | 10                                                                        |
+| Tables              | 16 table rows across 2 comparison tables                                  |
+| Custom blocks       | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
+| Player quotes       | 0                                                                         |
+| How-to groups       | 4                                                                         |
+| Images              | 0                                                                         |
+| Internal links      | 8, of which **1 is broken**                                               |
+| Regulator mentions  | 15                                                                        |
+| Tax mentions        | **0**                                                                     |
+| Freshness block     | none                                                                      |
 
 ## Locale relevance: pass on copy, fail on substance
 
 No foreign-market contamination. The page speaks about German players, and regulator
 references appear 15 times, so the licence framing is there.
 
-But the page is locale-relevant in *form* only. The two subjects that actually define
+But the page is locale-relevant in _form_ only. The two subjects that actually define
 crypto gambling for a German reader are both missing or thin:
 
 1. **Tax appears zero times.** Not once. For Germany this is the single most searched

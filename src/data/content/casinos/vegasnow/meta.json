@@ -48,66 +48,19 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": [
-      "coolzino",
-      "cosmicslot",
-      "just-casino"
-    ],
-    "finland": [
-      "luckydreams",
-      "rollingslots",
-      "monro"
-    ],
-    "germany": [
-      "kukimuki",
-      "villento",
-      "lollybet"
-    ],
-    "ireland": [
-      "rx-casino",
-      "onluck",
-      "hugo-casino"
-    ],
-    "norway": [
-      "kukimuki",
-      "vinylcasino",
-      "coolzino"
-    ],
-    "sweden": [
-      "lets-lucky",
-      "tonybet",
-      "hugo-casino"
-    ]
+    "denmark": ["coolzino", "cosmicslot", "just-casino"],
+    "finland": ["luckydreams", "rollingslots", "monro"],
+    "germany": ["kukimuki", "villento", "lollybet"],
+    "ireland": ["rx-casino", "onluck", "hugo-casino"],
+    "norway": ["kukimuki", "vinylcasino", "coolzino"],
+    "sweden": ["lets-lucky", "tonybet", "hugo-casino"]
   },
   "alternativesPaypalByCountry": {
-    "denmark": [
-      "glitchspin",
-      "hugo-casino",
-      "ritzo"
-    ],
-    "finland": [
-      "starda",
-      "fambet",
-      "vegasmobilecasino"
-    ],
-    "germany": [
-      "rollingslots",
-      "hugo-casino"
-    ],
-    "ireland": [
-      "ritzo",
-      "glitchspin",
-      "lucky-start"
-    ],
-    "norway": [
-      "tonybet",
-      "cosmicslot",
-      "flagman"
-    ],
-    "sweden": [
-      "spinlander-casino",
-      "hugo-casino",
-      "cosmicslot"
-    ]
+    "denmark": ["glitchspin", "hugo-casino", "ritzo"],
+    "finland": ["starda", "fambet", "vegasmobilecasino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["ritzo", "glitchspin", "lucky-start"],
+    "norway": ["tonybet", "cosmicslot", "flagman"],
+    "sweden": ["spinlander-casino", "hugo-casino", "cosmicslot"]
   }
 }

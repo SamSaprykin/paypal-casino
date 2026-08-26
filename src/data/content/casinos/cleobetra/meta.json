@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/cleobetra.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal / e-wallets: Minutes – 24h  "
-  ],
+  "payoutTimes": ["PayPal / e-wallets: Minutes – 24h  "],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -28,16 +26,8 @@
     "Big Time Gaming",
     "Nolimit City"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,

@@ -12,7 +12,7 @@ The reason the non-Ireland home pages "had almost no content" is worse than thin
 and `dist/se/` had no `index.html`.
 
 The cause is a silent failure in the content loader. `readLocaleFileByStem()` wrapped both
-the file read *and* the YAML parse in one `try/catch`. A file with a YAML syntax error was
+the file read _and_ the YAML parse in one `try/catch`. A file with a YAML syntax error was
 therefore indistinguishable from a missing file, so the locale was treated as "not
 translated", `assemblePageDoc()` returned `null`, and the route threw during build — while
 `astro build` still exited 0.
@@ -46,13 +46,13 @@ I re-validated all 88 content MDX files after the fix — zero frontmatter error
 All six use the same section IDs from `home-page/meta.json`. Each non-Ireland page has a
 market-specific angle rather than a translation of Ireland:
 
-| Locale | Angle the page is built on |
-|---|---|
-| Germany | GGL licence versus MGA/Curaçao: 1 € per spin, no autoplay, 1 000 €/month, OASIS — versus none of it |
-| Denmark | Spillemyndigheden versus offshore, and that ROFUS only covers Danish licences |
-| Finland | The licence reform timeline, and that Trustly/Zimpler/Brite beat PayPal locally |
-| Norway | The monopoly, declined bank cards, and that Norsk Tipping self-exclusion doesn't reach offshore |
-| Sweden | Swedish licence versus offshore, and that the one-bonus-per-player rule explains missing welcome offers |
+| Locale  | Angle the page is built on                                                                              |
+| ------- | ------------------------------------------------------------------------------------------------------- |
+| Germany | GGL licence versus MGA/Curaçao: 1 € per spin, no autoplay, 1 000 €/month, OASIS — versus none of it     |
+| Denmark | Spillemyndigheden versus offshore, and that ROFUS only covers Danish licences                           |
+| Finland | The licence reform timeline, and that Trustly/Zimpler/Brite beat PayPal locally                         |
+| Norway  | The monopoly, declined bank cards, and that Norsk Tipping self-exclusion doesn't reach offshore         |
+| Sweden  | Swedish licence versus offshore, and that the one-bonus-per-player rule explains missing welcome offers |
 
 Research notes are embedded as English `# RESEARCH (...)` YAML comments directly above the
 section they affect, and image briefs as `# IMAGE (...)` comments above each image slot. You
@@ -119,12 +119,12 @@ copy deliberately short for that reason. Read the rendered page before adding mo
 
 Each of these is a number we publish twice, differently. One of each pair is wrong.
 
-| Method | Page A | Page B |
-|---|---|---|
-| PayPal, Finland | fast payout page: 1–12 h | shared speed chart: 12–48 t |
-| Skrill/Neteller, Norway | PayPal page: 24–48 timer | fast payout page: 1–6 t |
-| Swish, Sweden | shared speed chart: under 1 tim | fast payout page: 1–24 timmar |
-| PayPal, Sweden | minimum 100–150 kr — never verified | — |
+| Method                  | Page A                              | Page B                        |
+| ----------------------- | ----------------------------------- | ----------------------------- |
+| PayPal, Finland         | fast payout page: 1–12 h            | shared speed chart: 12–48 t   |
+| Skrill/Neteller, Norway | PayPal page: 24–48 timer            | fast payout page: 1–6 t       |
+| Swish, Sweden           | shared speed chart: under 1 tim     | fast payout page: 1–24 timmar |
+| PayPal, Sweden          | minimum 100–150 kr — never verified | —                             |
 
 The shared chart lives in `src/lib/i18n/copies/payment-speed-chart.ts`.
 
@@ -141,11 +141,11 @@ Blur account numbers, names, balances and wallet addresses in every shot.
 
 ### Home pages — 3 per locale, 18 total
 
-| File | What to capture |
-|---|---|
-| `home-page-hero.{ie,de,dk,fi,no,se}.webp` | Payment collage in the local language with local currency cues. `home-page-hero.se.webp` already exists — rename to `.se` suffix pattern if you want consistency. |
-| `home-page-cashier.{ie,de,dk,fi,no,se}.webp` | A real cashier at a casino open to that market, local UI, showing which methods are actually listed |
-| `home-page-payout-proof.{ie,de,dk,fi,no,se}.webp` | Withdrawal history with visible timestamps |
+| File                                              | What to capture                                                                                                                                                   |
+| ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `home-page-hero.{ie,de,dk,fi,no,se}.webp`         | Payment collage in the local language with local currency cues. `home-page-hero.se.webp` already exists — rename to `.se` suffix pattern if you want consistency. |
+| `home-page-cashier.{ie,de,dk,fi,no,se}.webp`      | A real cashier at a casino open to that market, local UI, showing which methods are actually listed                                                               |
+| `home-page-payout-proof.{ie,de,dk,fi,no,se}.webp` | Withdrawal history with visible timestamps                                                                                                                        |
 
 The payout-proof shot is the highest-value image on the site. It is the one thing a
 competitor cannot copy, and it is what "we actually tested this" looks like.
@@ -159,12 +159,12 @@ Two locale-specific upgrades worth doing:
 
 ### Crypto silo — 3 per locale, 18 total
 
-| File | What to capture |
-|---|---|
-| `crypto-casinos-network-fee.{locale}.webp` | Wallet send screen with the network fee visible — USDT on TRC-20 next to USDT on ERC-20 |
-| `crypto-casinos-cashier.{locale}.webp` | Casino crypto deposit screen with generated address, QR and minimum |
-| `crypto-casinos-payout-proof.{locale}.webp` | Completed crypto withdrawal with timestamps |
-| `crypto-casinos-declined-card.no.webp` | Norway only: declined card next to successful crypto deposit |
+| File                                        | What to capture                                                                         |
+| ------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `crypto-casinos-network-fee.{locale}.webp`  | Wallet send screen with the network fee visible — USDT on TRC-20 next to USDT on ERC-20 |
+| `crypto-casinos-cashier.{locale}.webp`      | Casino crypto deposit screen with generated address, QR and minimum                     |
+| `crypto-casinos-payout-proof.{locale}.webp` | Completed crypto withdrawal with timestamps                                             |
+| `crypto-casinos-declined-card.no.webp`      | Norway only: declined card next to successful crypto deposit                            |
 
 ---
 
@@ -196,12 +196,12 @@ available on the home pages, because nobody can copy it.
 
 Run `npm run content:check-links` (requires a build first). None are on home pages.
 
-| Cluster | Count | Fix |
-|---|---|---|
-| `blocked-casinos` in all 6 locales | 11 | The page does not exist in any locale. Either build it or replace the links with `rating-guidelines`. |
-| `minimum-deposit-casinos/*` wrong slugs | ~18 | This one file per locale uses slugs that don't match `_index.json` — e.g. `/de/boni/` instead of `/de/casino-bonus/`, `/se/snabba-uttag/` instead of `/se/casinon-med-snabb-utbetalning/`. Mechanical fix. |
-| `/gambling-regulation-ireland/` | 1 | Page was never built. Replace or drop. |
-| Assorted localised rating-guidelines slugs | ~8 | e.g. `/dk/bedømmelsesretningslinjer/` — the real slug is `/dk/rating-guidelines/` in every locale. |
+| Cluster                                    | Count | Fix                                                                                                                                                                                                        |
+| ------------------------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `blocked-casinos` in all 6 locales         | 11    | The page does not exist in any locale. Either build it or replace the links with `rating-guidelines`.                                                                                                      |
+| `minimum-deposit-casinos/*` wrong slugs    | ~18   | This one file per locale uses slugs that don't match `_index.json` — e.g. `/de/boni/` instead of `/de/casino-bonus/`, `/se/snabba-uttag/` instead of `/se/casinon-med-snabb-utbetalning/`. Mechanical fix. |
+| `/gambling-regulation-ireland/`            | 1     | Page was never built. Replace or drop.                                                                                                                                                                     |
+| Assorted localised rating-guidelines slugs | ~8    | e.g. `/dk/bedømmelsesretningslinjer/` — the real slug is `/dk/rating-guidelines/` in every locale.                                                                                                         |
 
 ---
 

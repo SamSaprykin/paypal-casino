@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/fambet.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -26,18 +24,8 @@
     "Yggdrasil Gaming",
     "Blueprint Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 42,
   "userRecommendationsTotalNumber": 56,

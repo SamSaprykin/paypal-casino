@@ -7,19 +7,19 @@
 
 ## Snapshot
 
-| Signal | Value |
-|---|---|
-| Section IDs present | 7 of 8 — **`cc-voices` missing** |
-| Body words | 1 337 (intro 152, guide 561, depth 543, verdict 81) |
-| H2/H3 headings | 10 |
-| Tables | 16 table rows across 2 comparison tables |
-| Custom blocks | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
-| Player quotes | 0 |
-| How-to groups | 4 |
-| Images | 0 |
-| Internal links | 8, of which **1 is broken** |
-| Tax mentions | 6 |
-| Freshness block | none |
+| Signal              | Value                                                                     |
+| ------------------- | ------------------------------------------------------------------------- |
+| Section IDs present | 7 of 8 — **`cc-voices` missing**                                          |
+| Body words          | 1 337 (intro 152, guide 561, depth 543, verdict 81)                       |
+| H2/H3 headings      | 10                                                                        |
+| Tables              | 16 table rows across 2 comparison tables                                  |
+| Custom blocks       | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
+| Player quotes       | 0                                                                         |
+| How-to groups       | 4                                                                         |
+| Images              | 0                                                                         |
+| Internal links      | 8, of which **1 is broken**                                               |
+| Tax mentions        | 6                                                                         |
+| Freshness block     | none                                                                      |
 
 ## Locale relevance: pass on copy, misses the Swedish angle
 

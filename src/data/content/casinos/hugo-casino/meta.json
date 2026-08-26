@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/hugo.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/ E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/ E-Wallets: Minutes-24h"],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -26,18 +24,8 @@
     "Red Rake Gaming",
     "Yggdrasil Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,

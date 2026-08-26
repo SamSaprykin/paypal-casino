@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/lunubet.php",
   "payoutLimits": "Up €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-wallets :Minutes-24 h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets :Minutes-24 h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -25,16 +23,8 @@
     "Push Gaming",
     "Big Time Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Skrill",
-    "Neteller"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller"],
+  "withdrawalMethod": ["PayPal", "Skrill", "Neteller"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,

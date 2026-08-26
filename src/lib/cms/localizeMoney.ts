@@ -8,11 +8,7 @@ const EUR_LOCALES = new Set<WebsiteLocaleKey>([
 ]);
 
 /** Markets that show amounts in local kroner, not euro. */
-const KR_LOCALES = new Set<WebsiteLocaleKey>([
-  "sweden",
-  "denmark",
-  "norway",
-]);
+const KR_LOCALES = new Set<WebsiteLocaleKey>(["sweden", "denmark", "norway"]);
 
 const KR_NUMBER_LOCALE: Record<"sweden" | "denmark" | "norway", string> = {
   sweden: "sv-SE",

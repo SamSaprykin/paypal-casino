@@ -76,12 +76,7 @@
       "kind": "methodAvailability",
       "id": "rv-methods",
       "name": "Revolut Method Availability",
-      "columns": [
-        "cardDeposit",
-        "revolutPay",
-        "withdraw",
-        "bonusOk"
-      ],
+      "columns": ["cardDeposit", "revolutPay", "withdraw", "bonusOk"],
       "rowsByCountry": {
         "ireland": [
           {

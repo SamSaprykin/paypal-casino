@@ -15,16 +15,8 @@
   },
   "referralUrl": "/goto/legzo.php",
   "payoutLimits": "€80,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "NetEnt",
-    "Microgaming",
-    "PlayNGo",
-    "Betsoft",
-    "PlayNGo"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["NetEnt", "Microgaming", "PlayNGo", "Betsoft", "PlayNGo"],
   "depositMethods": [
     "PayPal",
     "Neteller",

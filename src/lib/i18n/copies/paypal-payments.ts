@@ -3,10 +3,15 @@ import type { WebsiteLocaleKey } from "../../cms/locales";
 import { localeIdForWebsiteLocale } from "../websiteLocaleBridge";
 import type { PaypalPaymentsCopy } from "./paypal-payments-types";
 
-export type { PaypalPaymentsCopy, PaypalPaymentsCasinoCopy } from "./paypal-payments-types";
+export type {
+  PaypalPaymentsCopy,
+  PaypalPaymentsCasinoCopy,
+} from "./paypal-payments-types";
 
-const SEAMUS_PHOTO = "/author-image/seamus-oconnor/seamus-professional-image.png";
-const STOYAN_PHOTO = "/author-image/stoyan-makoski/stoyan-professional-image.png";
+const SEAMUS_PHOTO =
+  "/author-image/seamus-oconnor/seamus-professional-image.png";
+const STOYAN_PHOTO =
+  "/author-image/stoyan-makoski/stoyan-professional-image.png";
 
 /** Ireland — original hands-on shortlist (Monster, Winshark, Yukon Gold, Flagman) */
 const enIE: PaypalPaymentsCopy = {
@@ -160,7 +165,13 @@ const daDK: PaypalPaymentsCopy = {
       logoBgColor: "#1a1a1e",
       logoTextColor: "#ffffff",
       body: "Luna Casino kører under MGA-licens MGA/CRP/171/2009/01 og viser PayPal som indbetalingsmetode for danske spillere. Vi indsatte 200 DKK via PayPal kl. 09:45; det var på kontoen på under et minut. Da vi forsøgte at trække 150 DKK tilbage til samme PayPal-konto kl. 16:30, blev udbetalingen holdt tilbage til “manuelt review” i 4 timer. Den landede samme aften kl. 20:18. Der er ingen dedikeret DKK-velkomstbonus i de vilkår, vi har bekræftet — læs kassens aktuelle kampagne, før du antager, at PayPal tæller med. E-wallets opgives som inden for 24 timer efter en ventetid på op til 48 timer; vores PayPal gik hurtigere.",
-      methods: ["PayPal", "Visa / Mastercard", "Skrill", "Trustly", "Apple Pay"],
+      methods: [
+        "PayPal",
+        "Visa / Mastercard",
+        "Skrill",
+        "Trustly",
+        "Apple Pay",
+      ],
       frictionTitle: "Ærlig friktion",
       frictionBody:
         "Ingen dedikeret DKK-velkomstbonus i de vilkår, vi har. Antag ikke, at PayPal tæller med i en kampagne, før kassen siger det. Vores første udbetaling blev manuelt reviewet i 4 timer uden forklaring.",
@@ -211,7 +222,8 @@ const fiFI: PaypalPaymentsCopy = {
     "8 kotiutusta ajastettu",
   ],
 
-  shortlistTitle: "Suomalaiset kasinot, jotka testasimme oikeasti talletuksille ja kotiutuksille",
+  shortlistTitle:
+    "Suomalaiset kasinot, jotka testasimme oikeasti talletuksille ja kotiutuksille",
   shortlistIntro:
     "Talletimme 25 € jokaiselle alla olevalle sivustolle suomalaisten pelaajien eniten käyttämillä tavoilla — PayPal, Visa Debit, Trustly ja Skrill — ja pyysimme sitten kotiutusta samalle tavalle. Nämä neljä käsittelivät kotiutuksemme pakottamatta meitä eri maksukanavalle.",
   shortlistFooterNote:
@@ -306,7 +318,8 @@ const svSE: PaypalPaymentsCopy = {
     "6 uttag timade",
   ],
 
-  shortlistTitle: "Svenska casinon vi faktiskt testade för insättningar och uttag",
+  shortlistTitle:
+    "Svenska casinon vi faktiskt testade för insättningar och uttag",
   shortlistIntro:
     "Vi satte in 250 SEK på varje sajt nedan via de metoder svenska spelare använder mest — PayPal, Trustly och Visa Debit — och begärde sedan uttag tillbaka till samma metod. Detta är de tre som behandlade våra uttag utan att tvinga oss över på en annan kanal.",
   shortlistFooterNote:
@@ -387,7 +400,8 @@ const nbNO: PaypalPaymentsCopy = {
     "6 uttak timet",
   ],
 
-  shortlistTitle: "Kasinoer som tar Norge som vi faktisk testet for innskudd og uttak",
+  shortlistTitle:
+    "Kasinoer som tar Norge som vi faktisk testet for innskudd og uttak",
   shortlistIntro:
     "Vi satte inn 250 NOK på hvert site nedenfor via de metodene norske spillere bruker mest — PayPal, Visa og Skrill — og ba deretter om uttak tilbake til samme metode. Dette er de tre som behandlet uttakene våre uten å tvinge oss over på en annen kanal.",
   shortlistFooterNote:
@@ -468,7 +482,8 @@ const deDE: PaypalPaymentsCopy = {
     "2 Auszahlungen getimed",
   ],
 
-  shortlistTitle: "PayPal-Casinos für deutsche Spieler, die wir tatsächlich getestet haben",
+  shortlistTitle:
+    "PayPal-Casinos für deutsche Spieler, die wir tatsächlich getestet haben",
   shortlistIntro:
     "Wir haben 25 € bei PlayOJO über die Methoden eingezahlt, die deutsche Spieler am häufigsten nutzen — PayPal, Visa Debit und Trustly — und dann eine Auszahlung auf dieselbe Methode beantragt. PlayOJO verarbeitete unsere Auszahlungen, ohne uns auf eine andere Route zu zwingen.",
   shortlistFooterNote:

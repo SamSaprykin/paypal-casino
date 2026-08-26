@@ -357,7 +357,8 @@ export const RATING_GUIDELINES_COPY: Record<LocaleId, RatingGuidelinesCopy> = {
       {
         name: "Tuki",
         weight: "10%",
-        summary: "Testaamme tuen itse sen sijaan että luottaisimme etusivun väitteisiin.",
+        summary:
+          "Testaamme tuen itse sen sijaan että luottaisimme etusivun väitteisiin.",
         details: [
           "Live-chatin / sähköpostin saatavuus",
           "Aika ensimmäiseen hyödylliseen vastaukseen",

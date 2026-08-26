@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/flagman.php",
   "payoutLimits": " Up to €80,000–€100,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Microgaming",
     "Betsoft",
@@ -27,18 +25,8 @@
     "Quickspin",
     "NetEnt"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 41,
   "userRecommendationsTotalNumber": 55,

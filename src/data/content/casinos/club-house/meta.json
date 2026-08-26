@@ -14,9 +14,7 @@
   "payoutTimes": [
     "E-wallet withdrawals reported as instant; bank transfer/card slower (exact times not confirmed)"
   ],
-  "software": [
-    "Evolution"
-  ],
+  "software": ["Evolution"],
   "depositMethods": [
     "Visa",
     "Mastercard",

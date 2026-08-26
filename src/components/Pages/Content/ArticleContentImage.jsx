@@ -2,11 +2,7 @@
  * Inline article image for markdown `div.content-image`.
  * Uses public URLs (e.g. /assets/se/home-page-hero.png).
  */
-export function ArticleContentImage({
-  src,
-  alt = "",
-  caption,
-}) {
+export function ArticleContentImage({ src, alt = "", caption }) {
   if (!src || typeof src !== "string" || !src.trim()) return null;
 
   return (

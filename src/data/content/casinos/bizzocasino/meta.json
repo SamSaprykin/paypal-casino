@@ -11,10 +11,7 @@
   "payoutTimes": [
     "Crypto withdrawals typically under 1 hour; e-wallets 24 hours; bank transfers up to a few days. Daily limit $4,000, weekly $16,000, monthly $50,000."
   ],
-  "software": [
-    "Pragmatic",
-    "Evolution"
-  ],
+  "software": ["Pragmatic", "Evolution"],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",

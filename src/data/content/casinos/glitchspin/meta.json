@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/glitchspin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal Withdrawals: Minutes to 24 hours"
-  ],
+  "payoutTimes": ["PayPal Withdrawals: Minutes to 24 hours"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -25,16 +23,8 @@
     "Yggdrasil Gaming",
     "Betsoft"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 58,

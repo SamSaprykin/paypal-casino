@@ -15,27 +15,10 @@
   },
   "referralUrl": "/goto/lucky-start.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Evolution",
-    "Pragmatic",
-    "PlayNGo",
-    "Playtech"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Evolution", "Pragmatic", "PlayNGo", "Playtech"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 47,
   "userRecommendationsTotalNumber": 68,

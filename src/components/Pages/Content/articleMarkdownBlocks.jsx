@@ -296,12 +296,14 @@ export function parseProsConsFromHast(node) {
     : "Ulemper";
 
   const lists = childrenElements(node).filter((c) => c.tagName === "ul");
-  if ((!pros.length && !cons.length) && lists.length >= 2) {
+  if (!pros.length && !cons.length && lists.length >= 2) {
     const headings = childrenElements(node).filter((c) =>
       /^h[1-6]$/.test(c.tagName || ""),
     );
-    if (headings[0]) prosTitle = textFromHastTree(headings[0]).trim() || prosTitle;
-    if (headings[1]) consTitle = textFromHastTree(headings[1]).trim() || consTitle;
+    if (headings[0])
+      prosTitle = textFromHastTree(headings[0]).trim() || prosTitle;
+    if (headings[1])
+      consTitle = textFromHastTree(headings[1]).trim() || consTitle;
     const listLines = (ul) =>
       childrenElements(ul)
         .filter((li) => li.tagName === "li")
@@ -424,7 +426,10 @@ export function ArticleMarkdownCheckList({ title = "Key Details", items }) {
             key={i}
             className="flex gap-2 border-t border-blue-50 px-4 py-2.5 text-sm leading-relaxed text-neutral-800 first:border-t-0"
           >
-            <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-600" aria-hidden />
+            <Check
+              className="mt-0.5 h-4 w-4 shrink-0 text-blue-600"
+              aria-hidden
+            />
             <span>{line}</span>
           </li>
         ))}
@@ -434,7 +439,10 @@ export function ArticleMarkdownCheckList({ title = "Key Details", items }) {
 }
 
 function parseAnchorFromHast(li) {
-  const a = findDescendant(li, (n) => n.type === "element" && n.tagName === "a");
+  const a = findDescendant(
+    li,
+    (n) => n.type === "element" && n.tagName === "a",
+  );
   const href = a?.properties?.href ? String(a.properties.href) : "";
   const text = textFromHastTree(li).trim();
   return { href, text };

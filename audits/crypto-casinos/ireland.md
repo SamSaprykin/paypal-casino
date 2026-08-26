@@ -7,19 +7,19 @@
 
 ## Snapshot
 
-| Signal | Value |
-|---|---|
+| Signal              | Value                                                                                                   |
+| ------------------- | ------------------------------------------------------------------------------------------------------- |
 | Section IDs present | 8 of 8 (`cc-intro`, `cc-list`, `cc-guide`, `cc-voices`, `cc-howto`, `cc-depth`, `cc-faq`, `cc-verdict`) |
-| Body words | 1 314 across four content blocks (intro 101, guide 613, depth 511, verdict 89) |
-| H2/H3 headings | 10 |
-| Tables | 13 table rows across 2 comparison tables |
-| Custom blocks | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box` |
-| Player quotes | 10 (the only locale that has them) |
-| How-to groups | 4 |
-| Images | 0 |
-| Internal links | 9, of which **2 are broken** |
-| Freshness block | none |
-| References block | none |
+| Body words          | 1 314 across four content blocks (intro 101, guide 613, depth 511, verdict 89)                          |
+| H2/H3 headings      | 10                                                                                                      |
+| Tables              | 13 table rows across 2 comparison tables                                                                |
+| Custom blocks       | `pros-cons`, `payment-speed-chart`, `warning-box`, `info-card`, `tip-box`                               |
+| Player quotes       | 10 (the only locale that has them)                                                                      |
+| How-to groups       | 4                                                                                                       |
+| Images              | 0                                                                                                       |
+| Internal links      | 9, of which **2 are broken**                                                                            |
+| Freshness block     | none                                                                                                    |
+| References block    | none                                                                                                    |
 
 ## Locale relevance: pass, with one defect
 
@@ -35,10 +35,10 @@ row, which has no meaning for an Irish reader. Swish is Swedish. See the silo RE
 **High — two broken internal links.** Both point at pages that do not exist anywhere in
 the build:
 
-| Line | Link | Status |
-|---|---|---|
-| 251 | `/blocked-casinos/` | 404 — no blocked-casinos page exists in any locale |
-| 257 | `/gambling-regulation-ireland/` | 404 — the regulation page was never built |
+| Line | Link                            | Status                                             |
+| ---- | ------------------------------- | -------------------------------------------------- |
+| 251  | `/blocked-casinos/`             | 404 — no blocked-casinos page exists in any locale |
+| 257  | `/gambling-regulation-ireland/` | 404 — the regulation page was never built          |
 
 Replace the first with `/rating-guidelines/` and the second with
 `/paypal-casino-ireland/` or drop the sentence. This is the same pair I removed from the

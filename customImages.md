@@ -291,11 +291,11 @@ Per-locale files: `{name}.{ie\|de\|dk\|fi\|no\|se}.webp` + shared `{name}.webp` 
 
 Denmark-only files live in `src/images/content/dk/crypto-casino/`. `src` is set in `denmark.mdx` so other locales render nothing until their files exist. Captions disclose that the art is AI-generated.
 
-| ID                  | imageName                                   | Suggested file                     | imageType    | Placement                                      |
-| ------------------- | ------------------------------------------- | ---------------------------------- | ------------ | ---------------------------------------------- |
-| `cc-image-wallet`   | Wallet Send Screen With Network Fee         | `crypto-casinos-network-fee.png`   | ai-generated | After how-to — wallet send with network fee    |
-| `cc-image-cashier`  | Casino Cashier Crypto Deposit Screen        | `crypto-casinos-cashier.png`       | ai-generated | After depth — cashier with address, QR, min    |
-| `cc-image-payout`   | Completed Crypto Withdrawal With Timestamps | `crypto-casinos-payout-proof.png`  | ai-generated | After cashier — completed withdrawal timestamps |
+| ID                 | imageName                                   | Suggested file                    | imageType    | Placement                                       |
+| ------------------ | ------------------------------------------- | --------------------------------- | ------------ | ----------------------------------------------- |
+| `cc-image-wallet`  | Wallet Send Screen With Network Fee         | `crypto-casinos-network-fee.png`  | ai-generated | After how-to — wallet send with network fee     |
+| `cc-image-cashier` | Casino Cashier Crypto Deposit Screen        | `crypto-casinos-cashier.png`      | ai-generated | After depth — cashier with address, QR, min     |
+| `cc-image-payout`  | Completed Crypto Withdrawal With Timestamps | `crypto-casinos-payout-proof.png` | ai-generated | After cashier — completed withdrawal timestamps |
 
 ### crypto-casinos-network-fee — Wallet send screen with the network fee visible
 

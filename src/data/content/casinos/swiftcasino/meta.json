@@ -11,11 +11,7 @@
   "payoutTimes": [
     "A few hours to 2 working days depending on payment method; Apple Pay reported as fastest per one source"
   ],
-  "software": [
-    "NetEnt",
-    "Evolution",
-    "Quickspin"
-  ],
+  "software": ["NetEnt", "Evolution", "Quickspin"],
   "depositMethods": [
     "Visa Debit",
     "Mastercard Debit",

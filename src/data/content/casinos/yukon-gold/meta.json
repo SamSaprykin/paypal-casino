@@ -15,24 +15,10 @@
   },
   "referralUrl": "/goto/gold-yukon.php",
   "payoutLimits": "€50,000",
-  "payoutTimes": [
-    "E-wallets: 1-2 days"
-  ],
-  "software": [
-    "Betsoft",
-    "Microgaming",
-    "Playtech"
-  ],
-  "depositMethods": [
-    "Visa",
-    "Mastercard",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Visa",
-    "MasterCard",
-    "Skrill"
-  ],
+  "payoutTimes": ["E-wallets: 1-2 days"],
+  "software": ["Betsoft", "Microgaming", "Playtech"],
+  "depositMethods": ["Visa", "Mastercard", "Skrill"],
+  "withdrawalMethod": ["Visa", "MasterCard", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 281,
   "userRecommendationsTotalNumber": 339,

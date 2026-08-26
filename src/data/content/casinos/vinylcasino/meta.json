@@ -11,12 +11,7 @@
   "payoutTimes": [
     "E-wallets and crypto typically process within 0-24 hours to 3 banking days depending on method; bank transfers and card payments take roughly 3-7 days. Withdrawal requests are processed by the finance team Monday-Friday, 6am-5pm, generally within 3 business days once verification is complete. Players may hold up to 3 pending withdrawals at a time."
   ],
-  "software": [
-    "Pragmatic",
-    "NetEnt",
-    "Evolution",
-    "Play'n GO"
-  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO"],
   "depositMethods": [
     "Interac",
     "Visa",

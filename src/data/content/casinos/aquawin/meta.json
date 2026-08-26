@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/aquawin.php",
   "payoutLimits": "Up to $30,000 per month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Big Time Gaming",
     "Pragmatic",
@@ -28,17 +26,8 @@
     "Endorphina",
     "Wazdan"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "eZeeWallet"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "eZeeWallet"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 39,
   "userRecommendationsTotalNumber": 54,

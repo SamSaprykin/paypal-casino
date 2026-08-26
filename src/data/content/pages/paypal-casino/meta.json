@@ -22,36 +22,12 @@
       "kind": "casinoList",
       "id": "casinoListIntl.markets",
       "casinoListsByCountry": {
-        "ireland": [
-          "monster-casino",
-          "winshark",
-          "yukon-gold",
-          "flagman"
-        ],
-        "germany": [
-          "playojo"
-        ],
-        "denmark": [
-          "video-slots",
-          "luna-casino",
-          "swiftcasino"
-        ],
-        "finland": [
-          "playojo",
-          "casimba",
-          "dream-vegas",
-          "vegasmobilecasino"
-        ],
-        "norway": [
-          "need-for-spin-casino",
-          "spinlander-casino",
-          "rollingslots"
-        ],
-        "sweden": [
-          "video-slots",
-          "spinlander-casino",
-          "rollingslots"
-        ]
+        "ireland": ["monster-casino", "winshark", "yukon-gold", "flagman"],
+        "germany": ["playojo"],
+        "denmark": ["video-slots", "luna-casino", "swiftcasino"],
+        "finland": ["playojo", "casimba", "dream-vegas", "vegasmobilecasino"],
+        "norway": ["need-for-spin-casino", "spinlander-casino", "rollingslots"],
+        "sweden": ["video-slots", "spinlander-casino", "rollingslots"]
       }
     },
     {

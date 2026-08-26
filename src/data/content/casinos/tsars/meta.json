@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/tsars.php",
   "payoutLimits": "Up to €5,000 per transaction",
-  "payoutTimes": [
-    "PayPal/E-wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-wallets: Minutes-24h"],
   "software": [
     "Pragmatic",
     "PlayNGo",
@@ -30,16 +28,8 @@
     "Spinomenal",
     "Relax Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Government of the Autonomous Island of Anjouan, Union of Comoros (License No. ALSI-202503021-FI1)",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,

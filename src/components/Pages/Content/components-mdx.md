@@ -267,7 +267,9 @@ Without `data-date`, the block stays a freeform emerald callout (legacy home-pag
 
 ```html
 <div id="slider-component">
-  <div id="slider-item"><span id="name">Safety</span><span id="value">85</span></div>
+  <div id="slider-item">
+    <span id="name">Safety</span><span id="value">85</span>
+  </div>
 </div>
 ```
 

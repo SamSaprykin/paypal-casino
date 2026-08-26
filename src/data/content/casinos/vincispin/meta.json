@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/vincispin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/Skrill/Neteller: min to 24 hours "
-  ],
+  "payoutTimes": ["PayPal/Skrill/Neteller: min to 24 hours "],
   "software": [
     "Playtech",
     "PlayNGo",
@@ -29,16 +27,8 @@
     "Quickspin",
     "Thunderkick"
   ],
-  "depositMethods": [
-    "Neteller",
-    "Skrill",
-    "PayPal"
-  ],
-  "withdrawalMethod": [
-    "Neteller",
-    "Skrill",
-    "PayPal"
-  ],
+  "depositMethods": ["Neteller", "Skrill", "PayPal"],
+  "withdrawalMethod": ["Neteller", "Skrill", "PayPal"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 45,
   "userRecommendationsTotalNumber": 65,

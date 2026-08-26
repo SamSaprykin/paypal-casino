@@ -15,27 +15,10 @@
   },
   "referralUrl": "/goto/rollingslots.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Pragmatic",
-    "Evolution",
-    "PlayNGo",
-    "Yggdrasil Gaming"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Pragmatic", "Evolution", "PlayNGo", "Yggdrasil Gaming"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 49,
   "userRecommendationsTotalNumber": 70,

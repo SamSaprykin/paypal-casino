@@ -11,13 +11,7 @@
   "payoutTimes": [
     "Crypto withdrawals typically process within a few hours. E-wallet and card withdrawals usually take 1–5 business days. Bank transfers may take 3–5 business days. Maximum withdrawal limit is 4,000 EUR per day and 125,000 EUR per month for standard players; higher limits available for VIP tiers."
   ],
-  "software": [
-    "Pragmatic",
-    "NetEnt",
-    "Evolution",
-    "Play'n GO",
-    "Nolimit City"
-  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Nolimit City"],
   "depositMethods": [
     "Visa",
     "Mastercard",
@@ -75,66 +69,19 @@
   ],
   "blocked": true,
   "alternativesByCountry": {
-    "denmark": [
-      "ritzo",
-      "rollingslots",
-      "lets-lucky"
-    ],
-    "finland": [
-      "vinylcasino",
-      "fezbet",
-      "rollingslots"
-    ],
-    "germany": [
-      "lollybet",
-      "zodiac-casino",
-      "stake"
-    ],
-    "ireland": [
-      "luna-casino",
-      "granawin",
-      "slotbox"
-    ],
-    "norway": [
-      "kukimuki",
-      "ritzo",
-      "cleobetra"
-    ],
-    "sweden": [
-      "lets-lucky",
-      "cosmicslot",
-      "tonybet"
-    ]
+    "denmark": ["ritzo", "rollingslots", "lets-lucky"],
+    "finland": ["vinylcasino", "fezbet", "rollingslots"],
+    "germany": ["lollybet", "zodiac-casino", "stake"],
+    "ireland": ["luna-casino", "granawin", "slotbox"],
+    "norway": ["kukimuki", "ritzo", "cleobetra"],
+    "sweden": ["lets-lucky", "cosmicslot", "tonybet"]
   },
   "alternativesPaypalByCountry": {
-    "denmark": [
-      "ritzo",
-      "cosmicslot",
-      "lucky-start"
-    ],
-    "finland": [
-      "ritzo",
-      "caspero",
-      "spinlander-casino"
-    ],
-    "germany": [
-      "rollingslots",
-      "hugo-casino"
-    ],
-    "ireland": [
-      "vegasmobilecasino",
-      "lucky-start",
-      "crownslots"
-    ],
-    "norway": [
-      "tonybet",
-      "tsars",
-      "hugo-casino"
-    ],
-    "sweden": [
-      "ritzo",
-      "need-for-spin-casino",
-      "tonybet"
-    ]
+    "denmark": ["ritzo", "cosmicslot", "lucky-start"],
+    "finland": ["ritzo", "caspero", "spinlander-casino"],
+    "germany": ["rollingslots", "hugo-casino"],
+    "ireland": ["vegasmobilecasino", "lucky-start", "crownslots"],
+    "norway": ["tonybet", "tsars", "hugo-casino"],
+    "sweden": ["ritzo", "need-for-spin-casino", "tonybet"]
   }
 }

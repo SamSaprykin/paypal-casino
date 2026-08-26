@@ -84,10 +84,7 @@ function normalizeCasinoSlug(slug: string): string {
   return slug.replace(/^\/+|\/+$/g, "");
 }
 
-function adaptBonus(
-  raw: unknown,
-  locale: WebsiteLocaleKey,
-): BonusItem | null {
+function adaptBonus(raw: unknown, locale: WebsiteLocaleKey): BonusItem | null {
   if (!raw || typeof raw !== "object") return null;
   const b = raw as Record<string, unknown>;
   const logo = b.bonusLogo as

@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/caspero.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
   "software": [
     "Evolution",
     "Pragmatic",
@@ -28,18 +26,8 @@
     "Yggdrasil Gaming",
     "Big Time Gaming"
   ],
-  "depositMethods": [
-    "PayPal",
-    "Skrill",
-    "Neteller",
-    "EcoPayz"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill",
-    "EcoPayz"
-  ],
+  "depositMethods": ["PayPal", "Skrill", "Neteller", "EcoPayz"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill", "EcoPayz"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 49,
   "userRecommendationsTotalNumber": 70,

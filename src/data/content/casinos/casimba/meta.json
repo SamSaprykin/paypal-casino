@@ -11,13 +11,7 @@
   "payoutTimes": [
     "E-wallets (PayPal/Skrill/Neteller): within 24 hours; Visa/Mastercard: 3-5 business days; Bank transfer: 3-7 business days"
   ],
-  "software": [
-    "Pragmatic",
-    "NetEnt",
-    "Evolution",
-    "Play'n GO",
-    "Microgaming"
-  ],
+  "software": ["Pragmatic", "NetEnt", "Evolution", "Play'n GO", "Microgaming"],
   "depositMethods": [
     "Visa",
     "Mastercard",
@@ -26,13 +20,7 @@
     "Skrill",
     "Neteller"
   ],
-  "withdrawalMethod": [
-    "Visa",
-    "Mastercard",
-    "PayPal",
-    "Skrill",
-    "Neteller"
-  ],
+  "withdrawalMethod": ["Visa", "Mastercard", "PayPal", "Skrill", "Neteller"],
   "license": "UK Gambling Commission (account number 52894); Malta Gaming Authority (licence MGA/B2C/370/2017, issued 01/08/2018) — applies to customers outside Great Britain",
   "userRecommendationsRecommendedNumber": null,
   "userRecommendationsTotalNumber": null,

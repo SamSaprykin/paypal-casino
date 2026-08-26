@@ -65,7 +65,7 @@ function dedentMarkdown(text) {
   const lines = normalized.split("\n");
   const indents = lines
     .filter((line) => line.trim().length > 0)
-    .map((line) => (line.match(/^[ \t]*/)?.[0].length ?? 0));
+    .map((line) => line.match(/^[ \t]*/)?.[0].length ?? 0);
   const minIndent = indents.length ? Math.min(...indents) : 0;
   return lines
     .map((line) => line.slice(minIndent))
@@ -234,7 +234,10 @@ const IconSwitch = ({ iconName }) => {
   // Emoji / non-slug icons (e.g. 🔐) — render as-is, not as a failed Lucide lookup
   if (key && !/^[a-zA-Z][a-zA-Z0-9_-]*$/.test(key)) {
     return (
-      <span className="inline-flex h-9 w-9 items-center justify-center text-3xl leading-none" aria-hidden>
+      <span
+        className="inline-flex h-9 w-9 items-center justify-center text-3xl leading-none"
+        aria-hidden
+      >
         {key}
       </span>
     );
@@ -1031,9 +1034,7 @@ export const ContentComponent = ({
                         };
                       });
 
-                    return (
-                      <HowToComponent steps={steps} localeId={localeId} />
-                    );
+                    return <HowToComponent steps={steps} localeId={localeId} />;
                   }
                   if (
                     props.id === "inline-bonus" ||

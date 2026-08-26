@@ -15,24 +15,10 @@
   },
   "referralUrl": "/goto/1go.php",
   "payoutLimits": "€30,000/month",
-  "payoutTimes": [
-    "PayPal/E-Wallets: Minutes-24h"
-  ],
-  "software": [
-    "Betsoft",
-    "Microgaming",
-    "Endorphina"
-  ],
-  "depositMethods": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "PayPal",
-    "Neteller",
-    "Skrill"
-  ],
+  "payoutTimes": ["PayPal/E-Wallets: Minutes-24h"],
+  "software": ["Betsoft", "Microgaming", "Endorphina"],
+  "depositMethods": ["PayPal", "Neteller", "Skrill"],
+  "withdrawalMethod": ["PayPal", "Neteller", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 57,

@@ -13,18 +13,18 @@ That produced English meta on localized reviews (e.g. Denmark Trickz/Tsars).
 
 ### Fixed — added localized `seo.seoTitle` / `seo.seoDescription`
 
-| File | Locale |
-|------|--------|
-| `casinos/trickz/denmark.mdx` | da |
-| `casinos/trickz/norway.mdx` | nb |
-| `casinos/tsars/denmark.mdx` | da |
-| `casinos/tsars/norway.mdx` | nb |
-| `casinos/rollingslots/finland.mdx` | fi |
-| `casinos/rollingslots/germany.mdx` | de |
-| `casinos/rollingslots/norway.mdx` | nb |
-| `casinos/rollingslots/sweden.mdx` | sv |
-| `casinos/klirr-casino/sweden.mdx` | sv |
-| `casinos/pop-casino/sweden.mdx` | sv |
+| File                               | Locale |
+| ---------------------------------- | ------ |
+| `casinos/trickz/denmark.mdx`       | da     |
+| `casinos/trickz/norway.mdx`        | nb     |
+| `casinos/tsars/denmark.mdx`        | da     |
+| `casinos/tsars/norway.mdx`         | nb     |
+| `casinos/rollingslots/finland.mdx` | fi     |
+| `casinos/rollingslots/germany.mdx` | de     |
+| `casinos/rollingslots/norway.mdx`  | nb     |
+| `casinos/rollingslots/sweden.mdx`  | sv     |
+| `casinos/klirr-casino/sweden.mdx`  | sv     |
+| `casinos/pop-casino/sweden.mdx`    | sv     |
 
 ### Guide pages
 
@@ -46,25 +46,25 @@ Not changed in this pass — documented for follow-up.
 
 Review body amounts disagree with card/bonus `descriptionIntl` (and sometimes with FAQ in the same MDX).
 
-| Casino | Locales | Meta bonus | Body claims |
-|--------|---------|------------|-------------|
-| **rollingslots** | fi, de, no, se | ~500 + 200 FS | **300% up to €3,500 + 550 FS** |
-| **trickz** | dk, no | ~500 + 200 FS | Pros: **10.000 kr + 200 FS**; FAQ often different again |
-| **tsars** | dk, no | ~2.000 + 200 FS | Facts table: **15.000 kr + 200 FS** |
-| **vegas-hero** | fi, no | ~100 + 50 FS | Body: **€500 + 200 FS** |
-| **vincispin** | fi, no | ~500 + 100 FS | Body/H1: **€3 000 + 350 FS** |
-| **wonderluck** | fi, no | ~500 + 200 FS | Intro package totals much higher than table row |
-| **50-crowns** | de | 100% up to 5.000 NOK + 100 FS | Body: **€500 + 100 FS** (currency/market mismatch) |
-| **villento** | de | $125 free bonus | Body: **up to €1,000** package |
+| Casino           | Locales        | Meta bonus                    | Body claims                                             |
+| ---------------- | -------------- | ----------------------------- | ------------------------------------------------------- |
+| **rollingslots** | fi, de, no, se | ~500 + 200 FS                 | **300% up to €3,500 + 550 FS**                          |
+| **trickz**       | dk, no         | ~500 + 200 FS                 | Pros: **10.000 kr + 200 FS**; FAQ often different again |
+| **tsars**        | dk, no         | ~2.000 + 200 FS               | Facts table: **15.000 kr + 200 FS**                     |
+| **vegas-hero**   | fi, no         | ~100 + 50 FS                  | Body: **€500 + 200 FS**                                 |
+| **vincispin**    | fi, no         | ~500 + 100 FS                 | Body/H1: **€3 000 + 350 FS**                            |
+| **wonderluck**   | fi, no         | ~500 + 200 FS                 | Intro package totals much higher than table row         |
+| **50-crowns**    | de             | 100% up to 5.000 NOK + 100 FS | Body: **€500 + 100 FS** (currency/market mismatch)      |
+| **villento**     | de             | $125 free bonus               | Body: **up to €1,000** package                          |
 
 **Action:** Align body, FAQ, SEO, and `bonuses[].descriptionIntl` to one source of truth per casino/locale.
 
 ### 2. English fragments inside localized review bodies
 
-| File | Issue |
-|------|--------|
-| `rollingslots/sweden.mdx` | Pros/bonus line still says **“550 free spins”** (English) |
-| Several reviews | Brand strings like “Welcome Shark”, “Vinyl Shop”, “Pay N Play” (OK as product names) mixed with otherwise local copy |
+| File                      | Issue                                                                                                                |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `rollingslots/sweden.mdx` | Pros/bonus line still says **“550 free spins”** (English)                                                            |
+| Several reviews           | Brand strings like “Welcome Shark”, “Vinyl Shop”, “Pay N Play” (OK as product names) mixed with otherwise local copy |
 
 ### 3. Bonuses missing on cards
 
@@ -90,11 +90,11 @@ These appear on casino detail/cards unless UI hides them. Prefer `*Intl` maps or
 
 ### 6. Copy typos in localized `shortDescriptionIntl`
 
-| Casino | Locale | Issue |
-|--------|--------|--------|
-| `trickz` | sweden | `utan kr ångel` → should be `utan krångel` |
-| `tsars` | denmark | `pakke på2.000 kr` → missing space (`på 2.000`) |
-| `tsars` | sweden | same missing-space pattern (`på2 000`) |
+| Casino   | Locale  | Issue                                           |
+| -------- | ------- | ----------------------------------------------- |
+| `trickz` | sweden  | `utan kr ångel` → should be `utan krångel`      |
+| `tsars`  | denmark | `pakke på2.000 kr` → missing space (`på 2.000`) |
+| `tsars`  | sweden  | same missing-space pattern (`på2 000`)          |
 
 ### 7. FAQ accuracy / licensing claims in bodies
 

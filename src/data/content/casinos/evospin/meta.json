@@ -15,9 +15,7 @@
   },
   "referralUrl": "/goto/evospin.php",
   "payoutLimits": "Up to €30,000/month",
-  "payoutTimes": [
-    "PayPal / E-wallets: Minutes – 24h  "
-  ],
+  "payoutTimes": ["PayPal / E-wallets: Minutes – 24h  "],
   "software": [
     "Betsoft",
     "Pragmatic",
@@ -27,16 +25,8 @@
     "Yggdrasil Gaming",
     "Quickspin"
   ],
-  "depositMethods": [
-    "Neteller",
-    "PayPal",
-    "Skrill"
-  ],
-  "withdrawalMethod": [
-    "Neteller",
-    "PayPal",
-    "Skrill"
-  ],
+  "depositMethods": ["Neteller", "PayPal", "Skrill"],
+  "withdrawalMethod": ["Neteller", "PayPal", "Skrill"],
   "license": "Malta Gaming Authority",
   "userRecommendationsRecommendedNumber": 43,
   "userRecommendationsTotalNumber": 55,

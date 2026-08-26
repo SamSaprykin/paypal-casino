@@ -11,9 +11,7 @@
   },
   "referralUrl": "/goto/fezbet.php",
   "payoutLimits": null,
-  "payoutTimes": [
-    "Most withdrawals reported within 24 hours per one source"
-  ],
+  "payoutTimes": ["Most withdrawals reported within 24 hours per one source"],
   "software": [],
   "depositMethods": [
     "Visa",
