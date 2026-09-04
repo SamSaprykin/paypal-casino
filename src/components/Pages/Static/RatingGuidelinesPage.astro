@@ -6,7 +6,6 @@ import PageByline from "../PageByline.astro";
 import {
   homeHrefForLocale,
   localizedStaticPageHref,
-  getWebsitePageHrefByName,
   type WebsiteLocaleKey,
 } from "../../../lib/content";
 import {
@@ -18,6 +17,7 @@ import { LOCALES, WEBSITE_PAGE_COPY } from "../../../lib/i18n";
 import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
 import { ratingGuidelinesCopyFor } from "../../../lib/i18n/copies/rating-guidelines";
 import { resolvePageAuthors } from "../../../lib/data/authors";
+import { selfHreflang } from "../../../lib/seo/hreflang";
 
 interface Props {
   locale: WebsiteLocaleKey;
@@ -32,7 +32,6 @@ const { addedBy, reviewedBy } = resolvePageAuthors(undefined, locale);
 
 const canonical = localizedStaticPageHref(locale, "rating-guidelines");
 const homeHref = homeHrefForLocale(locale);
-const blockedHref = await getWebsitePageHrefByName("Blocked Casinos", locale);
 const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
 
 const publishedAt = "2026-07-17T09:00:00.000Z";
@@ -62,6 +61,7 @@ const seoData = {
     type: "website",
   },
   keywords: copy.keywords,
+  hreflang: selfHreflang(canonical, htmlLang),
 };
 
 const pageData = {
@@ -145,16 +145,6 @@ const howToSchema = {
           >
             {copy.ctaHome}
           </a>
-          {
-            blockedHref ? (
-              <a
-                href={blockedHref}
-                class="inline-flex items-center rounded-lg border border-blue-300 bg-white px-4 py-2 text-sm font-semibold text-blue-800 hover:bg-blue-50"
-              >
-                {copy.ctaBlocked}
-              </a>
-            ) : null
-          }
         </div>
       </aside>
 

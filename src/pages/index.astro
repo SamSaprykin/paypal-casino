@@ -12,6 +12,7 @@ import {
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
+import { hreflangFromLocalizedSlugs } from "../lib/seo/hreflang";
 
 const homePage = await getWebsitePageBySlug(
   HOME_CMS_SLUG[ROOT_WEBSITE_LOCALE],
@@ -56,6 +57,7 @@ const seoData = {
     homePage.seo?.seoDescription ||
     "Expert reviews of the best PayPal casinos online. Find trusted casinos that accept PayPal deposits and withdrawals with exclusive bonuses.",
   canonical: "/",
+  hreflang: hreflangFromLocalizedSlugs(homePage.localizedSlugs),
   openGraph: {
     title: homePage.seo?.seoTitle,
     description: homePage.seo?.seoDescription,

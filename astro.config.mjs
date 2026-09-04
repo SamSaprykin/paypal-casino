@@ -64,11 +64,20 @@ export default defineConfig({
           "/revolut-kasinoer",
           "/revolut-kasinot",
           "/revolut-casinon",
+          "/blog",
         ];
         return !gone.some((path) => page.includes(path));
       },
     }),
-    robotsTxt(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: "*",
+          allow: "/",
+          disallow: ["/intl-demo", "/goto"],
+        },
+      ],
+    }),
   ],
   trailingSlash: "always",
   output: "static",

@@ -13,6 +13,7 @@ import {
 import { generateFAQSchema, generateWebPageSchema } from "../lib/schema";
 import { LOCALES, WEBSITE_PAGE_COPY } from "../lib/i18n";
 import { localeIdForWebsiteLocale } from "../lib/i18n/websiteLocaleBridge";
+import { hreflangFromLocalizedSlugs } from "../lib/seo/hreflang";
 
 export async function getStaticPaths() {
   return getWebsitePageStaticPaths();
@@ -46,6 +47,7 @@ const seoData = {
     page.seo?.seoDescription ||
     `Learn more about ${page.name ?? "PayPal casinos"} at PayPal Casino Reviews`,
   canonical: canonicalPath,
+  hreflang: hreflangFromLocalizedSlugs(page.localizedSlugs),
   openGraph: {
     title: page.seo?.seoTitle,
     description: page.seo?.seoDescription,

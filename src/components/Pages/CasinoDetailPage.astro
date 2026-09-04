@@ -20,6 +20,8 @@ import {
 } from "../../lib/content";
 import type { CasinoPage } from "../../lib/content";
 import { format } from "date-fns";
+import { hreflangFromLocaleHrefs } from "../../lib/seo/hreflang";
+import { isThinCasinoReview } from "../../lib/seo/reviewIndexability";
 
 interface Props {
  casino: CasinoPage;
@@ -35,7 +37,7 @@ const htmlLang = LOCALES[localeId].htmlLang;
 const homeHref = homeHrefForLocale(locale);
 
 const canonicalPath = localizedCasinoDetailHref(locale, casino.slug);
-const isThinReview = (casino.bodyMarkdown ?? "").trim().length < 800;
+const isThinReview = isThinCasinoReview(casino.bodyMarkdown);
 
 const seoData = {
  title:
@@ -47,6 +49,7 @@ const seoData = {
  `Read our ${casino.casinoName} review — bonuses, payments, pros and cons.`,
  canonical: canonicalPath,
  noIndex: isThinReview,
+ hreflang: hreflangFromLocaleHrefs(casino.countrySelectorHrefs),
  openGraph: {
  title: casino.seo?.seoTitle || `${casino.casinoName} Review`,
  description: casino.seo?.seoDescription || casino.shortDescription,

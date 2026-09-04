@@ -52,7 +52,8 @@
     { "src": "/se/revolut-casinon(?:/.*)?", "status": 410 },
 
     { "src": "/tetris(?:/)?", "status": 410 },
-    { "src": "/tetris-50(?:/)?", "status": 410 }
+    { "src": "/tetris-50(?:/)?", "status": 410 },
+    { "src": "/blog(?:/.*)?", "status": 410 }
   ],
   "redirects": [
     {
@@ -493,16 +494,6 @@
     {
       "source": "/goto/stake.php",
       "destination": "https://stake.com/?c=gf6EDLyS",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/:slug*",
-      "destination": "/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog/",
-      "destination": "/",
       "statusCode": 301
     },
     {

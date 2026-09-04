@@ -1,13 +1,9 @@
 User-agent: *
 Allow: /
 
-Disallow: /classic-games
-Disallow: /blocked-casinos
-Disallow: /de/gesperrte-casinos
-Disallow: /dk/blokerede-kasinoer
-Disallow: /fi/estettyt-kasinot
-Disallow: /no/blokkerte-kasinoer
-Disallow: /se/blockerade-casinon
+# Do not Disallow 410 URLs — Googlebot must recrawl them to drop them from the index.
+Disallow: /intl-demo
+Disallow: /goto/
 
 # Sitemap
 Sitemap: https://ppcasinos.co/sitemap-index.xml

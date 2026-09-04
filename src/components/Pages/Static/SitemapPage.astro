@@ -16,6 +16,7 @@ import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
 import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
 import { slugify } from "../../../lib/helpers.js";
 import type { WebsitePageListEntry } from "../../../lib/content";
+import { selfHreflang } from "../../../lib/seo/hreflang";
 
 interface Props {
   locale: WebsiteLocaleKey;
@@ -36,7 +37,6 @@ const slugForSchema = canonical.replace(/^\/|\/$/g, "") || "";
 
 const staticPages: Array<{ title: string; href: string }> = [
   { title: copy.labels.home, href: homeHref },
-  { title: copy.labels.blog, href: "/blog/" },
   { title: copy.labels.contact, href: localizedStaticPageHref(locale, "contact-us") },
   { title: copy.labels.privacy, href: localizedStaticPageHref(locale, "privacy-policy") },
   { title: copy.labels.terms, href: localizedStaticPageHref(locale, "terms-and-conditions") },
@@ -53,6 +53,7 @@ const seoData = {
     type: "website",
   },
   keywords: copy.keywords,
+  hreflang: selfHreflang(canonical, htmlLang),
 };
 
 const pageData = {

@@ -14,6 +14,7 @@ import {
 } from "../../../lib/schema";
 import { LOCALES, staticSitePagesCopyFor } from "../../../lib/i18n";
 import { localeIdForWebsiteLocale } from "../../../lib/i18n/websiteLocaleBridge";
+import { selfHreflang } from "../../../lib/seo/hreflang";
 
 interface Props {
   locale: WebsiteLocaleKey;
@@ -38,6 +39,7 @@ const seoData = {
     type: "website",
   },
   keywords: copy.keywords,
+  hreflang: selfHreflang(canonical, htmlLang),
 };
 
 const pageData = {

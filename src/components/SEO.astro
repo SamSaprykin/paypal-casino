@@ -1,4 +1,7 @@
 ---
+import { toAbsoluteUrl } from "../lib/seo/site";
+import type { HreflangLink } from "../lib/seo/hreflang";
+
 export interface Props {
   title?: string;
   description?: string;
@@ -12,6 +15,7 @@ export interface Props {
   noIndex?: boolean;
   noFollow?: boolean;
   keywords?: string[];
+  hreflang?: HreflangLink[];
 }
 
 const {
@@ -21,11 +25,12 @@ const {
   openGraph,
   noIndex = false,
   noFollow = false,
-  keywords = []
+  keywords = [],
+  hreflang = [],
 } = Astro.props;
 
 // Construct full canonical URL
-const canonicalURL = canonical ? `https://ppcasinos.co${canonical}` : Astro.url.href;
+const canonicalURL = canonical ? toAbsoluteUrl(canonical) : Astro.url.href;
 
 // OpenGraph defaults
 const ogTitle = openGraph?.title || title;
@@ -48,6 +53,11 @@ const robotsContent = [
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
+{
+  hreflang.map((alt) => (
+    <link rel="alternate" hreflang={alt.lang} href={alt.href} />
+  ))
+}
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={ogType} />

@@ -21,6 +21,7 @@
     "astro": "astro",
     "check": "astro check",
     "type-check": "tsc --noEmit",
+    "seo:compare-crawler": "node scripts/compare-crawler-html.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "content:restructure": "node scripts/restructure-content.mjs",
