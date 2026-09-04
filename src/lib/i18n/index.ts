@@ -93,3 +93,7 @@ export {
   type IntlDemoPageCopy,
 } from "./copies/page-intl-demo";
 export { BONUS_LIST_COPY, type BonusListCopy } from "./copies/bonus-list";
+export {
+  ARTICLE_MARKDOWN_COPY,
+  type ArticleMarkdownCopy,
+} from "./copies/article-markdown";

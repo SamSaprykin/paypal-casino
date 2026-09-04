@@ -65,6 +65,8 @@ export default defineConfig({
           "/revolut-kasinot",
           "/revolut-casinon",
           "/blog",
+          "/klirr-casino",
+          "/pop-casino",
         ];
         return !gone.some((path) => page.includes(path));
       },

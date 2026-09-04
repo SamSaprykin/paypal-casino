@@ -56,7 +56,7 @@ import {
 } from "./Content/articleMarkdownBlocks.jsx";
 import { LastUpdated } from "./LastUpdated.jsx";
 import { resolveFreshness } from "../../lib/content/freshness";
-import { HOW_TO_UI_COPY, formatHowToStepOf } from "../../lib/i18n";
+import { HOW_TO_UI_COPY, ARTICLE_MARKDOWN_COPY, formatHowToStepOf } from "../../lib/i18n";
 
 /** Strip shared leading indent so MDX HTML bodies are not parsed as markdown code blocks. */
 function dedentMarkdown(text) {
@@ -861,7 +861,10 @@ export const ContentComponent = ({
                   }
 
                   if (className.includes("check-list")) {
-                    const list = parseCheckListFromHast(node);
+                    const fallbackTitle =
+                      ARTICLE_MARKDOWN_COPY[localeId]?.checkListTitle ??
+                      ARTICLE_MARKDOWN_COPY["en-IE"].checkListTitle;
+                    const list = parseCheckListFromHast(node, fallbackTitle);
                     if (list.items.length) {
                       return (
                         <ArticleMarkdownCheckList

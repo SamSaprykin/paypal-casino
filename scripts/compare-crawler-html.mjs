@@ -34,10 +34,11 @@ const PATHS = [
   "/crypto-casinos/",
   "/se/krypto-casinon/",
   "/casino/50-crowns/",
-  "/se/casino/klirr-casino/",
   "/contact-us/",
   "/new-casinos/",
   "/blog/",
+  "/se/casino/klirr-casino/",
+  "/se/casino/pop-casino/",
   "/intl-demo/",
 ];
 

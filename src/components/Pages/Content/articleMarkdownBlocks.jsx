@@ -396,21 +396,34 @@ export function ArticleMarkdownArticleWrapper({ children }) {
   );
 }
 
-export function parseCheckListFromHast(node) {
-  const heading = childrenElements(node).find((c) =>
-    /^h[1-6]$/.test(c.tagName || ""),
+export function parseCheckListFromHast(node, fallbackTitle = "Key Details") {
+  const kids = childrenElements(node);
+  const heading = kids.find((c) => /^h[1-6]$/.test(c.tagName || ""));
+  const titled = kids.find((c) =>
+    hastClassIncludes(c.properties, "check-list-title"),
   );
-  const ul = childrenElements(node).find((c) => c.tagName === "ul");
+  const ulIndex = kids.findIndex((c) => c.tagName === "ul");
+  const beforeList = ulIndex === -1 ? kids : kids.slice(0, ulIndex);
+  const strongEl =
+    beforeList.find((c) => c.tagName === "strong") ||
+    beforeList
+      .flatMap((c) => childrenElements(c))
+      .find((c) => c.tagName === "strong");
+
+  const title =
+    (heading && textFromHastTree(heading).trim()) ||
+    (titled && textFromHastTree(titled).trim()) ||
+    (strongEl && textFromHastTree(strongEl).trim()) ||
+    fallbackTitle;
+
+  const ul = kids.find((c) => c.tagName === "ul");
   const items = ul
     ? childrenElements(ul)
         .filter((li) => li.tagName === "li")
         .map((li) => textFromHastTree(li).trim())
         .filter(Boolean)
     : [];
-  return {
-    title: heading ? textFromHastTree(heading).trim() : "Key Details",
-    items,
-  };
+  return { title, items };
 }
 
 export function ArticleMarkdownCheckList({ title = "Key Details", items }) {

@@ -53,7 +53,9 @@
 
     { "src": "/tetris(?:/)?", "status": 410 },
     { "src": "/tetris-50(?:/)?", "status": 410 },
-    { "src": "/blog(?:/.*)?", "status": 410 }
+    { "src": "/blog(?:/.*)?", "status": 410 },
+    { "src": "/(?:se/)?casino/klirr-casino(?:/.*)?", "status": 410 },
+    { "src": "/(?:se/)?casino/pop-casino(?:/.*)?", "status": 410 }
   ],
   "redirects": [
     {
