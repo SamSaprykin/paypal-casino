@@ -160,9 +160,17 @@ function personSchemaFromAuthor(author, baseUrl) {
     ...(Array.isArray(author.externalProfiles)
       ? author.externalProfiles.map((p) => p?.url).filter(Boolean)
       : []),
-  ].filter(Boolean);
-  if (sameAs.length) {
-    person.sameAs = sameAs;
+  ].filter((url) => typeof url === "string" && url.trim() !== "");
+  const personalSameAs = sameAs.filter((url) => {
+    try {
+      const host = new URL(url).hostname.replace(/^www\./, "");
+      return host !== "irishlucky.com" && host !== "freebonuscodes.com";
+    } catch {
+      return true;
+    }
+  });
+  if (personalSameAs.length) {
+    person.sameAs = personalSameAs;
   }
   return person;
 }

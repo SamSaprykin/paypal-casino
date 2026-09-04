@@ -12,6 +12,7 @@ Algorithmic recovery only — no manual action / reconsideration path. Date chan
 | 2026-09-04 | Casino review `noindex` aligned to **&lt; 400 words** (same bar as the thin-review purge). Remaining 35 reviews are all above that. |
 | 2026-09-04 | Added `node scripts/compare-crawler-html.mjs` for browser vs Googlebot-UA diffs. |
 | 2026-09-04 | 410’d Klirr and Pop review URLs (`/se/casino/klirr-casino/`, `/se/casino/pop-casino/`). Sweden toplist cards remain (affiliate only, no review link). |
+| 2026-09-04 | Removed IrishLucky from author JSON-LD `sameAs` and byline profile. Schema strips that host if it reappears. |
 
 ## Kept (not 410’d)
 

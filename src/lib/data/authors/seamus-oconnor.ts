@@ -62,7 +62,6 @@ export const seamusOConnor: AuthorRecord = {
     facebook: "https://www.facebook.com/profile.php?id=61591516332584",
     instagram: "https://www.instagram.com/seamus__oconnor/",
   },
-  externalProfiles: [{ label: "IrishLucky", url: "https://irishlucky.com" }],
   profiles: {
     ireland: enProfile,
     germany: deProfile,
